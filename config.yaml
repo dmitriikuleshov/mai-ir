@@ -1,0 +1,70 @@
+db:
+  uri: mongodb://localhost:27017
+  database: mai_ir
+  documents_collection: documents
+  state_collection: crawl_state
+  queue_collection: crawl_queue
+
+logic:
+  user_agent: MAI-IR-course-project/2.0 (mailto:workdimila@gmail.com)
+  request_timeout_seconds: 60
+  retries: 4
+  backoff_seconds: 2
+  max_response_bytes: 14000000
+  total_connections: 6
+  connections_per_host: 1
+  lease_seconds: 300
+  recrawl_after_seconds: 604800
+  recrawl_batch_size: 0
+  log_level: INFO
+  delay_seconds:
+    wikipedia: 1.0
+    arxiv: 3.0
+    microsoft_learn: 1.0
+
+sources:
+  wikipedia:
+    enabled: true
+    max_documents: null
+    max_category_depth: 6
+    seed_categories:
+      - Computer science
+      - Software engineering
+      - Artificial intelligence
+      - Information retrieval
+      - Database systems
+      - Computer networks
+      - Computer security
+
+  arxiv:
+    enabled: true
+    max_documents: null
+    batch_size: 100
+    metadata_batch_size: 100
+    sort_order: descending
+    categories:
+      - cs.IR
+      - cs.AI
+      - cs.CL
+      - cs.DB
+      - cs.DC
+      - cs.CR
+      - cs.LG
+      - cs.SE
+
+  microsoft_learn:
+    enabled: true
+    max_documents: null
+    discovery_interval_seconds: 604800
+    products: []
+    excluded_products:
+      - previous-versions
+      - shows
+    excluded_paths:
+      - /answers/
+      - /shows/
+      - /events/
+      - /users/
+      - /credentials/
+      - /api/
+      - /previous-versions/

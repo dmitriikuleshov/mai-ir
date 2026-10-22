@@ -2,4 +2,7 @@
 .ipynb_checkpoints/
 data/
 __pycache__/
+.pytest_cache/
+.ruff_cache/
+*.log
 
