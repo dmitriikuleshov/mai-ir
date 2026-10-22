@@ -1,8 +1,12 @@
 .venv/
 .ipynb_checkpoints/
-data/
+notebooks/samples/
 __pycache__/
 .pytest_cache/
 .ruff_cache/
 *.log
+results/*
+!results/statistics.json
+!results/zipf.svg
+.build/
 

@@ -6,7 +6,7 @@ from pathlib import Path
 import pytest
 from aiohttp import ClientSession, web
 
-from crawler import (
+from crawler.main import (
     ArxivCrawler,
     BaseCrawler,
     HttpClient,
@@ -226,7 +226,7 @@ def test_arxiv_recrawl_uses_metadata_before_html():
 
 def test_command_line_help():
     result = subprocess.run(
-        [sys.executable, "crawler.py", "--help"],
+        [sys.executable, "src/crawler/main.py", "--help"],
         capture_output=True,
         check=False,
         text=True,
