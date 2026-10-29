@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import calendar
 import hashlib
 import json
 import logging
@@ -12,6 +13,7 @@ import time
 import xml.etree.ElementTree as ET
 from collections.abc import AsyncIterator
 from dataclasses import dataclass
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 from urllib.parse import parse_qsl, quote, urlencode, urlsplit, urlunsplit
@@ -59,6 +61,27 @@ def normalize_url(url: str) -> str:
 
 def sha256_text(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def current_month() -> str:
+    return datetime.now(UTC).strftime("%Y-%m")
+
+
+def previous_month(month: str) -> str:
+    year, number = (int(part) for part in month.split("-", 1))
+    if number == 1:
+        return f"{year - 1:04d}-12"
+    return f"{year:04d}-{number - 1:02d}"
+
+
+def arxiv_month_query(category: str, month: str) -> str:
+    year, number = (int(part) for part in month.split("-", 1))
+    last_day = calendar.monthrange(year, number)[1]
+    return (
+        f"cat:{category} AND "
+        f"submittedDate:[{year:04d}{number:02d}010000 TO "
+        f"{year:04d}{number:02d}{last_day:02d}2359]"
+    )
 
 
 def shorten_log_value(value: str, width: int = LOG_TITLE_WIDTH) -> str:
@@ -164,17 +187,33 @@ class StopRequested(RuntimeError):
     pass
 
 
+async def wait_or_stop(stop_event: asyncio.Event | None, seconds: float) -> None:
+    """Wait for a delay, but abort immediately when crawler shutdown is requested."""
+    if stop_event is None:
+        await asyncio.sleep(seconds)
+        return
+    if stop_event.is_set():
+        raise StopRequested
+    try:
+        await asyncio.wait_for(stop_event.wait(), timeout=seconds)
+    except TimeoutError:
+        return
+    raise StopRequested
+
+
 class RateLimiter:
     def __init__(self, delay_seconds: float):
         self.delay_seconds = delay_seconds
         self._lock = asyncio.Lock()
         self._last_request = 0.0
 
-    async def wait(self) -> None:
+    async def wait(self, stop_event: asyncio.Event | None = None) -> None:
         async with self._lock:
             remaining = self.delay_seconds - (time.monotonic() - self._last_request)
             if remaining > 0:
-                await asyncio.sleep(remaining)
+                await wait_or_stop(stop_event, remaining)
+            if stop_event is not None and stop_event.is_set():
+                raise StopRequested
             self._last_request = time.monotonic()
 
 
@@ -187,12 +226,14 @@ class HttpClient:
         retries: int,
         backoff_seconds: float,
         max_response_bytes: int,
+        stop_event: asyncio.Event | None = None,
     ):
         self.session = session
         self.rate_limiter = RateLimiter(delay_seconds)
         self.retries = retries
         self.backoff_seconds = backoff_seconds
         self.max_response_bytes = max_response_bytes
+        self.stop_event = stop_event
 
     @staticmethod
     async def _read_body(response: aiohttp.ClientResponse, limit: int) -> bytes:
@@ -210,37 +251,50 @@ class HttpClient:
         url: str,
         *,
         params: dict[str, Any] | None = None,
+        data: dict[str, Any] | None = None,
         headers: dict[str, str] | None = None,
         max_bytes: int | None = None,
+        method: str = "GET",
     ) -> HttpResult:
         limit = max_bytes or self.max_response_bytes
         last_error: Exception | None = None
         for attempt in range(self.retries + 1):
-            await self.rate_limiter.wait()
+            await self.rate_limiter.wait(self.stop_event)
             try:
-                async with self.session.get(
+                async with self.session.request(
+                    method,
                     url,
                     params=params,
+                    data=data,
                     headers=headers,
                     allow_redirects=True,
                 ) as response:
                     if response.status in RETRYABLE_STATUSES:
+                        await response.read()
+                        if self.stop_event is not None and self.stop_event.is_set():
+                            raise StopRequested
                         retry_after = response.headers.get("Retry-After", "")
                         if retry_after.isdigit():
                             wait_seconds = float(retry_after)
                         else:
                             wait_seconds = self.backoff_seconds * (2**attempt)
                             wait_seconds += random.uniform(0, self.backoff_seconds)
-                        LOGGER.warning(
-                            "%s вернул %s, повтор через %.1f с",
-                            url,
-                            response.status,
-                            wait_seconds,
-                        )
-                        await response.read()
                         if attempt < self.retries:
-                            await asyncio.sleep(wait_seconds)
+                            LOGGER.warning(
+                                "%s вернул %s, повтор через %.1f с",
+                                url,
+                                response.status,
+                                wait_seconds,
+                            )
+                            await wait_or_stop(self.stop_event, wait_seconds)
                             continue
+                        return HttpResult(
+                            status=response.status,
+                            url=str(response.url),
+                            text="",
+                            etag=response.headers.get("ETag"),
+                            last_modified=response.headers.get("Last-Modified"),
+                        )
 
                     if response.status == 304:
                         return HttpResult(
@@ -273,7 +327,7 @@ class HttpClient:
                     error,
                     wait_seconds,
                 )
-                await asyncio.sleep(wait_seconds)
+                await wait_or_stop(self.stop_event, wait_seconds)
         if last_error:
             raise last_error
         raise RuntimeError(f"Не удалось получить {url}")
@@ -299,6 +353,8 @@ class RobotsPolicy:
                 parser.parse(response.text.splitlines())
                 return cls(parser, user_agent)
             raise RuntimeError(f"robots.txt {robots_url} вернул HTTP {response.status}")
+        except StopRequested:
+            raise
         except (
             aiohttp.ClientError,
             TimeoutError,
@@ -686,6 +742,8 @@ class BaseCrawler:
                     force=True,
                 )
                 processed += 1
+            except StopRequested:
+                break
             except Exception as error:  # noqa: BLE001 - ошибка одного документа не останавливает обход
                 LOGGER.warning(
                     "Не удалось перепроверить %s: %s", document["url"], error
@@ -854,11 +912,29 @@ class ArxivCrawler(BaseCrawler):
         ]
         response = await self.http.get_text(
             self.api_url,
-            params={"id_list": ",".join(arxiv_ids), "max_results": len(arxiv_ids)},
+            method="POST",
+            data={"id_list": ",".join(arxiv_ids), "max_results": len(arxiv_ids)},
             max_bytes=50_000_000,
         )
         if response.status != 200:
-            raise RuntimeError(f"arXiv API вернул {response.status}")
+            if len(documents) > 1:
+                middle = len(documents) // 2
+                LOGGER.warning(
+                    "arXiv API вернул %s для %s ID; пакет делится на %s и %s",
+                    response.status,
+                    len(documents),
+                    middle,
+                    len(documents) - middle,
+                )
+                first = await self._recrawl_batch(documents[:middle])
+                second = await self._recrawl_batch(documents[middle:])
+                return first + second
+            LOGGER.warning(
+                "arXiv API вернул %s для ID %s; проверка отложена",
+                response.status,
+                documents[0]["source_id"],
+            )
+            return 0
         entries = {
             entry["source_id"]: entry for entry in parse_arxiv_entries(response.text)
         }
@@ -898,16 +974,20 @@ class ArxivCrawler(BaseCrawler):
         await self.recrawl_due_documents()
         processed = 0
         sort_order = str(self.source_config.get("sort_order", "descending"))
+        earliest_month = str(self.source_config.get("earliest_month", "1993-01"))
         for category in self.source_config["categories"]:
             if self.stop_event.is_set():
                 break
             state = await self.storage.get_state(self.source, category)
-            can_resume = state.get("sort_order") == sort_order and not state.get(
-                "caught_up_at"
+            can_resume = (
+                state.get("discovery_mode") == "monthly"
+                and state.get("sort_order") == sort_order
+                and not state.get("caught_up_at")
             )
+            month = str(state.get("month")) if can_resume else current_month()
             start = int(state.get("start", 0)) if can_resume else 0
             entry_index = int(state.get("entry_index", 0)) if can_resume else 0
-            while not self.stop_event.is_set():
+            while not self.stop_event.is_set() and month >= earliest_month:
                 if self.max_documents is not None and processed >= int(
                     self.max_documents
                 ):
@@ -916,7 +996,7 @@ class ArxivCrawler(BaseCrawler):
                 response = await self.http.get_text(
                     self.api_url,
                     params={
-                        "search_query": f"cat:{category}",
+                        "search_query": arxiv_month_query(category, month),
                         "start": start,
                         "max_results": int(self.source_config.get("batch_size", 100)),
                         "sortBy": "submittedDate",
@@ -928,17 +1008,22 @@ class ArxivCrawler(BaseCrawler):
                     raise RuntimeError(f"arXiv API вернул {response.status}")
                 entries = parse_arxiv_entries(response.text)
                 if not entries:
+                    month = previous_month(month)
                     await self.storage.set_state(
                         self.source,
                         category,
                         {
-                            "start": start,
+                            "discovery_mode": "monthly",
+                            "month": month,
+                            "start": 0,
                             "entry_index": 0,
                             "sort_order": sort_order,
-                            "caught_up_at": unix_time(),
+                            "caught_up_at": None,
                         },
                     )
-                    break
+                    start = 0
+                    entry_index = 0
+                    continue
 
                 for index in range(entry_index, len(entries)):
                     if self.stop_event.is_set():
@@ -967,6 +1052,8 @@ class ArxivCrawler(BaseCrawler):
                         self.source,
                         category,
                         {
+                            "discovery_mode": "monthly",
+                            "month": month,
                             "start": start,
                             "entry_index": index + 1,
                             "sort_order": sort_order,
@@ -984,10 +1071,25 @@ class ArxivCrawler(BaseCrawler):
                     self.source,
                     category,
                     {
+                        "discovery_mode": "monthly",
+                        "month": month,
                         "start": start,
                         "entry_index": 0,
                         "sort_order": sort_order,
                         "caught_up_at": None,
+                    },
+                )
+            if month < earliest_month:
+                await self.storage.set_state(
+                    self.source,
+                    category,
+                    {
+                        "discovery_mode": "monthly",
+                        "month": earliest_month,
+                        "start": 0,
+                        "entry_index": 0,
+                        "sort_order": sort_order,
+                        "caught_up_at": unix_time(),
                     },
                 )
         LOGGER.info("arXiv: обработано записей за запуск: %s", processed)
@@ -1136,8 +1238,11 @@ async def run_source(name: str, crawler: BaseCrawler) -> Exception | None:
         await crawler.run()
         LOGGER.info("Источник %s остановлен", name)
         return None
+    except StopRequested:
+        LOGGER.info("Источник %s остановлен", name)
+        return None
     except Exception as error:
-        LOGGER.exception("Источник %s завершился с ошибкой", name)
+        LOGGER.error("Источник %s завершился с ошибкой: %s", name, error)
         return error
 
 
@@ -1187,7 +1292,7 @@ async def log_database_statistics(storage: MongoStorage) -> None:
     )
 
 
-async def run(config: dict[str, Any]) -> None:
+async def run(config: dict[str, Any]) -> int:
     logic = config["logic"]
     logging.basicConfig(
         level=getattr(logging, str(logic.get("log_level", "INFO")).upper()),
@@ -1242,6 +1347,7 @@ async def run(config: dict[str, Any]) -> None:
                     retries=int(logic.get("retries", 4)),
                     backoff_seconds=float(logic.get("backoff_seconds", 2)),
                     max_response_bytes=int(logic.get("max_response_bytes", 14_000_000)),
+                    stop_event=stop_event,
                 )
                 crawler = crawler_type(config, source_config, storage, http, stop_event)
                 tasks.append(asyncio.create_task(run_source(source_name, crawler)))
@@ -1249,12 +1355,14 @@ async def run(config: dict[str, Any]) -> None:
             results = await asyncio.gather(*tasks)
             errors = [result for result in results if result is not None]
             if errors:
-                raise RuntimeError(f"Ошибок источников: {len(errors)}")
+                LOGGER.error("Crawler завершён с ошибками источников: %s", len(errors))
+                return 1
     finally:
         try:
             await log_database_statistics(storage)
         finally:
             await storage.close()
+    return 0
 
 
 def main() -> None:
@@ -1262,7 +1370,7 @@ def main() -> None:
     parser.add_argument("config", type=Path, help="путь к YAML-конфигурации")
     arguments = parser.parse_args()
     config = load_config(arguments.config)
-    asyncio.run(run(config))
+    raise SystemExit(asyncio.run(run(config)))
 
 
 if __name__ == "__main__":

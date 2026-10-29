@@ -47,6 +47,7 @@ sources:
     batch_size: 100
     metadata_batch_size: 100
     sort_order: descending
+    earliest_month: 1993-01
     categories:
       - cs.IR
       - cs.AI

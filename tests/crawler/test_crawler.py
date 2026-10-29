@@ -12,10 +12,14 @@ from crawler.main import (
     HttpClient,
     HttpResult,
     ResponseTooLarge,
+    StopRequested,
+    arxiv_month_query,
     load_config,
     normalize_url,
     parse_arxiv_entries,
     parse_xml_locations,
+    previous_month,
+    run_source,
     sha256_text,
     shorten_log_value,
 )
@@ -106,6 +110,14 @@ def test_parse_arxiv_atom_entry():
     assert entry["source_id"] == "2601.00001"
     assert entry["title"] == "Test paper"
     assert entry["categories"] == ["cs.IR"]
+
+
+def test_arxiv_month_query_avoids_large_global_offset():
+    assert previous_month("2026-01") == "2025-12"
+    assert previous_month("2026-10") == "2026-09"
+    assert arxiv_month_query("cs.IR", "2024-02") == (
+        "cat:cs.IR AND submittedDate:[202402010000 TO 202402292359]"
+    )
 
 
 def test_config_contains_required_sections():
@@ -221,7 +233,39 @@ def test_arxiv_recrawl_uses_metadata_before_html():
     assert processed == 1
     assert storage.checked
     assert len(http.calls) == 1
-    assert http.calls[0][1]["params"]["id_list"] == "2601.00001v2"
+    assert http.calls[0][1]["method"] == "POST"
+    assert http.calls[0][1]["data"]["id_list"] == "2601.00001v2"
+
+
+def test_arxiv_failed_metadata_batch_is_split_and_deferred():
+    storage = FakeStorage()
+    http = FakeHttp(
+        HttpResult(500, "https://export.arxiv.org/api/query", "", None, None)
+    )
+    config = {
+        "logic": {
+            "user_agent": "test-agent",
+            "recrawl_after_seconds": 60,
+            "recrawl_batch_size": 10,
+        }
+    }
+    crawler = ArxivCrawler(config, {}, storage, http, asyncio.Event())
+    documents = [
+        {
+            "source_id": f"2601.0000{index}",
+            "url": f"https://arxiv.org/html/2601.0000{index}",
+            "metadata": {},
+        }
+        for index in range(1, 5)
+    ]
+
+    processed = asyncio.run(crawler._recrawl_batch(documents))
+
+    assert processed == 0
+    assert len(http.calls) == 7
+    assert [
+        len(call[1]["data"]["id_list"].split(",")) for call in http.calls
+    ] == [4, 2, 1, 1, 2, 1, 1]
 
 
 def test_command_line_help():
@@ -268,3 +312,67 @@ def test_http_client_reads_chunked_response_completely():
             await runner.cleanup()
 
     asyncio.run(scenario())
+
+
+def test_http_retry_delay_is_interrupted_by_stop_event():
+    async def scenario():
+        requests = 0
+
+        async def handler(request):
+            nonlocal requests
+            requests += 1
+            return web.Response(status=500)
+
+        app = web.Application()
+        app.router.add_get("/temporary-error", handler)
+        runner = web.AppRunner(app)
+        await runner.setup()
+        site = web.TCPSite(runner, "127.0.0.1", 0)
+        await site.start()
+        port = site._server.sockets[0].getsockname()[1]
+        stop_event = asyncio.Event()
+        try:
+            async with ClientSession() as session:
+                http = HttpClient(
+                    session,
+                    delay_seconds=0,
+                    retries=4,
+                    backoff_seconds=30,
+                    max_response_bytes=100,
+                    stop_event=stop_event,
+                )
+                task = asyncio.create_task(
+                    http.get_text(f"http://127.0.0.1:{port}/temporary-error")
+                )
+                await asyncio.sleep(0.05)
+                stop_event.set()
+                with pytest.raises(StopRequested):
+                    await asyncio.wait_for(task, timeout=1)
+                assert requests == 1
+        finally:
+            await runner.cleanup()
+
+    asyncio.run(scenario())
+
+
+def test_stopped_source_is_not_reported_as_error(caplog):
+    class StoppedCrawler:
+        async def run(self):
+            raise StopRequested
+
+    result = asyncio.run(run_source("test", StoppedCrawler()))
+
+    assert result is None
+    assert "завершился с ошибкой" not in caplog.text
+
+
+def test_failed_source_is_logged_without_traceback(caplog):
+    class FailedCrawler:
+        async def run(self):
+            raise RuntimeError("temporary failure")
+
+    result = asyncio.run(run_source("test", FailedCrawler()))
+
+    assert isinstance(result, RuntimeError)
+    assert "temporary failure" in caplog.text
+    assert "Traceback" not in caplog.text
