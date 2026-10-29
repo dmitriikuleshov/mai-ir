@@ -77,10 +77,10 @@ sources:
 
 linguistics:
   batch_size: 100
-  minimum_words: 500
+  minimum_words: 200
   maximum_token_length: 100
   max_documents: null
-  parser_version: 6
+  parser_version: 7 
   lemma_dictionary: resources/wordnet_exceptions.tsv
   progress_every_documents: 100
   zipf_max_terms: 100000
