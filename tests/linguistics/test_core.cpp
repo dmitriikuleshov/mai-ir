@@ -151,8 +151,8 @@ static void test_extraction() {
 
 static void test_config() {
     const Config config = load_config("config.yaml");
-    expect(config.minimum_words == 500, "чтение YAML-конфигурации");
-    expect(config.parser_version == 6, "версия C++-обработчика");
+    expect(config.minimum_words == 200, "чтение YAML-конфигурации");
+    expect(config.parser_version == 7, "версия C++-обработчика");
 
     char absolute_path[4096];
     const char *resolved = realpath("config.yaml", absolute_path);

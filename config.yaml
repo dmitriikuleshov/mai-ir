@@ -80,7 +80,7 @@ linguistics:
   minimum_words: 200
   maximum_token_length: 100
   max_documents: null
-  parser_version: 7 
+  parser_version: 7
   lemma_dictionary: resources/wordnet_exceptions.tsv
   progress_every_documents: 100
   zipf_max_terms: 100000
@@ -88,3 +88,12 @@ linguistics:
   top_terms: 30
   lock_lease_seconds: 600
   output_directory: results
+
+boolean_index:
+  output_directory: results/boolean_index
+  term_field: lemmas
+  block_postings: 500000
+  progress_every_documents: 1000
+
+boolean_search:
+  result_limit: 20
