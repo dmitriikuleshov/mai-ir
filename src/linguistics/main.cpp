@@ -1323,6 +1323,60 @@ static double plot_y(double frequency, double maximum, double top,
     return top + (1.0 - normalized) * height;
 }
 
+static void write_log_tick_label(FILE *file, double x, double y,
+                                 size_t exponent, const char *anchor) {
+    if (exponent == 0) {
+        std::fprintf(file,
+                     "<text x=\"%.2f\" y=\"%.2f\" text-anchor=\"%s\" "
+                     "font-family=\"sans-serif\" font-size=\"11\">1</text>\n",
+                     x, y, anchor);
+        return;
+    }
+    std::fprintf(file,
+                 "<text x=\"%.2f\" y=\"%.2f\" text-anchor=\"%s\" "
+                 "font-family=\"sans-serif\" font-size=\"11\">10^%zu</text>\n",
+                 x, y, anchor, exponent);
+}
+
+static void write_plot_axes(FILE *file, size_t size, double maximum) {
+    const double left = 80.0;
+    const double top = 35.0;
+    const double width = 880.0;
+    const double height = 500.0;
+    size_t rank = 1;
+    for (size_t exponent = 0; rank <= size; ++exponent) {
+        const double x = plot_x(rank, size, left, width);
+        std::fprintf(file,
+                     "<line x1=\"%.2f\" y1=\"%.2f\" x2=\"%.2f\" y2=\"%.2f\" "
+                     "stroke=\"#d1d5db\" stroke-width=\"1\"/>\n"
+                     "<line x1=\"%.2f\" y1=\"535\" x2=\"%.2f\" y2=\"541\" "
+                     "stroke=\"black\"/>\n",
+                     x, top, x, top + height, x, x);
+        write_log_tick_label(file, x, 554.0, exponent, "middle");
+        if (rank > size / 10) break;
+        rank *= 10;
+    }
+
+    double frequency = 1.0;
+    for (size_t exponent = 0; frequency <= maximum; ++exponent) {
+        const double y = plot_y(frequency, maximum, top, height);
+        std::fprintf(file,
+                     "<line x1=\"%.2f\" y1=\"%.2f\" x2=\"%.2f\" y2=\"%.2f\" "
+                     "stroke=\"#d1d5db\" stroke-width=\"1\"/>\n"
+                     "<line x1=\"74\" y1=\"%.2f\" x2=\"80\" y2=\"%.2f\" "
+                     "stroke=\"black\"/>\n",
+                     left, y, left + width, y, y, y);
+        write_log_tick_label(file, 69.0, y + 4.0, exponent, "end");
+        if (frequency > maximum / 10.0) break;
+        frequency *= 10.0;
+    }
+    std::fprintf(file,
+                 "<line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"535\" "
+                 "stroke=\"black\" stroke-width=\"1.5\"/>\n"
+                 "<line x1=\"80\" y1=\"535\" x2=\"960\" y2=\"535\" "
+                 "stroke=\"black\" stroke-width=\"1.5\"/>\n");
+}
+
 static void write_polyline(FILE *file, const uint64_t *frequencies, size_t size,
                            const MandelbrotFit *fit, int mode) {
     const double left = 80.0;
@@ -1352,17 +1406,19 @@ static void write_zipf_svg(const char *path, const uint64_t *frequencies,
     FILE *file = std::fopen(path, "wb");
     if (file == nullptr) fatal("не удалось записать %s", path);
     std::fprintf(file,
-                 "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1000\" height=\"610\" viewBox=\"0 0 1000 610\">\n"
-                 "<rect width=\"1000\" height=\"610\" fill=\"white\"/>\n"
-                 "<text x=\"500\" y=\"22\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"18\">Распределение терминов по частотности</text>\n"
-                 "<line x1=\"80\" y1=\"35\" x2=\"80\" y2=\"535\" stroke=\"black\"/><line x1=\"80\" y1=\"535\" x2=\"960\" y2=\"535\" stroke=\"black\"/>\n");
+                 "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1000\" height=\"650\" viewBox=\"0 0 1000 650\">\n"
+                 "<rect width=\"1000\" height=\"650\" fill=\"white\"/>\n"
+                 "<text x=\"500\" y=\"22\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"18\">Распределение терминов по частотности</text>\n");
+    write_plot_axes(file, size, static_cast<double>(frequencies[0]));
     write_polyline(file, frequencies, size, fit, 0);
     write_polyline(file, frequencies, size, fit, 1);
     write_polyline(file, frequencies, size, fit, 2);
     std::fprintf(file,
-                 "<text x=\"500\" y=\"580\" text-anchor=\"middle\" font-family=\"sans-serif\">Ранг (логарифмическая шкала)</text>\n"
-                 "<text x=\"18\" y=\"285\" transform=\"rotate(-90 18 285)\" text-anchor=\"middle\" font-family=\"sans-serif\">Частота (логарифмическая шкала)</text>\n"
-                 "<text x=\"100\" y=\"558\" fill=\"#2563eb\" font-family=\"sans-serif\">корпус</text><text x=\"200\" y=\"558\" fill=\"#dc2626\" font-family=\"sans-serif\">Ципф</text><text x=\"280\" y=\"558\" fill=\"#16a34a\" font-family=\"sans-serif\">Мандельброт</text>\n</svg>\n");
+                 "<line x1=\"270\" y1=\"580\" x2=\"305\" y2=\"580\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"312\" y=\"584\" font-family=\"sans-serif\" font-size=\"12\">корпус</text>\n"
+                 "<line x1=\"405\" y1=\"580\" x2=\"440\" y2=\"580\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"447\" y=\"584\" font-family=\"sans-serif\" font-size=\"12\">Ципф</text>\n"
+                 "<line x1=\"530\" y1=\"580\" x2=\"565\" y2=\"580\" stroke=\"#16a34a\" stroke-width=\"2\"/><text x=\"572\" y=\"584\" font-family=\"sans-serif\" font-size=\"12\">Мандельброт</text>\n"
+                 "<text x=\"520\" y=\"625\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\">Ранг терма r [порядковый номер], шкала log10</text>\n"
+                 "<text x=\"15\" y=\"285\" transform=\"rotate(-90 15 285)\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"13\">Частота f(r) [число вхождений], шкала log10</text>\n</svg>\n");
     std::fclose(file);
 }
 

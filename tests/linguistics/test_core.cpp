@@ -170,6 +170,13 @@ static void test_mandelbrot() {
     const MandelbrotFit fit = fit_mandelbrot(sample, 6, 6);
     expect(fit.c > 0.0 && fit.b >= 0.0 && fit.s > 0.0 && fit.rmse >= 0.0,
            "аппроксимация Мандельброта");
+    const char *path = ".build/test-zipf.svg";
+    write_zipf_svg(path, sample, 6, &fit);
+    expect(file_contains(path, "Ранг терма r [порядковый номер]") &&
+               file_contains(path, "Частота f(r) [число вхождений]") &&
+               file_contains(path, ">10^2</text>"),
+           "подписи, единицы и деления осей SVG");
+    unlink(path);
 }
 
 static void test_no_stl() {

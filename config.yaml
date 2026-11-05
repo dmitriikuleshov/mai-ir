@@ -19,7 +19,7 @@ logic:
   total_connections: 6
   connections_per_host: 1
   lease_seconds: 300
-  recrawl_after_seconds: 604800
+  recrawl_after_seconds: 7776000
   recrawl_batch_size: 0
   log_level: INFO
   delay_seconds:
@@ -61,7 +61,7 @@ sources:
   microsoft_learn:
     enabled: true
     max_documents: null
-    discovery_interval_seconds: 604800
+    discovery_interval_seconds: 7776000
     products: []
     excluded_products:
       - previous-versions

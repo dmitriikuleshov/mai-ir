@@ -9,4 +9,3 @@ results/*
 !results/statistics.json
 !results/zipf.svg
 .build/
-docs
