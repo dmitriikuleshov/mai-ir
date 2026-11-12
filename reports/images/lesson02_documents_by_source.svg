@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
+  <rect width="1000" height="500" fill="white"/>
+  <style>
+    .title { font: 700 30px 'Times New Roman', serif; fill: #111; }
+    .label { font: 25px 'Times New Roman', serif; fill: #111; }
+    .value { font: 700 24px 'Times New Roman', serif; fill: #111; }
+    .axis { stroke: #444; stroke-width: 2; }
+    .grid { stroke: #d0d0d0; stroke-width: 1; }
+    .bar { fill: #326da8; }
+  </style>
+  <text x="500" y="48" text-anchor="middle" class="title">Количество документов по источникам</text>
+  <line x1="235" y1="90" x2="235" y2="420" class="axis"/>
+  <line x1="235" y1="420" x2="930" y2="420" class="axis"/>
+  <line x1="407" y1="90" x2="407" y2="420" class="grid"/>
+  <line x1="579" y1="90" x2="579" y2="420" class="grid"/>
+  <line x1="751" y1="90" x2="751" y2="420" class="grid"/>
+  <line x1="923" y1="90" x2="923" y2="420" class="grid"/>
+  <text x="235" y="454" text-anchor="middle" class="label">0</text>
+  <text x="407" y="454" text-anchor="middle" class="label">20 000</text>
+  <text x="579" y="454" text-anchor="middle" class="label">40 000</text>
+  <text x="751" y="454" text-anchor="middle" class="label">60 000</text>
+  <text x="923" y="454" text-anchor="middle" class="label">80 000</text>
+  <text x="210" y="151" text-anchor="end" class="label">arXiv</text>
+  <rect x="235" y="112" width="95" height="58" class="bar"/>
+  <text x="344" y="150" class="value">11 038</text>
+  <text x="210" y="261" text-anchor="end" class="label">Microsoft Learn</text>
+  <rect x="235" y="222" width="696" height="58" class="bar"/>
+  <text x="916" y="260" text-anchor="end" class="value" fill="white">80 899</text>
+  <text x="210" y="371" text-anchor="end" class="label">Wikipedia</text>
+  <rect x="235" y="332" width="675" height="58" class="bar"/>
+  <text x="895" y="370" text-anchor="end" class="value" fill="white">78 456</text>
+</svg>

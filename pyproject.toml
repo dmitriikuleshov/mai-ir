@@ -1,0 +1,21 @@
+[project]
+name = "mai-ir"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "aiohttp>=3.11,<4",
+    "beautifulsoup4>=4.12,<5",
+    "jupyter>=1.1,<2",
+    "lxml>=5,<7",
+    "matplotlib>=3.8,<4",
+    "numpy>=2,<3",
+    "pandas>=2.2,<4",
+    "pymongo>=4.13,<5",
+    "pytest>=8,<10",
+    "pyyaml>=6,<7",
+    "requests>=2.32,<3",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

@@ -1,0 +1,396 @@
+import asyncio
+import subprocess
+import sys
+from pathlib import Path
+
+import pytest
+from aiohttp import ClientSession, web
+
+from crawler.main import (
+    ArxivCrawler,
+    BaseCrawler,
+    HttpClient,
+    HttpResult,
+    ResponseTooLarge,
+    StopRequested,
+    arxiv_month_query,
+    load_config,
+    normalize_url,
+    parse_arxiv_entries,
+    parse_xml_locations,
+    previous_month,
+    run_source,
+    sha256_text,
+    shorten_log_value,
+)
+
+
+class FakeStorage:
+    def __init__(self):
+        self.checked = False
+
+    async def get_document(self, source, source_id):
+        return None
+
+    async def mark_checked(self, source, source_id):
+        self.checked = True
+
+
+class FakeHttp:
+    def __init__(self, result):
+        self.result = result
+        self.calls = []
+        self.max_response_bytes = 14_000_000
+
+    async def get_text(self, url, **kwargs):
+        self.calls.append((url, kwargs))
+        if isinstance(self.result, Exception):
+            raise self.result
+        return self.result
+
+
+class DummyCrawler(BaseCrawler):
+    source = "dummy"
+
+
+def make_dummy_crawler(storage, http):
+    config = {
+        "logic": {
+            "user_agent": "test-agent",
+            "recrawl_after_seconds": 60,
+            "recrawl_batch_size": 10,
+        }
+    }
+    return DummyCrawler(config, {}, storage, http, asyncio.Event())
+
+
+# Проверяется канонизация URL с удалением фрагмента и tracking-параметров.
+def test_normalize_url_removes_fragment_and_tracking_parameters():
+    url = "HTTPS://Learn.Microsoft.com:443/en-us/test/?b=2&utm_source=x&a=1#part"
+    assert normalize_url(url) == "https://learn.microsoft.com/en-us/test?a=1&b=2"
+
+
+# Проверяется стабильность SHA-256 и различие хешей разных документов.
+def test_sha256_is_stable():
+    assert sha256_text("document") == sha256_text("document")
+    assert sha256_text("document") != sha256_text("another document")
+
+
+# Проверяется очистка пробелов и сокращение длинного заголовка для лога.
+def test_long_log_title_is_shortened():
+    assert shorten_log_value("A   title\nwith spaces", 30) == "A title with spaces"
+    assert shorten_log_value("A very long document title", 12) == "A very long…"
+
+
+# Проверяется чтение URL и необязательной даты изменения из sitemap XML.
+def test_parse_sitemap_locations_with_last_modified_date():
+    xml = """<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      <url><loc>https://example.com/a</loc><lastmod>2026-01-01</lastmod></url>
+      <url><loc>https://example.com/b</loc></url>
+    </urlset>"""
+    assert parse_xml_locations(xml) == [
+        {"url": "https://example.com/a", "lastmod": "2026-01-01"},
+        {"url": "https://example.com/b", "lastmod": None},
+    ]
+
+
+# Проверяется разбор метаданных одной публикации из Atom-ответа arXiv.
+def test_parse_arxiv_atom_entry():
+    xml = """<feed xmlns="http://www.w3.org/2005/Atom"
+      xmlns:arxiv="http://arxiv.org/schemas/atom">
+      <entry>
+        <id>https://arxiv.org/abs/2601.00001v2</id>
+        <title>  Test   paper </title>
+        <summary> Test abstract </summary>
+        <author><name>Student</name></author>
+        <category term="cs.IR" />
+        <published>2026-01-01T00:00:00Z</published>
+        <updated>2026-01-02T00:00:00Z</updated>
+        <arxiv:license>http://creativecommons.org/licenses/by/4.0/</arxiv:license>
+      </entry>
+    </feed>"""
+    entry = parse_arxiv_entries(xml)[0]
+    assert entry["arxiv_id"] == "2601.00001v2"
+    assert entry["source_id"] == "2601.00001"
+    assert entry["title"] == "Test paper"
+    assert entry["categories"] == ["cs.IR"]
+
+
+# Проверяется формирование месячного запроса arXiv без большого общего offset.
+def test_arxiv_month_query_avoids_large_global_offset():
+    assert previous_month("2026-01") == "2025-12"
+    assert previous_month("2026-10") == "2026-09"
+    assert arxiv_month_query("cs.IR", "2024-02") == (
+        "cat:cs.IR AND submittedDate:[202402010000 TO 202402292359]"
+    )
+
+
+# Проверяется наличие обязательных настроек базы, логики и трёх источников.
+def test_config_contains_required_sections():
+    config = load_config(Path("config.yaml"))
+    assert config["db"]["database"] == "mai_ir"
+    assert set(config["logic"]["delay_seconds"]) == {
+        "wikipedia",
+        "arxiv",
+        "microsoft_learn",
+    }
+
+
+# Проверяется отказ при неполной конфигурации crawler.
+def test_invalid_config_is_rejected(tmp_path: Path):
+    config_path = tmp_path / "bad.yaml"
+    config_path.write_text("db: {}\nlogic: {}\nsources: {}\n", encoding="utf-8")
+    with pytest.raises((TypeError, ValueError)):
+        load_config(config_path)
+
+
+# Проверяется обработка HTTP 304 и обновление времени проверки документа.
+def test_conditional_request_marks_document_as_checked():
+    storage = FakeStorage()
+    http = FakeHttp(HttpResult(304, "https://example.com/a", "", "tag", None))
+    crawler = make_dummy_crawler(storage, http)
+    existing = {
+        "source_id": "1",
+        "url": "https://example.com/a",
+        "etag": '"old-tag"',
+        "checked_at": 0,
+    }
+
+    result = asyncio.run(
+        crawler.fetch_and_store(
+            source_id="1",
+            url=existing["url"],
+            title="Document",
+            metadata={},
+            existing=existing,
+            force=True,
+        )
+    )
+
+    assert result == "not_modified"
+    assert storage.checked
+    assert http.calls[0][1]["headers"] == {"If-None-Match": '"old-tag"'}
+
+
+# Проверяется пропуск повторного скачивания недавно проверенного документа.
+def test_recent_document_is_not_downloaded_again():
+    storage = FakeStorage()
+    http = FakeHttp(HttpResult(200, "https://example.com/a", "html", None, None))
+    crawler = make_dummy_crawler(storage, http)
+    existing = {"source_id": "1", "checked_at": 10**12}
+
+    result = asyncio.run(
+        crawler.fetch_and_store(
+            source_id="1",
+            url="https://example.com/a",
+            title="Document",
+            metadata={},
+            existing=existing,
+        )
+    )
+
+    assert result == "fresh"
+    assert http.calls == []
+
+
+# Проверяется пропуск слишком большого ответа без остановки всего источника.
+def test_oversized_document_is_skipped_without_stopping_source():
+    storage = FakeStorage()
+    http = FakeHttp(ResponseTooLarge("response is too large"))
+    crawler = make_dummy_crawler(storage, http)
+
+    result = asyncio.run(
+        crawler.fetch_and_store(
+            source_id="large-1",
+            url="https://example.com/large",
+            title="Large document",
+            metadata={},
+        )
+    )
+
+    assert result == "too_large"
+    assert len(http.calls) == 1
+
+
+# Проверяется перепроверка arXiv по метаданным до повторного запроса HTML.
+def test_arxiv_recrawl_uses_metadata_before_html():
+    storage = FakeStorage()
+    xml = """<feed xmlns="http://www.w3.org/2005/Atom">
+      <entry>
+        <id>https://arxiv.org/abs/2601.00001v2</id>
+        <title>Test paper</title>
+        <updated>2026-01-02T00:00:00Z</updated>
+      </entry>
+    </feed>"""
+    http = FakeHttp(
+        HttpResult(200, "https://export.arxiv.org/api/query", xml, None, None)
+    )
+    config = {
+        "logic": {
+            "user_agent": "test-agent",
+            "recrawl_after_seconds": 60,
+            "recrawl_batch_size": 10,
+        }
+    }
+    crawler = ArxivCrawler(config, {}, storage, http, asyncio.Event())
+    document = {
+        "source_id": "2601.00001",
+        "url": "https://arxiv.org/html/2601.00001v2",
+        "metadata": {"arxiv_id": "2601.00001v2", "updated": "2026-01-02T00:00:00Z"},
+    }
+
+    processed = asyncio.run(crawler._recrawl_batch([document]))
+
+    assert processed == 1
+    assert storage.checked
+    assert len(http.calls) == 1
+    assert http.calls[0][1]["method"] == "POST"
+    assert http.calls[0][1]["data"]["id_list"] == "2601.00001v2"
+
+
+# Проверяется деление сбойного arXiv-пакета и откладывание отдельных документов.
+def test_arxiv_failed_metadata_batch_is_split_and_deferred():
+    storage = FakeStorage()
+    http = FakeHttp(
+        HttpResult(500, "https://export.arxiv.org/api/query", "", None, None)
+    )
+    config = {
+        "logic": {
+            "user_agent": "test-agent",
+            "recrawl_after_seconds": 60,
+            "recrawl_batch_size": 10,
+        }
+    }
+    crawler = ArxivCrawler(config, {}, storage, http, asyncio.Event())
+    documents = [
+        {
+            "source_id": f"2601.0000{index}",
+            "url": f"https://arxiv.org/html/2601.0000{index}",
+            "metadata": {},
+        }
+        for index in range(1, 5)
+    ]
+
+    processed = asyncio.run(crawler._recrawl_batch(documents))
+
+    assert processed == 0
+    assert len(http.calls) == 7
+    assert [
+        len(call[1]["data"]["id_list"].split(",")) for call in http.calls
+    ] == [4, 2, 1, 1, 2, 1, 1]
+
+
+# Проверяется успешный запуск справки консольной утилиты crawler.
+def test_command_line_help():
+    result = subprocess.run(
+        [sys.executable, "src/crawler/main.py", "--help"],
+        capture_output=True,
+        check=False,
+        text=True,
+    )
+    assert result.returncode == 0
+    assert "config" in result.stdout
+
+
+# Проверяется полное чтение HTTP-ответа, получаемого несколькими частями.
+def test_http_client_reads_chunked_response_completely():
+    async def scenario():
+        async def handler(request):
+            response = web.StreamResponse(headers={"Content-Type": "text/plain"})
+            await response.prepare(request)
+            await response.write(b"first-")
+            await asyncio.sleep(0.01)
+            await response.write(b"second")
+            await response.write_eof()
+            return response
+
+        app = web.Application()
+        app.router.add_get("/document", handler)
+        runner = web.AppRunner(app)
+        await runner.setup()
+        site = web.TCPSite(runner, "127.0.0.1", 0)
+        await site.start()
+        port = site._server.sockets[0].getsockname()[1]
+        try:
+            async with ClientSession() as session:
+                http = HttpClient(
+                    session,
+                    delay_seconds=0,
+                    retries=0,
+                    backoff_seconds=0,
+                    max_response_bytes=100,
+                )
+                result = await http.get_text(f"http://127.0.0.1:{port}/document")
+                assert result.text == "first-second"
+        finally:
+            await runner.cleanup()
+
+    asyncio.run(scenario())
+
+
+# Проверяется немедленное прерывание ожидания повтора при запросе остановки.
+def test_http_retry_delay_is_interrupted_by_stop_event():
+    async def scenario():
+        requests = 0
+
+        async def handler(request):
+            nonlocal requests
+            requests += 1
+            return web.Response(status=500)
+
+        app = web.Application()
+        app.router.add_get("/temporary-error", handler)
+        runner = web.AppRunner(app)
+        await runner.setup()
+        site = web.TCPSite(runner, "127.0.0.1", 0)
+        await site.start()
+        port = site._server.sockets[0].getsockname()[1]
+        stop_event = asyncio.Event()
+        try:
+            async with ClientSession() as session:
+                http = HttpClient(
+                    session,
+                    delay_seconds=0,
+                    retries=4,
+                    backoff_seconds=30,
+                    max_response_bytes=100,
+                    stop_event=stop_event,
+                )
+                task = asyncio.create_task(
+                    http.get_text(f"http://127.0.0.1:{port}/temporary-error")
+                )
+                await asyncio.sleep(0.05)
+                stop_event.set()
+                with pytest.raises(StopRequested):
+                    await asyncio.wait_for(task, timeout=1)
+                assert requests == 1
+        finally:
+            await runner.cleanup()
+
+    asyncio.run(scenario())
+
+
+# Проверяется, что штатная остановка источника не журналируется как ошибка.
+def test_stopped_source_is_not_reported_as_error(caplog):
+    class StoppedCrawler:
+        async def run(self):
+            raise StopRequested
+
+    result = asyncio.run(run_source("test", StoppedCrawler()))
+
+    assert result is None
+    assert "завершился с ошибкой" not in caplog.text
+
+
+# Проверяется краткое журналирование ошибки источника без traceback в терминале.
+def test_failed_source_is_logged_without_traceback(caplog):
+    class FailedCrawler:
+        async def run(self):
+            raise RuntimeError("temporary failure")
+
+    result = asyncio.run(run_source("test", FailedCrawler()))
+
+    assert isinstance(result, RuntimeError)
+    assert "temporary failure" in caplog.text
+    assert "Traceback" not in caplog.text

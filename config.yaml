@@ -1,0 +1,104 @@
+db:
+  uri: mongodb://localhost:27017
+  database: mai_ir
+  documents_collection: documents
+  state_collection: crawl_state
+  queue_collection: crawl_queue
+  processed_collection: processed_documents
+  document_terms_collection: document_terms
+  token_frequencies_collection: token_frequencies
+  lemma_frequencies_collection: lemma_frequencies
+  linguistics_state_collection: linguistics_state
+
+logic:
+  user_agent: MAI-IR-course-project/2.0 (mailto:workdimila@gmail.com)
+  request_timeout_seconds: 60
+  retries: 4
+  backoff_seconds: 2
+  max_response_bytes: 14000000
+  total_connections: 6
+  connections_per_host: 1
+  lease_seconds: 300
+  recrawl_after_seconds: 7776000
+  recrawl_batch_size: 0
+  log_level: INFO
+  delay_seconds:
+    wikipedia: 1.0
+    arxiv: 3.0
+    microsoft_learn: 1.0
+
+sources:
+  wikipedia:
+    enabled: true
+    max_documents: null
+    max_category_depth: 6
+    seed_categories:
+      - Computer science
+      - Software engineering
+      - Artificial intelligence
+      - Information retrieval
+      - Database systems
+      - Computer networks
+      - Computer security
+
+  arxiv:
+    enabled: true
+    max_documents: null
+    batch_size: 100
+    metadata_batch_size: 100
+    sort_order: descending
+    earliest_month: 1993-01
+    categories:
+      - cs.IR
+      - cs.AI
+      - cs.CL
+      - cs.DB
+      - cs.DC
+      - cs.CR
+      - cs.LG
+      - cs.SE
+
+  microsoft_learn:
+    enabled: true
+    max_documents: null
+    discovery_interval_seconds: 7776000
+    products: []
+    excluded_products:
+      - previous-versions
+      - shows
+    excluded_paths:
+      - /answers/
+      - /shows/
+      - /events/
+      - /users/
+      - /credentials/
+      - /api/
+      - /previous-versions/
+
+linguistics:
+  batch_size: 100
+  minimum_words: 200
+  maximum_token_length: 100
+  max_documents: null
+  parser_version: 8
+  lemma_dictionary: resources/wordnet_exceptions.tsv
+  lemma_vocabulary: resources/wordnet_lemmas.txt
+  lemma_overrides: resources/technical_lemma_overrides.tsv
+  progress_every_documents: 100
+  zipf_max_terms: 100000
+  zipf_fit_terms: 10000
+  top_terms: 30
+  lock_lease_seconds: 600
+  output_directory: results
+
+boolean_index:
+  output_directory: results/boolean_index
+  term_field: lemmas
+  block_postings: 500000
+  progress_every_documents: 1000
+
+boolean_search:
+  result_limit: 20
+
+tfidf_search:
+  result_limit: 20  # Максимальное число ранжированных документов в выдаче.
