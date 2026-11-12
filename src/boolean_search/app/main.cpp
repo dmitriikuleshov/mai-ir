@@ -1,3 +1,4 @@
+// Собирает индекс, словарь лемматизации и консольный интерфейс в поисковую утилиту.
 #include "boolean_search/app/config.hpp"
 #include "boolean_search/app/console.hpp"
 #include "boolean_search/index/index_reader.hpp"
@@ -9,6 +10,7 @@
 
 namespace {
 
+// Завершает запуск с сообщением, если обязательный ресурс открыть невозможно.
 [[noreturn]] void fail(const char *message) {
     std::fprintf(stderr, "Ошибка: %s\n", message);
     std::exit(EXIT_FAILURE);
@@ -16,6 +18,7 @@ namespace {
 
 }  // namespace
 
+// Загружает конфигурацию и ресурсы, запускает консоль, затем освобождает их.
 int main(int argc, char **argv) {
     if (argc != 2) {
         std::fprintf(stderr, "Использование: %s config.yaml\n", argv[0]);

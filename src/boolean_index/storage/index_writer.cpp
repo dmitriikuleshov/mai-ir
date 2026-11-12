@@ -1,3 +1,4 @@
+// Сливает временные блоки и записывает окончательные бинарные файлы индекса.
 #include "boolean_index/storage/index_writer.hpp"
 
 #include "boolean_index/compression/variable_byte.hpp"
@@ -12,11 +13,13 @@
 
 namespace {
 
+// Завершает индексатор при ошибке записи, не выдавая неполный индекс за готовый.
 [[noreturn]] void fail(const char *message) {
     std::fprintf(stderr, "Ошибка: %s\n", message);
     std::exit(EXIT_FAILURE);
 }
 
+// Записывает одну фиксированную запись лексикона с позициями терма и posting list.
 bool write_lexicon_entry(FILE *lexicon, uint64_t term_offset,
                          uint64_t postings_offset, uint32_t term_length,
                          uint32_t postings_count) {
@@ -27,6 +30,7 @@ bool write_lexicon_entry(FILE *lexicon, uint64_t term_offset,
 
 }  // namespace
 
+// Выполняет k-way merge блоков и создаёт lexicon.bin, terms.bin и postings.bin.
 void merge_blocks(const BlockList *blocks, const char *output_directory,
                   uint32_t document_count) {
     char lexicon_path[PATH_SIZE];
@@ -52,6 +56,7 @@ void merge_blocks(const BlockList *blocks, const char *output_directory,
         fail("не удалось записать заголовок индекса");
     }
 
+    // По одному читателю на блок достаточно: в памяти находятся только текущие записи.
     std::vector<BlockReader> readers(blocks->size());
     ReaderHeap heap{{}, &readers};
     heap.items.reserve(blocks->size());
@@ -81,6 +86,7 @@ void merge_blocks(const BlockList *blocks, const char *output_directory,
         BlockReader *reader = &readers[reader_index];
         const size_t length = reader->term.size();
         if (!has_current_term || current_term != reader->term) {
+            // При смене терма завершается запись предыдущего posting list в лексикон.
             if (has_current_term &&
                 !write_lexicon_entry(lexicon, current_term_offset,
                                       current_postings_offset, current_length,
@@ -93,6 +99,7 @@ void merge_blocks(const BlockList *blocks, const char *output_directory,
             current_term = reader->term;
             has_current_term = true;
             current_length = static_cast<uint32_t>(length);
+            // Смещения измеряются в байтах от начала соответствующего файла.
             current_term_offset = static_cast<uint64_t>(ftello(terms));
             current_postings_offset = static_cast<uint64_t>(ftello(postings));
             current_postings_count = 0;
@@ -103,6 +110,7 @@ void merge_blocks(const BlockList *blocks, const char *output_directory,
             ++header.term_count;
         }
         if (!has_last_document || last_document != reader->document_id) {
+            // Вместо абсолютного docID хранится разность с предыдущим ID списка.
             const uint32_t document_gap = has_last_document
                                               ? reader->document_id - last_document
                                               : reader->document_id;
@@ -138,6 +146,7 @@ void merge_blocks(const BlockList *blocks, const char *output_directory,
     if (compressed_postings_size < 0) {
         fail("не удалось определить размер сжатого индекса");
     }
+    // Заголовок перезаписывается после получения точного числа термов и postings.
     if (fseeko(lexicon, 0, SEEK_SET) != 0 ||
         std::fwrite(&header, sizeof(header), 1, lexicon) != 1) {
         fail("не удалось обновить заголовок индекса");
@@ -152,6 +161,7 @@ void merge_blocks(const BlockList *blocks, const char *output_directory,
 
     const char *temporary[] = {lexicon_path, terms_path, postings_path};
     const char *names[] = {"lexicon.bin", "terms.bin", "postings.bin"};
+    // Готовые временные файлы заменяют старую версию только после успешной записи.
     for (size_t index = 0; index < 3; ++index) {
         char final_path[PATH_SIZE];
         join_path(final_path, sizeof(final_path), output_directory, names[index]);
@@ -180,6 +190,7 @@ void merge_blocks(const BlockList *blocks, const char *output_directory,
                  saved_percent);
 }
 
+// Записывает заголовок и атомарно завершает таблицу docID → ObjectId.
 void finalize_documents(FILE *documents, const char *temporary_path,
                         const char *output_directory, uint32_t count) {
     boolean_index_format::DocumentHeader header{};
@@ -199,6 +210,7 @@ void finalize_documents(FILE *documents, const char *temporary_path,
     }
 }
 
+// Записывает заголовок и завершает таблицу L2-норм в порядке внутренних docID.
 void finalize_document_norms(FILE *norms, const char *temporary_path,
                              const char *output_directory, uint32_t count) {
     boolean_index_format::DocumentNormHeader header{};

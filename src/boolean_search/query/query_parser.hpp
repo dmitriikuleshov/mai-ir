@@ -1,3 +1,4 @@
+// Объявляет выполнение булева запроса над открытым инвертированным индексом.
 #ifndef MAI_IR_BOOLEAN_SEARCH_QUERY_PARSER_HPP
 #define MAI_IR_BOOLEAN_SEARCH_QUERY_PARSER_HPP
 
@@ -6,6 +7,7 @@
 #include "linguistics/language/pipeline.hpp"
 #include "boolean_search/index/types.hpp"
 
+// Нормализует и вычисляет выражение, возвращая список подходящих docID или ошибку.
 BooleanResult boolean_search(BooleanIndex *index, const char *query,
                              size_t maximum_token_length,
                              const LemmaDictionary *dictionary,

@@ -1,3 +1,4 @@
+// Реализует ввод естественных запросов и вывод ранжированных результатов TF-IDF.
 #include "tfidf_search/app/console.hpp"
 
 #include "boolean_search/index/index_reader.hpp"
@@ -13,6 +14,7 @@
 
 namespace {
 
+// Удаляет пробельные символы по краям введённого запроса.
 void trim_string(std::string *value) {
     const size_t begin = value->find_first_not_of(" \t\r\n");
     if (begin == std::string::npos) {
@@ -23,6 +25,7 @@ void trim_string(std::string *value) {
     *value = value->substr(begin, end - begin + 1);
 }
 
+// Безопасно возвращает строковое поле BSON или пустую строку.
 const char *utf8_field(const bson_t *document, const char *field) {
     bson_iter_t iterator;
     if (!bson_iter_init_find(&iterator, document, field) ||
@@ -32,6 +35,7 @@ const char *utf8_field(const bson_t *document, const char *field) {
     return bson_iter_utf8(&iterator, nullptr);
 }
 
+// Печатает текст одной строкой, заменяя переводы строк и табуляцию пробелами.
 void print_clean(const char *text) {
     for (const unsigned char *cursor =
              reinterpret_cast<const unsigned char *>(text);
@@ -44,6 +48,7 @@ void print_clean(const char *text) {
     }
 }
 
+// Находит метаданные документа и печатает его позицию и cosine score.
 void print_document(mongoc_collection_t *collection,
                     const uint8_t oid_bytes[12],
                     const RankedDocument &ranked, size_t position) {
@@ -85,11 +90,13 @@ void print_document(mongoc_collection_t *collection,
 
 }  // namespace
 
+// Читает запросы до EOF, измеряет поиск и выводит ранжированную выдачу.
 void run_tfidf_search_console(const BooleanSearchConfig &config,
                               TfidfIndex *index,
                               const LemmaDictionary *dictionary,
                               mongoc_collection_t *collection) {
     std::string query;
+    // Подсказка нужна человеку в терминале, но не должна мешать конвейерному запуску.
     const bool interactive = isatty(STDIN_FILENO) != 0;
     if (interactive) {
         std::fprintf(stderr,
@@ -103,6 +110,7 @@ void run_tfidf_search_console(const BooleanSearchConfig &config,
         }
 
         char error[512] = "";
+        // Время включает вычисление ранжирования, но не последующие запросы метаданных.
         const auto started = std::chrono::steady_clock::now();
         const TfidfSearchResult result = tfidf_search(
             index, query.c_str(), config.maximum_token_length,
@@ -121,6 +129,7 @@ void run_tfidf_search_console(const BooleanSearchConfig &config,
                  ++position) {
                 const RankedDocument &ranked = result.documents[position];
                 uint8_t oid[12];
+                // Внутренний docID переводится в ObjectId через таблицу documents.bin.
                 if (!boolean_index_document_oid(
                         &index->boolean_index, ranked.document_id, oid)) {
                     std::printf("%zu. score=%.6f | doc=%u | ошибка таблицы документов\n",

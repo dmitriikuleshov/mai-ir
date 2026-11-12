@@ -1,3 +1,4 @@
+// Вычисляет веса lnc.ltc, cosine score и ранжированную выдачу документов.
 #include "tfidf_search/ranking/search.hpp"
 
 #include "boolean_search/index/index_reader.hpp"
@@ -12,17 +13,20 @@
 
 namespace {
 
+// Хранит нормализованный терм запроса и его ненормированный TF-IDF-вес.
 struct QueryTermWeight {
     std::string term;
     double weight;
 };
 
+// Записывает диагностическое сообщение в буфер вызывающего кода.
 void set_error(char *error, size_t error_size, const char *message) {
     if (error != nullptr && error_size != 0) {
         std::snprintf(error, error_size, "%s", message);
     }
 }
 
+// Сортирует документы по убыванию score, а равные результаты — по docID.
 bool result_before(const RankedDocument &left, const RankedDocument &right) {
     return left.score > right.score ||
            (left.score == right.score &&
@@ -31,6 +35,7 @@ bool result_before(const RankedDocument &left, const RankedDocument &right) {
 
 }  // namespace
 
+// Нормализует запрос и ранжирует документы по косинусной близости lnc.ltc.
 TfidfSearchResult tfidf_search(TfidfIndex *index, const char *query,
                                size_t maximum_token_length,
                                size_t result_limit,
@@ -43,6 +48,7 @@ TfidfSearchResult tfidf_search(TfidfIndex *index, const char *query,
         return result;
     }
 
+    // Запрос проходит тот же токенизатор и лемматизатор, что и документы корпуса.
     const LinguisticResult normalized = linguistics_process(
         query, std::strlen(query), maximum_token_length, dictionary);
     if (normalized.lemmas.empty()) {
@@ -60,6 +66,7 @@ TfidfSearchResult tfidf_search(TfidfIndex *index, const char *query,
                                      &entry)) {
             continue;
         }
+        // Сторона запроса ltc: (1 + log10(tf)) * log10(N / df).
         const double weight = logarithmic_term_frequency(term.count) *
                               inverse_document_frequency(
                                   document_count, entry.postings_count);
@@ -68,10 +75,13 @@ TfidfSearchResult tfidf_search(TfidfIndex *index, const char *query,
             squared_query_norm += weight * weight;
         }
     }
+    // Термы с df = N имеют IDF = 0 и не влияют на различие документов.
     if (query_weights.empty() || squared_query_norm == 0.0) return result;
 
     const double query_norm = std::sqrt(squared_query_norm);
+    // Прямой vector по docID заменяет запрещённую условиями курса хеш-таблицу.
     std::vector<double> scores(document_count, 0.0);
+    // Отдельный список позволяет затем обходить только документы с ненулевым вкладом.
     std::vector<uint32_t> touched_documents;
     for (const QueryTermWeight &query_term : query_weights) {
         const double normalized_query_weight = query_term.weight / query_norm;
@@ -91,6 +101,7 @@ TfidfSearchResult tfidf_search(TfidfIndex *index, const char *query,
             const double document_norm =
                 index->document_norms[posting.document_id];
             if (document_norm == 0.0) continue;
+            // Сторона документа lnc: (1 + log10(tf)) / L2-норма без IDF.
             const double contribution =
                 normalized_query_weight *
                 logarithmic_term_frequency(posting.term_frequency) /
@@ -98,6 +109,7 @@ TfidfSearchResult tfidf_search(TfidfIndex *index, const char *query,
             if (scores[posting.document_id] == 0.0) {
                 touched_documents.push_back(posting.document_id);
             }
+            // Сумма произведений нормированных весов является cosine similarity.
             scores[posting.document_id] += contribution;
         }
     }
@@ -110,6 +122,7 @@ TfidfSearchResult tfidf_search(TfidfIndex *index, const char *query,
         }
     }
     std::sort(result.documents.begin(), result.documents.end(), result_before);
+    // Полное число совпадений сохраняется до применения ограничения выдачи.
     result.matched_documents = result.documents.size();
     if (result.documents.size() > result_limit) {
         result.documents.resize(result_limit);

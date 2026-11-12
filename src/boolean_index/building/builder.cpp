@@ -1,3 +1,4 @@
+// Координирует чтение терминов корпуса и построение всех файлов индекса.
 #include "boolean_index/building/builder.hpp"
 
 #include "boolean_index/storage/files.hpp"
@@ -15,6 +16,7 @@
 
 namespace {
 
+// Немедленно завершает построение, чтобы не сохранить частично корректный индекс.
 [[noreturn]] void fail(const char *message) {
     std::fprintf(stderr, "Ошибка: %s\n", message);
     std::exit(EXIT_FAILURE);
@@ -22,6 +24,7 @@ namespace {
 
 }  // namespace
 
+// Извлекает пары «терм — частота» документа, добавляет postings и вычисляет L2-норму.
 bool add_document_terms(const bson_t *document, const char *field,
                         uint32_t document_id, PostingBuffer *buffer,
                         double *document_norm) {
@@ -36,6 +39,7 @@ bool add_document_terms(const bson_t *document, const char *field,
     }
     double squared_norm = 0.0;
     while (bson_iter_next(&terms)) {
+        // Каждый элемент MongoDB-массива имеет вид ["терм", частота].
         if (!BSON_ITER_HOLDS_ARRAY(&terms)) {
             return false;
         }
@@ -61,6 +65,7 @@ bool add_document_terms(const bson_t *document, const char *field,
             fail("недостаточно памяти для блока индекса");
         }
         if (length != 0) {
+            // Для схемы lnc используется вес 1 + log10(tf), без IDF документа.
             const double weight = logarithmic_term_frequency(
                 static_cast<uint64_t>(stored_frequency));
             squared_norm += weight * weight;
@@ -70,6 +75,7 @@ bool add_document_terms(const bson_t *document, const char *field,
     return true;
 }
 
+// Строит индекс блоками, не загружая все пары большого корпуса в память одновременно.
 void build_boolean_index(const BooleanIndexConfig &config) {
     make_directories(config.output_directory.c_str());
     char temporary_template[PATH_SIZE];
@@ -86,6 +92,7 @@ void build_boolean_index(const BooleanIndexConfig &config) {
         fail("не удалось создать таблицу документов");
     }
     boolean_index_format::DocumentHeader empty_header{};
+    // Место под заголовок резервируется заранее и заполняется после подсчёта документов.
     if (std::fwrite(&empty_header, sizeof(empty_header), 1, documents) != 1) {
         fail("не удалось записать таблицу документов");
     }
@@ -116,6 +123,7 @@ void build_boolean_index(const BooleanIndexConfig &config) {
     BSON_APPEND_INT32(&projection, config.term_field.c_str(), 1);
     bson_append_document_end(&options, &projection);
     BSON_APPEND_DOCUMENT_BEGIN(&options, "sort", &sort);
+    // Сортировка по ObjectId делает назначение последовательных docID воспроизводимым.
     BSON_APPEND_INT32(&sort, "_id", 1);
     bson_append_document_end(&options, &sort);
     BSON_APPEND_INT32(&options, "batchSize", 100);
@@ -136,6 +144,7 @@ void build_boolean_index(const BooleanIndexConfig &config) {
             fail("число документов превышает формат индекса");
         }
         const bson_oid_t *oid = bson_iter_oid(&id_iterator);
+        // Позиция ObjectId в documents.bin соответствует назначенному числовому docID.
         if (std::fwrite(oid->bytes, 1, sizeof(oid->bytes), documents) !=
             sizeof(oid->bytes)) {
             fail("ошибка записи идентификатора документа");
@@ -149,6 +158,7 @@ void build_boolean_index(const BooleanIndexConfig &config) {
             fail("ошибка записи нормы документа");
         }
         ++document_count;
+        // При достижении лимита буфер сортируется и освобождается в файл на диске.
         if (buffer.size() >= config.block_postings) {
             flush_block(&buffer, &blocks, temporary_template);
         }
@@ -167,6 +177,7 @@ void build_boolean_index(const BooleanIndexConfig &config) {
                        config.output_directory.c_str(), document_count);
     finalize_document_norms(norms, norms_path,
                             config.output_directory.c_str(), document_count);
+    // Сначала ограничивается число файлов, затем выполняется единое финальное слияние.
     reduce_blocks(&blocks, temporary_template);
     merge_blocks(&blocks, config.output_directory.c_str(), document_count);
 

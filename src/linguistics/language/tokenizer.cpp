@@ -1,3 +1,4 @@
+// Реализует нормализацию UTF-8 и разбиение технического текста на токены.
 #include "linguistics/language/tokenizer.hpp"
 
 #include <cctype>
@@ -8,6 +9,7 @@
 
 namespace {
 
+// CodePoint представляет символ Unicode, а Byte — отдельный байт его UTF-8-кодировки.
 using CodePoint = char32_t;
 using Byte = unsigned char;
 
@@ -50,6 +52,8 @@ constexpr CodePoint FULLWIDTH_ASCII_OFFSET =
     FULLWIDTH_ASCII.first - U'!';
 
 constexpr Byte ASCII_LIMIT = 0x80;
+
+// Маски ниже отделяют служебные биты UTF-8 от битов самой кодовой точки.
 constexpr Byte CONTINUATION_BYTE_MASK = 0xC0;
 constexpr Byte CONTINUATION_BYTE_PREFIX = 0x80;
 constexpr Byte CONTINUATION_DATA_MASK = 0x3F;
@@ -79,29 +83,36 @@ constexpr UnicodeRange SURROGATE_CODEPOINTS{
 constexpr CodePoint MAXIMUM_UNICODE_CODEPOINT =
     static_cast<CodePoint>(0x10FFFF);
 
+// Проверяет, входит ли Unicode-символ в заданный диапазон кодовых точек.
 constexpr bool belongs_to(CodePoint codepoint, UnicodeRange range) {
     return codepoint >= range.first && codepoint <= range.last;
 }
 
+// Определяет типографские варианты одинарной кавычки.
 bool is_unicode_quote(CodePoint codepoint) {
     return codepoint == LEFT_SINGLE_QUOTE ||
            codepoint == RIGHT_SINGLE_QUOTE;
 }
 
+// Определяет поддерживаемые Unicode-варианты дефиса и тире.
 bool is_unicode_dash(CodePoint codepoint) {
     return codepoint == HYPHEN || codepoint == NON_BREAKING_HYPHEN ||
            codepoint == FIGURE_DASH || codepoint == EN_DASH ||
            codepoint == EM_DASH;
 }
 
+// Проверяет, является ли байт продолжением многобайтового символа UTF-8.
 bool is_continuation_byte(Byte byte) {
     return (byte & CONTINUATION_BYTE_MASK) == CONTINUATION_BYTE_PREFIX;
 }
 
+// Создаёт результат декодирования для некорректной последовательности UTF-8.
 DecodedCharacter invalid_character() {
+    // Один байт всё равно считается прочитанным, чтобы обработка продолжилась дальше.
     return {CodePoint{}, 1, false};
 }
 
+// Декодирует один символ UTF-8 и проверяет корректность его представления.
 DecodedCharacter decode_utf8(const Byte *text, size_t remaining) {
     if (remaining == 0) return {CodePoint{}, 0, false};
 
@@ -139,6 +150,7 @@ DecodedCharacter decode_utf8(const Byte *text, size_t remaining) {
             (text[index] & CONTINUATION_DATA_MASK));
     }
 
+    // Избыточные кодировки, суррогаты UTF-16 и значения за пределами Unicode запрещены UTF-8.
     const bool overlong_encoding = codepoint < minimum_codepoint;
     const bool surrogate = belongs_to(codepoint, SURROGATE_CODEPOINTS);
     const bool outside_unicode = codepoint > MAXIMUM_UNICODE_CODEPOINT;
@@ -148,6 +160,7 @@ DecodedCharacter decode_utf8(const Byte *text, size_t remaining) {
     return {codepoint, width, true};
 }
 
+// Определяет Unicode-символы, которые разделяют соседние токены.
 bool unicode_separator(CodePoint codepoint) {
     if (codepoint <= ASCII_SPACE || codepoint == DELETE_CHARACTER ||
         codepoint == NO_BREAK_SPACE) {
@@ -158,6 +171,7 @@ bool unicode_separator(CodePoint codepoint) {
            belongs_to(codepoint, CJK_PUNCTUATION);
 }
 
+// Определяет пробельные символы ASCII и Unicode.
 bool unicode_space(CodePoint codepoint) {
     return codepoint <= ASCII_SPACE || codepoint == DELETE_CHARACTER ||
            codepoint == NO_BREAK_SPACE ||
@@ -168,6 +182,7 @@ bool unicode_space(CodePoint codepoint) {
            codepoint == IDEOGRAPHIC_SPACE;
 }
 
+// Приводит пробелы, кавычки, тире и fullwidth-символы к единому виду.
 std::string normalize_input(const char *text, size_t text_size) {
     std::string normalized;
     normalized.reserve(text_size);
@@ -186,9 +201,11 @@ std::string normalize_input(const char *text, size_t text_size) {
         } else if (is_unicode_dash(codepoint)) {
             normalized.push_back('-');
         } else if (belongs_to(codepoint, FULLWIDTH_ASCII)) {
+            // Например, полноширинная латинская A превращается в обычную ASCII A.
             normalized.push_back(
                 static_cast<char>(codepoint - FULLWIDTH_ASCII_OFFSET));
         } else {
+            // Остальные корректные Unicode-символы копируются исходными UTF-8-байтами.
             normalized.append(text + position, character.width);
         }
         position += character.width;
@@ -196,6 +213,7 @@ std::string normalize_input(const char *text, size_t text_size) {
     return normalized;
 }
 
+// Проверяет, может ли следующий UTF-8-символ быть частью слова.
 bool word_character(const unsigned char *text, size_t remaining,
                     size_t *width) {
     const DecodedCharacter character = decode_utf8(text, remaining);
@@ -205,13 +223,16 @@ bool word_character(const unsigned char *text, size_t remaining,
     if (codepoint < FIRST_NON_ASCII) {
         return std::isalnum(static_cast<unsigned char>(codepoint)) != 0;
     }
+    // Для не-ASCII символов токенизатор отделяет пунктуацию, но сохраняет буквы разных языков.
     return !unicode_separator(codepoint);
 }
 
+// Определяет допустимые разделители внутри составного технического токена.
 bool inner_separator(unsigned char value) {
     return value == '.' || value == '_' || value == '\'' || value == '-';
 }
 
+// Проверяет, начинается ли слово с указанной позиции текста.
 bool word_follows(const std::string &text, size_t position) {
     if (position >= text.size()) return false;
     size_t width = 1;
@@ -220,6 +241,7 @@ bool word_follows(const std::string &text, size_t position) {
         text.size() - position, &width);
 }
 
+// Проверяет контекст, в котором разрешены префиксы --, / и @.
 bool technical_prefix_can_start(const std::string &text, size_t position) {
     if (position == 0) return true;
     const unsigned char previous = text[position - 1];
@@ -229,6 +251,7 @@ bool technical_prefix_can_start(const std::string &text, size_t position) {
            previous == '\'';
 }
 
+// Выделяет токены из нормализованного текста с учётом технических конструкций.
 TokenList tokenize_normalized(const std::string &text, size_t maximum_length,
                               uint64_t *token_characters) {
     TokenList tokens;
@@ -237,6 +260,7 @@ TokenList tokenize_normalized(const std::string &text, size_t maximum_length,
 
     while (position < text.size()) {
         size_t width = 1;
+        // Эти префиксы позволяют сохранить .NET, --option, /path и @package целиком.
         const bool starts_with_dot =
             text[position] == '.' && word_follows(text, position + 1);
         const bool starts_with_option =
@@ -306,6 +330,7 @@ TokenList tokenize_normalized(const std::string &text, size_t maximum_length,
             if (character_width != 1) break;
 
             const unsigned char separator = text[position];
+            // Внутренний разделитель сохраняется только между словами, но не на конце токена.
             if (inner_separator(separator) && word_follows(text, position + 1)) {
                 token.push_back(text[position++]);
                 ++characters;
@@ -317,6 +342,7 @@ TokenList tokenize_normalized(const std::string &text, size_t maximum_length,
                 token.append("://");
                 position += 3;
                 characters += 3;
+                // Дополнительные URL-разделители разрешаются только после распознанной схемы.
                 url_token = true;
                 continue;
             }
@@ -362,6 +388,7 @@ TokenList tokenize_normalized(const std::string &text, size_t maximum_length,
             break;
         }
 
+        // Суффиксы языков C++ и C# добавляются отдельно, поскольку сами по себе не являются словом.
         if (position + 1 < text.size() && text[position] == '+' &&
             text[position + 1] == '+') {
             token.append("++");
@@ -373,10 +400,12 @@ TokenList tokenize_normalized(const std::string &text, size_t maximum_length,
             ++characters;
         }
 
+        // Английское притяжательное окончание удаляется до передачи токена лемматизатору.
         if (token.size() >= 2 && token.ends_with("'s")) {
             token.resize(token.size() - 2);
             characters -= 2;
         }
+        // Ограничение задаётся в Unicode-символах, а не в количестве UTF-8-байтов.
         if (!token.empty() && characters <= maximum_length) {
             *token_characters += characters;
             tokens.push_back(std::move(token));
@@ -387,6 +416,7 @@ TokenList tokenize_normalized(const std::string &text, size_t maximum_length,
 
 }  // namespace
 
+// Нормализует исходный текст, выполняет токенизацию и измеряет время обработки.
 TokenizationResult tokenize_text(const char *text, size_t text_size,
                                  size_t maximum_token_length) {
     const auto started = std::chrono::steady_clock::now();

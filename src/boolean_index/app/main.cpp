@@ -1,3 +1,4 @@
+// Запускает построение индекса по указанному файлу конфигурации.
 #include "boolean_index/app/config.hpp"
 #include "boolean_index/building/builder.hpp"
 
@@ -6,6 +7,7 @@
 #include <cstdio>
 #include <cstdlib>
 
+// Проверяет аргументы, инициализирует MongoDB-драйвер и запускает индексатор.
 int main(int argc, char **argv) {
     if (argc != 2) {
         std::fprintf(stderr, "Использование: %s config.yaml\n", argv[0]);

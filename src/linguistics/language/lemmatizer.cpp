@@ -1,3 +1,4 @@
+// Реализует словарную и правиловую лемматизацию токенов английского технического корпуса.
 #include "linguistics/language/lemmatizer.hpp"
 
 #include <algorithm>
@@ -10,8 +11,10 @@
 #include <utility>
 #include <vector>
 
+// Отсортированный vector заменяет запрещённые условиями курса map и hash table.
 using LemmaEntries = std::vector<std::pair<std::string, std::string>>;
 
+// Хранит отсортированные словарные пары и множество допустимых базовых лемм.
 struct LemmaDictionary {
     LemmaEntries exceptions;
     LemmaEntries overrides;
@@ -25,6 +28,7 @@ struct LemmaPair {
     const char *lemma;
 };
 
+// Небольшой встроенный набор наиболее частых неправильных английских форм.
 const LemmaPair IRREGULAR_LEMMAS[] = {
     {"analyses", "analysis"}, {"are", "be"},         {"as", "as"},
     {"axes", "axe"},         {"been", "be"},        {"best", "good"},
@@ -40,11 +44,13 @@ const LemmaPair IRREGULAR_LEMMAS[] = {
     {"worse", "bad"},        {"worst", "bad"},      {"yes", "yes"},
 };
 
+// Завершает программу с понятным сообщением при невозможности загрузить словарь.
 [[noreturn]] void fail(const char *message) {
     std::fprintf(stderr, "lemmatizer: %s\n", message);
     std::exit(EXIT_FAILURE);
 }
 
+// Проверяет, состоит ли токен только из английских букв ASCII.
 bool ascii_word(const std::string &word) {
     for (const unsigned char character : word) {
         if (!std::isalpha(character)) return false;
@@ -52,15 +58,18 @@ bool ascii_word(const std::string &word) {
     return true;
 }
 
+// Определяет английские гласные, используемые при восстановлении основы слова.
 bool vowel(char value) {
     return value == 'a' || value == 'e' || value == 'i' || value == 'o' ||
            value == 'u';
 }
 
+// Определяет английские согласные, используемые в правилах окончаний.
 bool consonant(char value) {
     return value >= 'a' && value <= 'z' && !vowel(value);
 }
 
+// Ищет словоформу двоичным поиском в отсортированном векторе соответствий.
 const std::string *mapping_find(const LemmaEntries &entries,
                                 const std::string &form) {
     const auto position = std::lower_bound(
@@ -72,12 +81,14 @@ const std::string *mapping_find(const LemmaEntries &entries,
     return &position->second;
 }
 
+// Проверяет, присутствует ли кандидат в словаре допустимых лемм.
 bool lemma_exists(const LemmaDictionary *dictionary,
                   const std::string &candidate) {
     return std::binary_search(dictionary->lemmas.begin(),
                               dictionary->lemmas.end(), candidate);
 }
 
+// Сортирует словарные пары и удаляет их полные дубликаты.
 void sort_mappings(LemmaEntries *entries) {
     std::sort(entries->begin(), entries->end(),
               [](const auto &left, const auto &right) {
@@ -88,6 +99,7 @@ void sort_mappings(LemmaEntries *entries) {
                    entries->end());
 }
 
+// Загружает из TSV пары «словоформа — лемма» для исключений или переопределений.
 void load_mappings(const char *path, LemmaEntries *entries) {
     if (path == nullptr || *path == '\0') return;
     std::ifstream file(path);
@@ -109,6 +121,7 @@ void load_mappings(const char *path, LemmaEntries *entries) {
     sort_mappings(entries);
 }
 
+// Загружает, сортирует и очищает от дубликатов словарь допустимых лемм.
 void load_lemmas(const char *path, std::vector<std::string> *lemmas) {
     if (path == nullptr || *path == '\0') return;
     std::ifstream file(path);
@@ -124,6 +137,7 @@ void load_lemmas(const char *path, std::vector<std::string> *lemmas) {
     lemmas->erase(std::unique(lemmas->begin(), lemmas->end()), lemmas->end());
 }
 
+// Применяет базовые правила окончаний, когда внешний словарь лемм не задан.
 std::string lemmatize_without_vocabulary(const std::string &word) {
     std::string lemma = word;
     const size_t length = word.size();
@@ -133,9 +147,11 @@ std::string lemmatize_without_vocabulary(const std::string &word) {
     }
     if (length > 5 && word.ends_with("ing")) {
         lemma.resize(length - 3);
+        // running → run: после удаления -ing убирается удвоенная согласная.
         if (lemma.size() >= 2 && lemma.back() == lemma[lemma.size() - 2] &&
             consonant(lemma.back())) {
             lemma.pop_back();
+        // using → use: для некоторых основ восстанавливается немая e.
         } else if (lemma.back() == 'v' || lemma.ends_with("mak") ||
                    lemma.ends_with("creat")) {
             lemma.push_back('e');
@@ -167,12 +183,14 @@ std::string lemmatize_without_vocabulary(const std::string &word) {
     return lemma;
 }
 
+// Выбирает корректную основу глагола среди вариантов со сдвоением и немой e.
 std::string validated_verb_stem(const std::string &stem,
                                 const LemmaDictionary *dictionary) {
     const bool doubled_consonant =
         stem.size() >= 2 && stem.back() == stem[stem.size() - 2] &&
         consonant(stem.back());
     if (doubled_consonant) {
+        // Сначала сохраняется полная основа, если она сама является словарной леммой.
         if (lemma_exists(dictionary, stem)) return stem;
         const std::string shortened = stem.substr(0, stem.size() - 1);
         if (lemma_exists(dictionary, shortened)) return shortened;
@@ -190,6 +208,7 @@ std::string validated_verb_stem(const std::string &stem,
     return {};
 }
 
+// Строит кандидата по окончанию и принимает его только при наличии в словаре лемм.
 std::string validated_suffix_lemma(const std::string &word,
                                    const LemmaDictionary *dictionary) {
     const size_t length = word.size();
@@ -223,10 +242,13 @@ std::string validated_suffix_lemma(const std::string &word,
     return {};
 }
 
+// Лемматизирует один токен с учётом приоритета словарей и правил окончаний.
 std::string lemmatize_token(const std::string &word,
                             const LemmaDictionary *dictionary) {
+    // Неанглийские слова и технические конструкции с цифрами или знаками не изменяются.
     if (!ascii_word(word)) return word;
 
+    // Порядок важен: настройки корпуса имеют приоритет над общими исключениями WordNet.
     if (const std::string *lemma =
             mapping_find(dictionary->overrides, word)) {
         return *lemma;
@@ -239,15 +261,18 @@ std::string lemmatize_token(const std::string &word,
         return *lemma;
     }
     if (dictionary->lemmas.empty()) {
+        // Без словаря остаются только осторожные морфологические эвристики.
         return lemmatize_without_vocabulary(word);
     }
 
+    // Словарь не позволяет правилам образовать несуществующую усечённую основу.
     const std::string candidate = validated_suffix_lemma(word, dictionary);
     return candidate.empty() ? word : candidate;
 }
 
 }  // namespace
 
+// Создаёт единый словарь из WordNet, списка допустимых лемм и настроек корпуса.
 LemmaDictionary *lemma_dictionary_load(const char *exceptions_path,
                                        const char *lemmas_path,
                                        const char *overrides_path) {
@@ -258,10 +283,12 @@ LemmaDictionary *lemma_dictionary_load(const char *exceptions_path,
     return dictionary;
 }
 
+// Освобождает память словаря, созданного функцией lemma_dictionary_load.
 void lemma_dictionary_destroy(LemmaDictionary *dictionary) {
     delete dictionary;
 }
 
+// Лемматизирует список токенов, считает изменения и измеряет время обработки.
 LemmatizationResult lemmatize_tokens(const TokenList *tokens,
                                      const LemmaDictionary *dictionary) {
     const auto started = std::chrono::steady_clock::now();

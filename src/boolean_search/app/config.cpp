@@ -1,3 +1,4 @@
+// Загружает общие настройки булева и ранжированного консольного поиска.
 #include "boolean_search/app/config.hpp"
 
 #include <cerrno>
@@ -9,11 +10,13 @@
 
 namespace {
 
+// Завершает запуск поисковой утилиты при ошибке конфигурации.
 [[noreturn]] void fail(const char *message) {
     std::fprintf(stderr, "Ошибка: %s\n", message);
     std::exit(EXIT_FAILURE);
 }
 
+// Удаляет пробельные символы по краям изменяемой строки.
 char *trim(char *value) {
     while (*value == ' ' || *value == '\t') {
         ++value;
@@ -28,6 +31,7 @@ char *trim(char *value) {
     return value;
 }
 
+// Разбирает строго положительное целое значение без лишних символов.
 bool parse_positive_size(const char *value, size_t *result) {
     errno = 0;
     char *end = nullptr;
@@ -42,6 +46,7 @@ bool parse_positive_size(const char *value, size_t *result) {
 
 }  // namespace
 
+// Читает пути индекса, словарей и ограничения выдачи из config.yaml.
 BooleanSearchConfig load_boolean_search_config(const char *path) {
     BooleanSearchConfig config{};
     config.uri = "mongodb://localhost:27017";
@@ -55,6 +60,7 @@ BooleanSearchConfig load_boolean_search_config(const char *path) {
     config.result_limit = 20;
     config.tfidf_result_limit = 20;
 
+    // Используется только необходимый проекту поднабор простого YAML.
     FILE *file = std::fopen(path, "rb");
     if (file == nullptr) {
         fail("не удалось открыть config.yaml");

@@ -1,3 +1,4 @@
+// Дополняет булев индекс таблицей заранее вычисленных L2-норм документов.
 #include "tfidf_search/index/ranking_index.hpp"
 
 #include "boolean_search/index/index_reader.hpp"
@@ -9,6 +10,7 @@
 
 namespace {
 
+// Записывает диагностическое сообщение в буфер вызывающего кода.
 void set_error(char *error, size_t error_size, const char *message) {
     if (error != nullptr && error_size != 0) {
         std::snprintf(error, error_size, "%s", message);
@@ -17,6 +19,7 @@ void set_error(char *error, size_t error_size, const char *message) {
 
 }  // namespace
 
+// Открывает базовый индекс и загружает согласованный с ним файл norms.bin.
 bool tfidf_index_open(TfidfIndex *index, const char *directory,
                       char *error, size_t error_size) {
     *index = {};
@@ -35,6 +38,7 @@ bool tfidf_index_open(TfidfIndex *index, const char *directory,
     }
 
     boolean_index_format::DocumentNormHeader header{};
+    // Magic, версия и число документов защищают от смешивания разных сборок индекса.
     if (std::fread(&header, sizeof(header), 1, file) != 1 ||
         std::memcmp(header.magic, boolean_index_format::DOCUMENT_NORM_MAGIC,
                     sizeof(header.magic)) != 0 ||
@@ -47,6 +51,7 @@ bool tfidf_index_open(TfidfIndex *index, const char *directory,
         return false;
     }
 
+    // Позиция нормы в vector совпадает с внутренним docID документа.
     index->document_norms.resize(header.document_count);
     const size_t bytes = index->document_norms.size() * sizeof(double);
     if (bytes != 0 &&
@@ -63,6 +68,7 @@ bool tfidf_index_open(TfidfIndex *index, const char *directory,
         return false;
     }
     for (double norm : index->document_norms) {
+        // NaN, бесконечность и отрицательная длина означают повреждение файла.
         if (!std::isfinite(norm) || norm < 0.0) {
             set_error(error, error_size,
                       "таблица норм документов содержит неверное значение");
@@ -73,6 +79,7 @@ bool tfidf_index_open(TfidfIndex *index, const char *directory,
     return true;
 }
 
+// Закрывает базовый индекс и освобождает загруженную таблицу норм.
 void tfidf_index_close(TfidfIndex *index) {
     boolean_index_close(&index->boolean_index);
     index->document_norms.clear();

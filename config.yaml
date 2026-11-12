@@ -92,13 +92,13 @@ linguistics:
   output_directory: results
 
 boolean_index:
-  output_directory: results/boolean_index
-  term_field: lemmas
-  block_postings: 500000
-  progress_every_documents: 1000
+  output_directory: results/boolean_index  # Каталог для бинарных файлов готового индекса.
+  term_field: lemmas  # Массив document_terms, по которому строится индекс: lemmas или tokens.
+  block_postings: 500000  # Число пар «терм — документ» в одном буфере перед сбросом на диск.
+  progress_every_documents: 1000  # Период вывода прогресса в обработанных документах.
 
 boolean_search:
-  result_limit: 20
+  result_limit: 20  # Максимальное число документов, для которых выводятся метаданные.
 
 tfidf_search:
   result_limit: 20  # Максимальное число ранжированных документов в выдаче.

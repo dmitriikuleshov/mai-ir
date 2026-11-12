@@ -1,3 +1,4 @@
+// Объявляет настройки загрузки индекса, нормализации запроса и выдачи результатов.
 #ifndef MAI_IR_BOOLEAN_SEARCH_CONFIG_HPP
 #define MAI_IR_BOOLEAN_SEARCH_CONFIG_HPP
 
@@ -17,6 +18,7 @@ struct BooleanSearchConfig {
     size_t tfidf_result_limit;
 };
 
+// Загружает настройки булева и TF-IDF-поиска из общего config.yaml.
 BooleanSearchConfig load_boolean_search_config(const char *path);
 
 #endif

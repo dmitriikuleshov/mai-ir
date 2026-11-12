@@ -1,7 +1,9 @@
+// Реализует Variable Byte для компактного хранения docID-gap и частот терминов.
 #include "boolean_index/compression/variable_byte.hpp"
 
 #include <climits>
 
+// Кодирует 32-битное число группами по 7 значащих бит.
 size_t variable_byte_encode(uint32_t value,
                             uint8_t output[VARIABLE_BYTE_MAX_SIZE]) {
     uint8_t reversed[VARIABLE_BYTE_MAX_SIZE];
@@ -11,6 +13,7 @@ size_t variable_byte_encode(uint32_t value,
         value >>= 7U;
     } while (value != 0);
 
+    // Группы разворачиваются от старших к младшим, а старший бит завершает число.
     for (size_t index = 0; index < size; ++index) {
         output[index] = reversed[size - index - 1];
     }
@@ -18,6 +21,7 @@ size_t variable_byte_encode(uint32_t value,
     return size;
 }
 
+// Декодирует одно Variable Byte-число и сообщает число использованных байтов.
 bool variable_byte_decode(const uint8_t *data, size_t size,
                           size_t *consumed, uint32_t *value) {
     uint32_t result = 0;
@@ -26,6 +30,7 @@ bool variable_byte_decode(const uint8_t *data, size_t size,
                              : VARIABLE_BYTE_MAX_SIZE;
     for (size_t index = 0; index < limit; ++index) {
         const uint32_t payload = data[index] & 0x7FU;
+        // Проверка выполняется до умножения, чтобы исключить переполнение uint32_t.
         if (result > (UINT32_MAX - payload) / 128U) {
             return false;
         }
@@ -39,12 +44,14 @@ bool variable_byte_decode(const uint8_t *data, size_t size,
     return false;
 }
 
+// Кодирует число и полностью записывает его в открытый бинарный файл.
 bool variable_byte_write(FILE *file, uint32_t value) {
     uint8_t encoded[VARIABLE_BYTE_MAX_SIZE];
     const size_t size = variable_byte_encode(value, encoded);
     return std::fwrite(encoded, 1, size, file) == size;
 }
 
+// Читает байты до маркера конца и декодирует одно число из файла.
 bool variable_byte_read(FILE *file, uint32_t *value) {
     uint8_t encoded[VARIABLE_BYTE_MAX_SIZE];
     for (size_t size = 0; size < VARIABLE_BYTE_MAX_SIZE; ++size) {

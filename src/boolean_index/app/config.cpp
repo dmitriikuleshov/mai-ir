@@ -1,3 +1,4 @@
+// Загружает из config.yaml параметры построения дискового инвертированного индекса.
 #include "boolean_index/app/config.hpp"
 
 #include <cerrno>
@@ -9,11 +10,13 @@
 
 namespace {
 
+// Завершает запуск индексатора с понятным сообщением о неверной конфигурации.
 [[noreturn]] void fail(const char *message) {
     std::fprintf(stderr, "Ошибка: %s\n", message);
     std::exit(EXIT_FAILURE);
 }
 
+// Удаляет пробельные символы по краям изменяемой строки конфигурации.
 char *trim(char *value) {
     while (*value == ' ' || *value == '\t') {
         ++value;
@@ -28,6 +31,7 @@ char *trim(char *value) {
     return value;
 }
 
+// Преобразует строку в строго положительное значение типа size_t.
 bool parse_positive_size(const char *value, size_t *result) {
     errno = 0;
     char *end = nullptr;
@@ -42,6 +46,7 @@ bool parse_positive_size(const char *value, size_t *result) {
 
 }  // namespace
 
+// Читает настройки индекса, подставляя безопасные значения по умолчанию.
 BooleanIndexConfig load_boolean_index_config(const char *path) {
     BooleanIndexConfig config{};
     config.uri = "mongodb://localhost:27017";
@@ -52,6 +57,7 @@ BooleanIndexConfig load_boolean_index_config(const char *path) {
     config.block_postings = 500000;
     config.progress_every_documents = 1000;
 
+    // Достаточный для проекта поднабор YAML разбирается без сторонней библиотеки.
     FILE *file = std::fopen(path, "rb");
     if (file == nullptr) {
         fail("не удалось открыть config.yaml");
@@ -106,6 +112,7 @@ BooleanIndexConfig load_boolean_index_config(const char *path) {
         }
     }
     std::fclose(file);
+    // Индекс строится либо по исходным токенам, либо по нормализованным леммам.
     if ((config.term_field != "lemmas" && config.term_field != "tokens") ||
         config.output_directory.empty()) {
         fail("term_field должен быть lemmas или tokens");

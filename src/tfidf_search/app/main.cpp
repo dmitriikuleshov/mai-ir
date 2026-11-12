@@ -1,3 +1,4 @@
+// Собирает индекс, словари и консольный интерфейс в утилиту TF-IDF-поиска.
 #include "boolean_search/app/config.hpp"
 #include "tfidf_search/app/console.hpp"
 #include "tfidf_search/index/ranking_index.hpp"
@@ -9,6 +10,7 @@
 
 namespace {
 
+// Завершает запуск с понятным сообщением при отсутствии обязательного ресурса.
 [[noreturn]] void fail(const char *message) {
     std::fprintf(stderr, "Ошибка: %s\n", message);
     std::exit(EXIT_FAILURE);
@@ -16,6 +18,7 @@ namespace {
 
 }  // namespace
 
+// Загружает конфигурацию и индекс, запускает консоль, затем освобождает ресурсы.
 int main(int argc, char **argv) {
     if (argc != 2) {
         std::fprintf(stderr, "Использование: %s config.yaml\n", argv[0]);

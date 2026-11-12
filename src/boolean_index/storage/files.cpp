@@ -1,3 +1,4 @@
+// Содержит небольшие безопасные операции с каталогами и путями файлов индекса.
 #include "boolean_index/storage/files.hpp"
 
 #include <cerrno>
@@ -9,6 +10,7 @@
 
 namespace {
 
+// Завершает индексатор при невозможности подготовить путь результата.
 [[noreturn]] void fail(const char *message) {
     std::fprintf(stderr, "Ошибка: %s\n", message);
     std::exit(EXIT_FAILURE);
@@ -16,6 +18,7 @@ namespace {
 
 }  // namespace
 
+// Рекурсивно создаёт все отсутствующие компоненты указанного пути.
 void make_directories(const char *path) {
     std::string buffer(path);
     for (size_t position = 1; position < buffer.size(); ++position) {
@@ -32,6 +35,7 @@ void make_directories(const char *path) {
     }
 }
 
+// Соединяет каталог и имя файла с предварительной проверкой размера буфера.
 void join_path(char *target, size_t target_size, const char *directory,
                const char *name) {
     const size_t directory_size = std::strlen(directory);

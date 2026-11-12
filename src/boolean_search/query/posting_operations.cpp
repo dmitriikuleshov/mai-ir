@@ -1,11 +1,14 @@
+// Реализует AND, OR и NOT как линейные операции над отсортированными posting lists.
 #include "boolean_search/query/posting_operations.hpp"
 
+// Возвращает пересечение двух списков документов для операции AND.
 BooleanResult intersect_postings(const BooleanResult &left,
                                  const BooleanResult &right) {
     BooleanResult output;
     output.reserve(left.size() < right.size() ? left.size() : right.size());
     size_t first = 0;
     size_t second = 0;
+    // Меньший docID продвигается вперёд, поэтому каждый список читается один раз.
     while (first < left.size() && second < right.size()) {
         const uint32_t a = left[first];
         const uint32_t b = right[second];
@@ -22,6 +25,7 @@ BooleanResult intersect_postings(const BooleanResult &left,
     return output;
 }
 
+// Возвращает объединение двух списков без повторов для операции OR.
 BooleanResult unite_postings(const BooleanResult &left,
                              const BooleanResult &right) {
     BooleanResult output;
@@ -45,6 +49,7 @@ BooleanResult unite_postings(const BooleanResult &left,
     return output;
 }
 
+// Возвращает все docID корпуса, отсутствующие во входном списке, для операции NOT.
 BooleanResult complement_postings(const BooleanResult &input,
                                   uint32_t document_count) {
     BooleanResult output;

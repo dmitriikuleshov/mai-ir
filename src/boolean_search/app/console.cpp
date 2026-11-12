@@ -1,3 +1,4 @@
+// Реализует интерактивный ввод булевых запросов и человекочитаемый вывод результатов.
 #include "boolean_search/app/console.hpp"
 
 #include <bson/bson.h>
@@ -11,6 +12,7 @@
 
 namespace {
 
+// Удаляет пробелы и переводы строк по краям введённого запроса.
 void trim_string(std::string *value) {
     const size_t begin = value->find_first_not_of(" \t\r\n");
     if (begin == std::string::npos) {
@@ -21,6 +23,7 @@ void trim_string(std::string *value) {
     *value = value->substr(begin, end - begin + 1);
 }
 
+// Безопасно возвращает строковое поле BSON или пустую строку при его отсутствии.
 const char *utf8_field(const bson_t *document, const char *field) {
     bson_iter_t iterator;
     if (!bson_iter_init_find(&iterator, document, field) ||
@@ -30,6 +33,7 @@ const char *utf8_field(const bson_t *document, const char *field) {
     return bson_iter_utf8(&iterator, nullptr);
 }
 
+// Печатает строку в одну консольную строку, заменяя управляющие пробелы обычными.
 void print_clean(const char *text) {
     for (const unsigned char *cursor =
              reinterpret_cast<const unsigned char *>(text);
@@ -42,6 +46,7 @@ void print_clean(const char *text) {
     }
 }
 
+// Находит метаданные документа по ObjectId и печатает один результат выдачи.
 void print_document(mongoc_collection_t *collection,
                     const uint8_t oid_bytes[12], uint32_t internal_id,
                     size_t position) {
@@ -82,11 +87,13 @@ void print_document(mongoc_collection_t *collection,
 
 }  // namespace
 
+// Читает запросы до EOF, выполняет поиск и выводит ограниченное число документов.
 void run_boolean_search_console(const BooleanSearchConfig &config,
                                 BooleanIndex *index,
                                 const LemmaDictionary *dictionary,
                                 mongoc_collection_t *collection) {
     std::string query;
+    // При перенаправлении stdin подсказки скрываются, поэтому вывод удобно проверять скриптом.
     const bool interactive = isatty(STDIN_FILENO) != 0;
     if (interactive) {
         std::fprintf(stderr,
@@ -112,6 +119,7 @@ void run_boolean_search_console(const BooleanSearchConfig &config,
             const size_t shown = result.size() < config.result_limit
                                      ? result.size()
                                      : config.result_limit;
+            // Поиск возвращает docID, а documents.bin связывает его с ObjectId MongoDB.
             for (size_t position = 0; position < shown; ++position) {
                 uint8_t oid[12];
                 if (!boolean_index_document_oid(index, result[position], oid)) {

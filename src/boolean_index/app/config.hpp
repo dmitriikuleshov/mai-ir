@@ -1,3 +1,4 @@
+// Объявляет параметры, необходимые для построения булева индекса.
 #ifndef MAI_IR_BOOLEAN_INDEX_CONFIG_HPP
 #define MAI_IR_BOOLEAN_INDEX_CONFIG_HPP
 
@@ -14,6 +15,7 @@ struct BooleanIndexConfig {
     size_t progress_every_documents;
 };
 
+// Загружает и проверяет секции db и boolean_index из config.yaml.
 BooleanIndexConfig load_boolean_index_config(const char *path);
 
 #endif

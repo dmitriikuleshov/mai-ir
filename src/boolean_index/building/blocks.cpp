@@ -1,3 +1,4 @@
+// Формирует отсортированные временные блоки и выполняет их многоходовое слияние.
 #include "boolean_index/building/blocks.hpp"
 
 #include "boolean_index/storage/files.hpp"
@@ -10,22 +11,27 @@
 
 namespace {
 
+// Ограничение числа одновременно открытых файлов при многопутевом слиянии.
 constexpr size_t MERGE_FAN_IN = 128;
 
+// Завершает построение индекса при ошибке временных файлов или памяти.
 [[noreturn]] void fail(const char *message) {
     std::fprintf(stderr, "Ошибка: %s\n", message);
     std::exit(EXIT_FAILURE);
 }
 
+// Задаёт порядок пар сначала по терму, затем по внутреннему docID.
 bool posting_pair_before(const PostingPair &left, const PostingPair &right) {
     return left.term < right.term ||
            (left.term == right.term && left.document_id < right.document_id);
 }
 
+// Определяет дубликаты одной пары «терм — документ».
 bool posting_pairs_equal(const PostingPair &left, const PostingPair &right) {
     return left.term == right.term && left.document_id == right.document_id;
 }
 
+// Сравнивает текущие записи читателей для поддержания минимальной кучи.
 bool reader_before(const ReaderHeap *heap, size_t first, size_t second) {
     const BlockReader &left = (*heap->readers)[first];
     const BlockReader &right = (*heap->readers)[second];
@@ -35,6 +41,7 @@ bool reader_before(const ReaderHeap *heap, size_t first, size_t second) {
             first < second);
 }
 
+// Сливает одну группу отсортированных блоков в новый отсортированный блок.
 void merge_raw_group(const BlockList &input_paths, size_t begin,
                      size_t input_count, const char *output_path) {
     FILE *output = std::fopen(output_path, "wb");
@@ -57,6 +64,7 @@ void merge_raw_group(const BlockList &input_paths, size_t begin,
         heap_sift_down(&heap, position - 1);
     }
 
+    // Корень кучи всегда указывает на минимальную ещё не записанную пару.
     std::string previous_term;
     uint32_t previous_document = 0;
     bool has_previous = false;
@@ -105,6 +113,7 @@ void merge_raw_group(const BlockList &input_paths, size_t begin,
 
 }  // namespace
 
+// Добавляет в оперативный буфер терм, docID и частоту терма в документе.
 bool posting_buffer_add(PostingBuffer *buffer, const char *term,
                         size_t term_size, uint32_t document_id,
                         uint32_t term_frequency) {
@@ -113,12 +122,14 @@ bool posting_buffer_add(PostingBuffer *buffer, const char *term,
     return true;
 }
 
+// Сортирует заполненный буфер и сохраняет его отдельным временным блоком.
 void flush_block(PostingBuffer *buffer, BlockList *blocks,
                  const char *temporary_directory) {
     if (buffer->empty()) {
         return;
     }
     std::sort(buffer->begin(), buffer->end(), posting_pair_before);
+    // После сортировки одинаковые пары соседствуют и могут быть удалены за один проход.
     buffer->erase(std::unique(buffer->begin(), buffer->end(),
                               posting_pairs_equal),
                   buffer->end());
@@ -152,6 +163,7 @@ void flush_block(PostingBuffer *buffer, BlockList *blocks,
     std::fprintf(stderr, "Индекс: записан блок %zu\n", blocks->size());
 }
 
+// Считывает следующую запись временного блока и отмечает достижение конца файла.
 bool block_reader_next(BlockReader *reader) {
     reader->term.clear();
     uint32_t length = 0;
@@ -173,6 +185,7 @@ bool block_reader_next(BlockReader *reader) {
     return true;
 }
 
+// Восстанавливает свойство минимальной кучи после продвижения одного читателя.
 void heap_sift_down(ReaderHeap *heap, size_t position) {
     while (true) {
         const size_t left = position * 2 + 1;
@@ -194,6 +207,7 @@ void heap_sift_down(ReaderHeap *heap, size_t position) {
     }
 }
 
+// Сокращает число блоков несколькими проходами до допустимого fan-in финального слияния.
 void reduce_blocks(BlockList *blocks, const char *temporary_directory) {
     size_t pass = 0;
     while (blocks->size() > MERGE_FAN_IN) {

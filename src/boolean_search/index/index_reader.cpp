@@ -1,3 +1,4 @@
+// Открывает бинарный индекс и извлекает термы, postings и ObjectId документов.
 #include "boolean_search/index/index_reader.hpp"
 
 #include "boolean_index/compression/variable_byte.hpp"
@@ -13,29 +14,35 @@ using boolean_index_format::LexiconEntry;
 
 namespace {
 
+// Возвращает типизированный FILE* из непрозрачного поля публичной структуры.
 FILE *as_file(void *pointer) {
     return static_cast<FILE *>(pointer);
 }
 
+// Записывает диагностическое сообщение в переданный вызывающим кодом буфер.
 void set_error(char *error, size_t error_size, const char *message) {
     if (error != nullptr && error_size != 0) {
         std::snprintf(error, error_size, "%s", message);
     }
 }
 
+// Формирует полный путь к одному файлу каталога индекса.
 std::string make_path(const char *directory, const char *name) {
     return std::string(directory) + "/" + name;
 }
 
+// Читает ровно заданное число байтов или сообщает о неполном файле.
 bool read_exact(FILE *file, void *target, size_t size) {
     return std::fread(target, 1, size, file) == size;
 }
 
+// Безопасно переходит к 64-битному байтовому смещению в файле.
 bool seek_file(FILE *file, uint64_t offset) {
     return offset <= static_cast<uint64_t>(INT64_MAX) &&
            fseeko(file, static_cast<off_t>(offset), SEEK_SET) == 0;
 }
 
+// Читает текст терма по записи лексикона и сравнивает его с искомой строкой.
 bool compare_term(BooleanIndex *index, const LexiconEntry &entry,
                   const char *term, std::string *buffer, int *comparison) {
     buffer->resize(entry.term_length);
@@ -50,6 +57,7 @@ bool compare_term(BooleanIndex *index, const LexiconEntry &entry,
 
 }  // namespace
 
+// Находит терм двоичным поиском по отсортированным записям lexicon.bin.
 bool boolean_index_find_term(BooleanIndex *index, const char *term,
                              LexiconEntry *result) {
     uint64_t left = 0;
@@ -57,6 +65,7 @@ bool boolean_index_find_term(BooleanIndex *index, const char *term,
     std::string buffer;
     FILE *lexicon = as_file(index->lexicon_file);
     while (left < right) {
+        // Записи имеют фиксированный размер, поэтому к середине можно перейти напрямую.
         const uint64_t middle = left + (right - left) / 2;
         const uint64_t offset = sizeof(boolean_index_format::IndexHeader) +
                                 middle * sizeof(LexiconEntry);
@@ -82,6 +91,7 @@ bool boolean_index_find_term(BooleanIndex *index, const char *term,
     return false;
 }
 
+// Открывает четыре файла индекса и проверяет их magic, версию и число документов.
 bool boolean_index_open(BooleanIndex *index, const char *directory,
                         char *error, size_t error_size) {
     *index = {};
@@ -122,6 +132,7 @@ bool boolean_index_open(BooleanIndex *index, const char *directory,
     return true;
 }
 
+// Закрывает все файлы индекса и обнуляет его состояние.
 void boolean_index_close(BooleanIndex *index) {
     void **files[] = {&index->lexicon_file, &index->terms_file,
                       &index->postings_file, &index->documents_file};
@@ -134,6 +145,7 @@ void boolean_index_close(BooleanIndex *index) {
     index->header = {};
 }
 
+// Читает ObjectId MongoDB по позиции, соответствующей внутреннему docID.
 bool boolean_index_document_oid(BooleanIndex *index, uint32_t document_id,
                                 uint8_t oid[12]) {
     if (document_id >= index->header.document_count) {
@@ -145,6 +157,7 @@ bool boolean_index_document_oid(BooleanIndex *index, uint32_t document_id,
     return seek_file(documents, offset) && read_exact(documents, oid, 12);
 }
 
+// Загружает posting list вместе с частотой терма в каждом документе.
 WeightedPostingList load_weighted_postings(BooleanIndex *index,
                                            const char *term) {
     LexiconEntry entry{};
@@ -168,12 +181,14 @@ WeightedPostingList load_weighted_postings(BooleanIndex *index,
             (position != 0 && document_gap == 0)) {
             return {};
         }
+        // Абсолютный docID восстанавливается накоплением сохранённых разностей.
         document_id += document_gap;
         result.push_back({document_id, term_frequency});
     }
     return result;
 }
 
+// Загружает только docID posting list, отбрасывая ненужные булеву поиску частоты.
 BooleanResult load_postings(BooleanIndex *index, const char *term) {
     const WeightedPostingList weighted = load_weighted_postings(index, term);
     BooleanResult result;
