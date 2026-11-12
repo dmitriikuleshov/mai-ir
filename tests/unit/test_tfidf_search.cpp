@@ -1,3 +1,5 @@
+// Тесты создают собственный маленький бинарный индекс в /tmp и поэтому не
+// зависят от MongoDB, настоящего корпуса и results/boolean_index.
 #include <gtest/gtest.h>
 
 #include "boolean_index/compression/variable_byte.hpp"
@@ -28,6 +30,8 @@ bool write_exact(FILE *file, const void *data, size_t size) {
 class TfidfSearchTest : public testing::Test {
 protected:
     void SetUp() override {
+        // Для каждого теста создаётся изолированный индекс, который читается
+        // тем же tfidf_index_open, что используется поисковой программой.
         std::snprintf(directory_, sizeof(directory_),
                       "/tmp/mai-ir-tfidf-unit-XXXXXX");
         ASSERT_NE(mkdtemp(directory_), nullptr);
@@ -70,6 +74,10 @@ protected:
 
 private:
     void create_index_fixture() {
+        // Искусственный корпус состоит из трёх документов:
+        // doc 0: cloud(2), database(1);
+        // doc 1: cloud(1), security(3);
+        // doc 2: database(2), security(1).
         const char *terms[] = {"cloud", "database", "security"};
         const uint32_t cloud_documents[] = {0, 1};
         const uint32_t database_documents[] = {0, 2};
@@ -124,6 +132,8 @@ private:
                 const uint32_t gap = position == 0
                                          ? document_id
                                          : document_id - previous_document;
+                // Postings записываются в настоящем формате индекса:
+                // Variable Byte(docID-gap), затем Variable Byte(tf).
                 ASSERT_TRUE(variable_byte_write(postings_file, gap));
                 ASSERT_TRUE(variable_byte_write(
                     postings_file, frequencies[term_index][position]));
@@ -154,6 +164,8 @@ private:
         ASSERT_TRUE(write_exact(norms_file, &norm_header, sizeof(norm_header)));
         const double tf2 = logarithmic_term_frequency(2);
         const double tf3 = logarithmic_term_frequency(3);
+        // Нормы вычисляются вручную из 1 + log10(tf) и сохраняются в порядке
+        // docID, чтобы затем проверить чтение norms.bin и нормализацию score.
         const double norms[] = {std::sqrt(tf2 * tf2 + 1.0),
                                 std::sqrt(1.0 + tf3 * tf3),
                                 std::sqrt(tf2 * tf2 + 1.0)};
@@ -205,6 +217,8 @@ TEST_F(TfidfSearchTest, OpensIndexAndLoadsDocumentNorms) {
 TEST_F(TfidfSearchTest, RanksNaturalLanguageQueryByCosineScore) {
     const TfidfSearchResult result = search("cloud database");
 
+    // Документ 0 содержит оба терма, документ 2 — только database, а документ
+    // 1 — только cloud, поэтому ожидается именно такой порядок выдачи.
     ASSERT_EQ(result.matched_documents, 3U);
     ASSERT_EQ(result.documents.size(), 3U);
     EXPECT_EQ(result.documents[0].document_id, 0U);
@@ -214,6 +228,8 @@ TEST_F(TfidfSearchTest, RanksNaturalLanguageQueryByCosineScore) {
     const double tf2 = logarithmic_term_frequency(2);
     const double document_norm = std::sqrt(tf2 * tf2 + 1.0);
     const double query_norm = std::sqrt(2.0);
+    // Score сравнивается с тем же значением, независимо рассчитанным вручную;
+    // EXPECT_NEAR учитывает погрешность log10 и sqrt.
     EXPECT_NEAR(result.documents[0].score,
                 (tf2 + 1.0) / (document_norm * query_norm), 1e-12);
     EXPECT_NEAR(result.documents[1].score,

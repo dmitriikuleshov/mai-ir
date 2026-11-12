@@ -53,7 +53,9 @@ constexpr CodePoint FULLWIDTH_ASCII_OFFSET =
 
 constexpr Byte ASCII_LIMIT = 0x80;
 
-// Маски ниже отделяют служебные биты UTF-8 от битов самой кодовой точки.
+// UTF-8 кодирует символ как 0xxxxxxx, 110xxxxx 10xxxxxx,
+// 1110xxxx 10xxxxxx 10xxxxxx или 11110xxx с тремя продолжениями.
+// PREFIX_MASK проверяет служебный префикс, а DATA_MASK оставляет только x-биты.
 constexpr Byte CONTINUATION_BYTE_MASK = 0xC0;
 constexpr Byte CONTINUATION_BYTE_PREFIX = 0x80;
 constexpr Byte CONTINUATION_DATA_MASK = 0x3F;
@@ -74,6 +76,8 @@ constexpr Byte FOUR_BYTE_PREFIX = 0xF0;
 constexpr Byte FOUR_BYTE_DATA_MASK = 0x07;
 constexpr size_t FOUR_BYTE_WIDTH = 4;
 
+// Нижние границы запрещают избыточно длинную запись маленького символа;
+// суррогаты UTF-16 и значения выше U+10FFFF не являются кодовыми точками UTF-8.
 constexpr CodePoint MINIMUM_THREE_BYTE_CODEPOINT =
     static_cast<CodePoint>(0x0800);
 constexpr CodePoint MINIMUM_FOUR_BYTE_CODEPOINT =
@@ -121,6 +125,7 @@ DecodedCharacter decode_utf8(const Byte *text, size_t remaining) {
         return {static_cast<CodePoint>(first), 1, true};
     }
 
+    // Префикс первого байта определяет общую длину символа и число его x-битов.
     size_t width = 0;
     Byte leading_data_mask = 0;
     CodePoint minimum_codepoint = CodePoint{};
@@ -142,6 +147,8 @@ DecodedCharacter decode_utf8(const Byte *text, size_t remaining) {
 
     if (remaining < width) return invalid_character();
 
+    // У каждого следующего байта отбрасывается префикс 10, после чего его
+    // шесть информационных бит дописываются справа к собираемой кодовой точке.
     CodePoint codepoint = static_cast<CodePoint>(first & leading_data_mask);
     for (size_t index = 1; index < width; ++index) {
         if (!is_continuation_byte(text[index])) return invalid_character();

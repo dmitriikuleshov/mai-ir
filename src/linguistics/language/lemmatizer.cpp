@@ -1,4 +1,5 @@
-// Реализует словарную и правиловую лемматизацию токенов английского технического корпуса.
+// Реализует словарную и правиловую лемматизацию токенов английского
+// технического корпуса.
 #include "linguistics/language/lemmatizer.hpp"
 
 #include <algorithm>
@@ -11,7 +12,7 @@
 #include <utility>
 #include <vector>
 
-// Отсортированный vector заменяет запрещённые условиями курса map и hash table.
+// Отсортированный vector вместо map и hash table.
 using LemmaEntries = std::vector<std::pair<std::string, std::string>>;
 
 // Хранит отсортированные словарные пары и множество допустимых базовых лемм.
@@ -30,21 +31,45 @@ struct LemmaPair {
 
 // Небольшой встроенный набор наиболее частых неправильных английских форм.
 const LemmaPair IRREGULAR_LEMMAS[] = {
-    {"analyses", "analysis"}, {"are", "be"},         {"as", "as"},
-    {"axes", "axe"},         {"been", "be"},        {"best", "good"},
-    {"better", "good"},      {"children", "child"}, {"does", "do"},
-    {"feet", "foot"},        {"gone", "go"},        {"had", "have"},
-    {"has", "have"},         {"his", "his"},        {"indices", "index"},
-    {"is", "be"},            {"men", "man"},        {"mice", "mouse"},
-    {"news", "news"},        {"ran", "run"},        {"saw", "see"},
-    {"series", "series"},    {"species", "species"},
-    {"teeth", "tooth"},      {"this", "this"},      {"thus", "thus"},
-    {"used", "use"},         {"using", "use"},      {"was", "be"},
-    {"went", "go"},          {"were", "be"},        {"women", "woman"},
-    {"worse", "bad"},        {"worst", "bad"},      {"yes", "yes"},
+    {"analyses", "analysis"},
+    {"are", "be"},
+    {"as", "as"},
+    {"axes", "axe"},
+    {"been", "be"},
+    {"best", "good"},
+    {"better", "good"},
+    {"children", "child"},
+    {"does", "do"},
+    {"feet", "foot"},
+    {"gone", "go"},
+    {"had", "have"},
+    {"has", "have"},
+    {"his", "his"},
+    {"indices", "index"},
+    {"is", "be"},
+    {"men", "man"},
+    {"mice", "mouse"},
+    {"news", "news"},
+    {"ran", "run"},
+    {"saw", "see"},
+    {"series", "series"},
+    {"species", "species"},
+    {"teeth", "tooth"},
+    {"this", "this"},
+    {"thus", "thus"},
+    {"used", "use"},
+    {"using", "use"},
+    {"was", "be"},
+    {"went", "go"},
+    {"were", "be"},
+    {"women", "woman"},
+    {"worse", "bad"},
+    {"worst", "bad"},
+    {"yes", "yes"},
 };
 
-// Завершает программу с понятным сообщением при невозможности загрузить словарь.
+// Завершает программу с понятным сообщением при невозможности загрузить
+// словарь.
 [[noreturn]] void fail(const char *message) {
     std::fprintf(stderr, "lemmatizer: %s\n", message);
     std::exit(EXIT_FAILURE);
@@ -53,7 +78,8 @@ const LemmaPair IRREGULAR_LEMMAS[] = {
 // Проверяет, состоит ли токен только из английских букв ASCII.
 bool ascii_word(const std::string &word) {
     for (const unsigned char character : word) {
-        if (!std::isalpha(character)) return false;
+        if (!std::isalpha(character))
+            return false;
     }
     return true;
 }
@@ -72,12 +98,13 @@ bool consonant(char value) {
 // Ищет словоформу двоичным поиском в отсортированном векторе соответствий.
 const std::string *mapping_find(const LemmaEntries &entries,
                                 const std::string &form) {
-    const auto position = std::lower_bound(
-        entries.begin(), entries.end(), form,
-        [](const auto &entry, const std::string &value) {
-            return entry.first < value;
-        });
-    if (position == entries.end() || position->first != form) return nullptr;
+    const auto position =
+        std::lower_bound(entries.begin(), entries.end(), form,
+                         [](const auto &entry, const std::string &value) {
+                             return entry.first < value;
+                         });
+    if (position == entries.end() || position->first != form)
+        return nullptr;
     return &position->second;
 }
 
@@ -92,23 +119,29 @@ bool lemma_exists(const LemmaDictionary *dictionary,
 void sort_mappings(LemmaEntries *entries) {
     std::sort(entries->begin(), entries->end(),
               [](const auto &left, const auto &right) {
-                  if (left.first != right.first) return left.first < right.first;
+                  if (left.first != right.first)
+                      return left.first < right.first;
                   return left.second < right.second;
               });
     entries->erase(std::unique(entries->begin(), entries->end()),
                    entries->end());
 }
 
-// Загружает из TSV пары «словоформа — лемма» для исключений или переопределений.
+// Загружает из TSV пары «словоформа — лемма» для исключений или
+// переопределений.
 void load_mappings(const char *path, LemmaEntries *entries) {
-    if (path == nullptr || *path == '\0') return;
+    if (path == nullptr || *path == '\0')
+        return;
     std::ifstream file(path);
-    if (!file) fail("cannot open lemma mappings");
+    if (!file)
+        fail("cannot open lemma mappings");
 
     std::string line;
     while (std::getline(file, line)) {
-        if (line.empty() || line.front() == '#') continue;
-        if (!line.empty() && line.back() == '\r') line.pop_back();
+        if (line.empty() || line.front() == '#')
+            continue;
+        if (!line.empty() && line.back() == '\r')
+            line.pop_back();
         const size_t separator = line.find('\t');
         if (separator == std::string::npos || separator == 0 ||
             separator + 1 == line.size()) {
@@ -117,22 +150,28 @@ void load_mappings(const char *path, LemmaEntries *entries) {
         entries->emplace_back(line.substr(0, separator),
                               line.substr(separator + 1));
     }
-    if (!file.eof()) fail("cannot read lemma mappings");
+    if (!file.eof())
+        fail("cannot read lemma mappings");
     sort_mappings(entries);
 }
 
 // Загружает, сортирует и очищает от дубликатов словарь допустимых лемм.
 void load_lemmas(const char *path, std::vector<std::string> *lemmas) {
-    if (path == nullptr || *path == '\0') return;
+    if (path == nullptr || *path == '\0')
+        return;
     std::ifstream file(path);
-    if (!file) fail("cannot open lemma vocabulary");
+    if (!file)
+        fail("cannot open lemma vocabulary");
 
     std::string line;
     while (std::getline(file, line)) {
-        if (!line.empty() && line.back() == '\r') line.pop_back();
-        if (!line.empty() && line.front() != '#') lemmas->push_back(line);
+        if (!line.empty() && line.back() == '\r')
+            line.pop_back();
+        if (!line.empty() && line.front() != '#')
+            lemmas->push_back(line);
     }
-    if (!file.eof()) fail("cannot read lemma vocabulary");
+    if (!file.eof())
+        fail("cannot read lemma vocabulary");
     std::sort(lemmas->begin(), lemmas->end());
     lemmas->erase(std::unique(lemmas->begin(), lemmas->end()), lemmas->end());
 }
@@ -151,7 +190,7 @@ std::string lemmatize_without_vocabulary(const std::string &word) {
         if (lemma.size() >= 2 && lemma.back() == lemma[lemma.size() - 2] &&
             consonant(lemma.back())) {
             lemma.pop_back();
-        // using → use: для некоторых основ восстанавливается немая e.
+            // using → use: для некоторых основ восстанавливается немая e.
         } else if (lemma.back() == 'v' || lemma.ends_with("mak") ||
                    lemma.ends_with("creat")) {
             lemma.push_back('e');
@@ -169,10 +208,9 @@ std::string lemmatize_without_vocabulary(const std::string &word) {
         }
         return lemma;
     }
-    if (length > 4 &&
-        (word.ends_with("sses") || word.ends_with("shes") ||
-         word.ends_with("ches") || word.ends_with("xes") ||
-         word.ends_with("zes") || word.ends_with("oes"))) {
+    if (length > 4 && (word.ends_with("sses") || word.ends_with("shes") ||
+                       word.ends_with("ches") || word.ends_with("xes") ||
+                       word.ends_with("zes") || word.ends_with("oes"))) {
         lemma.resize(length - 2);
         return lemma;
     }
@@ -186,38 +224,46 @@ std::string lemmatize_without_vocabulary(const std::string &word) {
 // Выбирает корректную основу глагола среди вариантов со сдвоением и немой e.
 std::string validated_verb_stem(const std::string &stem,
                                 const LemmaDictionary *dictionary) {
-    const bool doubled_consonant =
-        stem.size() >= 2 && stem.back() == stem[stem.size() - 2] &&
-        consonant(stem.back());
+    const bool doubled_consonant = stem.size() >= 2 &&
+                                   stem.back() == stem[stem.size() - 2] &&
+                                   consonant(stem.back());
     if (doubled_consonant) {
-        // Сначала сохраняется полная основа, если она сама является словарной леммой.
-        if (lemma_exists(dictionary, stem)) return stem;
+        // Сначала сохраняется полная основа, если она сама является словарной
+        // леммой.
+        if (lemma_exists(dictionary, stem))
+            return stem;
         const std::string shortened = stem.substr(0, stem.size() - 1);
-        if (lemma_exists(dictionary, shortened)) return shortened;
+        if (lemma_exists(dictionary, shortened))
+            return shortened;
     }
 
     std::string with_silent_e = stem + 'e';
-    const bool likely_silent_e =
-        stem.size() >= 2 && vowel(stem[stem.size() - 2]) &&
-        consonant(stem.back());
+    const bool likely_silent_e = stem.size() >= 2 &&
+                                 vowel(stem[stem.size() - 2]) &&
+                                 consonant(stem.back());
     if (likely_silent_e && lemma_exists(dictionary, with_silent_e)) {
         return with_silent_e;
     }
-    if (lemma_exists(dictionary, stem)) return stem;
-    if (lemma_exists(dictionary, with_silent_e)) return with_silent_e;
+    if (lemma_exists(dictionary, stem))
+        return stem;
+    if (lemma_exists(dictionary, with_silent_e))
+        return with_silent_e;
     return {};
 }
 
-// Строит кандидата по окончанию и принимает его только при наличии в словаре лемм.
+// Строит кандидата по окончанию и принимает его только при наличии в словаре
+// лемм.
 std::string validated_suffix_lemma(const std::string &word,
                                    const LemmaDictionary *dictionary) {
     const size_t length = word.size();
     if (length > 4 && word.ends_with("ies")) {
         const std::string without_s = word.substr(0, length - 1);
-        if (lemma_exists(dictionary, without_s)) return without_s;
+        if (lemma_exists(dictionary, without_s))
+            return without_s;
         std::string with_y = word.substr(0, length - 3);
         with_y.push_back('y');
-        if (lemma_exists(dictionary, with_y)) return with_y;
+        if (lemma_exists(dictionary, with_y))
+            return with_y;
         return {};
     }
     if (length > 5 && word.ends_with("ing")) {
@@ -226,18 +272,19 @@ std::string validated_suffix_lemma(const std::string &word,
     if (length > 4 && word.ends_with("ed")) {
         return validated_verb_stem(word.substr(0, length - 2), dictionary);
     }
-    if (length > 4 &&
-        (word.ends_with("sses") || word.ends_with("shes") ||
-         word.ends_with("ches") || word.ends_with("xes") ||
-         word.ends_with("zes") || word.ends_with("oes"))) {
+    if (length > 4 && (word.ends_with("sses") || word.ends_with("shes") ||
+                       word.ends_with("ches") || word.ends_with("xes") ||
+                       word.ends_with("zes") || word.ends_with("oes"))) {
         const std::string candidate = word.substr(0, length - 2);
-        if (lemma_exists(dictionary, candidate)) return candidate;
+        if (lemma_exists(dictionary, candidate))
+            return candidate;
         return {};
     }
     if (length > 3 && word.back() == 's' && !word.ends_with("ss") &&
         !word.ends_with("us") && !word.ends_with("is")) {
         const std::string candidate = word.substr(0, length - 1);
-        if (lemma_exists(dictionary, candidate)) return candidate;
+        if (lemma_exists(dictionary, candidate))
+            return candidate;
     }
     return {};
 }
@@ -245,19 +292,21 @@ std::string validated_suffix_lemma(const std::string &word,
 // Лемматизирует один токен с учётом приоритета словарей и правил окончаний.
 std::string lemmatize_token(const std::string &word,
                             const LemmaDictionary *dictionary) {
-    // Неанглийские слова и технические конструкции с цифрами или знаками не изменяются.
-    if (!ascii_word(word)) return word;
+    // Неанглийские слова и технические конструкции с цифрами или знаками не
+    // изменяются.
+    if (!ascii_word(word))
+        return word;
 
-    // Порядок важен: настройки корпуса имеют приоритет над общими исключениями WordNet.
-    if (const std::string *lemma =
-            mapping_find(dictionary->overrides, word)) {
+    // Порядок важен: настройки корпуса имеют приоритет над общими исключениями
+    // WordNet.
+    if (const std::string *lemma = mapping_find(dictionary->overrides, word)) {
         return *lemma;
     }
     for (const LemmaPair &pair : IRREGULAR_LEMMAS) {
-        if (word == pair.form) return pair.lemma;
+        if (word == pair.form)
+            return pair.lemma;
     }
-    if (const std::string *lemma =
-            mapping_find(dictionary->exceptions, word)) {
+    if (const std::string *lemma = mapping_find(dictionary->exceptions, word)) {
         return *lemma;
     }
     if (dictionary->lemmas.empty()) {
@@ -270,7 +319,7 @@ std::string lemmatize_token(const std::string &word,
     return candidate.empty() ? word : candidate;
 }
 
-}  // namespace
+} // namespace
 
 // Создаёт единый словарь из WordNet, списка допустимых лемм и настроек корпуса.
 LemmaDictionary *lemma_dictionary_load(const char *exceptions_path,
@@ -297,7 +346,8 @@ LemmatizationResult lemmatize_tokens(const TokenList *tokens,
     result.lemmas.reserve(tokens->size());
     for (const std::string &token : *tokens) {
         std::string lemma = lemmatize_token(token, dictionary);
-        if (lemma != token) ++result.changed_token_count;
+        if (lemma != token)
+            ++result.changed_token_count;
         result.lemmas.push_back(std::move(lemma));
     }
 
