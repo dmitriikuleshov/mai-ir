@@ -19,9 +19,13 @@
 
 ```bash
 sudo apt update
-sudo apt install build-essential cmake libmongoc-dev libbson-dev libxml2-dev
+sudo apt install build-essential cmake libmongoc-dev libbson-dev libxml2-dev libgtest-dev
 uv sync
 ```
+
+Для юнит-тестов используется GoogleTest. CMake сначала ищет системный пакет, а
+если его нет — автоматически загружает закреплённую версию 1.18.0 в `.build` при
+первой конфигурации; в репозиторий исходники зависимости не добавляются.
 
 ### 2. Запустить и проверить MongoDB
 
@@ -353,10 +357,10 @@ uv run python src/crawler/main.py config.yaml
 в `document_terms.tokens` и `token_frequencies`. Обработка выполняется пакетами,
 поэтому весь корпус не загружается в оперативную память.
 
-**Где находится.** Выделение текста, токенизатор и собственные динамические
-массивы реализованы в `src/linguistics/core.cpp` и
-`src/linguistics/core.hpp`. Потоковое чтение MongoDB и запись результатов — в
-`src/linguistics/main.cpp`. Параметры `minimum_words` и
+**Где находится.** Выделение текста и потоковое чтение MongoDB находятся в
+`src/linguistics/main.cpp`, нормализация и токенизация — в
+`src/linguistics/tokenizer.cpp`, а сбор частот и последовательный запуск этапов —
+в `src/linguistics/pipeline.cpp`. Параметры `minimum_words` и
 `maximum_token_length` задаются в секции `linguistics` файла `config.yaml`.
 
 **Запуск:**
@@ -381,8 +385,8 @@ printjson(db.document_terms.findOne({}, {_id: 0, source_id: 1, tokens: {$slice: 
 
 ### 4. Лемматизация / стемминг
 
-**Что сделано.** Выбрана лемматизация, а не стемминг. Один и тот же модуль из
-`src/linguistics/core.cpp` применяется при обработке корпуса и при нормализации
+**Что сделано.** Выбрана лемматизация, а не стемминг. Один и тот же модуль
+`src/linguistics/lemmatizer.cpp` применяется при обработке корпуса и нормализации
 слов поискового запроса. Это гарантирует совпадение термов документа и запроса.
 
 Лемматизатор сочетает правила английской морфологии, встроенные нерегулярные
@@ -395,8 +399,8 @@ printjson(db.document_terms.findOne({}, {_id: 0, source_id: 1, tokens: {$slice: 
 Флаг `dirty`, порядок записи коллекций и lease-блокировка обеспечивают
 восстановление согласованности после аварийной остановки.
 
-**Где находится.** Морфологические правила реализованы в
-`src/linguistics/core.cpp`, а словарь исключений — в
+**Где находится.** Морфологические правила и загрузка словаря реализованы в
+`src/linguistics/lemmatizer.cpp`, а словарь исключений находится в
 `resources/wordnet_exceptions.tsv`. Частоты документа записываются в
 `document_terms.lemmas`, глобальные частоты — в `lemma_frequencies`.
 
@@ -513,19 +517,39 @@ sed -n '1,160p' results/boolean_search.txt
 операторов удобно проверить запросами со скобками и без них. Интерактивный режим
 завершается `Ctrl+D`.
 
-### 17. Автотесты (юнит-тесты)
+### 17. Автотесты
 
-**Что сделано.** В проекте 18 Python-тестов crawler и 8 отдельных CTest-сценариев
-C++. Проверяются нормализация URL, SHA-256, sitemap и Atom, YAML, условные HTTP-
-запросы, retry, остановка, токенизация, морфология, HTML extraction, WordNet,
-восстановление после сбоя, отсутствие STL в лингвистическом модуле, аппроксимация
-Мандельброта и операции булева поиска.
+**Что сделано.** В проекте 18 Python-тестов crawler и 65 GoogleTest-сценариев
+C++. Каждый `TEST` или `TEST_F` регистрируется в CTest под собственным понятным
+именем. Из них 62 unit-теста проверяют токенизатор, лемматизацию, выделение текста
+из HTML, конфигурацию, булев индекс и булев поиск. Три интеграционных теста
+проверяют аппроксимацию Мандельброта, SVG-график и протокол восстановления.
 
 **Где находится.** Python-тесты crawler находятся в
-`tests/crawler/test_crawler.py`, C++-тесты лингвистики — в
-`tests/linguistics/test_core.cpp`, тесты булева поиска — в
-`tests/boolean_search/test_engine.cpp`. Регистрация CTest находится в
-`CMakeLists.txt`, единая сборка и запуск C++-тестов — в `check.sh`.
+`tests/crawler/test_crawler.py`. C++-тесты разделены по назначению между
+`tests/unit/` и `tests/integration/`. Регистрация CTest
+находится в `CMakeLists.txt`, единая сборка и запуск C++-тестов — в `check.sh`.
+
+**Запустить отдельные исполняемые файлы:**
+
+```bash
+./.build/tokenizer_unit_tests
+./.build/lemmatization_unit_tests
+./.build/html_extraction_unit_tests
+./.build/config_unit_tests
+./.build/boolean_index_unit_tests
+./.build/boolean_search_unit_tests
+./.build/document_processing_integration_tests
+./.build/recovery_integration_tests
+```
+
+**Запустить тесты по категориям или все GoogleTest-сценарии:**
+
+```bash
+ctest --test-dir .build -L unit --output-on-failure
+ctest --test-dir .build -L integration --output-on-failure
+ctest --test-dir .build -L gtest --output-on-failure
+```
 
 **Запустить все существующие автотесты:**
 
@@ -534,7 +558,7 @@ C++. Проверяются нормализация URL, SHA-256, sitemap и At
 uv run pytest -q tests/crawler
 ```
 
-Ожидаемый результат текущей версии: 8 из 8 CTest и 18 из 18 pytest проходят.
+Ожидаемый результат текущей версии: 65 из 65 CTest и 18 из 18 pytest проходят.
 При ошибке CTest печатает вывод конкретного тесткейса благодаря
 `--output-on-failure` в `check.sh`.
 

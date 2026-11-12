@@ -124,7 +124,7 @@ boolean_search:
 
 ```bash
 sudo apt update
-sudo apt install build-essential cmake libmongoc-dev libbson-dev libxml2-dev libsnappy1v5
+sudo apt install build-essential cmake libmongoc-dev libbson-dev libxml2-dev libsnappy1v5 libgtest-dev
 
 uv sync
 docker compose up -d
@@ -358,7 +358,7 @@ Unicode, создаёт токены, леммы и частотные масс�
 | Posting list отсортирован и уникален | qsort, dedup и merge |
 | Все docID posting существуют в documents map | docID назначается перед добавлением terms |
 | Версия файлов поиска согласована | magic/version/header checks |
-| Запрос и корпус нормализуются одинаково | общий `linguistics_core` |
+| Запрос и корпус нормализуются одинаково | общий `linguistics_pipeline` |
 
 Если преподаватель спрашивает «как вы доказываете корректность?», нужно говорить
 не только о тестах, но и об этих инвариантах.

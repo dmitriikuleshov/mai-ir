@@ -15,9 +15,10 @@ indices   -> index
 индекс строится именно по леммам, поэтому запрос `queries` ищет posting list
 леммы `query`.
 
-Лемматизатор является частью `src/linguistics/core.cpp` и вызывается сразу после
-токенизации. Поисковая утилита использует тот же код для нормализации терминов
-запроса, поэтому обработка корпуса и запроса согласована.
+Лемматизатор находится в `src/linguistics/lemmatizer.cpp` и вызывается сразу
+после токенизации через `src/linguistics/pipeline.cpp`. Поисковая утилита
+использует тот же конвейер для нормализации терминов запроса, поэтому обработка
+корпуса и запроса согласована.
 
 ## 2. Алгоритм
 
@@ -172,7 +173,7 @@ execute_bulk(processed_bulk, "запись обработанных докуме
 Только морфологический тест:
 
 ```bash
-./.build/linguistics_tests morphology
+./.build/lemmatization_unit_tests
 ```
 
 Первые леммы документа:
@@ -217,15 +218,21 @@ NDCG и ERR требуют набора запросов и экспертных
 
 ## 10. Тестирование
 
-Тест `morphology` проверяет:
+Набор `lemmatization_unit_tests` проверяет:
 
-- `queries` → `query`;
-- `retrieved` → `retrieve`;
-- WordNet exception `abaci` → `abacus`;
-- irregular form `children` → `child`.
+- правила для `-s`, `-ies`, `-ed` и `-ing`;
+- объединение нескольких словоформ в одну лемму и суммирование частот;
+- встроенные irregular forms, включая формы `be`, сравнительные и превосходные
+  степени;
+- WordNet exceptions и их объединение с базовой формой;
+- защищённые окончания `-ss`, `-us`, `-is`;
+- обработку притяжательных окончаний перед лемматизацией;
+- сохранение повторяющихся `C++`, `Node.js` и `SHA-256` в смешанном тексте;
+- точное значение `changed_token_count`.
 
-Тест `recovery` дополнительно проверяет порядок записи: `document_terms` должен
-записываться раньше commit marker в `processed_documents`.
+Набор `recovery_integration_tests` дополнительно проверяет порядок записи:
+`document_terms` должен записываться раньше commit marker в
+`processed_documents`.
 
 ## 11. Что показать преподавателю
 
@@ -439,17 +446,17 @@ Dictionary загружается один раз на процесс, а не �
 
 ## 20. Как проверить конкретную форму
 
-Тестовая программа принимает только готовый testcase, поэтому для защиты удобно
-показать существующий morphology test в `tests/linguistics/test_core.cpp`:
+Для защиты удобно показать GoogleTest
+`tests/unit/test_lemmatization.cpp`:
 
 ```cpp
-const char *morphology_text =
-    "queries query queries retrieved abaci children";
+const LinguisticResultGuard result =
+    lemmatize("queries query queries retrieved abaci children");
 
-expect(frequency(&morphology.lemmas, "query") == 3,
-       "лемматизация queries");
-expect(frequency(&morphology.lemmas, "retrieve") == 1,
-       "лемматизация retrieved");
+EXPECT_EQ(frequency(result.get().lemmas, "query"), 3U);
+EXPECT_EQ(frequency(result.get().lemmas, "retrieve"), 1U);
+EXPECT_EQ(frequency(result.get().lemmas, "abacus"), 1U);
+EXPECT_EQ(frequency(result.get().lemmas, "child"), 1U);
 ```
 
 Это проверяет не только строковый результат, но и объединение частот нескольких

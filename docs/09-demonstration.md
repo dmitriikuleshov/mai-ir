@@ -79,7 +79,9 @@ du -h results/boolean_index/* | sort -h
 config.yaml
 src/crawler/main.py
 src/linguistics/main.cpp
-src/linguistics/core.cpp
+src/linguistics/tokenizer.cpp
+src/linguistics/lemmatizer.cpp
+src/linguistics/pipeline.cpp
 src/boolean_index/format.hpp
 src/boolean_index/main.cpp
 src/boolean_search/engine.cpp
@@ -474,7 +476,7 @@ uv run pytest -q tests/crawler
 показать быстрый тест:
 
 ```bash
-./.build/linguistics_tests tokenization
+./.build/tokenizer_unit_tests
 ```
 
 Показать в коде правила `C++`, `.NET`, дефисов, апострофов и лимита длины.
@@ -505,11 +507,17 @@ process_batch
 process_documents
 ```
 
-Затем открыть `src/linguistics/core.cpp` и найти:
+Затем открыть `src/linguistics/tokenizer.cpp` и найти:
 
 ```text
 normalize_input
-tokenize
+tokenize_normalized
+tokenize_text
+```
+
+После этого открыть `src/linguistics/pipeline.cpp` и найти:
+
+```text
 make_frequencies
 linguistics_process
 ```
@@ -556,7 +564,7 @@ if (std::strcmp(source, "wikipedia") == 0) {
 В терминале выполнить тест и вслух прочитать строки PASS:
 
 ```bash
-./.build/linguistics_tests tokenization
+./.build/tokenizer_unit_tests
 ```
 
 Ожидаемые примеры:
@@ -609,7 +617,7 @@ const bool accepted = result.token_count >= config->minimum_words;
 ### Шаг 5. Лабораторная 4 — лемматизация
 
 ```bash
-./.build/linguistics_tests morphology
+./.build/lemmatization_unit_tests
 ```
 
 Показать пары `queries -> query`, `retrieved -> retrieve`, `children -> child`.
@@ -626,7 +634,7 @@ printjson(d.document_terms.findOne({}, {lemmas: {$slice: 20}}));'
 
 #### Куда зайти в коде
 
-Открыть `src/linguistics/core.cpp`, функцию `lemmatize`. Затем открыть
+Открыть `src/linguistics/lemmatizer.cpp`, функцию `lemmatize_token`. Затем открыть
 `src/linguistics/main.cpp`, функции `process_batch`, `prepare_frequencies` и
 `set_frequency_state`.
 
@@ -688,7 +696,7 @@ execute_bulk(processed_bulk, "запись обработанных докуме
 Затем выполнить:
 
 ```bash
-./.build/linguistics_tests recovery
+./.build/recovery_integration_tests
 ```
 
 #### Как объяснить метрики качества
@@ -953,7 +961,7 @@ sed -n '1,80p' results/boolean_search.txt
 В конце запустить:
 
 ```bash
-./.build/boolean_search_tests
+./.build/boolean_search_unit_tests
 ```
 
 #### Куда зайти в коде

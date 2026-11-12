@@ -25,8 +25,9 @@ documents.raw_html
 Код находится в:
 
 - `src/linguistics/main.cpp` — MongoDB, HTML и поток обработки;
-- `src/linguistics/core.cpp` — токенизатор и частоты;
-- `src/linguistics/core.hpp` — публичные структуры и функции.
+- `src/linguistics/tokenizer.cpp` — Unicode-нормализация и токенизация;
+- `src/linguistics/tokenizer.hpp` — структуры и интерфейс токенизатора;
+- `src/linguistics/pipeline.cpp` — частоты и объединение этапов обработки.
 
 Компонент написан на C++20. STL-контейнеры не используются.
 
@@ -51,7 +52,7 @@ ctest --test-dir .build --output-on-failure
 Только токенизация:
 
 ```bash
-./.build/linguistics_tests tokenization
+./.build/tokenizer_unit_tests
 ```
 
 ## 3. Выделение текста
@@ -293,12 +294,15 @@ printjson(d.processed_documents.aggregate([
 
 Проверяются:
 
-- `C++`, `.NET`, дефисы, точки и притяжательное окончание;
-- Unicode-дефисы, апострофы и пробелы;
-- отбрасывание слишком длинного токена;
+- технические термы `C++`, `.NET`, `Node.js`, `SHA-256`, версии, IP-адреса
+  и идентификаторы;
+- повторы нескольких технических термов в одном смешанном тексте;
+- Unicode-дефисы, апострофы, пробелы и fullwidth ASCII;
+- притяжательные окончания и внешняя пунктуация;
+- граничная длина токена и продолжение обработки после слишком длинного слова;
+- частоты, лексикографический порядок и число символов принятых токенов;
 - извлечение полезного текста и удаление шума у всех трёх источников;
-- параметры YAML и относительные пути;
-- отсутствие запрещённых STL-заголовков.
+- параметры YAML и относительные пути.
 
 ## 11. Что показать преподавателю
 
@@ -308,7 +312,7 @@ printjson(d.processed_documents.aggregate([
 4. Его массив `tokens` в `document_terms`.
 5. Пакетную обработку и проверку `content_hash + parser_version`.
 6. `results/statistics.json` и скорость токенизации.
-7. Тест `./.build/linguistics_tests tokenization`.
+7. Тест `./.build/tokenizer_unit_tests`.
 
 ## 12. Ограничения
 

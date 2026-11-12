@@ -114,7 +114,7 @@ Python или matplotlib.
 Проверка алгоритма аппроксимации:
 
 ```bash
-./.build/linguistics_tests mandelbrot
+./.build/document_processing_integration_tests
 ```
 
 Открыть график из WSL:

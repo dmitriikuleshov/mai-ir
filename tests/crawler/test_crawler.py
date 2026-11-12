@@ -64,21 +64,25 @@ def make_dummy_crawler(storage, http):
     return DummyCrawler(config, {}, storage, http, asyncio.Event())
 
 
+# Проверяется канонизация URL с удалением фрагмента и tracking-параметров.
 def test_normalize_url_removes_fragment_and_tracking_parameters():
     url = "HTTPS://Learn.Microsoft.com:443/en-us/test/?b=2&utm_source=x&a=1#part"
     assert normalize_url(url) == "https://learn.microsoft.com/en-us/test?a=1&b=2"
 
 
+# Проверяется стабильность SHA-256 и различие хешей разных документов.
 def test_sha256_is_stable():
     assert sha256_text("document") == sha256_text("document")
     assert sha256_text("document") != sha256_text("another document")
 
 
+# Проверяется очистка пробелов и сокращение длинного заголовка для лога.
 def test_long_log_title_is_shortened():
     assert shorten_log_value("A   title\nwith spaces", 30) == "A title with spaces"
     assert shorten_log_value("A very long document title", 12) == "A very long…"
 
 
+# Проверяется чтение URL и необязательной даты изменения из sitemap XML.
 def test_parse_sitemap_locations_with_last_modified_date():
     xml = """<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -91,6 +95,7 @@ def test_parse_sitemap_locations_with_last_modified_date():
     ]
 
 
+# Проверяется разбор метаданных одной публикации из Atom-ответа arXiv.
 def test_parse_arxiv_atom_entry():
     xml = """<feed xmlns="http://www.w3.org/2005/Atom"
       xmlns:arxiv="http://arxiv.org/schemas/atom">
@@ -112,6 +117,7 @@ def test_parse_arxiv_atom_entry():
     assert entry["categories"] == ["cs.IR"]
 
 
+# Проверяется формирование месячного запроса arXiv без большого общего offset.
 def test_arxiv_month_query_avoids_large_global_offset():
     assert previous_month("2026-01") == "2025-12"
     assert previous_month("2026-10") == "2026-09"
@@ -120,6 +126,7 @@ def test_arxiv_month_query_avoids_large_global_offset():
     )
 
 
+# Проверяется наличие обязательных настроек базы, логики и трёх источников.
 def test_config_contains_required_sections():
     config = load_config(Path("config.yaml"))
     assert config["db"]["database"] == "mai_ir"
@@ -130,6 +137,7 @@ def test_config_contains_required_sections():
     }
 
 
+# Проверяется отказ при неполной конфигурации crawler.
 def test_invalid_config_is_rejected(tmp_path: Path):
     config_path = tmp_path / "bad.yaml"
     config_path.write_text("db: {}\nlogic: {}\nsources: {}\n", encoding="utf-8")
@@ -137,6 +145,7 @@ def test_invalid_config_is_rejected(tmp_path: Path):
         load_config(config_path)
 
 
+# Проверяется обработка HTTP 304 и обновление времени проверки документа.
 def test_conditional_request_marks_document_as_checked():
     storage = FakeStorage()
     http = FakeHttp(HttpResult(304, "https://example.com/a", "", "tag", None))
@@ -164,6 +173,7 @@ def test_conditional_request_marks_document_as_checked():
     assert http.calls[0][1]["headers"] == {"If-None-Match": '"old-tag"'}
 
 
+# Проверяется пропуск повторного скачивания недавно проверенного документа.
 def test_recent_document_is_not_downloaded_again():
     storage = FakeStorage()
     http = FakeHttp(HttpResult(200, "https://example.com/a", "html", None, None))
@@ -184,6 +194,7 @@ def test_recent_document_is_not_downloaded_again():
     assert http.calls == []
 
 
+# Проверяется пропуск слишком большого ответа без остановки всего источника.
 def test_oversized_document_is_skipped_without_stopping_source():
     storage = FakeStorage()
     http = FakeHttp(ResponseTooLarge("response is too large"))
@@ -202,6 +213,7 @@ def test_oversized_document_is_skipped_without_stopping_source():
     assert len(http.calls) == 1
 
 
+# Проверяется перепроверка arXiv по метаданным до повторного запроса HTML.
 def test_arxiv_recrawl_uses_metadata_before_html():
     storage = FakeStorage()
     xml = """<feed xmlns="http://www.w3.org/2005/Atom">
@@ -237,6 +249,7 @@ def test_arxiv_recrawl_uses_metadata_before_html():
     assert http.calls[0][1]["data"]["id_list"] == "2601.00001v2"
 
 
+# Проверяется деление сбойного arXiv-пакета и откладывание отдельных документов.
 def test_arxiv_failed_metadata_batch_is_split_and_deferred():
     storage = FakeStorage()
     http = FakeHttp(
@@ -268,6 +281,7 @@ def test_arxiv_failed_metadata_batch_is_split_and_deferred():
     ] == [4, 2, 1, 1, 2, 1, 1]
 
 
+# Проверяется успешный запуск справки консольной утилиты crawler.
 def test_command_line_help():
     result = subprocess.run(
         [sys.executable, "src/crawler/main.py", "--help"],
@@ -279,6 +293,7 @@ def test_command_line_help():
     assert "config" in result.stdout
 
 
+# Проверяется полное чтение HTTP-ответа, получаемого несколькими частями.
 def test_http_client_reads_chunked_response_completely():
     async def scenario():
         async def handler(request):
@@ -314,6 +329,7 @@ def test_http_client_reads_chunked_response_completely():
     asyncio.run(scenario())
 
 
+# Проверяется немедленное прерывание ожидания повтора при запросе остановки.
 def test_http_retry_delay_is_interrupted_by_stop_event():
     async def scenario():
         requests = 0
@@ -355,6 +371,7 @@ def test_http_retry_delay_is_interrupted_by_stop_event():
     asyncio.run(scenario())
 
 
+# Проверяется, что штатная остановка источника не журналируется как ошибка.
 def test_stopped_source_is_not_reported_as_error(caplog):
     class StoppedCrawler:
         async def run(self):
@@ -366,6 +383,7 @@ def test_stopped_source_is_not_reported_as_error(caplog):
     assert "завершился с ошибкой" not in caplog.text
 
 
+# Проверяется краткое журналирование ошибки источника без traceback в терминале.
 def test_failed_source_is_logged_without_traceback(caplog):
     class FailedCrawler:
         async def run(self):
