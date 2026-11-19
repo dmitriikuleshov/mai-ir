@@ -1,0 +1,37 @@
+db:
+  # Подключение к MongoDB.
+  uri: mongodb://localhost:27017
+  database: mai_ir
+  # Входная и выходные коллекции лингвистического pipeline.
+  documents_collection: documents
+  processed_collection: processed_documents
+  document_terms_collection: document_terms
+  token_frequencies_collection: token_frequencies
+  lemma_frequencies_collection: lemma_frequencies
+  linguistics_state_collection: linguistics_state
+
+linguistics:
+  # Число документов в одной MongoDB-пачке.
+  batch_size: 100
+  # Минимальное число токенов для принятия документа.
+  minimum_words: 200
+  # Максимальная длина одного токена в Unicode-символах.
+  maximum_token_length: 100
+  # null обрабатывает весь корпус.
+  max_documents: null
+  # Изменение версии заставляет заново обработать документы.
+  parser_version: 8
+  # Словари задаются относительно этого YAML-файла.
+  lemma_dictionary: ../resources/wordnet_exceptions.tsv
+  lemma_vocabulary: ../resources/wordnet_lemmas.txt
+  lemma_overrides: ../resources/technical_lemma_overrides.tsv
+  # Период вывода прогресса в документах.
+  progress_every_documents: 100
+  # Ограничения данных для графика и аппроксимации закона Ципфа.
+  zipf_max_terms: 100000
+  zipf_fit_terms: 10000
+  top_terms: 30
+  # Срок действия блокировки единственного обработчика.
+  lock_lease_seconds: 600
+  # Каталог статистики и графика относительно этого YAML-файла.
+  output_directory: ../results

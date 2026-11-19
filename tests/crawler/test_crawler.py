@@ -1,4 +1,5 @@
 import asyncio
+import json
 import subprocess
 import sys
 from pathlib import Path
@@ -13,6 +14,7 @@ from crawler.main import (
     HttpResult,
     ResponseTooLarge,
     StopRequested,
+    WikipediaCrawler,
     arxiv_month_query,
     load_config,
     normalize_url,
@@ -22,6 +24,7 @@ from crawler.main import (
     run_source,
     sha256_text,
     shorten_log_value,
+    wikipedia_category_is_technical,
 )
 
 
@@ -128,13 +131,107 @@ def test_arxiv_month_query_avoids_large_global_offset():
 
 # Проверяется наличие обязательных настроек базы, логики и трёх источников.
 def test_config_contains_required_sections():
-    config = load_config(Path("config.yaml"))
+    config = load_config(Path("configs/crawler.yaml"))
     assert config["db"]["database"] == "mai_ir"
     assert set(config["logic"]["delay_seconds"]) == {
         "wikipedia",
         "arxiv",
         "microsoft_learn",
     }
+
+
+# Проверяется допуск технических категорий и отсечение посторонних ветвей Wikipedia.
+def test_wikipedia_category_filter_keeps_technical_branches():
+    required = ["computer", "algorithm", "human computer interaction"]
+    excluded = ["magazine", "newspaper", "sports", "scientists", "fiction"]
+
+    assert wikipedia_category_is_technical("Algorithms", required, excluded)
+    assert wikipedia_category_is_technical(
+        "Human–computer interaction", required, excluded
+    )
+    assert not wikipedia_category_is_technical(
+        "Computer magazines", required, excluded
+    )
+    assert not wikipedia_category_is_technical(
+        "Newspapers published in Australia", required, excluded
+    )
+    assert not wikipedia_category_is_technical(
+        "Computer scientists", required, excluded
+    )
+    assert not wikipedia_category_is_technical(
+        "Computer fiction", required, excluded
+    )
+
+
+# Проверяется, что обход Wikipedia сохраняет путь категорий и не ставит нетехнические ветви в очередь.
+def test_wikipedia_category_tasks_are_versioned_and_filtered():
+    class QueueStorage:
+        def __init__(self):
+            self.tasks = []
+
+        async def enqueue_tasks(self, tasks):
+            self.tasks.extend(tasks)
+
+    payload = {
+        "query": {
+            "categorymembers": [
+                {"ns": 0, "pageid": 101, "title": "Binary search algorithm"},
+                {"ns": 14, "pageid": 201, "title": "Category:Algorithms"},
+                {
+                    "ns": 14,
+                    "pageid": 202,
+                    "title": "Category:Computer magazines",
+                },
+                {
+                    "ns": 14,
+                    "pageid": 203,
+                    "title": "Category:Australian newspapers",
+                },
+            ]
+        }
+    }
+    storage = QueueStorage()
+    http = FakeHttp(
+        HttpResult(
+            200,
+            "https://en.wikipedia.org/w/api.php",
+            json.dumps(payload),
+            None,
+            None,
+        )
+    )
+    config = {
+        "logic": {
+            "user_agent": "test-agent",
+            "recrawl_after_seconds": 60,
+            "recrawl_batch_size": 10,
+        }
+    }
+    source_config = {
+        "max_category_depth": 3,
+        "category_required_keywords": ["computer", "algorithm"],
+        "category_excluded_keywords": ["magazine", "newspaper"],
+    }
+    crawler = WikipediaCrawler(
+        config, source_config, storage, http, asyncio.Event()
+    )
+    task = {
+        "title": "Computer science",
+        "depth": 0,
+        "root_category": "Computer science",
+        "category_path": ["Computer science"],
+        "discovery_version": 2,
+    }
+
+    asyncio.run(crawler.process_category(task))
+
+    assert [(queued["kind"], queued["title"]) for queued in storage.tasks] == [
+        ("page", "Binary search algorithm"),
+        ("category", "Algorithms"),
+    ]
+    assert all(queued["key"].startswith("v2:") for queued in storage.tasks)
+    assert storage.tasks[0]["discovery_category"] == "Computer science"
+    assert storage.tasks[1]["category_path"] == ["Computer science", "Algorithms"]
 
 
 # Проверяется отказ при неполной конфигурации crawler.

@@ -91,6 +91,32 @@ def shorten_log_value(value: str, width: int = LOG_TITLE_WIDTH) -> str:
     return f"{value[: width - 1].rstrip()}…"
 
 
+def normalize_wikipedia_category(value: str) -> str:
+    """Приводит название категории к виду для сравнения с маркерами."""
+    value = value.casefold().replace("_", " ")
+    value = re.sub(r"[\u2010-\u2015/-]+", " ", value)
+    return re.sub(r"\s+", " ", value).strip()
+
+
+def wikipedia_category_is_technical(
+    title: str,
+    required_keywords: list[str],
+    excluded_keywords: list[str],
+) -> bool:
+    """Проверяет, относится ли категория Wikipedia к техническому корпусу."""
+    normalized_title = normalize_wikipedia_category(title)
+    excluded = (
+        normalize_wikipedia_category(keyword) for keyword in excluded_keywords
+    )
+    if any(keyword and keyword in normalized_title for keyword in excluded):
+        return False
+
+    required = (
+        normalize_wikipedia_category(keyword) for keyword in required_keywords
+    )
+    return any(keyword and keyword in normalized_title for keyword in required)
+
+
 def parse_xml_locations(xml_text: str) -> list[dict[str, str | None]]:
     root = ET.fromstring(xml_text.lstrip("\ufeff"))
     result = []
@@ -167,6 +193,20 @@ def load_config(path: Path) -> dict[str, Any]:
             raise ValueError(f"Не задана задержка для источника {source_name!r}")
         if source_name in delays and float(delays[source_name]) < 0:
             raise ValueError("Задержка между запросами не может быть отрицательной")
+
+    wikipedia = config["sources"].get("wikipedia", {})
+    if wikipedia.get("enabled", False):
+        for key in (
+            "seed_categories",
+            "category_required_keywords",
+            "category_excluded_keywords",
+        ):
+            if not isinstance(wikipedia.get(key), list):
+                raise TypeError(f"sources.wikipedia.{key} должен быть списком")
+        if int(wikipedia.get("discovery_version", 0)) < 1:
+            raise ValueError("sources.wikipedia.discovery_version должен быть >= 1")
+        if int(wikipedia.get("max_category_depth", -1)) < 0:
+            raise ValueError("sources.wikipedia.max_category_depth должен быть >= 0")
     return config
 
 
@@ -401,6 +441,14 @@ class MongoStorage:
                 ("next_attempt_at", ASCENDING),
             ]
         )
+        await self.queue.create_index(
+            [
+                ("source", ASCENDING),
+                ("discovery_version", ASCENDING),
+                ("status", ASCENDING),
+                ("next_attempt_at", ASCENDING),
+            ]
+        )
 
     async def close(self) -> None:
         await self.client.close()
@@ -550,11 +598,15 @@ class MongoStorage:
         source: str,
         worker_id: str,
         lease_seconds: int,
+        discovery_version: int | None = None,
     ) -> dict[str, Any] | None:
         now = unix_time()
+        task_filter: dict[str, Any] = {"source": source}
+        if discovery_version is not None:
+            task_filter["discovery_version"] = discovery_version
         return await self.queue.find_one_and_update(
             {
-                "source": source,
+                **task_filter,
                 "$or": [
                     {"status": "pending", "next_attempt_at": {"$lte": now}},
                     {"status": "processing", "lease_until": {"$lte": now}},
@@ -595,17 +647,32 @@ class MongoStorage:
             },
         )
 
-    async def task_count(self, source: str) -> int:
-        return await self.queue.count_documents({"source": source})
+    async def task_count(
+        self,
+        source: str,
+        discovery_version: int | None = None,
+    ) -> int:
+        task_filter: dict[str, Any] = {"source": source}
+        if discovery_version is not None:
+            task_filter["discovery_version"] = discovery_version
+        return await self.queue.count_documents(task_filter)
 
-    async def reset_due_tasks(self, source: str, cutoff: int) -> int:
+    async def reset_due_tasks(
+        self,
+        source: str,
+        cutoff: int,
+        discovery_version: int | None = None,
+    ) -> int:
+        task_filter: dict[str, Any] = {
+            "source": source,
+            "kind": "category",
+            "status": "done",
+            "finished_at": {"$lte": cutoff},
+        }
+        if discovery_version is not None:
+            task_filter["discovery_version"] = discovery_version
         result = await self.queue.update_many(
-            {
-                "source": source,
-                "kind": "category",
-                "status": "done",
-                "finished_at": {"$lte": cutoff},
-            },
+            task_filter,
             {
                 "$set": {"status": "pending", "next_attempt_at": unix_time()},
                 "$unset": {"worker_id": "", "lease_until": ""},
@@ -765,19 +832,27 @@ class WikipediaCrawler(BaseCrawler):
         )
         await self.recrawl_due_documents()
 
+        discovery_version = int(self.source_config["discovery_version"])
         cutoff = unix_time() - self.recrawl_after
-        reset = await self.storage.reset_due_tasks(self.source, cutoff)
+        reset = await self.storage.reset_due_tasks(
+            self.source,
+            cutoff,
+            discovery_version,
+        )
         if reset:
             LOGGER.info("Wikipedia: повторно поставлено в очередь задач: %s", reset)
 
-        if await self.storage.task_count(self.source) == 0:
+        if await self.storage.task_count(self.source, discovery_version) == 0:
             seeds = [
                 {
                     "source": self.source,
                     "kind": "category",
-                    "key": category,
+                    "key": f"v{discovery_version}:{category}",
                     "title": category,
                     "depth": 0,
+                    "root_category": category,
+                    "category_path": [category],
+                    "discovery_version": discovery_version,
                     "priority": 20,
                 }
                 for category in self.source_config["seed_categories"]
@@ -792,7 +867,12 @@ class WikipediaCrawler(BaseCrawler):
                 self.max_documents
             ):
                 break
-            task = await self.storage.claim_task(self.source, worker_id, lease_seconds)
+            task = await self.storage.claim_task(
+                self.source,
+                worker_id,
+                lease_seconds,
+                discovery_version,
+            )
             if task is None:
                 break
             try:
@@ -811,6 +891,11 @@ class WikipediaCrawler(BaseCrawler):
         LOGGER.info("Wikipedia: обработано страниц за запуск: %s", processed_pages)
 
     async def process_category(self, task: dict[str, Any]) -> None:
+        discovery_version = int(task["discovery_version"])
+        category_path = list(task.get("category_path", [task["title"]]))
+        root_category = str(task.get("root_category", category_path[0]))
+        required_keywords = self.source_config["category_required_keywords"]
+        excluded_keywords = self.source_config["category_excluded_keywords"]
         continuation: str | None = None
         while True:
             if self.stop_event.is_set():
@@ -842,21 +927,34 @@ class WikipediaCrawler(BaseCrawler):
                         {
                             "source": self.source,
                             "kind": "page",
-                            "key": str(member["pageid"]),
+                            "key": f"v{discovery_version}:{member['pageid']}",
                             "page_id": str(member["pageid"]),
                             "title": member["title"],
+                            "root_category": root_category,
+                            "discovery_category": task["title"],
+                            "category_path": category_path,
+                            "discovery_version": discovery_version,
                             "priority": 10,
                         }
                     )
                 elif task["depth"] < int(self.source_config["max_category_depth"]):
                     category = member["title"].removeprefix("Category:")
+                    if not wikipedia_category_is_technical(
+                        category,
+                        required_keywords,
+                        excluded_keywords,
+                    ):
+                        continue
                     tasks.append(
                         {
                             "source": self.source,
                             "kind": "category",
-                            "key": category,
+                            "key": f"v{discovery_version}:{category}",
                             "title": category,
                             "depth": task["depth"] + 1,
+                            "root_category": root_category,
+                            "category_path": [*category_path, category],
+                            "discovery_version": discovery_version,
                             "priority": 20,
                         }
                     )
@@ -872,7 +970,13 @@ class WikipediaCrawler(BaseCrawler):
             source_id=task["page_id"],
             url=url,
             title=task["title"],
-            metadata={"page_id": task["page_id"]},
+            metadata={
+                "page_id": task["page_id"],
+                "root_category": task.get("root_category"),
+                "discovery_category": task.get("discovery_category"),
+                "category_path": task.get("category_path", []),
+                "discovery_version": task.get("discovery_version"),
+            },
         )
 
 

@@ -105,16 +105,16 @@ struct WeightedPosting {
 docker compose up -d
 cmake -S . -B .build -DCMAKE_BUILD_TYPE=Release
 cmake --build .build --parallel
-./.build/linguistics config.yaml
-./.build/boolean_index config.yaml
-./.build/tfidf_search config.yaml
+./.build/linguistics configs/linguistics.yaml
+./.build/boolean_index configs/boolean_index.yaml
+./.build/tfidf_search configs/search.yaml
 ```
 
 Если корпус и индекс уже подготовлены, достаточно:
 
 ```bash
 docker compose up -d
-./.build/tfidf_search config.yaml
+./.build/tfidf_search configs/search.yaml
 ```
 
 В интерактивном режиме программа выводит:
@@ -133,18 +133,18 @@ distributed database replication
 Один запрос можно передать через стандартный ввод:
 
 ```bash
-echo 'distributed database replication' | ./.build/tfidf_search config.yaml
+echo 'distributed database replication' | ./.build/tfidf_search configs/search.yaml
 ```
 
 Несколько запросов можно записать по одному в строке:
 
 ```bash
-./.build/tfidf_search config.yaml < queries.txt
+./.build/tfidf_search configs/search.yaml < queries.txt
 ```
 
 ## 6. Настройки
 
-Поиск читает настройки из общего `config.yaml`:
+Поиск читает настройки из файла `configs/search.yaml`:
 
 ```yaml
 db:
@@ -154,13 +154,12 @@ db:
 
 linguistics:
   maximum_token_length: 100
-  lemma_dictionary: resources/wordnet_exceptions.tsv
-  lemma_vocabulary: resources/wordnet_lemmas.txt
-  lemma_overrides: resources/technical_lemma_overrides.tsv
+  lemma_dictionary: ../resources/wordnet_exceptions.tsv
+  lemma_vocabulary: ../resources/wordnet_lemmas.txt
+  lemma_overrides: ../resources/technical_lemma_overrides.tsv
 
 boolean_index:
-  output_directory: results/boolean_index
-  term_field: lemmas
+  output_directory: ../results/boolean_index
 
 tfidf_search:
   result_limit: 20
@@ -1148,7 +1147,7 @@ OID   ← documents.bin
 Запуск:
 
 ```bash
-./.build/tfidf_search config.yaml
+./.build/tfidf_search configs/search.yaml
 ```
 
 Полезные запросы:

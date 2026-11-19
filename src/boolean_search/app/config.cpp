@@ -1,4 +1,4 @@
-// Загружает общие настройки булева и ранжированного консольного поиска.
+// Загружает общие настройки булева и ранжированного консольного поиска из YAML.
 #include "boolean_search/app/config.hpp"
 
 #include <cerrno>
@@ -44,9 +44,30 @@ bool parse_positive_size(const char *value, size_t *result) {
     return true;
 }
 
+// Разбирает YAML-значение true/false без неявных числовых вариантов.
+bool parse_boolean(const char *value, bool *result) {
+    if (std::strcmp(value, "true") == 0) {
+        *result = true;
+        return true;
+    }
+    if (std::strcmp(value, "false") == 0) {
+        *result = false;
+        return true;
+    }
+    return false;
+}
+
+// Относительные пути в YAML отсчитываются от каталога самого файла конфигурации.
+void resolve_path(std::string *value, const std::string &config_path) {
+    if (value->empty() || value->front() == '/') return;
+    const size_t separator = config_path.find_last_of('/');
+    if (separator == std::string::npos) return;
+    *value = config_path.substr(0, separator + 1) + *value;
+}
+
 }  // namespace
 
-// Читает пути индекса, словарей и ограничения выдачи из config.yaml.
+// Читает пути индекса, словарей и ограничения выдачи из переданного YAML.
 BooleanSearchConfig load_boolean_search_config(const char *path) {
     BooleanSearchConfig config{};
     config.uri = "mongodb://localhost:27017";
@@ -59,11 +80,12 @@ BooleanSearchConfig load_boolean_search_config(const char *path) {
     config.maximum_token_length = 100;
     config.result_limit = 20;
     config.tfidf_result_limit = 20;
+    config.use_skip_pointers = true;
 
     // Используется только необходимый проекту поднабор простого YAML.
     FILE *file = std::fopen(path, "rb");
     if (file == nullptr) {
-        fail("не удалось открыть config.yaml");
+        fail("не удалось открыть файл конфигурации");
     }
     char line[8192];
     std::string section;
@@ -110,18 +132,25 @@ BooleanSearchConfig load_boolean_search_config(const char *path) {
         } else if (section == "boolean_index" &&
                    std::strcmp(key, "output_directory") == 0) {
             config.index_directory = value;
-        } else if (section == "boolean_search" &&
-                   std::strcmp(key, "result_limit") == 0) {
-            valid = parse_positive_size(value, &config.result_limit);
+        } else if (section == "boolean_search") {
+            if (std::strcmp(key, "result_limit") == 0) {
+                valid = parse_positive_size(value, &config.result_limit);
+            } else if (std::strcmp(key, "use_skip_pointers") == 0) {
+                valid = parse_boolean(value, &config.use_skip_pointers);
+            }
         } else if (section == "tfidf_search" &&
                    std::strcmp(key, "result_limit") == 0) {
             valid = parse_positive_size(value, &config.tfidf_result_limit);
         }
         if (!valid) {
             std::fclose(file);
-            fail("некорректное значение в config.yaml");
+            fail("некорректное значение в файле конфигурации");
         }
     }
     std::fclose(file);
+    resolve_path(&config.index_directory, path);
+    resolve_path(&config.lemma_dictionary, path);
+    resolve_path(&config.lemma_vocabulary, path);
+    resolve_path(&config.lemma_overrides, path);
     return config;
 }

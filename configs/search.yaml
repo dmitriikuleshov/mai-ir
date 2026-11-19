@@ -1,0 +1,26 @@
+db:
+  # MongoDB используется для вывода метаданных найденных документов.
+  uri: mongodb://localhost:27017
+  database: mai_ir
+  processed_collection: processed_documents
+
+linguistics:
+  # Запрос проходит ту же токенизацию и лемматизацию, что и корпус.
+  maximum_token_length: 100
+  lemma_dictionary: ../resources/wordnet_exceptions.tsv
+  lemma_vocabulary: ../resources/wordnet_lemmas.txt
+  lemma_overrides: ../resources/technical_lemma_overrides.tsv
+
+boolean_index:
+  # Общий дисковый индекс булева и TF-IDF-поиска.
+  output_directory: ../results/boolean_index
+
+boolean_search:
+  # Максимальное число результатов булева запроса.
+  result_limit: 20
+  # false включает прежнее линейное пересечение для контрольного замера.
+  use_skip_pointers: true
+
+tfidf_search:
+  # Максимальное число ранжированных результатов TF-IDF.
+  result_limit: 20

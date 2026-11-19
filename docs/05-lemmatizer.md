@@ -116,9 +116,9 @@ for (const std::string &token : *tokens) {
 
 ```yaml
 linguistics:
-  lemma_dictionary: resources/wordnet_exceptions.tsv
-  lemma_vocabulary: resources/wordnet_lemmas.txt
-  lemma_overrides: resources/technical_lemma_overrides.tsv
+  lemma_dictionary: ../resources/wordnet_exceptions.tsv
+  lemma_vocabulary: ../resources/wordnet_lemmas.txt
+  lemma_overrides: ../resources/technical_lemma_overrides.tsv
 ```
 
 Эти файлы выполняют разные задачи и не дублируют друг друга.
@@ -410,7 +410,7 @@ running  → run    // удаление -ing и удвоенной соглас�
 c++      → c++    // защищённый технический токен
 ```
 
-Однако специфичное исключение `abaci → abacus` без WordNet применить невозможно, поэтому `abaci` останется без изменений. В рабочем запуске проекта этот резервный режим не используется: все три ресурса указаны в `config.yaml` и загружаются при старте.
+Однако специфичное исключение `abaci → abacus` без WordNet применить невозможно, поэтому `abaci` останется без изменений. В рабочем запуске проекта этот резервный режим не используется: все три ресурса указаны в `configs/linguistics.yaml` и загружаются при старте.
 
 ## 11. Защита от несуществующих основ
 
@@ -557,7 +557,7 @@ ctest --test-dir .build -R 'unit\.lemmatization\.' --output-on-failure
 Чтобы увидеть работу лемматизатора на всём корпусе, запускается общий pipeline:
 
 ```bash
-./.build/linguistics config.yaml
+./.build/linguistics configs/linguistics.yaml
 ```
 
 Однако для демонстрации именно алгоритма удобнее сначала показать тесты: они дают контролируемые входы и ожидаемые выходы, а затем открыть результат реального документа в поле `document_terms.lemmas`.

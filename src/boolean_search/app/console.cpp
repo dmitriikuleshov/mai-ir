@@ -5,6 +5,7 @@
 
 #include "boolean_search/index/index_reader.hpp"
 
+#include <chrono>
 #include <cstdio>
 #include <iostream>
 #include <string>
@@ -108,14 +109,24 @@ void run_boolean_search_console(const BooleanSearchConfig &config,
             continue;
         }
         char error[512] = "";
+        IntersectionStats stats{};
+        const auto started = std::chrono::steady_clock::now();
         BooleanResult result = boolean_search(
             index, query.c_str(), config.maximum_token_length, dictionary,
-            error, sizeof(error));
+            config.use_skip_pointers, &stats, error, sizeof(error));
+        const auto elapsed = std::chrono::duration<double, std::milli>(
+            std::chrono::steady_clock::now() - started);
         std::printf("Запрос: %s\n", query.c_str());
         if (error[0] != '\0') {
             std::printf("Ошибка запроса: %s\n\n", error);
         } else {
-            std::printf("Найдено документов: %zu\n", result.size());
+            std::printf(
+                "Найдено документов: %zu | поиск: %.3f мс | сравнений: %llu | "
+                "прыжков: %llu | пропущено postings: %llu\n",
+                result.size(), elapsed.count(),
+                static_cast<unsigned long long>(stats.comparisons),
+                static_cast<unsigned long long>(stats.skip_jumps),
+                static_cast<unsigned long long>(stats.skipped_postings));
             const size_t shown = result.size() < config.result_limit
                                      ? result.size()
                                      : config.result_limit;

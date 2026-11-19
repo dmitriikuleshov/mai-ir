@@ -99,7 +99,7 @@ docker compose ps
 Если корпус ещё не собран, crawler запускается отдельно:
 
 ```bash
-uv run python src/crawler/main.py config.yaml
+uv run python src/crawler/main.py configs/crawler.yaml
 ```
 
 Для самой лингвистической обработки `uv` не требуется, поскольку это C++-программа.
@@ -127,20 +127,20 @@ cmake --build .build --parallel
 Пайплайн получает единственный обязательный аргумент — путь к конфигурации:
 
 ```bash
-./.build/linguistics config.yaml
+./.build/linguistics configs/linguistics.yaml
 ```
 
 Если аргумент не передан, программа выводит правильный формат команды:
 
 ```text
-Использование: ./.build/linguistics config.yaml
+Использование: ./.build/linguistics configs/linguistics.yaml
 ```
 
 Во время работы в терминале периодически выводятся число обработанных, принятых, отклонённых и пропущенных документов. Период вывода задаётся параметром `progress_every_documents`. После завершения программа печатает итоговую таблицу по источникам и пути к созданным файлам статистики.
 
 ### 3.4. Пробный запуск на ограниченном числе документов
 
-Для проверки на небольшом подмножестве можно временно задать в `config.yaml`:
+Для проверки на небольшом подмножестве можно временно задать в `configs/linguistics.yaml`:
 
 ```yaml
 linguistics:
@@ -203,15 +203,15 @@ linguistics:
   maximum_token_length: 100
   max_documents: null
   parser_version: 8
-  lemma_dictionary: resources/wordnet_exceptions.tsv
-  lemma_vocabulary: resources/wordnet_lemmas.txt
-  lemma_overrides: resources/technical_lemma_overrides.tsv
+  lemma_dictionary: ../resources/wordnet_exceptions.tsv
+  lemma_vocabulary: ../resources/wordnet_lemmas.txt
+  lemma_overrides: ../resources/technical_lemma_overrides.tsv
   progress_every_documents: 100
   zipf_max_terms: 100000
   zipf_fit_terms: 10000
   top_terms: 30
   lock_lease_seconds: 600
-  output_directory: results
+  output_directory: ../results
 ```
 
 Смысл параметров следующий.
@@ -247,7 +247,9 @@ linguistics:
 ```cpp
 int main(int argc, char **argv) {
     if (argc != 2) {
-        std::fprintf(stderr, "Использование: %s config.yaml\n", argv[0]);
+        std::fprintf(stderr,
+                     "Использование: %s configs/linguistics.yaml\n",
+                     argv[0]);
         return EXIT_FAILURE;
     }
     return run_linguistics(load_config(argv[1]));
@@ -566,7 +568,7 @@ KiB/s = text_bytes / 1024 / tokenization_seconds
 ```bash
 cmake -S . -B .build -DCMAKE_BUILD_TYPE=Release
 cmake --build .build --parallel
-./.build/linguistics config.yaml
+./.build/linguistics configs/linguistics.yaml
 ```
 
 Во время запуска можно объяснить следующее:

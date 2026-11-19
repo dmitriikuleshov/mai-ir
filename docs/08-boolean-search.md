@@ -111,16 +111,16 @@ using BooleanResult = std::vector<uint32_t>;
 docker compose up -d
 cmake -S . -B .build -DCMAKE_BUILD_TYPE=Release
 cmake --build .build --parallel
-./.build/linguistics config.yaml
-./.build/boolean_index config.yaml
-./.build/boolean_search config.yaml
+./.build/linguistics configs/linguistics.yaml
+./.build/boolean_index configs/boolean_index.yaml
+./.build/boolean_search configs/search.yaml
 ```
 
 Если лингвистический результат и индекс уже построены, первые две рабочие команды повторять не нужно. Достаточно запустить MongoDB и консоль поиска:
 
 ```bash
 docker compose up -d
-./.build/boolean_search config.yaml
+./.build/boolean_search configs/search.yaml
 ```
 
 В интерактивном терминале программа выводит приглашение:
@@ -135,20 +135,20 @@ docker compose up -d
 Утилита также читает стандартный ввод без интерактивной подсказки, поэтому один запрос можно передать конвейером:
 
 ```bash
-echo 'database AND security' | ./.build/boolean_search config.yaml
+echo 'database AND security' | ./.build/boolean_search configs/search.yaml
 ```
 
 Несколько запросов можно записать по одному в строке файла и выполнить:
 
 ```bash
-./.build/boolean_search config.yaml < queries.txt
+./.build/boolean_search configs/search.yaml < queries.txt
 ```
 
 Такой интерфейс соответствует требованию курса о консольной утилите, принимающей запросы со стандартного ввода и выдающей результат в стандартный вывод.
 
 ## 5. Параметры конфигурации
 
-Поиск использует несколько секций общего `config.yaml`:
+Поиск использует секции файла `configs/search.yaml`:
 
 ```yaml
 db:
@@ -158,13 +158,12 @@ db:
 
 linguistics:
   maximum_token_length: 100
-  lemma_dictionary: resources/wordnet_exceptions.tsv
-  lemma_vocabulary: resources/wordnet_lemmas.txt
-  lemma_overrides: resources/technical_lemma_overrides.tsv
+  lemma_dictionary: ../resources/wordnet_exceptions.tsv
+  lemma_vocabulary: ../resources/wordnet_lemmas.txt
+  lemma_overrides: ../resources/technical_lemma_overrides.tsv
 
 boolean_index:
-  output_directory: results/boolean_index
-  term_field: lemmas
+  output_directory: ../results/boolean_index
 
 boolean_search:
   result_limit: 20
@@ -847,7 +846,7 @@ ctest --test-dir .build -R 'unit\.boolean_search\.' --output-on-failure
 Сначала следует запустить:
 
 ```bash
-./.build/boolean_search config.yaml
+./.build/boolean_search configs/search.yaml
 ```
 
 Для демонстрации полезен такой порядок запросов:

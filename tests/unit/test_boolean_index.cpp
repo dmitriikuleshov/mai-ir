@@ -87,10 +87,14 @@ TEST(BooleanIndexFormatTest, HasStablePackedBinaryLayout) {
     EXPECT_EQ(sizeof(boolean_index_format::LexiconEntry), 24U);
     EXPECT_EQ(sizeof(boolean_index_format::DocumentHeader), 16U);
     EXPECT_EQ(sizeof(boolean_index_format::DocumentNormHeader), 16U);
-    EXPECT_EQ(boolean_index_format::VERSION, 3U);
+    EXPECT_EQ(sizeof(boolean_index_format::SkipHeader), 40U);
+    EXPECT_EQ(sizeof(boolean_index_format::SkipTermEntry), 24U);
+    EXPECT_EQ(sizeof(boolean_index_format::SkipEntry), 8U);
+    EXPECT_EQ(boolean_index_format::VERSION, 4U);
     EXPECT_EQ(std::memcmp(boolean_index_format::INDEX_MAGIC, "MAIIRIDX", 8), 0);
     EXPECT_EQ(std::memcmp(boolean_index_format::DOCUMENT_MAGIC, "MAIIRDOC", 8),
               0);
+    EXPECT_EQ(std::memcmp(boolean_index_format::SKIP_MAGIC, "MAIIRSKP", 8), 0);
 }
 
 // Проверяется извлечение лемм и идентификатора документа из BSON.
@@ -316,7 +320,7 @@ TEST_F(BooleanIndexTest, MergesBlocksIntoSortedFinalInvertedIndex) {
     flush_block(&second, &blocks, directory());
     ASSERT_EQ(blocks.size(), 2U);
 
-    merge_blocks(&blocks, directory(), 4);
+    merge_blocks(&blocks, directory(), 4, 16);
 
     char path[PATH_SIZE];
     join_path(path, sizeof(path), directory(), "lexicon.bin");
@@ -369,11 +373,51 @@ TEST_F(BooleanIndexTest, MergesBlocksIntoSortedFinalInvertedIndex) {
     destroy_blocks(&blocks);
 }
 
+// Проверяется сохранение sqrt-указателей только для длинного posting list.
+TEST_F(BooleanIndexTest, WritesSparseSkipPointerTable) {
+    PostingBuffer buffer{};
+    BlockList blocks{};
+    for (uint32_t document = 0; document < 100; ++document) {
+        ASSERT_TRUE(posting_buffer_add(&buffer, "common", 6, document, 1));
+    }
+    flush_block(&buffer, &blocks, directory());
+
+    merge_blocks(&blocks, directory(), 100, 16);
+
+    char path[PATH_SIZE];
+    join_path(path, sizeof(path), directory(), "skips.bin");
+    FILE *file = std::fopen(path, "rb");
+    ASSERT_NE(file, nullptr);
+    boolean_index_format::SkipHeader header{};
+    boolean_index_format::SkipTermEntry term{};
+    ASSERT_EQ(std::fread(&header, sizeof(header), 1, file), 1U);
+    ASSERT_EQ(std::fread(&term, sizeof(term), 1, file), 1U);
+
+    EXPECT_EQ(header.document_count, 100U);
+    EXPECT_EQ(header.term_count, 1U);
+    EXPECT_EQ(header.skip_term_count, 1U);
+    EXPECT_EQ(header.skip_entry_count, 9U);
+    EXPECT_EQ(term.term_index, 0U);
+    EXPECT_EQ(term.first_skip, 0U);
+    EXPECT_EQ(term.skip_count, 9U);
+    EXPECT_EQ(term.stride, 10U);
+
+    for (uint32_t number = 1; number <= 9; ++number) {
+        boolean_index_format::SkipEntry entry{};
+        ASSERT_EQ(std::fread(&entry, sizeof(entry), 1, file), 1U);
+        EXPECT_EQ(entry.posting_index, number * 10);
+        EXPECT_EQ(entry.document_id, number * 10);
+    }
+    EXPECT_EQ(std::fgetc(file), EOF);
+    std::fclose(file);
+    destroy_blocks(&blocks);
+}
+
 // Проверяется создание корректных файлов индекса при отсутствии термов.
 TEST_F(BooleanIndexTest, CreatesValidEmptyIndexWhenThereAreNoTerms) {
     BlockList blocks{};
 
-    merge_blocks(&blocks, directory(), 3);
+    merge_blocks(&blocks, directory(), 3, 16);
 
     char path[PATH_SIZE];
     join_path(path, sizeof(path), directory(), "lexicon.bin");
@@ -401,6 +445,18 @@ TEST_F(BooleanIndexTest, CreatesValidEmptyIndexWhenThereAreNoTerms) {
     ASSERT_NE(postings, nullptr);
     EXPECT_EQ(std::fgetc(postings), EOF);
     std::fclose(postings);
+
+    join_path(path, sizeof(path), directory(), "skips.bin");
+    FILE *skips = std::fopen(path, "rb");
+    ASSERT_NE(skips, nullptr);
+    boolean_index_format::SkipHeader skip_header{};
+    ASSERT_EQ(std::fread(&skip_header, sizeof(skip_header), 1, skips), 1U);
+    EXPECT_EQ(skip_header.document_count, 3U);
+    EXPECT_EQ(skip_header.term_count, 0U);
+    EXPECT_EQ(skip_header.skip_term_count, 0U);
+    EXPECT_EQ(skip_header.skip_entry_count, 0U);
+    EXPECT_EQ(std::fgetc(skips), EOF);
+    std::fclose(skips);
 }
 
 // Проверяется сохранение соответствия числового docID исходному ObjectId.

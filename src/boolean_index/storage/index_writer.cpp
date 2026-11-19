@@ -8,8 +8,10 @@
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
+#include <cmath>
 #include <string>
 #include <vector>
+#include <unistd.h>
 
 namespace {
 
@@ -28,23 +30,102 @@ bool write_lexicon_entry(FILE *lexicon, uint64_t term_offset,
     return std::fwrite(&entry, sizeof(entry), 1, lexicon) == 1;
 }
 
+// Выбирает приблизительно sqrt(P) равномерных прыжков для posting list длины P.
+void write_term_skips(
+    FILE *entries, std::vector<boolean_index_format::SkipTermEntry> *terms,
+    const std::vector<uint32_t> &documents, uint64_t term_index,
+    size_t minimum_postings, uint64_t *entry_count) {
+    if (documents.size() < minimum_postings) return;
+    const uint32_t stride = static_cast<uint32_t>(
+        std::sqrt(static_cast<double>(documents.size())));
+    if (stride < 2) return;
+
+    const uint64_t first_skip = *entry_count;
+    uint32_t skip_count = 0;
+    for (size_t target = stride; target < documents.size(); target += stride) {
+        if (target > UINT32_MAX) fail("позиция прыжка превышает формат индекса");
+        const boolean_index_format::SkipEntry entry{
+            static_cast<uint32_t>(target), documents[target]};
+        if (std::fwrite(&entry, sizeof(entry), 1, entries) != 1) {
+            fail("ошибка записи указателей прыжков");
+        }
+        ++skip_count;
+        ++*entry_count;
+    }
+    if (skip_count != 0) {
+        terms->push_back({term_index, first_skip, skip_count, stride});
+    }
+}
+
+// Собирает заголовок, разреженный словарь термов и сами указатели в skips.bin.tmp.
+void finish_skip_file(FILE *entries, const char *entries_path,
+                      const char *skip_path, uint32_t document_count,
+                      uint64_t term_count,
+                      const std::vector<boolean_index_format::SkipTermEntry> &terms,
+                      uint64_t entry_count) {
+    if (std::fflush(entries) != 0 || fseeko(entries, 0, SEEK_SET) != 0) {
+        fail("не удалось подготовить указатели прыжков");
+    }
+    FILE *output = std::fopen(skip_path, "wb");
+    if (output == nullptr) fail("не удалось создать skips.bin");
+
+    boolean_index_format::SkipHeader header{};
+    std::memcpy(header.magic, boolean_index_format::SKIP_MAGIC,
+                sizeof(header.magic));
+    header.version = boolean_index_format::VERSION;
+    header.document_count = document_count;
+    header.term_count = term_count;
+    header.skip_term_count = terms.size();
+    header.skip_entry_count = entry_count;
+    if (std::fwrite(&header, sizeof(header), 1, output) != 1 ||
+        (!terms.empty() &&
+         std::fwrite(terms.data(), sizeof(terms[0]), terms.size(), output) !=
+             terms.size())) {
+        fail("ошибка записи словаря прыжков");
+    }
+
+    char buffer[65536];
+    while (true) {
+        const size_t read = std::fread(buffer, 1, sizeof(buffer), entries);
+        if (read != 0 && std::fwrite(buffer, 1, read, output) != read) {
+            fail("ошибка копирования указателей прыжков");
+        }
+        if (read < sizeof(buffer)) {
+            if (std::ferror(entries)) fail("ошибка чтения указателей прыжков");
+            break;
+        }
+    }
+    if (std::fclose(entries) != 0 || std::fclose(output) != 0) {
+        fail("ошибка закрытия файла прыжков");
+    }
+    unlink(entries_path);
+}
+
 }  // namespace
 
 // Выполняет k-way merge блоков и создаёт lexicon.bin, terms.bin и postings.bin.
 void merge_blocks(const BlockList *blocks, const char *output_directory,
-                  uint32_t document_count) {
+                  uint32_t document_count, size_t minimum_skip_postings) {
     char lexicon_path[PATH_SIZE];
     char terms_path[PATH_SIZE];
     char postings_path[PATH_SIZE];
+    char skips_path[PATH_SIZE];
+    char skip_entries_path[PATH_SIZE];
     join_path(lexicon_path, sizeof(lexicon_path), output_directory,
               "lexicon.bin.tmp");
     join_path(terms_path, sizeof(terms_path), output_directory, "terms.bin.tmp");
     join_path(postings_path, sizeof(postings_path), output_directory,
               "postings.bin.tmp");
+    join_path(skips_path, sizeof(skips_path), output_directory,
+              "skips.bin.tmp");
+    join_path(skip_entries_path, sizeof(skip_entries_path), output_directory,
+              "skip-entries.bin.tmp");
     FILE *lexicon = std::fopen(lexicon_path, "wb+");
     FILE *terms = std::fopen(terms_path, "wb");
     FILE *postings = std::fopen(postings_path, "wb");
-    if (lexicon == nullptr || terms == nullptr || postings == nullptr) {
+    FILE *skip_entries = std::fopen(skip_entries_path, "wb+");
+    if (lexicon == nullptr || terms == nullptr || postings == nullptr ||
+        skip_entries == nullptr) {
         fail("не удалось создать итоговые файлы индекса");
     }
     boolean_index_format::IndexHeader header{};
@@ -81,6 +162,9 @@ void merge_blocks(const BlockList *blocks, const char *output_directory,
     uint32_t current_postings_count = 0;
     uint32_t last_document = 0;
     bool has_last_document = false;
+    std::vector<uint32_t> current_documents;
+    std::vector<boolean_index_format::SkipTermEntry> skip_terms;
+    uint64_t skip_entry_count = 0;
     while (!heap.items.empty()) {
         const size_t reader_index = heap.items[0];
         BlockReader *reader = &readers[reader_index];
@@ -93,6 +177,11 @@ void merge_blocks(const BlockList *blocks, const char *output_directory,
                                       current_postings_count)) {
                 fail("ошибка записи лексикона");
             }
+            if (has_current_term) {
+                write_term_skips(skip_entries, &skip_terms, current_documents,
+                                 header.term_count - 1,
+                                 minimum_skip_postings, &skip_entry_count);
+            }
             if (length > UINT32_MAX) {
                 fail("слишком длинный термин при слиянии");
             }
@@ -104,6 +193,7 @@ void merge_blocks(const BlockList *blocks, const char *output_directory,
             current_postings_offset = static_cast<uint64_t>(ftello(postings));
             current_postings_count = 0;
             has_last_document = false;
+            current_documents.clear();
             if (std::fwrite(current_term.data(), 1, length, terms) != length) {
                 fail("ошибка записи словаря");
             }
@@ -122,6 +212,7 @@ void merge_blocks(const BlockList *blocks, const char *output_directory,
             has_last_document = true;
             ++current_postings_count;
             ++header.posting_count;
+            current_documents.push_back(reader->document_id);
         }
 
         if (!block_reader_next(reader)) {
@@ -142,6 +233,11 @@ void merge_blocks(const BlockList *blocks, const char *output_directory,
                              current_length, current_postings_count)) {
         fail("ошибка записи последнего термина лексикона");
     }
+    if (has_current_term) {
+        write_term_skips(skip_entries, &skip_terms, current_documents,
+                         header.term_count - 1, minimum_skip_postings,
+                         &skip_entry_count);
+    }
     const off_t compressed_postings_size = ftello(postings);
     if (compressed_postings_size < 0) {
         fail("не удалось определить размер сжатого индекса");
@@ -158,11 +254,16 @@ void merge_blocks(const BlockList *blocks, const char *output_directory,
         std::fclose(postings) != 0) {
         fail("ошибка закрытия итогового индекса");
     }
+    finish_skip_file(skip_entries, skip_entries_path, skips_path,
+                     document_count, header.term_count, skip_terms,
+                     skip_entry_count);
 
-    const char *temporary[] = {lexicon_path, terms_path, postings_path};
-    const char *names[] = {"lexicon.bin", "terms.bin", "postings.bin"};
+    const char *temporary[] = {lexicon_path, terms_path, postings_path,
+                               skips_path};
+    const char *names[] = {"lexicon.bin", "terms.bin", "postings.bin",
+                           "skips.bin"};
     // Готовые временные файлы заменяют старую версию только после успешной записи.
-    for (size_t index = 0; index < 3; ++index) {
+    for (size_t index = 0; index < 4; ++index) {
         char final_path[PATH_SIZE];
         join_path(final_path, sizeof(final_path), output_directory, names[index]);
         if (rename(temporary[index], final_path) != 0) {
@@ -188,6 +289,16 @@ void merge_blocks(const BlockList *blocks, const char *output_directory,
                  static_cast<long long>(compressed_postings_size),
                  static_cast<unsigned long long>(uncompressed_size),
                  saved_percent);
+    const uint64_t skip_bytes = sizeof(boolean_index_format::SkipHeader) +
+                                skip_terms.size() *
+                                    sizeof(boolean_index_format::SkipTermEntry) +
+                                skip_entry_count *
+                                    sizeof(boolean_index_format::SkipEntry);
+    std::fprintf(stderr,
+                 "Прыжки: термов %zu, указателей %llu, размер %llu байт\n",
+                 skip_terms.size(),
+                 static_cast<unsigned long long>(skip_entry_count),
+                 static_cast<unsigned long long>(skip_bytes));
 }
 
 // Записывает заголовок и атомарно завершает таблицу docID → ObjectId.

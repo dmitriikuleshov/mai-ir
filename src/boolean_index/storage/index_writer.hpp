@@ -2,6 +2,7 @@
 #ifndef MAI_IR_BOOLEAN_INDEX_INDEX_WRITER_HPP
 #define MAI_IR_BOOLEAN_INDEX_INDEX_WRITER_HPP
 
+#include <cstddef>
 #include <cstdint>
 #include <cstdio>
 
@@ -9,7 +10,7 @@
 
 // Сливает отсортированные блоки в лексикон, словарь термов и сжатые postings.
 void merge_blocks(const BlockList *blocks, const char *output_directory,
-                  uint32_t document_count);
+                  uint32_t document_count, size_t minimum_skip_postings);
 
 // Завершает временную таблицу соответствия внутренних docID и ObjectId.
 void finalize_documents(FILE *documents, const char *temporary_path,

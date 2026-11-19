@@ -13,9 +13,10 @@ struct BooleanIndexConfig {
     std::string term_field;
     size_t block_postings;
     size_t progress_every_documents;
+    size_t minimum_skip_postings;
 };
 
-// Загружает и проверяет секции db и boolean_index из config.yaml.
+// Загружает и проверяет секции db и boolean_index из переданного YAML-файла.
 BooleanIndexConfig load_boolean_index_config(const char *path);
 
 #endif

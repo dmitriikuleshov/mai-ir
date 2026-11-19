@@ -51,7 +51,7 @@ protected:
         lemma_dictionary_destroy(dictionary_);
         tfidf_index_close(&index_);
         const char *files[] = {"terms.bin", "postings.bin", "lexicon.bin",
-                               "documents.bin", "norms.bin"};
+                               "documents.bin", "norms.bin", "skips.bin"};
         for (const char *name : files) {
             char path[PATH_CAPACITY];
             path_join(path, sizeof(path), directory_, name);
@@ -101,11 +101,14 @@ private:
         FILE *documents_file = std::fopen(path, "wb");
         path_join(path, sizeof(path), directory_, "norms.bin");
         FILE *norms_file = std::fopen(path, "wb");
+        path_join(path, sizeof(path), directory_, "skips.bin");
+        FILE *skips_file = std::fopen(path, "wb");
         ASSERT_NE(terms_file, nullptr);
         ASSERT_NE(postings_file, nullptr);
         ASSERT_NE(lexicon_file, nullptr);
         ASSERT_NE(documents_file, nullptr);
         ASSERT_NE(norms_file, nullptr);
+        ASSERT_NE(skips_file, nullptr);
 
         boolean_index_format::IndexHeader index_header{};
         std::memcpy(index_header.magic, boolean_index_format::INDEX_MAGIC, 8);
@@ -171,11 +174,20 @@ private:
                                 std::sqrt(tf2 * tf2 + 1.0)};
         ASSERT_TRUE(write_exact(norms_file, norms, sizeof(norms)));
 
+        boolean_index_format::SkipHeader skip_header{};
+        std::memcpy(skip_header.magic, boolean_index_format::SKIP_MAGIC, 8);
+        skip_header.version = boolean_index_format::VERSION;
+        skip_header.document_count = index_header.document_count;
+        skip_header.term_count = index_header.term_count;
+        ASSERT_TRUE(write_exact(skips_file, &skip_header,
+                                sizeof(skip_header)));
+
         ASSERT_EQ(std::fclose(terms_file), 0);
         ASSERT_EQ(std::fclose(postings_file), 0);
         ASSERT_EQ(std::fclose(lexicon_file), 0);
         ASSERT_EQ(std::fclose(documents_file), 0);
         ASSERT_EQ(std::fclose(norms_file), 0);
+        ASSERT_EQ(std::fclose(skips_file), 0);
     }
 
     char directory_[128]{};

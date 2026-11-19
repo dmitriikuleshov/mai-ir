@@ -27,6 +27,8 @@ struct Parser {
     const char *cursor;
     size_t maximum_token_length;
     const LemmaDictionary *dictionary;
+    bool use_skip_pointers;
+    IntersectionStats *stats;
     Token current;
     char *error;
     size_t error_size;
@@ -96,13 +98,13 @@ void advance(Parser *parser) {
 }
 
 // Предварительное объявление нижнего по приоритету уровня OR для разбора скобок.
-BooleanResult parse_or(Parser *parser, bool *ok);
+BooleanPostingList parse_or(Parser *parser, bool *ok);
 
 // Разбирает один терм или выражение в скобках.
-BooleanResult parse_primary(Parser *parser, bool *ok) {
+BooleanPostingList parse_primary(Parser *parser, bool *ok) {
     if (parser->current.type == TokenType::LEFT) {
         advance(parser);
-        BooleanResult result = parse_or(parser, ok);
+        BooleanPostingList result = parse_or(parser, ok);
         if (*ok && parser->current.type != TokenType::RIGHT) {
             set_error(parser->error, parser->error_size,
                       "ожидалась закрывающая скобка");
@@ -122,11 +124,12 @@ BooleanResult parse_primary(Parser *parser, bool *ok) {
     LinguisticResult normalized = linguistics_process(
         parser->current.text.data(), parser->current.text.size(),
         parser->maximum_token_length, parser->dictionary);
-    BooleanResult result{};
+    BooleanPostingList result{};
     // Документы и запрос нормализуются одним pipeline; терм должен дать ровно одну лемму.
     if (normalized.lemmas.size() == 1) {
-        result = load_postings(parser->index,
-                               normalized.lemmas[0].term.c_str());
+        result = load_boolean_postings(
+            parser->index, normalized.lemmas[0].term.c_str());
+        if (!parser->use_skip_pointers) result.skips.clear();
     } else {
         set_error(parser->error, parser->error_size,
                   "термин не удалось однозначно нормализовать");
@@ -137,43 +140,49 @@ BooleanResult parse_primary(Parser *parser, bool *ok) {
 }
 
 // Разбирает унарный NOT; рекурсивный вызов поддерживает цепочки вроде NOT NOT term.
-BooleanResult parse_unary(Parser *parser, bool *ok) {
+BooleanPostingList parse_unary(Parser *parser, bool *ok) {
     if (parser->current.type == TokenType::NOT) {
         advance(parser);
-        BooleanResult operand = parse_unary(parser, ok);
+        BooleanPostingList operand = parse_unary(parser, ok);
         if (!*ok) {
             return operand;
         }
-        return complement_postings(operand,
-                                   parser->index->header.document_count);
+        return make_posting_list(
+            complement_postings(operand.documents,
+                                parser->index->header.document_count),
+            16);
     }
     return parse_primary(parser, ok);
 }
 
 // Разбирает последовательность AND, имеющую приоритет выше OR.
-BooleanResult parse_and(Parser *parser, bool *ok) {
-    BooleanResult left = parse_unary(parser, ok);
+BooleanPostingList parse_and(Parser *parser, bool *ok) {
+    BooleanPostingList left = parse_unary(parser, ok);
     while (*ok && parser->current.type == TokenType::AND) {
         advance(parser);
-        BooleanResult right = parse_unary(parser, ok);
+        BooleanPostingList right = parse_unary(parser, ok);
         if (!*ok) {
             break;
         }
-        left = intersect_postings(left, right);
+        left = make_posting_list(
+            intersect_postings(left, right, parser->use_skip_pointers,
+                               parser->stats),
+            16);
     }
     return left;
 }
 
 // Разбирает последовательность OR как самый низкий уровень приоритета.
-BooleanResult parse_or(Parser *parser, bool *ok) {
-    BooleanResult left = parse_and(parser, ok);
+BooleanPostingList parse_or(Parser *parser, bool *ok) {
+    BooleanPostingList left = parse_and(parser, ok);
     while (*ok && parser->current.type == TokenType::OR) {
         advance(parser);
-        BooleanResult right = parse_and(parser, ok);
+        BooleanPostingList right = parse_and(parser, ok);
         if (!*ok) {
             break;
         }
-        left = unite_postings(left, right);
+        left = make_posting_list(
+            unite_postings(left.documents, right.documents), 16);
     }
     return left;
 }
@@ -184,12 +193,16 @@ BooleanResult parse_or(Parser *parser, bool *ok) {
 BooleanResult boolean_search(BooleanIndex *index, const char *query,
                              size_t maximum_token_length,
                              const LemmaDictionary *dictionary,
+                             bool use_skip_pointers,
+                             IntersectionStats *stats,
                              char *error, size_t error_size) {
     if (error != nullptr && error_size != 0) {
         error[0] = '\0';
     }
+    if (stats != nullptr) *stats = {};
     Parser parser{index, query, maximum_token_length, dictionary,
-                  {TokenType::END, {}}, error, error_size};
+                  use_skip_pointers, stats, {TokenType::END, {}}, error,
+                  error_size};
     // Цепочка parse_or → parse_and → parse_unary → parse_primary задаёт приоритеты.
     parser.current = next_token(&parser);
     if (parser.current.type == TokenType::END) {
@@ -197,11 +210,11 @@ BooleanResult boolean_search(BooleanIndex *index, const char *query,
         return {};
     }
     bool ok = parser.current.type != TokenType::INVALID;
-    BooleanResult result = parse_or(&parser, &ok);
+    BooleanPostingList result = parse_or(&parser, &ok);
     if (ok && parser.current.type != TokenType::END) {
         set_error(error, error_size,
                   "после выражения остались лишние данные");
         ok = false;
     }
-    return ok ? result : BooleanResult{};
+    return ok ? std::move(result.documents) : BooleanResult{};
 }

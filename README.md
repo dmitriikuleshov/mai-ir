@@ -28,7 +28,7 @@ docker compose ps
 Crawler сохраняет сырой HTML из Wikipedia, arXiv и Microsoft Learn в MongoDB:
 
 ```bash
-uv run python src/crawler/main.py config.yaml
+uv run python src/crawler/main.py configs/crawler.yaml
 ```
 
 Для остановки нажать `Ctrl+C`. Повторный запуск продолжает обход и обновляет устаревшие документы.
@@ -45,7 +45,7 @@ cmake --build .build --parallel
 Извлечение текста, токенизация, лемматизация и подсчёт частот:
 
 ```bash
-./.build/linguistics config.yaml
+./.build/linguistics configs/linguistics.yaml
 ```
 
 Результаты сохраняются в MongoDB, `results/statistics.json` и `results/zipf.svg`.
@@ -53,7 +53,7 @@ cmake --build .build --parallel
 ## 5. Построить индекс
 
 ```bash
-./.build/boolean_index config.yaml
+./.build/boolean_index configs/boolean_index.yaml
 ```
 
 Бинарные файлы создаются в `results/boolean_index`.
@@ -63,7 +63,7 @@ cmake --build .build --parallel
 ## 6. Запустить булев поиск
 
 ```bash
-./.build/boolean_search config.yaml
+./.build/boolean_search configs/search.yaml
 ```
 
 Пример запроса:
@@ -72,12 +72,12 @@ cmake --build .build --parallel
 database AND (security OR cloud)
 ```
 
-Выход из интерактивного режима — `Ctrl+D`.
+Выход из интерактивного режима - `Ctrl+D`.
 
 ## 7. Запустить TF-IDF-поиск
 
 ```bash
-./.build/tfidf_search config.yaml
+./.build/tfidf_search configs/search.yaml
 ```
 
 Пример запроса:
@@ -86,7 +86,7 @@ database AND (security OR cloud)
 distributed database replication
 ```
 
-Выход из интерактивного режима — `Ctrl+D`.
+Выход из интерактивного режима - `Ctrl+D`.
 
 ## 8. Запустить тесты
 
@@ -100,6 +100,13 @@ C++-тесты:
 
 ```bash
 ctest --test-dir .build --output-on-failure
+```
+
+Отдельные тесты с кратким сравнением линейного булева поиска и поиска
+с прыжками:
+
+```bash
+./.build/boolean_search_comparison_tests
 ```
 
 ## 9. Остановить MongoDB

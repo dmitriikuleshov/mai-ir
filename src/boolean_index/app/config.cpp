@@ -1,4 +1,4 @@
-// Загружает из config.yaml параметры построения дискового инвертированного индекса.
+// Загружает параметры построения дискового инвертированного индекса из YAML.
 #include "boolean_index/app/config.hpp"
 
 #include <cerrno>
@@ -44,6 +44,14 @@ bool parse_positive_size(const char *value, size_t *result) {
     return true;
 }
 
+// Относительные пути в YAML отсчитываются от каталога самого файла конфигурации.
+void resolve_path(std::string *value, const std::string &config_path) {
+    if (value->empty() || value->front() == '/') return;
+    const size_t separator = config_path.find_last_of('/');
+    if (separator == std::string::npos) return;
+    *value = config_path.substr(0, separator + 1) + *value;
+}
+
 }  // namespace
 
 // Читает настройки индекса, подставляя безопасные значения по умолчанию.
@@ -56,11 +64,12 @@ BooleanIndexConfig load_boolean_index_config(const char *path) {
     config.term_field = "lemmas";
     config.block_postings = 500000;
     config.progress_every_documents = 1000;
+    config.minimum_skip_postings = 16;
 
     // Достаточный для проекта поднабор YAML разбирается без сторонней библиотеки.
     FILE *file = std::fopen(path, "rb");
     if (file == nullptr) {
-        fail("не удалось открыть config.yaml");
+        fail("не удалось открыть файл конфигурации");
     }
     char line[8192];
     std::string section;
@@ -104,11 +113,14 @@ BooleanIndexConfig load_boolean_index_config(const char *path) {
             } else if (std::strcmp(key, "progress_every_documents") == 0) {
                 valid = parse_positive_size(value,
                                             &config.progress_every_documents);
+            } else if (std::strcmp(key, "minimum_skip_postings") == 0) {
+                valid = parse_positive_size(value,
+                                            &config.minimum_skip_postings);
             }
         }
         if (!valid) {
             std::fclose(file);
-            fail("некорректное значение в config.yaml");
+            fail("некорректное значение в файле конфигурации");
         }
     }
     std::fclose(file);
@@ -117,5 +129,6 @@ BooleanIndexConfig load_boolean_index_config(const char *path) {
         config.output_directory.empty()) {
         fail("term_field должен быть lemmas или tokens");
     }
+    resolve_path(&config.output_directory, path);
     return config;
 }

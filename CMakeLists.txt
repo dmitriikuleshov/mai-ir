@@ -213,6 +213,26 @@ if(BUILD_TESTING)
                          TEST_PREFIX "unit.boolean_search."
                          PROPERTIES LABELS "gtest\;unit")
 
+    add_executable(skip_pointers_unit_tests
+                   tests/unit/test_skip_pointers.cpp)
+    target_link_libraries(skip_pointers_unit_tests PRIVATE
+                          boolean_search_core GTest::gtest_main)
+    target_compile_options(skip_pointers_unit_tests PRIVATE
+                           -Wall -Wextra -Werror -pedantic)
+    gtest_discover_tests(skip_pointers_unit_tests
+                         TEST_PREFIX "unit.skip_pointers."
+                         PROPERTIES LABELS "gtest\;unit")
+
+    add_executable(boolean_search_comparison_tests
+                   tests/performance/test_boolean_search_comparison.cpp)
+    target_link_libraries(boolean_search_comparison_tests PRIVATE
+                          boolean_search_core GTest::gtest_main)
+    target_compile_options(boolean_search_comparison_tests PRIVATE
+                           -Wall -Wextra -Werror -pedantic)
+    gtest_discover_tests(boolean_search_comparison_tests
+                         TEST_PREFIX "performance.boolean_search."
+                         PROPERTIES LABELS "gtest\;performance")
+
     add_executable(tfidf_search_unit_tests
                    tests/unit/test_tfidf_search.cpp)
     target_link_libraries(tfidf_search_unit_tests PRIVATE tfidf_search_core

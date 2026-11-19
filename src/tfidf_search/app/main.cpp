@@ -21,7 +21,8 @@ namespace {
 // Загружает конфигурацию и индекс, запускает консоль, затем освобождает ресурсы.
 int main(int argc, char **argv) {
     if (argc != 2) {
-        std::fprintf(stderr, "Использование: %s config.yaml\n", argv[0]);
+        std::fprintf(stderr, "Использование: %s configs/search.yaml\n",
+                     argv[0]);
         return EXIT_FAILURE;
     }
     const BooleanSearchConfig config = load_boolean_search_config(argv[1]);

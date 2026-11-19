@@ -146,7 +146,7 @@ config = load_config(arguments.config)
 raise SystemExit(asyncio.run(run(config)))
 ```
 
-Рабочая конфигурация находится в `config.yaml`. Основные параметры приведены в
+Рабочая конфигурация находится в `configs/crawler.yaml`. Основные параметры приведены в
 таблице 1.
 
 #figure(
@@ -188,7 +188,7 @@ raise SystemExit(asyncio.run(run(config)))
 ```bash
 uv sync
 docker compose up -d
-uv run python src/crawler/main.py config.yaml
+uv run python src/crawler/main.py configs/crawler.yaml
 ```
 
 Контейнер MongoDB доступен только на `127.0.0.1:27017`, поэтому база не публикуется

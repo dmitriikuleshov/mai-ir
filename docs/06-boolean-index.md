@@ -91,7 +91,9 @@ results/boolean_index/*.bin
 ```cpp
 int main(int argc, char **argv) {
     if (argc != 2) {
-        std::fprintf(stderr, "Использование: %s config.yaml\n", argv[0]);
+        std::fprintf(stderr,
+                     "Использование: %s configs/boolean_index.yaml\n",
+                     argv[0]);
         return EXIT_FAILURE;
     }
     const BooleanIndexConfig config =
@@ -128,13 +130,13 @@ cmake --build .build --parallel
 Если корпус ещё не проходил лингвистическую обработку, сначала запускается:
 
 ```bash
-./.build/linguistics config.yaml
+./.build/linguistics configs/linguistics.yaml
 ```
 
 Затем строится индекс:
 
 ```bash
-./.build/boolean_index config.yaml
+./.build/boolean_index configs/boolean_index.yaml
 ```
 
 Во время работы программа сообщает число прочитанных документов, запись временных блоков, промежуточные слияния и итоговые размеры:
@@ -160,7 +162,7 @@ db:
   document_terms_collection: document_terms
 
 boolean_index:
-  output_directory: results/boolean_index
+  output_directory: ../results/boolean_index
   term_field: lemmas
   block_postings: 500000
   progress_every_documents: 1000
@@ -778,7 +780,7 @@ ctest --test-dir .build -R 'unit\.boolean_index\.' --output-on-failure
 После построения индекс можно проверить реальным булевым запросом:
 
 ```bash
-./.build/boolean_search config.yaml
+./.build/boolean_search configs/search.yaml
 ```
 
 Например:
@@ -790,7 +792,7 @@ database AND security
 TF-IDF использует те же файлы командой:
 
 ```bash
-./.build/tfidf_search config.yaml
+./.build/tfidf_search configs/search.yaml
 ```
 
 ## 30. Что показать преподавателю
@@ -802,7 +804,7 @@ TF-IDF использует те же файлы командой:
 Затем запускается построение:
 
 ```bash
-./.build/boolean_index config.yaml
+./.build/boolean_index configs/boolean_index.yaml
 ```
 
 Во время работы нужно обратить внимание на сообщения о блоках и объяснить, что весь индекс не загружается в память: каждые `block_postings` пар сортируются и сбрасываются на диск, а затем блоки сливаются минимальной кучей.

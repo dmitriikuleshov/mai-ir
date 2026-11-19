@@ -6,7 +6,9 @@
 
 int main(int argc, char **argv) {
     if (argc != 2) {
-        std::fprintf(stderr, "Использование: %s config.yaml\n", argv[0]);
+        std::fprintf(stderr,
+                     "Использование: %s configs/linguistics.yaml\n",
+                     argv[0]);
         return EXIT_FAILURE;
     }
     return run_linguistics(load_config(argv[1]));

@@ -414,7 +414,7 @@ rock'n'roll
 
 ## 12. Ограничение максимальной длины
 
-Параметр `maximum_token_length` берётся из секции `linguistics` файла `config.yaml`:
+Параметр `maximum_token_length` берётся из секции `linguistics` файла `configs/linguistics.yaml`:
 
 ```yaml
 linguistics:
@@ -612,7 +612,7 @@ ctest --test-dir .build -R 'unit\.tokenizer\.' --output-on-failure
 Чтобы увидеть результат на реальном корпусе, запускается общий pipeline:
 
 ```bash
-./.build/linguistics config.yaml
+./.build/linguistics configs/linguistics.yaml
 ```
 
 Для защиты удобнее сначала показать несколько тестов с понятными входами и ожидаемыми токенами, а затем открыть частоты реального документа в `document_terms.tokens` и общую производительность в `results/statistics.json`.

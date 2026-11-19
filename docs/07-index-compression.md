@@ -782,7 +782,7 @@ ctest --test-dir .build -R 'unit\.variable_byte\.' --output-on-failure
 Полное реальное построение:
 
 ```bash
-./.build/boolean_index config.yaml
+./.build/boolean_index configs/boolean_index.yaml
 ```
 
 Именно в конце этой команды выводится фактический размер сжатых postings и процент экономии.

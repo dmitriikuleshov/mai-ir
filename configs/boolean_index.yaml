@@ -1,0 +1,17 @@
+db:
+  # Коллекция с частотами токенов и лемм после linguistic pipeline.
+  uri: mongodb://localhost:27017
+  database: mai_ir
+  document_terms_collection: document_terms
+
+boolean_index:
+  # Каталог пяти бинарных файлов относительно этого YAML-файла.
+  output_directory: ../results/boolean_index
+  # Поле document_terms: нормализованные lemmas или исходные tokens.
+  term_field: lemmas
+  # Число пар «терм — документ» в блоке внешней сортировки.
+  block_postings: 500000
+  # Период вывода прогресса в документах.
+  progress_every_documents: 1000
+  # Для более коротких posting lists прыжки занимают место, но почти не ускоряют AND.
+  minimum_skip_postings: 16

@@ -16,9 +16,10 @@ struct BooleanSearchConfig {
     size_t maximum_token_length;
     size_t result_limit;
     size_t tfidf_result_limit;
+    bool use_skip_pointers;
 };
 
-// Загружает настройки булева и TF-IDF-поиска из общего config.yaml.
+// Загружает общие настройки булева и TF-IDF-поиска из переданного YAML-файла.
 BooleanSearchConfig load_boolean_search_config(const char *path);
 
 #endif

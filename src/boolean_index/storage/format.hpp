@@ -7,10 +7,11 @@
 namespace boolean_index_format {
 
 // Версия и magic-последовательности не позволяют прочитать несовместимые файлы.
-constexpr uint32_t VERSION = 3;
+constexpr uint32_t VERSION = 4;
 constexpr char INDEX_MAGIC[8] = {'M', 'A', 'I', 'I', 'R', 'I', 'D', 'X'};
 constexpr char DOCUMENT_MAGIC[8] = {'M', 'A', 'I', 'I', 'R', 'D', 'O', 'C'};
 constexpr char DOCUMENT_NORM_MAGIC[8] = {'M', 'A', 'I', 'I', 'R', 'N', 'R', 'M'};
+constexpr char SKIP_MAGIC[8] = {'M', 'A', 'I', 'I', 'R', 'S', 'K', 'P'};
 
 // Упаковка без выравнивающих байтов фиксирует точный размер структур на диске.
 #pragma pack(push, 1)
@@ -44,6 +45,30 @@ struct DocumentNormHeader {
     uint32_t version;
     uint32_t document_count;
 };
+
+// Заголовок разреженной таблицы прыжков связывает её с конкретной сборкой индекса.
+struct SkipHeader {
+    char magic[8];
+    uint32_t version;
+    uint32_t document_count;
+    uint64_t term_count;
+    uint64_t skip_term_count;
+    uint64_t skip_entry_count;
+};
+
+// Запись существует только для терма, чей posting list достаточно длинный.
+struct SkipTermEntry {
+    uint64_t term_index;
+    uint64_t first_skip;
+    uint32_t skip_count;
+    uint32_t stride;
+};
+
+// Один указатель переводит позицию списка сразу к известному абсолютному docID.
+struct SkipEntry {
+    uint32_t posting_index;
+    uint32_t document_id;
+};
 #pragma pack(pop)
 
 // Проверки не позволяют незаметно изменить дисковый формат из-за структуры C++.
@@ -51,6 +76,9 @@ static_assert(sizeof(IndexHeader) == 32);
 static_assert(sizeof(LexiconEntry) == 24);
 static_assert(sizeof(DocumentHeader) == 16);
 static_assert(sizeof(DocumentNormHeader) == 16);
+static_assert(sizeof(SkipHeader) == 40);
+static_assert(sizeof(SkipTermEntry) == 24);
+static_assert(sizeof(SkipEntry) == 8);
 
 }  // namespace boolean_index_format
 

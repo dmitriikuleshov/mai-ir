@@ -1,0 +1,176 @@
+db:
+  # Адрес и имя MongoDB.
+  uri: mongodb://localhost:27017
+  database: mai_ir
+  # Коллекции сырых документов, состояния обхода и очереди URL.
+  documents_collection: documents
+  state_collection: crawl_state
+  queue_collection: crawl_queue
+
+logic:
+  # Идентификатор crawler с контактным адресом для владельцев сайтов.
+  user_agent: MAI-IR-course-project/2.0 (mailto:workdimila@gmail.com)
+  # Таймаут одного HTTP-запроса и политика повторов.
+  request_timeout_seconds: 60
+  retries: 4
+  backoff_seconds: 2
+  # Максимальный размер одного ответа — 14 MB.
+  max_response_bytes: 14000000
+  # Ограничения параллельных подключений.
+  total_connections: 6
+  connections_per_host: 1
+  # Время владения задачей crawler в распределённой очереди.
+  lease_seconds: 300
+  # Повторная проверка документа через 90 суток; 0 — без лимита пачки.
+  recrawl_after_seconds: 7776000
+  recrawl_batch_size: 0
+  log_level: INFO
+  # Вежливая задержка между запросами к каждому источнику.
+  delay_seconds:
+    wikipedia: 1.0
+    arxiv: 3.0
+    microsoft_learn: 1.0
+
+sources:
+  wikipedia:
+    enabled: true
+    # null означает отсутствие ограничения на число документов.
+    max_documents: null
+    # Версия правил обхода: задачи старых версий остаются в MongoDB, но не выполняются.
+    discovery_version: 2
+    # Небольшая глубина снижает риск ухода из технической тематики.
+    max_category_depth: 3
+    # Дочерняя категория обходится, если в её названии есть хотя бы один технический маркер.
+    category_required_keywords:
+      - computer
+      - computing
+      - computation
+      - software
+      - hardware
+      - algorithm
+      - data structure
+      - artificial intelligence
+      - machine learning
+      - deep learning
+      - neural network
+      - information retrieval
+      - search engine
+      - database
+      - data management
+      - data science
+      - distributed system
+      - operating system
+      - file system
+      - programming
+      - programming language
+      - compiler
+      - cryptograph
+      - cybersecurity
+      - computer security
+      - network
+      - internet
+      - world wide web
+      - web technology
+      - cloud computing
+      - virtualiz
+      - containerization
+      - devops
+      - computer graphics
+      - computer vision
+      - natural language processing
+      - robotics
+      - human computer interaction
+      - formal method
+      - automata
+      - bioinformatics
+      - quantum computing
+      - embedded system
+      - microprocessor
+      - processor
+      - semiconductor
+      - information system
+      - information technology
+      - linux
+      - unix
+      - android
+      - microsoft windows
+      - protocol
+      - telecommunications
+    # Стоп-маркеры имеют приоритет: они отсекают нетехническую ветвь даже при наличии технического слова.
+    category_excluded_keywords:
+      - magazine
+      - newspaper
+      - journalism
+      - television
+      - radio station
+      - sports
+      - football
+      - basketball
+      - film
+      - music
+      - fiction
+      - by country
+      - people
+      - scientists
+      - researchers
+      - computer engineers
+      - software engineers
+      - organization
+      - company
+      - companies
+      - conference
+      - award
+      - competition
+      - industry
+      - folklore
+      - controversy
+      - controversies
+      - criticism
+      - deaths
+      - video game companies
+      - video game developers
+    seed_categories:
+      - Computer science
+      - Software engineering
+      - Artificial intelligence
+      - Information retrieval
+      - Database systems
+      - Computer networks
+      - Computer security
+
+  arxiv:
+    enabled: true
+    max_documents: null
+    # Размер выдачи и пачки уточнения метаданных.
+    batch_size: 100
+    metadata_batch_size: 100
+    sort_order: descending
+    earliest_month: 1993-01
+    categories:
+      - cs.IR
+      - cs.AI
+      - cs.CL
+      - cs.DB
+      - cs.DC
+      - cs.CR
+      - cs.LG
+      - cs.SE
+
+  microsoft_learn:
+    enabled: true
+    max_documents: null
+    # Повторное чтение sitemap через 90 суток.
+    discovery_interval_seconds: 7776000
+    # Пустой список разрешает все продукты, кроме исключённых ниже.
+    products: []
+    excluded_products:
+      - previous-versions
+      - shows
+    excluded_paths:
+      - /answers/
+      - /shows/
+      - /events/
+      - /users/
+      - /credentials/
+      - /api/
+      - /previous-versions/

@@ -179,7 +179,8 @@ void build_boolean_index(const BooleanIndexConfig &config) {
                             config.output_directory.c_str(), document_count);
     // Сначала ограничивается число файлов, затем выполняется единое финальное слияние.
     reduce_blocks(&blocks, temporary_template);
-    merge_blocks(&blocks, config.output_directory.c_str(), document_count);
+    merge_blocks(&blocks, config.output_directory.c_str(), document_count,
+                 config.minimum_skip_postings);
 
     for (const std::string &path : blocks) {
         unlink(path.c_str());

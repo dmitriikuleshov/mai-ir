@@ -26,6 +26,10 @@ bool boolean_index_find_term(
 // Загружает упорядоченный список docID для булевых операций.
 BooleanResult load_postings(BooleanIndex *index, const char *term);
 
+// Загружает docID вместе с разреженными указателями для ускорения AND.
+BooleanPostingList load_boolean_postings(BooleanIndex *index,
+                                         const char *term);
+
 // Загружает упорядоченный список docID вместе с частотами для ранжирования.
 WeightedPostingList load_weighted_postings(BooleanIndex *index,
                                            const char *term);

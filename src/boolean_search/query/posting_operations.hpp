@@ -4,7 +4,24 @@
 
 #include "boolean_search/index/types.hpp"
 
-// Вычисляет пересечение posting lists, соответствующее оператору AND.
+// Счётчики позволяют доказать ускорение без зависимости от нагрузки компьютера.
+struct IntersectionStats {
+    uint64_t comparisons = 0;
+    uint64_t skip_jumps = 0;
+    uint64_t skipped_postings = 0;
+};
+
+// Строит временные sqrt-указатели для результата составного выражения.
+BooleanPostingList make_posting_list(BooleanResult documents,
+                                     size_t minimum_postings);
+
+// Вычисляет AND линейно или с сохранёнными указателями прыжков.
+BooleanResult intersect_postings(const BooleanPostingList &left,
+                                 const BooleanPostingList &right,
+                                 bool use_skips,
+                                 IntersectionStats *stats = nullptr);
+
+// Линейная перегрузка сохраняет простой интерфейс для базовых проверок.
 BooleanResult intersect_postings(const BooleanResult &left,
                                  const BooleanResult &right);
 

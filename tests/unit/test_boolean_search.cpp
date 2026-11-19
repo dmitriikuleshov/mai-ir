@@ -45,7 +45,7 @@ protected:
         lemma_dictionary_destroy(dictionary_);
         boolean_index_close(&index_);
         const char *files[] = {"terms.bin", "postings.bin", "lexicon.bin",
-                               "documents.bin"};
+                               "documents.bin", "skips.bin"};
         for (const char *name : files) {
             char path[PATH_CAPACITY];
             path_join(path, sizeof(path), directory_, name);
@@ -59,8 +59,8 @@ protected:
                       size_t maximum_token_length = 100) {
         char error[256] = "";
         BooleanResult result = boolean_search(
-            &index_, query, maximum_token_length, dictionary_, error,
-            sizeof(error));
+            &index_, query, maximum_token_length, dictionary_, true, nullptr,
+            error, sizeof(error));
         ASSERT_STREQ(error, "") << "query: " << query;
         ASSERT_EQ(result.size(), expected_size) << "query: " << query;
         for (size_t index = 0; index < expected_size; ++index) {
@@ -73,8 +73,8 @@ protected:
                               size_t maximum_token_length = 100) {
         char error[256] = "";
         BooleanResult result = boolean_search(
-            &index_, query, maximum_token_length, dictionary_, error,
-            sizeof(error));
+            &index_, query, maximum_token_length, dictionary_, true, nullptr,
+            error, sizeof(error));
         EXPECT_STRNE(error, "") << "query: " << query;
         EXPECT_TRUE(result.empty()) << "query: " << query;
     }
@@ -110,10 +110,13 @@ private:
         FILE *lexicon_file = std::fopen(path, "wb");
         path_join(path, sizeof(path), directory_, "documents.bin");
         FILE *documents_file = std::fopen(path, "wb");
+        path_join(path, sizeof(path), directory_, "skips.bin");
+        FILE *skips_file = std::fopen(path, "wb");
         ASSERT_NE(terms_file, nullptr);
         ASSERT_NE(postings_file, nullptr);
         ASSERT_NE(lexicon_file, nullptr);
         ASSERT_NE(documents_file, nullptr);
+        ASSERT_NE(skips_file, nullptr);
 
         boolean_index_format::IndexHeader header{};
         std::memcpy(header.magic, boolean_index_format::INDEX_MAGIC,
@@ -161,10 +164,26 @@ private:
         }
         ASSERT_TRUE(write_exact(documents_file, object_ids, sizeof(object_ids)));
 
+        boolean_index_format::SkipHeader skip_header{};
+        std::memcpy(skip_header.magic, boolean_index_format::SKIP_MAGIC,
+                    sizeof(skip_header.magic));
+        skip_header.version = boolean_index_format::VERSION;
+        skip_header.document_count = header.document_count;
+        skip_header.term_count = header.term_count;
+        skip_header.skip_term_count = 1;
+        skip_header.skip_entry_count = 1;
+        ASSERT_TRUE(write_exact(skips_file, &skip_header,
+                                sizeof(skip_header)));
+        const boolean_index_format::SkipTermEntry skip_term{1, 0, 1, 2};
+        const boolean_index_format::SkipEntry skip_entry{2, 5};
+        ASSERT_TRUE(write_exact(skips_file, &skip_term, sizeof(skip_term)));
+        ASSERT_TRUE(write_exact(skips_file, &skip_entry, sizeof(skip_entry)));
+
         ASSERT_EQ(std::fclose(terms_file), 0);
         ASSERT_EQ(std::fclose(postings_file), 0);
         ASSERT_EQ(std::fclose(lexicon_file), 0);
         ASSERT_EQ(std::fclose(documents_file), 0);
+        ASSERT_EQ(std::fclose(skips_file), 0);
     }
 
     char directory_[128]{};
@@ -198,6 +217,18 @@ TEST_F(BooleanSearchTest, ReadsDocumentIdsAndTermFrequencies) {
     EXPECT_EQ(postings[1].term_frequency, 2U);
     EXPECT_EQ(postings[2].document_id, 5U);
     EXPECT_EQ(postings[2].term_frequency, 3U);
+}
+
+// Проверяется связь разреженной записи skips.bin с нужным термом лексикона.
+TEST_F(BooleanSearchTest, ReadsPersistedSkipPointersForTerm) {
+    const BooleanPostingList postings =
+        load_boolean_postings(index(), "cloud");
+
+    ASSERT_EQ(postings.documents, BooleanResult({0, 1, 5}));
+    ASSERT_EQ(postings.skips.size(), 1U);
+    EXPECT_EQ(postings.skips[0].posting_index, 2U);
+    EXPECT_EQ(postings.skips[0].document_id, 5U);
+    EXPECT_TRUE(load_boolean_postings(index(), "database").skips.empty());
 }
 
 // Проверяется поиск обычного, отсутствующего и лемматизированного терма.
