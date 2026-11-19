@@ -1,4 +1,4 @@
-# Сжатие инвертированного индекса: docID gaps и Variable Byte
+# Сжатие индекса: docID gaps и Variable Byte
 
 ## 1. Что именно сжимается
 

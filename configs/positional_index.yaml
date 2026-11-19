@@ -1,0 +1,21 @@
+db:
+  # Обработанные тексты содержат порядок слов, потерянный в document_terms.
+  uri: mongodb://localhost:27017
+  database: mai_ir
+  processed_collection: processed_documents
+
+linguistics:
+  # Координаты строятся после той же токенизации и лемматизации, что основной индекс.
+  maximum_token_length: 100
+  lemma_dictionary: ../resources/wordnet_exceptions.tsv
+  lemma_vocabulary: ../resources/wordnet_lemmas.txt
+  lemma_overrides: ../resources/technical_lemma_overrides.tsv
+
+positional_index:
+  # Координатный индекс хранится отдельно, а таблица docID берётся из булева индекса.
+  output_directory: ../results/positional_index
+  boolean_index_directory: ../results/boolean_index
+  # Число отдельных вхождений «терм - документ - позиция» в блоке сортировки.
+  block_occurrences: 500000
+  # Период вывода прогресса построения.
+  progress_every_documents: 1000

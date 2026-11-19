@@ -74,12 +74,14 @@ BooleanSearchConfig load_boolean_search_config(const char *path) {
     config.database = "mai_ir";
     config.processed_collection = "processed_documents";
     config.index_directory = "results/boolean_index";
+    config.positional_index_directory = "results/positional_index";
     config.lemma_dictionary = "resources/wordnet_exceptions.tsv";
     config.lemma_vocabulary = "resources/wordnet_lemmas.txt";
     config.lemma_overrides = "resources/technical_lemma_overrides.tsv";
     config.maximum_token_length = 100;
     config.result_limit = 20;
     config.tfidf_result_limit = 20;
+    config.phrase_result_limit = 20;
     config.use_skip_pointers = true;
 
     // Используется только необходимый проекту поднабор простого YAML.
@@ -132,6 +134,9 @@ BooleanSearchConfig load_boolean_search_config(const char *path) {
         } else if (section == "boolean_index" &&
                    std::strcmp(key, "output_directory") == 0) {
             config.index_directory = value;
+        } else if (section == "positional_index" &&
+                   std::strcmp(key, "output_directory") == 0) {
+            config.positional_index_directory = value;
         } else if (section == "boolean_search") {
             if (std::strcmp(key, "result_limit") == 0) {
                 valid = parse_positive_size(value, &config.result_limit);
@@ -141,6 +146,9 @@ BooleanSearchConfig load_boolean_search_config(const char *path) {
         } else if (section == "tfidf_search" &&
                    std::strcmp(key, "result_limit") == 0) {
             valid = parse_positive_size(value, &config.tfidf_result_limit);
+        } else if (section == "phrase_search" &&
+                   std::strcmp(key, "result_limit") == 0) {
+            valid = parse_positive_size(value, &config.phrase_result_limit);
         }
         if (!valid) {
             std::fclose(file);
@@ -149,6 +157,7 @@ BooleanSearchConfig load_boolean_search_config(const char *path) {
     }
     std::fclose(file);
     resolve_path(&config.index_directory, path);
+    resolve_path(&config.positional_index_directory, path);
     resolve_path(&config.lemma_dictionary, path);
     resolve_path(&config.lemma_vocabulary, path);
     resolve_path(&config.lemma_overrides, path);

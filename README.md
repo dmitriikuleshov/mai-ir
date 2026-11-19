@@ -88,7 +88,34 @@ distributed database replication
 
 Выход из интерактивного режима - `Ctrl+D`.
 
-## 8. Запустить тесты
+## 8. Построить координатный индекс
+
+Сначала должен быть построен булев индекс: координатный индекс использует ту же
+таблицу соответствия `docID` и MongoDB ObjectId.
+
+```bash
+./.build/positional_index configs/positional_index.yaml
+```
+
+Результат сохраняется в `results/positional_index`. Индекс необходимо
+перестраивать после изменения обработанного корпуса или булева индекса.
+
+## 9. Запустить цитатный поиск
+
+```bash
+./.build/phrase_search configs/search.yaml
+```
+
+Пример точной цитаты:
+
+```text
+"distributed database"
+```
+
+Кавычки необязательны: каждая строка стандартного ввода считается одной
+цитатой. Выход из интерактивного режима - `Ctrl+D`.
+
+## 10. Запустить тесты
 
 Python-тесты crawler:
 
@@ -109,7 +136,13 @@ ctest --test-dir .build --output-on-failure
 ./.build/boolean_search_comparison_tests
 ```
 
-## 9. Остановить MongoDB
+Только тесты координатного индекса и цитатного поиска:
+
+```bash
+ctest --test-dir .build -R 'unit\.(positional_index|phrase_search)\.' --output-on-failure
+```
+
+## 11. Остановить MongoDB
 
 ```bash
 docker compose down

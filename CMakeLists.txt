@@ -113,6 +113,48 @@ target_link_libraries(tfidf_search PRIVATE tfidf_search_core
                                            ${MONGOC_LIBRARY} ${BSON_LIBRARY})
 target_compile_options(tfidf_search PRIVATE -Wall -Wextra -Werror -pedantic)
 
+add_library(positional_index_core
+            src/positional_index/app/config.cpp
+            src/positional_index/building/blocks.cpp
+            src/positional_index/building/builder.cpp
+            src/positional_index/storage/writer.cpp)
+target_include_directories(positional_index_core
+                           PUBLIC src ${MONGOC_INCLUDE_DIR} ${BSON_INCLUDE_DIR})
+target_link_libraries(positional_index_core
+                      PUBLIC linguistics_pipeline index_compression
+                      PRIVATE boolean_index_core ${MONGOC_LIBRARY}
+                              ${BSON_LIBRARY})
+target_compile_options(positional_index_core PRIVATE
+                       -Wall -Wextra -Werror -pedantic)
+
+add_executable(positional_index src/positional_index/app/main.cpp)
+target_include_directories(positional_index PRIVATE ${MONGOC_INCLUDE_DIR}
+                                                    ${BSON_INCLUDE_DIR})
+target_link_libraries(positional_index PRIVATE positional_index_core
+                                               ${MONGOC_LIBRARY}
+                                               ${BSON_LIBRARY})
+target_compile_options(positional_index PRIVATE
+                       -Wall -Wextra -Werror -pedantic)
+
+add_library(phrase_search_core
+            src/phrase_search/index/index_reader.cpp
+            src/phrase_search/query/search.cpp)
+target_include_directories(phrase_search_core PUBLIC src)
+target_link_libraries(phrase_search_core PUBLIC linguistics_pipeline
+                                                index_compression)
+target_compile_options(phrase_search_core PRIVATE
+                       -Wall -Wextra -Werror -pedantic)
+
+add_executable(phrase_search
+               src/phrase_search/app/main.cpp
+               src/phrase_search/app/console.cpp
+               src/boolean_search/app/config.cpp)
+target_include_directories(phrase_search PRIVATE ${MONGOC_INCLUDE_DIR}
+                                                ${BSON_INCLUDE_DIR})
+target_link_libraries(phrase_search PRIVATE phrase_search_core
+                                           ${MONGOC_LIBRARY} ${BSON_LIBRARY})
+target_compile_options(phrase_search PRIVATE -Wall -Wextra -Werror -pedantic)
+
 include(CTest)
 if(BUILD_TESTING)
     find_package(GTest QUIET)
@@ -243,6 +285,29 @@ if(BUILD_TESTING)
                            -Wall -Wextra -Werror -pedantic)
     gtest_discover_tests(tfidf_search_unit_tests
                          TEST_PREFIX "unit.tfidf_search."
+                         PROPERTIES LABELS "gtest\;unit")
+
+    add_executable(positional_index_unit_tests
+                   tests/unit/test_positional_index.cpp)
+    target_link_libraries(positional_index_unit_tests PRIVATE
+                          positional_index_core phrase_search_core
+                          GTest::gtest_main)
+    target_compile_options(positional_index_unit_tests PRIVATE
+                           -Wall -Wextra -Werror -pedantic)
+    gtest_discover_tests(positional_index_unit_tests
+                         TEST_PREFIX "unit.positional_index."
+                         PROPERTIES LABELS "gtest\;unit")
+
+    add_executable(phrase_search_unit_tests
+                   tests/unit/test_phrase_search.cpp)
+    target_link_libraries(phrase_search_unit_tests PRIVATE phrase_search_core
+                          positional_index_core GTest::gtest_main)
+    target_compile_definitions(phrase_search_unit_tests PRIVATE
+                               MAI_IR_SOURCE_DIR="${CMAKE_SOURCE_DIR}")
+    target_compile_options(phrase_search_unit_tests PRIVATE
+                           -Wall -Wextra -Werror -pedantic)
+    gtest_discover_tests(phrase_search_unit_tests
+                         TEST_PREFIX "unit.phrase_search."
                          PROPERTIES LABELS "gtest\;unit")
 
     add_executable(document_processing_integration_tests

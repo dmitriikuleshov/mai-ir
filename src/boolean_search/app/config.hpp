@@ -10,12 +10,14 @@ struct BooleanSearchConfig {
     std::string database;
     std::string processed_collection;
     std::string index_directory;
+    std::string positional_index_directory;
     std::string lemma_dictionary;
     std::string lemma_vocabulary;
     std::string lemma_overrides;
     size_t maximum_token_length;
     size_t result_limit;
     size_t tfidf_result_limit;
+    size_t phrase_result_limit;
     bool use_skip_pointers;
 };
 

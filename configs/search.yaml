@@ -15,6 +15,10 @@ boolean_index:
   # Общий дисковый индекс булева и TF-IDF-поиска.
   output_directory: ../results/boolean_index
 
+positional_index:
+  # Координаты термов для точного поиска последовательностей слов.
+  output_directory: ../results/positional_index
+
 boolean_search:
   # Максимальное число результатов булева запроса.
   result_limit: 20
@@ -23,4 +27,8 @@ boolean_search:
 
 tfidf_search:
   # Максимальное число ранжированных результатов TF-IDF.
+  result_limit: 20
+
+phrase_search:
+  # Максимальное число документов с найденной точной цитатой.
   result_limit: 20

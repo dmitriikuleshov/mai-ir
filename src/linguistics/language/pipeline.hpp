@@ -29,4 +29,9 @@ LinguisticResult linguistics_process(const char *text, size_t text_size,
                                      size_t maximum_token_length,
                                      const LemmaDictionary *dictionary);
 
+// Возвращает леммы в исходном порядке слов, необходимом координатному индексу.
+TokenList linguistics_normalize_sequence(const char *text, size_t text_size,
+                                         size_t maximum_token_length,
+                                         const LemmaDictionary *dictionary);
+
 #endif
