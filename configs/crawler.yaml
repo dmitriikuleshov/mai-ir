@@ -37,7 +37,7 @@ sources:
     # null означает отсутствие ограничения на число документов.
     max_documents: null
     # Версия правил обхода: задачи старых версий остаются в MongoDB, но не выполняются.
-    discovery_version: 2
+    discovery_version: 3
     # Небольшая глубина снижает риск ухода из технической тематики.
     max_category_depth: 3
     # Дочерняя категория обходится, если в её названии есть хотя бы один технический маркер.
@@ -137,6 +137,26 @@ sources:
       - Database systems
       - Computer networks
       - Computer security
+      - Algorithms
+      - Data structures
+      - Programming languages
+      - Compilers
+      - Operating systems
+      - Distributed computing
+      - Cloud computing
+      - Network protocols
+      - Cryptography
+      - Machine learning
+      - Natural language processing
+      - Computer vision
+      - Computer graphics
+      - Formal methods
+      - Embedded systems
+      - Microprocessors
+      - Linux
+      - Robotics
+      - Bioinformatics
+      - Quantum computing
 
   arxiv:
     enabled: true
