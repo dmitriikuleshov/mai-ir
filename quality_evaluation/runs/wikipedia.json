@@ -1,0 +1,2314 @@
+{
+  "Q01": {
+    "status": "ok",
+    "query": "database transaction isolation",
+    "collected_at": "2026-11-26T14:29:56.445317+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=database+transaction+isolation&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Isolation (database systems)",
+        "page_id": "325521",
+        "url": "https://en.wikipedia.org/wiki/Isolation_(database_systems)",
+        "snippet": "database systems, isolation is one of the ACID (Atomicity, Consistency, Isolation , Durability) transaction properties. It determines how transaction integrity"
+      },
+      {
+        "rank": 2,
+        "title": "Database transaction",
+        "page_id": "233953",
+        "url": "https://en.wikipedia.org/wiki/Database_transaction",
+        "snippet": "A database transaction symbolizes a unit of work, performed within a database management system (or similar system) against a database , that is treated"
+      },
+      {
+        "rank": 3,
+        "title": "Snapshot isolation",
+        "page_id": "4615965",
+        "url": "https://en.wikipedia.org/wiki/Snapshot_isolation",
+        "snippet": "In databases , and transaction processing ( transaction management), snapshot isolation is a guarantee that all reads made in a transaction will see a consistent"
+      },
+      {
+        "rank": 4,
+        "title": "ACID",
+        "page_id": "60776",
+        "url": "https://en.wikipedia.org/wiki/ACID",
+        "snippet": "computer science, ACID (atomicity, consistency, isolation , durability) is a set of properties of database transactions intended to guarantee data validity"
+      },
+      {
+        "rank": 5,
+        "title": "Atomicity (database systems)",
+        "page_id": "373991",
+        "url": "https://en.wikipedia.org/wiki/Atomicity_(database_systems)",
+        "snippet": "one of the ACID transaction properties: Atomicity, Consistency, Isolation , Durability. A guarantee of atomicity prevents partial database updates from occurring"
+      },
+      {
+        "rank": 6,
+        "title": "Database transaction schedule",
+        "page_id": "400457",
+        "url": "https://en.wikipedia.org/wiki/Database_transaction_schedule",
+        "snippet": "In the fields of databases and transaction processing ( transaction management), a schedule (or history) of a system is an abstract model to describe the"
+      },
+      {
+        "rank": 7,
+        "title": "Multiversion concurrency control",
+        "page_id": "218423",
+        "url": "https://en.wikipedia.org/wiki/Multiversion_concurrency_control",
+        "snippet": "commonly used by database management systems to provide concurrent access to the database and in programming languages to implement transactional memory. Without"
+      },
+      {
+        "rank": 8,
+        "title": "Transaction processing",
+        "page_id": "212409",
+        "url": "https://en.wikipedia.org/wiki/Transaction_processing",
+        "snippet": "science, transaction processing is information processing that is divided into individual, indivisible operations called transactions. Each transaction must"
+      },
+      {
+        "rank": 9,
+        "title": "Algorithms for Recovery and Isolation Exploiting Semantics",
+        "page_id": "245955",
+        "url": "https://en.wikipedia.org/wiki/Algorithms_for_Recovery_and_Isolation_Exploiting_Semantics",
+        "snippet": "for Recovery and Isolation Exploiting Semantics, or ARIES, is a recovery algorithm designed to work with a no-force, steal database approach; it is used"
+      },
+      {
+        "rank": 10,
+        "title": "Distributed transaction",
+        "page_id": "619053",
+        "url": "https://en.wikipedia.org/wiki/Distributed_transaction",
+        "snippet": "the transaction is completed in its entirety or not executed at all. It's essential to note that distributed transactions are not limited to databases . The"
+      }
+    ]
+  },
+  "Q02": {
+    "status": "ok",
+    "query": "distributed database replication",
+    "collected_at": "2026-11-26T14:30:00.117985+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=distributed+database+replication&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Distributed database",
+        "page_id": "41054",
+        "url": "https://en.wikipedia.org/wiki/Distributed_database",
+        "snippet": "Two processes ensure that the distributed databases remain up-to-date and current: replication and duplication. Replication involves using specialized software"
+      },
+      {
+        "rank": 2,
+        "title": "Replication (computing)",
+        "page_id": "2722905",
+        "url": "https://en.wikipedia.org/wiki/Replication_(computing)",
+        "snippet": "replication , each having its own properties and performance: Transactional replication : used for replicating transactional data, such as a database ."
+      },
+      {
+        "rank": 3,
+        "title": "Spanner (database)",
+        "page_id": "37049649",
+        "url": "https://en.wikipedia.org/wiki/Spanner_(database)",
+        "snippet": "Clients can control the replication and placement of data using automatic multi-site replication and failover. Replication is synchronous and strongly"
+      },
+      {
+        "rank": 4,
+        "title": "Database",
+        "page_id": "8377",
+        "url": "https://en.wikipedia.org/wiki/Database",
+        "snippet": "data, and distributed computing issues, including supporting concurrent access and fault tolerance. Computer scientists may classify database management"
+      },
+      {
+        "rank": 5,
+        "title": "Distributed SQL",
+        "page_id": "66508815",
+        "url": "https://en.wikipedia.org/wiki/Distributed_SQL",
+        "snippet": "A distributed SQL database is a single relational database which replicates data across multiple servers. Distributed SQL databases are strongly consistent"
+      },
+      {
+        "rank": 6,
+        "title": "Conflict-free replicated data type",
+        "page_id": "44455674",
+        "url": "https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type",
+        "snippet": "In distributed computing, a conflict-free replicated data type (CRDT) is a data structure that is replicated across multiple computers in a network, with"
+      },
+      {
+        "rank": 7,
+        "title": "Multi-master replication",
+        "page_id": "2271673",
+        "url": "https://en.wikipedia.org/wiki/Multi-master_replication",
+        "snippet": "multi-master replication . Multi-master replication can also be contrasted with failover clustering where passive replica servers are replicating the master"
+      },
+      {
+        "rank": 8,
+        "title": "PACELC design principle",
+        "page_id": "51386205",
+        "url": "https://en.wikipedia.org/wiki/PACELC_design_principle",
+        "snippet": "cross-datacenter- replication (XDCR) which takes multiple CP clusters and connects them with asynchronous replication and Couchbase Lite which is an embedded database and"
+      },
+      {
+        "rank": 9,
+        "title": "Distributed ledger",
+        "page_id": "50414407",
+        "url": "https://en.wikipedia.org/wiki/Distributed_ledger",
+        "snippet": "A distributed ledger (also called a shared ledger or distributed ledger technology or DLT) is a system whereby replicated , shared, and synchronized digital"
+      },
+      {
+        "rank": 10,
+        "title": "Replication crisis",
+        "page_id": "44984325",
+        "url": "https://en.wikipedia.org/wiki/Replication_crisis",
+        "snippet": "category, replication , involves repeating an experiment or study with new, independent data to verify the original conclusions. Replication has been called"
+      }
+    ]
+  },
+  "Q03": {
+    "status": "ok",
+    "query": "inverted index information retrieval",
+    "collected_at": "2026-11-26T14:30:02.981267+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=inverted+index+information+retrieval&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Inverted index",
+        "page_id": "3125116",
+        "url": "https://en.wikipedia.org/wiki/Inverted_index",
+        "snippet": "In information science, an inverted index is a database index storing a mapping from content, such as words or numbers, to its locations in a table, or"
+      },
+      {
+        "rank": 2,
+        "title": "Search engine indexing",
+        "page_id": "7602386",
+        "url": "https://en.wikipedia.org/wiki/Search_engine_indexing",
+        "snippet": "Search engine indexing is the collecting, parsing, and storing of data to facilitate fast and accurate information retrieval . Index design incorporates"
+      },
+      {
+        "rank": 3,
+        "title": "Information retrieval",
+        "page_id": "15271",
+        "url": "https://en.wikipedia.org/wiki/Information_retrieval",
+        "snippet": "on full-text or other content-based indexing . Information retrieval is the science of searching for information in a document, searching for documents"
+      },
+      {
+        "rank": 4,
+        "title": "Document retrieval",
+        "page_id": "731640",
+        "url": "https://en.wikipedia.org/wiki/Document_retrieval",
+        "snippet": "between queries and documents. Most content based document retrieval systems use an inverted index algorithm. A signature file is a technique that creates"
+      },
+      {
+        "rank": 5,
+        "title": "Learned sparse retrieval",
+        "page_id": "74671424",
+        "url": "https://en.wikipedia.org/wiki/Learned_sparse_retrieval",
+        "snippet": "Impacts for Inverted Indexes \". Proceedings of the 44th International ACM SIGIR Conference on Research and Development in Information Retrieval . SIGIR '21"
+      },
+      {
+        "rank": 6,
+        "title": "Vector database",
+        "page_id": "74020014",
+        "url": "https://en.wikipedia.org/wiki/Vector_database",
+        "snippet": "Küttler, Heinrich (2020). \" Retrieval -augmented generation for knowledge-intensive NLP tasks\". Advances in Neural Information Processing Systems 33: 9459–9474"
+      },
+      {
+        "rank": 7,
+        "title": "Boolean model of information retrieval",
+        "page_id": "4694434",
+        "url": "https://en.wikipedia.org/wiki/Boolean_model_of_information_retrieval",
+        "snippet": "The (standard) Boolean model of information retrieval (BIR) is a classical information retrieval (IR) model where documents are retrieved based on whether"
+      },
+      {
+        "rank": 8,
+        "title": "Vector space model",
+        "page_id": "20948989",
+        "url": "https://en.wikipedia.org/wiki/Vector_space_model",
+        "snippet": "used in information filtering, information retrieval , indexing and relevance rankings. Its first use was in the SMART Information Retrieval System. In"
+      },
+      {
+        "rank": 9,
+        "title": "Bitmap index",
+        "page_id": "2017214",
+        "url": "https://en.wikipedia.org/wiki/Bitmap_index",
+        "snippet": "Index C++ Library, the Roaring Bitmap Java library and the Apache Hive Data Warehouse system. For historical reasons, bitmap compression and inverted"
+      },
+      {
+        "rank": 10,
+        "title": "BRS/Search",
+        "page_id": "10298070",
+        "url": "https://en.wikipedia.org/wiki/BRS/Search",
+        "snippet": "BRS/Search is a full-text database and information retrieval system. BRS/Search uses a fully inverted indexing system to store, locate, and retrieve unstructured"
+      }
+    ]
+  },
+  "Q04": {
+    "status": "ok",
+    "query": "C++ memory management",
+    "collected_at": "2026-11-26T14:30:05.411254+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=C%2B%2B+memory+management&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Memory management",
+        "page_id": "66924",
+        "url": "https://en.wikipedia.org/wiki/Memory_management",
+        "snippet": "Memory management (also dynamic memory management , dynamic storage allocation, or dynamic memory allocation) is a form of resource management applied"
+      },
+      {
+        "rank": 2,
+        "title": "C dynamic memory allocation",
+        "page_id": "384289",
+        "url": "https://en.wikipedia.org/wiki/C_dynamic_memory_allocation",
+        "snippet": "C dynamic memory allocation refers to performing manual memory management for dynamic memory allocation in the C programming language via a group of functions"
+      },
+      {
+        "rank": 3,
+        "title": "Manual memory management",
+        "page_id": "4041390",
+        "url": "https://en.wikipedia.org/wiki/Manual_memory_management",
+        "snippet": "In computer science, manual memory management refers to the usage of manual instructions by the programmer to identify and deallocate unused objects,"
+      },
+      {
+        "rank": 4,
+        "title": "Region-based memory management",
+        "page_id": "26294208",
+        "url": "https://en.wikipedia.org/wiki/Region-based_memory_management",
+        "snippet": "In computer science, region-based memory management is a type of memory management in which each allocated object is assigned to a region. A region, also"
+      },
+      {
+        "rank": 5,
+        "title": "Memory management unit",
+        "page_id": "177112",
+        "url": "https://en.wikipedia.org/wiki/Memory_management_unit",
+        "snippet": "A memory management unit (MMU), sometimes called paged memory management unit (PMMU), is a computer hardware unit that examines all references to memory"
+      },
+      {
+        "rank": 6,
+        "title": "Memory paging",
+        "page_id": "311193",
+        "url": "https://en.wikipedia.org/wiki/Memory_paging",
+        "snippet": "In computer operating systems, memory paging is a memory management scheme that introduces a level of indirection between physical and logical addresses"
+      },
+      {
+        "rank": 7,
+        "title": "Conventional memory",
+        "page_id": "420215",
+        "url": "https://en.wikipedia.org/wiki/Conventional_memory",
+        "snippet": "In DOS memory management , conventional memory , also called base memory , is the first 640 kilobytes of the memory on IBM PC or compatible systems. It is"
+      },
+      {
+        "rank": 8,
+        "title": "Garbage collection (computer science)",
+        "page_id": "6734",
+        "url": "https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)",
+        "snippet": "automatic memory management . The garbage collector attempts to reclaim memory that was allocated by the program, but is no longer referenced; such memory is"
+      },
+      {
+        "rank": 9,
+        "title": "C (programming language)",
+        "page_id": "6021",
+        "url": "https://en.wikipedia.org/wiki/C_(programming_language)",
+        "snippet": "multiple data types to share the same memory location, and enumeration types support aliasing integer values. C lacks a dedicated string type but provides"
+      },
+      {
+        "rank": 10,
+        "title": "Page (computer memory)",
+        "page_id": "11254911",
+        "url": "https://en.wikipedia.org/wiki/Page_(computer_memory)",
+        "snippet": "table. It is the smallest unit of data for memory management in an operating system that uses virtual memory . Similarly, a page frame is the smallest fixed-length"
+      }
+    ]
+  },
+  "Q05": {
+    "status": "ok",
+    "query": "C# asynchronous programming",
+    "collected_at": "2026-11-26T14:30:07.866509+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=C%23+asynchronous+programming&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Message passing",
+        "page_id": "1324867",
+        "url": "https://en.wikipedia.org/wiki/Message_passing",
+        "snippet": "ISBN 0-471-15325-7. Gehani, N. H. (1990). \"Message passing in concurrent C : Synchronous versus asynchronous \". Software: Practice and Experience. 20 (6): 571–592. doi:10"
+      },
+      {
+        "rank": 2,
+        "title": "Asynchronous method invocation",
+        "page_id": "19662248",
+        "url": "https://en.wikipedia.org/wiki/Asynchronous_method_invocation",
+        "snippet": "multithreaded computer programming , asynchronous method invocation (AMI), also known as asynchronous method calls or the asynchronous pattern, is a design"
+      },
+      {
+        "rank": 3,
+        "title": "F Sharp (programming language)",
+        "page_id": "239964",
+        "url": "https://en.wikipedia.org/wiki/F_Sharp_(programming_language)",
+        "snippet": "strongly typed, functional-first programming language that encompasses functional, imperative, and object-oriented programming methods. It is most often used"
+      },
+      {
+        "rank": 4,
+        "title": "Asio (C++ library)",
+        "page_id": "3216766",
+        "url": "https://en.wikipedia.org/wiki/Asio_(C++_library)",
+        "snippet": "available, open-source, cross-platform C ++ library for network programming . It provides developers with a asynchronous I/O model. The library has been developed"
+      },
+      {
+        "rank": 5,
+        "title": "Async/await",
+        "page_id": "40844675",
+        "url": "https://en.wikipedia.org/wiki/Async/await",
+        "snippet": "In computer programming , the async/await pattern is a syntactic feature of many programming languages that allows an asynchronous , non-blocking function"
+      },
+      {
+        "rank": 6,
+        "title": "P (programming language)",
+        "page_id": "53163248",
+        "url": "https://en.wikipedia.org/wiki/P_(programming_language)",
+        "snippet": "P is a programming language for asynchronous event-driven programming and Internet of things developed by Microsoft and University of California, Berkeley"
+      },
+      {
+        "rank": 7,
+        "title": "Asynchrony (computer programming)",
+        "page_id": "49031794",
+        "url": "https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)",
+        "snippet": "to become available. Computer programming portal Asynchronous system Asynchronous circuit Davies, Alex (2012). Async in C # 5.0. O'Reilly. pp. 1–2. ISBN 9781449337124"
+      },
+      {
+        "rank": 8,
+        "title": "Zig (programming language)",
+        "page_id": "61049743",
+        "url": "https://en.wikipedia.org/wiki/Zig_(programming_language)",
+        "snippet": "Codeberg. Zig was designed to replace the C programming language while maintaining C ABI compatibility. Unlike C , which supports metaprogramming through"
+      },
+      {
+        "rank": 9,
+        "title": "Outline of the Rust programming language",
+        "page_id": "81297551",
+        "url": "https://en.wikipedia.org/wiki/Outline_of_the_Rust_programming_language",
+        "snippet": "General-purpose programming language Multi-paradigm programming language – supports functional programming , imperative programming , concurrent programming . Statically"
+      },
+      {
+        "rank": 10,
+        "title": "C++/WinRT",
+        "page_id": "57666526",
+        "url": "https://en.wikipedia.org/wiki/C++/WinRT",
+        "snippet": "in C ++ itself may not be a coroutine, and thus asynchronous calls inside main() must be blocked using the get() method. The following is a program which"
+      }
+    ]
+  },
+  "Q06": {
+    "status": "ok",
+    "query": ".NET garbage collection",
+    "collected_at": "2026-11-26T14:30:10.325822+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=.NET+garbage+collection&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Garbage collection (computer science)",
+        "page_id": "6734",
+        "url": "https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)",
+        "snippet": "In computer science, garbage collection (GC) is a form of automatic memory management. The garbage collector attempts to reclaim memory that was allocated"
+      },
+      {
+        "rank": 2,
+        "title": "Tracing garbage collection",
+        "page_id": "434177",
+        "url": "https://en.wikipedia.org/wiki/Tracing_garbage_collection",
+        "snippet": "tracing garbage collection is a form of automatic memory management that consists of determining which objects should be deallocated (\" garbage collected\")"
+      },
+      {
+        "rank": 3,
+        "title": "Garbage in, garbage out",
+        "page_id": "12823",
+        "url": "https://en.wikipedia.org/wiki/Garbage_in,_garbage_out",
+        "snippet": "In computer science, garbage in, garbage out (GIGO) is the concept that flawed, biased or poor quality ( garbage ) information or input produces a result"
+      },
+      {
+        "rank": 4,
+        "title": ".NET Framework",
+        "page_id": "25143203",
+        "url": "https://en.wikipedia.org/wiki/.NET_Framework",
+        "snippet": "application is resumed after garbage collection ends. The latest version of . NET framework uses concurrent garbage collection along with user code, making"
+      },
+      {
+        "rank": 5,
+        "title": "Garbage (band)",
+        "page_id": "276931",
+        "url": "https://en.wikipedia.org/wiki/Garbage_(band)",
+        "snippet": "Garbage is an American rock band formed in 1993 in Madison, Wisconsin. The band's line-up, consisting of Scottish musician Shirley Manson (vocals) and"
+      },
+      {
+        "rank": 6,
+        "title": "Great Pacific Garbage Patch",
+        "page_id": "3554316",
+        "url": "https://en.wikipedia.org/wiki/Great_Pacific_Garbage_Patch",
+        "snippet": "The Great Pacific Garbage Patch (also Pacific trash vortex and North Pacific Garbage Patch) is a garbage patch, a gyre of marine debris particles, in the"
+      },
+      {
+        "rank": 7,
+        "title": "Outline of the C sharp programming language",
+        "page_id": "81305113",
+        "url": "https://en.wikipedia.org/wiki/Outline_of_the_C_sharp_programming_language",
+        "snippet": "machine (VM) environment, the . NET Common Language Runtime (CLR), that handles memory management via garbage collection Object-oriented programming language"
+      },
+      {
+        "rank": 8,
+        "title": "Garbage-first collector",
+        "page_id": "35316136",
+        "url": "https://en.wikipedia.org/wiki/Garbage-first_collector",
+        "snippet": "Garbage -First (G1) is a garbage collection algorithm introduced in the Oracle HotSpot Java virtual machine (JVM) 6 Update 14 and supported from 7 Update"
+      },
+      {
+        "rank": 9,
+        "title": "Garbage Pail Kids",
+        "page_id": "210265",
+        "url": "https://en.wikipedia.org/wiki/Garbage_Pail_Kids",
+        "snippet": "Garbage Pail Kids is a series of sticker trading cards produced by Topps, originally released in 1985 and designed to parody the Cabbage Patch Kids dolls"
+      },
+      {
+        "rank": 10,
+        "title": "Weak reference",
+        "page_id": "230923",
+        "url": "https://en.wikipedia.org/wiki/Weak_reference",
+        "snippet": "is a reference that does not protect the referenced object from collection by a garbage collector, unlike a strong reference. An object referenced only"
+      }
+    ]
+  },
+  "Q07": {
+    "status": "ok",
+    "query": "node.js event loop",
+    "collected_at": "2026-11-26T14:30:12.739625+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=node.js+event+loop&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Node.js",
+        "page_id": "26415635",
+        "url": "https://en.wikipedia.org/wiki/Node.js",
+        "snippet": "the Event Loop (or the Worker Pool)\". Node . js . Open JS Foundation. Retrieved 16 September 2026. About Node . js , Node . js Website \"C++ addons | Node . js v14"
+      },
+      {
+        "rank": 2,
+        "title": "Event loop",
+        "page_id": "4378023",
+        "url": "https://en.wikipedia.org/wiki/Event_loop",
+        "snippet": "special file descriptor. In environments such as web browsers and Node . js , the event loop is central to asynchronous program behavior. JavaScript runs on"
+      },
+      {
+        "rank": 3,
+        "title": "Deno (software)",
+        "page_id": "60786278",
+        "url": "https://en.wikipedia.org/wiki/Deno_(software)",
+        "snippet": "internal event loops and provide command-line interfaces for running scripts and a wide range of system utilities. Deno mainly deviates from Node . js in the"
+      },
+      {
+        "rank": 4,
+        "title": "Event-driven programming",
+        "page_id": "62599",
+        "url": "https://en.wikipedia.org/wiki/Event-driven_programming",
+        "snippet": "frameworks such as Node . js are also event -driven. Autonomous peripheral operation Dataflow programming DOM events Event -driven architecture Event stream processing"
+      },
+      {
+        "rank": 5,
+        "title": "Npm",
+        "page_id": "32102343",
+        "url": "https://en.wikipedia.org/wiki/Npm",
+        "snippet": "manager for the JavaScript runtime environment Node . js and is included as a recommended feature in the Node . js installer. It consists of a command line client"
+      },
+      {
+        "rank": 6,
+        "title": "JavaScript",
+        "page_id": "9845",
+        "url": "https://en.wikipedia.org/wiki/JavaScript",
+        "snippet": "variety of apps. The most popular runtime system for non-browser usage is Node . js . JavaScript is a high-level, often just-in-time–compiled language that"
+      },
+      {
+        "rank": 7,
+        "title": "Libuv",
+        "page_id": "45379626",
+        "url": "https://en.wikipedia.org/wiki/Libuv",
+        "snippet": "In node -v0.9.0's version of libuv, the dependency on libev was removed. From: Full-featured event loop backed by epoll, kqueue, IOCP, or event ports"
+      },
+      {
+        "rank": 8,
+        "title": "Virtual thread",
+        "page_id": "69696290",
+        "url": "https://en.wikipedia.org/wiki/Virtual_thread",
+        "snippet": "millions of events . Earlier constructs that are not or not always preemptive, such as coroutines, green threads or the largely single-threaded Node . js , introduce"
+      },
+      {
+        "rank": 9,
+        "title": "AngularJS",
+        "page_id": "34958410",
+        "url": "https://en.wikipedia.org/wiki/AngularJS",
+        "snippet": "AngularJS itself (or Angular), and Node . js server runtime environment. As of January 1, 2022, Google no longer updates Angular JS to fix security, browser compatibility"
+      },
+      {
+        "rank": 10,
+        "title": "Node of Ranvier",
+        "page_id": "962174",
+        "url": "https://en.wikipedia.org/wiki/Node_of_Ranvier",
+        "snippet": "myelinating cell membrane. Each node of Ranvier is flanked by paranodal regions where helicoidally wrapped glial loops are attached to the axonal membrane"
+      }
+    ]
+  },
+  "Q08": {
+    "status": "ok",
+    "query": "container orchestration kubernetes",
+    "collected_at": "2026-11-26T14:30:15.099657+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=container+orchestration+kubernetes&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Kubernetes",
+        "page_id": "43291963",
+        "url": "https://en.wikipedia.org/wiki/Kubernetes",
+        "snippet": "Kubernetes (/ˌk(j)uːbərˈnɛtɪs, -ˈneɪtɪs, -ˈneɪtiːz, -ˈnɛtiːz/), also known as K8s, is an open-source container orchestration system for automating software"
+      },
+      {
+        "rank": 2,
+        "title": "Dynatrace",
+        "page_id": "44743280",
+        "url": "https://en.wikipedia.org/wiki/Dynatrace",
+        "snippet": "discover, map, and monitor applications, microservices, container orchestration platforms such as Kubernetes , and IT infrastructure running in multicloud, hybrid-cloud"
+      },
+      {
+        "rank": 3,
+        "title": "Orchestration (computing)",
+        "page_id": "679737",
+        "url": "https://en.wikipedia.org/wiki/Orchestration_(computing)",
+        "snippet": "automation and orchestration is that workflows are processed and completed as processes within a single domain for automation purposes. Orchestration , meanwhile"
+      },
+      {
+        "rank": 4,
+        "title": "Containerization (computing)",
+        "page_id": "68200658",
+        "url": "https://en.wikipedia.org/wiki/Containerization_(computing)",
+        "snippet": "context of application containers . Implementations providing such orchestration include Kubernetes and Docker swarm. Container clusters need to be managed"
+      },
+      {
+        "rank": 5,
+        "title": "Docker (software)",
+        "page_id": "40149201",
+        "url": "https://en.wikipedia.org/wiki/Docker_(software)",
+        "snippet": "Kubernetes – Open-source container software Microservices – Collection of loosely coupled services used to build computer applications Open Container"
+      },
+      {
+        "rank": 6,
+        "title": "OpenShift",
+        "page_id": "35409949",
+        "url": "https://en.wikipedia.org/wiki/OpenShift",
+        "snippet": "OpenShift Container Platform, is a hybrid cloud platform as a service built around Linux containers orchestrated and managed by Kubernetes on a foundation"
+      },
+      {
+        "rank": 7,
+        "title": "Mirantis",
+        "page_id": "44237585",
+        "url": "https://en.wikipedia.org/wiki/Mirantis",
+        "snippet": "composable Kubernetes management platform designed to simplify multi-cluster, multi-cloud Kubernetes platform engineering and AI/ML workload orchestration . k0rdent"
+      },
+      {
+        "rank": 8,
+        "title": "Google Cloud Platform",
+        "page_id": "42411494",
+        "url": "https://en.wikipedia.org/wiki/Google_Cloud_Platform",
+        "snippet": "machines. Google Kubernetes Engine (GKE) or GKE on-prem offered as part of Anthos platform – Containers as a Service based on Kubernetes Cloud Functions"
+      },
+      {
+        "rank": 9,
+        "title": "Cilium (computing)",
+        "page_id": "76043343",
+        "url": "https://en.wikipedia.org/wiki/Cilium_(computing)",
+        "snippet": "Tencent Cloud. Cilium began as a container networking project. With the growth of Kubernetes and container orchestration , Cilium became a CNI, providing"
+      },
+      {
+        "rank": 10,
+        "title": "Container Linux",
+        "page_id": "59860985",
+        "url": "https://en.wikipedia.org/wiki/Container_Linux",
+        "snippet": "com. Retrieved February 13, 2014. Wood, Josh. \" Container orchestration : Moving from fleet to Kubernetes \". coreos..com. CoreOS. Justin Ellingwood (September"
+      }
+    ]
+  },
+  "Q09": {
+    "status": "ok",
+    "query": "TLS certificate validation",
+    "collected_at": "2026-11-26T14:30:17.458571+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=TLS+certificate+validation&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "OCSP stapling",
+        "page_id": "14539471",
+        "url": "https://en.wikipedia.org/wiki/OCSP_stapling",
+        "snippet": "Online Certificate Status Protocol stapling (OCSP stapling), formally known as the TLS Certificate Status Request extension, is a standard for checking"
+      },
+      {
+        "rank": 2,
+        "title": "Extended Validation Certificate",
+        "page_id": "7104097",
+        "url": "https://en.wikipedia.org/wiki/Extended_Validation_Certificate",
+        "snippet": "do Domain Validation (DV) and Organization Validation (OV) certificates . Of the ten most popular websites online, none use EV certificates and the trend"
+      },
+      {
+        "rank": 3,
+        "title": "Public key certificate",
+        "page_id": "223796",
+        "url": "https://en.wikipedia.org/wiki/Public_key_certificate",
+        "snippet": "in Transport Layer Security ( TLS ) a certificate's subject is typically a computer or other device, though TLS certificates may identify organizations or"
+      },
+      {
+        "rank": 4,
+        "title": "Domain-validated certificate",
+        "page_id": "47747479",
+        "url": "https://en.wikipedia.org/wiki/Domain-validated_certificate",
+        "snippet": "A domain validated certificate (DV) is an X.509 public key certificate typically used for Transport Layer Security ( TLS ) where the domain name of the applicant"
+      },
+      {
+        "rank": 5,
+        "title": "X.509",
+        "page_id": "296352",
+        "url": "https://en.wikipedia.org/wiki/X.509",
+        "snippet": "defining the format of public key certificates . X.509 certificates are used in many Internet protocols, including TLS /SSL, which is the basis for HTTPS"
+      },
+      {
+        "rank": 6,
+        "title": "Certificate authority",
+        "page_id": "296370",
+        "url": "https://en.wikipedia.org/wiki/Certificate_authority",
+        "snippet": "techniques used for domain validation vary between CAs, but in general domain validation techniques are meant to prove that the certificate applicant controls"
+      },
+      {
+        "rank": 7,
+        "title": "Comparison of TLS implementations",
+        "page_id": "29070755",
+        "url": "https://en.wikipedia.org/wiki/Comparison_of_TLS_implementations",
+        "snippet": "handshake in certificate chain validation \". Mozilla. Retrieved 2014-06-18. \"CRL Validation · Issue #3499 · aws/s2n- tls \". GitHub. Retrieved 2022-11-01"
+      },
+      {
+        "rank": 8,
+        "title": "TLS termination proxy",
+        "page_id": "36775648",
+        "url": "https://en.wikipedia.org/wiki/TLS_termination_proxy",
+        "snippet": "security modules, enable (D) TLS protocol versions, extensions, or capabilities (e.g., OCSP stapling, ALPN, DANE, CT validation , etc.) unsupported by client"
+      },
+      {
+        "rank": 9,
+        "title": "Automatic Certificate Management Environment",
+        "page_id": "47038337",
+        "url": "https://en.wikipedia.org/wiki/Automatic_Certificate_Management_Environment",
+        "snippet": "of TLS certificates were correctly configured, and about 20% failed to be replaced before their expiration. Although another automatic certificate handling"
+      },
+      {
+        "rank": 10,
+        "title": "Transport Layer Security",
+        "page_id": "187813",
+        "url": "https://en.wikipedia.org/wiki/Transport_Layer_Security",
+        "snippet": "Transport Layer Security ( TLS ) is a cryptographic protocol designed to provide encrypted, securer communications over computer networks, such as the Internet"
+      }
+    ]
+  },
+  "Q10": {
+    "status": "ok",
+    "query": "PowerShell remoting SSH",
+    "collected_at": "2026-11-26T14:30:19.803378+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=PowerShell+remoting+SSH&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "PowerShell",
+        "page_id": "14465871",
+        "url": "https://en.wikipedia.org/wiki/PowerShell",
+        "snippet": "Power Shell's support for .NET Remoting , WS-Management, CIM, and SSH enables administrators to perform administrative tasks on both local and remote Windows"
+      },
+      {
+        "rank": 2,
+        "title": "OpenSSH",
+        "page_id": "25490426",
+        "url": "https://en.wikipedia.org/wiki/OpenSSH",
+        "snippet": "Open SSH (also known as OpenBSD Secure Shell ) is a suite of secure networking utilities based on the Secure Shell ( SSH ) protocol, which provides a secure"
+      },
+      {
+        "rank": 3,
+        "title": "Shell (computing)",
+        "page_id": "2281397",
+        "url": "https://en.wikipedia.org/wiki/Shell_(computing)",
+        "snippet": "remote access is available via both PowerShell Remote and SSH , with the latter supported since Windows 10. Remote Desktop Protocol (RDP) is a proprietary"
+      },
+      {
+        "rank": 4,
+        "title": "Ansible (software)",
+        "page_id": "36219037",
+        "url": "https://en.wikipedia.org/wiki/Ansible_(software)",
+        "snippet": "is agentless, relying on temporary remote connections via SSH or Windows Remote Management which allows PowerShell execution. The Ansible control node"
+      },
+      {
+        "rank": 5,
+        "title": "Shell script",
+        "page_id": "28938",
+        "url": "https://en.wikipedia.org/wiki/Shell_script",
+        "snippet": "So called remote shells such as a Remote Shell (rsh) a Secure Shell ( ssh ) are really just tools to run a more complex shell on a remote system and have"
+      },
+      {
+        "rank": 6,
+        "title": "GitHub Codespaces",
+        "page_id": "76591117",
+        "url": "https://en.wikipedia.org/wiki/GitHub_Codespaces",
+        "snippet": "Markdown Math Objective-C Perl PHP PowerShell Prompt Pug Python R Razor ReStructuredText Ruby Rust SCSS ShaderLab Shell Script SQL Swift TypeScript Visual"
+      },
+      {
+        "rank": 7,
+        "title": "Remmina",
+        "page_id": "33627138",
+        "url": "https://en.wikipedia.org/wiki/Remmina",
+        "snippet": "remote desktop client for POSIX-based computer operating systems. It supports the Remote Desktop Protocol (RDP), VNC, NX, XDMCP, SPICE, X2Go and SSH protocols"
+      },
+      {
+        "rank": 8,
+        "title": "Command-line interface",
+        "page_id": "28338635",
+        "url": "https://en.wikipedia.org/wiki/Command-line_interface",
+        "snippet": "released version 1.0 of Windows PowerShell (formerly codenamed Monad), which combined features of traditional Unix shells with their proprietary object-oriented"
+      },
+      {
+        "rank": 9,
+        "title": "Server (computing)",
+        "page_id": "42116",
+        "url": "https://en.wikipedia.org/wiki/Server_(computing)",
+        "snippet": "managed remotely. Remote management can be conducted via various methods including Microsoft Management Console (MMC), PowerShell , SSH and browser-based"
+      },
+      {
+        "rank": 10,
+        "title": "Dokan Library",
+        "page_id": "50063067",
+        "url": "https://en.wikipedia.org/wiki/Dokan_Library",
+        "snippet": "can be absolutely virtual using memory like a ramdisk or show remote data like FTP, SSH , Samba, and databases as local storage that can be listed, read"
+      }
+    ]
+  },
+  "Q11": {
+    "status": "ok",
+    "query": "Azure virtual network peering",
+    "collected_at": "2026-11-26T14:30:22.208272+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=Azure+virtual+network+peering&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Content delivery network",
+        "page_id": "880860",
+        "url": "https://en.wikipedia.org/wiki/Content_delivery_network",
+        "snippet": "A content delivery network (CDN) or content distribution network is a geographically distributed network of proxy servers and corresponding data centers"
+      },
+      {
+        "rank": 2,
+        "title": "Cloud computing",
+        "page_id": "19541494",
+        "url": "https://en.wikipedia.org/wiki/Cloud_computing",
+        "snippet": "Standardization (ISO) as \"a paradigm for enabling network access to a scalable and elastic pool of shareable physical or virtual resources with self-service provisioning"
+      },
+      {
+        "rank": 3,
+        "title": "Victor Bahl",
+        "page_id": "44357282",
+        "url": "https://en.wikipedia.org/wiki/Victor_Bahl",
+        "snippet": "(age 61–62)) is an American Technical Fellow and CTO of Azure for Operators at Microsoft. He started networking research at Microsoft. He is known for his research"
+      },
+      {
+        "rank": 4,
+        "title": "Network Performance Monitoring Solution",
+        "page_id": "54221153",
+        "url": "https://en.wikipedia.org/wiki/Network_Performance_Monitoring_Solution",
+        "snippet": "Network Performance Monitor (NPM) in Operations Management Suite, a component of Microsoft Azure , monitors network performance between office sites, data"
+      },
+      {
+        "rank": 5,
+        "title": "VNS3",
+        "page_id": "41322836",
+        "url": "https://en.wikipedia.org/wiki/VNS3",
+        "snippet": "Cohesive Networks website, VNS3 is delivered as a virtual machine and is available in public clouds including: Amazon Web Services, Microsoft Azure , Google"
+      },
+      {
+        "rank": 6,
+        "title": "Skype",
+        "page_id": "424589",
+        "url": "https://en.wikipedia.org/wiki/Skype",
+        "snippet": "supernodes in May 2012; in 2017, it changed from a peer-to- peer service to a centralized Azure -based service. In February 2023, it was used by 36 million"
+      },
+      {
+        "rank": 7,
+        "title": "Amazon Web Services",
+        "page_id": "1691376",
+        "url": "https://en.wikipedia.org/wiki/Amazon_Web_Services",
+        "snippet": "underlying networking architecture. Various services implement different data transfer models, and the choice of communication method—such as VPC Peering , Transit"
+      },
+      {
+        "rank": 8,
+        "title": "Border Gateway Protocol",
+        "page_id": "38893",
+        "url": "https://en.wikipedia.org/wiki/Border_Gateway_Protocol",
+        "snippet": "between iBGP and eBGP peering is in the way routes that were received from one peer are typically propagated by default to other peers : New routes learned"
+      },
+      {
+        "rank": 9,
+        "title": "IBM Cloud",
+        "page_id": "61527139",
+        "url": "https://en.wikipedia.org/wiki/IBM_Cloud",
+        "snippet": "block storage, and file storage Networking : Virtual private clouds, load balancers, and content delivery networks Databases: Managed database services"
+      },
+      {
+        "rank": 10,
+        "title": "Microsoft",
+        "page_id": "19001",
+        "url": "https://en.wikipedia.org/wiki/Microsoft",
+        "snippet": "Meltdown security breach. The patch led to issues with the Microsoft Azure virtual machines reliant on Intel's CPU architecture. On January 12, Microsoft"
+      }
+    ]
+  },
+  "Q12": {
+    "status": "ok",
+    "query": "Microsoft Graph OAuth permissions",
+    "collected_at": "2026-11-26T14:30:24.555736+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=Microsoft+Graph+OAuth+permissions&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "OAuth",
+        "page_id": "13617506",
+        "url": "https://en.wikipedia.org/wiki/OAuth",
+        "snippet": "Facebook's Graph API only supports OAuth 2.0. Google supports OAuth 2.0 as the recommended authorization mechanism for all of its APIs. Microsoft also supports"
+      },
+      {
+        "rank": 2,
+        "title": "Google Play",
+        "page_id": "34986915",
+        "url": "https://en.wikipedia.org/wiki/Google_Play",
+        "snippet": "When it was introduced in 2012, it provided access to the Google+ APIs and OAuth 2.0. It expanded to cover a variety of Google services, allowing applications"
+      },
+      {
+        "rank": 3,
+        "title": "Comparison of issue-tracking systems",
+        "page_id": "4698944",
+        "url": "https://en.wikipedia.org/wiki/Comparison_of_issue-tracking_systems",
+        "snippet": "MantisBT. 2009-01-15. Retrieved 2010-05-27. \"MantisBT bug #11219: Provide OAuth inter-application authentication \"tokens\" mechanism\". MantisBT. 2010-05-27"
+      },
+      {
+        "rank": 4,
+        "title": "OSI model",
+        "page_id": "22747",
+        "url": "https://en.wikipedia.org/wiki/OSI_model",
+        "snippet": "built into most client software, such as FTP Client and NFS Client for Microsoft Networks. Therefore, the session layer establishes, manages and terminates"
+      },
+      {
+        "rank": 5,
+        "title": "Backend as a service",
+        "page_id": "37198036",
+        "url": "https://en.wikipedia.org/wiki/Backend_as_a_service",
+        "snippet": "login, password reset, social media login integration through OAuth , user group and permission management etc. Notification service. Some BaaS providers such"
+      },
+      {
+        "rank": 6,
+        "title": "Comparison of social networking software",
+        "page_id": "12285840",
+        "url": "https://en.wikipedia.org/wiki/Comparison_of_social_networking_software",
+        "snippet": "React Native oAuth 2.0, Google Account, Facebook Connect, Custom Yes Yes Group Levels, Memberships, Access Control, Privacy, Permissions Yes Yes Yes Images"
+      }
+    ]
+  },
+  "Q13": {
+    "status": "ok",
+    "query": "transformer attention mechanism",
+    "collected_at": "2026-11-26T14:30:26.950383+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=transformer+attention+mechanism&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Transformer (deep learning)",
+        "page_id": "61603971",
+        "url": "https://en.wikipedia.org/wiki/Transformer_(deep_learning)",
+        "snippet": "deep learning, the transformer is a family of artificial neural network architectures based on the multi-head attention mechanism , in which input data"
+      },
+      {
+        "rank": 2,
+        "title": "Attention Is All You Need",
+        "page_id": "75477752",
+        "url": "https://en.wikipedia.org/wiki/Attention_Is_All_You_Need",
+        "snippet": "architecture known as the transformer , based on the attention mechanism proposed in 2014 by Bahdanau et al. The transformer approach it describes has"
+      },
+      {
+        "rank": 3,
+        "title": "Attention (machine learning)",
+        "page_id": "66001552",
+        "url": "https://en.wikipedia.org/wiki/Attention_(machine_learning)",
+        "snippet": "the attention mechanism in a serial recurrent neural network (RNN) language translation system, but a more recent design, namely the transformer , removed"
+      },
+      {
+        "rank": 4,
+        "title": "Generative pre-trained transformer",
+        "page_id": "72970020",
+        "url": "https://en.wikipedia.org/wiki/Generative_pre-trained_transformer",
+        "snippet": "of transformer -based models increase significantly as they scale to larger sizes and longer input sequences. The standard self- attention mechanism has"
+      },
+      {
+        "rank": 5,
+        "title": "Vision transformer",
+        "page_id": "68212199",
+        "url": "https://en.wikipedia.org/wiki/Vision_transformer",
+        "snippet": "kernels by the self- attention mechanism found in a Transformer . It resulted in superior performance. However, it is not a Vision Transformer . In 2020, an encoder-only"
+      },
+      {
+        "rank": 6,
+        "title": "Gating mechanism",
+        "page_id": "78052490",
+        "url": "https://en.wikipedia.org/wiki/Gating_mechanism",
+        "snippet": "gate Y as (WX+b)⊙Y. Gated Attention Unit (GAU) is a module used in Transformers obtained by merging an attention mechanism and a linear gating feedforward"
+      },
+      {
+        "rank": 7,
+        "title": "Seq2seq",
+        "page_id": "62607005",
+        "url": "https://en.wikipedia.org/wiki/Seq2seq",
+        "snippet": "The Attention mechanism was grafted onto this structure in 2014 and is shown below. Later it was refined into the encoder-decoder Transformer architecture"
+      },
+      {
+        "rank": 8,
+        "title": "GPT-2",
+        "page_id": "66045029",
+        "url": "https://en.wikipedia.org/wiki/GPT-2",
+        "snippet": "generative pre-trained transformer architecture, implementing a deep neural network, specifically a transformer model, which uses attention instead of older"
+      },
+      {
+        "rank": 9,
+        "title": "Ashish Vaswani",
+        "page_id": "73852586",
+        "url": "https://en.wikipedia.org/wiki/Ashish_Vaswani",
+        "snippet": "paper, \" Attention Is All You Need\", was published in 2017. The paper introduced the Transformer model, which uses self- attention mechanisms instead of"
+      },
+      {
+        "rank": 10,
+        "title": "Latent diffusion model",
+        "page_id": "77815635",
+        "url": "https://en.wikipedia.org/wiki/Latent_diffusion_model",
+        "snippet": "processed by a Spatial Transformer , which is essentially a standard pre-LN Transformer decoder without causal masking. In the cross- attentional blocks, the latent"
+      }
+    ]
+  },
+  "Q14": {
+    "status": "ok",
+    "query": "retrieval augmented generation",
+    "collected_at": "2026-11-26T14:30:29.390740+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=retrieval+augmented+generation&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Retrieval-augmented generation",
+        "page_id": "75229858",
+        "url": "https://en.wikipedia.org/wiki/Retrieval-augmented_generation",
+        "snippet": "Retrieval - augmented generation (RAG) is a technique that enables large language models (LLMs) to retrieve and incorporate new information from external"
+      },
+      {
+        "rank": 2,
+        "title": "Vector database",
+        "page_id": "74020014",
+        "url": "https://en.wikipedia.org/wiki/Vector_database",
+        "snippet": "detection, and retrieval - augmented generation . An especially common use-case for vector databases is in retrieval - augmented generation (RAG), a method"
+      },
+      {
+        "rank": 3,
+        "title": "Prompt engineering",
+        "page_id": "69071767",
+        "url": "https://en.wikipedia.org/wiki/Prompt_engineering",
+        "snippet": "assigning roles to the model. Automated prompt generation methods, such as retrieval - augmented generation (RAG), provide for greater accuracy and a wider"
+      },
+      {
+        "rank": 4,
+        "title": "Knowledge cutoff",
+        "page_id": "80445288",
+        "url": "https://en.wikipedia.org/wiki/Knowledge_cutoff",
+        "snippet": "later events without a system for real-time data access such as retrieval - augmented generation , which fetches new information from an external database. Knowledge"
+      },
+      {
+        "rank": 5,
+        "title": "Large language model",
+        "page_id": "73248112",
+        "url": "https://en.wikipedia.org/wiki/Large_language_model",
+        "snippet": "prompt\".[citation needed] Retrieval - augmented generation (RAG) is an approach that integrates LLMs with document retrieval systems. Given a query, a document"
+      },
+      {
+        "rank": 6,
+        "title": "ChromaDB",
+        "page_id": "77481309",
+        "url": "https://en.wikipedia.org/wiki/ChromaDB",
+        "snippet": "artificial intelligence, particularly as part of the tech stack for retrieval - augmented generation . \"Release notes for Chroma v1.0.15\". GitHub. \"Chroma funding:"
+      },
+      {
+        "rank": 7,
+        "title": "Douwe Kiela",
+        "page_id": "81451909",
+        "url": "https://en.wikipedia.org/wiki/Douwe_Kiela",
+        "snippet": "research team that introduced Retrieval - Augmented Generation (RAG), co-authoring the influential paper \" Retrieval - Augmented Generation for Knowledge-Intensive"
+      },
+      {
+        "rank": 8,
+        "title": "LangChain",
+        "page_id": "73577626",
+        "url": "https://en.wikipedia.org/wiki/LangChain",
+        "snippet": "to use-cases including chatbots, retrieval - augmented generation , document summarization, and synthetic data generation . InfoWorld described LangChain as"
+      },
+      {
+        "rank": 9,
+        "title": "Generative AI",
+        "page_id": "73291755",
+        "url": "https://en.wikipedia.org/wiki/Generative_AI",
+        "snippet": "Procedural generation – Method in which data is created algorithmically as opposed to manually Retrieval - augmented generation – Type of information retrieval using"
+      },
+      {
+        "rank": 10,
+        "title": "Deepset",
+        "page_id": "72165130",
+        "url": "https://en.wikipedia.org/wiki/Deepset",
+        "snippet": "processing (NLP) systems, using architectures such as agents, retrieval augmented generation (RAG) and multimodal AI. It was founded in 2018 in Berlin by"
+      }
+    ]
+  },
+  "Q15": {
+    "status": "ok",
+    "query": "graph neural networks",
+    "collected_at": "2026-11-26T14:30:31.729564+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=graph+neural+networks&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Graph neural network",
+        "page_id": "68162942",
+        "url": "https://en.wikipedia.org/wiki/Graph_neural_network",
+        "snippet": "Graph neural networks (GNNs) are artificial neural networks designed for tasks whose inputs are graphs . Because graphs usually do not have a canonical"
+      },
+      {
+        "rank": 2,
+        "title": "Knowledge graph",
+        "page_id": "64418530",
+        "url": "https://en.wikipedia.org/wiki/Knowledge_graph",
+        "snippet": "social networks such as LinkedIn and Facebook. Recent developments in data science and machine learning, particularly in graph neural networks , representation"
+      },
+      {
+        "rank": 3,
+        "title": "Machine-learned interatomic potential",
+        "page_id": "74269270",
+        "url": "https://en.wikipedia.org/wiki/Machine-learned_interatomic_potential",
+        "snippet": "models, called message-passing neural networks (MPNNs), are graph neural networks . Treating molecules as three-dimensional graphs (where atoms are nodes and"
+      },
+      {
+        "rank": 4,
+        "title": "Weisfeiler Leman graph isomorphism test",
+        "page_id": "75168719",
+        "url": "https://en.wikipedia.org/wiki/Weisfeiler_Leman_graph_isomorphism_test",
+        "snippet": "non-isomorphic graphs the Weisfeiler–Leman test cannot distinguish is given here. The Weisfeiler Leman test bounds the expressive power of graph neural networks : a"
+      },
+      {
+        "rank": 5,
+        "title": "Deep learning",
+        "page_id": "32472154",
+        "url": "https://en.wikipedia.org/wiki/Deep_learning",
+        "snippet": "networks , deep belief networks , recurrent neural networks , convolutional neural networks , generative adversarial networks , transformers, and neural radiance"
+      },
+      {
+        "rank": 6,
+        "title": "Algebraic signal processing",
+        "page_id": "17960231",
+        "url": "https://en.wikipedia.org/wiki/Algebraic_signal_processing",
+        "snippet": "of nodes of the graph . In graph neural networks , graph signals are sometimes called features. The signal space is the set of all graph signals ℳ=ℝ𝒱 where"
+      },
+      {
+        "rank": 7,
+        "title": "Knowledge distillation",
+        "page_id": "62295363",
+        "url": "https://en.wikipedia.org/wiki/Knowledge_distillation",
+        "snippet": "natural language processing. Recently, it has also been introduced to graph neural networks applicable to non-grid data. Knowledge transfer from a large model"
+      },
+      {
+        "rank": 8,
+        "title": "Recursive neural network",
+        "page_id": "43705185",
+        "url": "https://en.wikipedia.org/wiki/Recursive_neural_network",
+        "snippet": "recursive neural networks is given by the Tree Echo State Network within the reservoir computing paradigm. Extensions to graphs include graph neural network (GNN)"
+      },
+      {
+        "rank": 9,
+        "title": "Kolmogorov–Arnold Networks",
+        "page_id": "81016886",
+        "url": "https://en.wikipedia.org/wiki/Kolmogorov–Arnold_Networks",
+        "snippet": "the locality of spline adjustments. Graph neural networks : Extensions such as Kolmogorov–Arnold Graph Neural Networks (KA-GNNs) integrate KAN modules into"
+      },
+      {
+        "rank": 10,
+        "title": "Convolutional neural network",
+        "page_id": "40409788",
+        "url": "https://en.wikipedia.org/wiki/Convolutional_neural_network",
+        "snippet": "interfaces, and financial time series. Feedforward neural networks are usually fully connected networks , that is, each neuron in one layer is connected to"
+      }
+    ]
+  },
+  "Q16": {
+    "status": "ok",
+    "query": "differential privacy machine learning",
+    "collected_at": "2026-11-26T14:30:34.140090+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=differential+privacy+machine+learning&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Differential privacy",
+        "page_id": "23473696",
+        "url": "https://en.wikipedia.org/wiki/Differential_privacy",
+        "snippet": "Differential privacy (DP) is a mathematically rigorous framework for releasing statistical information about datasets while protecting the privacy of individual"
+      },
+      {
+        "rank": 2,
+        "title": "Differentially private stochastic gradient descent",
+        "page_id": "83503300",
+        "url": "https://en.wikipedia.org/wiki/Differentially_private_stochastic_gradient_descent",
+        "snippet": "Differentially private stochastic gradient descent (DP-SGD) is an algorithmic technique for learning and a refined analysis of privacy costs within the"
+      },
+      {
+        "rank": 3,
+        "title": "Federated learning",
+        "page_id": "60992857",
+        "url": "https://en.wikipedia.org/wiki/Federated_learning",
+        "snippet": "Federated learning (also known as collaborative learning ) is a machine learning technique in a setting where multiple entities (often called clients)"
+      },
+      {
+        "rank": 4,
+        "title": "Local differential privacy",
+        "page_id": "60504486",
+        "url": "https://en.wikipedia.org/wiki/Local_differential_privacy",
+        "snippet": "Local differential privacy (LDP) is a model of differential privacy with the added requirement that if an adversary has access to the personal responses"
+      },
+      {
+        "rank": 5,
+        "title": "Flux (machine-learning framework)",
+        "page_id": "60929882",
+        "url": "https://en.wikipedia.org/wiki/Flux_(machine-learning_framework)",
+        "snippet": "for Neural Differential Equations\". arXiv:1902.02376 [cs.LG]. Schlothauer, Sarah (2019-01-25). \" Machine learning meets math: Solve differential equations"
+      },
+      {
+        "rank": 6,
+        "title": "List of implementations of differentially private analyses",
+        "page_id": "60504756",
+        "url": "https://en.wikipedia.org/wiki/List_of_implementations_of_differentially_private_analyses",
+        "snippet": "queries with differential privacy , and those focused on training machine learning models with differential privacy . Differential Privacy Secure multi-party"
+      },
+      {
+        "rank": 7,
+        "title": "Machine learning",
+        "page_id": "233488",
+        "url": "https://en.wikipedia.org/wiki/Machine_learning",
+        "snippet": "Machine learning (ML) is a process in the field of artificial intelligence where a computer system uses statistical algorithms, often neural networks,"
+      },
+      {
+        "rank": 8,
+        "title": "Trustworthy AI",
+        "page_id": "72093304",
+        "url": "https://en.wikipedia.org/wiki/Trustworthy_AI",
+        "snippet": "needed] The application of differential privacy in the preservation of privacy was examined at several of the \"Day 0\" machine learning workshops at AI for Good"
+      },
+      {
+        "rank": 9,
+        "title": "Information privacy",
+        "page_id": "237536",
+        "url": "https://en.wikipedia.org/wiki/Information_privacy",
+        "snippet": "Information privacy , also known as data privacy or data protection, is the relationship between the collection and dissemination of data, technology,"
+      },
+      {
+        "rank": 10,
+        "title": "Privacy-enhancing technologies",
+        "page_id": "14389259",
+        "url": "https://en.wikipedia.org/wiki/Privacy-enhancing_technologies",
+        "snippet": "technologies are access control, differential privacy , and tunnel encryption (SSL/TLS). An example of soft privacy technologies is increased transparency"
+      }
+    ]
+  },
+  "Q17": {
+    "status": "ok",
+    "query": "federated learning data privacy",
+    "collected_at": "2026-11-26T14:30:36.496774+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=federated+learning+data+privacy&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Federated learning",
+        "page_id": "60992857",
+        "url": "https://en.wikipedia.org/wiki/Federated_learning",
+        "snippet": "their data decentralized, rather than centrally stored. A defining characteristic of federated learning is data heterogeneity. Because client data is decentralized"
+      },
+      {
+        "rank": 2,
+        "title": "Federated Learning of Cohorts",
+        "page_id": "67355175",
+        "url": "https://en.wikipedia.org/wiki/Federated_Learning_of_Cohorts",
+        "snippet": "Google's Privacy Sandbox initiative, which includes several other advertising-related technologies with bird-themed names. Despite \" federated learning \" in"
+      },
+      {
+        "rank": 3,
+        "title": "Machine learning",
+        "page_id": "233488",
+        "url": "https://en.wikipedia.org/wiki/Machine_learning",
+        "snippet": "Science & Business Media, 2002. \" Federated Learning : Collaborative Machine Learning without Centralized Training Data \". Google AI Blog. 6 April 2017. Archived"
+      },
+      {
+        "rank": 4,
+        "title": "Local differential privacy",
+        "page_id": "60504486",
+        "url": "https://en.wikipedia.org/wiki/Local_differential_privacy",
+        "snippet": "issue or privacy leaks. Federated learning has the ambition to protect data privacy through distributed learning methods that keep the data in its storage"
+      },
+      {
+        "rank": 5,
+        "title": "Privacy",
+        "page_id": "25009",
+        "url": "https://en.wikipedia.org/wiki/Privacy",
+        "snippet": "cookies with \" Federated Learning of Cohorts\" (FLoC), which grouped users by browsing interests and which Google presented as less harmful to privacy . Critics"
+      },
+      {
+        "rank": 6,
+        "title": "Privacy-enhancing technologies",
+        "page_id": "14389259",
+        "url": "https://en.wikipedia.org/wiki/Privacy-enhancing_technologies",
+        "snippet": "individual \"inputs\" who might have private data and privacy concerns, Federated learning is a machine learning technique that trains models across multiple"
+      },
+      {
+        "rank": 7,
+        "title": "Federated search",
+        "page_id": "2421086",
+        "url": "https://en.wikipedia.org/wiki/Federated_search",
+        "snippet": "federation. The federated search then aggregates the results that are received from the search engines for presentation to the user. Federated search can be"
+      },
+      {
+        "rank": 8,
+        "title": "Internet privacy",
+        "page_id": "1228060",
+        "url": "https://en.wikipedia.org/wiki/Internet_privacy",
+        "snippet": "information pertaining to oneself via the Internet. Internet privacy is a subset of data privacy . Privacy concerns have been articulated from the beginnings of"
+      },
+      {
+        "rank": 9,
+        "title": "Privacy Sandbox",
+        "page_id": "67710647",
+        "url": "https://en.wikipedia.org/wiki/Privacy_Sandbox",
+        "snippet": "Markets Authority (CMA). In response to the privacy concerns, Google discontinued proposals like Federated Learning of Cohorts (also known as FLoC) and replaced"
+      },
+      {
+        "rank": 10,
+        "title": "Trustworthy AI",
+        "page_id": "72093304",
+        "url": "https://en.wikipedia.org/wiki/Trustworthy_AI",
+        "snippet": "ITU HQ in Geneva.[citation needed] Zero-sum masks as used by federated learning for privacy preservation are used extensively in the multimedia standards"
+      }
+    ]
+  },
+  "Q18": {
+    "status": "ok",
+    "query": "stochastic gradient descent optimization",
+    "collected_at": "2026-11-26T14:30:39.021678+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=stochastic+gradient+descent+optimization&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Stochastic gradient descent",
+        "page_id": "1180641",
+        "url": "https://en.wikipedia.org/wiki/Stochastic_gradient_descent",
+        "snippet": "subdifferentiable). It can be regarded as a stochastic approximation of gradient descent optimization , since it replaces the actual gradient (calculated from the entire"
+      },
+      {
+        "rank": 2,
+        "title": "Gradient descent",
+        "page_id": "201489",
+        "url": "https://en.wikipedia.org/wiki/Gradient_descent",
+        "snippet": "Gradient descent is a method for unconstrained mathematical optimization . It is a first-order iterative algorithm for minimizing a differentiable multivariate"
+      },
+      {
+        "rank": 3,
+        "title": "Stochastic optimization",
+        "page_id": "7325543",
+        "url": "https://en.wikipedia.org/wiki/Stochastic_optimization",
+        "snippet": "Stochastic optimization (SO) are optimization methods that generate and use random variables. For stochastic optimization problems, the objective functions"
+      },
+      {
+        "rank": 4,
+        "title": "Federated learning",
+        "page_id": "60992857",
+        "url": "https://en.wikipedia.org/wiki/Federated_learning",
+        "snippet": "algorithms for federated optimization have been proposed. Stochastic gradient descent is an approach used in deep learning, where gradients are computed on a"
+      },
+      {
+        "rank": 5,
+        "title": "Mirror descent",
+        "page_id": "70157641",
+        "url": "https://en.wikipedia.org/wiki/Mirror_descent",
+        "snippet": "descent is an iterative optimization algorithm for finding a local minimum of a differentiable function. It generalizes algorithms such as gradient descent"
+      },
+      {
+        "rank": 6,
+        "title": "Online machine learning",
+        "page_id": "19892153",
+        "url": "https://en.wikipedia.org/wiki/Online_machine_learning",
+        "snippet": "special case of stochastic optimization , a well known problem in optimization . In practice, one can perform multiple stochastic gradient passes (also called"
+      },
+      {
+        "rank": 7,
+        "title": "Coordinate descent",
+        "page_id": "33837524",
+        "url": "https://en.wikipedia.org/wiki/Coordinate_descent",
+        "snippet": "method – Method for finding stationary points of a function Stochastic gradient descent – Optimization algorithm – uses one example at a time, rather than one"
+      },
+      {
+        "rank": 8,
+        "title": "Stochastic approximation",
+        "page_id": "8979437",
+        "url": "https://en.wikipedia.org/wiki/Stochastic_approximation",
+        "snippet": "Stochastic approximation methods are a family of iterative methods typically used for root-finding problems or for optimization problems. The recursive"
+      },
+      {
+        "rank": 9,
+        "title": "Derivative-free optimization",
+        "page_id": "41680875",
+        "url": "https://en.wikipedia.org/wiki/Derivative-free_optimization",
+        "snippet": "Derivative-free optimization is a discipline in mathematical optimization that does not use derivative information in the classical sense to find optimal"
+      },
+      {
+        "rank": 10,
+        "title": "Stochastic gradient Langevin dynamics",
+        "page_id": "58878004",
+        "url": "https://en.wikipedia.org/wiki/Stochastic_gradient_Langevin_dynamics",
+        "snippet": "Stochastic gradient Langevin dynamics (SGLD) is an optimization and sampling technique composed of characteristics from Stochastic gradient descent , a"
+      }
+    ]
+  },
+  "Q19": {
+    "status": "ok",
+    "query": "quantum error correction surface code",
+    "collected_at": "2026-11-26T14:30:41.502616+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=quantum+error+correction+surface+code&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Quantum error correction",
+        "page_id": "892803",
+        "url": "https://en.wikipedia.org/wiki/Quantum_error_correction",
+        "snippet": "Quantum error correction (QEC) comprises a set of techniques used in quantum memory and quantum computing to protect quantum information from errors arising"
+      },
+      {
+        "rank": 2,
+        "title": "Surface code",
+        "page_id": "29260402",
+        "url": "https://en.wikipedia.org/wiki/Surface_code",
+        "snippet": "The surface code is a topological quantum error correcting code , and an example of a stabilizer code , defined on a two-dimensional spin lattice. The first"
+      },
+      {
+        "rank": 3,
+        "title": "Stabilizer code",
+        "page_id": "5045759",
+        "url": "https://en.wikipedia.org/wiki/Stabilizer_code",
+        "snippet": "In quantum computing and quantum communication, a stabilizer code is a class of quantum codes for performing quantum error correction . The toric code , and"
+      },
+      {
+        "rank": 4,
+        "title": "CSS code",
+        "page_id": "33503735",
+        "url": "https://en.wikipedia.org/wiki/CSS_code",
+        "snippet": "In quantum error correction , Calderbank–Shor–Steane (CSS) codes , named after their inventors, Robert Calderbank, Peter Shor and Andrew Steane, are a special"
+      },
+      {
+        "rank": 5,
+        "title": "Noisy intermediate-scale quantum computing",
+        "page_id": "68076992",
+        "url": "https://en.wikipedia.org/wiki/Noisy_intermediate-scale_quantum_computing",
+        "snippet": "decoherence, are not yet capable of continuous quantum error correction . This intermediate-scale is defined by the quantum volume, which is based on a moderate"
+      },
+      {
+        "rank": 6,
+        "title": "Fault tolerant quantum computing",
+        "page_id": "82052520",
+        "url": "https://en.wikipedia.org/wiki/Fault_tolerant_quantum_computing",
+        "snippet": "a quantum computer being prone to error . This is done in part via incorporating quantum error correction codes , although quantum error correction by"
+      },
+      {
+        "rank": 7,
+        "title": "Quantum computing",
+        "page_id": "25220",
+        "url": "https://en.wikipedia.org/wiki/Quantum_computing",
+        "snippet": "threshold for this milestone. Quantum computing increasingly focused on controlling decoherence through quantum error correction . In 2024, researchers demonstrated"
+      },
+      {
+        "rank": 8,
+        "title": "Coding theory",
+        "page_id": "321869",
+        "url": "https://en.wikipedia.org/wiki/Coding_theory",
+        "snippet": "used for data compression, cryptography, error detection and correction , data transmission and data storage. Codes are studied by various scientific disciplines—such"
+      },
+      {
+        "rank": 9,
+        "title": "Threshold theorem",
+        "page_id": "18409940",
+        "url": "https://en.wikipedia.org/wiki/Threshold_theorem",
+        "snippet": "through application of quantum error correction schemes, suppress the logical error rate to arbitrarily low levels. This shows that quantum computers can be"
+      },
+      {
+        "rank": 10,
+        "title": "Reed–Solomon error correction",
+        "page_id": "45600",
+        "url": "https://en.wikipedia.org/wiki/Reed–Solomon_error_correction",
+        "snippet": "In information theory and coding theory, Reed–Solomon codes are a group of error -correcting codes that were introduced by Irving S. Reed and Gustave Solomon"
+      }
+    ]
+  },
+  "Q20": {
+    "status": "ok",
+    "query": "lithium ion battery degradation",
+    "collected_at": "2026-11-26T14:30:43.981495+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=lithium+ion+battery+degradation&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Lithium-ion battery",
+        "page_id": "201485",
+        "url": "https://en.wikipedia.org/wiki/Lithium-ion_battery",
+        "snippet": "A lithium - ion battery or Li- ion battery is a type of rechargeable battery that uses the reversible intercalation of lithium ions (Li+) into electronically"
+      },
+      {
+        "rank": 2,
+        "title": "Lithium polymer battery",
+        "page_id": "201716",
+        "url": "https://en.wikipedia.org/wiki/Lithium_polymer_battery",
+        "snippet": "A lithium polymer battery , or more correctly, lithium - ion polymer battery (abbreviated as LiPo, LIP, Li-poly, lithium -poly, and others), is a rechargeable"
+      },
+      {
+        "rank": 3,
+        "title": "Lithium iron phosphate battery",
+        "page_id": "8534292",
+        "url": "https://en.wikipedia.org/wiki/Lithium_iron_phosphate_battery",
+        "snippet": "The lithium iron phosphate battery (LiFePO 4 battery ) or LFP battery ( lithium ferrophosphate) is a type of lithium - ion battery using lithium iron phosphate"
+      },
+      {
+        "rank": 4,
+        "title": "Solid-state battery",
+        "page_id": "21227685",
+        "url": "https://en.wikipedia.org/wiki/Solid-state_battery",
+        "snippet": "conventional batteries . Theoretically, solid-state batteries offer much higher energy density than the typical lithium - ion or lithium polymer batteries . While"
+      },
+      {
+        "rank": 5,
+        "title": "Electric vehicle battery",
+        "page_id": "15452708",
+        "url": "https://en.wikipedia.org/wiki/Electric_vehicle_battery",
+        "snippet": "typically lithium - ion batteries that are designed for high power-to-weight ratio and energy density. Compared to liquid fuels, most current battery technologies"
+      },
+      {
+        "rank": 6,
+        "title": "History of the lithium-ion battery",
+        "page_id": "69153451",
+        "url": "https://en.wikipedia.org/wiki/History_of_the_lithium-ion_battery",
+        "snippet": "lithium - ion batteries is a CuF 2/Li battery developed by NASA in 1965. The breakthrough that produced the earliest form of the modern Li- ion battery was"
+      },
+      {
+        "rank": 7,
+        "title": "Research in lithium-ion batteries",
+        "page_id": "42601555",
+        "url": "https://en.wikipedia.org/wiki/Research_in_lithium-ion_batteries",
+        "snippet": "Research in lithium - ion batteries has produced many proposed refinements of lithium - ion batteries . Areas of research interest have focused on improving"
+      },
+      {
+        "rank": 8,
+        "title": "Lithium–silicon battery",
+        "page_id": "47270052",
+        "url": "https://en.wikipedia.org/wiki/Lithium–silicon_battery",
+        "snippet": "Lithium –silicon batteries are lithium - ion batteries that employ a silicon-based anode and lithium ions as the charge carriers. Silicon-based materials"
+      },
+      {
+        "rank": 9,
+        "title": "Lithium",
+        "page_id": "17561",
+        "url": "https://en.wikipedia.org/wiki/Lithium",
+        "snippet": "lithium grease lubricants, flux additives for iron, steel and aluminium production, lithium metal batteries , and lithium - ion batteries . Batteries alone"
+      },
+      {
+        "rank": 10,
+        "title": "Lithium nickel manganese cobalt oxides",
+        "page_id": "63250980",
+        "url": "https://en.wikipedia.org/wiki/Lithium_nickel_manganese_cobalt_oxides",
+        "snippet": "formula LiNixMnyCo1-x-yO2. These materials are commonly used in lithium - ion batteries for mobile devices and electric vehicles, acting as the positively"
+      }
+    ]
+  },
+  "Q21": {
+    "status": "ok",
+    "query": "photovoltaic solar cell efficiency",
+    "collected_at": "2026-11-26T14:30:46.396025+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=photovoltaic+solar+cell+efficiency&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Solar cell efficiency",
+        "page_id": "29324571",
+        "url": "https://en.wikipedia.org/wiki/Solar_cell_efficiency",
+        "snippet": "Solar cell efficiency is the portion of energy in sunlight that is converted into electricity by a solar cell . Efficiency , in combination with latitude"
+      },
+      {
+        "rank": 2,
+        "title": "Solar cell",
+        "page_id": "2352910",
+        "url": "https://en.wikipedia.org/wiki/Solar_cell",
+        "snippet": "A solar cell , also known as a photovoltaic cell (PV cell ), is an electronic device that converts the energy of light directly into electricity by using"
+      },
+      {
+        "rank": 3,
+        "title": "Perovskite solar cell",
+        "page_id": "43845714",
+        "url": "https://en.wikipedia.org/wiki/Perovskite_solar_cell",
+        "snippet": "silicon-based tandem cells , to 34.85%, exceeding the maximum efficiency achieved in single-junction silicon solar cells . Perovskite solar cells have therefore"
+      },
+      {
+        "rank": 4,
+        "title": "Photovoltaic system",
+        "page_id": "15677755",
+        "url": "https://en.wikipedia.org/wiki/Photovoltaic_system",
+        "snippet": "A photovoltaic system, also called a PV system or solar power system, is an electric power system designed to supply usable solar power by means of photovoltaics"
+      },
+      {
+        "rank": 5,
+        "title": "Solar panel",
+        "page_id": "3507365",
+        "url": "https://en.wikipedia.org/wiki/Solar_panel",
+        "snippet": "A solar panel is a device that converts sunlight into electricity by using multiple solar modules that consist of photovoltaic (PV) cells . PV cells are"
+      },
+      {
+        "rank": 6,
+        "title": "Photovoltaics",
+        "page_id": "652531",
+        "url": "https://en.wikipedia.org/wiki/Photovoltaics",
+        "snippet": "Electromotive force § Solar cell List of photovoltaics companies Photoelectrochemical cell Quantum efficiency § Quantum efficiency of solar cells Renewable energy"
+      },
+      {
+        "rank": 7,
+        "title": "Quantum dot solar cell",
+        "page_id": "7246977",
+        "url": "https://en.wikipedia.org/wiki/Quantum_dot_solar_cell",
+        "snippet": "A quantum dot solar cell (QDSC) is a solar cell design that uses quantum dots as the captivating photovoltaic material. It attempts to replace bulk materials"
+      },
+      {
+        "rank": 8,
+        "title": "Thin-film solar cell",
+        "page_id": "20386463",
+        "url": "https://en.wikipedia.org/wiki/Thin-film_solar_cell",
+        "snippet": "Thin-film solar cells are a type of solar cell made by depositing thin layers of photovoltaic material onto a glass, plastic or metal substrate. Thin-film"
+      },
+      {
+        "rank": 9,
+        "title": "Timeline of solar cells",
+        "page_id": "1919695",
+        "url": "https://en.wikipedia.org/wiki/Timeline_of_solar_cells",
+        "snippet": "sunlight falling on them. Solar cells are commonly used in satellites in today's times. 1839 - Edmond Becquerel observes the photovoltaic effect via an electrode"
+      },
+      {
+        "rank": 10,
+        "title": "Solar tracker",
+        "page_id": "4232526",
+        "url": "https://en.wikipedia.org/wiki/Solar_tracker",
+        "snippet": "horizon, then their solar panels can collect a significant amount of energy. The underlying power conversion efficiency of a photovoltaic cell has a major influence"
+      }
+    ]
+  },
+  "Q22": {
+    "status": "ok",
+    "query": "computational fluid dynamics finite volume method",
+    "collected_at": "2026-11-26T14:30:48.760537+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=computational+fluid+dynamics+finite+volume+method&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Finite volume method",
+        "page_id": "345017",
+        "url": "https://en.wikipedia.org/wiki/Finite_volume_method",
+        "snippet": "the finite volume method is that it is easily formulated to allow for unstructured meshes. The method is used in many computational fluid dynamics packages"
+      },
+      {
+        "rank": 2,
+        "title": "Computational fluid dynamics",
+        "page_id": "305924",
+        "url": "https://en.wikipedia.org/wiki/Computational_fluid_dynamics",
+        "snippet": "Computational fluid dynamics (CFD) is a branch of both fluid mechanics and computational physics that uses numerical analysis and data structures to analyze"
+      },
+      {
+        "rank": 3,
+        "title": "Volume of fluid method",
+        "page_id": "16676201",
+        "url": "https://en.wikipedia.org/wiki/Volume_of_fluid_method",
+        "snippet": "In computational fluid dynamics , the volume of fluid (VOF) method is a family of free-surface modelling techniques, i.e. numerical techniques for tracking"
+      },
+      {
+        "rank": 4,
+        "title": "List of computational fluid dynamics software",
+        "page_id": "81653568",
+        "url": "https://en.wikipedia.org/wiki/List_of_computational_fluid_dynamics_software",
+        "snippet": "This is a list of computational fluid dynamics software — including multiphysics simulation, finite -element, finite - volume , finite difference, boundary"
+      },
+      {
+        "rank": 5,
+        "title": "Fluid mechanics",
+        "page_id": "2684988",
+        "url": "https://en.wikipedia.org/wiki/Fluid_mechanics",
+        "snippet": "best addressed by numerical methods , typically using computers. A modern discipline, called computational fluid dynamics (CFD), is devoted to this approach"
+      },
+      {
+        "rank": 6,
+        "title": "Finite element method",
+        "page_id": "18233581",
+        "url": "https://en.wikipedia.org/wiki/Finite_element_method",
+        "snippet": "of structures). In contrast, computational fluid dynamics (CFD) tend to use FDM or other methods like finite volume method (FVM). CFD problems usually"
+      },
+      {
+        "rank": 7,
+        "title": "Immersed boundary method",
+        "page_id": "17943941",
+        "url": "https://en.wikipedia.org/wiki/Immersed_boundary_method",
+        "snippet": "computational fluid dynamics , the immersed boundary method originally referred to an approach developed by Charles Peskin in 1972 to simulate fluid -structure"
+      },
+      {
+        "rank": 8,
+        "title": "Riemann problem",
+        "page_id": "9461236",
+        "url": "https://en.wikipedia.org/wiki/Riemann_problem",
+        "snippet": "and Numerical Methods for Fluid Dynamics . Berlin: Springer Verlag. ISBN 3-540-65966-8. LeVeque, Randall J. (2004). Finite - Volume Methods for Hyperbolic"
+      },
+      {
+        "rank": 9,
+        "title": "Fluid dynamics",
+        "page_id": "11034",
+        "url": "https://en.wikipedia.org/wiki/Fluid_dynamics",
+        "snippet": "physical chemistry, and engineering, fluid dynamics is a subdiscipline of fluid mechanics that describes the flow of fluids – liquids and gases. It has several"
+      },
+      {
+        "rank": 10,
+        "title": "Finite volume method for two dimensional diffusion problem",
+        "page_id": "44532469",
+        "url": "https://en.wikipedia.org/wiki/Finite_volume_method_for_two_dimensional_diffusion_problem",
+        "snippet": "Machine Finite volume method , Cheng Long Finite volume method , Robert Eymard et al. (2010), Scholarpedia,5(6):9835 Computational fluid dynamics Finite difference"
+      }
+    ]
+  },
+  "Q23": {
+    "status": "ok",
+    "query": "finite element analysis stress",
+    "collected_at": "2026-11-26T14:30:51.176235+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=finite+element+analysis+stress&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Finite element method",
+        "page_id": "18233581",
+        "url": "https://en.wikipedia.org/wiki/Finite_element_method",
+        "snippet": "Finite element method (FEM) is a popular method for numerically solving differential equations arising in engineering and mathematical modeling. Typical"
+      },
+      {
+        "rank": 2,
+        "title": "List of finite element software packages",
+        "page_id": "18096636",
+        "url": "https://en.wikipedia.org/wiki/List_of_finite_element_software_packages",
+        "snippet": "This is a list of notable software packages that implement the finite element method for solving partial differential equations. This table is contributed"
+      },
+      {
+        "rank": 3,
+        "title": "Mixed finite element method",
+        "page_id": "41729317",
+        "url": "https://en.wikipedia.org/wiki/Mixed_finite_element_method",
+        "snippet": "In numerical analysis , a mixed finite element method, is a variant of the finite element method in which extra fields to be solved are introduced during"
+      },
+      {
+        "rank": 4,
+        "title": "Stress concentration",
+        "page_id": "681185",
+        "url": "https://en.wikipedia.org/wiki/Stress_concentration",
+        "snippet": "1953. Finite element methods are commonly used in design today. Other methods include the boundary element method and meshfree methods. Stress concentrations"
+      },
+      {
+        "rank": 5,
+        "title": "Piping",
+        "page_id": "770546",
+        "url": "https://en.wikipedia.org/wiki/Piping",
+        "snippet": "usually performed with the assistance of a specialized ( finite element ) pipe stress analysis computer programs such as AutoPIPE, CAEPIPE, CAESAR, PASS/START-PROF"
+      },
+      {
+        "rank": 6,
+        "title": "Stress–strain analysis",
+        "page_id": "542396",
+        "url": "https://en.wikipedia.org/wiki/Stress–strain_analysis",
+        "snippet": "Stress –strain analysis (or stress analysis ) is an engineering discipline that uses many methods to determine the stresses and strains in materials and"
+      },
+      {
+        "rank": 7,
+        "title": "Slope stability analysis",
+        "page_id": "23897117",
+        "url": "https://en.wikipedia.org/wiki/Slope_stability_analysis",
+        "snippet": "g. limit equilibrium analysis combined with finite element groundwater flow and stress analysis ; coupled particle flow and finite -difference analyses;"
+      },
+      {
+        "rank": 8,
+        "title": "Structural analysis",
+        "page_id": "306543",
+        "url": "https://en.wikipedia.org/wiki/Structural_analysis",
+        "snippet": "used numerical approximation in structural analysis is the finite element method (FEM). The finite element method approximates a structure as an assembly"
+      },
+      {
+        "rank": 9,
+        "title": "Finite volume method",
+        "page_id": "345017",
+        "url": "https://en.wikipedia.org/wiki/Finite_volume_method",
+        "snippet": "(2000-06-01). \"Comparison of finite element and finite volume methods application in geometrically nonlinear stress analysis \". Applied Mathematical Modelling"
+      },
+      {
+        "rank": 10,
+        "title": "Objective stress rate",
+        "page_id": "39796969",
+        "url": "https://en.wikipedia.org/wiki/Objective_stress_rate",
+        "snippet": "Energy-Conservation Error Due to Use of Green–Naghdi Objective Stress Rate in Commercial Finite - Element Codes and Its Compensation.\" ASME Journal of Applied Mechanics"
+      }
+    ]
+  },
+  "Q24": {
+    "status": "ok",
+    "query": "optical coherence tomography",
+    "collected_at": "2026-11-26T14:30:53.583705+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=optical+coherence+tomography&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Optical coherence tomography",
+        "page_id": "628583",
+        "url": "https://en.wikipedia.org/wiki/Optical_coherence_tomography",
+        "snippet": "Optical coherence tomography (OCT) is a high-resolution imaging technique with most of its applications in medicine and biology. OCT uses coherent near-infrared"
+      },
+      {
+        "rank": 2,
+        "title": "Tomography",
+        "page_id": "385523",
+        "url": "https://en.wikipedia.org/wiki/Tomography",
+        "snippet": "higher computing cost. Although MRI (magnetic resonance imaging), optical coherence tomography and ultrasound are transmission methods, they typically do not"
+      },
+      {
+        "rank": 3,
+        "title": "Coherence length",
+        "page_id": "40893",
+        "url": "https://en.wikipedia.org/wiki/Coherence_length",
+        "snippet": "In optical communications and optical coherence tomography (OCT), assuming that the source has a Gaussian emission spectrum, the roundtrip coherence length"
+      },
+      {
+        "rank": 4,
+        "title": "David Huang (ophthalmologist)",
+        "page_id": "78921474",
+        "url": "https://en.wikipedia.org/wiki/David_Huang_(ophthalmologist)",
+        "snippet": "biomedical engineer, and inventor best known for co‑inventing optical coherence tomography (OCT), an imaging modality used in ophthalmology and cardiology"
+      },
+      {
+        "rank": 5,
+        "title": "Endoscopic optical coherence tomography imaging",
+        "page_id": "51566338",
+        "url": "https://en.wikipedia.org/wiki/Endoscopic_optical_coherence_tomography_imaging",
+        "snippet": "optical coherence tomography , also intravascular optical coherence tomography is a catheter-based imaging application of optical coherence tomography"
+      },
+      {
+        "rank": 6,
+        "title": "Optical coherence tomography angiography",
+        "page_id": "59269460",
+        "url": "https://en.wikipedia.org/wiki/Optical_coherence_tomography_angiography",
+        "snippet": "Optical coherence tomography angiography (OCTA) is a non-invasive imaging technique based on optical coherence tomography (OCT) developed to visualize"
+      },
+      {
+        "rank": 7,
+        "title": "Spectroscopic optical coherence tomography",
+        "page_id": "63847941",
+        "url": "https://en.wikipedia.org/wiki/Spectroscopic_optical_coherence_tomography",
+        "snippet": "Spectroscopic optical coherence tomography (SOCT) is an optical imaging and sensing technique, which provides localized spectroscopic information of a"
+      },
+      {
+        "rank": 8,
+        "title": "Neurovascular unit",
+        "page_id": "66221805",
+        "url": "https://en.wikipedia.org/wiki/Neurovascular_unit",
+        "snippet": "compared to microscopy techniques. Optical coherence tomography (OCT) is an imaging technique that utilizes low- coherence interferometry to generate high-resolution"
+      },
+      {
+        "rank": 9,
+        "title": "Coherence (physics)",
+        "page_id": "240011",
+        "url": "https://en.wikipedia.org/wiki/Coherence_(physics)",
+        "snippet": "of coherence is the basis for commercial applications such as holography, the Sagnac gyroscope, radio antenna arrays, optical coherence tomography and"
+      },
+      {
+        "rank": 10,
+        "title": "Quantum optical coherence tomography",
+        "page_id": "67399793",
+        "url": "https://en.wikipedia.org/wiki/Quantum_optical_coherence_tomography",
+        "snippet": "Quantum optical coherence tomography (Q-OCT) is an imaging technique that uses nonclassical (quantum) light sources to generate high-resolution images"
+      }
+    ]
+  },
+  "Q25": {
+    "status": "ok",
+    "query": "gravitational waves interferometer",
+    "collected_at": "2026-11-26T14:30:56.046744+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=gravitational+waves+interferometer&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Gravitational-wave observatory",
+        "page_id": "11084869",
+        "url": "https://en.wikipedia.org/wiki/Gravitational-wave_observatory",
+        "snippet": "present-day generation of laser interferometers has reached the necessary sensitivity to detect gravitational waves from astronomical sources, thus forming"
+      },
+      {
+        "rank": 2,
+        "title": "LIGO",
+        "page_id": "81610",
+        "url": "https://en.wikipedia.org/wiki/LIGO",
+        "snippet": "Laser Interferometer Gravitational - Wave Observatory (LIGO) is a large-scale physics experiment and observatory designed to detect cosmic gravitational waves"
+      },
+      {
+        "rank": 3,
+        "title": "Laser Interferometer Space Antenna",
+        "page_id": "364369",
+        "url": "https://en.wikipedia.org/wiki/Laser_Interferometer_Space_Antenna",
+        "snippet": "The Laser Interferometer Space Antenna (LISA) is a planned European space mission to detect and measure gravitational waves —slight ripples in the fabric"
+      },
+      {
+        "rank": 4,
+        "title": "Virgo interferometer",
+        "page_id": "6762618",
+        "url": "https://en.wikipedia.org/wiki/Virgo_interferometer",
+        "snippet": "interferometer is a large-scale scientific instrument near Pisa, Italy, for detecting gravitational waves . The detector is a Michelson interferometer"
+      },
+      {
+        "rank": 5,
+        "title": "Deci-hertz Interferometer Gravitational wave Observatory",
+        "page_id": "30708647",
+        "url": "https://en.wikipedia.org/wiki/Deci-hertz_Interferometer_Gravitational_wave_Observatory",
+        "snippet": "The DECi-hertz Interferometer Gravitational wave Observatory (or DECIGO) is a proposed Japanese space-based gravitational wave observatory. The laser"
+      },
+      {
+        "rank": 6,
+        "title": "Gravitational-wave astronomy",
+        "page_id": "11084989",
+        "url": "https://en.wikipedia.org/wiki/Gravitational-wave_astronomy",
+        "snippet": "Gravitational - wave astronomy is a subfield of astronomy concerned with the detection and study of gravitational waves emitted by astrophysical sources"
+      },
+      {
+        "rank": 7,
+        "title": "Atom interferometer",
+        "page_id": "1835170",
+        "url": "https://en.wikipedia.org/wiki/Atom_interferometer",
+        "snippet": "for light. Atom interferometers measure the difference in phase acquired by atomic matter waves traversing different paths. Matter waves may be controlled"
+      },
+      {
+        "rank": 8,
+        "title": "Michelson interferometer",
+        "page_id": "582263",
+        "url": "https://en.wikipedia.org/wiki/Michelson_interferometer",
+        "snippet": "another application of the Michelson interferometer , LIGO, made the first direct observation of gravitational waves . That observation confirmed an important"
+      },
+      {
+        "rank": 9,
+        "title": "Ground-based interferometric gravitational-wave search",
+        "page_id": "76920619",
+        "url": "https://en.wikipedia.org/wiki/Ground-based_interferometric_gravitational-wave_search",
+        "snippet": "gravitational - wave search refers to the use of extremely large interferometers built on the ground to passively detect (or \"observe\") gravitational wave"
+      },
+      {
+        "rank": 10,
+        "title": "First observation of gravitational waves",
+        "page_id": "49396186",
+        "url": "https://en.wikipedia.org/wiki/First_observation_of_gravitational_waves",
+        "snippet": "detection of gravitational waves \" (11:47) by the Max Planck Institute for Gravitational Physics (22 February 2016) Video: \"LIGO Hears Gravitational Waves Einstein"
+      }
+    ]
+  },
+  "Q26": {
+    "status": "ok",
+    "query": "CRISPR Cas9 gene editing",
+    "collected_at": "2026-11-26T14:30:58.549090+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=CRISPR+Cas9+gene+editing&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "CRISPR gene editing",
+        "page_id": "59990826",
+        "url": "https://en.wikipedia.org/wiki/CRISPR_gene_editing",
+        "snippet": "CRISPR gene editing (/ˈkrɪspər/; (an abbreviation for \"clustered regularly interspaced short palindromic repeats\") is a genetic engineering technique"
+      },
+      {
+        "rank": 2,
+        "title": "Genome-wide CRISPR-Cas9 knockout screens",
+        "page_id": "63202233",
+        "url": "https://en.wikipedia.org/wiki/Genome-wide_CRISPR-Cas9_knockout_screens",
+        "snippet": "utilises the CRISPR - Cas9 gene editing system, coupled with libraries of single guide RNAs (sgRNAs), which are designed to target every gene in the genome"
+      },
+      {
+        "rank": 3,
+        "title": "CRISPR",
+        "page_id": "2146034",
+        "url": "https://en.wikipedia.org/wiki/CRISPR",
+        "snippet": "with CRISPR sequences form the basis of a technology known as CRISPR - Cas9 that can be used to edit genes within living organisms. This editing process"
+      },
+      {
+        "rank": 4,
+        "title": "He Jiankui affair",
+        "page_id": "59162859",
+        "url": "https://en.wikipedia.org/wiki/He_Jiankui_affair",
+        "snippet": "addition, use of CRISPR gene editing ( CRISPR / Cas9 ), a technology for modifying DNA. The embryos' genomes were edited to inactivate the CCR5 gene in an attempt"
+      },
+      {
+        "rank": 5,
+        "title": "CRISPR Therapeutics",
+        "page_id": "66323247",
+        "url": "https://en.wikipedia.org/wiki/CRISPR_Therapeutics",
+        "snippet": "April 2023[update]. CTX310 a CRISPR - Cas9 gene - editing therapy in development designed to permanently turn off the ANGPTL3 gene in the liver to lower bad"
+      },
+      {
+        "rank": 6,
+        "title": "Cas9",
+        "page_id": "38570862",
+        "url": "https://en.wikipedia.org/wiki/Cas9",
+        "snippet": "as a CRISPR genome editing tool. The CRISPR - Cas9 system is widely used in genetic engineering, medicine, agriculture, and biotechnology. The Cas9 endonuclease"
+      },
+      {
+        "rank": 7,
+        "title": "Gene drive",
+        "page_id": "43335980",
+        "url": "https://en.wikipedia.org/wiki/Gene_drive",
+        "snippet": "genome edits that would affect the germline, including those related to CRISPR - Cas9 technologies, but supported continued basic research and gene editing that"
+      },
+      {
+        "rank": 8,
+        "title": "Jennifer Doudna",
+        "page_id": "36836014",
+        "url": "https://en.wikipedia.org/wiki/Jennifer_Doudna",
+        "snippet": "February 19, 1964) is an American biochemist who has pioneered work in CRISPR gene editing , and made other fundamental contributions in biochemistry and genetics"
+      },
+      {
+        "rank": 9,
+        "title": "Cas12a",
+        "page_id": "48343282",
+        "url": "https://en.wikipedia.org/wiki/Cas12a",
+        "snippet": "CRISPR - CAS9 , TALENS and ZFNS – the battle in gene editing https://www.ptglab.com/news/blog/ crispr - cas9 -talens-and-zfns-the-battle-in- gene - editing / Archived"
+      },
+      {
+        "rank": 10,
+        "title": "Prime editing",
+        "page_id": "62129266",
+        "url": "https://en.wikipedia.org/wiki/Prime_editing",
+        "snippet": "methodologies similar to precursor genome editing technologies, including CRISPR / Cas9 and Base editing . Prime editing has been used on some animal models of"
+      }
+    ]
+  },
+  "Q27": {
+    "status": "ok",
+    "query": "protein folding prediction",
+    "collected_at": "2026-11-26T14:31:00.912700+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=protein+folding+prediction&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "AlphaFold",
+        "page_id": "59766171",
+        "url": "https://en.wikipedia.org/wiki/AlphaFold",
+        "snippet": "Alpha Fold is an artificial intelligence (AI) program developed by DeepMind, a subsidiary of Alphabet, which performs predictions of protein structure."
+      },
+      {
+        "rank": 2,
+        "title": "Protein folding",
+        "page_id": "52085",
+        "url": "https://en.wikipedia.org/wiki/Protein_folding",
+        "snippet": "Protein folding is the physical process by which a protein , after synthesis by a ribosome as a linear chain of amino acids, changes from an unstable random"
+      },
+      {
+        "rank": 3,
+        "title": "Protein structure prediction",
+        "page_id": "306769",
+        "url": "https://en.wikipedia.org/wiki/Protein_structure_prediction",
+        "snippet": "Protein structure prediction is the inference of the three-dimensional structure of a protein from its amino acid sequence—that is, the prediction of its"
+      },
+      {
+        "rank": 4,
+        "title": "List of protein structure prediction software",
+        "page_id": "7672374",
+        "url": "https://en.wikipedia.org/wiki/List_of_protein_structure_prediction_software",
+        "snippet": "of protein structure prediction software summarizes notable used software tools in protein structure prediction , including homology modeling, protein threading"
+      },
+      {
+        "rank": 5,
+        "title": "Folding@home",
+        "page_id": "413102",
+        "url": "https://en.wikipedia.org/wiki/Folding@home",
+        "snippet": "diseases by the means of simulating protein dynamics. This includes the process of protein folding and the movements of proteins , and is reliant on simulations"
+      },
+      {
+        "rank": 6,
+        "title": "Protein tertiary structure",
+        "page_id": "31032",
+        "url": "https://en.wikipedia.org/wiki/Protein_tertiary_structure",
+        "snippet": "structure prediction can be found at List of protein structure prediction software. Folding (chemistry) I-TASSER Nucleic acid tertiary structure Protein contact"
+      },
+      {
+        "rank": 7,
+        "title": "Hypothetical protein",
+        "page_id": "4635854",
+        "url": "https://en.wikipedia.org/wiki/Hypothetical_protein",
+        "snippet": "computational analysis of genomic DNA sequence. Hypothetical proteins are created by gene prediction software during genome analysis. When the bioinformatic"
+      },
+      {
+        "rank": 8,
+        "title": "John M. Jumper",
+        "page_id": "69587059",
+        "url": "https://en.wikipedia.org/wiki/John_M._Jumper",
+        "snippet": "Prize in Chemistry for their protein folding predictions , the other half went to David Baker for computational protein design. In 2025, Jumper received"
+      },
+      {
+        "rank": 9,
+        "title": "De novo protein structure prediction",
+        "page_id": "9378673",
+        "url": "https://en.wikipedia.org/wiki/De_novo_protein_structure_prediction",
+        "snippet": "In computational biology, de novo protein structure prediction refers to an algorithmic process by which protein tertiary structure is predicted from its"
+      },
+      {
+        "rank": 10,
+        "title": "Google DeepMind",
+        "page_id": "41755648",
+        "url": "https://en.wikipedia.org/wiki/Google_DeepMind",
+        "snippet": "the problem of protein folding with Alpha Fold , which achieved state of the art records on benchmark tests for protein folding prediction . In July 2022"
+      }
+    ]
+  },
+  "Q28": {
+    "status": "ok",
+    "query": "semiconductor doping p n junction",
+    "collected_at": "2026-11-26T14:31:03.402121+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=semiconductor+doping+p+n+junction&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Doping (semiconductor)",
+        "page_id": "860861",
+        "url": "https://en.wikipedia.org/wiki/Doping_(semiconductor)",
+        "snippet": "often shown as n + for n -type doping or p + for p -type doping . (See the article on semiconductors for a more detailed description of the doping mechanism.)"
+      },
+      {
+        "rank": 2,
+        "title": "P–n junction",
+        "page_id": "571755",
+        "url": "https://en.wikipedia.org/wiki/P–n_junction",
+        "snippet": "A p – n junction is a combination of two types of semiconductor materials, p -type and n -type, in a single crystal. The \" n \" (negative) side contains freely-moving"
+      },
+      {
+        "rank": 3,
+        "title": "Extrinsic semiconductor",
+        "page_id": "9512766",
+        "url": "https://en.wikipedia.org/wiki/Extrinsic_semiconductor",
+        "snippet": "extrinsic semiconductor is one that has been doped ; during manufacture of the semiconductor crystal a trace element or chemical called a doping agent has"
+      },
+      {
+        "rank": 4,
+        "title": "Metal–semiconductor junction",
+        "page_id": "14355756",
+        "url": "https://en.wikipedia.org/wiki/Metal–semiconductor_junction",
+        "snippet": "semiconductor's bands near the junction is typically independent of the semiconductor's doping level, so the n -type and p -type Schottky barrier heights"
+      },
+      {
+        "rank": 5,
+        "title": "Semiconductor",
+        "page_id": "27709",
+        "url": "https://en.wikipedia.org/wiki/Semiconductor",
+        "snippet": "(\" doping \") to its crystal structure. When two regions with different doping levels are present in the same crystal, they form a semiconductor junction ."
+      },
+      {
+        "rank": 6,
+        "title": "P–n diode",
+        "page_id": "34024652",
+        "url": "https://en.wikipedia.org/wiki/P–n_diode",
+        "snippet": "A p – n diode is a type of semiconductor diode based upon the p – n junction . The diode conducts current in only one direction, and it is made by joining a"
+      },
+      {
+        "rank": 7,
+        "title": "Bipolar junction transistor",
+        "page_id": "49338",
+        "url": "https://en.wikipedia.org/wiki/Bipolar_junction_transistor",
+        "snippet": "the doping of the semiconductor material as it is grown, by depositing metal pellets to form alloy junctions , or by such methods as diffusion of n -type"
+      },
+      {
+        "rank": 8,
+        "title": "Semiconductor device",
+        "page_id": "40344",
+        "url": "https://en.wikipedia.org/wiki/Semiconductor_device",
+        "snippet": "to date. A semiconductor diode is a device typically made from a single p – n junction . At the junction of a p -type and an n -type semiconductor , there forms"
+      },
+      {
+        "rank": 9,
+        "title": "Schottky diode",
+        "page_id": "227130",
+        "url": "https://en.wikipedia.org/wiki/Schottky_diode",
+        "snippet": "Schottky barrier diode or hot-carrier diode, is a semiconductor diode formed by the junction of a semiconductor with a metal. It has a low forward voltage drop"
+      },
+      {
+        "rank": 10,
+        "title": "P–n junction isolation",
+        "page_id": "3082038",
+        "url": "https://en.wikipedia.org/wiki/P–n_junction_isolation",
+        "snippet": "biased p – n junctions . By surrounding a transistor, resistor, capacitor or other component on an IC with semiconductor material which is doped using an"
+      }
+    ]
+  },
+  "Q29": {
+    "status": "ok",
+    "query": "public key cryptography RSA",
+    "collected_at": "2026-11-26T14:31:05.818413+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=public+key+cryptography+RSA&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "RSA cryptosystem",
+        "page_id": "25385",
+        "url": "https://en.wikipedia.org/wiki/RSA_cryptosystem",
+        "snippet": "symmetric key in a hybrid cryptosystem) such as RSAES-OAEP, and public - key key encapsulation. In RSA -based cryptography , a user's private key —which can"
+      },
+      {
+        "rank": 2,
+        "title": "Public-key cryptography",
+        "page_id": "24222",
+        "url": "https://en.wikipedia.org/wiki/Public-key_cryptography",
+        "snippet": "Public - key cryptography , or asymmetric cryptography , is the field of cryptographic systems that use pairs of related keys . Each key pair consists of a"
+      },
+      {
+        "rank": 3,
+        "title": "RSA problem",
+        "page_id": "1544741",
+        "url": "https://en.wikipedia.org/wiki/RSA_problem",
+        "snippet": "In cryptography , the RSA problem summarizes the task of performing an RSA private- key operation given only the public key . The RSA algorithm raises a"
+      },
+      {
+        "rank": 4,
+        "title": "Key (cryptography)",
+        "page_id": "53039",
+        "url": "https://en.wikipedia.org/wiki/Key_(cryptography)",
+        "snippet": "However, current RSA key sizes would all be cracked quickly with a powerful quantum computer. \"The keys used in public key cryptography have some mathematical"
+      },
+      {
+        "rank": 5,
+        "title": "Elliptic-curve cryptography",
+        "page_id": "9966",
+        "url": "https://en.wikipedia.org/wiki/Elliptic-curve_cryptography",
+        "snippet": "Elliptic-curve cryptography (ECC) is an approach to public - key cryptography based on the algebraic structure of elliptic curves over finite fields. ECC"
+      },
+      {
+        "rank": 6,
+        "title": "Hash-based cryptography",
+        "page_id": "53957696",
+        "url": "https://en.wikipedia.org/wiki/Hash-based_cryptography",
+        "snippet": "Hash-based cryptography is the generic term for constructions of cryptographic primitives based on the security of hash functions. It is of interest as"
+      },
+      {
+        "rank": 7,
+        "title": "Diffie–Hellman key exchange",
+        "page_id": "7903",
+        "url": "https://en.wikipedia.org/wiki/Diffie–Hellman_key_exchange",
+        "snippet": "original public key protocols in 1978. The method was followed shortly after by the RSA cryptosystem, an implementation of public - key cryptography using"
+      },
+      {
+        "rank": 8,
+        "title": "Cryptography",
+        "page_id": "18934432",
+        "url": "https://en.wikipedia.org/wiki/Cryptography",
+        "snippet": "using that key . Examples of asymmetric systems include Diffie–Hellman key exchange, RSA (Rivest–Shamir–Adleman), ECC (Elliptic Curve Cryptography ), and Post-quantum"
+      },
+      {
+        "rank": 9,
+        "title": "PKCS",
+        "page_id": "616418",
+        "url": "https://en.wikipedia.org/wiki/PKCS",
+        "snippet": "Public Key Cryptography Standards (PKCS) are a group of public - key cryptography intervendor standards first developed by RSA Security, with involvement"
+      },
+      {
+        "rank": 10,
+        "title": "Public key certificate",
+        "page_id": "223796",
+        "url": "https://en.wikipedia.org/wiki/Public_key_certificate",
+        "snippet": "In cryptography , a public - key certificate, also known as a digital certificate or identity certificate, is an electronic document used to prove the valid"
+      }
+    ]
+  },
+  "Q30": {
+    "status": "ok",
+    "query": "variable byte compression inverted index",
+    "collected_at": "2026-11-26T14:31:08.182224+00:00",
+    "request_url": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=variable+byte+compression+inverted+index&srlimit=10&srprop=snippet",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Hash function",
+        "page_id": "13790",
+        "url": "https://en.wikipedia.org/wiki/Hash_function",
+        "snippet": "like an integer, or variable -length, like a name. In some cases, the key is the datum itself. The output is a hash code used to index a hash table holding"
+      },
+      {
+        "rank": 2,
+        "title": "Bit array",
+        "page_id": "1189937",
+        "url": "https://en.wikipedia.org/wiki/Bit_array",
+        "snippet": "streams of bits, we might compress them as streams of bytes or words (see Bitmap index ( compression )). Bit arrays, despite their simplicity, have a number"
+      },
+      {
+        "rank": 3,
+        "title": "Discrete cosine transform",
+        "page_id": "59962",
+        "url": "https://en.wikipedia.org/wiki/Discrete_cosine_transform",
+        "snippet": "Imaging coding systems, variable temporal length 3D DCT coding, video coding algorithms, adaptive video coding and 3D compression . Due to enhancement in"
+      },
+      {
+        "rank": 4,
+        "title": "Digital data",
+        "page_id": "8276",
+        "url": "https://en.wikipedia.org/wiki/Digital_data",
+        "snippet": "sequentially. Indexes are a way to copy out keys and location addresses from data structures in files, tables and data sets, then organize them using inverted tree"
+      },
+      {
+        "rank": 5,
+        "title": "BLAKE (hash function)",
+        "page_id": "30054589",
+        "url": "https://en.wikipedia.org/wiki/BLAKE_(hash_function)",
+        "snippet": ".2128 Count of bytes that have been fed into the Compression IsLastBlock: Boolean Indicates if this is the final round of compression Output: h Updated"
+      },
+      {
+        "rank": 6,
+        "title": "Block cipher mode of operation",
+        "page_id": "160202",
+        "url": "https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation",
+        "snippet": "append a byte with value 128 (hex 80), followed by as many zero bytes as needed to fill the last block, or pad the last block with n bytes all with value"
+      },
+      {
+        "rank": 7,
+        "title": "Bloom filter",
+        "page_id": "602211",
+        "url": "https://en.wikipedia.org/wiki/Bloom_filter",
+        "snippet": "filters for its search index , BitFunnel. Bloom filters provided lower cost than the previous Bing index , which was based on inverted files. The Squid Web"
+      },
+      {
+        "rank": 8,
+        "title": "PostgreSQL",
+        "page_id": "23824",
+        "url": "https://en.wikipedia.org/wiki/PostgreSQL",
+        "snippet": "regular B-tree and hash table indexes , and four index access methods: generalized search trees (GiST), generalized inverted indexes (GIN), Space-Partitioned"
+      },
+      {
+        "rank": 9,
+        "title": "List of IEC standards",
+        "page_id": "463506",
+        "url": "https://en.wikipedia.org/wiki/List_of_IEC_standards",
+        "snippet": "electrical purposes IEC 60821 VMEbus – Microprocessor system bus for 1 byte to 4 byte data IEC 60822 VSB – Parallel Sub-system Bus of the IEC 60821 VMEbus"
+      },
+      {
+        "rank": 10,
+        "title": "Adobe Flash",
+        "page_id": "20947",
+        "url": "https://en.wikipedia.org/wiki/Adobe_Flash",
+        "snippet": "Introducing Flash Player 11.4/AIR 3.4 beta!, by Thibault Imbert (Adobe employee), Byte Array \"1 Billion AIR Installations\". Ben Forta. May 9, 2014. Archived from"
+      }
+    ]
+  }
+}

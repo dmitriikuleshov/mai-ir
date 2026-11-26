@@ -14,13 +14,13 @@ linguistics:
   # Число документов в одной MongoDB-пачке.
   batch_size: 100
   # Минимальное число токенов для принятия документа.
-  minimum_words: 200
+  minimum_words: 100
   # Максимальная длина одного токена в Unicode-символах.
   maximum_token_length: 100
   # null обрабатывает весь корпус.
   max_documents: null
   # Изменение версии заставляет заново обработать документы.
-  parser_version: 8
+  parser_version: 9
   # Словари задаются относительно этого YAML-файла.
   lemma_dictionary: ../resources/wordnet_exceptions.tsv
   lemma_vocabulary: ../resources/wordnet_lemmas.txt

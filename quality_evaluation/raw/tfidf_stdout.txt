@@ -1,0 +1,1890 @@
+Запрос: database transaction isolation
+Совпало документов: 197066 | показано: 20 | поиск: 32.925 мс
+1. 2.1.1.18 E152, Basic SET TRANSACTION statement
+   score=0.254092 | источник: microsoft_learn | doc=696775 | oid=6b043fc6d9bb282a038840a3
+   https://learn.microsoft.com/en-us/openspecs/sql_standards/ms-tsqliso02/5383babc-27c4-4f51-ae11-5c4df8f0d49c
+2. Transaction Isolation
+   score=0.245580 | источник: microsoft_learn | doc=580552 | oid=6b038936d9bb282a0384bd77
+   https://learn.microsoft.com/en-us/sql/odbc/reference/develop-app/transaction-isolation?view=sql-server-ver17
+3. 3.2.7.31 Set Transaction Attributes
+   score=0.236963 | источник: microsoft_learn | doc=668988 | oid=6b040ecad9bb282a03875473
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-dtco/98d9764b-dc5c-4ea7-b049-66f434c950c1
+4. Cursor Transaction Isolation Level
+   score=0.222585 | источник: microsoft_learn | doc=578931 | oid=6b038642d9bb282a0384b4b0
+   https://learn.microsoft.com/en-us/sql/relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level?view=sql-server-ver15
+5. Setting the Transaction Isolation Level
+   score=0.222247 | источник: microsoft_learn | doc=258489 | oid=6b0049e8321fadc016c3c0ab
+   https://learn.microsoft.com/en-us/windows/win32/cossdk/setting-the-transaction-isolation-level
+6. Configuring Transaction Isolation Levels
+   score=0.212799 | источник: microsoft_learn | doc=267174 | oid=6b00d25dbeada0530d8730e3
+   https://learn.microsoft.com/en-us/windows/win32/cossdk/configuring-transaction-isolation-levels
+7. 2.1.2.38 F121-02, SET TRANSACTION statement: DIAGNOSTICS SIZE clause
+   score=0.210623 | источник: microsoft_learn | doc=698680 | oid=6b0442c5d9bb282a03884eee
+   https://learn.microsoft.com/en-us/openspecs/sql_standards/ms-tsqliso02/7bc61a21-d00f-4a26-a65a-4e514f6e58e8
+8. MSSQLSERVER_41368
+   score=0.207909 | источник: microsoft_learn | doc=575632 | oid=6b038282d9bb282a0384a17b
+   https://learn.microsoft.com/en-us/sql/relational-databases/errors-events/mssqlserver-41368-database-engine-error?view=sql-server-ver17
+9. Record.ReadIsolation([IsolationLevel]) Method
+   score=0.206630 | источник: microsoft_learn | doc=221231 | oid=6ae828790aaedde439e4b286
+   https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/methods-auto/record/record-readisolation-method
+10. supportsTransactionIsolationLevel Method (SQLServerDatabaseMetaData)
+   score=0.206310 | источник: microsoft_learn | doc=586943 | oid=6b03938dd9bb282a0384e1d9
+   https://learn.microsoft.com/en-us/sql/connect/jdbc/reference/supportstransactionisolationlevel-method-sqlserverdatabasemetadata?view=sql-server-ver17
+11. getDefaultTransactionIsolation Method (SQLServerDatabaseMetaData)
+   score=0.205790 | источник: microsoft_learn | doc=571486 | oid=6b037d27d9bb282a038489c7
+   https://learn.microsoft.com/en-us/sql/connect/jdbc/reference/getdefaulttransactionisolation-method-sqlserverdatabasemetadata?view=sql-server-ver17
+12. SQL Server, Transactions object
+   score=0.201480 | источник: microsoft_learn | doc=568673 | oid=6b037773d9bb282a038478ed
+   https://learn.microsoft.com/en-us/sql/relational-databases/performance-monitor/sql-server-transactions-object?view=sql-server-ver17
+13. Transaction isolation levels
+   score=0.200585 | источник: microsoft_learn | doc=576526 | oid=6b038385d9bb282a0384a64b
+   https://learn.microsoft.com/en-us/sql/t-sql/language-elements/transaction-isolation-levels?view=sql-server-ver17
+14. 2.2.6.9 OLETX_ISOLATION_LEVEL
+   score=0.197892 | источник: microsoft_learn | doc=639815 | oid=6b03df4dd9bb282a03866ad0
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-dtco/0d6f3fa3-7074-4193-8621-119e418b05b5
+15. Setting the Transaction Isolation Level
+   score=0.197421 | источник: microsoft_learn | doc=571025 | oid=6b037c9ad9bb282a038487ed
+   https://learn.microsoft.com/en-us/sql/odbc/reference/develop-app/setting-the-transaction-isolation-level?view=sql-server-ver17
+16. MSSQLSERVER_3961
+   score=0.196762 | источник: microsoft_learn | doc=585921 | oid=6b039258d9bb282a0384dbf3
+   https://learn.microsoft.com/en-us/sql/relational-databases/errors-events/mssqlserver-3961-database-engine-error?view=sql-server-ver17
+17. COM+ Transactions Tasks
+   score=0.196116 | источник: microsoft_learn | doc=302870 | oid=6b0149d6beada0530d882152
+   https://learn.microsoft.com/en-us/windows/win32/cossdk/com--transactions-tasks
+18. Optimize database performance
+   score=0.193198 | источник: microsoft_learn | doc=56383 | oid=6ae1ec072c80ac9b21b925df
+   https://learn.microsoft.com/en-us/training/modules/optimize-database-performance
+19. 2.1.1.19 E152-02, SET TRANSACTION statement: READ ONLY and READ WRITE clauses
+   score=0.193190 | источник: microsoft_learn | doc=707455 | oid=6b0452d9d9bb282a0388947d
+   https://learn.microsoft.com/en-us/openspecs/sql_standards/ms-tsqliso02/95491b55-df20-4ed4-9384-7fdc73d3b9f1
+20. 3.4.7.10 Create Voter Enlistment Success
+   score=0.192961 | источник: microsoft_learn | doc=626511 | oid=6b03cbf2d9bb282a03860427
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-dtco/5a2dcfba-5cd8-4842-99a6-1296839d43ed
+
+Запрос: distributed database replication
+Совпало документов: 212116 | показано: 20 | поиск: 36.813 мс
+1. 4.1.11.1.5 NT4_REPLICATION_STATE
+   score=0.192982 | источник: microsoft_learn | doc=627716 | oid=6b03cdc2d9bb282a03860da8
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-drsr/a7d8f924-3fc0-4dc1-89f3-59f4521cf0e7
+2. Replication Views (Transact-SQL)
+   score=0.192696 | источник: microsoft_learn | doc=577674 | oid=6b0384ced9bb282a0384acbb
+   https://learn.microsoft.com/en-us/sql/relational-databases/system-views/replication-views-transact-sql?view=sql-server-ver17
+3. Database Mirroring: Interoperability and Coexistence (SQL Server)
+   score=0.191610 | источник: microsoft_learn | doc=586139 | oid=6b039297d9bb282a0384dd33
+   https://learn.microsoft.com/en-us/sql/database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server?view=sql-server-ver17
+4. 2.10 Additional Considerations
+   score=0.188900 | источник: microsoft_learn | doc=630297 | oid=6b03d19cd9bb282a03862347
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-fsmod/6d322de5-cd61-4c95-a2c3-540933e75cd1
+5. DFSR Module
+   score=0.187327 | источник: microsoft_learn | doc=115820 | oid=6ae2627c2c80ac9b21ba8b4f
+   https://learn.microsoft.com/en-us/powershell/module/dfsr?view=windowsserver2025-ps
+6. sp_replcounters (Transact-SQL)
+   score=0.186571 | источник: microsoft_learn | doc=587495 | oid=6b03942cd9bb282a0384e66f
+   https://learn.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/sp-replcounters-transact-sql?view=sql-server-ver17
+7. 1 Introduction
+   score=0.183867 | источник: microsoft_learn | doc=697748 | oid=6b044148d9bb282a0388481d
+   https://learn.microsoft.com/en-us/openspecs/sql_data_portability/ms-dprep/71619a5b-e12e-4884-8b3d-1aa87c936339
+8. Monitor Fabric mirrored Fabric SQL database replication
+   score=0.182869 | источник: microsoft_learn | doc=961801 | oid=6b062e9bd9bb282a038ed856
+   https://learn.microsoft.com/en-us/fabric/database/sql/mirroring-monitor
+9. Data transfers between sites
+   score=0.182856 | источник: microsoft_learn | doc=894996 | oid=6b05e298d9bb282a038d5b98
+   https://learn.microsoft.com/en-us/intune/configmgr/core/plan-design/hierarchy/data-transfers-between-sites
+10. Understand the Active Directory Domain Services database and SYSVOL
+   score=0.181019 | источник: microsoft_learn | doc=53412 | oid=6ae1e6da2c80ac9b21b914cd
+   https://learn.microsoft.com/en-us/training/modules/understand-active-directory-database
+11. SQL Data Sync retirement: Migrate to alternative solutions
+   score=0.179632 | источник: microsoft_learn | doc=406504 | oid=6b02affdbeada0530d8aacbd
+   https://learn.microsoft.com/en-us/azure/azure-sql/database/sql-data-sync-retirement-migration?view=azuresql
+12. Get-Dfsr Clone State
+   score=0.178345 | источник: microsoft_learn | doc=115711 | oid=6ae262442c80ac9b21ba8aa1
+   https://learn.microsoft.com/en-us/powershell/module/dfsr/get-dfsrclonestate?view=windowsserver2025-ps
+13. 3.6 Netlogon NT Replication Details
+   score=0.177064 | источник: microsoft_learn | doc=634762 | oid=6b03d7fcd9bb282a03864473
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-nrpc/f28f9dc8-eeb2-4112-9eec-a466f639c761
+14. MSdbms (Transact-SQL)
+   score=0.175720 | источник: microsoft_learn | doc=573307 | oid=6b037f16d9bb282a038493d6
+   https://learn.microsoft.com/en-us/sql/relational-databases/system-tables/msdbms-transact-sql?view=sql-server-ver17
+15. sp_repltrans (Transact-SQL)
+   score=0.175059 | источник: microsoft_learn | doc=575650 | oid=6b038288d9bb282a0384a18d
+   https://learn.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/sp-repltrans-transact-sql?view=sql-server-ver17
+16. Recover from a DFSR database crash on designated primary member
+   score=0.171146 | источник: microsoft_learn | doc=556214 | oid=6b0366b6d9bb282a03843113
+   https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/recover-from-dfsr-database-crash
+17. 5.136 Nt4ReplicationState
+   score=0.170652 | источник: microsoft_learn | doc=632901 | oid=6b03d54dd9bb282a038635e9
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-drsr/4ee4212d-9100-42ae-ab10-c480bcce73a9
+18. Replication Agents Overview
+   score=0.168892 | источник: microsoft_learn | doc=572339 | oid=6b037e0fd9bb282a03848e6f
+   https://learn.microsoft.com/en-us/sql/relational-databases/replication/agents/replication-agents-overview?view=sql-server-ver17
+19. Always On availability groups: interoperability (SQL Server)
+   score=0.168744 | источник: microsoft_learn | doc=582371 | oid=6b038c9bd9bb282a0384c802
+   https://learn.microsoft.com/en-us/sql/database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server?view=sql-server-ver17
+20. Publication (Peer-to-Peer Replication)
+   score=0.168566 | источник: microsoft_learn | doc=574991 | oid=6b03814bd9bb282a03849ef4
+   https://learn.microsoft.com/en-us/sql/relational-databases/replication/publication-peer-to-peer-replication?view=sql-server-ver17
+
+Запрос: inverted index information retrieval
+Совпало документов: 533149 | показано: 20 | поиск: 74.764 мс
+1. 1.3 Overview
+   score=0.172009 | источник: microsoft_learn | doc=638888 | oid=6b03ddf2d9bb282a038663c1
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-mcis/7968c17c-fe89-48e6-86b4-c67f6178928e
+2. Inverted index
+   score=0.166133 | источник: wikipedia | doc=10573 | oid=6ad9db162a350aca88ff7ceb
+   https://en.wikipedia.org/wiki/Inverted_index
+3. Document retrieval
+   score=0.159649 | источник: wikipedia | doc=10865 | oid=6ad9db9a2a350aca88ff7e37
+   https://en.wikipedia.org/wiki/Document_retrieval
+4. 1.3 Overview
+   score=0.153280 | источник: microsoft_learn | doc=641868 | oid=6b03e27cd9bb282a03867b88
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-wsp/e2a93bd4-71ac-4776-bdb8-6ca602d16b59
+5. Foundry IQ (Azure AI Search) documentation
+   score=0.149859 | источник: microsoft_learn | doc=551581 | oid=6b035f30d9bb282a038417e6
+   https://learn.microsoft.com/en-us/azure/search
+6. Postings list
+   score=0.146276 | источник: wikipedia | doc=779 | oid=6ad9c1482a350aca88ff3fe5
+   https://en.wikipedia.org/wiki/Postings_list
+7. MIB_INVERTEDIFSTACK_TABLE structure
+   score=0.133819 | источник: microsoft_learn | doc=316540 | oid=6b01d759beada0530d88a4de
+   https://learn.microsoft.com/en-us/windows-hardware/drivers/network/mib-invertedifstack-table
+8. Justin Zobel
+   score=0.131527 | источник: wikipedia | doc=11013 | oid=6ad9dbed2a350aca88ff7f06
+   https://en.wikipedia.org/wiki/Justin_Zobel
+9. Quickstart: Agentic retrieval in Azure AI Search using REST APIs
+   score=0.130044 | источник: microsoft_learn | doc=798085 | oid=6b05475ed9bb282a038b684e
+   https://learn.microsoft.com/en-us/samples/azure-samples/azure-search-postman-samples/rest-api-agentic-retrieval-quickstart
+10. 2.1.1.3 Indexes
+   score=0.129554 | источник: microsoft_learn | doc=789997 | oid=6b0530e6d9bb282a038b26bd
+   https://learn.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-axl2/ac630591-487a-44ba-b9a9-6d87ec7c31cc
+11. 2.3.3.9 META_INVERTREGION Record
+   score=0.129520 | источник: microsoft_learn | doc=665675 | oid=6b04088cd9bb282a03873a5a
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-wmf/7d994d5f-1f1d-4858-8e75-d81870ac30e4
+12. Donna Harman
+   score=0.129026 | источник: wikipedia | doc=67121 | oid=6ae1ff0d2c80ac9b21b9683f
+   https://en.wikipedia.org/wiki/Donna_Harman
+13. Quickstart: Agentic retrieval in Azure AI Search using Java
+   score=0.128459 | источник: microsoft_learn | doc=797126 | oid=6b054593d9bb282a038b6201
+   https://learn.microsoft.com/en-us/samples/azure-samples/azure-search-java-samples/java-agentic-retrieval-quickstart
+14. Quickstart: Agentic retrieval in Azure AI Search using Python
+   score=0.126240 | источник: microsoft_learn | doc=799315 | oid=6b0549a7d9bb282a038b6daa
+   https://learn.microsoft.com/en-us/samples/azure-samples/azure-search-python-samples/python-quickstart-agentic-retrieval
+15. Quickstart: Agentic retrieval in Azure AI Search using JavaScript
+   score=0.125460 | источник: microsoft_learn | doc=796613 | oid=6b05448dd9bb282a038b5faf
+   https://learn.microsoft.com/en-us/samples/azure-samples/azure-search-javascript-samples/javascript-quickstart-agentic-retrieval
+16. BitFunnel
+   score=0.125255 | источник: wikipedia | doc=10275 | oid=6ad9da8c2a350aca88ff7bad
+   https://en.wikipedia.org/wiki/BitFunnel
+17. Boolean model of information retrieval
+   score=0.123839 | источник: wikipedia | doc=11129 | oid=6ad9dc262a350aca88ff7fe6
+   https://en.wikipedia.org/wiki/Boolean_model_of_information_retrieval
+18. Quickstart: Agentic retrieval in Azure AI Search using TypeScript
+   score=0.123796 | источник: microsoft_learn | doc=797585 | oid=6b054662d9bb282a038b6608
+   https://learn.microsoft.com/en-us/samples/azure-samples/azure-search-javascript-samples/typescript-quickstart-agentic-retrieval
+19. Developing Retrieval Augmented Generation (RAG) based LLM Systems from PDFs: An Experience Report
+   score=0.122251 | источник: arxiv | doc=71176 | oid=6ae206582c80ac9b21b97af1
+   https://arxiv.org/html/2410.15944v1
+20. Node Collections in NamedNodeMaps and NodeLists
+   score=0.121864 | источник: microsoft_learn | doc=23340 | oid=6ad9f6f42a350aca88ffcf96
+   https://learn.microsoft.com/en-us/dotnet/standard/data/xml/node-collections-in-namednodemaps-and-nodelists
+
+Запрос: C++ memory management
+Совпало документов: 207447 | показано: 20 | поиск: 34.592 мс
+1. Smart Cleanup - Achieve More Reliable Resource Management with Our Custom C++ Classes | Microsoft Learn
+   score=0.209143 | источник: microsoft_learn | doc=931357 | oid=6b060cadd9bb282a038e28f0
+   https://learn.microsoft.com/en-us/archive/msdn-magazine/authors/eric_niebler
+2. Standard C Library Functions
+   score=0.199169 | источник: microsoft_learn | doc=291812 | oid=6b011b1dbeada0530d87f2af
+   https://learn.microsoft.com/en-us/windows/win32/memory/standard-c-library-functions
+3. Memory Management (Memory Management)
+   score=0.179577 | источник: microsoft_learn | doc=270846 | oid=6b00da9ebeada0530d875c26
+   https://learn.microsoft.com/en-us/windows/win32/memory/memory-management
+4. Debug new
+   score=0.171453 | источник: wikipedia | doc=44942 | oid=6ae1d5032c80ac9b21b8e225
+   https://en.wikipedia.org/wiki/Debug_new
+5. C++ Code analysis in Visual Studio
+   score=0.170255 | источник: microsoft_learn | doc=887939 | oid=6b05d9b6d9bb282a038d36b1
+   https://learn.microsoft.com/en-us/cpp/code-quality?view=msvc-170
+6. Memory Management: Heap Allocation
+   score=0.167686 | источник: microsoft_learn | doc=879073 | oid=6b05cefad9bb282a038d04de
+   https://learn.microsoft.com/en-us/cpp/mfc/memory-management-heap-allocation?view=msvc-170
+7. IDebugProgram2::GetMemoryBytes
+   score=0.166309 | источник: microsoft_learn | doc=5622 | oid=6ad9d1e72a350aca88ff5e3c
+   https://learn.microsoft.com/en-us/visualstudio/extensibility/debugger/reference/idebugprogram2-getmemorybytes?view=visualstudio
+8. C++ cross-platform property page reference
+   score=0.164167 | источник: microsoft_learn | doc=882600 | oid=6b05d33ed9bb282a038d1a8f
+   https://learn.microsoft.com/en-us/cpp/cross-platform/cross-platform-prop-pages?view=msvc-170
+9. C++ documentation
+   score=0.163849 | источник: microsoft_learn | doc=876485 | oid=6b05c8e0d9bb282a038cf765
+   https://learn.microsoft.com/en-us/cpp/cpp?view=msvc-170
+10. Warning C26865
+   score=0.162972 | источник: microsoft_learn | doc=882965 | oid=6b05d3abd9bb282a038d1c0b
+   https://learn.microsoft.com/en-us/cpp/code-quality/c26865?view=msvc-170
+11. Using ADO with Microsoft Visual C++
+   score=0.161063 | источник: microsoft_learn | doc=70848 | oid=6ae205bd2c80ac9b21b97937
+   https://learn.microsoft.com/en-us/office/client-developer/access/desktop-database-reference/using-ado-with-microsoft-visual-c
+12. IDebugProperty2::GetMemoryBytes
+   score=0.160834 | источник: microsoft_learn | doc=3497 | oid=6ad9ce002a350aca88ff50cc
+   https://learn.microsoft.com/en-us/visualstudio/extensibility/debugger/reference/idebugproperty2-getmemorybytes?view=visualstudio
+13. IDebugBinder3::GetMemoryObject
+   score=0.160739 | источник: microsoft_learn | doc=2362 | oid=6ad9c85b2a350aca88ff4a0c
+   https://learn.microsoft.com/en-us/visualstudio/extensibility/debugger/reference/idebugbinder3-getmemoryobject?view=visualstudio
+14. CodeSynthesis XSD
+   score=0.160614 | источник: wikipedia | doc=95823 | oid=6ae2392d2c80ac9b21ba10fd
+   https://en.wikipedia.org/wiki/CodeSynthesis_XSD
+15. Extensions That Are Specific to C++/CLI
+   score=0.160533 | источник: microsoft_learn | doc=879220 | oid=6b05cf27d9bb282a038d057d
+   https://learn.microsoft.com/en-us/cpp/extensions/extensions-that-are-specific-to-cpp-cli?view=msvc-170
+16. Memory semantics (computing)
+   score=0.158121 | источник: wikipedia | doc=54970 | oid=6ae1e9912c80ac9b21b91dce
+   https://en.wikipedia.org/wiki/Memory_semantics_(computing)
+17. _query_new_handler
+   score=0.155967 | источник: microsoft_learn | doc=877698 | oid=6b05cad7d9bb282a038cfd07
+   https://learn.microsoft.com/en-us/cpp/c-runtime-library/reference/query-new-handler?view=msvc-170
+18. C++/CLI Tasks
+   score=0.155719 | источник: microsoft_learn | doc=886729 | oid=6b05d838d9bb282a038d2fe4
+   https://learn.microsoft.com/en-us/cpp/dotnet/cpp-cli-tasks?view=msvc-170
+19. C++ standard library header files
+   score=0.155423 | источник: microsoft_learn | doc=883072 | oid=6b05d3cad9bb282a038d1c7c
+   https://learn.microsoft.com/en-us/cpp/standard-library/cpp-standard-library-header-files?view=msvc-170
+20. Windows Remote Management Reference
+   score=0.153925 | источник: microsoft_learn | doc=282030 | oid=6b00f435beada0530d87c9b0
+   https://learn.microsoft.com/en-us/windows/win32/winrm/windows-remote-management-reference
+
+Запрос: C# asynchronous programming
+Совпало документов: 167273 | показано: 20 | поиск: 23.107 мс
+1. C# documentation
+   score=0.229543 | источник: microsoft_learn | doc=29553 | oid=6ae121a12c80ac9b21b8847f
+   https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp
+2. Implement asynchronous tasks
+   score=0.229111 | источник: microsoft_learn | doc=56371 | oid=6ae1ec012c80ac9b21b925d3
+   https://learn.microsoft.com/en-us/training/modules/implement-asynchronous-tasks
+3. Create and manage events
+   score=0.212147 | источник: microsoft_learn | doc=54084 | oid=6ae1e8042c80ac9b21b918a9
+   https://learn.microsoft.com/en-us/training/modules/create-manage-events
+4. Async Sample: Asynchronous programming with async and await in C#
+   score=0.194963 | источник: microsoft_learn | doc=798262 | oid=6b0547b5d9bb282a038b6914
+   https://learn.microsoft.com/en-us/samples/dotnet/samples/async-and-await-cs
+5. C# - The C# Memory Model in Theory and Practice, Part 2 | Microsoft Learn
+   score=0.193969 | источник: microsoft_learn | doc=923441 | oid=6b060317d9bb282a038dfc28
+   https://learn.microsoft.com/en-us/archive/msdn-magazine/authors/igor_ostrovsky
+6. Access local files asynchronously
+   score=0.191265 | источник: microsoft_learn | doc=56518 | oid=6ae1ec422c80ac9b21b926da
+   https://learn.microsoft.com/en-us/training/paths/access-local-files-asynchronously
+7. Asynchronous programming patterns
+   score=0.186848 | источник: microsoft_learn | doc=43861 | oid=6ae1d29e2c80ac9b21b8db39
+   https://learn.microsoft.com/en-us/dotnet/standard/asynchronous-programming-patterns
+8. IDebugProgram2::CauseBreak
+   score=0.185226 | источник: microsoft_learn | doc=10364 | oid=6ad9dab62a350aca88ff7c0d
+   https://learn.microsoft.com/en-us/visualstudio/extensibility/debugger/reference/idebugprogram2-causebreak?view=visualstudio
+9. IDebugEngine2::CauseBreak
+   score=0.182640 | источник: microsoft_learn | doc=3149 | oid=6ad9cd2d2a350aca88ff4f5e
+   https://learn.microsoft.com/en-us/visualstudio/extensibility/debugger/reference/idebugengine2-causebreak?view=visualstudio
+10. IDebugEngineProgram2::Stop
+   score=0.179362 | источник: microsoft_learn | doc=4982 | oid=6ad9d0bb2a350aca88ff5a66
+   https://learn.microsoft.com/en-us/visualstudio/extensibility/debugger/reference/idebugengineprogram2-stop?view=visualstudio
+11. Process bulk data in Azure Cosmos DB for NoSQL
+   score=0.179178 | источник: microsoft_learn | doc=56381 | oid=6ae1ec062c80ac9b21b925dd
+   https://learn.microsoft.com/en-us/training/modules/process-bulk-data-azure-cosmos-db-sql-api
+12. Advanced .NET programming documentation
+   score=0.178705 | источник: microsoft_learn | doc=35078 | oid=6ae12b942c80ac9b21b8a6f1
+   https://learn.microsoft.com/en-us/dotnet/navigate/advanced-programming
+13. Async Programming - Intercepting Asynchronous Methods Using Unity Interception | Microsoft Learn
+   score=0.176649 | источник: microsoft_learn | doc=924435 | oid=6b060448d9bb282a038e01ac
+   https://learn.microsoft.com/en-us/archive/msdn-magazine/authors/fernando_simonazzi,_grigori_melnik
+14. Implement delegates and events
+   score=0.171841 | источник: microsoft_learn | doc=57484 | oid=6ae1edec2c80ac9b21b92c61
+   https://learn.microsoft.com/en-us/training/paths/delegates-events-exceptions
+15. Asynchronous programming
+   score=0.169156 | источник: microsoft_learn | doc=243556 | oid=6affb5088ade75cff131e30d
+   https://learn.microsoft.com/en-us/windows/uwp/threading-async/asynchronous-programming-universal-windows-platform-apps
+16. C#
+   score=0.168924 | источник: microsoft_learn | doc=307616 | oid=6b015e35beada0530d8835a9
+   https://learn.microsoft.com/en-us/xbox/playfab/sdks/c-sharp
+17. Get started with Delegates
+   score=0.166136 | источник: microsoft_learn | doc=54902 | oid=6ae1e9732c80ac9b21b91d66
+   https://learn.microsoft.com/en-us/training/modules/get-started-delegates
+18. Synchronous programming with MSAL.NET
+   score=0.164325 | источник: microsoft_learn | doc=838092 | oid=6b0588bbd9bb282a038c5ca6
+   https://learn.microsoft.com/en-us/entra/msal/dotnet/how-to/synchronous-programming
+19. How to get read-only player data
+   score=0.163914 | источник: microsoft_learn | doc=305802 | oid=6b01563ebeada0530d882db5
+   https://learn.microsoft.com/en-us/xbox/playfab/player-progression/player-data/how-to-get-read-only-player-data
+20. How to get internal player data
+   score=0.160651 | источник: microsoft_learn | doc=305659 | oid=6b0155a0beada0530d882d17
+   https://learn.microsoft.com/en-us/xbox/playfab/player-progression/player-data/how-to-get-internal-player-data
+
+Запрос: .NET garbage collection
+Совпало документов: 160952 | показано: 20 | поиск: 26.201 мс
+1. <gcConcurrent> element
+   score=0.224423 | источник: microsoft_learn | doc=41106 | oid=6ae1cda12c80ac9b21b8cada
+   https://learn.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/runtime/gcconcurrent-element
+2. ICorDebugProcess5::GetGCHeapInformation Method
+   score=0.224259 | источник: microsoft_learn | doc=27914 | oid=6ae11eb02c80ac9b21b87a1b
+   https://learn.microsoft.com/en-us/dotnet/core/unmanaged-api/debugging/icordebug/icordebugprocess5-getgcheapinformation-method
+3. ICLRGCManager Interface
+   score=0.222548 | источник: microsoft_learn | doc=21937 | oid=6ad9f3d72a350aca88ffc653
+   https://learn.microsoft.com/en-us/dotnet/framework/unmanaged-api/hosting/iclrgcmanager-interface
+4. Background garbage collection
+   score=0.222078 | источник: microsoft_learn | doc=42498 | oid=6ae1d02c2c80ac9b21b8d35b
+   https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/background-gc
+5. ICLRGCManager2 Interface
+   score=0.216456 | источник: microsoft_learn | doc=26629 | oid=6ae11c642c80ac9b21b872a1
+   https://learn.microsoft.com/en-us/dotnet/framework/unmanaged-api/hosting/iclrgcmanager2-interface
+6. IGCHost::Collect Method
+   score=0.207891 | источник: microsoft_learn | doc=17020 | oid=6ad9e9672a350aca88ffa744
+   https://learn.microsoft.com/en-us/dotnet/framework/unmanaged-api/hosting/igchost-collect-method
+7. ICorProfilerCallback2::HandleCreated Method
+   score=0.207156 | источник: microsoft_learn | doc=30829 | oid=6ae123ef2c80ac9b21b88c7f
+   https://learn.microsoft.com/en-us/dotnet/framework/unmanaged-api/profiling/icorprofilercallback2-handlecreated-method
+8. IGCHost Interface
+   score=0.206795 | источник: microsoft_learn | doc=24059 | oid=6ae117c72c80ac9b21b86301
+   https://learn.microsoft.com/en-us/dotnet/framework/unmanaged-api/hosting/igchost-interface
+9. <GCCpuGroup> Element
+   score=0.206614 | источник: microsoft_learn | doc=33586 | oid=6ae128db2c80ac9b21b89c8d
+   https://learn.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/runtime/gccpugroup-element
+10. IGCThreadControl Interface
+   score=0.204057 | источник: microsoft_learn | doc=28870 | oid=6ae120682c80ac9b21b88105
+   https://learn.microsoft.com/en-us/dotnet/framework/unmanaged-api/hosting/igcthreadcontrol-interface
+11. COR_HEAPINFO Structure
+   score=0.201915 | источник: microsoft_learn | doc=41022 | oid=6ae1cd7b2c80ac9b21b8ca82
+   https://learn.microsoft.com/en-us/dotnet/core/unmanaged-api/debugging/icordebug/cor-heapinfo-structure
+12. Advanced .NET programming documentation
+   score=0.201614 | источник: microsoft_learn | doc=35078 | oid=6ae12b942c80ac9b21b8a6f1
+   https://learn.microsoft.com/en-us/dotnet/navigate/advanced-programming
+13. CorDebugHandleType Enumeration
+   score=0.200849 | источник: microsoft_learn | doc=17061 | oid=6ad9e97c2a350aca88ffa76e
+   https://learn.microsoft.com/en-us/dotnet/core/unmanaged-api/debugging/icordebug/cordebughandletype-enumeration
+14. <gcServer> element
+   score=0.200143 | источник: microsoft_learn | doc=38426 | oid=6ae1c8cc2c80ac9b21b8ba93
+   https://learn.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/runtime/gcserver-element
+15. COR_GC_THREAD_STATS_TYPES Enumeration
+   score=0.200078 | источник: microsoft_learn | doc=20887 | oid=6ad9f1a52a350aca88ffbff4
+   https://learn.microsoft.com/en-us/dotnet/framework/unmanaged-api/hosting/cor-gc-thread-stats-types-enumeration
+16. COR_GC_STAT_TYPES Enumeration
+   score=0.199796 | источник: microsoft_learn | doc=42648 | oid=6ae1d0702c80ac9b21b8d416
+   https://learn.microsoft.com/en-us/dotnet/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration
+17. Configure .NET garbage collection
+   score=0.198432 | источник: microsoft_learn | doc=37739 | oid=6ae1885c2c80ac9b21b8b665
+   https://learn.microsoft.com/en-us/dotnet/orleans/host/configuration-guide/configuring-garbage-collection
+18. ICorProfilerCallback2::HandleDestroyed Method
+   score=0.197610 | источник: microsoft_learn | doc=38283 | oid=6ae1c88b2c80ac9b21b8b9fb
+   https://learn.microsoft.com/en-us/dotnet/framework/unmanaged-api/profiling/icorprofilercallback2-handledestroyed-method
+19. COR_PRF_GC_REASON Enumeration
+   score=0.195911 | источник: microsoft_learn | doc=42258 | oid=6ae1cfba2c80ac9b21b8d1ea
+   https://learn.microsoft.com/en-us/dotnet/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration
+20. IHostGCManager Interface
+   score=0.195320 | источник: microsoft_learn | doc=36487 | oid=6ae12e252c80ac9b21b8af3f
+   https://learn.microsoft.com/en-us/dotnet/framework/unmanaged-api/hosting/ihostgcmanager-interface
+
+Запрос: node.js event loop
+Совпало документов: 172293 | показано: 20 | поиск: 23.373 мс
+1. Node.js Driver for SQL Server
+   score=0.125804 | источник: microsoft_learn | doc=571257 | oid=6b037cead9bb282a038488df
+   https://learn.microsoft.com/en-us/sql/connect/node-js/node-js-driver-for-sql-server?view=sql-server-ver17
+2. Get started with Node.js on Windows
+   score=0.125617 | источник: microsoft_learn | doc=247317 | oid=6affffd5321fadc016c39261
+   https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-overview
+3. Choose the right Node.js Version for Azure
+   score=0.123119 | источник: microsoft_learn | doc=540755 | oid=6b034edcd9bb282a0383dadd
+   https://learn.microsoft.com/en-us/azure/developer/javascript/choose-nodejs-version
+4. Create an EventHubs namespace, Event Hub, & consumer group
+   score=0.121446 | источник: microsoft_learn | doc=797287 | oid=6b0545d7d9bb282a038b64bd
+   https://learn.microsoft.com/en-us/samples/azure/azure-quickstart-templates/event-hubs-create-event-hub-and-consumer-group
+5. Libuv
+   score=0.120155 | источник: wikipedia | doc=139769 | oid=6ae293f32c80ac9b21bb1e77
+   https://en.wikipedia.org/wiki/Libuv
+6. Install JavaScript frameworks on Windows
+   score=0.119357 | источник: microsoft_learn | doc=248352 | oid=6b000311321fadc016c39681
+   https://learn.microsoft.com/en-us/windows/dev-environment/javascript
+7. Event-driven programming
+   score=0.119281 | источник: wikipedia | doc=40379 | oid=6ae1cc4f2c80ac9b21b8c6b6
+   https://en.wikipedia.org/wiki/Event-driven_programming
+8. Use Dev Proxy with Node.js applications running in Docker
+   score=0.117463 | источник: microsoft_learn | doc=842905 | oid=6b0590d1d9bb282a038c6feb
+   https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/how-to/use-dev-proxy-with-nodejs-docker
+9. Azure JavaScript samples catalog
+   score=0.116984 | источник: microsoft_learn | doc=539474 | oid=6b034d94d9bb282a0383d5cd
+   https://learn.microsoft.com/en-us/azure/developer/javascript/samples
+10. PM2 (software)
+   score=0.115130 | источник: wikipedia | doc=141535 | oid=6ae297c02c80ac9b21bb28b0
+   https://en.wikipedia.org/wiki/PM2_(software)
+11. NodeTaskRunnerInstaller@0 - Node.js tasks runner installer v0 task
+   score=0.112513 | источник: microsoft_learn | doc=509599 | oid=6b032484d9bb282a03833238
+   https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/reference/node-task-runner-installer-v0?view=azure-pipelines
+12. Azure Insider - Write Scalable, Server-side JavaScript Applications with Node.js | Microsoft Learn
+   score=0.111835 | источник: microsoft_learn | doc=927735 | oid=6b06088cd9bb282a038e13b2
+   https://learn.microsoft.com/en-us/archive/msdn-magazine/2012/march/azure-insider-write-scalable-server-side-javascript-applications-with-node-js
+13. Azure Storage samples
+   score=0.111344 | источник: microsoft_learn | doc=531727 | oid=6b0345bdd9bb282a0383b762
+   https://learn.microsoft.com/en-us/azure/storage/common/storage-samples
+14. Azure Service Bus Messaging documentation
+   score=0.110851 | источник: microsoft_learn | doc=524692 | oid=6b033698d9bb282a038380d9
+   https://learn.microsoft.com/en-us/azure/service-bus-messaging
+15. The loop contains a leaf node. It can only contain other Loops or Segments
+   score=0.110236 | источник: microsoft_learn | doc=941547 | oid=6b0617c7d9bb282a038e628a
+   https://learn.microsoft.com/en-us/biztalk/core/the-loop-contains-a-leaf-node-it-can-only-contain-other-loops-or-segments
+16. Azure skill for App Insights Instrumentation
+   score=0.110100 | источник: microsoft_learn | doc=539380 | oid=6b034d7bd9bb282a0383d56e
+   https://learn.microsoft.com/en-us/azure/developer/azure-skills/skills/app-insights-instrumentation
+17. SharePoint Framework v1.12.0 release notes
+   score=0.109428 | источник: microsoft_learn | doc=916702 | oid=6b05fbcfd9bb282a038dd764
+   https://learn.microsoft.com/en-us/sharepoint/dev/spfx/release-1.12.0
+18. Access a user's calendar events in a JavaScript app with Microsoft Graph
+   score=0.108198 | источник: microsoft_learn | doc=59280 | oid=6ae1f1112c80ac9b21b93661
+   https://learn.microsoft.com/en-us/training/modules/msgraph-access-user-events
+19. Adaptive Card-based Loop components
+   score=0.107802 | источник: microsoft_learn | doc=830277 | oid=6b057d30d9bb282a038c17e3
+   https://learn.microsoft.com/en-us/microsoftteams/platform/m365-apps/cards-loop-component
+20. Optimize performance and scaling for Node.js Azure Functions
+   score=0.107556 | источник: microsoft_learn | doc=533556 | oid=6b03478fd9bb282a0383be8d
+   https://learn.microsoft.com/en-us/azure/azure-functions/node-scale-performance
+
+Запрос: container orchestration kubernetes
+Совпало документов: 49037 | показано: 20 | поиск: 10.340 мс
+1. Orchestrate containers on Windows Server using Kubernetes
+   score=0.281190 | источник: microsoft_learn | doc=56646 | oid=6ae1ec7a2c80ac9b21b927c3
+   https://learn.microsoft.com/en-us/training/modules/orchestrate-containers-windows-server-using-kubernetes
+2. Apply Networking concepts to Windows containers running on Azure Kubernetes Service (AKS) and AKS Hybrid
+   score=0.254322 | источник: microsoft_learn | doc=54668 | oid=6ae1e90c2c80ac9b21b91c06
+   https://learn.microsoft.com/en-us/training/modules/apply-networking-concepts-to-windows-containers
+3. Apply storage concepts to Windows containers running on Azure Kubernetes Service (AKS) and AKS Hybrid
+   score=0.247732 | источник: microsoft_learn | doc=58084 | oid=6ae1eefa2c80ac9b21b92fab
+   https://learn.microsoft.com/en-us/training/modules/apply-storage-concepts-to-windows-containers
+4. Java samples for Azure Container Service
+   score=0.219954 | источник: microsoft_learn | doc=540764 | oid=6b034eded9bb282a0383dae6
+   https://learn.microsoft.com/en-us/azure/developer/java/sdk/containers-samples
+5. Container services documentation
+   score=0.202933 | источник: microsoft_learn | doc=529941 | oid=6b033fd0d9bb282a03839575
+   https://learn.microsoft.com/en-us/azure/containers
+6. Containers on Windows documentation
+   score=0.196678 | источник: microsoft_learn | doc=853176 | oid=6b05a2e1d9bb282a038c9971
+   https://learn.microsoft.com/en-us/virtualization/windowscontainers
+7. Get started with cloud native apps and containerized deployments
+   score=0.192749 | источник: microsoft_learn | doc=56802 | oid=6ae1ecc02c80ac9b21b9285f
+   https://learn.microsoft.com/en-us/training/modules/get-started-cloud-native-apps-containerized-deployments
+8. Deploy containers by using Azure Kubernetes Service (AKS)
+   score=0.190077 | источник: microsoft_learn | doc=53931 | oid=6ae1e7c02c80ac9b21b917d9
+   https://learn.microsoft.com/en-us/training/paths/deploy-manage-containers-azure-kubernetes-service
+9. Overview - Options for using Azure Elastic SAN with Azure Kubernetes Service
+   score=0.185162 | источник: microsoft_learn | doc=521847 | oid=6b03318cd9bb282a0383755b
+   https://learn.microsoft.com/en-us/azure/storage/elastic-san/elastic-san-aks-options
+10. Workload orchestration
+   score=0.184510 | источник: microsoft_learn | doc=502950 | oid=6b031d0ed9bb282a03830d1a
+   https://learn.microsoft.com/en-us/azure/azure-arc/workload-orchestration
+11. Understand Azure Container Storage billing
+   score=0.178435 | источник: microsoft_learn | doc=516835 | oid=6b032c1ad9bb282a03835bb8
+   https://learn.microsoft.com/en-us/azure/storage/container-storage/container-storage-billing
+12. Guided project - Deploy applications to Azure Kubernetes Service
+   score=0.172747 | источник: microsoft_learn | doc=57897 | oid=6ae1eea82c80ac9b21b92ef0
+   https://learn.microsoft.com/en-us/training/modules/project-deploy-applications-azure-kubernetes-service
+13. Manage Azure Kubernetes Service on Azure Local
+   score=0.170207 | источник: microsoft_learn | doc=53158 | oid=6ae1e66c2c80ac9b21b913cf
+   https://learn.microsoft.com/en-us/training/modules/manage-azure-kubernetes-service-azure-stack-hci
+14. Container orchestration for microservices
+   score=0.169957 | источник: microsoft_learn | doc=546169 | oid=6b035811d9bb282a0383f928
+   https://learn.microsoft.com/en-us/azure/architecture/microservices/design/orchestration
+15. Kubernetes on Windows
+   score=0.167578 | источник: microsoft_learn | doc=853155 | oid=6b05a2d8d9bb282a038c995c
+   https://learn.microsoft.com/en-us/virtualization/windowscontainers/kubernetes/getting-started-kubernetes-windows
+16. Deploy cloud-native apps using Azure Container Apps
+   score=0.167480 | источник: microsoft_learn | doc=57892 | oid=6ae1eea62c80ac9b21b92eeb
+   https://learn.microsoft.com/en-us/training/paths/deploy-cloud-native-applications-to-azure-container-apps
+17. Troubleshooting Windows Containers
+   score=0.165819 | источник: microsoft_learn | doc=55473 | oid=6ae1ea732c80ac9b21b92158
+   https://learn.microsoft.com/en-us/training/modules/troubleshoot-windows-containers
+18. Windows Server Hyper-V and Virtualization
+   score=0.163274 | источник: microsoft_learn | doc=56991 | oid=6ae1ed132c80ac9b21b9299c
+   https://learn.microsoft.com/en-us/training/paths/windows-server-hyper-v-virtualization
+19. Get started with Kubernetes
+   score=0.162001 | источник: microsoft_learn | doc=541855 | oid=6b034ff4d9bb282a0383df2e
+   https://learn.microsoft.com/en-us/azure/aks/get-started-kubernetes
+20. SQL Server on Linux containers
+   score=0.161671 | источник: microsoft_learn | doc=566955 | oid=6b03741cd9bb282a03846f9d
+   https://learn.microsoft.com/en-us/sql/linux/containers/overview?view=sql-server-ver17
+
+Запрос: TLS certificate validation
+Совпало документов: 98975 | показано: 20 | поиск: 16.554 мс
+1. 4.2.3 Unauthorized IP-HTTPS Server Accepting Connections from a Genuine IP-HTTPS Client
+   score=0.208716 | источник: microsoft_learn | doc=652764 | oid=6b03f3b3d9bb282a0386d531
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-iphttps/6caaeec8-99c5-4b59-b21c-907687d5aa9f
+2. CoreWebView2ServerCertificateErrorAction Enum
+   score=0.203343 | источник: microsoft_learn | doc=83614 | oid=6ae21f312c80ac9b21b9c607
+   https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/winrt/microsoft_web_webview2_core/corewebview2servercertificateerroraction?view=webview2-winrt-1.0.4258.31
+3. 1.3.6.1.2 Trusted Certificate
+   score=0.201879 | источник: microsoft_learn | doc=689819 | oid=6b0434d1d9bb282a03880979
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/mc-prch/6cd5f905-60e4-4098-8315-a792ed71255a
+4. 1.4 Relationship to Other Protocols
+   score=0.201565 | источник: microsoft_learn | doc=657475 | oid=6b03fb13d9bb282a0386f886
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-rcmp/5778a360-ad38-4957-8dce-647b4774ee63
+5. 3.2.7.1 TLS Session Established Successfully
+   score=0.198399 | источник: microsoft_learn | doc=666076 | oid=6b040939d9bb282a03873d71
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-peap/12b94d70-96ac-419a-b54d-7975bf169141
+6. HCWebSocketSetProxyDecryptsHttps
+   score=0.193133 | источник: microsoft_learn | doc=847046 | oid=6b059845d9bb282a038c8128
+   https://learn.microsoft.com/en-us/gaming/gdk/docs/reference/live/httpclient/httpclient/functions/hcwebsocketsetproxydecryptshttps?view=gdk-2610
+7. 2.1 Transport
+   score=0.191687 | источник: microsoft_learn | doc=674807 | oid=6b041869d9bb282a038799a2
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-bpcr/fa31ca62-386d-4535-a44e-5845362584f2
+8. NF-e custom certificate validation
+   score=0.191335 | источник: microsoft_learn | doc=198606 | oid=6ae7f9930aaedde439e42cff
+   https://learn.microsoft.com/en-us/dynamics365/finance/localizations/brazil/nf-e-custom-certificate-validation
+9. 1.5 Prerequisites/Preconditions
+   score=0.184009 | источник: microsoft_learn | doc=621243 | oid=6b03c3d2d9bb282a0385d88a
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/47f88302-03ac-48f4-a542-4c00da52bde0
+10. Configure TLS inspection with a Microsoft-managed certificate (preview)
+   score=0.183415 | источник: microsoft_learn | doc=837612 | oid=6b0587f4d9bb282a038c5ac4
+   https://learn.microsoft.com/en-us/entra/global-secure-access/how-to-transport-layer-security-settings-managed-certificate
+11. 3.10.5 Message Processing Events and Sequencing Rules
+   score=0.182869 | источник: microsoft_learn | doc=662314 | oid=6b040317d9bb282a03871f18
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-adfspip/903f0471-ae67-4fc0-a864-4fefd8ff8742
+12. TLS server certificate validation
+   score=0.180027 | источник: microsoft_learn | doc=498973 | oid=6b0318fcd9bb282a0382f6c0
+   https://learn.microsoft.com/en-us/azure/databricks/ingestion/lakeflow-connect/tls-server-certificate-validation
+13. 5.4.5 External Security Protocols Used By RDP
+   score=0.179760 | источник: microsoft_learn | doc=693769 | oid=6b043b12d9bb282a03882858
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-rdpbcgr/422e59a0-98c8-4a28-af9f-235a572b6e4d
+14. CoreWebView2ServerCertificateErrorDetectedEventArgs Class
+   score=0.179614 | источник: microsoft_learn | doc=83650 | oid=6ae21f582c80ac9b21b9c63c
+   https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/winrt/microsoft_web_webview2_core/corewebview2servercertificateerrordetectedeventargs?view=webview2-winrt-1.0.4258.31
+15. setTrustServerCertificate Method (SQLServerDataSource)
+   score=0.179594 | источник: microsoft_learn | doc=580013 | oid=6b03881ed9bb282a0384ba8b
+   https://learn.microsoft.com/en-us/sql/connect/jdbc/reference/settrustservercertificate-method-sqlserverdatasource?view=sql-server-ver17
+16. 5.3.2 Unauthorized SSTP Server Accepting Connections from a Genuine SSTP Client
+   score=0.178365 | источник: microsoft_learn | doc=643281 | oid=6b03e4a2d9bb282a038686d2
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-sstp/2e28a03d-039f-4d2b-9b0a-93351577941b
+17. setHostNameInCertificate Method (SQLServerDataSource)
+   score=0.175346 | источник: microsoft_learn | doc=584298 | oid=6b039079d9bb282a0384d525
+   https://learn.microsoft.com/en-us/sql/connect/jdbc/reference/sethostnameincertificate-method-sqlserverdatasource?view=sql-server-ver17
+18. Custom environment DNS Suffix in Azure Container Apps
+   score=0.175163 | источник: microsoft_learn | doc=527629 | oid=6b033bd3d9bb282a03838c62
+   https://learn.microsoft.com/en-us/azure/container-apps/environment-custom-dns-suffix
+19. TLS functionality and related terminology
+   score=0.174562 | источник: microsoft_learn | doc=819055 | oid=6b056b63d9bb282a038bcc3c
+   https://learn.microsoft.com/en-us/exchange/tls-functionality-and-related-terminology-exchange-2013-help
+20. 2.2.2.2.4.26 DNS_RPC_RECORD_TLSA
+   score=0.174053 | источник: microsoft_learn | doc=638583 | oid=6b03dd80d9bb282a03866224
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-dnsp/3164a626-50e7-49ab-8bd9-00966440fd62
+
+Запрос: PowerShell remoting SSH
+Совпало документов: 101820 | показано: 20 | поиск: 14.318 мс
+1. PowerShell Security
+   score=0.239178 | источник: microsoft_learn | doc=93952 | oid=6ae235212c80ac9b21ba05b0
+   https://learn.microsoft.com/en-us/powershell/scripting/security/overview?view=powershell-7.6
+2. PowerShell remoting to Azure Arc-enabled servers
+   score=0.226661 | источник: microsoft_learn | doc=503123 | oid=6b031d3ad9bb282a03830e0f
+   https://learn.microsoft.com/en-us/azure/azure-arc/servers/ssh-arc-powershell-remoting
+3. Develop on a remote machine using SSH in Visual Studio Code
+   score=0.186635 | источник: microsoft_learn | doc=57477 | oid=6ae1ede82c80ac9b21b92c5a
+   https://learn.microsoft.com/en-us/training/modules/develop-on-remote-machine
+4. Using WS-Management (WSMan) Remoting in PowerShell
+   score=0.181613 | источник: microsoft_learn | doc=92636 | oid=6ae2326f2c80ac9b21b9fda1
+   https://learn.microsoft.com/en-us/powershell/scripting/security/remoting/wsman-remoting-in-powershell?view=powershell-7.6
+5. Using Visual Studio Code for remote editing and debugging
+   score=0.180848 | источник: microsoft_learn | doc=92279 | oid=6ae231b92c80ac9b21b9fbde
+   https://learn.microsoft.com/en-us/powershell/scripting/dev-cross-plat/vscode/using-vscode-for-remote-editing-and-debugging?view=powershell-7.6
+6. Exchange PowerShell documentation
+   score=0.172699 | источник: microsoft_learn | doc=90079 | oid=6ae22d402c80ac9b21b9ee06
+   https://learn.microsoft.com/en-us/powershell/exchange?view=exchange-ps
+7. VMAccess extension on a Ubuntu VM
+   score=0.159660 | источник: microsoft_learn | doc=799625 | oid=6b054a30d9bb282a038b7091
+   https://learn.microsoft.com/en-us/samples/azure/azure-quickstart-templates/vmaccess-on-ubuntu
+8. Running Remote Commands
+   score=0.154826 | источник: microsoft_learn | doc=94202 | oid=6ae235a12c80ac9b21ba0734
+   https://learn.microsoft.com/en-us/powershell/scripting/security/remoting/running-remote-commands?view=powershell-7.6
+9. about_Remote_Requirements
+   score=0.152036 | источник: microsoft_learn | doc=92655 | oid=6ae2327a2c80ac9b21b9fdc9
+   https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_requirements?view=powershell-7.6
+10. PowerShell remoting over SSH
+   score=0.149781 | источник: microsoft_learn | doc=93149 | oid=6ae233782c80ac9b21ba00d8
+   https://learn.microsoft.com/en-us/powershell/scripting/security/remoting/ssh-remoting-in-powershell?view=powershell-7.6
+11. Az. Ssh Module
+   score=0.148386 | источник: microsoft_learn | doc=100517 | oid=6ae242be2c80ac9b21ba2d60
+   https://learn.microsoft.com/en-us/powershell/module/az.ssh?view=azps-16.4.0
+12. 1.7 Versioning and Capability Negotiation
+   score=0.147879 | источник: microsoft_learn | doc=659356 | oid=6b03fe40d9bb282a03870746
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-psrp/81bdaf11-949c-47eb-8add-aebef44b5a0f
+13. Enable remote work by using Azure Bastion
+   score=0.146390 | источник: microsoft_learn | doc=526900 | oid=6b033a91d9bb282a03838987
+   https://learn.microsoft.com/en-us/azure/bastion/work-remotely-support
+14. Manage single and multiple computers by using Windows PowerShell remoting
+   score=0.145793 | источник: microsoft_learn | doc=54114 | oid=6ae1e8112c80ac9b21b918d7
+   https://learn.microsoft.com/en-us/training/modules/manage-single-multiple-computers-use-windows-powershell-remoting
+15. Set-Clipboard
+   score=0.143879 | источник: microsoft_learn | doc=92472 | oid=6ae2321a2c80ac9b21b9fc9f
+   https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/set-clipboard?view=powershell-7.6
+16. Overview of what's new in PowerShell
+   score=0.142546 | источник: microsoft_learn | doc=92910 | oid=6ae232fd2c80ac9b21b9ff56
+   https://learn.microsoft.com/en-us/powershell/scripting/whats-new/overview?view=powershell-7.6
+17. 2.6.1 Versioning
+   score=0.137844 | источник: microsoft_learn | doc=661442 | oid=6b04019ed9bb282a038717f9
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-wmod/39102998-d5a5-49b6-9307-11cf4aff2b47
+18. PowerShell Documentation
+   score=0.137614 | источник: microsoft_learn | doc=94160 | oid=6ae2358c2c80ac9b21ba06ec
+   https://learn.microsoft.com/en-us/powershell
+19. Restrict SSH access to virtual machines in AKS on Windows Server
+   score=0.136139 | источник: microsoft_learn | doc=542746 | oid=6b035110d9bb282a0383e2ab
+   https://learn.microsoft.com/en-us/azure/aks-hybrid-edge/windows-server/restrict-ssh-access-22h2
+20. Tutorial: SSH in Windows Terminal
+   score=0.135385 | источник: microsoft_learn | doc=246638 | oid=6afffd89321fadc016c38f8e
+   https://learn.microsoft.com/en-us/windows/terminal/tutorials/ssh
+
+Запрос: Azure virtual network peering
+Совпало документов: 275690 | показано: 20 | поиск: 42.149 мс
+1. Configure Azure Virtual Network peering
+   score=0.323504 | источник: microsoft_learn | doc=53956 | oid=6ae1e7cb2c80ac9b21b917f2
+   https://learn.microsoft.com/en-us/training/modules/configure-vnet-peering
+2. Virtual Network documentation
+   score=0.299875 | источник: microsoft_learn | doc=527277 | oid=6b033b38d9bb282a03838b01
+   https://learn.microsoft.com/en-us/azure/virtual-network
+3. Internet Peering documentation
+   score=0.294531 | источник: microsoft_learn | doc=527002 | oid=6b033abed9bb282a038389ee
+   https://learn.microsoft.com/en-us/azure/internet-peering
+4. Introduction to Azure Virtual Networks
+   score=0.293591 | источник: microsoft_learn | doc=55455 | oid=6ae1ea6a2c80ac9b21b92146
+   https://learn.microsoft.com/en-us/training/modules/introduction-to-azure-virtual-networks
+5. Connect multiple Azure VMware Solution Generation 2 private clouds
+   score=0.290571 | источник: microsoft_learn | doc=529980 | oid=6b033fe1d9bb282a0383959c
+   https://learn.microsoft.com/en-us/azure/azure-vmware/native-connect-multiple-private-clouds
+6. Azure Bastion troubleshooting documentation
+   score=0.282254 | источник: microsoft_learn | doc=558845 | oid=6b036b11d9bb282a03843fe2
+   https://learn.microsoft.com/en-us/troubleshoot/azure/bastion/welcome-azure-bastion
+7. Troubleshoot virtual network peering problems in Azure Bastion
+   score=0.274759 | источник: microsoft_learn | doc=560641 | oid=6b036d7dd9bb282a03844ac1
+   https://learn.microsoft.com/en-us/troubleshoot/azure/bastion/troubleshoot-virtual-network-peering-problems
+8. Virtual Network IP Services documentation
+   score=0.272676 | источник: microsoft_learn | doc=527263 | oid=6b033b32d9bb282a03838af3
+   https://learn.microsoft.com/en-us/azure/virtual-network/ip-services
+9. Virtual network peering and Azure Bastion
+   score=0.271565 | источник: microsoft_learn | doc=523161 | oid=6b0333b0d9bb282a03837ad7
+   https://learn.microsoft.com/en-us/azure/bastion/vnet-peering
+10. Azure Route Server documentation
+   score=0.268960 | источник: microsoft_learn | doc=515756 | oid=6b032afcd9bb282a03835438
+   https://learn.microsoft.com/en-us/azure/route-server
+11. Peer virtual networks
+   score=0.268523 | источник: microsoft_learn | doc=494303 | oid=6b031404d9bb282a0382dce9
+   https://learn.microsoft.com/en-us/azure/databricks/security/network/classic/vnet-peering
+12. Connectivity between virtual networks over Azure ExpressRoute
+   score=0.266326 | источник: microsoft_learn | doc=521809 | oid=6b033181d9bb282a03837532
+   https://learn.microsoft.com/en-us/azure/expressroute/virtual-network-connectivity-guidance
+13. Ansible on Azure documentation
+   score=0.266159 | источник: microsoft_learn | doc=540581 | oid=6b034eafd9bb282a0383da2c
+   https://learn.microsoft.com/en-us/azure/developer/ansible
+14. Connectivity to an Azure Virtual Network
+   score=0.262972 | источник: microsoft_learn | doc=527647 | oid=6b033bdbd9bb282a03838c74
+   https://learn.microsoft.com/en-us/azure/azure-vmware/native-network-connectivity
+15. Plan and implement security for virtual networks
+   score=0.253516 | источник: microsoft_learn | doc=57369 | oid=6ae1edba2c80ac9b21b92b86
+   https://learn.microsoft.com/en-us/training/modules/security-virtual-networks
+16. Configure secure access to your workloads using Azure virtual networking
+   score=0.252697 | источник: microsoft_learn | doc=56624 | oid=6ae1ec712c80ac9b21b92745
+   https://learn.microsoft.com/en-us/training/paths/configure-secure-workloads-using-azure-virtual-networking
+17. How to peer payment HSM virtual networks
+   score=0.251973 | источник: microsoft_learn | doc=545339 | oid=6b035664d9bb282a0383f354
+   https://learn.microsoft.com/en-us/azure/payment-hsm/peer-vnets
+18. Azure network foundation documentation
+   score=0.251450 | источник: microsoft_learn | doc=521528 | oid=6b033134d9bb282a038373a5
+   https://learn.microsoft.com/en-us/azure/networking/foundations
+19. Azure hybrid connectivity documentation
+   score=0.248856 | источник: microsoft_learn | doc=525449 | oid=6b0337e9d9bb282a038383d1
+   https://learn.microsoft.com/en-us/azure/networking/hybrid-connectivity
+20. Explore Azure networking for SAP RISE
+   score=0.248691 | источник: microsoft_learn | doc=56702 | oid=6ae1ec952c80ac9b21b927fb
+   https://learn.microsoft.com/en-us/training/modules/explore-azure-networking-sap-rise
+
+Запрос: Microsoft Graph OAuth permissions
+Совпало документов: 255505 | показано: 20 | поиск: 40.292 мс
+1. Microsoft doesn't expose permissions to generate OAuth tokens for Extended MAPI access to mailboxes
+   score=0.210583 | источник: microsoft_learn | doc=565011 | oid=6b0371fad9bb282a038467fc
+   https://learn.microsoft.com/en-us/troubleshoot/outlook/authentication/expose-permissions-issue-with-mapi-oauth-tokens
+2. Use Microsoft Entra ID to access the Windows 365 APIs in Microsoft Graph
+   score=0.204313 | источник: microsoft_learn | doc=957673 | oid=6b062970d9bb282a038ec17f
+   https://learn.microsoft.com/en-us/windows-365/enterprise/permission-scopes
+3. Authentication differences between Exchange Web Services (EWS) and Microsoft Graph
+   score=0.201511 | источник: microsoft_learn | doc=842192 | oid=6b058facd9bb282a038c6d1d
+   https://learn.microsoft.com/en-us/graph/migrate-exchange-web-services-authentication
+4. Build Azure DevOps integrations with Microsoft Entra OAuth apps
+   score=0.200165 | источник: microsoft_learn | doc=511852 | oid=6b0326fad9bb282a03833ecb
+   https://learn.microsoft.com/en-us/azure/devops/integrate/get-started/authentication/entra-oauth?view=azure-devops
+5. Calling an API
+   score=0.194286 | источник: microsoft_learn | doc=832271 | oid=6b057f83d9bb282a038c20c7
+   https://learn.microsoft.com/en-us/entra/msal/android/calling-an-api
+6. Microsoft Graph PowerShell
+   score=0.190451 | источник: microsoft_learn | doc=160112 | oid=6ae3099d60d7e6dcf65e201a
+   https://learn.microsoft.com/en-us/powershell/microsoftgraph?view=graph-powershell-1.0
+7. HTTP 403 authorization error when calling the Microsoft Graph Security API
+   score=0.186633 | источник: microsoft_learn | doc=560149 | oid=6b036cd7d9bb282a03844826
+   https://learn.microsoft.com/en-us/troubleshoot/entra/entra-id/users-groups-entra-apis/403-error-when-calling-microsoft-graph-security-api
+8. Microsoft identity platform token exchange scenarios with SAML and OIDC/OAuth
+   score=0.185664 | источник: microsoft_learn | doc=835996 | oid=6b058543d9bb282a038c546f
+   https://learn.microsoft.com/en-us/entra/identity-platform/scenario-token-exchange-saml-oauth
+9. Microsoft Graph REST APIs for mail, calendars, and contacts
+   score=0.184959 | источник: microsoft_learn | doc=816020 | oid=6b056669d9bb282a038bbe27
+   https://learn.microsoft.com/en-us/exchange/client-developer/exchange-web-services/office-365-rest-apis-for-mail-calendars-and-contacts
+10. Configure OAuth U2M: Custom-managed for Microsoft OneDrive ingestion
+   score=0.181846 | источник: microsoft_learn | doc=491897 | oid=6b031169d9bb282a0382d19a
+   https://learn.microsoft.com/en-us/azure/databricks/ingestion/lakeflow-connect/onedrive-source-setup-u2m
+11. Copilot connectors SDK connector OAuth API
+   score=0.181489 | источник: microsoft_learn | doc=842344 | oid=6b058fe9d9bb282a038c6db5
+   https://learn.microsoft.com/en-us/graph/custom-connector-sdk-contracts-connectoroauth
+12. Permissions and privileges for Microsoft Graph Bicep template deployments
+   score=0.178719 | источник: microsoft_learn | doc=842605 | oid=6b05904cd9bb282a038c6eba
+   https://learn.microsoft.com/en-us/graph/templates/bicep/concept-permissions-and-privileges
+13. Configure authentication to Microsoft Outlook
+   score=0.176158 | источник: microsoft_learn | doc=499400 | oid=6b031972d9bb282a0382f931
+   https://learn.microsoft.com/en-us/azure/databricks/ingestion/lakeflow-connect/outlook-source-setup
+14. Troubleshoot issues with the Monday.com connector
+   score=0.175205 | источник: microsoft_learn | doc=601286 | oid=6b03a4fdd9bb282a038539e1
+   https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/monday-troubleshooting
+15. Microsoft Entra Agent ID documentation
+   score=0.174730 | источник: microsoft_learn | doc=836800 | oid=6b0586a1d9bb282a038c5795
+   https://learn.microsoft.com/en-us/entra/agent-id
+16. Manage Microsoft Entra application access
+   score=0.174114 | источник: microsoft_learn | doc=56038 | oid=6ae1eb6d2c80ac9b21b923ff
+   https://learn.microsoft.com/en-us/training/modules/manage-application-access-microsoft-entra-id
+17. Access the Microsoft Defender XDR APIs
+   score=0.173895 | источник: microsoft_learn | doc=914152 | oid=6b05f91fd9bb282a038dc893
+   https://learn.microsoft.com/en-us/defender-xdr/api-access
+18. Troubleshoot issues with the GitLab Issues Server connector
+   score=0.173502 | источник: microsoft_learn | doc=600997 | oid=6b03a4aad9bb282a03853804
+   https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/gitlab-issues-server-troubleshooting
+19. Permissions for Microsoft Entra Id Assessment Application - Microsoft Engage Center
+   score=0.173340 | источник: microsoft_learn | doc=844379 | oid=6b059396d9bb282a038c7698
+   https://learn.microsoft.com/en-us/services-hub/microsoft-engage-center/health/entra-permission-requirements
+20. Microsoft Graph Logs connector reference
+   score=0.170479 | источник: microsoft_learn | doc=492329 | oid=6b0311e2d9bb282a0382d34c
+   https://learn.microsoft.com/en-us/azure/databricks/ingestion/lakeflow-connect/microsoft-graph-logs-reference
+
+Запрос: transformer attention mechanism
+Совпало документов: 126290 | показано: 20 | поиск: 20.262 мс
+1. Delta–wye transformer
+   score=0.141535 | источник: wikipedia | doc=408376 | oid=6b02b422beada0530d8ab8a8
+   https://en.wikipedia.org/wiki/Delta%E2%80%93wye_transformer
+2. Perceiver
+   score=0.132272 | источник: wikipedia | doc=38784 | oid=6ae1c9712c80ac9b21b8bcf4
+   https://en.wikipedia.org/wiki/Perceiver
+3. Ashish Vaswani
+   score=0.123458 | источник: wikipedia | doc=1496 | oid=6ad9c6c62a350aca88ff4472
+   https://en.wikipedia.org/wiki/Ashish_Vaswani
+4. Transformer utilization factor
+   score=0.121246 | источник: wikipedia | doc=408863 | oid=6b02b595beada0530d8abb92
+   https://en.wikipedia.org/wiki/Transformer_utilization_factor
+5. Energy efficient transformer
+   score=0.120336 | источник: wikipedia | doc=364470 | oid=6b0260cebeada0530d89bd64
+   https://en.wikipedia.org/wiki/Energy_efficient_transformer
+6. Planar transformer
+   score=0.117953 | источник: wikipedia | doc=314584 | oid=6b01d3babeada0530d8899af
+   https://en.wikipedia.org/wiki/Planar_transformer
+7. Ōno Kōjin
+   score=0.117703 | источник: wikipedia | doc=410324 | oid=6b02b72dbeada0530d8ac442
+   https://en.wikipedia.org/wiki/%C5%8Cno_K%C5%8Djin
+8. Gating mechanism
+   score=0.116007 | источник: wikipedia | doc=269377 | oid=6b00d76abeada0530d874893
+   https://en.wikipedia.org/wiki/Gating_mechanism
+9. Addressing Information Loss and Interaction Collapse: A Dual Enhanced Attention Framework for Feature Interaction
+   score=0.112485 | источник: arxiv | doc=61556 | oid=6ae1f5162c80ac9b21b94372
+   https://arxiv.org/html/2503.11233v1
+10. Circuit (neural network)
+   score=0.111936 | источник: wikipedia | doc=38526 | oid=6ae1c8f92c80ac9b21b8bbdf
+   https://en.wikipedia.org/wiki/Circuit_(neural_network)
+11. Asus Transformer Pad TF103C
+   score=0.110676 | источник: wikipedia | doc=217828 | oid=6ae8211a0aaedde439e49e2c
+   https://en.wikipedia.org/wiki/Asus_Transformer_Pad_TF103C
+12. Grounding transformer
+   score=0.109188 | источник: wikipedia | doc=358181 | oid=6b0255b5beada0530d89a403
+   https://en.wikipedia.org/wiki/Grounding_transformer
+13. Maddox Industrial Transformer
+   score=0.106635 | источник: wikipedia | doc=447726 | oid=6b02e0cdd9bb282a0381d98f
+   https://en.wikipedia.org/wiki/Maddox_Industrial_Transformer
+14. Isolation transformer
+   score=0.105489 | источник: wikipedia | doc=378160 | oid=6b027c66beada0530d8a078c
+   https://en.wikipedia.org/wiki/Isolation_transformer
+15. A Pipelined FPGA Architecture for Banded Sparse Matrix Dense Matrix Multiplication in Longformer
+   score=0.104962 | источник: arxiv | doc=467617 | oid=6b02f670d9bb282a038247c7
+   https://arxiv.org/html/2610.07301v1
+16. PGT: Pseudo Relevance Feedback Using a Graph-Based Transformer
+   score=0.102317 | источник: arxiv | doc=234883 | oid=6aff834b8ade75cff131ae10
+   https://arxiv.org/html/2101.07918v1
+17. FGATT: A Robust Framework for Wireless Data Imputation Using Fuzzy Graph Attention Networks and Transformer Encoders
+   score=0.102150 | источник: arxiv | doc=68556 | oid=6ae201912c80ac9b21b96dde
+   https://arxiv.org/html/2412.01979v2
+18. Line isolation transformer
+   score=0.101348 | источник: wikipedia | doc=415603 | oid=6b02bcb6beada0530d8ae25f
+   https://en.wikipedia.org/wiki/Line_isolation_transformer
+19. Longformer for MS MARCO Document Re-ranking Task
+   score=0.101296 | источник: arxiv | doc=236485 | oid=6aff8b0e8ade75cff131b80e
+   https://arxiv.org/html/2009.09392v1
+20. GPT-J
+   score=0.101142 | источник: wikipedia | doc=9315 | oid=6ad9d8c32a350aca88ff74ce
+   https://en.wikipedia.org/wiki/GPT-J
+
+Запрос: retrieval augmented generation
+Совпало документов: 116370 | показано: 20 | поиск: 18.909 мс
+1. Developing Retrieval Augmented Generation (RAG) based LLM Systems from PDFs: An Experience Report
+   score=0.222867 | источник: arxiv | doc=71176 | oid=6ae206582c80ac9b21b97af1
+   https://arxiv.org/html/2410.15944v1
+2. Implement Retrieval Augmented Generation (RAG) with Azure Databricks
+   score=0.211826 | источник: microsoft_learn | doc=57127 | oid=6ae1ed4e2c80ac9b21b92a3a
+   https://learn.microsoft.com/en-us/training/modules/retrieval-augmented-generation-azure-databricks
+3. Design and implement RAG with SQL
+   score=0.188918 | источник: microsoft_learn | doc=57239 | oid=6ae1ed802c80ac9b21b92b03
+   https://learn.microsoft.com/en-us/training/modules/design-implement-rag-with-sql
+4. Optimize generative AI model performance with Microsoft Foundry
+   score=0.182953 | источник: microsoft_learn | doc=57566 | oid=6ae1ee0f2c80ac9b21b92cb3
+   https://learn.microsoft.com/en-us/training/modules/optimize-generative-ai-model-performance
+5. Implement AI capabilities in database solutions
+   score=0.178160 | источник: microsoft_learn | doc=55291 | oid=6ae1ea222c80ac9b21b91fa1
+   https://learn.microsoft.com/en-us/training/paths/implement-ai-capabilities-database-solutions
+6. Build AI-powered solutions using SQL Server 2025
+   score=0.169508 | источник: microsoft_learn | doc=54652 | oid=6ae1e9042c80ac9b21b91bf6
+   https://learn.microsoft.com/en-us/training/modules/build-ai-solutions-sql-server
+7. ChromaDB
+   score=0.163188 | источник: wikipedia | doc=48766 | oid=6ae1dc022c80ac9b21b8f805
+   https://en.wikipedia.org/wiki/ChromaDB
+8. Search/Retrieve Web Service
+   score=0.162730 | источник: wikipedia | doc=45866 | oid=6ae1d6bb2c80ac9b21b8e779
+   https://en.wikipedia.org/wiki/Search%2FRetrieve_Web_Service
+9. Build knowledge-enhanced AI agents with Foundry IQ
+   score=0.154663 | источник: microsoft_learn | doc=54800 | oid=6ae1e9472c80ac9b21b91d00
+   https://learn.microsoft.com/en-us/training/modules/introduction-foundry-iq
+10. Example: use features with structured RAG applications
+   score=0.152370 | источник: microsoft_learn | doc=497590 | oid=6b031786d9bb282a0382ef1e
+   https://learn.microsoft.com/en-us/azure/databricks/machine-learning/feature-store/rag
+11. Implement Generative AI engineering with Azure Databricks
+   score=0.150229 | источник: microsoft_learn | doc=56966 | oid=6ae1ed082c80ac9b21b92983
+   https://learn.microsoft.com/en-us/training/paths/implement-generative-ai-engineering-azure-databricks
+12. Utilize an Azure OpenAI model to create an Agent
+   score=0.150035 | источник: microsoft_learn | doc=59512 | oid=6ae1f1782c80ac9b21b937c0
+   https://learn.microsoft.com/en-us/training/modules/utilize-azure-openai-model-create-app
+13. Build RAG applications with Azure Database for PostgreSQL
+   score=0.138860 | источник: microsoft_learn | doc=57518 | oid=6ae1edfa2c80ac9b21b92c83
+   https://learn.microsoft.com/en-us/training/modules/build-rag-applications-azure-database-postgresql
+14. RAG chain for inference
+   score=0.135357 | источник: microsoft_learn | doc=495946 | oid=6b0315c2d9bb282a0382e5f7
+   https://learn.microsoft.com/en-us/azure/databricks/agents/tutorials/ai-cookbook/fundamentals-inference-chain-rag
+15. Improve RAG application quality
+   score=0.135151 | источник: microsoft_learn | doc=495060 | oid=6b0314d3d9bb282a0382e118
+   https://learn.microsoft.com/en-us/azure/databricks/agents/tutorials/ai-cookbook/quality-overview
+16. RAG (Retrieval Augmented Generation) on Azure Databricks
+   score=0.135003 | источник: microsoft_learn | doc=497081 | oid=6b0316f7d9bb282a0382ec66
+   https://learn.microsoft.com/en-us/azure/databricks/agents/retrieval-augmented-generation
+17. Training for Foundry IQ (Azure AI Search)
+   score=0.127766 | источник: microsoft_learn | doc=547909 | oid=6b035ad1d9bb282a03840371
+   https://learn.microsoft.com/en-us/azure/search/resource-training
+18. About CNG
+   score=0.127109 | источник: microsoft_learn | doc=297100 | oid=6b013173beada0530d8808fb
+   https://learn.microsoft.com/en-us/windows/win32/seccng/about-cng
+19. Use Azure Machine Learning pipelines with no code to construct RAG pipelines (preview)
+   score=0.126512 | источник: microsoft_learn | doc=548192 | oid=6b035b1bd9bb282a0384050c
+   https://learn.microsoft.com/en-us/azure/machine-learning/how-to-use-pipelines-prompt-flow?view=azureml-api-2
+20. Introduction to retrieval-augmented generation concepts
+   score=0.124001 | источник: microsoft_learn | doc=55920 | oid=6ae1eb3a2c80ac9b21b92389
+   https://learn.microsoft.com/en-us/training/modules/rag-fundamentals
+
+Запрос: graph neural networks
+Совпало документов: 207446 | показано: 20 | поиск: 28.098 мс
+1. List of network theory topics
+   score=0.221799 | источник: wikipedia | doc=205979 | oid=6ae807aa0aaedde439e45818
+   https://en.wikipedia.org/wiki/List_of_network_theory_topics
+2. Introduction to computer vision with TensorFlow
+   score=0.178574 | источник: microsoft_learn | doc=54330 | oid=6ae1e8742c80ac9b21b91a23
+   https://learn.microsoft.com/en-us/training/modules/intro-computer-vision-tensorflow
+3. Node2vec
+   score=0.176008 | источник: wikipedia | doc=135706 | oid=6ae28b8e2c80ac9b21bb0646
+   https://en.wikipedia.org/wiki/Node2vec
+4. Weisfeiler Leman graph isomorphism test
+   score=0.172085 | источник: wikipedia | doc=137042 | oid=6ae28e4c2c80ac9b21bb0e4d
+   https://en.wikipedia.org/wiki/Weisfeiler_Leman_graph_isomorphism_test
+5. Microsoft Cognitive Toolkit
+   score=0.169547 | источник: wikipedia | doc=52280 | oid=6ae1e4e52c80ac9b21b90e36
+   https://en.wikipedia.org/wiki/Microsoft_Cognitive_Toolkit
+6. Oscillatory neural network
+   score=0.164337 | источник: wikipedia | doc=52288 | oid=6ae1e4e82c80ac9b21b90e3e
+   https://en.wikipedia.org/wiki/Oscillatory_neural_network
+7. Train and evaluate deep learning models
+   score=0.163655 | источник: microsoft_learn | doc=54601 | oid=6ae1e8ee2c80ac9b21b91ba5
+   https://learn.microsoft.com/en-us/training/modules/train-evaluate-deep-learn-models
+8. Touch All the Bases - Give Your .NET App Brains and Brawn with the Intelligence of Neural Networks | Microsoft Learn
+   score=0.162148 | источник: microsoft_learn | doc=923842 | oid=6b060389d9bb282a038dfe5f
+   https://learn.microsoft.com/en-us/archive/msdn-magazine/authors/christopher_m._frenz
+9. SNNS
+   score=0.161721 | источник: wikipedia | doc=52306 | oid=6ae1e4f12c80ac9b21b90e51
+   https://en.wikipedia.org/wiki/SNNS
+10. Backpropagation through structure
+   score=0.160513 | источник: wikipedia | doc=52217 | oid=6ae1e4c92c80ac9b21b90df7
+   https://en.wikipedia.org/wiki/Backpropagation_through_structure
+11. Tensor product network
+   score=0.158426 | источник: wikipedia | doc=52315 | oid=6ae1e4f42c80ac9b21b90e5a
+   https://en.wikipedia.org/wiki/Tensor_product_network
+12. Robert Kozma (professor)
+   score=0.157191 | источник: wikipedia | doc=67663 | oid=6ae200012c80ac9b21b96a5f
+   https://en.wikipedia.org/wiki/Robert_Kozma_(professor)
+13. 1.3 Overview
+   score=0.152805 | источник: microsoft_learn | doc=649859 | oid=6b03eeccd9bb282a0386bc47
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-ppgrh/d0691afc-0969-4376-8038-6393a32d19f9
+14. Text graph
+   score=0.149830 | источник: wikipedia | doc=49091 | oid=6ae1dcba2c80ac9b21b8f9ea
+   https://en.wikipedia.org/wiki/Text_graph
+15. Encog
+   score=0.149803 | источник: wikipedia | doc=139861 | oid=6ae294262c80ac9b21bb1f04
+   https://en.wikipedia.org/wiki/Encog
+16. Brain.js
+   score=0.149331 | источник: wikipedia | doc=134890 | oid=6ae289e32c80ac9b21bb01c0
+   https://en.wikipedia.org/wiki/Brain.js
+17. Hybrid neural network
+   score=0.148349 | источник: wikipedia | doc=52259 | oid=6ae1e4db2c80ac9b21b90e21
+   https://en.wikipedia.org/wiki/Hybrid_neural_network
+18. JOONE
+   score=0.147055 | источник: wikipedia | doc=52263 | oid=6ae1e4dd2c80ac9b21b90e25
+   https://en.wikipedia.org/wiki/JOONE
+19. Graphing API Constants
+   score=0.146587 | источник: microsoft_learn | doc=265254 | oid=6b00605a321fadc016c4244f
+   https://learn.microsoft.com/en-us/windows/win32/p2psdk/graphing-api-enumerations
+20. Grossberg network
+   score=0.146141 | источник: wikipedia | doc=52252 | oid=6ae1e4d82c80ac9b21b90e1a
+   https://en.wikipedia.org/wiki/Grossberg_network
+
+Запрос: differential privacy machine learning
+Совпало документов: 603632 | показано: 20 | поиск: 91.005 мс
+1. Model inversion attack
+   score=0.165220 | источник: wikipedia | doc=12145 | oid=6ad9de112a350aca88ff8628
+   https://en.wikipedia.org/wiki/Model_inversion_attack
+2. Differential privacy composition theorems
+   score=0.156590 | источник: wikipedia | doc=4029 | oid=6ad9cefa2a350aca88ff5589
+   https://en.wikipedia.org/wiki/Differential_privacy_composition_theorems
+3. Gautam Kamath
+   score=0.154039 | источник: wikipedia | doc=82992 | oid=6ae21dc92c80ac9b21b9c1fb
+   https://en.wikipedia.org/wiki/Gautam_Kamath
+4. Numerical methods for differential equations
+   score=0.142845 | источник: wikipedia | doc=188594 | oid=6ae7e81c0aaedde439e3f4db
+   https://en.wikipedia.org/wiki/Numerical_methods_for_differential_equations
+5. Frank McSherry
+   score=0.142838 | источник: wikipedia | doc=68117 | oid=6ae200cd2c80ac9b21b96c25
+   https://en.wikipedia.org/wiki/Frank_McSherry
+6. Kobbi Nissim
+   score=0.141917 | источник: wikipedia | doc=68396 | oid=6ae2014a2c80ac9b21b96d3e
+   https://en.wikipedia.org/wiki/Kobbi_Nissim
+7. Adam D. Smith
+   score=0.139417 | источник: wikipedia | doc=69130 | oid=6ae202a02c80ac9b21b97023
+   https://en.wikipedia.org/wiki/Adam_D._Smith
+8. Codeunit "System Privacy Notice Reg."
+   score=0.135906 | источник: microsoft_learn | doc=240027 | oid=6affa4d78ade75cff131cfb4
+   https://learn.microsoft.com/en-us/dynamics365/business-central/application/system-application/codeunit/system.privacy.system-privacy-notice-reg.
+9. Catuscia Palamidessi
+   score=0.134148 | источник: wikipedia | doc=73194 | oid=6ae20a002c80ac9b21b9863e
+   https://en.wikipedia.org/wiki/Catuscia_Palamidessi
+10. Tore Dalenius
+   score=0.132367 | источник: wikipedia | doc=431376 | oid=6b02cd76beada0530d8b3c3a
+   https://en.wikipedia.org/wiki/Tore_Dalenius
+11. Differential algebraic geometry
+   score=0.132156 | источник: wikipedia | doc=436067 | oid=6b02d246beada0530d8b56d7
+   https://en.wikipedia.org/wiki/Differential_algebraic_geometry
+12. Incremental and Differential Backups
+   score=0.131733 | источник: microsoft_learn | doc=249367 | oid=6b00067e321fadc016c39aa5
+   https://learn.microsoft.com/en-us/windows/win32/vss/incremental-and-differential-backups
+13. Differentially private analysis of graphs
+   score=0.123968 | источник: wikipedia | doc=13719 | oid=6ad9e1622a350aca88ff8ffe
+   https://en.wikipedia.org/wiki/Differentially_private_analysis_of_graphs
+14. Namespace System.Privacy
+   score=0.123607 | источник: microsoft_learn | doc=240176 | oid=6affa5d68ade75cff131d0cd
+   https://learn.microsoft.com/en-us/dynamics365/business-central/application/system/namespace/system.privacy
+15. Mallock machine
+   score=0.123348 | источник: wikipedia | doc=20130 | oid=6ad9f00d2a350aca88ffbbd9
+   https://en.wikipedia.org/wiki/Mallock_machine
+16. Review domain authentication, email best practices, data protection and privacy in Dynamics 365 Customer Insights - Journeys
+   score=0.123040 | источник: microsoft_learn | doc=61203 | oid=6ae1f4772c80ac9b21b9415c
+   https://learn.microsoft.com/en-us/training/modules/review-authentication-dynamics-365-marketing
+17. Aleksandar Nikolov (computer scientist)
+   score=0.122955 | источник: wikipedia | doc=71027 | oid=6ae206112c80ac9b21b979f0
+   https://en.wikipedia.org/wiki/Aleksandar_Nikolov_(computer_scientist)
+18. List of implementations of differentially private analyses
+   score=0.122629 | источник: wikipedia | doc=13761 | oid=6ad9e17c2a350aca88ff9031
+   https://en.wikipedia.org/wiki/List_of_implementations_of_differentially_private_analyses
+19. Privacy Statement (Windows Media Device Manager 11 SDK)
+   score=0.122179 | источник: microsoft_learn | doc=303944 | oid=6b014e75beada0530d8825f0
+   https://learn.microsoft.com/en-us/windows/win32/wmdm/privacy-statement
+20. Namespace System.Privacy
+   score=0.121693 | источник: microsoft_learn | doc=239497 | oid=6affa1728ade75cff131cc01
+   https://learn.microsoft.com/en-us/dynamics365/business-central/application/base-application/namespace/system.privacy
+
+Запрос: federated learning data privacy
+Совпало документов: 707351 | показано: 20 | поиск: 116.367 мс
+1. 2.2.1.3 Federated Authentication Token
+   score=0.156290 | источник: microsoft_learn | doc=668081 | oid=6b040d37d9bb282a03874d93
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-tds/f40cca29-29b8-43ec-b9ff-2f8682486c29
+2. SourceNetwork
+   score=0.148638 | источник: microsoft_learn | doc=900705 | oid=6b05e94cd9bb282a038d7b54
+   https://learn.microsoft.com/en-us/skype-sdk/ucwa/sourcenetwork_ref
+3. 3.1.5.4.2 Message Validation
+   score=0.144646 | источник: microsoft_learn | doc=671092 | oid=6b041279d9bb282a0387855d
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-mwbf/7db4f054-f31a-447e-a8fc-6547215bfd31
+4. Federated portal network
+   score=0.143585 | источник: wikipedia | doc=140915 | oid=6ae2966d2c80ac9b21bb252a
+   https://en.wikipedia.org/wiki/Federated_portal_network
+5. 2.2.5.7 LocationType
+   score=0.139307 | источник: microsoft_learn | doc=791018 | oid=6b0533fed9bb282a038b2eeb
+   https://learn.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-sadmws/edd791ce-78ec-4f5e-8739-a2c22c45cabb
+6. Connecting your web service in Windows Federated Search
+   score=0.137903 | источник: microsoft_learn | doc=271299 | oid=6b00db8ebeada0530d875e04
+   https://learn.microsoft.com/en-us/windows/win32/search/-search-federated-search-web-service
+7. Namespace System.Privacy
+   score=0.137884 | источник: microsoft_learn | doc=239497 | oid=6affa1728ade75cff131cc01
+   https://learn.microsoft.com/en-us/dynamics365/business-central/application/base-application/namespace/system.privacy
+8. 2.2.2.3 Federated Authentication Information
+   score=0.136021 | источник: microsoft_learn | doc=628412 | oid=6b03cedfd9bb282a038615e0
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-tds/1a22145b-7657-435d-9c60-318be82456e1
+9. Review domain authentication, email best practices, data protection and privacy in Dynamics 365 Customer Insights - Journeys
+   score=0.135383 | источник: microsoft_learn | doc=61203 | oid=6ae1f4772c80ac9b21b9415c
+   https://learn.microsoft.com/en-us/training/modules/review-authentication-dynamics-365-marketing
+10. Federated search in Windows
+   score=0.134996 | источник: microsoft_learn | doc=304289 | oid=6b014fe8beada0530d882762
+   https://learn.microsoft.com/en-us/windows/win32/search/-search-federated-search-overview
+11. Windows client documentation
+   score=0.133211 | источник: microsoft_learn | doc=241471 | oid=6affad0d8ade75cff131d8ea
+   https://learn.microsoft.com/en-us/windows/resources
+12. Seal of the Federated States of Micronesia
+   score=0.132441 | источник: wikipedia | doc=879221 | oid=6b05cf27d9bb282a038d057e
+   https://en.wikipedia.org/wiki/Seal_of_the_Federated_States_of_Micronesia
+13. 5.2 Index of Security Parameters
+   score=0.131891 | источник: microsoft_learn | doc=634288 | oid=6b03d745d9bb282a03864052
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-tds/30acd293-86b2-4233-8307-d02ac3b7d55c
+14. Federation procedures
+   score=0.131217 | источник: microsoft_learn | doc=820467 | oid=6b056d7ed9bb282a038bd380
+   https://learn.microsoft.com/en-us/exchange/federation-procedures-exchange-2013-help
+15. Az. Managed Service Identity Module
+   score=0.129215 | источник: microsoft_learn | doc=105764 | oid=6ae24d722c80ac9b21ba4ccf
+   https://learn.microsoft.com/en-us/powershell/module/az.managedserviceidentity?view=azps-16.4.0
+16. 3.1.4.36.2.2 GetLocationConfigurationsResponse
+   score=0.129134 | источник: microsoft_learn | doc=783592 | oid=6b051dd1d9bb282a038af2f5
+   https://learn.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-sadmws/955ebf36-8cbb-4181-900d-2cd6e1d7c593
+17. Bring more of your data to Microsoft Search
+   score=0.128058 | источник: microsoft_learn | doc=59118 | oid=6ae1f0c82c80ac9b21b93576
+   https://learn.microsoft.com/en-us/training/modules/microsoft-search-connectors
+18. 2.2.5.3 FederationAuthType
+   score=0.127604 | источник: microsoft_learn | doc=782575 | oid=6b051ae4d9bb282a038adfb4
+   https://learn.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-sadmws/97748ca6-8f59-41e1-9cdb-eaa9d6545d9f
+19. Windows privacy documentation
+   score=0.126577 | источник: microsoft_learn | doc=305263 | oid=6b0153ebbeada0530d882b64
+   https://learn.microsoft.com/en-us/windows/privacy
+20. Databases in Fabric documentation
+   score=0.125625 | источник: microsoft_learn | doc=962059 | oid=6b062f12d9bb282a038eda24
+   https://learn.microsoft.com/en-us/fabric/database
+
+Запрос: stochastic gradient descent optimization
+Совпало документов: 78514 | показано: 20 | поиск: 19.682 мс
+1. Gradient method
+   score=0.304483 | источник: wikipedia | doc=81305 | oid=6ae21a642c80ac9b21b9b838
+   https://en.wikipedia.org/wiki/Gradient_method
+2. microsoftml.sgd_optimizer : Stochastic gradient descent
+   score=0.207952 | источник: microsoft_learn | doc=581629 | oid=6b038b32d9bb282a0384c3a6
+   https://learn.microsoft.com/en-us/sql/machine-learning/python/reference/microsoftml/sgd-optimizer?view=sql-server-ver17
+3. Mirror descent
+   score=0.178002 | источник: wikipedia | doc=15936 | oid=6ad9e6432a350aca88ff9ee4
+   https://en.wikipedia.org/wiki/Mirror_descent
+4. Descent direction
+   score=0.166896 | источник: wikipedia | doc=15858 | oid=6ad9e61c2a350aca88ff9e96
+   https://en.wikipedia.org/wiki/Descent_direction
+5. maOptimizer: Optimization Algorithms
+   score=0.159366 | источник: microsoft_learn | doc=573385 | oid=6b037f2bd9bb282a0384944c
+   https://learn.microsoft.com/en-us/sql/machine-learning/r/reference/microsoftml/optimizer?view=sql-server-ver17
+6. Stochastic gradient Langevin dynamics
+   score=0.149020 | источник: wikipedia | doc=81453 | oid=6ae21aaf2c80ac9b21b9b8cd
+   https://en.wikipedia.org/wiki/Stochastic_gradient_Langevin_dynamics
+7. Simultaneous perturbation stochastic approximation
+   score=0.142222 | источник: wikipedia | doc=81442 | oid=6ae21aaa2c80ac9b21b9b8c2
+   https://en.wikipedia.org/wiki/Simultaneous_perturbation_stochastic_approximation
+8. Naum Z. Shor
+   score=0.137656 | источник: wikipedia | doc=73974 | oid=6ae20b722c80ac9b21b98aa1
+   https://en.wikipedia.org/wiki/Naum_Z._Shor
+9. Derivative-free optimization
+   score=0.137291 | источник: wikipedia | doc=81277 | oid=6ae21a562c80ac9b21b9b81c
+   https://en.wikipedia.org/wiki/Derivative-free_optimization
+10. Léon Bottou
+   score=0.133496 | источник: wikipedia | doc=71741 | oid=6ae2075f2c80ac9b21b97e37
+   https://en.wikipedia.org/wiki/L%C3%A9on_Bottou
+11. List of artificial intelligence algorithms
+   score=0.133118 | источник: wikipedia | doc=530 | oid=6ad9c0d82a350aca88ff3ece
+   https://en.wikipedia.org/wiki/List_of_artificial_intelligence_algorithms
+12. Rprop
+   score=0.128635 | источник: wikipedia | doc=135001 | oid=6ae28a1c2c80ac9b21bb022f
+   https://en.wikipedia.org/wiki/Rprop
+13. Reparameterization trick
+   score=0.128462 | источник: wikipedia | doc=38822 | oid=6ae1c9812c80ac9b21b8bd1b
+   https://en.wikipedia.org/wiki/Reparameterization_trick
+14. Stochastic variance reduction
+   score=0.128190 | источник: wikipedia | doc=81188 | oid=6ae21a272c80ac9b21b9b73a
+   https://en.wikipedia.org/wiki/Stochastic_variance_reduction
+15. Łojasiewicz inequality
+   score=0.127223 | источник: wikipedia | doc=469520 | oid=6b02f891d9bb282a038252ce
+   https://en.wikipedia.org/wiki/%C5%81ojasiewicz_inequality
+16. Stochastic optimization
+   score=0.125579 | источник: wikipedia | doc=81604 | oid=6ae21afe2c80ac9b21b9b9b7
+   https://en.wikipedia.org/wiki/Stochastic_optimization
+17. March 2015 Code Downloads
+   score=0.124750 | источник: microsoft_learn | doc=924441 | oid=6b06044bd9bb282a038e01b3
+   https://learn.microsoft.com/en-us/archive/msdn-magazine/2015/march/march-2015-code-downloads
+18. Oracle complexity (optimization)
+   score=0.124587 | источник: wikipedia | doc=15973 | oid=6ad9e6562a350aca88ff9f0a
+   https://en.wikipedia.org/wiki/Oracle_complexity_(optimization)
+19. Vowpal Wabbit
+   score=0.123633 | источник: wikipedia | doc=52206 | oid=6ae1e4c52c80ac9b21b90dbb
+   https://en.wikipedia.org/wiki/Vowpal_Wabbit
+20. logisticRegression: logisticRegression
+   score=0.122678 | источник: microsoft_learn | doc=583001 | oid=6b038ef0d9bb282a0384d003
+   https://learn.microsoft.com/en-us/sql/machine-learning/r/reference/microsoftml/logisticregression?view=sql-server-ver17
+
+Запрос: quantum error correction surface code
+Совпало документов: 374880 | показано: 20 | поиск: 65.833 мс
+1. Microsoft Quantum documentation
+   score=0.215346 | источник: microsoft_learn | doc=502668 | oid=6b031cc8d9bb282a03830b98
+   https://learn.microsoft.com/en-us/azure/quantum
+2. Surface Code Class
+   score=0.203965 | источник: microsoft_learn | doc=13796 | oid=6ad9e1912a350aca88ff905a
+   https://learn.microsoft.com/en-us/python/qdk/qdk.qre.models.surfacecode?view=qsharp-py
+3. Surface Code Class
+   score=0.203965 | источник: microsoft_learn | doc=13840 | oid=6ad9e1ac2a350aca88ff90b3
+   https://learn.microsoft.com/en-us/python/qdk/qdk.qre.models.qec.surfacecode?view=qsharp-py
+4. qec Package
+   score=0.197480 | источник: microsoft_learn | doc=13821 | oid=6ad9e19f2a350aca88ff9076
+   https://learn.microsoft.com/en-us/python/qdk/qdk.qre.models.qec?view=qsharp-py
+5. Center for Quantum Information Science & Technology
+   score=0.193892 | источник: wikipedia | doc=82681 | oid=6ae21d2a2c80ac9b21b9c092
+   https://en.wikipedia.org/wiki/Center_for_Quantum_Information_Science_%26_Technology
+6. CSS code
+   score=0.191879 | источник: wikipedia | doc=82701 | oid=6ae21d352c80ac9b21b9c0a6
+   https://en.wikipedia.org/wiki/CSS_code
+7. Lattice surgery
+   score=0.191704 | источник: wikipedia | doc=27768 | oid=6ae11e6d2c80ac9b21b87959
+   https://en.wikipedia.org/wiki/Lattice_surgery
+8. Two Dimensional Yoked Surface Code Class
+   score=0.188183 | источник: microsoft_learn | doc=13691 | oid=6ad9e1502a350aca88ff8fdc
+   https://learn.microsoft.com/en-us/python/qdk/qdk.qre.models.qec.twodimensionalyokedsurfacecode?view=qsharp-py
+9. Two Dimensional Yoked Surface Code Class
+   score=0.188183 | источник: microsoft_learn | doc=13802 | oid=6ad9e1952a350aca88ff9062
+   https://learn.microsoft.com/en-us/python/qdk/qdk.qre.models.twodimensionalyokedsurfacecode?view=qsharp-py
+10. One Dimensional Yoked Surface Code Class
+   score=0.188183 | источник: microsoft_learn | doc=13838 | oid=6ad9e1aa2a350aca88ff90b1
+   https://learn.microsoft.com/en-us/python/qdk/qdk.qre.models.onedimensionalyokedsurfacecode?view=qsharp-py
+11. One Dimensional Yoked Surface Code Class
+   score=0.188183 | источник: microsoft_learn | doc=13891 | oid=6ad9e1c92a350aca88ff90f3
+   https://learn.microsoft.com/en-us/python/qdk/qdk.qre.models.qec.onedimensionalyokedsurfacecode?view=qsharp-py
+12. Surface Code Low Move Class
+   score=0.187750 | источник: microsoft_learn | doc=13634 | oid=6ad9e12b2a350aca88ff8f34
+   https://learn.microsoft.com/en-us/python/qdk/qdk.qre.models.surfacecodelowmove?view=qsharp-py
+13. Surface Code Low Move Class
+   score=0.187750 | источник: microsoft_learn | doc=13702 | oid=6ad9e1572a350aca88ff8fe9
+   https://learn.microsoft.com/en-us/python/qdk/qdk.qre.models.qec.surfacecodelowmove?view=qsharp-py
+14. Introduction to quantum error correction
+   score=0.184319 | источник: microsoft_learn | doc=502774 | oid=6b031ce2d9bb282a03830c1b
+   https://learn.microsoft.com/en-us/azure/quantum/concepts-error-correction
+15. What is the Microsoft Quantum resource estimator?
+   score=0.175647 | источник: microsoft_learn | doc=502907 | oid=6b031d03d9bb282a03830ce7
+   https://learn.microsoft.com/en-us/azure/quantum/intro-to-resource-estimation
+16. Build quantum solutions with the Microsoft Quantum Development Kit
+   score=0.173293 | источник: microsoft_learn | doc=502729 | oid=6b031cd7d9bb282a03830bd5
+   https://learn.microsoft.com/en-us/azure/quantum/qdk-main-overview
+17. Qubit Type Enum
+   score=0.170802 | источник: microsoft_learn | doc=13834 | oid=6ad9e1a82a350aca88ff90ad
+   https://learn.microsoft.com/en-us/python/qdk/qdk.qre.interop.qubittype?view=qsharp-py
+18. Set up the Microsoft Quantum Development Kit
+   score=0.170387 | источник: microsoft_learn | doc=502669 | oid=6b031cc8d9bb282a03830b99
+   https://learn.microsoft.com/en-us/azure/quantum/install-overview-qdk
+19. C2 error
+   score=0.165550 | источник: wikipedia | doc=95503 | oid=6ae238882c80ac9b21ba0f2d
+   https://en.wikipedia.org/wiki/C2_error
+20. Coherent information
+   score=0.164755 | источник: wikipedia | doc=27910 | oid=6ae11eae2c80ac9b21b87a17
+   https://en.wikipedia.org/wiki/Coherent_information
+
+Запрос: lithium ion battery degradation
+Совпало документов: 55786 | показано: 20 | поиск: 12.846 мс
+1. Lithium vanadium phosphate battery
+   score=0.161680 | источник: wikipedia | doc=454795 | oid=6b02e853d9bb282a0382013a
+   https://en.wikipedia.org/wiki/Lithium_vanadium_phosphate_battery
+2. List of battery types
+   score=0.158135 | источник: wikipedia | doc=315172 | oid=6b01d4e0beada0530d889cdf
+   https://en.wikipedia.org/wiki/List_of_battery_types
+3. Lithium-ion flow battery
+   score=0.157217 | источник: wikipedia | doc=454717 | oid=6b02e83dd9bb282a038200c9
+   https://en.wikipedia.org/wiki/Lithium-ion_flow_battery
+4. Commodity cell
+   score=0.156525 | источник: wikipedia | doc=314222 | oid=6b01d31abeada0530d88983b
+   https://en.wikipedia.org/wiki/Commodity_cell
+5. Sulfur selenium battery
+   score=0.151530 | источник: wikipedia | doc=415478 | oid=6b02bc96beada0530d8ae196
+   https://en.wikipedia.org/wiki/Sulfur_selenium_battery
+6. Cutoff voltage
+   score=0.149181 | источник: wikipedia | doc=371383 | oid=6b026e66beada0530d89df06
+   https://en.wikipedia.org/wiki/Cutoff_voltage
+7. Float voltage
+   score=0.147523 | источник: wikipedia | doc=391727 | oid=6b029596beada0530d8a56e4
+   https://en.wikipedia.org/wiki/Float_voltage
+8. Solid-state silicon battery
+   score=0.145775 | источник: wikipedia | doc=454627 | oid=6b02e824d9bb282a03820054
+   https://en.wikipedia.org/wiki/Solid-state_silicon_battery
+9. List of energy storage projects in South Australia
+   score=0.145512 | источник: wikipedia | doc=415405 | oid=6b02bc7dbeada0530d8ae122
+   https://en.wikipedia.org/wiki/List_of_energy_storage_projects_in_South_Australia
+10. Charge cycle
+   score=0.143708 | источник: wikipedia | doc=314203 | oid=6b01d311beada0530d889826
+   https://en.wikipedia.org/wiki/Charge_cycle
+11. Altairnano
+   score=0.142126 | источник: wikipedia | doc=445474 | oid=6b02de71d9bb282a0381cd17
+   https://en.wikipedia.org/wiki/Altairnano
+12. CR-V3 battery
+   score=0.142107 | источник: wikipedia | doc=447836 | oid=6b02e0e9d9bb282a0381da2e
+   https://en.wikipedia.org/wiki/CR-V3_battery
+13. Lithium hexafluoroantimonate
+   score=0.141709 | источник: wikipedia | doc=620768 | oid=6b03c318d9bb282a0385d4ad
+   https://en.wikipedia.org/wiki/Lithium_hexafluoroantimonate
+14. Capacity loss
+   score=0.140734 | источник: wikipedia | doc=391717 | oid=6b029593beada0530d8a56da
+   https://en.wikipedia.org/wiki/Capacity_loss
+15. Michel Armand
+   score=0.136692 | источник: wikipedia | doc=454124 | oid=6b02e7a0d9bb282a0381fd97
+   https://en.wikipedia.org/wiki/Michel_Armand
+16. National Alliance for Advanced Transportation Battery Cell Manufacture
+   score=0.136579 | источник: wikipedia | doc=445526 | oid=6b02de7ed9bb282a0381cd4c
+   https://en.wikipedia.org/wiki/National_Alliance_for_Advanced_Transportation_Battery_Cell_Manufacture
+17. List of convertible tablet computer brands
+   score=0.136357 | источник: wikipedia | doc=319438 | oid=6b01ddafbeada0530d88b833
+   https://en.wikipedia.org/wiki/List_of_convertible_tablet_computer_brands
+18. Battery simulator
+   score=0.135706 | источник: wikipedia | doc=415292 | oid=6b02bc5dbeada0530d8ae08f
+   https://en.wikipedia.org/wiki/Battery_simulator
+19. Lithium sulfite
+   score=0.135148 | источник: wikipedia | doc=575427 | oid=6b03821ed9bb282a0384a0ac
+   https://en.wikipedia.org/wiki/Lithium_sulfite
+20. Li2SO3
+   score=0.135148 | источник: wikipedia | doc=683795 | oid=6b04273dd9bb282a0387ca89
+   https://en.wikipedia.org/wiki/Li2SO3
+
+Запрос: photovoltaic solar cell efficiency
+Совпало документов: 131662 | показано: 20 | поиск: 22.610 мс
+1. List of types of solar cells
+   score=0.233797 | источник: wikipedia | doc=315224 | oid=6b01d4f7beada0530d889d16
+   https://en.wikipedia.org/wiki/List_of_types_of_solar_cells
+2. Index of solar energy articles
+   score=0.209753 | источник: wikipedia | doc=453974 | oid=6b02e778d9bb282a0381fccb
+   https://en.wikipedia.org/wiki/Index_of_solar_energy_articles
+3. Indium gallium arsenide phosphide
+   score=0.202455 | источник: wikipedia | doc=385805 | oid=6b028b05beada0530d8a3504
+   https://en.wikipedia.org/wiki/Indium_gallium_arsenide_phosphide
+4. Alfonsine Solar Park
+   score=0.200499 | источник: wikipedia | doc=478445 | oid=6b0302c4d9bb282a03828562
+   https://en.wikipedia.org/wiki/Alfonsine_Solar_Park
+5. Sharp Solar
+   score=0.196567 | источник: wikipedia | doc=222025 | oid=6ae82a370aaedde439e4b71f
+   https://en.wikipedia.org/wiki/Sharp_Solar
+6. Oxford Photovoltaics
+   score=0.191028 | источник: wikipedia | doc=443604 | oid=6b02db3cbeada0530d8b8287
+   https://en.wikipedia.org/wiki/Oxford_Photovoltaics
+7. Stuart Wenham
+   score=0.190501 | источник: wikipedia | doc=174241 | oid=6ae7cdb30aaedde439e3a432
+   https://en.wikipedia.org/wiki/Stuart_Wenham
+8. Photoactive layer
+   score=0.187881 | источник: wikipedia | doc=391024 | oid=6b02945cbeada0530d8a52f2
+   https://en.wikipedia.org/wiki/Photoactive_layer
+9. Qinghai Golmud Solar Park
+   score=0.183268 | источник: wikipedia | doc=482219 | oid=6b0306d1d9bb282a0382999d
+   https://en.wikipedia.org/wiki/Qinghai_Golmud_Solar_Park
+10. Silicon Module Super League
+   score=0.182998 | источник: wikipedia | doc=427039 | oid=6b02c8e4beada0530d8b2306
+   https://en.wikipedia.org/wiki/Silicon_Module_Super_League
+11. Heliatek
+   score=0.182300 | источник: wikipedia | doc=313324 | oid=6b01d185beada0530d889230
+   https://en.wikipedia.org/wiki/Heliatek
+12. Pompogne Solar Park
+   score=0.182142 | источник: wikipedia | doc=478679 | oid=6b030301d9bb282a0382864f
+   https://en.wikipedia.org/wiki/Pompogne_Solar_Park
+13. Panel generation factor
+   score=0.180890 | источник: wikipedia | doc=407418 | oid=6b02b24ebeada0530d8ab34a
+   https://en.wikipedia.org/wiki/Panel_generation_factor
+14. Polarizing organic photovoltaics
+   score=0.180340 | источник: wikipedia | doc=391033 | oid=6b029460beada0530d8a52fb
+   https://en.wikipedia.org/wiki/Polarizing_organic_photovoltaics
+15. Motech
+   score=0.179316 | источник: wikipedia | doc=443600 | oid=6b02db3bbeada0530d8b8283
+   https://en.wikipedia.org/wiki/Motech
+16. Geiseltalsee Solarpark
+   score=0.178860 | источник: wikipedia | doc=478547 | oid=6b0302dfd9bb282a038285c8
+   https://en.wikipedia.org/wiki/Geiseltalsee_Solarpark
+17. Nanocrystal solar cell
+   score=0.178791 | источник: wikipedia | doc=313514 | oid=6b01d1dcbeada0530d889338
+   https://en.wikipedia.org/wiki/Nanocrystal_solar_cell
+18. Yangbajing Solar Park
+   score=0.178526 | источник: wikipedia | doc=478803 | oid=6b030323d9bb282a038286cb
+   https://en.wikipedia.org/wiki/Yangbajing_Solar_Park
+19. Hongsibu Solar Park
+   score=0.178171 | источник: wikipedia | doc=482165 | oid=6b0306c3d9bb282a03829966
+   https://en.wikipedia.org/wiki/Hongsibu_Solar_Park
+20. Cellino San Marco Solar Park
+   score=0.176590 | источник: wikipedia | doc=478482 | oid=6b0302ced9bb282a03828587
+   https://en.wikipedia.org/wiki/Cellino_San_Marco_Solar_Park
+
+Запрос: computational fluid dynamics finite volume method
+Совпало документов: 340585 | показано: 20 | поиск: 56.582 мс
+1. List of operator splitting topics
+   score=0.261794 | источник: wikipedia | doc=76611 | oid=6ae210a92c80ac9b21b99afd
+   https://en.wikipedia.org/wiki/List_of_operator_splitting_topics
+2. Diffuse element method
+   score=0.255931 | источник: wikipedia | doc=133277 | oid=6ae2868d2c80ac9b21baf7fb
+   https://en.wikipedia.org/wiki/Diffuse_element_method
+3. List of fluid mechanics journals
+   score=0.249010 | источник: wikipedia | doc=360454 | oid=6b0259babeada0530d89ad2e
+   https://en.wikipedia.org/wiki/List_of_fluid_mechanics_journals
+4. Flux-corrected transport
+   score=0.226227 | источник: wikipedia | doc=133281 | oid=6ae2868f2c80ac9b21baf7ff
+   https://en.wikipedia.org/wiki/Flux-corrected_transport
+5. List of partial differential equation topics
+   score=0.224297 | источник: wikipedia | doc=393598 | oid=6b0298dbbeada0530d8a620b
+   https://en.wikipedia.org/wiki/List_of_partial_differential_equation_topics
+6. Coolfluid
+   score=0.210359 | источник: wikipedia | doc=186506 | oid=6ae7e4440aaedde439e3e945
+   https://en.wikipedia.org/wiki/Coolfluid
+7. Marker-and-cell method
+   score=0.208487 | источник: wikipedia | doc=35455 | oid=6ae12c432c80ac9b21b8a917
+   https://en.wikipedia.org/wiki/Marker-and-cell_method
+8. List of computational fluid dynamics software
+   score=0.203735 | источник: wikipedia | doc=126261 | oid=6ae277ce2c80ac9b21bacb1b
+   https://en.wikipedia.org/wiki/List_of_computational_fluid_dynamics_software
+9. Suhas Patankar
+   score=0.199975 | источник: wikipedia | doc=187276 | oid=6ae7e5a80aaedde439e3ed5a
+   https://en.wikipedia.org/wiki/Suhas_Patankar
+10. PISO algorithm
+   score=0.190569 | источник: wikipedia | doc=186599 | oid=6ae7e46d0aaedde439e3e9a3
+   https://en.wikipedia.org/wiki/PISO_algorithm
+11. Finite volume method for three-dimensional diffusion problem
+   score=0.190407 | источник: wikipedia | doc=186525 | oid=6ae7e44c0aaedde439e3e958
+   https://en.wikipedia.org/wiki/Finite_volume_method_for_three-dimensional_diffusion_problem
+12. Constantine Pozrikidis
+   score=0.188123 | источник: wikipedia | doc=187283 | oid=6ae7e5ab0aaedde439e3ed61
+   https://en.wikipedia.org/wiki/Constantine_Pozrikidis
+13. Scarborough criterion
+   score=0.187943 | источник: wikipedia | doc=76700 | oid=6ae210d62c80ac9b21b99b57
+   https://en.wikipedia.org/wiki/Scarborough_criterion
+14. Patch dynamics (physics)
+   score=0.187305 | источник: wikipedia | doc=375344 | oid=6b02769abeada0530d89f73d
+   https://en.wikipedia.org/wiki/Patch_dynamics_(physics)
+15. Free-surface modelling
+   score=0.186566 | источник: wikipedia | doc=130518 | oid=6ae2807f2c80ac9b21bae4cb
+   https://en.wikipedia.org/wiki/Free-surface_modelling
+16. List of materials science software
+   score=0.185309 | источник: wikipedia | doc=33959 | oid=6ae1298b2c80ac9b21b8a021
+   https://en.wikipedia.org/wiki/List_of_materials_science_software
+17. Discretization of Navier–Stokes equations
+   score=0.183689 | источник: wikipedia | doc=186513 | oid=6ae7e4470aaedde439e3e94c
+   https://en.wikipedia.org/wiki/Discretization_of_Navier%E2%80%93Stokes_equations
+18. M. Yousuff Hussaini
+   score=0.179664 | источник: wikipedia | doc=187248 | oid=6ae7e59a0aaedde439e3ed3e
+   https://en.wikipedia.org/wiki/M._Yousuff_Hussaini
+19. SIMPLE algorithm
+   score=0.177541 | источник: wikipedia | doc=186625 | oid=6ae7e4780aaedde439e3e9bd
+   https://en.wikipedia.org/wiki/SIMPLE_algorithm
+20. Randall J. LeVeque
+   score=0.177188 | источник: wikipedia | doc=187261 | oid=6ae7e5a20aaedde439e3ed4b
+   https://en.wikipedia.org/wiki/Randall_J._LeVeque
+
+Запрос: finite element analysis stress
+Совпало документов: 298388 | показано: 20 | поиск: 44.973 мс
+1. Quadratic quadrilateral element
+   score=0.242553 | источник: wikipedia | doc=693206 | oid=6b043a29d9bb282a038823ec
+   https://en.wikipedia.org/wiki/Quadratic_quadrilateral_element
+2. Finite element model data post-processing
+   score=0.224786 | источник: wikipedia | doc=35145 | oid=6ae12bb32c80ac9b21b8a737
+   https://en.wikipedia.org/wiki/Finite_element_model_data_post-processing
+3. Structural mechanics
+   score=0.202836 | источник: wikipedia | doc=360796 | oid=6b025a52beada0530d89ae8d
+   https://en.wikipedia.org/wiki/Structural_mechanics
+4. Constant strain triangle element
+   score=0.194944 | источник: wikipedia | doc=693058 | oid=6b0439efd9bb282a03882324
+   https://en.wikipedia.org/wiki/Constant_strain_triangle_element
+5. Barsoum elements
+   score=0.194835 | источник: wikipedia | doc=367707 | oid=6b026684beada0530d89ca72
+   https://en.wikipedia.org/wiki/Barsoum_elements
+6. Wood–Armer method
+   score=0.181595 | источник: wikipedia | doc=189780 | oid=6ae7ea300aaedde439e3fb62
+   https://en.wikipedia.org/wiki/Wood%E2%80%93Armer_method
+7. Functionally graded element
+   score=0.179447 | источник: wikipedia | doc=357450 | oid=6b02546dbeada0530d89a110
+   https://en.wikipedia.org/wiki/Functionally_graded_element
+8. Bilinear quadrilateral element
+   score=0.178485 | источник: wikipedia | doc=693020 | oid=6b0439e1d9bb282a038822f0
+   https://en.wikipedia.org/wiki/Bilinear_quadrilateral_element
+9. Force lines
+   score=0.176943 | источник: wikipedia | doc=357436 | oid=6b025467beada0530d89a102
+   https://en.wikipedia.org/wiki/Force_lines
+10. Safehull
+   score=0.176369 | источник: wikipedia | doc=321476 | oid=6b01e170beada0530d88c3d2
+   https://en.wikipedia.org/wiki/Safehull
+11. VisualFEA
+   score=0.169539 | источник: wikipedia | doc=367736 | oid=6b026691beada0530d89ca90
+   https://en.wikipedia.org/wiki/VisualFEA
+12. Quickfield
+   score=0.169474 | источник: wikipedia | doc=129209 | oid=6ae27dd82c80ac9b21badd15
+   https://en.wikipedia.org/wiki/Quickfield
+13. Fuzzy finite element
+   score=0.168681 | источник: wikipedia | doc=8518 | oid=6ad9d7302a350aca88ff6ffb
+   https://en.wikipedia.org/wiki/Fuzzy_finite_element
+14. Index of civil engineering articles
+   score=0.168047 | источник: wikipedia | doc=356369 | oid=6b02528bbeada0530d899cb8
+   https://en.wikipedia.org/wiki/Index_of_civil_engineering_articles
+15. Finite strip method
+   score=0.167069 | источник: wikipedia | doc=356320 | oid=6b025273beada0530d899c83
+   https://en.wikipedia.org/wiki/Finite_strip_method
+16. NEi Fusion
+   score=0.165717 | источник: wikipedia | doc=321471 | oid=6b01e16ebeada0530d88c3cd
+   https://en.wikipedia.org/wiki/NEi_Fusion
+17. NEi Software
+   score=0.163106 | источник: wikipedia | doc=330267 | oid=6b01f420beada0530d88f716
+   https://en.wikipedia.org/wiki/NEi_Software
+18. List of mathematics-based methods
+   score=0.161637 | источник: wikipedia | doc=598218 | oid=6b03a19fd9bb282a038527d7
+   https://en.wikipedia.org/wiki/List_of_mathematics-based_methods
+19. Finite element machine
+   score=0.161506 | источник: wikipedia | doc=89762 | oid=6ae22c9d2c80ac9b21b9ec2f
+   https://en.wikipedia.org/wiki/Finite_element_machine
+20. Volumetric mesh
+   score=0.159306 | источник: wikipedia | doc=77275 | oid=6ae212062c80ac9b21b99ed9
+   https://en.wikipedia.org/wiki/Volumetric_mesh
+
+Запрос: optical coherence tomography
+Совпало документов: 36238 | показано: 20 | поиск: 8.014 мс
+1. Zhongping Chen
+   score=0.185914 | источник: wikipedia | doc=459131 | oid=6b02ed22d9bb282a03821a29
+   https://en.wikipedia.org/wiki/Zhongping_Chen
+2. Coherence theory (optics)
+   score=0.184515 | источник: wikipedia | doc=380882 | oid=6b02820cbeada0530d8a1851
+   https://en.wikipedia.org/wiki/Coherence_theory_(optics)
+3. Intravascular imaging
+   score=0.162515 | источник: wikipedia | doc=199519 | oid=6ae7fb310aaedde439e4329b
+   https://en.wikipedia.org/wiki/Intravascular_imaging
+4. Multiscale tomography
+   score=0.159490 | источник: wikipedia | doc=599855 | oid=6b03a368d9bb282a0385313b
+   https://en.wikipedia.org/wiki/Multiscale_tomography
+5. Eric Swanson (engineer)
+   score=0.153538 | источник: wikipedia | doc=459780 | oid=6b02edded9bb282a03821cb8
+   https://en.wikipedia.org/wiki/Eric_Swanson_(engineer)
+6. DONE
+   score=0.152691 | источник: wikipedia | doc=35128 | oid=6ae12bab2c80ac9b21b8a726
+   https://en.wikipedia.org/wiki/DONE
+7. Coherence length
+   score=0.151659 | источник: wikipedia | doc=380879 | oid=6b02820bbeada0530d8a184e
+   https://en.wikipedia.org/wiki/Coherence_length
+8. Optical tomography
+   score=0.143827 | источник: wikipedia | doc=599783 | oid=6b03a354d9bb282a038530c4
+   https://en.wikipedia.org/wiki/Optical_tomography
+9. Novacam Technologies
+   score=0.142825 | источник: wikipedia | doc=402135 | oid=6b02a7d1beada0530d8a9256
+   https://en.wikipedia.org/wiki/Novacam_Technologies
+10. List of types of interferometers
+   score=0.141835 | источник: wikipedia | doc=600987 | oid=6b03a4a7d9bb282a038537fa
+   https://en.wikipedia.org/wiki/List_of_types_of_interferometers
+11. Medical optical imaging
+   score=0.138837 | источник: wikipedia | doc=599756 | oid=6b03a34dd9bb282a038530a9
+   https://en.wikipedia.org/wiki/Medical_optical_imaging
+12. Kirill V. Larin
+   score=0.137737 | источник: wikipedia | doc=578922 | oid=6b03863fd9bb282a0384b492
+   https://en.wikipedia.org/wiki/Kirill_V._Larin
+13. James Fujimoto
+   score=0.134276 | источник: wikipedia | doc=459273 | oid=6b02ed4bd9bb282a03821ab9
+   https://en.wikipedia.org/wiki/James_Fujimoto
+14. Fourier domain mode locking
+   score=0.131868 | источник: wikipedia | doc=421010 | oid=6b02c270beada0530d8b0100
+   https://en.wikipedia.org/wiki/Fourier_domain_mode_locking
+15. Intravascular fluorescence
+   score=0.127990 | источник: wikipedia | doc=599754 | oid=6b03a34cd9bb282a03853095
+   https://en.wikipedia.org/wiki/Intravascular_fluorescence
+16. Coherence scanning interferometry
+   score=0.127968 | источник: wikipedia | doc=381776 | oid=6b0283a7beada0530d8a1dfd
+   https://en.wikipedia.org/wiki/Coherence_scanning_interferometry
+17. Audrey Ellerbee Bowden
+   score=0.127210 | источник: wikipedia | doc=688699 | oid=6b0432eed9bb282a038800ae
+   https://en.wikipedia.org/wiki/Audrey_Ellerbee_Bowden
+18. Speckle variance optical coherence tomography
+   score=0.125499 | источник: wikipedia | doc=599789 | oid=6b03a356d9bb282a038530ca
+   https://en.wikipedia.org/wiki/Speckle_variance_optical_coherence_tomography
+19. Kostadinka Bizheva
+   score=0.124906 | источник: wikipedia | doc=459070 | oid=6b02ed12d9bb282a038219ec
+   https://en.wikipedia.org/wiki/Kostadinka_Bizheva
+20. Ballistic photon
+   score=0.119685 | источник: wikipedia | doc=599758 | oid=6b03a34dd9bb282a038530ab
+   https://en.wikipedia.org/wiki/Ballistic_photon
+
+Запрос: gravitational waves interferometer
+Совпало документов: 32020 | показано: 20 | поиск: 5.521 мс
+1. CLIO
+   score=0.198571 | источник: wikipedia | doc=608240 | oid=6b03afc6d9bb282a03856f8c
+   https://en.wikipedia.org/wiki/CLIO
+2. TAMA 300
+   score=0.183515 | источник: wikipedia | doc=608249 | oid=6b03afcbd9bb282a03856f99
+   https://en.wikipedia.org/wiki/TAMA_300
+3. Big Bang Observer
+   score=0.175810 | источник: wikipedia | doc=608673 | oid=6b03b07cd9bb282a03857318
+   https://en.wikipedia.org/wiki/Big_Bang_Observer
+4. List of types of interferometers
+   score=0.168148 | источник: wikipedia | doc=600987 | oid=6b03a4a7d9bb282a038537fa
+   https://en.wikipedia.org/wiki/List_of_types_of_interferometers
+5. Kepco Power
+   score=0.167301 | источник: wikipedia | doc=217382 | oid=6ae8202b0aaedde439e49b71
+   https://en.wikipedia.org/wiki/Kepco_Power
+6. Deci-hertz Interferometer Gravitational wave Observatory
+   score=0.151837 | источник: wikipedia | doc=608680 | oid=6b03b07fd9bb282a03857325
+   https://en.wikipedia.org/wiki/Deci-hertz_Interferometer_Gravitational_wave_Observatory
+7. AIGO
+   score=0.143897 | источник: wikipedia | doc=608236 | oid=6b03afc5d9bb282a03856f88
+   https://en.wikipedia.org/wiki/AIGO
+8. Gowdy solution
+   score=0.137352 | источник: wikipedia | doc=614459 | oid=6b03b987d9bb282a0385a279
+   https://en.wikipedia.org/wiki/Gowdy_solution
+9. Acoustic interferometer
+   score=0.133582 | источник: wikipedia | doc=359277 | oid=6b0257a2beada0530d89a868
+   https://en.wikipedia.org/wiki/Acoustic_interferometer
+10. Vanishing dimensions theory
+   score=0.133167 | источник: wikipedia | doc=362365 | oid=6b025d1ebeada0530d89b4ee
+   https://en.wikipedia.org/wiki/Vanishing_dimensions_theory
+11. SaudiSat-4
+   score=0.131741 | источник: wikipedia | doc=410010 | oid=6b02b6d8beada0530d8ac2a3
+   https://en.wikipedia.org/wiki/SaudiSat-4
+12. Magnetogravity wave
+   score=0.129905 | источник: wikipedia | doc=386411 | oid=6b028c1bbeada0530d8a387b
+   https://en.wikipedia.org/wiki/Magnetogravity_wave
+13. Delay line interferometer
+   score=0.129491 | источник: wikipedia | doc=168995 | oid=6ae7c4530aaedde439e386d0
+   https://en.wikipedia.org/wiki/Delay_line_interferometer
+14. Center for Gravitational Wave Astronomy
+   score=0.126558 | источник: wikipedia | doc=549337 | oid=6b035c42d9bb282a03840b72
+   https://en.wikipedia.org/wiki/Center_for_Gravitational_Wave_Astronomy
+15. Matter wave clock
+   score=0.124164 | источник: wikipedia | doc=694182 | oid=6b043bbdd9bb282a03882c06
+   https://en.wikipedia.org/wiki/Matter_wave_clock
+16. Sanjeev Dhurandhar
+   score=0.120353 | источник: wikipedia | doc=611902 | oid=6b03b5aad9bb282a03858ddb
+   https://en.wikipedia.org/wiki/Sanjeev_Dhurandhar
+17. Dark siren
+   score=0.120254 | источник: wikipedia | doc=614575 | oid=6b03b9b4d9bb282a0385a32c
+   https://en.wikipedia.org/wiki/Dark_siren
+18. Michelson stellar interferometer
+   score=0.119683 | источник: wikipedia | doc=381920 | oid=6b0283ebbeada0530d8a1e97
+   https://en.wikipedia.org/wiki/Michelson_stellar_interferometer
+19. Neutron interferometer
+   score=0.118886 | источник: wikipedia | doc=440148 | oid=6b02d6b6beada0530d8b6dcc
+   https://en.wikipedia.org/wiki/Neutron_interferometer
+20. Gravitational memory effect
+   score=0.118554 | источник: wikipedia | doc=614462 | oid=6b03b987d9bb282a0385a27d
+   https://en.wikipedia.org/wiki/Gravitational_memory_effect
+
+Запрос: CRISPR Cas9 gene editing
+Совпало документов: 594599 | показано: 20 | поиск: 87.572 мс
+1. Institute of Chemical Biology and Fundamental Medicine
+   score=0.169843 | источник: wikipedia | doc=640399 | oid=6b03e03bd9bb282a03866fa9
+   https://en.wikipedia.org/wiki/Institute_of_Chemical_Biology_and_Fundamental_Medicine
+2. TcNPR3 (gene)
+   score=0.165501 | источник: wikipedia | doc=571711 | oid=6b037d60d9bb282a03848aac
+   https://en.wikipedia.org/wiki/TcNPR3_(gene)
+3. TIGR-Tas
+   score=0.155109 | источник: wikipedia | doc=539727 | oid=6b034dd3d9bb282a0383d6cc
+   https://en.wikipedia.org/wiki/TIGR-Tas
+4. Shredding (disassembling genomic data)
+   score=0.119804 | источник: wikipedia | doc=133031 | oid=6ae2860e2c80ac9b21baf67d
+   https://en.wikipedia.org/wiki/Shredding_(disassembling_genomic_data)
+5. Fanzor
+   score=0.114014 | источник: wikipedia | doc=554782 | oid=6b036459d9bb282a03842967
+   https://en.wikipedia.org/wiki/Fanzor
+6. Transcriptome instability
+   score=0.110046 | источник: wikipedia | doc=552586 | oid=6b0360e0d9bb282a03841d38
+   https://en.wikipedia.org/wiki/Transcriptome_instability
+7. FokI
+   score=0.107705 | источник: wikipedia | doc=568103 | oid=6b0375f4d9bb282a0384744e
+   https://en.wikipedia.org/wiki/FokI
+8. Insert (molecular biology)
+   score=0.107475 | источник: wikipedia | doc=539242 | oid=6b034d58d9bb282a0383d4e3
+   https://en.wikipedia.org/wiki/Insert_(molecular_biology)
+9. Donald Weeks (academic)
+   score=0.107105 | источник: wikipedia | doc=887492 | oid=6b05d929d9bb282a038d343f
+   https://en.wikipedia.org/wiki/Donald_Weeks_(academic)
+10. Cas12a
+   score=0.105047 | источник: wikipedia | doc=534705 | oid=6b0348b8d9bb282a0383c30d
+   https://en.wikipedia.org/wiki/Cas12a
+11. Editas Medicine
+   score=0.104565 | источник: wikipedia | doc=616905 | oid=6b03bd31d9bb282a0385b59b
+   https://en.wikipedia.org/wiki/Editas_Medicine
+12. CRISPR-Display
+   score=0.102917 | источник: wikipedia | doc=533000 | oid=6b0346ffd9bb282a0383bc60
+   https://en.wikipedia.org/wiki/CRISPR-Display
+13. Missense mRNA
+   score=0.101255 | источник: wikipedia | doc=539333 | oid=6b034d6fd9bb282a0383d53f
+   https://en.wikipedia.org/wiki/Missense_mRNA
+14. Yiping Qi
+   score=0.100975 | источник: wikipedia | doc=554889 | oid=6b036484d9bb282a038429d3
+   https://en.wikipedia.org/wiki/Yiping_Qi
+15. CRISPR/Cas tools
+   score=0.099670 | источник: wikipedia | doc=348678 | oid=6b021601beada0530d895eec
+   https://en.wikipedia.org/wiki/CRISPR%2FCas_tools
+16. 15-Cis-phytoene desaturase
+   score=0.099562 | источник: wikipedia | doc=568717 | oid=6b037799d9bb282a03847a11
+   https://en.wikipedia.org/wiki/15-Cis-phytoene_desaturase
+17. Exagamglogene autotemcel
+   score=0.097822 | источник: wikipedia | doc=887834 | oid=6b05d998d9bb282a038d362f
+   https://en.wikipedia.org/wiki/Exagamglogene_autotemcel
+18. C22H27N5O2
+   score=0.097449 | источник: wikipedia | doc=677715 | oid=6b041d37d9bb282a0387a971
+   https://en.wikipedia.org/wiki/C22H27N5O2
+19. CRISPR activation
+   score=0.096660 | источник: wikipedia | doc=554764 | oid=6b036452d9bb282a03842955
+   https://en.wikipedia.org/wiki/CRISPR_activation
+20. Patrick Hsu
+   score=0.096105 | источник: wikipedia | doc=374642 | oid=6b027532beada0530d89f250
+   https://en.wikipedia.org/wiki/Patrick_Hsu
+
+Запрос: protein folding prediction
+Совпало документов: 90667 | показано: 20 | поиск: 16.942 мс
+1. Ferredoxin fold
+   score=0.193509 | источник: wikipedia | doc=589340 | oid=6b039641d9bb282a0384f165
+   https://en.wikipedia.org/wiki/Ferredoxin_fold
+2. CAFASP
+   score=0.189771 | источник: wikipedia | doc=132957 | oid=6ae285e82c80ac9b21baf632
+   https://en.wikipedia.org/wiki/CAFASP
+3. TMPad
+   score=0.186570 | источник: wikipedia | doc=133753 | oid=6ae2878b2c80ac9b21bafae4
+   https://en.wikipedia.org/wiki/TMPad
+4. Beta solenoid
+   score=0.178304 | источник: wikipedia | doc=664039 | oid=6b0405dcd9bb282a03872cf9
+   https://en.wikipedia.org/wiki/Beta_solenoid
+5. Contact order
+   score=0.171949 | источник: wikipedia | doc=263696 | oid=6b005c95321fadc016c3e587
+   https://en.wikipedia.org/wiki/Contact_order
+6. Native contact
+   score=0.171908 | источник: wikipedia | doc=553922 | oid=6b0362f8d9bb282a0384252c
+   https://en.wikipedia.org/wiki/Native_contact
+7. Double histone fold
+   score=0.171570 | источник: wikipedia | doc=664336 | oid=6b04065dd9bb282a03872f74
+   https://en.wikipedia.org/wiki/Double_histone_fold
+8. Proteins@home
+   score=0.170537 | источник: wikipedia | doc=130404 | oid=6ae280442c80ac9b21bae442
+   https://en.wikipedia.org/wiki/Proteins%40home
+9. Denaturation midpoint
+   score=0.169275 | источник: wikipedia | doc=588901 | oid=6b0395c5d9bb282a0384ed5a
+   https://en.wikipedia.org/wiki/Denaturation_midpoint
+10. Lists of bioinformatics software
+   score=0.162265 | источник: wikipedia | doc=127075 | oid=6ae279792c80ac9b21bad017
+   https://en.wikipedia.org/wiki/Lists_of_bioinformatics_software
+11. WIPI protein family
+   score=0.161738 | источник: wikipedia | doc=590187 | oid=6b039731d9bb282a0384f4c3
+   https://en.wikipedia.org/wiki/WIPI_protein_family
+12. Thioredoxin fold
+   score=0.160491 | источник: wikipedia | doc=588673 | oid=6b039582d9bb282a0384ebd0
+   https://en.wikipedia.org/wiki/Thioredoxin_fold
+13. Holdase
+   score=0.160329 | источник: wikipedia | doc=615145 | oid=6b03ba9ed9bb282a0385a7d3
+   https://en.wikipedia.org/wiki/Holdase
+14. BLUF domain
+   score=0.159253 | источник: wikipedia | doc=663556 | oid=6b04051bd9bb282a03872a18
+   https://en.wikipedia.org/wiki/BLUF_domain
+15. LiveBench
+   score=0.155674 | источник: wikipedia | doc=133000 | oid=6ae285fe2c80ac9b21baf65e
+   https://en.wikipedia.org/wiki/LiveBench
+16. Hydrophobic-polar protein folding model
+   score=0.153385 | источник: wikipedia | doc=588933 | oid=6b0395ced9bb282a0384ed7b
+   https://en.wikipedia.org/wiki/Hydrophobic-polar_protein_folding_model
+17. Türkan Haliloğlu
+   score=0.152647 | источник: wikipedia | doc=84335 | oid=6ae2212f2c80ac9b21b9c9b5
+   https://en.wikipedia.org/wiki/T%C3%BCrkan_Halilo%C4%9Flu
+18. Peroxin
+   score=0.152334 | источник: wikipedia | doc=554064 | oid=6b036332d9bb282a038425bc
+   https://en.wikipedia.org/wiki/Peroxin
+19. Protein topology
+   score=0.152160 | источник: wikipedia | doc=399549 | oid=6b02a349beada0530d8a8379
+   https://en.wikipedia.org/wiki/Protein_topology
+20. Top7
+   score=0.151748 | источник: wikipedia | doc=588422 | oid=6b039539d9bb282a0384ea53
+   https://en.wikipedia.org/wiki/Top7
+
+Запрос: semiconductor doping p n junction
+Совпало документов: 330609 | показано: 20 | поиск: 54.874 мс
+1. Homojunction
+   score=0.267549 | источник: wikipedia | doc=423736 | oid=6b02c546beada0530d8b102d
+   https://en.wikipedia.org/wiki/Homojunction
+2. Gas immersion laser doping
+   score=0.203863 | источник: wikipedia | doc=385794 | oid=6b028b00beada0530d8a34f8
+   https://en.wikipedia.org/wiki/Gas_immersion_laser_doping
+3. Low-level injection
+   score=0.181317 | источник: wikipedia | doc=385558 | oid=6b028a8fbeada0530d8a33a8
+   https://en.wikipedia.org/wiki/Low-level_injection
+4. Zener effect
+   score=0.175768 | источник: wikipedia | doc=460379 | oid=6b02ee85d9bb282a03821fe1
+   https://en.wikipedia.org/wiki/Zener_effect
+5. Donor (semiconductors)
+   score=0.166417 | источник: wikipedia | doc=385481 | oid=6b028a67beada0530d8a3310
+   https://en.wikipedia.org/wiki/Donor_(semiconductors)
+6. Intrinsic semiconductor
+   score=0.164200 | источник: wikipedia | doc=423397 | oid=6b02c4eabeada0530d8b0e41
+   https://en.wikipedia.org/wiki/Intrinsic_semiconductor
+7. Extrinsic semiconductor
+   score=0.150778 | источник: wikipedia | doc=423395 | oid=6b02c4e9beada0530d8b0e3f
+   https://en.wikipedia.org/wiki/Extrinsic_semiconductor
+8. Capacitance–voltage profiling
+   score=0.146735 | источник: wikipedia | doc=390740 | oid=6b0293dfbeada0530d8a51ac
+   https://en.wikipedia.org/wiki/Capacitance%E2%80%93voltage_profiling
+9. Flat band potential
+   score=0.146307 | источник: wikipedia | doc=385517 | oid=6b028a78beada0530d8a337b
+   https://en.wikipedia.org/wiki/Flat_band_potential
+10. Monolayer doping
+   score=0.143443 | источник: wikipedia | doc=390830 | oid=6b029406beada0530d8a5208
+   https://en.wikipedia.org/wiki/Monolayer_doping
+11. Heterostructure-emitter bipolar transistor
+   score=0.141087 | источник: wikipedia | doc=370267 | oid=6b026c07beada0530d89d830
+   https://en.wikipedia.org/wiki/Heterostructure-emitter_bipolar_transistor
+12. Mass action law (electronics)
+   score=0.140727 | источник: wikipedia | doc=314486 | oid=6b01d38fbeada0530d88994b
+   https://en.wikipedia.org/wiki/Mass_action_law_(electronics)
+13. P–n junction isolation
+   score=0.135697 | источник: wikipedia | doc=311316 | oid=6b01cd5bbeada0530d88858d
+   https://en.wikipedia.org/wiki/P%E2%80%93n_junction_isolation
+14. Degenerate semiconductor
+   score=0.132868 | источник: wikipedia | doc=361134 | oid=6b025aeebeada0530d89afed
+   https://en.wikipedia.org/wiki/Degenerate_semiconductor
+15. Gallium arsenide phosphide
+   score=0.132716 | источник: wikipedia | doc=385789 | oid=6b028afebeada0530d8a34f3
+   https://en.wikipedia.org/wiki/Gallium_arsenide_phosphide
+16. Sensistor
+   score=0.129968 | источник: wikipedia | doc=311579 | oid=6b01cdcfbeada0530d888697
+   https://en.wikipedia.org/wiki/Sensistor
+17. Moss–Burstein effect
+   score=0.129632 | источник: wikipedia | doc=314505 | oid=6b01d397beada0530d88995e
+   https://en.wikipedia.org/wiki/Moss%E2%80%93Burstein_effect
+18. Modulation doping
+   score=0.128494 | источник: wikipedia | doc=390825 | oid=6b029404beada0530d8a5203
+   https://en.wikipedia.org/wiki/Modulation_doping
+19. Depletion region
+   score=0.127759 | источник: wikipedia | doc=423726 | oid=6b02c544beada0530d8b1023
+   https://en.wikipedia.org/wiki/Depletion_region
+20. Mercury probe
+   score=0.127076 | источник: wikipedia | doc=427020 | oid=6b02c8dfbeada0530d8b22eb
+   https://en.wikipedia.org/wiki/Mercury_probe
+
+Запрос: public key cryptography RSA
+Совпало документов: 288280 | показано: 20 | поиск: 40.572 мс
+1. PROV_RSA_FULL
+   score=0.236428 | источник: microsoft_learn | doc=272292 | oid=6b00dda3beada0530d8762fb
+   https://learn.microsoft.com/en-us/windows/win32/seccrypto/prov-rsa-full
+2. PROV_RSA_AES
+   score=0.210741 | источник: microsoft_learn | doc=286520 | oid=6b0104d1beada0530d87dc6b
+   https://learn.microsoft.com/en-us/windows/win32/seccrypto/prov-rsa-aes
+3. List of cryptosystems
+   score=0.208646 | источник: wikipedia | doc=39227 | oid=6ae1ca3c2c80ac9b21b8bfaa
+   https://en.wikipedia.org/wiki/List_of_cryptosystems
+4. Capstone (cryptography)
+   score=0.188269 | источник: wikipedia | doc=16835 | oid=6ad9e9052a350aca88ffa616
+   https://en.wikipedia.org/wiki/Capstone_(cryptography)
+5. 2.2.9.1.6 PUBLICKEY
+   score=0.188100 | источник: microsoft_learn | doc=629574 | oid=6b03d08fd9bb282a03861dfd
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-rmpr/063240db-ee5e-4ea9-9c32-0c36850d55b1
+6. 1.2.2 Informative References
+   score=0.187312 | источник: microsoft_learn | doc=669619 | oid=6b040fe5d9bb282a03877d1c
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-drm/4fd9971d-04eb-4ccd-9019-d4e07d0fb304
+7. 3.3.5.2.2.2 Add Certificate Information
+   score=0.186064 | источник: microsoft_learn | doc=754166 | oid=6b04c306d9bb282a0389f048
+   https://learn.microsoft.com/en-us/openspecs/office_protocols/ms-grvspcm/cc8b2c4f-49c0-453c-b77d-8b25c0428a00
+8. 3.3.5.1.1.2 Add Certificate Information
+   score=0.183227 | источник: microsoft_learn | doc=756962 | oid=6b04c8ded9bb282a038a0323
+   https://learn.microsoft.com/en-us/openspecs/office_protocols/ms-grvspmr/c61ead0b-93c0-445f-a6a2-faae1d40e260
+9. 3.1.4.7 Cryptographic Modes
+   score=0.182082 | источник: microsoft_learn | doc=629475 | oid=6b03d06bd9bb282a03861d76
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-rmpr/0f390041-7dcf-45e5-9dd8-51d3db7ce576
+10. XUDA
+   score=0.180412 | источник: wikipedia | doc=172378 | oid=6ae7ca560aaedde439e399ba
+   https://en.wikipedia.org/wiki/XUDA
+11. 1.1.1 Public Key Cryptography
+   score=0.175108 | источник: microsoft_learn | doc=618682 | oid=6b03bfeed9bb282a0385c4ac
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cersod/c0b77bec-fff4-47bc-a164-5218cf0d5032
+12. RSAKeyValue
+   score=0.171794 | источник: microsoft_learn | doc=852078 | oid=6b05a0e4d9bb282a038c9515
+   https://learn.microsoft.com/en-us/uwp/schemas/mobilebroadbandschema/carriercontrolsignatureschema/element-rsakeyvalue
+13. 2.4.3 Cryptographic Requirements for Transmitters
+   score=0.171183 | источник: microsoft_learn | doc=686523 | oid=6b042cdbd9bb282a0387e955
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-drmnd/9334e8b5-60eb-4314-9283-4f0d14715499
+14. Batch cryptography
+   score=0.170124 | источник: wikipedia | doc=35603 | oid=6ae12c872c80ac9b21b8aadd
+   https://en.wikipedia.org/wiki/Batch_cryptography
+15. 2.4.2 Cryptographic Requirements for Receivers
+   score=0.169422 | источник: microsoft_learn | doc=607879 | oid=6b03af11d9bb282a03856ca1
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-drmnd/b151b242-7904-4ff4-9ead-23614ae09219
+16. Using Schannel CSPs
+   score=0.168160 | источник: microsoft_learn | doc=304760 | oid=6b0151ddbeada0530d882957
+   https://learn.microsoft.com/en-us/windows/win32/seccrypto/using-schannel-csps
+17. Cryptographic Signatures
+   score=0.167414 | источник: microsoft_learn | doc=31293 | oid=6ae124c22c80ac9b21b88f2b
+   https://learn.microsoft.com/en-us/dotnet/standard/security/cryptographic-signatures
+18. 3.1.1.1.3 Public Key Pair
+   score=0.166754 | источник: microsoft_learn | doc=668793 | oid=6b040e78d9bb282a038752e8
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-psrp/813d1ab4-0776-45b8-9028-c97fe8b55601
+19. 3.2.5.2.2.2 Parse Security Elements
+   score=0.166108 | источник: microsoft_learn | doc=741718 | oid=6b04a74ad9bb282a0389a047
+   https://learn.microsoft.com/en-us/openspecs/office_protocols/ms-grvspcm/8c4800ca-7973-43bb-a4b7-28edecdab1f9
+20. 3.1.2 ASN.1 Syntax for DER-encoding Public Key used for Encryption
+   score=0.164180 | источник: microsoft_learn | doc=738156 | oid=6b049fb3d9bb282a0389877b
+   https://learn.microsoft.com/en-us/openspecs/office_protocols/ms-grvspcm/7e94489b-ffb6-42f9-9372-f2a3f9853cbc
+
+Запрос: variable byte compression inverted index
+Совпало документов: 258195 | показано: 20 | поиск: 38.561 мс
+1. 2.1 Web Service ItemId Algorithm Details
+   score=0.185789 | источник: microsoft_learn | doc=729142 | oid=6b048b9cd9bb282a038948e3
+   https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-oxwsitemid/5889be27-a84b-426b-9166-5f7a0ed5747d
+2. 2.6.1 KeyExtensionData Structure
+   score=0.184375 | источник: microsoft_learn | doc=787159 | oid=6b05285fd9bb282a038b0faa
+   https://learn.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-cifo/2913e54b-fbb9-419b-8985-2ed05434bb9c
+3. 3.2.4.2 Compression Processing
+   score=0.177980 | источник: microsoft_learn | doc=686262 | oid=6b042bedd9bb282a0387e5f9
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-srpl/eed2ea22-9b20-47df-a9c7-6d124e3cb1b8
+4. 2.1.3.1 Compression Type (byte)
+   score=0.164139 | источник: microsoft_learn | doc=723792 | oid=6b047eb5d9bb282a03892108
+   https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-oxwsitemid/aacce5f0-459b-480b-a764-e6dee908a6cb
+5. 2.4.1.2 State Variables
+   score=0.162666 | источник: microsoft_learn | doc=741444 | oid=6b04a6b7d9bb282a03899eba
+   https://learn.microsoft.com/en-us/openspecs/office_file_formats/ms-ovba/c01d4c55-f44e-4ee1-b5cd-e179e4957d01
+6. 2.2.5.3 RDP8_BULK_ENCODED_DATA
+   score=0.159975 | источник: microsoft_learn | doc=657793 | oid=6b03fb93d9bb282a0386fb14
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-rdpegfx/bfb13bde-5315-4e08-ba8c-3cb30e9571d8
+7. 2.3.3.9 META_INVERTREGION Record
+   score=0.158482 | источник: microsoft_learn | doc=665675 | oid=6b04088cd9bb282a03873a5a
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-wmf/7d994d5f-1f1d-4858-8e75-d81870ac30e4
+8. 2.2.1.3 CContentRestriction
+   score=0.158446 | источник: microsoft_learn | doc=608279 | oid=6b03afd8d9bb282a03856fe6
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-mcis/b3b653f4-9aca-4aa3-84a0-77803a02ea2d
+9. 3.1.4.1.1.2.2.3 Metadata Offset
+   score=0.156874 | источник: microsoft_learn | doc=722517 | oid=6b047bc0d9bb282a038918e2
+   https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-oxcrpc/aa16f455-4512-4885-ba44-083c26f33abc
+10. 2.2.10.12.3 SiteDataBlock
+   score=0.156422 | источник: microsoft_learn | doc=748952 | oid=6b04b6c9d9bb282a0389ccb0
+   https://learn.microsoft.com/en-us/openspecs/office_file_formats/ms-oforms/a8164e8e-3941-4b40-ad59-8044bee30726
+11. 2.2.2.3 Packet Checksum
+   score=0.155756 | источник: microsoft_learn | doc=665020 | oid=6b040778d9bb282a0387355d
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-wdsmt/50d957fa-7cb3-42ce-a423-925c3163e7dc
+12. 2.2.1.3 CContentRestriction
+   score=0.154168 | источник: microsoft_learn | doc=669426 | oid=6b040f8bd9bb282a03877bfa
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-wsp/87c16745-28cc-4e3d-b275-aa12daaccad2
+13. 2.2.5.4 MorphDataExtraDataBlock
+   score=0.151160 | источник: microsoft_learn | doc=735987 | oid=6b049ae4d9bb282a03897739
+   https://learn.microsoft.com/en-us/openspecs/office_file_formats/ms-oforms/0db0986f-56d9-4af2-8942-b6576a513cd4
+14. 2.2.3.1.3 SMB2_COMPRESSION_CAPABILITIES
+   score=0.150981 | источник: microsoft_learn | doc=631594 | oid=6b03d36ed9bb282a03862c35
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-smb2/78e0c942-ab41-472b-b117-4a95ebe88271
+15. 2.1.3.1.1 Id Compression Algorithm
+   score=0.148397 | источник: microsoft_learn | doc=721751 | oid=6b0479fbd9bb282a0389116e
+   https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-oxwsitemid/bf1fed1f-3e96-4edf-afab-05e2c5937f89
+16. 2.2.6.1 DerivedWSId Structure
+   score=0.147747 | источник: microsoft_learn | doc=724066 | oid=6b047f5fd9bb282a038922c9
+   https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-oxcext/459469e8-0d99-4a8e-8740-c579923dbfb5
+17. 2.4.1.1.1 CompressedContainer
+   score=0.147732 | источник: microsoft_learn | doc=739800 | oid=6b04a334d9bb282a038990da
+   https://learn.microsoft.com/en-us/openspecs/office_file_formats/ms-ovba/546208ab-f2c1-42af-962c-e4c920890c8b
+18. 2.2.5.2 RDP_DATA_SEGMENT
+   score=0.145210 | источник: microsoft_learn | doc=679807 | oid=6b0420abd9bb282a0387b4e3
+   https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-rdpegfx/040566f8-4592-48bf-b276-8429038171e1
+19. 2.2.4.8 WSS Compressed Structures
+   score=0.144823 | источник: microsoft_learn | doc=783014 | oid=6b051c31d9bb282a038ae347
+   https://learn.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-wssfo2/50cd388b-92a4-483e-a342-b0225d843272
+20. 2.2.3.8 WSS Compressed Structures
+   score=0.144637 | источник: microsoft_learn | doc=773450 | oid=6b04feabd9bb282a038a8cf3
+   https://learn.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-wssfo3/6ca01cb6-d75a-431e-8131-8c780ba46cd8
+

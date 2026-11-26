@@ -1,0 +1,2864 @@
+{
+  "Q01D01": {
+    "grade": 1,
+    "reason": "Изоляция рассматривается как часть ACID, без полного разбора уровней и аномалий.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q01D02": {
+    "grade": 1,
+    "reason": "Основная тема — атомарность; изоляция упомянута как соседнее свойство.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q01D03": {
+    "grade": 1,
+    "reason": "Обзор баз данных даёт лишь общий контекст транзакций и ACID.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q01D04": {
+    "grade": 1,
+    "reason": "Объясняет транзакции и назначение изоляции, но не раскрывает уровни.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q01D05": {
+    "grade": 3,
+    "reason": "Специальная статья об изоляции и феноменах параллельного выполнения транзакций.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q01D06": {
+    "grade": 2,
+    "reason": "Подробно объясняет один механизм изоляции — согласованный снимок.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q01D07": {
+    "grade": 2,
+    "reason": "Приводит синтаксис установки изоляции и перечень четырёх уровней SQL.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q01D08": {
+    "grade": 1,
+    "reason": "Описывает поля протокольного объекта транзакции, не объясняя смысл уровней.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q01D09": {
+    "grade": 1,
+    "reason": "Короткая обзорная страница в основном содержит ссылки на дальнейшее чтение.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q01D10": {
+    "grade": 2,
+    "reason": "Объясняет применение уровня изоляции к блокировкам курсоров ODBC.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q01D11": {
+    "grade": 1,
+    "reason": "Инструкция для COM+ показывает настройку, но не сравнение уровней и аномалий.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q01D12": {
+    "grade": 1,
+    "reason": "Обзор Azure SQL Database касается хранения и резервных копий, но не уровней изоляции.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q01D13": {
+    "grade": 0,
+    "reason": "Навигация по Entity Framework не содержит ответа об изоляции транзакций.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q01D14": {
+    "grade": 2,
+    "reason": "Разбирает конфликты параллельного доступа и влияние уровня изоляции на блокировки.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q01D15": {
+    "grade": 2,
+    "reason": "Объясняет взаимоблокировки и откат транзакций как важный аспект конкурентного доступа.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q01D16": {
+    "grade": 3,
+    "reason": "Подробный справочник уровней изоляции SQL Server и их поведения при чтении и записи.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q02D01": {
+    "grade": 1,
+    "reason": "Общий обзор БД содержит краткий раздел о репликации, но не систематический разбор.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q02D02": {
+    "grade": 2,
+    "reason": "Разбирает распределённые SQL-БД с синхронной репликацией и согласованностью.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q02D03": {
+    "grade": 3,
+    "reason": "Основная тема — распределённая БД; непосредственно рассматриваются репликация и фрагментация.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q02D04": {
+    "grade": 3,
+    "reason": "Описывает модели репликации, включая транзакционную, и свойства распределённых систем.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q02D05": {
+    "grade": 2,
+    "reason": "Конкретный пример глобальной репликации и согласованности в Spanner/Paxos.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q02D06": {
+    "grade": 0,
+    "reason": "Структура состояния SAM Windows NT не объясняет способы репликации распределённых БД.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q02D07": {
+    "grade": 0,
+    "reason": "Таблица транспортов файловых RPC-протоколов не решает задачу поиска.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q02D08": {
+    "grade": 0,
+    "reason": "Каталог команд репликации файлов DFS не объясняет репликацию распределённых БД.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q02D09": {
+    "grade": 2,
+    "reason": "Описывает совместимость зеркалирования SQL Server и ограничения распределённых транзакций.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q02D10": {
+    "grade": 1,
+    "reason": "Перечень системных представлений репликации полезен как справка, но не объясняет способы и компромиссы.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q02D11": {
+    "grade": 1,
+    "reason": "Документационный хаб Cosmos DB даёт навигацию к распределённой БД, но не объясняет репликацию.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q02D12": {
+    "grade": 1,
+    "reason": "Матрица редакций показывает доступность функций, а не способы репликации.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q02D13": {
+    "grade": 1,
+    "reason": "Сравнение функций редакций SQL Server даёт продуктовый контекст, не механизмы репликации.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q02D14": {
+    "grade": 1,
+    "reason": "Настройка портов SQL Server полезна для эксплуатации, но не объясняет компромиссы репликации.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q02D15": {
+    "grade": 0,
+    "reason": "Сетевые порты и репликация файлов DFSR — другая задача.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q03D01": {
+    "grade": 1,
+    "reason": "Упоминает инвертированный индекс в контексте поиска документов без описания структуры.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q03D02": {
+    "grade": 1,
+    "reason": "Общий обзор информационного поиска лишь связывает разреженные модели с индексами.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q03D03": {
+    "grade": 3,
+    "reason": "Даёт определение и структуру отображения термов в позиции и документы.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q03D04": {
+    "grade": 2,
+    "reason": "Описывает применение инвертированных индексов в современном разреженном поиске, но не базовое построение.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q03D05": {
+    "grade": 2,
+    "reason": "Рассматривает поисковую индексацию и полнотекстовые индексы как отдельную задачу.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q03D06": {
+    "grade": 1,
+    "reason": "Стартовая страница продукта содержит ссылки на поиск, но не объясняет устройство индекса.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q03D07": {
+    "grade": 2,
+    "reason": "Прямо связывает каталог с инвертированным индексом для сопоставления слов и извлечения документов.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q03D08": {
+    "grade": 2,
+    "reason": "Объясняет роль инвертированного индекса в службе индексирования Windows.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q03D09": {
+    "grade": 1,
+    "reason": "RAG-архитектура упоминает создание поискового индекса, не его инвертированную структуру.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q03D10": {
+    "grade": 1,
+    "reason": "Обзор сервиса поиска не раскрывает отображение термов в postings.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q03D11": {
+    "grade": 1,
+    "reason": "Объясняет роль индекса в RAG в целом, без устройства inverted index.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q03D12": {
+    "grade": 0,
+    "reason": "План экзамена не является объяснением структуры поискового индекса.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q03D13": {
+    "grade": 1,
+    "reason": "Обзор Retrieval API описывает гибридный индекс как готовый сервис, а не его устройство.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q04D01": {
+    "grade": 1,
+    "reason": "Обзор языка отмечает ручное управление памятью, но не даёт цельного объяснения RAII.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q04D02": {
+    "grade": 1,
+    "reason": "Описывает malloc/free языка C, полезные как фон, но не современное управление памятью C++.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q04D03": {
+    "grade": 2,
+    "reason": "Разбирает new/delete и диагностику выделений памяти в C++ как конкретный аспект задачи.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q04D04": {
+    "grade": 2,
+    "reason": "Объясняет ручное управление и автоматизацию освобождения в C++.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q04D05": {
+    "grade": 1,
+    "reason": "Общий обзор управления памятью не сосредоточен на C++ и времени жизни объектов.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q04D06": {
+    "grade": 0,
+    "reason": "MMU — аппаратный перевод адресов, а не управление временем жизни объектов C++.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q04D07": {
+    "grade": 1,
+    "reason": "Регионное выделение памяти — связанный подход, но не общее объяснение C++/RAII.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q04D08": {
+    "grade": 3,
+    "reason": "Специальный материал о надёжном управлении ресурсами C++ и обёртках автоматического освобождения.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q04D09": {
+    "grade": 1,
+    "reason": "Анализатор может находить дефекты памяти, но страница не объясняет её управление.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q04D10": {
+    "grade": 0,
+    "reason": "Скачивание Visual C++ Runtime не отвечает на вопрос об управлении памятью.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q04D11": {
+    "grade": 1,
+    "reason": "Раздел Windows о виртуальной памяти даёт системный фон, но не модель объектов C++.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q04D12": {
+    "grade": 2,
+    "reason": "Сопоставляет функции CRT и new/delete и объясняет допустимые способы управления памятью.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q04D13": {
+    "grade": 0,
+    "reason": "Управление цепочками поставок не связано с памятью C++.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q04D14": {
+    "grade": 0,
+    "reason": "Документация ORM не объясняет модель управления памятью C++.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q04D15": {
+    "grade": 0,
+    "reason": "Управление данными Purview — другой смысл слова management.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q04D16": {
+    "grade": 0,
+    "reason": "Список исправлений SSMS не объясняет выделение памяти, RAII или время жизни объектов C++.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q04D17": {
+    "grade": 0,
+    "reason": "Release notes SSMS относятся к другому продукту и другой задаче.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q05D01": {
+    "grade": 0,
+    "reason": "Основная тема — асинхронная библиотека C++, а не async/await языка C#.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q05D02": {
+    "grade": 3,
+    "reason": "Объясняет async/await и непосредственно рассматривает TAP в C#.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q05D03": {
+    "grade": 1,
+    "reason": "Объясняет общий асинхронный шаблон, но не его реализацию через async/await C#.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q05D04": {
+    "grade": 1,
+    "reason": "Обзор C# даёт сведения о языке, а не развёрнутое объяснение асинхронности.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q05D05": {
+    "grade": 0,
+    "reason": "Материал про F# не решает задачу программирования async/await в C#.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q05D06": {
+    "grade": 1,
+    "reason": "Обмен сообщениями — общий контекст конкурентности, но не требуемая техника C#.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q05D07": {
+    "grade": 1,
+    "reason": "Основной материал о модели памяти C#; ссылка на асинхронные задачи не делает его учебником async/await.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q05D08": {
+    "grade": 1,
+    "reason": "Навигационная страница руководства по C# не содержит самостоятельного объяснения async/await.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q05D09": {
+    "grade": 1,
+    "reason": "Справочник операторов C# полезен как фон, но не объясняет асинхронный поток исполнения.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q05D10": {
+    "grade": 1,
+    "reason": "Главная страница документации лишь направляет к отдельным учебным материалам.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q05D11": {
+    "grade": 3,
+    "reason": "Пример и связанный учебник прямо посвящены async/await в C#.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q05D12": {
+    "grade": 1,
+    "reason": "Курс событий требует знания асинхронности, но обучает другой теме.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q05D13": {
+    "grade": 3,
+    "reason": "Учебный модуль прямо разбирает async/await, параллельные задачи и асинхронный ввод-вывод в C#.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q05D14": {
+    "grade": 0,
+    "reason": "Главная страница Azure developers не отвечает на вопрос об async/await в C#.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q05D15": {
+    "grade": 1,
+    "reason": "Навигация .NET даёт общий контекст платформы без самостоятельного объяснения async/await.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q05D16": {
+    "grade": 2,
+    "reason": "Обзор .NET прямо объясняет поддержку async/await языком C#.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q05D17": {
+    "grade": 3,
+    "reason": "Целевой учебный материал посвящён модели асинхронного программирования C#.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q05D18": {
+    "grade": 0,
+    "reason": "Навигация Entity Framework не объясняет асинхронную модель исполнения C#.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q06D01": {
+    "grade": 1,
+    "reason": "Обзор платформы .NET не даёт самостоятельного разбора поколений GC.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q06D02": {
+    "grade": 2,
+    "reason": "Объясняет поколенческую и фоновую сборку мусора в .NET Framework.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q06D03": {
+    "grade": 0,
+    "reason": "Это музыкальная группа Garbage, а не управление памятью.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q06D04": {
+    "grade": 1,
+    "reason": "Общая статья о GC даёт фон, но не раскрывает механизм поколений .NET.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q06D05": {
+    "grade": 0,
+    "reason": "Принцип качества входных данных GIGO не относится к сборке мусора.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q06D06": {
+    "grade": 1,
+    "reason": "Объясняет трассирующую сборку мусора в целом, не специфику .NET.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q06D07": {
+    "grade": 1,
+    "reason": "Стартовая страница .NET не объясняет устройство GC.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q06D08": {
+    "grade": 1,
+    "reason": "Метод отладчика возвращает сведения о куче, но не обучает устройству GC.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q06D09": {
+    "grade": 2,
+    "reason": "Описывает различие concurrent/background GC и зависимость от версии .NET.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q06D10": {
+    "grade": 1,
+    "reason": "Справочник интерфейса настройки GC, без объяснения работы поколений.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q06D11": {
+    "grade": 1,
+    "reason": "Справочник управления размером сегмента и поколения 0, а не механизм сборки.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q06D12": {
+    "grade": 2,
+    "reason": "Специальная страница о фоновой сборке мусора и поддерживаемых режимах .NET.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q06D13": {
+    "grade": 1,
+    "reason": "Вводная страница платформы, не описание сборки мусора.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q06D14": {
+    "grade": 1,
+    "reason": "Введение в .NET отмечает tracing GC и IDisposable, но не объясняет поколения.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q06D15": {
+    "grade": 1,
+    "reason": "Обновления runtime упоминают исправления GC, не раскрывая его устройство.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q06D16": {
+    "grade": 1,
+    "reason": "Документационный хаб .NET не является руководством по GC.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q06D17": {
+    "grade": 3,
+    "reason": "Специальный материал о фундаментальных механизмах GC в CLR и освобождении памяти.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q07D01": {
+    "grade": 1,
+    "reason": "Другой JavaScript-runtime даёт контекст libuv/Tokio, но не объясняет цикл Node.js.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q07D02": {
+    "grade": 2,
+    "reason": "Объясняет цикл событий и обработчики, включая связь с Node.js.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q07D03": {
+    "grade": 3,
+    "reason": "Прямо объясняет цикл событий и асинхронное выполнение в Node.js.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q07D04": {
+    "grade": 2,
+    "reason": "Описывает libuv — основу асинхронного цикла Node.js и системные механизмы ввода-вывода.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q07D05": {
+    "grade": 3,
+    "reason": "Статья о Node.js раскрывает неблокирующую модель и цикл событий.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q07D06": {
+    "grade": 3,
+    "reason": "Прямо описывает однопоточный цикл событий, I/O и завершение при отсутствии callbacks.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q07D07": {
+    "grade": 0,
+    "reason": "История менеджера пакетов npm не объясняет цикл событий.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q07D08": {
+    "grade": 1,
+    "reason": "Подбор версии упоминает различия event loop, но не раскрывает механизм.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q07D09": {
+    "grade": 0,
+    "reason": "Azure Event Hubs — другая сущность; создание ресурса не объясняет event loop.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q07D10": {
+    "grade": 0,
+    "reason": "Установка драйвера SQL для Node.js не объясняет цикл событий.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q07D11": {
+    "grade": 1,
+    "reason": "Вводная инструкция упоминает неблокирующий I/O без подробного механизма.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q07D12": {
+    "grade": 0,
+    "reason": "Обзор хостинга App Service не объясняет цикл событий Node.js.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q07D13": {
+    "grade": 0,
+    "reason": "Обновление версии Node.js в Functions не описывает event loop.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q07D14": {
+    "grade": 0,
+    "reason": "Создание Teams webhook — другая задача.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q07D15": {
+    "grade": 0,
+    "reason": "Создание приложения Power Apps CLI требует Node.js, но не объясняет его асинхронную модель.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q07D16": {
+    "grade": 0,
+    "reason": "Главная страница Visual Studio не отвечает на запрос о Node.js event loop.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q08D01": {
+    "grade": 2,
+    "reason": "Объясняет контейнеризацию и назначение оркестрации с Kubernetes.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q08D02": {
+    "grade": 1,
+    "reason": "Docker даёт контекст контейнеров; искомая оркестрация не является основной темой.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q08D03": {
+    "grade": 0,
+    "reason": "Описание продукта мониторинга лишь упоминает Kubernetes как наблюдаемую платформу.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q08D04": {
+    "grade": 3,
+    "reason": "Основная статья посвящена Kubernetes и управлению контейнерным кластером.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q08D05": {
+    "grade": 2,
+    "reason": "Разбирает общую оркестрацию вычислительных систем и связь с Kubernetes.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q08D06": {
+    "grade": 1,
+    "reason": "Навигационная страница сервисов содержит ссылки, но мало самостоятельного объяснения.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q08D07": {
+    "grade": 2,
+    "reason": "Содержит примеры управления AKS-кластером с Kubernetes orchestration.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q08D08": {
+    "grade": 2,
+    "reason": "Рассматривает сетевой аспект оркестрации контейнеров в Kubernetes/AKS.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q08D09": {
+    "grade": 2,
+    "reason": "Рассматривает хранение контейнеров в Kubernetes/AKS как часть оркестрации.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q08D10": {
+    "grade": 3,
+    "reason": "Учебный модуль прямо объясняет оркестрацию, Kubernetes и развёртывание кластера.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q08D11": {
+    "grade": 3,
+    "reason": "Прямой обзор AKS как управляемого Kubernetes и средств оркестрации контейнеров.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q08D12": {
+    "grade": 1,
+    "reason": "Azure Arc связан с управлением инфраструктурой, но в хабе нет объяснения оркестрации.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q08D13": {
+    "grade": 1,
+    "reason": "Общий курс вычислительных ресурсов и ACI не раскрывает именно Kubernetes orchestration.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q08D14": {
+    "grade": 0,
+    "reason": "Общий каталог устранения неполадок Azure не отвечает на вопрос об оркестрации.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q09D01": {
+    "grade": 1,
+    "reason": "Проверка владения доменом при выдаче сертификата — фон, а не проверка цепочки клиентом.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q09D02": {
+    "grade": 1,
+    "reason": "Описывает расширенную проверку владельца сертификата, не полный алгоритм TLS-валидации.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q09D03": {
+    "grade": 2,
+    "reason": "Прямо объясняет проверку отзыва сертификата через OCSP stapling.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q09D04": {
+    "grade": 2,
+    "reason": "Описывает сертификаты сервера TLS и проверку со стороны подключающегося клиента.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q09D05": {
+    "grade": 0,
+    "reason": "Страница неоднозначности TLS не объясняет проверку сертификатов.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q09D06": {
+    "grade": 1,
+    "reason": "Обзор протокола TLS даёт контекст аутентификации, но не цельное руководство по валидации.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q09D07": {
+    "grade": 3,
+    "reason": "Стандарт X.509 описывает поля срока действия, издателя и проверку доверия к сертификатам.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q09D08": {
+    "grade": 1,
+    "reason": "Перечень действий WebView2 при ошибке сертификата, без объяснения самих проверок.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q09D09": {
+    "grade": 1,
+    "reason": "Требование доверять сертификату узла не раскрывает алгоритм цепочки и имени.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q09D10": {
+    "grade": 1,
+    "reason": "Сценарий атаки рекомендует TLS-валидацию, но не объясняет её процедуры.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q09D11": {
+    "grade": 2,
+    "reason": "Описывает проверку сертификата при TLS-сеансе и реакцию на недоверенного издателя.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q09D12": {
+    "grade": 1,
+    "reason": "Контекст сопоставления клиентских сертификатов не покрывает общую проверку TLS-сервера.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q09D13": {
+    "grade": 2,
+    "reason": "Требования к сертификату App Service и цепочке дают практическую часть TLS-проверки.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q09D14": {
+    "grade": 2,
+    "reason": "Настройка клиентской X.509-аутентификации раскрывает доверие и TLS-handshake в частном сценарии.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q09D15": {
+    "grade": 2,
+    "reason": "Рассматривает требования, права доступа и срок действия TLS-сертификата SQL Server.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q09D16": {
+    "grade": 2,
+    "reason": "Объясняет ошибку недоверенного центра и невозможность проверки сертификата клиентом.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q09D17": {
+    "grade": 2,
+    "reason": "Описывает серверную валидацию и EAP-TLS в конкретном сценарии сетевой аутентификации.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q10D01": {
+    "grade": 1,
+    "reason": "Упоминает разные транспорты Ansible/PowerShell, не давая настройки PowerShell over SSH.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q10D02": {
+    "grade": 1,
+    "reason": "OpenSSH — необходимый фон, но не инструкция по PowerShell remoting.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q10D03": {
+    "grade": 1,
+    "reason": "Обзор PowerShell отмечает SSH, но не даёт конкретной настройки remoting.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q10D04": {
+    "grade": 1,
+    "reason": "Объясняет удалённые оболочки в целом, включая PowerShell и SSH.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q10D05": {
+    "grade": 0,
+    "reason": "Статья о shell-скриптах не решает задачу PowerShell remoting over SSH.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q10D06": {
+    "grade": 3,
+    "reason": "Прямое руководство по PowerShell remoting через SSH для Azure Arc.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q10D07": {
+    "grade": 1,
+    "reason": "Главная страница документации PowerShell без самостоятельной инструкции SSH remoting.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q10D08": {
+    "grade": 2,
+    "reason": "Показывает Enter-PSSession -HostName и различия SSH, WinRM и PowerShell Direct.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q10D09": {
+    "grade": 1,
+    "reason": "Установка PowerShell лишь упоминает поддержку SSH remoting.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q10D10": {
+    "grade": 1,
+    "reason": "Навигационный раздел безопасности содержит ссылку на SSH remoting, но не саму инструкцию.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q10D11": {
+    "grade": 1,
+    "reason": "Инструкция WinRM относится к remoting, но использует другой транспорт.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q10D12": {
+    "grade": 1,
+    "reason": "Настройка Remote-SSH в VS Code полезна как фон, но не объясняет PowerShell remoting.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q10D13": {
+    "grade": 1,
+    "reason": "Общее описание PowerShell без инструкции SSH remoting.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q10D14": {
+    "grade": 1,
+    "reason": "Обзор удалённых команд в основном объясняет WS-Management, а не SSH-транспорт.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q10D15": {
+    "grade": 2,
+    "reason": "Сравнивает поддержку SSH-remoting и PSRP в версиях PowerShell.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q10D16": {
+    "grade": 1,
+    "reason": "Настройка ключей OpenSSH — необходимый фон, но не настройка PowerShell remoting.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q10D17": {
+    "grade": 0,
+    "reason": "Remote Desktop — другой способ доступа, не PowerShell over SSH.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q11D01": {
+    "grade": 0,
+    "reason": "Общее определение облачных вычислений не объясняет Azure VNet peering.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q11D02": {
+    "grade": 0,
+    "reason": "CDN и размещение кешей не являются peering виртуальных сетей Azure.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q11D03": {
+    "grade": 1,
+    "reason": "Обзор Azure даёт контекст платформы без разбора peering.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q11D04": {
+    "grade": 1,
+    "reason": "Мониторинг Azure VNets связан с сетями, но не с настройкой peering.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q11D05": {
+    "grade": 0,
+    "reason": "Описание стороннего сетевого продукта не объясняет Azure VNet peering.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q11D06": {
+    "grade": 0,
+    "reason": "Биография исследователя и история Azure networking не решают задачу настройки.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q11D07": {
+    "grade": 1,
+    "reason": "Главная страница Azure — только навигация к тематическим материалам.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q11D08": {
+    "grade": 2,
+    "reason": "Объясняет применение VNet peering для соединения приватных облаков VMware.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q11D09": {
+    "grade": 0,
+    "reason": "Internet Peering и ASN — другой сервис, не peering Azure Virtual Networks.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q11D10": {
+    "grade": 0,
+    "reason": "Список регионов Azure не объясняет сетевой peering.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q11D11": {
+    "grade": 1,
+    "reason": "Раздел документации VNet содержит нужные ссылки, но мало самостоятельного ответа.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q11D12": {
+    "grade": 3,
+    "reason": "Учебный модуль прямо разбирает настройку peering, gateway transit и ограничения связности.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q11D13": {
+    "grade": 2,
+    "reason": "Курс VNet включает peering и упражнение по соединению виртуальных сетей.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q11D14": {
+    "grade": 2,
+    "reason": "Hub-spoke архитектура объясняет практическое применение соединений виртуальных сетей.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q11D15": {
+    "grade": 3,
+    "reason": "Специальная страница VNet peering объясняет назначение, варианты и ограничения.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q11D16": {
+    "grade": 2,
+    "reason": "Разбирает маршруты, создаваемые при peering, как часть поведения соединённых VNet.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q11D17": {
+    "grade": 2,
+    "reason": "Конкретный сценарий peering между регионами для Power Platform.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q11D18": {
+    "grade": 1,
+    "reason": "Обзор учебной траектории содержит peering среди тем, но не самостоятельное объяснение.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q12D01": {
+    "grade": 0,
+    "reason": "Общий BaaS и социальный вход OAuth не объясняют модель разрешений Microsoft Graph.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q12D02": {
+    "grade": 0,
+    "reason": "Сравнение баг-трекеров не относится к разрешениям Graph.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q12D03": {
+    "grade": 0,
+    "reason": "Описание магазина Google Play не отвечает на запрос.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q12D04": {
+    "grade": 1,
+    "reason": "Даёт фон OAuth и grant types, но не разрешения delegated/application в Graph.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q12D05": {
+    "grade": 0,
+    "reason": "Сетевая модель OSI не объясняет OAuth-разрешения Graph.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q12D06": {
+    "grade": 1,
+    "reason": "Инструкция ориентирована на ресурс Azure DevOps; Graph упоминается как пример ссылки.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q12D07": {
+    "grade": 2,
+    "reason": "Объясняет запрос scopes API и прямо направляет к разрешениям Microsoft Graph.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q12D08": {
+    "grade": 3,
+    "reason": "Явно сравнивает delegated и application permissions в Microsoft Graph.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q12D09": {
+    "grade": 1,
+    "reason": "Описывает отсутствие OAuth-модели для Extended MAPI; Graph только альтернативный API.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q12D10": {
+    "grade": 2,
+    "reason": "Практическая настройка разрешений Microsoft Graph для Windows 365.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q12D11": {
+    "grade": 3,
+    "reason": "Сравнивает delegated/application permissions, контекст доступа и согласие администратора.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q12D12": {
+    "grade": 3,
+    "reason": "Объясняет OAuth scopes и модель разрешений на примерах Microsoft Graph.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q12D13": {
+    "grade": 2,
+    "reason": "Разбирает application permissions Graph в client credentials flow.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q12D14": {
+    "grade": 2,
+    "reason": "Рассматривает делегированный On-Behalf-Of flow со scope Microsoft Graph.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q12D15": {
+    "grade": 1,
+    "reason": "Установка SDK даёт инструментальный фон без разбора OAuth-разрешений.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q13D01": {
+    "grade": 0,
+    "reason": "Биография автора статьи не объясняет механизм внимания.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q13D02": {
+    "grade": 3,
+    "reason": "Специальная статья о механизме внимания в машинном обучении.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q13D03": {
+    "grade": 2,
+    "reason": "Обзор исходной работы о трансформерах объясняет роль внимания и архитектурную идею.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q13D04": {
+    "grade": 0,
+    "reason": "Схема электрического трансформатора не относится к нейросетям.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q13D05": {
+    "grade": 0,
+    "reason": "Энергоэффективность электрических трансформаторов не относится к attention.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q13D06": {
+    "grade": 2,
+    "reason": "Архитектура GPT иллюстрирует использование внимания, но рассматривает более узкий класс моделей.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q13D07": {
+    "grade": 2,
+    "reason": "Вариант Transformer раскрывает асимметричное внимание и латентное представление.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q13D08": {
+    "grade": 0,
+    "reason": "Статья об электротехническом компоненте не соответствует намерению.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q13D09": {
+    "grade": 3,
+    "reason": "Основная тема — нейросетевой трансформер и self-attention.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q13D10": {
+    "grade": 0,
+    "reason": "Коэффициент использования силового трансформатора относится к электротехнике.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q13D11": {
+    "grade": 2,
+    "reason": "Описывает self-attention в зрительных трансформерах и его варианты.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q13D12": {
+    "grade": 0,
+    "reason": "Transformer OpenAPI-документа — другой смысл термина, не нейросетевая архитектура.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q13D13": {
+    "grade": 0,
+    "reason": "Преобразование событий ServiceNow не связано с attention нейросети.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q13D14": {
+    "grade": 0,
+    "reason": "Почти пустая справочная страница модуля не объясняет механизм attention в Transformer.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q13D15": {
+    "grade": 1,
+    "reason": "Смежный BiLSTM-attention featurizer даёт контекст NLP, но это не Transformer и не объяснение его внимания.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q13D16": {
+    "grade": 0,
+    "reason": "Учебный материал о CNN не объясняет Transformer attention.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q14D01": {
+    "grade": 3,
+    "reason": "Разбирает полный RAG-пайплайн от индексации PDF до retrieval и генерации.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q14D02": {
+    "grade": 1,
+    "reason": "Ограничение знаний LLM объясняет мотивацию внешнего контекста, но не сам RAG-пайплайн.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q14D03": {
+    "grade": 2,
+    "reason": "Обзор LLM содержит прямое объяснение соединения генерации с поиском документов.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q14D04": {
+    "grade": 1,
+    "reason": "Prompt engineering связан с контекстом, но не раскрывает весь retrieval-пайплайн.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q14D05": {
+    "grade": 3,
+    "reason": "Прямое определение RAG и последовательности поиска документов перед генерацией ответа.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q14D06": {
+    "grade": 1,
+    "reason": "Векторная БД — компонент извлечения, а не самостоятельное описание полного RAG.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q14D07": {
+    "grade": 3,
+    "reason": "Объясняет RAG, роль индексов и связь поиска с генеративной моделью.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q14D08": {
+    "grade": 3,
+    "reason": "Учебный модуль включает выбор контекста SQL, augmented prompts и обработку ответа.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q14D09": {
+    "grade": 2,
+    "reason": "Рассматривает grounding/RAG как одну из стратегий оптимизации генеративной модели.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q14D10": {
+    "grade": 3,
+    "reason": "Специальный учебный модуль о соединении внешнего retrieval и генерации в RAG.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q14D11": {
+    "grade": 2,
+    "reason": "Комплексный курс БД включает RAG, векторный поиск и подготовку контекста.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q14D12": {
+    "grade": 0,
+    "reason": "Документационный хаб распознавания контента не объясняет RAG-пайплайн.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q14D13": {
+    "grade": 3,
+    "reason": "Архитектурное руководство прямо описывает проектирование RAG и retrieval перед генерацией.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q14D14": {
+    "grade": 0,
+    "reason": "Страница регистрации экзамена не объясняет работу RAG.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q14D15": {
+    "grade": 0,
+    "reason": "План экзамена перечисляет темы, но не объясняет алгоритм.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q14D16": {
+    "grade": 3,
+    "reason": "Целевой модуль объясняет подготовку, извлечение и использование данных для генерации ответа.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q15D01": {
+    "grade": 1,
+    "reason": "Общий deep learning даёт фон и примеры, но не объясняет GNN.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q15D02": {
+    "grade": 3,
+    "reason": "Специальная статья о классе графовых нейронных сетей.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q15D03": {
+    "grade": 1,
+    "reason": "Теория графов — необходимый фон, но не описание нейросетевых моделей.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q15D04": {
+    "grade": 2,
+    "reason": "Объясняет применение GNN и embeddings к графам знаний.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q15D05": {
+    "grade": 0,
+    "reason": "Список тем теории сетей не раскрывает устройство графовых нейросетей.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q15D06": {
+    "grade": 2,
+    "reason": "Рассматривает message-passing и эквивариантные GNN в конкретном физическом применении.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q15D07": {
+    "grade": 1,
+    "reason": "Вычислительный граф обычной нейросети не равен графовой нейросети; полезен лишь как фон.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q15D08": {
+    "grade": 1,
+    "reason": "Node2vec связан с представлениями графов, но не объясняет GNN.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q15D09": {
+    "grade": 2,
+    "reason": "Объясняет выразительность message-passing GNN через тест Вейсфейлера–Лемана.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q15D10": {
+    "grade": 0,
+    "reason": "Учебный модуль об изображениях и обычных CNN не относится к GNN.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q15D11": {
+    "grade": 0,
+    "reason": "Microsoft Graph API не является графовой нейронной сетью.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q15D12": {
+    "grade": 0,
+    "reason": "REST-модель сущностей Microsoft Graph — другая задача, не GNN.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q15D13": {
+    "grade": 0,
+    "reason": "Установка Graph SDK не относится к графовым нейросетям.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q15D14": {
+    "grade": 0,
+    "reason": "Обычные CNN для изображений не раскрывают GNN.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q15D15": {
+    "grade": 0,
+    "reason": "Документационный хаб Windows не отвечает на запрос о GNN.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q16D01": {
+    "grade": 0,
+    "reason": "Генетическая оптимизация торговых маршрутов не раскрывает дифференциальную приватность.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q16D02": {
+    "grade": 3,
+    "reason": "Специальная статья о дифференциальной приватности и её применении в ML.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q16D03": {
+    "grade": 2,
+    "reason": "Композиция механизмов объясняет важную часть учёта privacy loss при обучении.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q16D04": {
+    "grade": 3,
+    "reason": "DP-SGD прямо описывает приватное обучение и инструменты TensorFlow/PyTorch.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q16D05": {
+    "grade": 2,
+    "reason": "Федеративное обучение обсуждает применение DP и приватность модели в смежной постановке.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q16D06": {
+    "grade": 0,
+    "reason": "Описание Julia-фреймворка Flux без приватности не решает запрос.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q16D07": {
+    "grade": 0,
+    "reason": "Биография исследователя не объясняет методы приватного обучения.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q16D08": {
+    "grade": 0,
+    "reason": "Биография специалиста не является объяснением алгоритма DP в ML.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q16D09": {
+    "grade": 2,
+    "reason": "Объясняет локальную DP и её применение совместно с федеративным обучением.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q16D10": {
+    "grade": 2,
+    "reason": "Атаки инверсии и DP как защита дают содержательный прикладной аспект приватности моделей.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q16D11": {
+    "grade": 0,
+    "reason": "Численные методы дифференциальных уравнений не связаны с differential privacy.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q16D12": {
+    "grade": 0,
+    "reason": "Хаб Databricks не объясняет дифференциальную приватность.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q16D13": {
+    "grade": 0,
+    "reason": "Документация .NET не относится к differential privacy в ML.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q16D14": {
+    "grade": 0,
+    "reason": "Главная страница Fabric не описывает нужный математический механизм приватности.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q16D15": {
+    "grade": 1,
+    "reason": "Вводный модуль о ML даёт общий фон, но не дифференциальную приватность.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q16D16": {
+    "grade": 0,
+    "reason": "Рекомендации по приватности в классе не являются differential privacy.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q17D01": {
+    "grade": 0,
+    "reason": "Документ явно сообщает, что рекламный механизм FLoC не использует федеративное обучение.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q17D02": {
+    "grade": 3,
+    "reason": "Прямо объясняет федеративное обучение, децентрализацию данных и мотивацию приватности.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q17D03": {
+    "grade": 0,
+    "reason": "Федерация корпоративных порталов не относится к обучению ML-моделей.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q17D04": {
+    "grade": 2,
+    "reason": "Объясняет сочетание FL и локальной DP для защиты данных.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q17D05": {
+    "grade": 2,
+    "reason": "Содержит определение FL и пример локального обучения без передачи исходных данных.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q17D06": {
+    "grade": 1,
+    "reason": "Общая статья о приватности даёт контекст, но не механизм FL.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q17D07": {
+    "grade": 0,
+    "reason": "Тип федеративной поисковой локации SharePoint не связан с FL.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q17D08": {
+    "grade": 0,
+    "reason": "Валидация токена федеративного партнёра — другая задача, не ML.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q17D09": {
+    "grade": 0,
+    "reason": "Протокольный токен федеративной аутентификации не описывает FL.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q17D10": {
+    "grade": 0,
+    "reason": "Перечисление контактных сетей не относится к федеративному обучению.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q17D11": {
+    "grade": 1,
+    "reason": "Политика обработки данных ML-сервиса даёт контекст приватности, но не федеративное обучение.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q17D12": {
+    "grade": 0,
+    "reason": "Документационный хаб Fabric не объясняет FL.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q17D13": {
+    "grade": 0,
+    "reason": "Федеративные MCP-коннекторы для поиска данных — другой смысл federated.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q17D14": {
+    "grade": 0,
+    "reason": "Сопоставление типов коннекторов не относится к обучению моделей.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q17D15": {
+    "grade": 0,
+    "reason": "Документация Windows не соответствует запросу.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q18D01": {
+    "grade": 1,
+    "reason": "Определяет направление спуска, но не стохастическую оценку градиента.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q18D02": {
+    "grade": 2,
+    "reason": "Объясняет SGD/FedSGD как часть федеративного обучения и выбор случайной подвыборки.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q18D03": {
+    "grade": 2,
+    "reason": "Разбирает базовый градиентный спуск и применение к ML, давая важную основу SGD.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q18D04": {
+    "grade": 1,
+    "reason": "Классифицирует градиентные методы без отдельного раскрытия SGD.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q18D05": {
+    "grade": 1,
+    "reason": "Другой метод оптимизации даёт сравнительный фон, но не искомый алгоритм.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q18D06": {
+    "grade": 3,
+    "reason": "Прямо определяет SGD, случайную оценку градиента и применение к оптимизации.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q18D07": {
+    "grade": 2,
+    "reason": "Обзор стохастической оптимизации содержательно включает SGD и стохастическую аппроксимацию.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q18D08": {
+    "grade": 2,
+    "reason": "Прикладной справочник SGD-оптимизатора с learning rate, momentum и другими параметрами.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q18D09": {
+    "grade": 2,
+    "reason": "Описывает варианты SGD и параметры методов оптимизации.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q18D10": {
+    "grade": 1,
+    "reason": "Поле SDK содержит краткое определение SGD, но не алгоритм и его применение.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q18D11": {
+    "grade": 1,
+    "reason": "Перечисление PowerShell-модели называет SGD, но не раскрывает метод.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q18D12": {
+    "grade": 1,
+    "reason": "Поле forecasting-модели даёт только краткое описание SGD.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q18D13": {
+    "grade": 1,
+    "reason": "Поле regression-модели даёт только краткое описание SGD.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q18D14": {
+    "grade": 0,
+    "reason": "Документационный хаб Windows не связан с алгоритмом оптимизации.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q19D01": {
+    "grade": 2,
+    "reason": "CSS-коды — содержательная основа стабилизаторных кодов, но не специальный разбор surface code.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q19D02": {
+    "grade": 0,
+    "reason": "Описание исследовательского центра и конференции не объясняет коды.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q19D03": {
+    "grade": 1,
+    "reason": "Общий контекст NISQ лишь упоминает реализацию surface code.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q19D04": {
+    "grade": 0,
+    "reason": "Общее определение кванта не относится к коррекции ошибок.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q19D05": {
+    "grade": 2,
+    "reason": "Обзор квантовой коррекции прямо рассматривает поверхностные коды и их роль.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q19D06": {
+    "grade": 0,
+    "reason": "Обзор квантовой механики не объясняет искомые коды.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q19D07": {
+    "grade": 2,
+    "reason": "Объясняет математический класс стабилизаторных кодов, к которому относится surface code.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q19D08": {
+    "grade": 3,
+    "reason": "Специальная статья о surface code с двумерной решёткой, стабилизаторами и порогом ошибок.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q19D09": {
+    "grade": 1,
+    "reason": "Главная страница Quantum содержит ссылку на QEC, но не объяснение surface code.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q19D10": {
+    "grade": 2,
+    "reason": "Справочник SurfaceCode позволяет понять и настроить модель поверхностного кода.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q19D11": {
+    "grade": 2,
+    "reason": "Пакет QEC описывает модели разновидностей surface code и lattice surgery.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q19D12": {
+    "grade": 2,
+    "reason": "Другой URL справочника SurfaceCode также содержит параметры модели и порога ошибок.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q19D13": {
+    "grade": 1,
+    "reason": "Введение в Q# даёт контекст квантовых программ, но не surface code.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q19D14": {
+    "grade": 0,
+    "reason": "Surface здесь — семейство компьютеров, не квантовый код.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q19D15": {
+    "grade": 0,
+    "reason": "Поддержка устройств Surface не относится к коррекции квантовых ошибок.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q19D16": {
+    "grade": 0,
+    "reason": "Корпоративная документация Surface — другой смысл терма.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q19D17": {
+    "grade": 0,
+    "reason": "Инструментарий обслуживания Surface не относится к surface codes.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q20D01": {
+    "grade": 1,
+    "reason": "Общий материал об аккумуляторных ячейках даёт фон, но не механизм старения.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q20D02": {
+    "grade": 2,
+    "reason": "Рассматривает долговечность и подавление деградации аккумуляторов электромобилей.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q20D03": {
+    "grade": 0,
+    "reason": "Список типов батарей не объясняет старение литий-ионного аккумулятора.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q20D04": {
+    "grade": 0,
+    "reason": "Статья об элементе и его добыче не отвечает на запрос о деградации ячеек.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q20D05": {
+    "grade": 3,
+    "reason": "Содержит прямой разбор факторов старения, SEI и механизмов потери эффективности.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q20D06": {
+    "grade": 1,
+    "reason": "Особый тип литиевого проточного аккумулятора даёт фон без разбора деградации.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q20D07": {
+    "grade": 0,
+    "reason": "Литий как лекарство не относится к аккумуляторам.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q20D08": {
+    "grade": 2,
+    "reason": "Разновидность Li-ion рассматривает срок службы и число циклов, полезные для анализа деградации.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q20D09": {
+    "grade": 1,
+    "reason": "Описание типа LiPo даёт общий контекст, но не причины и модели старения.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q20D10": {
+    "grade": 1,
+    "reason": "Свойства ванадий-фосфатного катода связаны с технологией, а не механизмами деградации.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q20D11": {
+    "grade": 1,
+    "reason": "Твердотельная технология даёт сравнительный фон по долговечности, но не прямой ответ о Li-ion.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q20D12": {
+    "grade": 0,
+    "reason": "Альтернативная серно-селеновая батарея не объясняет деградацию литий-ионной.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q20D13": {
+    "grade": 1,
+    "reason": "Доступный фрагмент форумного вопроса сообщает потерю ёмкости, но не причины и модель старения.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q20D14": {
+    "grade": 1,
+    "reason": "Вопрос об эксплуатации батареи связан с износом, но в сохранённом фрагменте нет объяснения механизмов.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q20D15": {
+    "grade": 1,
+    "reason": "Вопрос о снижении ёмкости — тематический пример; доступный фрагмент не содержит модели деградации.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q20D16": {
+    "grade": 1,
+    "reason": "Тема вопроса связана с зарядкой и деградацией; сохранённый фрагмент не даёт подтверждённого объяснения.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q20D17": {
+    "grade": 0,
+    "reason": "Вопрос о запахе устройства не объясняет деградацию литий-ионной батареи.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q21D01": {
+    "grade": 0,
+    "reason": "Карточка отдельной электростанции содержит мощность, но не эффективность элементов.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q21D02": {
+    "grade": 0,
+    "reason": "Указатель статей не объясняет эффективность и её причины.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q21D03": {
+    "grade": 2,
+    "reason": "Пример материала и многопереходной ячейки с конкретной эффективностью.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q21D04": {
+    "grade": 1,
+    "reason": "Перечень типов ячеек полезен как фон, но не объясняет факторы КПД.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q21D05": {
+    "grade": 2,
+    "reason": "Объясняет связь поглощения и свойств перовскита с эффективностью солнечной ячейки.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q21D06": {
+    "grade": 2,
+    "reason": "Рассматривает влияние затенения и загрязнения на выход фотоэлектрической системы.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q21D07": {
+    "grade": 2,
+    "reason": "Обзор фотовольтаики содержит раздел об эффективности элементов и условиях измерения.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q21D08": {
+    "grade": 0,
+    "reason": "История производителя и производственные мощности не отвечают на вопрос о КПД.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q21D09": {
+    "grade": 2,
+    "reason": "Статья о солнечном элементе даёт технический контекст преобразования и эффективности.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q21D10": {
+    "grade": 3,
+    "reason": "Специальная статья об эффективности солнечных элементов, ограничениях и измерениях.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q21D11": {
+    "grade": 2,
+    "reason": "Рассматривает эффективность модулей и ячеек в контексте солнечных панелей.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q21D12": {
+    "grade": 1,
+    "reason": "Расчёт затенения и инсоляции даёт контекст условий работы, но не КПД солнечной ячейки.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q21D13": {
+    "grade": 0,
+    "reason": "Processor efficiency и клетки сетки CPU — другие значения слов запроса.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q21D14": {
+    "grade": 0,
+    "reason": "Обучение разработчиков и эффективность сервисов не относятся к фотовольтаике.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q21D15": {
+    "grade": 0,
+    "reason": "Пример урока о поиске солнечных новостей не объясняет солнечные элементы.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q21D16": {
+    "grade": 0,
+    "reason": "Бизнес-эффективность генеративного AI не относится к КПД солнечных ячеек.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q22D01": {
+    "grade": 2,
+    "reason": "Объясняет вычислительную гидродинамику и численные подходы в целом.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q22D02": {
+    "grade": 1,
+    "reason": "Другой метод аппроксимации уравнений даёт смежный контекст, но не FVM.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q22D03": {
+    "grade": 3,
+    "reason": "Основная тема — метод конечных объёмов и дискретизация уравнений.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q22D04": {
+    "grade": 1,
+    "reason": "Общая механика жидкости лишь направляет к CFD.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q22D05": {
+    "grade": 1,
+    "reason": "Смежная консервативная схема переноса, а не объяснение метода конечных объёмов.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q22D06": {
+    "grade": 1,
+    "reason": "Перечень программ включает finite-volume, но не объясняет сам метод.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q22D07": {
+    "grade": 0,
+    "reason": "Список журналов не раскрывает алгоритм или его применение.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q22D08": {
+    "grade": 1,
+    "reason": "Навигационный список численных методов не даёт самостоятельного объяснения FVM.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q22D09": {
+    "grade": 1,
+    "reason": "Общий список тем PDE — лишь математический фон.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q22D10": {
+    "grade": 1,
+    "reason": "Volume of fluid — метод моделирования свободной поверхности, не тот же алгоритм, что finite volume.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q22D11": {
+    "grade": 0,
+    "reason": "Dynamics 365 Finance — бизнес-продукт, не вычислительная гидродинамика.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q22D12": {
+    "grade": 0,
+    "reason": "Планы выпуска Dynamics 365 не относятся к CFD.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q22D13": {
+    "grade": 0,
+    "reason": "Supply Chain Management — другой смысл Dynamics.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q22D14": {
+    "grade": 0,
+    "reason": "Sustainability documentation не объясняет метод конечных объёмов.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q22D15": {
+    "grade": 0,
+    "reason": "Общий хаб устранения неполадок не отвечает на численный метод CFD.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q23D01": {
+    "grade": 2,
+    "reason": "Конкретная FEM-техника вычисления коэффициента интенсивности напряжений у трещины.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q23D02": {
+    "grade": 2,
+    "reason": "Описывает конечный элемент и его применение к плоскому напряжённому состоянию.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q23D03": {
+    "grade": 3,
+    "reason": "Основная статья о FEM объясняет метод и инженерные приложения анализа деформаций.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q23D04": {
+    "grade": 2,
+    "reason": "Описывает интерпретацию результатов FEM, включая напряжения и поверхности текучести.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q23D05": {
+    "grade": 0,
+    "reason": "Понятие конечности не относится к расчёту напряжений.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q23D06": {
+    "grade": 1,
+    "reason": "Список FEM-пакетов полезен для выбора инструмента, но не описывает расчёт.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q23D07": {
+    "grade": 1,
+    "reason": "Математический вариант FEM без прямого разбора расчёта напряжений в просмотренном фрагменте.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q23D08": {
+    "grade": 2,
+    "reason": "Приводит инженерный пример расчёта напряжений трубопроводов методом конечных элементов.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q23D09": {
+    "grade": 2,
+    "reason": "Разбирает элемент Q8 для задач плоских напряжений и деформаций.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q23D10": {
+    "grade": 2,
+    "reason": "Объясняет концентрацию напряжений и применение FEM к этой задаче.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q23D11": {
+    "grade": 1,
+    "reason": "Обзор строительной механики даёт фон и ссылки на FEM, но не подробный алгоритм расчёта.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q23D12": {
+    "grade": 0,
+    "reason": "Компьютерное зрение Azure не относится к FEM-анализу напряжений.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q23D13": {
+    "grade": 0,
+    "reason": "Анализ разметки документов — другой смысл analysis и element.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q23D14": {
+    "grade": 0,
+    "reason": "DAX для аналитики данных не является методом конечных элементов.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q23D15": {
+    "grade": 0,
+    "reason": "Импорт данных Power BI не связан с расчётом механических напряжений.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q23D16": {
+    "grade": 0,
+    "reason": "Анализ изображений и multimodal content не отвечает на запрос о FEM.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q24D01": {
+    "grade": 2,
+    "reason": "Объясняет длину когерентности и её связь с OCT и интерферометрией.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q24D02": {
+    "grade": 1,
+    "reason": "Теория когерентности — физический фон, но не описание OCT.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q24D03": {
+    "grade": 0,
+    "reason": "Биография изобретателя не объясняет метод томографии.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q24D04": {
+    "grade": 2,
+    "reason": "Разбирает конкретное применение OCT для визуализации внутри сосудов.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q24D05": {
+    "grade": 0,
+    "reason": "Биография инженера не даёт самостоятельного объяснения OCT.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q24D06": {
+    "grade": 2,
+    "reason": "Описывает OCT как метод внутрисосудистой визуализации и его задачи.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q24D07": {
+    "grade": 1,
+    "reason": "Общая многомасштабная томография даёт смежный контекст, не конкретный OCT-принцип.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q24D08": {
+    "grade": 3,
+    "reason": "Специальная статья о принципе и применениях оптической когерентной томографии.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q24D09": {
+    "grade": 1,
+    "reason": "Оптика в целом — лишь фон для конкретного метода.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q24D10": {
+    "grade": 1,
+    "reason": "Обзор томографии упоминает OCT, но не раскрывает его отдельно.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q24D11": {
+    "grade": 0,
+    "reason": "Биография исследователя и перечень интересов не объясняют метод.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q24D12": {
+    "grade": 0,
+    "reason": "Документация компьютерного зрения не объясняет оптическую когерентную томографию.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q24D13": {
+    "grade": 0,
+    "reason": "Медицинское речевое ПО не относится к OCT.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q24D14": {
+    "grade": 0,
+    "reason": "OCR распознаёт текст на изображениях, а не томографическую структуру тканей.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q24D15": {
+    "grade": 0,
+    "reason": "Оптический привод установочного диска — другой смысл optical.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q24D16": {
+    "grade": 0,
+    "reason": "Извлечение текста с экрана через OCR не относится к OCT.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q25D01": {
+    "grade": 2,
+    "reason": "Описывает проект гравитационно-волновой обсерватории — пример применения интерферометрии.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q25D02": {
+    "grade": 2,
+    "reason": "Прямо описывает прототип лазерного интерферометрического детектора CLIO.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q25D03": {
+    "grade": 2,
+    "reason": "Конкретный проект интерферометрической обсерватории DECIGO.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q25D04": {
+    "grade": 3,
+    "reason": "Объясняет измерение гравитационных волн лазерными интерферометрами и масштаб смещений.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q25D05": {
+    "grade": 0,
+    "reason": "Описание производителя блоков питания лишь упоминает помощь LIGO.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q25D06": {
+    "grade": 3,
+    "reason": "Основная статья о LIGO — прямой пример регистрации волн лазерным интерферометром.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q25D07": {
+    "grade": 2,
+    "reason": "Описывает космический интерферометрический проект регистрации гравитационных волн.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q25D08": {
+    "grade": 1,
+    "reason": "Перечень типов интерферометров даёт фон, а не механизм регистрации гравитационных волн.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q25D09": {
+    "grade": 2,
+    "reason": "Описывает оптические плечи TAMA и цель обнаружения гравитационных волн.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q25D10": {
+    "grade": 3,
+    "reason": "Статья о Virgo непосредственно посвящена интерферометрическому детектору гравитационных волн.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q25D11": {
+    "grade": 0,
+    "reason": "Release waves продукта Dynamics не являются физическими волнами.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q25D12": {
+    "grade": 0,
+    "reason": "Волны развёртывания обновлений Microsoft 365 не относятся к гравитационным волнам.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q25D13": {
+    "grade": 0,
+    "reason": "Пакетный запуск портала не связан с интерферометрическими измерениями.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q25D14": {
+    "grade": 0,
+    "reason": "Игровая плавучесть и гравитация Minecraft не объясняют детектирование волн.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q25D15": {
+    "grade": 0,
+    "reason": "Волны обновления интерфейса Power Apps не соответствуют физическому смыслу запроса.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q26D01": {
+    "grade": 3,
+    "reason": "Объясняет Cas9, направляющую РНК, разрез ДНК и использование механизмов репарации.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q26D02": {
+    "grade": 0,
+    "reason": "Сведения о компании и терапии не объясняют механизм редактирования генома.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q26D03": {
+    "grade": 3,
+    "reason": "Основная статья о CRISPR gene editing непосредственно отвечает намерению.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q26D04": {
+    "grade": 1,
+    "reason": "Смежная РНК-направляемая эндонуклеаза даёт контекст, но не описание Cas9.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q26D05": {
+    "grade": 2,
+    "reason": "Объясняет применение CRISPR-Cas9 и библиотеки sgRNA в геномных knockout-скринингах.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q26D06": {
+    "grade": 0,
+    "reason": "История этического скандала не объясняет механизм CRISPR-Cas9.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q26D07": {
+    "grade": 0,
+    "reason": "История исследовательского института не относится к механизму редактирования.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q26D08": {
+    "grade": 2,
+    "reason": "Содержит прямое описание пары gRNA/Cas9 и направленного изменения генетического материала.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q26D09": {
+    "grade": 1,
+    "reason": "Другой класс РНК-направляемых систем даёт смежный контекст без объяснения Cas9.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q26D10": {
+    "grade": 1,
+    "reason": "Частный пример редактируемого гена не раскрывает общую механику CRISPR-Cas9.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q26D11": {
+    "grade": 0,
+    "reason": "Совместное редактирование тем бота не является редактированием генома.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q26D12": {
+    "grade": 0,
+    "reason": "Редактирование Power Apps — другая задача.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q26D13": {
+    "grade": 0,
+    "reason": "Редактирование файлов отчёта Power BI не связано с CRISPR.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q26D14": {
+    "grade": 0,
+    "reason": "Режим редактирования отчётов не относится к редактированию генов.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q26D15": {
+    "grade": 0,
+    "reason": "Редактирование документов Word не соответствует генетическому смыслу editing.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q27D01": {
+    "grade": 3,
+    "reason": "AlphaFold напрямую предсказывает структуру белка по аминокислотной последовательности.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q27D02": {
+    "grade": 1,
+    "reason": "Описывает тип белковой складки, а не методы предсказания структуры.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q27D03": {
+    "grade": 2,
+    "reason": "Объясняет оценку автоматического предсказания и классы методов: homology, fold recognition, ab initio.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q27D04": {
+    "grade": 1,
+    "reason": "Параметр контактного порядка связан с моделированием, но не даёт полного метода предсказания.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q27D05": {
+    "grade": 1,
+    "reason": "Карточка конкретной белковой складки — структурный фон, не алгоритм предсказания.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q27D06": {
+    "grade": 2,
+    "reason": "Моделирование сворачивания связывается с улучшением методов структурного предсказания.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q27D07": {
+    "grade": 2,
+    "reason": "Систематизирует программные средства и классы методов предсказания структуры.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q27D08": {
+    "grade": 1,
+    "reason": "Общая статья о белках даёт биологический фон без целевого разбора предсказания.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q27D09": {
+    "grade": 2,
+    "reason": "Разбирает физическое сворачивание и вычислительные задачи стабильности, кинетики и структуры.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q27D10": {
+    "grade": 3,
+    "reason": "Специальная статья о предсказании белковой структуры по последовательности.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q27D11": {
+    "grade": 1,
+    "reason": "База укладки мембранных спиралей — ресурс структурных данных, а не метод предсказания.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q27D12": {
+    "grade": 2,
+    "reason": "Каталог инструментов прямо включает AlphaFold, предсказанные структуры и оценки уверенности.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q27D13": {
+    "grade": 0,
+    "reason": "Query folding Power BI — другой смысл folding, не белковые структуры.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q27D14": {
+    "grade": 0,
+    "reason": "Сворачивание SQL-запроса не относится к protein folding.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q27D15": {
+    "grade": 0,
+    "reason": "Импорт и преобразование данных Power Query не объясняют предсказание белков.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q27D16": {
+    "grade": 0,
+    "reason": "Native query folding PostgreSQL не относится к сворачиванию белка.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q28D01": {
+    "grade": 2,
+    "reason": "Объясняет донорное легирование и получение n-типа — существенную часть задачи.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q28D02": {
+    "grade": 3,
+    "reason": "Специальная статья о легировании полупроводников и формировании нужных областей.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q28D03": {
+    "grade": 3,
+    "reason": "Прямо связывает доноры/акцепторы, n/p-области и полупроводниковый переход.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q28D04": {
+    "grade": 2,
+    "reason": "Конкретный технологический метод легирования и получения p-типа.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q28D05": {
+    "grade": 3,
+    "reason": "Непосредственно объясняет границу n- и p-легированных областей и встроенный потенциал.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q28D06": {
+    "grade": 1,
+    "reason": "Режим инжекции в готовом переходе — смежный фон, не образование перехода.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q28D07": {
+    "grade": 1,
+    "reason": "Контакт металл–полупроводник даёт сравнение, но отличается от p–n-перехода.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q28D08": {
+    "grade": 3,
+    "reason": "Основная статья о p–n-переходе отвечает намерению.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q28D09": {
+    "grade": 3,
+    "reason": "Объясняет донорное и акцепторное легирование и образование переходов в кристалле.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q28D10": {
+    "grade": 0,
+    "reason": "Экономика полупроводниковой отрасли не объясняет легирование и переход.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q28D11": {
+    "grade": 1,
+    "reason": "Обратный пробой p–n-перехода — частный эффект, а не его образование.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q28D12": {
+    "grade": 0,
+    "reason": "Свойство namespace junction не относится к полупроводниковому переходу.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q28D13": {
+    "grade": 0,
+    "reason": "Видео о применении облака в отрасли не объясняет легирование и образование перехода.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q28D14": {
+    "grade": 0,
+    "reason": "Утилита файловых junction points не относится к p–n-переходу.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q28D15": {
+    "grade": 0,
+    "reason": "Команда создания ссылок не объясняет физику полупроводника.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q28D16": {
+    "grade": 0,
+    "reason": "Файловые ссылки и junctions — другая область значения терма.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q29D01": {
+    "grade": 0,
+    "reason": "История проекта стандартизации не раскрывает принцип RSA.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q29D02": {
+    "grade": 1,
+    "reason": "Альтернативная криптосистема сравнивает размеры ключей с RSA, но не объясняет RSA.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q29D03": {
+    "grade": 1,
+    "reason": "Общее определение ключей — фон, без математического устройства RSA.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q29D04": {
+    "grade": 0,
+    "reason": "Перечень криптосистем не содержит самостоятельного объяснения RSA.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q29D05": {
+    "grade": 0,
+    "reason": "Социологическое понятие public не относится к криптографии.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q29D06": {
+    "grade": 2,
+    "reason": "Объясняет принцип пары открытого/закрытого ключа и связь с RSA.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q29D07": {
+    "grade": 3,
+    "reason": "Основная статья о RSA раскрывает ключи, операции и назначение криптосистемы.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q29D08": {
+    "grade": 2,
+    "reason": "Математическая RSA-проблема объясняет предположение сложности, важное для безопасности.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q29D09": {
+    "grade": 2,
+    "reason": "Описывает открытый RSA-ключ через публичную экспоненту и модуль.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q29D10": {
+    "grade": 1,
+    "reason": "Перечень алгоритмов криптопровайдера не объясняет принцип RSA.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q29D11": {
+    "grade": 1,
+    "reason": "Справочник криптопровайдера с упоминанием RSA, без устройства алгоритма.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q29D12": {
+    "grade": 1,
+    "reason": "Перечень размеров RSA-ключей и алгоритмов сертификатов даёт практический фон, не принцип RSA.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q29D13": {
+    "grade": 2,
+    "reason": "Объясняет разные роли открытого и закрытого ключей в конкретной схеме аутентификации.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q29D14": {
+    "grade": 2,
+    "reason": "Разбирает связанную пару ключей и применение RSA для подписи Secure Boot.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q29D15": {
+    "grade": 1,
+    "reason": "Настройка SSH-ключей объясняет общий принцип пары, но не устройство RSA.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q29D16": {
+    "grade": 1,
+    "reason": "Использование RSA-ключа в TPM даёт прикладной фон, не алгоритм RSA.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q30D01": {
+    "grade": 0,
+    "reason": "Функция криптографического сжатия BLAKE не является Variable Byte-кодированием.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q30D02": {
+    "grade": 1,
+    "reason": "Сжатие битовых массивов даёт смежный контекст, но не VB для postings.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q30D03": {
+    "grade": 0,
+    "reason": "Обзор цифровых данных не объясняет искомое целочисленное кодирование.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q30D04": {
+    "grade": 0,
+    "reason": "Косинусное преобразование относится к другому классу сжатия, не к VB.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q30D05": {
+    "grade": 0,
+    "reason": "Хеширование не является Variable Byte-кодированием.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q30D06": {
+    "grade": 0,
+    "reason": "Страница неоднозначности variable не относится к алгоритму.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q30D07": {
+    "grade": 0,
+    "reason": "Математическая переменная не относится к VB-сжатию.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q30D08": {
+    "grade": 0,
+    "reason": "Поля протокольного идентификатора не объясняют Variable Byte или инвертированный индекс.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q30D09": {
+    "grade": 0,
+    "reason": "Флаг RLE-сжатия идентификатора описывает другой алгоритм и другую задачу.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q30D10": {
+    "grade": 0,
+    "reason": "Переменные состояния буфера сжатия не объясняют VB-кодирование чисел.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q30D11": {
+    "grade": 1,
+    "reason": "Описывает сжатые docID для ключа контентного индекса, но не алгоритм Variable Byte.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q30D12": {
+    "grade": 0,
+    "reason": "Сжатие потока протокола репликации не относится к VB для postings.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q30D13": {
+    "grade": 0,
+    "reason": "Переменные Azure Pipelines не относятся к целочисленному сжатию.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q30D14": {
+    "grade": 1,
+    "reason": "Сжатие таблиц и индексов SQL Server связано с общей задачей хранения, но не с VB postings.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q30D15": {
+    "grade": 1,
+    "reason": "Архитектура SQL-индексов даёт фон, но не инвертированный индекс с Variable Byte.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q30D16": {
+    "grade": 0,
+    "reason": "Синтаксис выбора row/page compression не объясняет VB-кодирование.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  },
+  "Q30D17": {
+    "grade": 0,
+    "reason": "Команда CREATE INDEX с параметрами row/page compression не относится к VB.",
+    "assessor": "language_model",
+    "basis": "saved_text_passages"
+  }
+}

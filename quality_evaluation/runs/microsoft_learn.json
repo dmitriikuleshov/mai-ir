@@ -1,0 +1,2342 @@
+{
+  "Q01": {
+    "status": "ok",
+    "query": "database transaction isolation",
+    "collected_at": "2026-11-26T14:42:24.638026+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=database+transaction+isolation&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Entity Framework documentation hub",
+        "url": "https://learn.microsoft.com/en-us/ef/",
+        "snippet": "Entity Framework documentation hub Entity Framework is a modern object-relation mapper that lets you build a clean, portable, and high-level data access layer with .NET (C#) across a variety of databases, including SQL Database (on-premises and Azure), SQLite, MySQL, PostgreSQL, and Azure Cosmos DB. Entity Framework is a modern object-relation."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "SET TRANSACTION ISOLATION LEVEL (Transact-SQL) - SQL Server",
+        "url": "https://learn.microsoft.com/en-us/sql/t-sql/statements/set-transaction-isolation-level-transact-sql",
+        "snippet": "SET TRANSACTION ISOLATION LEVEL (Transact-SQL) Summarize this article for me In this article Applies to: SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics SQL database in Microsoft Fabric Controls the locking and row versioning behavior of Transact-SQL statements issued by a connection to SQL Server. Transact-SQL."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "What is the Azure SQL Database service? - Azure SQL Database",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-sql/database/sql-database-paas-overview",
+        "snippet": "Summarize this article for me In this article Applies to: Azure SQL Database This article provides an overview of Azure SQL Database, a fully managed platform as a service (PaaS) database engine that handles most of the database management functions such as upgrading, patching, backups, and monitoring without user involvement. Deployment models."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "Handling Concurrency Conflicts - EF Core",
+        "url": "https://learn.microsoft.com/en-us/ef/core/saving/concurrency",
+        "snippet": "Depending on your database implementation, this happens in one of two ways: When the row is queried, your transaction takes a shared lock on it. Using a higher isolation level to manage concurrency conflicts is simpler, doesn't require concurrency tokens, and provides other advantages; for example, repeatable reads guarantee that your transaction."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Deadlocks Guide - SQL Server",
+        "url": "https://learn.microsoft.com/en-us/sql/relational-databases/sql-server-deadlocks-guide",
+        "snippet": "Deadlocks guide Summarize this article for me In this article Applies to: SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics SQL database in Microsoft Fabric This article discusses deadlocks in the Database Engine in depth. Deadlocks are caused by competing, concurrent locks in the database, often in multi-step."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "Saga Design Pattern - Azure Architecture Center",
+        "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/saga",
+        "snippet": "Saga distributed transactions pattern Summarize this article for me In this article Maintain data consistency in distributed systems by coordinating a sequence of local transactions across multiple services. Each service performs its operation and triggers the next... Consistency: Data transitions from one valid state to another valid state.."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "Design and develop database solutions - Training",
+        "url": "https://learn.microsoft.com/en-us/training/paths/design-develop-database-solutions/",
+        "snippet": "Design and develop database solutions At a glance Level Intermediate Skill &nbsp; Product SQL Server Azure SQL Database Azure SQL Managed Instance Microsoft Fabric Role Developer Data Engineer Database Administrator Solution Archi... Prerequisites Before starting this learning path, you should have experience writing T-SQL queries, a basic."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "Automatic, Geo-Redundant Backups - Azure SQL Database",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-sql/database/automated-backups-overview",
+        "snippet": "Automated backups in Azure SQL Database Summarize this article for me In this article Applies to: Azure SQL Database Azure SQL Database Azure SQL Managed Instance This article describes the automated backup feature for Azure SQL Database.  ...backups externally, so they provide strong data isolationWhen you migrate your database from a DTU-based."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "BEGIN TRANSACTION (Transact-SQL) - SQL Server",
+        "url": "https://learn.microsoft.com/en-us/sql/t-sql/language-elements/begin-transaction-transact-sql",
+        "snippet": "Depending on the current transaction isolation level settings, resources acquired to support the Transact-SQL statements issued by the session are locked by the transaction until it completes with either a COMMIT TRANSACTION or ROLLBACK TRANSACTION statement. Once a transaction is started, the Database Engine can perform actions such as acquiring."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Table Hints (Transact-SQL) - SQL Server",
+        "url": "https://learn.microsoft.com/en-us/sql/t-sql/queries/hints-transact-sql-table",
+        "snippet": "Table hints (Transact-SQL) Summarize this article for me In this article Applies to: SQL Server Azure SQL Database Azure SQL Managed Instance SQL database in Microsoft Fabric Table hints are used to override the default behavior of the query optimizer during the data manipulation language (DML) statement. A statement reads a table at the READ."
+      }
+    ]
+  },
+  "Q02": {
+    "status": "ok",
+    "query": "distributed database replication",
+    "collected_at": "2026-11-26T14:42:26.881827+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=distributed+database+replication&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Configure the Windows Firewall to Allow SQL Server Access - SQL Server",
+        "url": "https://learn.microsoft.com/en-us/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access",
+        "snippet": "Replication Replication connections to SQL Server use the typical regular Database Engine ports (TCP port 1433 is the default instance)Web synchronization and FTP/UNC access for replication snapshot require more ports to be opened on the firewall. Microsoft Distributed Transaction Coordinator (MS DTC) TCP port 135See Special Considerations for."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "Editions and Supported Features of SQL Server 2025 - SQL Server",
+        "url": "https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2025",
+        "snippet": "...Express Mirroring in Microsoft Fabric Yes Yes Yes Heterogeneous subscribers Yes Yes No Merge replication Yes Yes Yes 1 Oracle publishing Yes No No Peer to peer transactional replication Yes No No Peer to peer transactional replication (last write wins) Yes No No Snapshot replication Yes Yes Yes 1 Change tracking Yes Yes Yes Change data capture."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Azure Cosmos DB documentation - Azure Cosmos DB",
+        "url": "https://learn.microsoft.com/en-us/azure/cosmos-db/",
+        "snippet": "Azure Cosmos DB documentation Fully managed, distributed NoSQL, relational, and vector database for modern app development. High performance, high availability, and support for open-source PostgreSQL, MongoDB, and Apache Cassandra. Build cloud-native apps effortlessly. Overview Introduction to Azure Cosmos DB Architecture Vector Database in Azure."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "Service overview and network port requirements - Windows Server",
+        "url": "https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements",
+        "snippet": "Distributed File System Replication The Distributed File System Replication (DFSR) service is a state-based, multi-master file replication engine that automatically copies updates to files and folders between computers that are participating in a common replication group. DFSR was added in Windows Server 2003 R2You can configure DFSR by using the."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Editions and Supported Features of SQL Server 2019 - SQL Server",
+        "url": "https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2019",
+        "snippet": "...updatable subscription Yes Yes No No No 1 Subscriber only Management tools Feature Enterprise Standard Web Express withAdvanced Services Express SQL Management Objects (SMO) Yes Yes Yes Yes Yes SQL Assessment API Yes Yes Yes Yes Yes SQL Vulnerability Assessment Yes Yes Yes Yes Yes SQL Server Configuration Manager Yes Yes Yes Yes Yes sqlcmd."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "What is the Azure SQL Database service? - Azure SQL Database",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-sql/database/sql-database-paas-overview",
+        "snippet": "Summarize this article for me In this article Applies to: Azure SQL Database This article provides an overview of Azure SQL Database, a fully managed platform as a service (PaaS) database engine that handles most of the database management functions such as upgrading, patching, backups, and monitoring with... Active geo-replication: The single."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "Managed Instance link overview - Azure SQL Managed Instance",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/managed-instance-link-feature-overview",
+        "snippet": "Overview of the Managed Instance link Summarize this article for me In this article Applies to: Azure SQL Managed Instance This article provides an overview of the Managed Instance link, which enables near real-time data replication between SQL Server and Azure SQL Managed Instance. The link provides hybrid flexibility and database mobility as it."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": ".NET (C#) data documentation",
+        "url": "https://learn.microsoft.com/en-us/ef/dotnet-data/",
+        "snippet": "...Document database (Azure Cosmos DB) Azure Cosmos DB documentation Develop an ASP.NET Core MVC web application with Azure Cosmos DB by using .NET SDK Create a notebook in Azure Cosmos DB to analyze and visualize the data Azure Cosmos DB for MongoDB EF Core Azure Cosmos DB provider Graph database (Azure Cosmos DB Graph API) Introduction to Azure."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "What is Azure Managed Redis? - Azure Managed Redis",
+        "url": "https://learn.microsoft.com/en-us/azure/redis/overview",
+        "snippet": "...formance and scalability of an application that heavily uses backendAdditionally, Redis is increasingly used for noncaching applications, including data ingestion, deduplication, messaging, and leaderboards Azure Managed Redis can be deployed standalone, or deployed along with other Azure app or database services, such as Azure Container Apps,."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Install Using Graphical User Interface - SQL Server",
+        "url": "https://learn.microsoft.com/en-us/sql/database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup",
+        "snippet": "For example, to install a new instance of SQL Server Database Engine, select Database Engine Services. A description for each component... 18. Distributed Replay Controller Use the Distributed Replay Controller page to specify the users you want to grant administrative permissions to for the Distributed Replay controller service. Distributed."
+      }
+    ]
+  },
+  "Q03": {
+    "status": "ok",
+    "query": "inverted index information retrieval",
+    "collected_at": "2026-11-26T14:42:29.714605+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=inverted+index+information+retrieval&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Study guide for Exam AI-200: Developing AI Cloud Solutions on Azure",
+        "url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-200",
+        "snippet": "Study guide for Exam AI-200: Developing AI Cloud Solutions on Azure Summarize this article for me In this article Tip A new Practice Assessment experience is available on AI Skills Navigator that more closely aligns with the exam experience. Develop containerized solutions on Azure (20–25%) Implement container application hosting Build, store,."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "What is Foundry IQ? - Microsoft Foundry",
+        "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/what-is-foundry-iq",
+        "snippet": "What is Foundry IQ. Summarize this article for me In this article Azure AI Search is now Foundry IQ. This article explains how agents use its higher-level knowledge retrieval APIs through knowledge bases, knowledge sources, and agentic retrieval. For the full range of service capabilities, see the service overview. Note Some Foundry IQ features."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Microsoft 365 Copilot Retrieval API Overview",
+        "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/api/ai-services/retrieval/overview",
+        "snippet": "Overview of the Microsoft 365 Copilot Retrieval API Summarize this article for me In this article The Microsoft 365 Copilot APIs provide access to components that power Copilot experiences, unlocking the ability to enhance your custom engine agents and generative AI solutions with Microsoft 365 Copilot capabilities. The Microso... The Retrieval."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "Retrieval augmented generation (RAG) and indexes in Microsoft Foundry - Microsoft Foundry",
+        "url": "https://learn.microsoft.com/en-us/azure/foundry/concepts/retrieval-augmented-generation",
+        "snippet": "Retrieval augmented generation (RAG) and indexes Summarize this article for me In this article Retrieval augmented generation (RAG) is a pattern that combines search with large language models (LLMs) so responses are grounded in your data. This article explains how RAG works in Microsoft Foundry, what role indexes play, and how agentic retrieval."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Design and Develop a RAG Solution on Azure - Azure Architecture Center",
+        "url": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide",
+        "snippet": "Design and develop a RAG solution Summarize this article for me In this article The retrieval-augmented generation (RAG) pattern is an industry-standard approach to building applications that use language models to process specific or proprietary data that the model doesn't already know. Principal authors: Harsha Vardhan Annapureddy | Senior Data."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "Introduction to retrieval-augmented generation concepts - Training",
+        "url": "https://learn.microsoft.com/en-us/training/modules/rag-fundamentals/",
+        "snippet": "Introduction to retrieval-augmented generation concepts Beginner AI Engineer Developer Solution Architect Student Microsoft Foundry Retrieval-augmented generation (RAG) helps generative AI applications produce responses that are grounded in relevant information. In this module, you'll explore how a RAG solution prepares, retrieves, and uses data."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "Retrieval Augmented Generation (RAG) and Vector Databases (Part 15 of 18)",
+        "url": "https://learn.microsoft.com/en-us/shows/generative-ai-for-beginners/retrieval-augmented-generation-rag-and-vector-databases-generative-ai-for-beginners",
+        "snippet": "Episode Retrieval Augmented Generation (RAG) and Vector Databases (Part 15 of 18) | Generative AI for Beginners with Bethany Jepchumba Generative AI for Beginners In the search applications lesson, we briefly learned how to integrate your own data into Large Language Models (LLMs). Implement Retrieval Augmented Generation (RAG) with Azure OpenAI."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "Get started with Microsoft Foundry IQ - Training",
+        "url": "https://learn.microsoft.com/en-us/training/modules/get-started-foundry-iq/",
+        "snippet": "Get started with Microsoft Foundry IQ Beginner AI Engineer Data Scientist Developer Solution Architect Student Microsoft Foundry Learn how Microsoft Foundry IQ helps AI agents retrieve relevant information from enterprise data and generate grounded, citation-backed responses. Learning objectives By the end of this module, you'll be able to:."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "Enhance AI responses with Retrieval Augmented Generation - Microsoft Copilot Studio",
+        "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/retrieval-augmented-generation",
+        "snippet": "Enhance AI responses by using Retrieval Augmented Generation Summarize this article for me In this article Applies to: Standard harness Retrieval Augmented Generation (RAG) in Microsoft Copilot Studio combines the reasoning capabilities of language models with trusted, organization‑specific knowledge. It enables agents to produce accurate, cont...."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Retrieval-Augmented Generation (RAG) Evaluators for Generative AI - Microsoft Foundry",
+        "url": "https://learn.microsoft.com/en-us/azure/foundry/concepts/evaluation-evaluators/rag-evaluators",
+        "snippet": "Retrieval-Augmented Generation (RAG) evaluators Summarize this article for me In this article A Retrieval-Augmented Generation (RAG) system tries to generate the most relevant answer consistent with grounding documents in response to a user's query. A user's query triggers a search retrieval in the corpus of grounding documents to provide."
+      }
+    ]
+  },
+  "Q04": {
+    "status": "ok",
+    "query": "C++ memory management",
+    "collected_at": "2026-11-26T14:42:32.623909+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=C%2B%2B+memory+management&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Entity Framework documentation hub",
+        "url": "https://learn.microsoft.com/en-us/ef/",
+        "snippet": "Entity Framework documentation hub Entity Framework is a modern object-relation mapper that lets you build a clean, portable, and high-level data access layer with .NET (C#) across a variety of databases, including SQL Database (on-premises and Azure), SQLite, MySQL, PostgreSQL, and Azure Cosmos DB.  ...ssing SQLite with EF Core Windows Forms .NET."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "Microsoft Purview",
+        "url": "https://learn.microsoft.com/en-us/purview/",
+        "snippet": "Microsoft Purview Microsoft Purview is a comprehensive portfolio of products spanning data governance, data security, and data compliance solutions.  ...mpliance solutions trial for free What's new Catch up on new functionality and documentation updates Reference Build data security and governance into AI apps with the Microsoft Purview."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Dynamics 365 Supply Chain Management documentation",
+        "url": "https://learn.microsoft.com/en-us/dynamics365/supply-chain/",
+        "snippet": "Microsoft Dynamics 365 Supply Chain Management documentation Discover how to make the most of Dynamics 365 Supply Chain Management with training, docs, and videos covering product capabilities and how-to articles.  ...ent environments Application stack and server architecture Extend and customize Extensibility overview Application extensibility."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "Release Notes for SQL Server Management Studio (SSMS) 20",
+        "url": "https://learn.microsoft.com/en-us/ssms/release-notes-20",
+        "snippet": "Release notes for SQL Server Management Studio (SSMS) 20 Summarize this article for me In this article Applies to: SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics This article details updates, improvements, and bug fixes for SQL Server Management Studio (SSMS) 20. Note To authenticate to database engines with."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Release Notes for SQL Server Management Studio (SSMS) 19 and Earlier Versions",
+        "url": "https://learn.microsoft.com/en-us/ssms/release-notes-19",
+        "snippet": "Release notes for SQL Server Management Studio (SSMS) 19 and earlier versions Summarize this article for me In this article Applies to: SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics This article details updates, improvements, and bug fixes for SQL Server Management Studio (SSMS) 19 and earlier versions. Note To."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "Learn about using Endpoint Privilege Management with Microsoft Intune - Microsoft Intune",
+        "url": "https://learn.microsoft.com/en-us/intune/epm/overview",
+        "snippet": "Use Endpoint Privilege Management with Microsoft Intune Summarize this article for me In this article With Microsoft Intune Endpoint Privilege Management (EPM) your organization's users can run as a standard user (without administrator rights) and complete tasks that require elevated privileges. Tasks that commonly require administrative."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "Fundamentals of garbage collection - .NET",
+        "url": "https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/fundamentals",
+        "snippet": "Fundamentals of garbage collection Summarize this article for me In this article In the common language runtime (CLR), the garbage collector (GC) serves as an automatic memory manager. The garbage collector manages the allocation and release of memory for an application. Therefore, developers working with managed code don't have to write code to."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "Microsoft Intune Enterprise Application Management - Microsoft Intune",
+        "url": "https://learn.microsoft.com/en-us/intune/app-management/deployment/enterprise-app-management",
+        "snippet": "The following table of Enterprise Apps is available within Intune: Apps 3CX Desktop App 3CXPhone for Windows 3DF Zephyr Free 3DxWare 10 4K Video Downloader 4K Video Downloader+ 7-Zip 8x8 Work AbaClient Able2Extract Professional Acro Software CutePDF Writer ActiveState Software Komodo Edit ActiveState Software Komodo IDE Adobe AIR Agent Ransack."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "VirtualAlloc function (memoryapi.h) - Win32 apps",
+        "url": "https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc",
+        "snippet": "VirtualAlloc function (memoryapi.h) Summarize this article for me In this article Reserves, commits, or changes the state  of a region of pages in the virtual address space of the calling process. Memory allocated by this function is automatically initialized to zero. To allocate memory in the address space of another process, use the."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Read small memory dump files - Windows Client",
+        "url": "https://learn.microsoft.com/en-us/troubleshoot/windows-client/performance/read-small-memory-dump-file",
+        "snippet": "How to read the small memory dump file that is created by Windows if a crash occurs Summarize this article for me In this article This article describes how to examine a small memory dump file. A small memory dump file can help you determine why your computer failed. Applies to   All supported versions of Windows Client and Windows Server Original."
+      }
+    ]
+  },
+  "Q05": {
+    "status": "ok",
+    "query": "C# asynchronous programming",
+    "collected_at": "2026-11-26T14:42:35.391575+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=C%23+asynchronous+programming&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": ".NET documentation - .NET",
+        "url": "https://learn.microsoft.com/en-us/dotnet/",
+        "snippet": ".NET documentation Learn to use .NET to create applications on any platform using C#, F#, and Visual Basic. NET API reference API reference documentation for .NET ASP.NET Core API reference API reference documentation for ASP.NET Core C# language reference C# language reference and specification F# language reference F# language reference Visual."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "Asynchronous programming - C#",
+        "url": "https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/",
+        "snippet": "Asynchronous programming with async and await Summarize this article for me In this article The Task asynchronous programming (TAP) model provides a layer of abstraction over typical asynchronous coding. Some statements can initi... The goal of task asynchronous programming is to enable code that reads like a sequence of statements, but executes."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Entity Framework documentation hub",
+        "url": "https://learn.microsoft.com/en-us/ef/",
+        "snippet": "Entity Framework documentation hub Entity Framework is a modern object-relation mapper that lets you build a clean, portable, and high-level data access layer with .NET (C#) across a variety of databases, including SQL Database (on-premises and Azure), SQLite, MySQL, PostgreSQL, and Azure Cosmos DB.  ...ence Overview Package Manager Console."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "Introduction to .NET - .NET",
+        "url": "https://learn.microsoft.com/en-us/dotnet/core/introduction",
+        "snippet": "Introduction to .NET Summarize this article for me In this article .NET is a free, cross-platform, open-source developer platform for building many kinds of applications. C# is the primary programming langua... Asynchronous programming support is a first-class feature of the C# programming language, which provides the async and await keywords that."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Azure developer documentation",
+        "url": "https://learn.microsoft.com/en-us/azure/developer/",
+        "snippet": "Azure developer documentat... NET Azure SDK for .NET API reference Developer center Python Azure SDK for Python API reference Developer center JavaScript Azure SDK for JavaScript API reference Developer center Java Azure SDK for Java API reference Developer center Go Azure SDK for Go API reference Developer center C++ Azure SDK for C++ API."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "Asynchronous programming scenarios - C#",
+        "url": "https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/async-scenarios",
+        "snippet": "Asynchronous programming scenarios Summarize this article for me In this article If your code implements I/O-bound scenarios to support network data requests, database access, or file system read/writes, asynchronous programming is the best approach. C# has a language-level asynchronous programming model that allows you to easily write."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "Implement Container Application Hosting on Azure - Training",
+        "url": "https://learn.microsoft.com/en-us/training/paths/implement-container-app-hosting-azure/",
+        "snippet": "Implement container application hosting on Azure At a glance Level Intermediate Skill &nbsp; Product Azure Container Registry Azure App Service Role Developer Subject Containers This learning path guides you through core container hosting workflows on Azure for AI applications and backend services. Prerequisites Programming experience with."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "Microsoft C/C++ Documentation",
+        "url": "https://learn.microsoft.com/en-us/cpp/",
+        "snippet": "Microsoft C++, C, and Assembler documentation Learn how to use C++, C, and assembly language to develop applications, services, and tools for your platforms and devices. Download Install Visual Studio and choose your C++ workloads Overview Welcome to C++ in Visual Studio Get started Get started with Visual Studio and C++ What's new What's new for."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "Azure Speech Documentation - Tutorials, API Reference - Foundry Tools",
+        "url": "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/",
+        "snippet": "Azure Speech documentation Recognize speech, synthesize speech, get real-time translations, transcribe conversations, or integrate speech into your bot experiences. Overview What is Azure Speech. Get star... C# C++ Go Java JavaScript Objective-C and Swift Python About the Speech SDK Additional SDKs Voice Live SDK Build low-latency speech-to-speech."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Welcome to the Microsoft 365 Developer Program",
+        "url": "https://learn.microsoft.com/en-us/office/developer-program/microsoft-365-developer-program",
+        "snippet": "Welcome to the Microsoft 365 Developer Program Summarize this article for me In this article Eligible Microsoft 365 Developer Program members can request a Microsoft 365 E5 developer subscription to create a sandbox for developing solutions independent of their production environment. You can build Microsoft Teams apps, Office Add-ins for Word,."
+      }
+    ]
+  },
+  "Q06": {
+    "status": "ok",
+    "query": ".NET garbage collection",
+    "collected_at": "2026-11-26T14:42:37.859352+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=.NET+garbage+collection&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": ".NET documentation - .NET",
+        "url": "https://learn.microsoft.com/en-us/dotnet/",
+        "snippet": ".NET documentation Learn to use .NET to create applications on any platform using C#, F#, and Visual Basic.  ...de Port from .NET Framework to .NET .NET breaking changes Download .NET DevOps and testing Deploy .NET apps Unit test .NET apps GitHub Actions and .NET Data access in .NET LINQ overview Entity Framework Core Azure Storage XML data."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "What's new in .NET 11 runtime",
+        "url": "https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-11/runtime",
+        "snippet": "What's new in the .NET 11 runtime Summarize this article for me In this article This article describes new features in the .NET runtime for .NET 11. Updated minimum hardware... Sharing Unix named mutexes with older .NET processes no longer causes spurious abandoned-mutex errors. On Windows, garbage collection works correctly on machines with."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Introduction to .NET - .NET",
+        "url": "https://learn.microsoft.com/en-us/dotnet/core/introduction",
+        "snippet": "Introduction to .NET Summarize this article for me In this article .NET is a free, cross-platform, open-source d... It provides automatic memory management via a garbage collector (GC). C# requires garbage collection and the runtime provides a tracing garbage collector. You can leave resource management up to garbage collection, but prompt cleanup."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "Fundamentals of garbage collection - .NET",
+        "url": "https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/fundamentals",
+        "snippet": "Fundamentals of garbage collection Summarize this article for me In this article In the common language runtime (CLR), the garbage collector (GC) serves as an automatic memory manager. The garbage collector manages the allocation and release of memory for an application. This article describes the core concepts of garbage collection. Benefits The."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": ".NET documentation - .NET",
+        "url": "https://learn.microsoft.com/en-us/dotnet/fundamentals/",
+        "snippet": ".NET fundamentals documentation Learn the fundamentals of .NET, an open-source developer platform for building many different types of applications. Introduction to .NET .NET languages Concept .NET Standard Common Language Runtime (CLR) .NET Core support policy What's new What's new in .NET 11 What's new in .NET 10 What's new in .NET 9 What's new."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": ".NET Multi-platform App UI documentation - .NET MAUI",
+        "url": "https://learn.microsoft.com/en-us/dotnet/maui/",
+        "snippet": ".NET Multi-platform App UI documentation .NET Multi-platform App UI (.NET MAUI) lets you build native apps using a .NET cross-platform UI toolkit that targets the mobile and desktop form factors on Android, iOS, macOS, Windows, and Tizen. NET MAUI community resources .NET MAUI Community Toolkit The .NET MAUI Community Toolkit is a collection of."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "Worker Services - .NET",
+        "url": "https://learn.microsoft.com/en-us/dotnet/core/extensions/workers",
+        "snippet": "Calls Run on the host instance, which runs the app. Template defaults The Worker template doesn't enable server garbage collection (GC) by d... To enable server GC, add the ServerGarbageCollection node to the project file: Tradeoffs and considerations Enabled Disabled Efficient memory management: Automatically reclaims unused memory to prevent."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "ASP.NET Core Best Practices",
+        "url": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/best-practices",
+        "snippet": "ASP.NET Core Best Practices Summarize this article for me In this article Note This isn't the latest version of this article. By Mike Rousos This article provides guidelines for maximizing performance and reliability of ASP.NET Core apps. Beginning wi... Minimize large object allocations The .NET garbage collector manages allocation and release of."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "Garbage collector config settings - .NET",
+        "url": "https://learn.microsoft.com/en-us/dotnet/core/runtime-config/garbage-collector",
+        "snippet": "Runtime configuration options for garbage collection Summarize this article for me In this article This page contains information about settings for the .NET runtime garbage collector (GC). For example, you wouldn't want every .NET process on a machine to use server GC or the same heap hard limit. If you're using the environment variables, .NET 6."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Cleaning up unmanaged resources - .NET",
+        "url": "https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/unmanaged",
+        "snippet": "Cleaning up unmanaged resources Summarize this article for me In this article For a majority of the objects that your app creates, you can rely on the .NET garbage collector to handle memory management. The most common types of unmanaged resources are objects that wrap operating system resources, such as files, windows, network connections, or."
+      }
+    ]
+  },
+  "Q07": {
+    "status": "ok",
+    "query": "node.js event loop",
+    "collected_at": "2026-11-26T14:42:40.607893+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=node.js+event+loop&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Visual Studio documentation",
+        "url": "https://learn.microsoft.com/en-us/visualstudio/windows/",
+        "snippet": "Development with Visual Studio Web and cloud ASP.NET Core Azure cloud Python Node.js Office/Sharepoint development Containers Desktop and mobile .NET Fundamentals Windows app development .NET desktop development with WPF .NET development with Windows Forms .NET Framework MAUI (.NET Multi-platform App UI) development Windows development with C++."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "Create an Incoming Webhook - Teams",
+        "url": "https://learn.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook",
+        "snippet": "Create Incoming Webhooks Summarize this article for me In this article Important Office 365 Connectors in Teams, including connector-based Incoming Webhooks, were retired in May 2026. Code sample Sample name Description .NET Node.js Incoming Webhook This sample demonstrates a Teams tab to send cards using a webhook URL. Update the sample to use."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Update Language Versions in Azure Functions",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-functions/update-language-versions",
+        "snippet": "When you're notified about a restart, select Continue. Use the following steps to update the Node.js version: In the Azure portal, locate and select your function app. On the side menu, select Settings > Configuration. Create a backup of your function app configuration be... Related content Java developer guide C# isolated worker process guide."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "Azure App Service documentation - Azure App Service",
+        "url": "https://learn.microsoft.com/en-us/azure/app-service/",
+        "snippet": "App Service documentation Use Azure App Service, a fully managed platform as a service (PaaS), to create web applications in popular languages like .NET, Java, Node.js, and Python. About App Service Overview Introduction to App Service App Service Builder overview (preview) Concept Azure App Service plans App Service Environments Compare Azure."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Quickstart: Create a Code App Using the Power Apps CLI - Power Apps",
+        "url": "https://learn.microsoft.com/en-us/power-apps/developer/code-apps/how-to/create-an-app-from-scratch",
+        "snippet": "Quickstart: Create a code app using the Power Apps CLI Summarize this article for me In this article This article shows you how to install the Power Apps CLI, create a blank app from a Vite template, run the app locally, and publish it to Power Apps. For a complete list ... Prerequisites A Power Platform environment with code apps enabled Node.js."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "Azure Vision documentation - Quickstarts, Tutorials, API Reference - Foundry Tools",
+        "url": "https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/",
+        "snippet": "Azure Vision in Foundry Tools documentation The cloud-based Azure Vision service provides developers with access to advanced algorithms for processing images and returning information. Reference Language suppo... C# Node.js Python Java REST APIs Optical character recognition (OCR) Image Analysis Face Resources Pricing Regions Learn Support Support."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "Set up your SharePoint Framework development environment",
+        "url": "https://learn.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment",
+        "snippet": "Note Before following the steps in this article, be sure to Set up your Microsoft 365 tenant. Important The following steps assume you're building solutions for SharePoint Online using SharePoint Framework 1.24.1. For other SPFx versions, check the compatibility reference before installing Node.js. Install Node.js Install the latest available."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "Azure for JavaScript and Node.js developers - JavaScript on Azure",
+        "url": "https://learn.microsoft.com/en-us/azure/developer/javascript/",
+        "snippet": "Azure for JavaScript developers Learn to use Azure with JavaScript.  ...AI for JavaScript developers Get started with Enterprise chat Use RAG with LangChain.js Use RAG with LlamaIndex Build a LangChain.js agent with Azure AI Search Add storage & data Get started with Azure Blob Storage Azure Cosmos DB for NoSQL Azure Cosmos DB for MongoDB Azure."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "Overview of the Microsoft Authentication Library (MSAL) - Microsoft identity platform",
+        "url": "https://learn.microsoft.com/en-us/entra/identity-platform/msal-overview",
+        "snippet": "Overview of the Microsoft Authentication Library (MSAL) Summarize this article for me In this article The Microsoft Authentication Library (MSAL) enables developers to acquire security tokens from the Microsoft identity platform to authenticate users and access secured web APIs.  ...s frameworks MSAL for iOS and macOS MSAL for iOS and macOS iOS."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Build Your First End-to-End Test with Playwright - Training",
+        "url": "https://learn.microsoft.com/en-us/training/modules/build-with-playwright/",
+        "snippet": "Build your first end-to-end test with Playwright Beginner Developer Microsoft Playwright Testing Visual Studio Code In this module, you'll learn how to use Playwright to test a sample web application. Add Prerequisites To get started with Playwright, you should have: Visual Studio Code installed Node.js installed in a version supported by."
+      }
+    ]
+  },
+  "Q08": {
+    "status": "ok",
+    "query": "container orchestration kubernetes",
+    "collected_at": "2026-11-26T14:42:43.394511+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=container+orchestration+kubernetes&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "AZ-104: Deploy and manage Azure compute resources - Training",
+        "url": "https://learn.microsoft.com/en-us/training/paths/az-104-manage-compute-resources/",
+        "snippet": "AZ-104: Deploy and manage Azure compute resources At a glance Level Beginner Skill &nbsp; Product Azure Azure CLI Azure Container Instances Azure Kubernetes Service (AKS) Azure Resource Manager Azure Virtual Machines Azure Virtual Machine Scale Sets Role Administrator Subject Cloud computing Learn how to deploy and configure virtual machines,."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "What is Azure Kubernetes Service (AKS)? - Azure Kubernetes Service",
+        "url": "https://learn.microsoft.com/en-us/azure/aks/what-is-aks",
+        "snippet": "What is Azure Kubernetes Service (AKS). Summarize this article for me In this article Azure Kubernetes Service (AKS) is a managed Kubernetes service for deploying and managing containerized applications. Storage volume support • Mount static or dynamic storage volumes fo... • Use Azure Container Storage for fully managed, cloud-based volume."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Microsoft Azure troubleshooting documentation",
+        "url": "https://learn.microsoft.com/en-us/troubleshoot/azure/",
+        "snippet": "...Balancer Hybrid connectivity services Troubleshooting articles for Azure VPN Gateway Troubleshooting articles for Azure ExpressRoute Network security services Troubleshooting articles for Azure Firewall Troubleshooting articles for Azure Web Application Firewall Cloud Services Troubleshooting articles for Cloud Services (classic)."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "Azure Arc",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-arc/",
+        "snippet": "Azure Arc documentation Simplify complex and distributed environ... Azure Kubernetes Service (AKS) enabled by Azure Arc Extend AKS to your on-premises environment. Azure Container Apps on Azure Arc Run Container Apps on Azure Arc-enabled Kubernetes clusters. Azure Container Storage enabled by Azure Arc A first-party storage system designed for."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Microsoft Azure container services documentation",
+        "url": "https://learn.microsoft.com/en-us/azure/containers/",
+        "snippet": "Container services documentation Learn how to use Azure container services to manage and develop cloud-based container applications. Concept A microservices approach to applications Concept Understanding Kubernetes Deploy Kubernetes on Azure What is Azure Kubernetes Service. Run your first Batch job with the Azure CLI Run a parallel workload with."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "Azure Speech Documentation - Tutorials, API Reference - Foundry Tools",
+        "url": "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/",
+        "snippet": "Get started with Voice Live models Get started with Voice Live and Foundry Agent Service Customize Voice Live Tools Speech MCP tool in Microsoft Foundry About Speech Studio About the Speech CLI Speech translation About speech translation Get started with speech translation Scenario deep dives Captioning with speech to text Call center overview."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "Choose an Azure Compute Service - Azure Architecture Center",
+        "url": "https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree",
+        "snippet": "A branching section for your own orchestration implementation on Virtual Machines includes Kubernetes on Virtual Machines and OpenShift on Virtual Machines. Azure Kubernetes Service (AKS) is a managed Kubernetes service for running containerized applications. Azure Container Instances is a service for running a single container or group ...."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "Prepare Windows operating system containers",
+        "url": "https://learn.microsoft.com/en-us/virtualization/windowscontainers/quick-start/set-up-environment",
+        "snippet": "Get started: Prep W... Support for the container runtime is included within the AKS and Azure Kubernetes Service on Azure Stack HCI services under your Azure subscription. Deploy a Windows Server container on an Azure Kubernetes Service (AKS) cluster using Azure CLI Set up an Azure Kubernetes Service host on Azure Local and Windows Server and."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "Durable Task documentation",
+        "url": "https://learn.microsoft.com/en-us/azure/durable-task/",
+        "snippet": "...sk Scheduler storage provider Durable Functions Serverless orchestrations hosted on Azure Functions Quickstart: Create a Durable Functions app (C#) Quickstart: Create a Durable Functions app (Python) Quickstart: Create a Durable Functions app (JavaScript) Storage providers See more Durable Task SDKs Portable SDKs for hosting durable workflows."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "About Windows containers",
+        "url": "https://learn.microsoft.com/en-us/virtualization/windowscontainers/about/",
+        "snippet": "Container orchestration Orchestrators are a critical piece of infrastructure when setting up a container-based environment.  ...cale Workload scheduling Health monitoring Failing over when a node fails Scaling up or down Networking Service discovery Coordinating app upgrades Cluster node affinity There are many different orchestrators that you can."
+      }
+    ]
+  },
+  "Q09": {
+    "status": "ok",
+    "query": "TLS certificate validation",
+    "collected_at": "2026-11-26T14:42:46.282669+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=TLS+certificate+validation&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Install a TLS/SSL Certificate for Your App - Azure App Service",
+        "url": "https://learn.microsoft.com/en-us/azure/app-service/configure-ssl-certificate",
+        "snippet": "Add and manage TLS/SSL certificates in Azure App Service Summarize this article for me In this article Important As of July 28, 2025, changes to App... When validation finishes, select Add. After the operation finishes, the certificate appears in the Managed certificates list. Under Certificate friendly name, give the certificate a name in your."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "Set Up Microsoft Entra CBA - Microsoft Entra ID",
+        "url": "https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-certificate-based-authentication",
+        "snippet": "If multiple matching certificates are located on the device, the user selects the relevant certificate, and the certificate is validated against the user account. If validation succeeds, the user signs in. Complete the steps described in this article to configure and use Microsoft Entra CBA for tenants in Office 365 Enterprise and US Government."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Extensible Authentication Protocol (EAP) for network access in Windows",
+        "url": "https://learn.microsoft.com/en-us/windows-server/networking/technologies/extensible-authentication-protocol/network-access",
+        "snippet": "EAP-Transport Layer Security (EAP-TLS): Standards-based EAP method that uses TLS with certificates for mutual authentication. Appears as Smart Card or other Certificate (EAP-TLS) in Windows. The TLS tunnel secure... EAP-Tunneled Transport Layer Security (EAP-TTLS): This is described by RFC 5281, encapsulates a TLS session that performs mutual."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "Untrusted Certificate Authority Error When You Connect to SQL Server - SQL Server",
+        "url": "https://learn.microsoft.com/en-us/troubleshoot/sql/database-engine/connect/error-message-when-you-connect",
+        "snippet": "The error means that the client can't validate the certificate that the SQL Server instance presents during the TLS handshake, usually because the issuing certificate authority (CA) isn't in the client's Trusted Root Certification Authorities store, or because SQL Server uses a self-signed certificate. You resolve the error by installing the."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Certificate Requirements for SQL Server - SQL Server",
+        "url": "https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/certificate-requirements",
+        "snippet": "Certificate requirements for SQL Server encryption For using Transport Layer Security (TLS) for SQL Server encryption, you need to provision a certificate (one of the three digital types) that meets the... Connections that skip validation, such as connections that set TrustServerCertificate=true, continue to work. Strict encryption ignores."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "Quickstart: Set up Artifact Signing",
+        "url": "https://learn.microsoft.com/en-us/azure/artifact-signing/quickstart",
+        "snippet": "Quickstart: Set up Artifact Signing Summarize this article for me In this article Artifact Signing is a Microsoft fully managed, end-to-end certificate signing service. In this quickstart, you create the following three Artifact Signing resources to begin using Artifact Signing: An Artifact Signing account An identity validation A certificate."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "Manage App Service Certificates - Azure App Service",
+        "url": "https://learn.microsoft.com/en-us/azure/app-service/configure-ssl-app-service-certificate",
+        "snippet": "Buy and manage App Service certificates Summarize this article for me In this article Important As of July 28, 2025, changes to App Service Managed Certificates (ASMC) impact how certificates are issued and renewed in certain scenarios. A... Related content Enable HTTPS for a custom domain in Azure App Service Enforce HTTPS Enforce TLS 1.2 Use."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "Transport Layer Security (TLS) registry settings",
+        "url": "https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings",
+        "snippet": "The registry subkeys and entries covered in this article help you administer and troubleshoot the Schannel SSP, specifically the TLS and SSL protocols. Caution This information is provided as a reference to use when you're troubleshooting or verifying that the required settings are applied. Modifications to the registry aren't validated by the."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "Set Up an Existing Custom Domain Name for Your App - Azure App Service",
+        "url": "https://learn.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-custom-domain",
+        "snippet": "Set up an existing custom domain in Azure App Service Summarize this article for me In this article Important As of July 28, 2025, changes to App Service Managed Certificates (ASMC) impact how certificates are issued and renewed in certain scenarios. While most customers don’t need to take action, we recommend reviewing our ASMC detailed blog post."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Azure Certificate Authority details",
+        "url": "https://learn.microsoft.com/en-us/azure/security/fundamentals/azure-certificate-authority-details",
+        "snippet": "...G2 https://cacerts.digicert.com/DigiCertBasicRSACNCAG2.crt 0x02f7e1f982bad009aff47dc95741b2f64D1FA5D1FB1AC3917C08E43F65015E6AEA571179 DigiCert Cloud Services CA-1 https://cacerts.digicert.com/DigiCertCloudServicesCA-1.crt 0x019ec1c6bd3f597bb20c3338e551d87781B68D6CD2F221F8F534E677523BB236BBA1DC56 DigiCert Global G2 TLS RSA SHA256 2020 CA1."
+      }
+    ]
+  },
+  "Q10": {
+    "status": "ok",
+    "query": "PowerShell remoting SSH",
+    "collected_at": "2026-11-26T14:42:49.693825+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=PowerShell+remoting+SSH&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "What is PowerShell? - PowerShell",
+        "url": "https://learn.microsoft.com/en-us/powershell/scripting/overview",
+        "snippet": "Summarize this article for me In this article PowerShell is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management framework. Install PowerShell Discover PowerShell PowerShell 101 Microsoft Virtual Academy videos PowerShell Learn modules PowerShell in action Take a look...."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "Differences between Windows PowerShell 5.1 and PowerShell 7.x - PowerShell",
+        "url": "https://learn.microsoft.com/en-us/powershell/scripting/whats-new/differences-from-windows-powershell",
+        "snippet": "Differences between Windows PowerShell 5.1 and PowerShell 7.x Summarize this article for me In this article Windows PowerShell 5.1 is built on top of the .NET Framework v4.5. PowerShell also supports remoting over SSH on all platforms (Windows, macOS, and Linux). For more information, see SSH remoting in PowerShell. PowerShell Direct for."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Key-Based Authentication in OpenSSH for Windows",
+        "url": "https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement",
+        "snippet": "Key-based authentication in OpenSSH for Windows Summarize this article for me In this article Most authentication in Windows environments is done with a username/password pair, which works well for systems that share a common domain. This document provides an overview of how to use these tools on Windows to begin using key-based authentication."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "Running Remote Commands - PowerShell",
+        "url": "https://learn.microsoft.com/en-us/powershell/scripting/security/remoting/running-remote-commands",
+        "snippet": "Running Remote Commands Summarize this article for me In this article You can run commands on one or hundreds of... PowerShell supports WMI, WS-Management, and SSH remoting. For more information about remoting in PowerShell, see the following articles: SSH Remoting in PowerShell WSMan Remoting in PowerShell Windows PowerShell remoting without."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Connect to Remote Desktop Services in Windows Server",
+        "url": "https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/connect-remote-desktop-services",
+        "snippet": "Connect to Remote Desktop Services in Windows Server Summarize this article for me In this article You can connect to remote desktops and apps running in Remote Desktop Services using Windows App or the Remote Desktop client. Windows App and the Remote Desktop client are available on many different types of devices on different platforms and form."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "Set up Remote Desktop web client for users",
+        "url": "https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/remote-desktop-web-client-admin",
+        "snippet": "If you used the web client during the preview period and installed version 1.0.0 or earlier, you must first uninstall the old client before moving to the new version. If you receive an error that says \"The web client was installed using an older version of RDWebClientManagement and must first be removed before deploying the new version\", follow."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "OpenSSH Server Configuration for Windows",
+        "url": "https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh-server-configuration",
+        "snippet": "OpenSSH Server configuration for Windows Server and Windows Summarize this article for me In this article This article covers the Windows-specific configuration for OpenSSH Server (sshd). OpenSSH maintains detailed documentation for configuration options online at OpenSSH.com. This documentation isn't duplicated in this documentation set. The."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "Change Remote Desktop listening port on Windows and Windows Server",
+        "url": "https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/remotepc/change-listening-port",
+        "snippet": "Change the Remote Desktop listening port on your computer Summarize this article for me In this article Remote Desktop allows remote connections to computers running Windows or Windows Server over the Remote Desktop Protocol (RDP), listening on port 3389 by default. This article provides step-by-step instructions to modify the listening port using."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "Remote Desktop Can't Connect to the Remote Computer - Windows Server",
+        "url": "https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/remote-desktop-cannot-connect-remote-computer",
+        "snippet": "Open wf.msc, sel... Make sure that they're enabled to all profiles. You can get the same result with the following PowerShell cmdlet on an elevated session: To rule out the firewall, it can be disabled with the PowerShell cmdlet: If other network elements are restricting traffic, they should be checked. When using Azure Cloud, check if the Network."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Windows Terminal SSH",
+        "url": "https://learn.microsoft.com/en-us/windows/terminal/tutorials/ssh",
+        "snippet": "Tutorial: SSH in Windows Terminal Summarize this article for me In this article Windows has a built-in SSH client and SSH server that you can use in Windows Terminal. In t... Access Windows SSH Client and SSH Server The latest builds of Windows 10 and Windows 11 include a built-in SSH server and client that are based on OpenSSH, a connectivity."
+      }
+    ]
+  },
+  "Q11": {
+    "status": "ok",
+    "query": "Azure virtual network peering",
+    "collected_at": "2026-11-26T14:42:52.457130+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=Azure+virtual+network+peering&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Azure Virtual Network Peering",
+        "url": "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview",
+        "snippet": "What you learn in this article: How virtual network peering works and its key benefits Different types of peering (local and global) How to implement connectivity and service chaining How to disable peering route propagation to steer traffic through a network virtual appliance Troubleshooting common peering issues Whether you're designing a."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "Hub-Spoke Network Topology in Azure - Azure Architecture Center",
+        "url": "https://learn.microsoft.com/en-us/azure/architecture/networking/architecture/hub-spoke",
+        "snippet": "Hub-spoke network topology in Azure In this article Azure Bastion Azure Firewall Azure Network Watcher Azure Virtual Network Azure VPN Gateway This reference architecture implements a hub-spoke network pattern with customer-managed hub infrastructure components. Components Azure Virtual Network is the fundamental building blo... To use virtual."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Azure virtual network traffic routing",
+        "url": "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview",
+        "snippet": "...network peering All Virtual network gateway Prefixes advertised from on-premises via Border Gateway Protocol (BGP) or configured in the local network gateway Virtual network gateway All Default Multiple VirtualNetworkServiceEndpoint Only the subnet for which a service endpoint is enabled Virtual network peering: When you create a virtual."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "AZ-700 Design and Implement Microsoft Azure Network Solutions - Training",
+        "url": "https://learn.microsoft.com/en-us/training/paths/design-implement-microsoft-azure-networking-solutions-az-700/",
+        "snippet": "AZ-700 Design and Implement Microsoft Azure Network Solutions At a glance Level Intermediate Skill &nbsp; Product Azure Application Gateway Azure DNS Azure ExpressRoute Azure Firewall Azure Firewall Manager Azure Front Door Azure Load Balancer Azure Network Watcher Azure Private Link Azure Traffic Manager Azure Virtual Network Azure Virtual WAN."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Microsoft Azure Virtual Network support - Power Platform",
+        "url": "https://learn.microsoft.com/en-us/power-platform/admin/vnet-support-overview",
+        "snippet": "Microsoft Azure VNet support overview Summarize this article for me In this article Note The Power Platform Virtual Network community on Microsoft Viva Engage is available. A virtual net... If the virtual network is in a different region, create a virtual network in the Power Platform environment's region and use VNet peering on both Azure."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "Azure virtual network service endpoints",
+        "url": "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview",
+        "snippet": "Azure virtual network service endpoints Summarize this article for me In this article Azure virtual network service endpoints provide secure and direct connectivity to Azure services over an optimized route through the Azure backbone network. Scenarios Peered, connected, or multiple virtual networks: To secure Azure services to multiple subnets."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "Integrate your app with an Azure virtual network - Azure App Service",
+        "url": "https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration",
+        "snippet": "Integrate your app with an Azure virtual network Summarize this article for me In this article This article describes the Azure App Service virtual network integration feature and how to set it up with apps in App Service. Resources in virtual networks peered to the virtual network your app is integrated with including global peering connections.."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "Required FQDNs and endpoints for Azure Virtual Desktop - Azure Virtual Desktop",
+        "url": "https://learn.microsoft.com/en-us/azure/virtual-desktop/required-fqdn-endpoint",
+        "snippet": "Required FQDNs and endpoints for Azure Virtual Desktop Summarize this article for me In this article In order to deploy Azure Virtual Desktop and for your users to connect, you must allow specific FQDNs and endpoints. Users also need to be able to connect to certain FQDNs and endpoints to access their Azure Virtual Desktop resources. These FQDNs."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "Firewall rules and network access for Azure Blob, Data Lake, Queue, and Table Storage",
+        "url": "https://learn.microsoft.com/en-us/azure/storage/common/storage-network-security",
+        "snippet": "You can configure four types of network rules: Virtual network rules: Allow traffic from specific subnets within Azure Virtual Networks IP network rules: Allow traffic from specific public IP address ranges Resource instance rules: Allow traffic from specific Azure r... Access from a paired region Configuring service endpoints between virtual."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Azure Virtual WAN Overview",
+        "url": "https://learn.microsoft.com/en-us/azure/virtual-wan/virtual-wan-about",
+        "snippet": "Summarize this article for me In this article Azure Virtual WAN is a networking service that brings ... Global VNet peering Global VNet Peering provides a mechanism to connect two VNets in different regions. In Virtual WAN, virtual network connections connect VNets to virtual hubs. The user doesn't need to set up global VNet peering explicitly.."
+      }
+    ]
+  },
+  "Q12": {
+    "status": "ok",
+    "query": "Microsoft Graph OAuth permissions",
+    "collected_at": "2026-11-26T14:42:55.532753+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=Microsoft+Graph+OAuth+permissions&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "OAuth 2.0 client credentials flow on the Microsoft identity platform - Microsoft identity platform",
+        "url": "https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-client-creds-grant-flow",
+        "snippet": "For example, Microsoft Graph exposes several application permissions to do the following: Read mail in all mailboxes Read and write mail in all mailboxes Send mail as any user Read directory data To use app roles (application permissions) with your own API (as opposed to Microsoft Graph), you must first expose the app roles in the API's app."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "Microsoft identity platform and OAuth2.0 On-Behalf-Of flow - Microsoft identity platform",
+        "url": "https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-on-behalf-of-flow",
+        "snippet": "Microsoft identity platform and OAuth 2.0 On-Behalf-Of flow Summarize this article for me In this article The on-behalf-of (OBO) flow describes the s... The Microsoft Graph is set up to accept v1.0 tokens, so the Microsoft identity platform produces v1.0 access tokens when a client requests tokens for Microsoft Graph. All required permissions."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Scopes and permissions in the Microsoft identity platform - Microsoft identity platform",
+        "url": "https://learn.microsoft.com/en-us/entra/identity-platform/scopes-oidc",
+        "snippet": "The following list shows some examples of Microsoft web-hosted resources: Microsoft Graph: https://graph.microsoft.com Microsoft 365 Mail API: https://outlook.office.com Azure Key Vault: https://vault.azure.net T... As an example, Microsoft Graph defines permissions to do the following tasks, among others: Read a user's calendar Write to a user's."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "Overview of permissions and consent in the Microsoft identity platform - Microsoft identity platform",
+        "url": "https://learn.microsoft.com/en-us/entra/identity-platform/permissions-consent-overview",
+        "snippet": "...n Access context Get access on behalf of a user Get access without a user Who can consent - Users can consent for their data  - Admins can consent for all users Only admin can consent Consent methods - Static: configured list on app registration  - Dynamic: request individual permissions at sign-in - Static ONLY: configured list on app."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Install the Microsoft Graph PowerShell SDK",
+        "url": "https://learn.microsoft.com/en-us/powershell/microsoftgraph/installation",
+        "snippet": "Install the Microsoft Graph PowerShell SDK Summarize this article for me In this article The Microsoft Graph PowerShell SDK is published on the PowerShell Gallery. In this article, you'll learn how to install the Microsoft Graph PowerShell SDK using PowerShellGet. Prerequisites PowerShell 7 and later is the recommended PowerShell version for use."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "Microsoft Graph documentation",
+        "url": "https://learn.microsoft.com/en-us/graph/",
+        "snippet": "Microsoft Graph documentation Microsoft Graph is the gateway to data and intelligence in Microsoft 365. Use Microsoft Graph to build intelligent apps, derive insights and analytics, and exte... Overview What is Microsoft Graph. Reference Microsoft Graph REST API What's new Microsoft MCP Server for IT Admins What's new API Changelog Services and."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "OneDrive File Picker - OneDrive dev center",
+        "url": "https://learn.microsoft.com/en-us/onedrive/developer/controls/file-pickers/",
+        "snippet": "You can follow these steps: Create a new AAD App Registration, note the ID of the application Under authentication, create a new Single-page application registry Set the redirect uri to https://localhost (this is for testing the samples) Ensure both Access tokens and ID tokens are checked You may optionally configure this application for."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "Authentication and authorization basics - Microsoft Graph",
+        "url": "https://learn.microsoft.com/en-us/graph/auth/auth-concepts",
+        "snippet": "Authentication and authorization basics Summarize this article for me In this article Microsoft Graph is a protected API gateway for accessing data in Microsoft cloud services like Microsoft Entra ID and Microsoft 365. Server middleware from Microsoft is available for .NET core and ASP.NET (OWIN OpenID Connect and OAuth) and for Node.js (Microsoft."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "Configure How Users Consent to Applications - Microsoft Entra ID",
+        "url": "https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent",
+        "snippet": "Configure how users consent to applications Summarize this article for me In this article In this article, you learn how to configure user consent settings in Microsoft Entra ID to control when and how users grant permissions to applications. Configure user consent settings You can configure user consent settings in Microsoft Entra ID using either."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Get started with Microsoft MCP Server for IT Admins - Microsoft Graph",
+        "url": "https://learn.microsoft.com/en-us/graph/mcp-server/get-started",
+        "snippet": "Get started with Microsoft MCP Server for IT Admins Summarize this article for me In this article To use Microsoft MCP Server for IT Admins, register an app for your MCP client in your Microsoft Entra tenant, grant it Microsoft Graph delegated permissions, and configure the client with the server URL and the app's client ID. This article describes."
+      }
+    ]
+  },
+  "Q13": {
+    "status": "ok",
+    "query": "transformer attention mechanism",
+    "collected_at": "2026-11-26T14:42:58.127166+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=transformer+attention+mechanism&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Introduction to computer vision concepts - Training",
+        "url": "https://learn.microsoft.com/en-us/training/modules/introduction-computer-vision/",
+        "snippet": "...ll be able to: Identify different types of computer vision tasks Describe how filters are used in image analysis Describe the main features of a convolutional neural network (CNN) Describe the main features of a vision transformer (ViT) Describe how generative AI can be used to create images Add Prerequisites A basic understanding of machine."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "Hand off conversations to ServiceNow - Microsoft Copilot Studio",
+        "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/customer-copilot-servicenow",
+        "snippet": "Hand off conversations to ServiceNow Summarize this article for me In this article Note This article describes features used in agents or agent flows powered by the standard harness. Connect ServiceNow Virtual Agent to a Copilot Studio agent and configure handoff to a human agent in ServiceNow. The integration uses an Azure Function to relay."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "azureml.training.tabular.featurization.text.bilstm_attention_transformer module - Azure Machine Learning Python",
+        "url": "https://learn.microsoft.com/en-us/python/api/azureml-training-tabular/azureml.training.tabular.featurization.text.bilstm_attention_transformer",
+        "snippet": "bilstm_attention_transformer Module Bi-LSTM with Attention transformer Classes BiLSTMAttentionTransformer Starts with pretrained word embeddings, trains BiLSTM, creates embeddings tuned to data. Initiates BiLSTM transformer Feedback Was this page helpful. Yes No Need help with this topic. Want to try using Ask Learn to clarify or guide you ...."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "azureml.automl.runtime.featurizer.transformer.text.bilstm_attention_transformer module - Azure Machine Learning Python",
+        "url": "https://learn.microsoft.com/en-us/python/api/azureml-automl-runtime/azureml.automl.runtime.featurizer.transformer.text.bilstm_attention_transformer",
+        "snippet": "bilstm_attention_transformer Module Bi-LSTM with Attention transformer Feedback Was this page helpful. Yes No Need help with this topic. Want to try using Ask Learn to clarify or guide you through this topic. Suggest a fix. Bi-LSTM with Attention transformer .."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Customize OpenAPI documents",
+        "url": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/openapi/customize-openapi",
+        "snippet": "Customize OpenAPI documents Summarize this article for me In this article OpenAPI document transformers Transformers provide an API for modifying the OpenAPI document with user-defined customizations. Transformers are useful for scenarios like: Adding parameters to all operations in a document. Transformers fall into three categories: Document."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "azureml.automl.runtime.featurizer.transformer.text package - Azure Machine Learning Python",
+        "url": "https://learn.microsoft.com/en-us/python/api/azureml-automl-runtime/azureml.automl.runtime.featurizer.transformer.text",
+        "snippet": "Modules automl_pytorch_transformers bagofwords_transformer Generic bag of words transformer. bilstm_attention_transformer Bi-LSTM with Attention transformer constants Constants for various tranformers. modeling_bert_no_apex pytorch-transformers BERT model code without apex dependency removed for stability. naive_bayes Wrapper for sklearn."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "azureml.training.tabular.featurization.text package - Azure Machine Learning Python",
+        "url": "https://learn.microsoft.com/en-us/python/api/azureml-training-tabular/azureml.training.tabular.featurization.text",
+        "snippet": "Modules bagofwords_transformer Generic bag of words transformer. bilstm_attention_transformer Bi-LSTM with Attention transformer naive_bayes Wrapper for sklearn Multinomial Naive Bayes. pretrained_text_dnn_transformer BERT-esque finetuning+Transformer stats_transformer Generate dense text statistics. string_concat_transformer Transformer that."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "azureml.automl.core.shared.constants.Transformers class - Azure Machine Learning Python",
+        "url": "https://learn.microsoft.com/en-us/python/api/azureml-automl-core/azureml.automl.core.shared.constants.transformers",
+        "snippet": "Transformers Class Defines transformers used for data processing. Constructor Attributes ALL TIMESERIES_TRANSFORMER X_TRANSFORMER Y_TRANSFORMER Feedback Was this page helpful. Yes No Need help with this topic. Want to try using Ask Learn to clarify or guide you through this topic. Suggest a fix. Defines transformers used for data processing. .."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "Understand the Transformer architecture and explore large language models in Azure Machine Learning - Training",
+        "url": "https://learn.microsoft.com/en-us/training/modules/explore-foundation-models-in-model-catalog/",
+        "snippet": "Understand the Transformer architecture and explore large language models in Azure Machine Learning Intermediate Data Scientist Azure Machine Learning Learn about the history of natural language processing (NLP), including how the Transformer architecture revolutionized the field and helped us create large language models (LLMs).  ...techniques."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "SsaForecastingBaseWrapper Class (Microsoft.ML.Transforms.TimeSeries)",
+        "url": "https://learn.microsoft.com/en-us/dotnet/api/microsoft.ml.transforms.timeseries.ssaforecastingbasewrapper",
+        "snippet": "SsaForecastingBaseWrapper Class Definition Namespace: Microsoft.ML.Transforms.TimeSeries Assembly:Microsoft.ML.TimeSeries.dll Package:Microsoft.ML.TimeSeries v4.0.1 Package:Microsoft.ML.TimeSeries v1.2.0 Package:Microsoft.ML.TimeSeries v1.3.1 Package:Microsoft.ML.TimeSeries v1.4.0 Package:Microsoft.ML.TimeSeries v1.5.5."
+      }
+    ]
+  },
+  "Q14": {
+    "status": "ok",
+    "query": "retrieval augmented generation",
+    "collected_at": "2026-11-26T14:43:00.810409+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=retrieval+augmented+generation&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Introduction to retrieval-augmented generation concepts - Training",
+        "url": "https://learn.microsoft.com/en-us/training/modules/rag-fundamentals/",
+        "snippet": "Introduction to retrieval-augmented generation concepts Beginner AI Engineer Developer Solution Architect Student Microsoft Foundry Retrieval-augmented gen... In this module, you'll explore how a RAG solution prepares, retrieves, and uses data to generate answers. Learning objectives By the end of this module, you'll be able to: Explain the."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "Exam AI-500: Designing and Implementing Multi-Agent AI Solutions - Certifications",
+        "url": "https://learn.microsoft.com/en-us/credentials/certifications/exams/ai-500/",
+        "snippet": "Exams Exam AI-500: Designing and Implementing Multi-Agent AI Solutions As a candidate for this exam, you’re an expert-level practitioner who has subject matter expertise in designing, building, and optimizing scalable, production‑ready, multi-agent AI systems and workflows. You should be familiar with open-source frameworks and standards,."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Azure Content Understanding documentation",
+        "url": "https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/",
+        "snippet": "...y Content Understanding Studio Content Understanding Studio Try out Content Understanding Studio CU Studio and Microsoft Foundry Analyzers REST API and SDKs CLI Prebuilt analyzers Create a custom analyzer Classification Overview Modalities Document Image Audio Video Tutorials Create a custom analyzer with Content Understanding Studio Create a."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "Study guide for Exam AI-200: Developing AI Cloud Solutions on Azure",
+        "url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-200",
+        "snippet": "...tabase for PostgreSQL Connect and query Azure Database for PostgreSQL by using SDKs Model schemas and implement indexing strategies, including designing tables and choosing appropriate data types Implement indexing strategies, including optimizing query latency and reducing pgvector compute overhead Configure compute, memory, and storage."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Design and Develop a RAG Solution on Azure - Azure Architecture Center",
+        "url": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide",
+        "snippet": "Design and develop a RAG solution Summarize this article for me In this article The retrieval-augmented generation (RAG) pattern is an industry-standard approach to building applications that use language models to process specific or proprietary data that the model doesn't already know. Principal authors: Harsha Vardhan Annapureddy | Senior Data."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "Retrieval augmented generation (RAG) and indexes in Microsoft Foundry - Microsoft Foundry",
+        "url": "https://learn.microsoft.com/en-us/azure/foundry/concepts/retrieval-augmented-generation",
+        "snippet": "Retrieval augmented ... This article explains how RAG works in Microsoft Foundry, what role indexes play, and how agentic retrieval changes classic RAG patterns. If you need answers based on your private data, or on frequently changing information, RAG helps you: Retrieve relevant information from your data (often through an index). The model can."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "Retrieval Augmented Generation (RAG) and Vector Databases (Part 15 of 18)",
+        "url": "https://learn.microsoft.com/en-us/shows/generative-ai-for-beginners/retrieval-augmented-generation-rag-and-vector-databases-generative-ai-for-beginners",
+        "snippet": "Episode Retrieval Augmented Generation (RAG) and Vector Databases (Part 15 of 18) | Generative AI for Beginners with Bethany Jepchumba Generative AI for Beginners In the search applications lesson, we briefly learned how to integrate your own data into Large Language Models (LLMs). In this lesson, we will delve further into the concepts of."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "AI fluency: Boost your productivity with Microsoft Copilot - Training",
+        "url": "https://learn.microsoft.com/en-us/training/modules/boost-productivity-with-copilot/",
+        "snippet": "Boost your productivity with Microsoft Copilot Beginner Developer Student AI Engineer Technology Manager Solution Architect Microsoft Copilot This module provides an in-depth look at how Microsoft Copilot can enhance your productivity. Evaluate the effectiveness of the retrieval-augmented generation method of Copilot in providing relevant and."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "Azure Arc",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-arc/",
+        "snippet": "Azure Arc documentation Simplify complex and distributed environments across on-premises, edge, and multicloud. Overview About Azure Arc sample Azure Arc Jumpstart Overview Azure Arc-enabled servers Overview Azure Arc-enabl... Agentic Retrieval in Foundry Local Search on-premises data with generative AI using an agentic Retrieval-Augmented."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Microsoft 365 Copilot Retrieval API Overview",
+        "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/api/ai-services/retrieval/overview",
+        "snippet": "Overview of the Microsoft 365 Copilot Retrieval API Summarize this article for me In this article The Microsoft 365 Copilot APIs provide access to components that power Copilot experiences, unlocking the ability to enhance your custom engine agents and generative AI solutions with Microsoft 365 Copilot capabilities. The Microso... The Retrieval."
+      }
+    ]
+  },
+  "Q15": {
+    "status": "ok",
+    "query": "graph neural networks",
+    "collected_at": "2026-11-26T14:43:03.619239+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=graph+neural+networks&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Microsoft Graph documentation",
+        "url": "https://learn.microsoft.com/en-us/graph/",
+        "snippet": "Microsoft Graph documentation Microsoft Graph is the gateway to data and intelligence in Microsoft 365. Use Microsoft Graph to build intelligent apps, derive insights and analytics, and extend Microsoft 365 experiences. Overview What is Microsoft Graph. SDKs and tools SDKs Graph Explorer Microsoft Graph ... Microsoft Graph is the gateway to data."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "Install the Microsoft Graph PowerShell SDK",
+        "url": "https://learn.microsoft.com/en-us/powershell/microsoftgraph/installation",
+        "snippet": "Install the Microsoft Graph PowerShell SDK Summarize this article for me In this article The Microsoft Graph PowerShell SDK is published on the PowerShell Gallery. In this article, you'll learn how to install the Microsoft Graph PowerShell SDK using PowerShellGet. Prerequisites PowerShell 7 and later is the recommended PowerShell version for use."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Windows Documentation",
+        "url": "https://learn.microsoft.com/en-us/windows/",
+        "snippet": "Windows technical documentation for developers and IT pros. Information for Windows application developers, hardware developers, and IT pros. Application developers Design, develop, and deploy applications and other solutions for Windows PCs and other devices. Windows Server for IT pros Build and deploy connected applications, networks, and web."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "Introduction to computer vision concepts - Training",
+        "url": "https://learn.microsoft.com/en-us/training/modules/introduction-computer-vision/",
+        "snippet": "...ting this module, you will be able to: Identify different types of computer vision tasks Describe how filters are used in image analysis Describe the main features of a convolutional neural network (CNN) Describe the main features of a vision transformer (ViT) Describe how generative AI can be used to create images Add Prerequisites A basic."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Microsoft Graph REST API v1.0 endpoint reference - Microsoft Graph v1.0",
+        "url": "https://learn.microsoft.com/en-us/graph/api/overview",
+        "snippet": "Microsoft Graph REST API v1.0 endpoint reference Summarize this article for me In this article Welcome to Microsoft Graph REST API reference for the v1.0 endpoint. API sets on the v1.0 endpoint (https://graph.microsoft.com/v1.0) have reached general availability (GA), and have gone through a rigorous review-and-feedback process with customers to."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "Use Graph Explorer to try Microsoft Graph APIs - Microsoft Graph",
+        "url": "https://learn.microsoft.com/en-us/graph/graph-explorer/graph-explorer-overview",
+        "snippet": "Use Graph Explorer to try Microsoft Graph APIs Summarize this article for me In this article Graph Explorer is a developer tool for exploring Microsoft Graph APIs. Use it to: Test APIs on a sample tenant and explore available resources. Sign in to your own tenant for prototyping app scenarios. Learn about the permissions required for different."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "Authentication and authorization basics - Microsoft Graph",
+        "url": "https://learn.microsoft.com/en-us/graph/auth/auth-concepts",
+        "snippet": "Authentication and authorization basics Summarize this article for me In this article Microsoft Graph is a protected API gateway for accessing data in Microsoft cloud services like Microsoft Entra ID and Microsoft 365. It's protected by the Microsoft identity platform, which authorizes and verifies that an app is authorized to call Microsoft."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "AZ-700 Design and Implement Microsoft Azure Network Solutions - Training",
+        "url": "https://learn.microsoft.com/en-us/training/paths/design-implement-microsoft-azure-networking-solutions-az-700/",
+        "snippet": "AZ-700 Design and Implement Microsoft Azure Network Solutions At a glance Level Intermediate Skill &nbsp; Product Azure Application Gateway Azure DNS Azure ExpressRoute Azure Firewall Azure Firewall Manager Azure Front Door Azure Load Balancer Azure Network Watcher Azure Private Link Azure Traffic Manager Azure Virtual Network Azure Virtual WAN."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "Configure Virtual Networks for Foundry Tools - Foundry Tools",
+        "url": "https://learn.microsoft.com/en-us/azure/ai-services/cognitive-services-virtual-networks",
+        "snippet": "Configure Foundry Tools virtual networks Summarize this article for me In this article Foundry Tools provide a layered security model. This model... Anomaly Detector Azure OpenAI Content Moderator Content Understanding Custom Vision Document Intelligence Face Language Understanding (LUIS) Personalizer Speech service Language QnA Maker Translator."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "A guide to artificial intelligence - Training",
+        "url": "https://learn.microsoft.com/en-us/training/modules/a-guide-to-artificial-intelligence/",
+        "snippet": "A guide to artificial intelligence Beginner K-12 Educator Higher Education Educator Business User Data Engineer School Leader Foundry Tools Azure Machine Learning Azure Machine Learning designer Microsoft 365 Apps This module explores fundamental concepts in artificial intelligence (AI) and machine learning. Assess the effectiveness of neural."
+      }
+    ]
+  },
+  "Q16": {
+    "status": "ok",
+    "query": "differential privacy machine learning",
+    "collected_at": "2026-11-26T14:43:06.336674+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=differential+privacy+machine+learning&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": ".NET documentation - .NET",
+        "url": "https://learn.microsoft.com/en-us/dotnet/",
+        "snippet": "...itecture for containerized .NET apps Deploy a Worker Service to Azure Cloud Azure for .NET developers Aspire Migrate on-premises .NET web apps or services Azure services for .NET developers Azure SDK for .NET Deploying Azure Resources with F# AI and machine learning AI for .NET developers Build a chat app Understand prompt engineering Implement."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "Microsoft Fabric documentation - Microsoft Fabric",
+        "url": "https://learn.microsoft.com/en-us/fabric/",
+        "snippet": "Microsoft Fabric documentation Microsoft Fabric is a unified platform that can meet your organization's data and analytics needs. Discover the capabilities Fabric has to offer, understand how it works, and how to use it. Overview What is Microsoft Fabric. Get started Try Fabric for free Tutorial Develop with end-to-end tutorials Overview Security."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Know Where to Leverage AI in your Classroom - Training",
+        "url": "https://learn.microsoft.com/en-us/training/modules/know-where-leverage-ai-classroom/",
+        "snippet": "Know where to leverage AI in your classroom Beginner K-12 Educator School Leader Higher Education Educator Microsoft 365 Education Build accurate mental models of AI by clarifying what AI can and can't do, and by separating AI outputs from human judgment in educator decisions. Plan integrity norms, including verification, privacy, and."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "AI Fluency: Explore AI basics - Training",
+        "url": "https://learn.microsoft.com/en-us/training/modules/explore-ai-basics/",
+        "snippet": "Explore AI basics Beginner Developer Student AI Engineer Technology Manager Solution Architect Azure Discover the world of artificial intelligence by exploring its foundational concepts and history. Learning objectives By completing this module, you'll be able to: Evaluate the concepts of AI, machine learning, and deep learning by comparing their."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Azure Databricks documentation",
+        "url": "https://learn.microsoft.com/en-us/azure/databricks/",
+        "snippet": "Azure Databricks documentation Learn Azure Databricks, a unified analytics platform for data analysts, data engineers, data scientists, and machine learning engineers.  ...s Get started tutorials Workspace UI Data guides Data management Concept Data engineering OLTP databases (Lakebase) Data warehousing AI & analytics Concept AI and machine."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "Operationalize machine learning models (MLOps) - Training",
+        "url": "https://learn.microsoft.com/en-us/training/paths/build-first-machine-operations-workflow/",
+        "snippet": "Operationalize machine learning models (MLOps) At a glance Level Intermediate Skill &nbsp; Product Azure Machine Learning GitHub Role Data Scientist Subject Artificial intelligence Machine learning Follow an end-to-end MLOps workflow across two stages. Prerequisites Programming experience with Python or R Experience developing and training machine."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "Responsible use of artificial intelligence in education - Training",
+        "url": "https://learn.microsoft.com/en-us/training/paths/responsible-use-of-artificial-intelligence-in-education/",
+        "snippet": "You'll gain a foundational understanding of Microsoft’s approach to AI, which prioritizes fairness, reliability & safety, privacy & security, inclusiveness, transparency, accountability, and practical usage. In this learning path, you'll embark on an insightful exploration of Microsoft’s Responsible AI framework, learning how to apply ethical."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "Create machine learning models - Training",
+        "url": "https://learn.microsoft.com/en-us/training/paths/create-machine-learn-models/",
+        "snippet": "Create machine learning models At a glance Level Intermediate Skill &nbsp; Product Azure Machine Learning Role AI Engineer Data Scientist Developer Student Subject Machine learning Machine learning is the foundation for predictive modeling and artificial intelligence. Learn some of the core principles of machine learning and how to use common."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "Renewal for  Microsoft Certified: Azure Administrator Associate  - Certifications",
+        "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/renew/",
+        "snippet": "Certifications Renewal for  Microsoft Certified: Azure Administrator Associate Skills measured in renewal assessment: Host a web application with Azure App Service Build a containerized web application with Docker Secure your Azure Storage account Secure and isolate access to Azure resources by using network security groups and service endpoints."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Study guide for Exam AI-900: Microsoft Azure AI Fundamentals",
+        "url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-900",
+        "snippet": "Study guide for Exam AI-900: Microsoft Azure AI Fundamentals Summarize this article for me In this article Warning This exam was retired on June 30, 2026, at 11:59 PM Central Standard Time.  ...ge processing workloads Identify document processing workloads Identify features of generative AI workloads Identify guiding principles for responsible AI."
+      }
+    ]
+  },
+  "Q17": {
+    "status": "ok",
+    "query": "federated learning data privacy",
+    "collected_at": "2026-11-26T14:43:09.159097+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=federated+learning+data+privacy&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Windows client documentation",
+        "url": "https://learn.microsoft.com/en-us/windows/resources/",
+        "snippet": "Configuration Service Provider (CSP) policies See more Configure Windows Accessibility information Customize the Start layout Kiosks and restricted user experiences See more Windows for Education Configure federated sign-in for Windows devices Get and deploy Minecraft Education Windows 11 SE See more More Windows resources Windows hardware."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "Microsoft Fabric documentation - Microsoft Fabric",
+        "url": "https://learn.microsoft.com/en-us/fabric/",
+        "snippet": "Microsoft Fabric documentation Microsoft Fabric is a unified platform that can meet your organization's data and analytics needs. Discover the capabilities Fabric has to offer, understand how it works, and how to use it. Overview What is Microsoft Fabric. Get started Try Fabric for free Tutorial Develop with end-to-end tutorials Overview Security."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Federated connectors overview - Microsoft 365 Copilot connectors",
+        "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview",
+        "snippet": "Federated connectors overview Summarize this article for me In this article Important Work IQ Dev Tools (preview) - Work IQ Dev Tools (wiqd) are experimental, prerelease tools for building, validating, provisioning, packaging, publishing, evaluating, and monitoring Microsoft 365 Copilot declarative agents from the terminal. Microsoft 365 Copilot."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "Data, privacy, and security for Foundry Models sold by Azure in Microsoft Foundry - Microsoft Foundry",
+        "url": "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy",
+        "snippet": "Data, privacy, and security for Models sold by Azure in Microsoft Foundry Summarize this article for me In this article Important Non-English translations are provided for convenience only. This article provides details regarding how data provided by you to Foundry Models sold by Azure in Microsoft Foundry are processed, used, and stored. Models."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Copilot connectors overview - Microsoft 365 Copilot connectors",
+        "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview",
+        "snippet": "Copilot connectors overview Summarize this article for me In this article Microsoft 365 Copilot connectors extend the reach of Microsoft Copilot and Microsoft Search experiences by connecting to data beyond Microsoft 365. Your organization can either index external data by using synced connectors or connect to data in real time by using federated."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "Windows for Education documentation - Windows Education",
+        "url": "https://learn.microsoft.com/en-us/education/windows/",
+        "snippet": "Windows for Education documentation Learn how to deploy, secure, and manage Windows clients in an education environment. What's new Windows 11, version 24H2 Training Explore all Windows trainings and learni... Office dev center Integrate with Office 365 across devices and services to extend Microsoft enterprise-scale compliance and security to."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "Introduction to Microsoft Purview and Microsoft's privacy principles - Training",
+        "url": "https://learn.microsoft.com/en-us/training/paths/describe-capabilities-of-microsoft-compliance-solutions/",
+        "snippet": "Introduction to Microsoft Purview and Microsoft's privacy principles At a glance Level Beginner Skill &nbsp; Product Azure Microsoft 365 Microsoft Purview Role Business User Student Subject Compliance Identity and access Security Learn about compliance solutions in Microsoft. Topics covered will include the Microsoft Purview compliance portal,."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "Data, Privacy, and Security for Microsoft Copilot",
+        "url": "https://learn.microsoft.com/en-us/copilot/plan/microsoft-365-copilot-privacy",
+        "snippet": "Data, Privacy, and Security for Microsoft Copilot Summarize this article for me In this article Microsoft Copilot is a sophisticated processing and orchestration engine that provides AI-powered productivity capabilities by coordinating the following components: Large language models (LLMs) Content in Microsoft Graph, such as emails, chats, and."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "What is the medallion lakehouse architecture? - Azure Databricks",
+        "url": "https://learn.microsoft.com/en-us/azure/databricks/lakehouse/medallion",
+        "snippet": "Summarize this article for me In this article The medallion architecture describes a series of data layers that denote the quality of data stored in the lakehouse. Azure Databricks recommends taking a multi-layered approach to building a single source of truth ... Can be any combination of streaming and batch transactions from sources, including."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Introduction to Microsoft Azure Data Core Data Concepts - Training",
+        "url": "https://learn.microsoft.com/en-us/training/paths/azure-data-fundamentals-explore-core-data-concepts/",
+        "snippet": "Introduction to Microsoft Azure Data core data concepts At a glance Level Beginner Skill &nbsp; Product Azure Microsoft Fabric Power BI Azure Databricks Microsoft Purview Microsoft Foundry Azure Data Factory Azure Storage Azure Cosmos DB Azure SQL Database Role Data Analyst Data Engineer Database Administrator Developer Solution Architect Student."
+      }
+    ]
+  },
+  "Q18": {
+    "status": "ok",
+    "query": "stochastic gradient descent optimization",
+    "collected_at": "2026-11-26T14:43:12.093746+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=stochastic+gradient+descent+optimization&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Windows client documentation",
+        "url": "https://learn.microsoft.com/en-us/windows/resources/",
+        "snippet": "Windows client documentation Documentation for IT pros on how to deploy, secure, and manage Windows clients for your organization. Get started Get started with Windows 11 What's new Windows 11, version 26H2 Download Security baseline for Windows 11, version 26H2 Concept Windows administrative tools Deploy Windows Windows Autopilot Windows."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "ClassificationModels.Sgd Field (Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support)",
+        "url": "https://learn.microsoft.com/en-us/dotnet/api/microsoft.azure.powershell.cmdlets.machinelearningservices.support.classificationmodels.sgd",
+        "snippet": "...hastic gradient descent is an optimization algorithm often used in machine learning applications to find the model parameters that correspond to the best fit between predicted and actual outputsSGD: Stochastic gradient descent is an optimization algorithm often used in machine learning applications to find the model parameters that correspond."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "RegressionModels.Sgd Field (Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support)",
+        "url": "https://learn.microsoft.com/en-us/dotnet/api/microsoft.azure.powershell.cmdlets.machinelearningservices.support.regressionmodels.sgd",
+        "snippet": "RegressionModels.Sgd Field Definition Namespace: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support Assembly:Az.MachineLearningServices.private.dll SGD: Stochastic gradient descent is an optimization algorithm often used in machine learning applications to find the model parameters that correspond to the best fit between predicted."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "ForecastingModels.Sgd Field (Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support)",
+        "url": "https://learn.microsoft.com/en-us/dotnet/api/microsoft.azure.powershell.cmdlets.machinelearningservices.support.forecastingmodels.sgd",
+        "snippet": "...owerShell.Cmdlets.MachineLearningServices.Support Assembly:Az.MachineLearningServices.private.dll SGD: Stochastic gradient descent is an optimization algorithm often used in machine learning applications to find the model parameters that correspond to the best fit between predicted and actual outputsSGD: Stochastic gradient descent is an."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "ClassificationModel.SGD Property (Azure.ResourceManager.MachineLearning.Models) - Azure for .NET Developers",
+        "url": "https://learn.microsoft.com/en-us/dotnet/api/azure.resourcemanager.machinelearning.models.classificationmodel.sgd",
+        "snippet": "...D Property Definition Namespace: Azure.ResourceManager.MachineLearning.Models Assembly:Azure.ResourceManager.MachineLearning.dll Package:Azure.ResourceManager.MachineLearning v1.3.0 Package:Azure.ResourceManager.MachineLearning v1.2.0-beta.3 Source:ClassificationModel.cs Source:ClassificationModel.cs SGD: Stochastic gradient descent is an."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "StochasticOptimizer.Sgd Field (Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support)",
+        "url": "https://learn.microsoft.com/en-us/dotnet/api/microsoft.azure.powershell.cmdlets.machinelearningservices.support.stochasticoptimizer.sgd",
+        "snippet": "StochasticOptimizer.Sgd Field Definition Namespace: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support Assembly:Az.MachineLearningServices.private.dll Stochastic Gradient Descent optimizer. Field Value StochasticOptimizer Applies to. Stochastic Gradient Descent optimizer. .."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "ForecastingModel.SGD Property (Azure.ResourceManager.MachineLearning.Models) - Azure for .NET Developers",
+        "url": "https://learn.microsoft.com/en-us/dotnet/api/azure.resourcemanager.machinelearning.models.forecastingmodel.sgd",
+        "snippet": "ForecastingModel.SGD Property Definition Namespace: Azure.ResourceManager.MachineLearning.Models Assembly:Azure.ResourceManager.MachineLearning.dll Package:Azure.ResourceManager.MachineLearning v1.3.0 Package:Azure.ResourceManager.MachineLearning v1.2.0-beta.3 Source:ForecastingModel.cs Source:Forec... SGD: Stochastic gradient descent is an."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "sgd_optimizer: sgd_optimizer - SQL Server Machine Learning Services",
+        "url": "https://learn.microsoft.com/en-us/sql/machine-learning/python/reference/microsoftml/sgd-optimizer",
+        "snippet": "microsoftml.sgd_optimizer: Stochastic gradient descent Summarize this article for me In this article Usage Descript... Arguments learning_rate Learning rate (settings). momentum Momentum Term (settings). nag Use Nesterov's accelerated gradient (settings). weight_decay Weight decay (settings). l_rate_red_ratio Learning rate reduction ratio."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "nimbusml.linear_model.OnlineGradientDescentRegressor class",
+        "url": "https://learn.microsoft.com/en-us/python/api/nimbusml/nimbusml.linear_model.onlinegradientdescentregressor",
+        "snippet": "OnlineGradientDes... Feature scaling insures the distances between data points are proportional and enables various optimization methods such as gradient descent to converge much faster. Examples Remarks Stochastic gradient descent uses a simple yet efficient iterative technique to fit model coefficients using error gradients for convex loss."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "AutoMLVerticalRegressionModel.SGD Property (Azure.ResourceManager.MachineLearning.Models) - Azure for .NET Developers",
+        "url": "https://learn.microsoft.com/en-us/dotnet/api/azure.resourcemanager.machinelearning.models.automlverticalregressionmodel.sgd",
+        "snippet": "AutoMLVerticalRegressionModel.SGD Property Definition Namespace: Azure.ResourceManager.MachineLearning.Models Assembly:Azure.ResourceManager.MachineLearning.dll Package:Azure.ResourceManager.MachineLearning v1.3.0 Package:Azure.ResourceManager.MachineLearning v1.2.0-beta.3 Source:AutoMLVerticalRegre... SGD: Stochastic gradient descent is an."
+      }
+    ]
+  },
+  "Q19": {
+    "status": "ok",
+    "query": "quantum error correction surface code",
+    "collected_at": "2026-11-26T14:43:14.446614+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=quantum+error+correction+surface+code&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Microsoft Surface - Surface",
+        "url": "https://learn.microsoft.com/en-us/surface/",
+        "snippet": "Surface overview Fuel AI adoption with Surface Pro and Surface Laptop powered by Intel Tested peripherals for Surface devices Surface Laptop Copilot Plus PC 13-inch tech specs Surface Laptop (Intel) tech specs Surface Laptop (Snapdragon) tech specs Surface Pro 12-inch tech specs Surface Pro (Intel) tech specs Surface Pro (Snapdragon) tech specs."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "Surface for Business devices documentation - Surface",
+        "url": "https://learn.microsoft.com/en-us/surface/get-started",
+        "snippet": "Surface for Business devices documentation Find documentation for Surface for Business devices, and learn how to deploy, manage, secure, and troubleshoot Surface devices in enterprise environments. Reference Surface for Business technical specifications Training Learn more about Surface integrated privacy screen video Watch Surface features video."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Introduction to the Quantum Programming Language Q# - Azure Quantum ",
+        "url": "https://learn.microsoft.com/en-us/azure/quantum/qsharp-overview",
+        "snippet": "Introduction to the quantum programming language Q# Summarize this article for me In this article 👉 Learn more about the Microsoft Quantum platform Q# is a high-level, open-source programming language developed by Microsoft for writing quantum programs. Q# is included in the Microsoft Quantum Development Kit (QDK). For more information, see Set."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "Contact Surface Support for Business and Education customers - Surface",
+        "url": "https://learn.microsoft.com/en-us/surface/contact-surface-business-education-support",
+        "snippet": "Contact Surface Support for Business and Education customers Summarize this article for me In this article Before you contact us Review the Top Support Solutions for Surface devices. The SDT enables IT administrators to quickly investigate, troubleshoot, and resolve hardware, software, and firmware issues with Surface devices. If you're still."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Surface IT Toolkit - Surface",
+        "url": "https://learn.microsoft.com/en-us/surface/surface-it-toolkit",
+        "snippet": "Surface IT Toolkit Summarize this article for me In this article The Surface IT Toolkit is a modern desktop application that compiles essential commercial tools in a single application, helping streamline Surface device management for IT admins. The Surface IT Toolkit ensures you're using the latest version, thanks to MSIX the Windows app package."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "Surface devices driver and firmware lifecycle for Windows-based devices - Surface",
+        "url": "https://learn.microsoft.com/en-us/surface/surface-driver-firmware-lifecycle-support",
+        "snippet": "Surface devices driver and firmware lifecycle for Windows-based devices Summarize this article for me In this article This page provides essential information on the driver and firmware lifecycle for Windows-based Surface devices. This policy outlines the lifecycle of driver and firmware updates for all Surface devices, including Surface for."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "Recovery Tool (IT Toolkit) - Surface",
+        "url": "https://learn.microsoft.com/en-us/surface/surface-it-toolkit-usb-recover",
+        "snippet": "Recovery tool (IT Toolkit) Summarize this article for me In this article This article describes how to use the Recovery Tool to restore a Surface device to its factory state. Open Surface IT Toolkit and go to the Recovery Tool section  to begin the process of creating a USB key. Select Create to download and create a USB key with the latest."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "Surface Support Portal overview - Surface",
+        "url": "https://learn.microsoft.com/en-us/surface/surface-support-portal",
+        "snippet": "Surface Support Portal overview Summarize this article for me In this article The Surface Support Portal simplifies device support and service management for businesses. This portal offers faster, more efficient support for Surface devices, ensuring that any issues are promptly addressed. With the Surface Support Portal, you benefit from: Enhanced."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "Database Engine events and errors - SQL Server",
+        "url": "https://learn.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-events-and-errors",
+        "snippet": "Database Engine events and errors Summarize this article for me In this article This section contains error message numbers and their descriptions, which are taken from the text of the error message in the sys.messages catalog view. Where applicable, the error number is a link to further information. You can query the Database Engine to see a full."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Quantum Error Correction Codes - Azure Quantum ",
+        "url": "https://learn.microsoft.com/en-us/azure/quantum/concepts-error-correction",
+        "snippet": "Introduction to quantum error correction Su... Surface code: This is a topological error correction code that uses a two-dimensional lattice of qubits to encode logical qubits. The surface code is used by the Microsoft Quantum resource estimator. Hastings-Haah code: This quantum error correction code offers better space-time costs than surface."
+      }
+    ]
+  },
+  "Q20": {
+    "status": "ok",
+    "query": "lithium ion battery degradation",
+    "collected_at": "2026-11-26T14:43:16.921682+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=lithium+ion+battery+degradation&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Is it normal for a Surface Book 2's battery capacity to reduce by 6.3% (5360 mWh) after a year of use? - Microsoft Q&A",
+        "url": "https://learn.microsoft.com/en-us/answers/questions/2330010/is-it-normal-for-a-surface-book-2s-battery-capacit",
+        "snippet": "BATTERY 1BATTERY 2     NAME                M1005046M1010958     MANUFACTURER        DYN     SMP     SERIAL NUMBER        00469548063000873809     CHEMISTRY        LION        LION     DESIGN CAPACITY        23,200 mWh62,200 mWh     FULL CHARGE CAPACITY21... Apparently, Surface Book 2's battery runs with Li-On and its degredation is influenced by."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "How to avoid killing battery when plugged in? - Microsoft Q&A",
+        "url": "https://learn.microsoft.com/en-us/answers/questions/2328684/how-to-avoid-killing-battery-when-plugged-in",
+        "snippet": "As detailed at http://www.wired.com/2013/09/laptop-battery/ , keeping a tablet or a laptop computer plugged in all the time will kill its battery faster. But docking a com... Is there some way to avoid this battery degradation and make docking a computer a reasonabe strategy?| Actually, that is incorrect and bogus. These are Lithium-Ion. The."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Surface Pro 9 has a very faint, sweet, chemical smell coming from the vents - Microsoft Q&A",
+        "url": "https://learn.microsoft.com/en-us/answers/questions/5785937/surface-pro-9-has-a-very-faint-sweet-chemical-smel",
+        "snippet": "The laptop is around 2 years old and my main concern right now is battery leakage due to aged degradation. Should I be worried and get it checked at a repair shop or is this normal?| Hi @ Hamzah Kattan , Welcome to Microsoft Q&amp;A forum. The symptoms described, specifically the faint, chemical ... Regarding your inquiry, Lithium-ion batteries."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "Surface Pro 9 battery degraded by 2% after 5 months! - Microsoft Q&A",
+        "url": "https://learn.microsoft.com/en-us/answers/questions/2304650/surface-pro-9-battery-degraded-by-2-after-5-months",
+        "snippet": "...capacity has been reduced by 2%A 2% reduction in battery capacity after 61 charging cycles on your Surface Pro 9 is within the expected range and generally considered normal. Lithium-ion batteries, like the one in your Surface Pro 9, naturally degrade over time and with usage. If the degradation rate increases significantly or if you notice any."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "When your Laptop is at 100% Battery and youre charging it does this charge the battery or does this charge the components in the laptop therefore not degrading the battery? - Microsoft Q&A",
+        "url": "https://learn.microsoft.com/en-us/answers/questions/4092477/when-your-laptop-is-at-100-battery-and-youre-charg",
+        "snippet": "......| Hi Welcome to Microsoft community. To minimize potential wear on your laptop's battery: Unplug occasionally: If you often use your laptop plugged in, unplug it occasionally and let the battery level drop somewhat before plugging it back in. Avoid extreme temperatures: High temperatures can degrade a lithium-ion battery faster. Avoid."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "Surface Pro 4: Battery is dead and the laptop has gotten really slow after that - Microsoft Q&A",
+        "url": "https://learn.microsoft.com/en-us/answers/questions/2323138/surface-pro-4-battery-is-dead-and-the-laptop-has-g",
+        "snippet": "Like all batteries, lithium-ion cells are consumables that age and deteriorate over time and with usage. To troubleshoot the performance and battery issue on the device, try these steps first: 1: Run Surface Diagnostic Toolkit See: Fix common Surface problems using the Surface Diagnostic Toolkit (microsoft.com) 2: Check for Windows Update Go to."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "XBOX Elite Series 2 Controller Safety & Repair Instructions",
+        "url": "https://learn.microsoft.com/en-us/xbox/service-guides/elite-series-2-controller/elite-series-2-xbox-controller-component-disassembly-and-reassembly",
+        "snippet": "Battery Safety Warning This device contains either a built-in or removable (cartridge) lithium-ion rechargeable battery. Use of non-Microsoft (non-genuine), incompatible, reused, or modified batteries; improper battery installation; improper handling or storage of batteries; and/or failure to follow the instructions in this Guide could cause."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "New Surface Book 3 - should I charge it up fully and let it run down a few times or not worry about it? - Microsoft Q&A",
+        "url": "https://learn.microsoft.com/en-us/answers/questions/2320445/new-surface-book-3-should-i-charge-it-up-fully-and",
+        "snippet": "Surface devices have lithium-ion batteries, and the article will tell how to maximize the life and longevity of the ... Here are the recommended methods to take care of your Surface Battery: It is common for the capacity of lithium-ion cells to diminish after a certain number of charge/discharge cycles. When using your device, make sure the."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "Battery Health Report in Endpoint Analytics - Microsoft Intune",
+        "url": "https://learn.microsoft.com/en-us/intune/advanced-analytics/battery-health",
+        "snippet": "Battery health report Summarize this article for me In this article The battery health report provides visibility into the health of batteries in your organization's devices and its influence on user experience. The score helps you identify emerging hardware issues that might be impacting user productivity s... Learn how to use the battery health."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Charging surface book 3 - Microsoft Q&A",
+        "url": "https://learn.microsoft.com/en-us/answers/questions/2310397/charging-surface-book-3",
+        "snippet": "Surface devices have lithium-ion batteries, and the article will tell how to maximize the life and longevity of the ... Here are the recommended methods to take care of your Surface Battery: It is common for the capacity of lithium-ion cells to diminish after a certain number of charge/discharge cycles. When using your device, make sure the."
+      }
+    ]
+  },
+  "Q21": {
+    "status": "ok",
+    "query": "photovoltaic solar cell efficiency",
+    "collected_at": "2026-11-26T14:43:19.683083+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=photovoltaic+solar+cell+efficiency&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Explore the Business Value of Generative AI Solutions - Training",
+        "url": "https://learn.microsoft.com/en-us/training/paths/explore-business-value-generative-ai-solutions/",
+        "snippet": "Explore the business value of generative AI solutions At a glance Level Beginner Skill &nbsp; Product Microsoft 365 Copilot Microsoft Copilot Microsoft Foundry Role Business Leader Subject Artificial intelligence Discover how generative AI can reshape decision-making and deliver measurable impact across your organization. This learning path equips."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "Teach information literacy with Search Coach",
+        "url": "https://learn.microsoft.com/en-us/training/educator-center/instructor-materials/search-coach",
+        "snippet": "Beginner lesson plans Choosing a pet (writing unbiased queries) Endangered mammals (using a custom filter) Folk tales around the world (domains) Solar energy news (date range) Compassion and empathy (operators) Moderate lesson plans Astronaut food (using domains) COVID and mental health Early perspectives on social media (using the date range."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Training for Developers",
+        "url": "https://learn.microsoft.com/en-us/training/career-paths/developer",
+        "snippet": "Career path Training for Developers Microsoft Learn helps you discover the tools and skills you need to become a developer. Browse the official plan for developer... As a developer you leverage your end-to-end technical expertise in large scale distributed systems' infrastructure, code, inter- and intra-service dependencies, and operations to."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "**shadow**: R Package for Geometric Shade Calculations in an Urban Environment",
+        "url": "https://learn.microsoft.com/en-us/shows/user-international-r-user-conferences-user-international-r-user-2017-conference/shadow-r-package-geometric-shade-calculations-in-urban-environment",
+        "snippet": "Episode **shadow**: R Package for Geometric Shade Calculations in an Urban Environment with Michael Dorman useR. International R User 2017 Conference u... Keywords: shadow, sun position, geometry, solar radiation, building facades Webpage: https://CRAN.R-project.org/package=shadow Spatial analysis of the urban environment frequently requires."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Coreinfo - Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/coreinfo",
+        "snippet": "Launch CoreInfoEx / CoreInfoEx64 / CoreInfoEx64a for the UI version. Note: Some features may require administrative privileges for complete information retrieval. User Interface Overview The Coreinfo UI consists of several key components: Main Window Layout Top Panel: Displays system information including CPU name, architecture, and core counts."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "Describe the sustainability practices in datacenters - Training",
+        "url": "https://learn.microsoft.com/en-us/training/modules/describe-sustainability-practices-datacenters/",
+        "snippet": "Describe the sustainability practices in datacenters Beginner Student Azure Azure Cloud Services This module focuses on the importance of sustainability in datacenter operations and covers the use of renewable energy sources, strategies for optimizing energy usage, and emergency power systems. Renewable energy and efficiency - Learn the primary."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "Getting started with VBA in Office",
+        "url": "https://learn.microsoft.com/en-us/office/vba/library-reference/concepts/getting-started-with-vba-in-office",
+        "snippet": "Trying to write a \"quick script\" to s... If you are in a rush, you might want to use conventional methods, even if they are monotonous and repetitive. VBA Programming 101 Using code to make applications do things You might think that writing code is mysterious or difficult, but the basic principles use every-day reasoning and are quite accessible.."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "Tutorial - Azure IoT solar panel monitoring - Azure IoT Central",
+        "url": "https://learn.microsoft.com/en-us/azure/iot-central/energy/tutorial-solar-panel-app",
+        "snippet": "Tutorial: Deploy and walk through the solar panel monitoring application template Summarize this article for me In this article The solar panel monitoring app enables utilities and partners to monitor solar panels, such as their energy generation and connection status in near real time. It can send notifications based on defined threshold."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "Range.Find method (Excel)",
+        "url": "https://learn.microsoft.com/en-us/office/vba/api/excel.range.find",
+        "snippet": "Range.Find method (Excel) Summarize this article for me In this article Finds specific information in a range. Note Interested in developing solutions that extend the Office experience across multiple platforms. Check out the new Office Add-ins model. Office Add-ins have a small footprint compared to VSTO Add-ins and solutions, and you can build."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Solar energy news (using the date range filter)",
+        "url": "https://learn.microsoft.com/en-us/training/educator-center/instructor-materials/solar-energy-news",
+        "snippet": "Solar energy news (using the date range filter) Summarize this article for me In this article Solar energy is a source of renewable energy that generates power from the sun. It has a long history. Like many sources of clean energy, new government strategies, scientific discoveries, and technological developments are pushing the use of solar energy."
+      }
+    ]
+  },
+  "Q22": {
+    "status": "ok",
+    "query": "computational fluid dynamics finite volume method",
+    "collected_at": "2026-11-26T14:43:22.078026+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=computational+fluid+dynamics+finite+volume+method&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Microsoft troubleshooting documentation",
+        "url": "https://learn.microsoft.com/en-us/troubleshoot/",
+        "snippet": "Microsoft troubleshooting documentation Find the documentation you need to troubleshoot issues and apply workarounds for the following commercial products from Microsoft..  ...nformation Services Troubleshooting articles for Internet Information Services Microsoft 365 Troubleshooting articles for Microsoft 365 Sales agent Troubleshooting articles."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "Dynamics 365 Sustainability documentation",
+        "url": "https://learn.microsoft.com/en-us/dynamics365/sustainability/",
+        "snippet": "Microsoft Dynamics 365 Sustainability documentation Discover how to make the most of Dynamics 365 Sustainability with training, documentation, and videos covering product capabilities. Learn how to record, report, and reduce your organization's environmental impact across emissions, water, and waste. Get started Get started What's new What's new."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Dynamics 365 Supply Chain Management documentation",
+        "url": "https://learn.microsoft.com/en-us/dynamics365/supply-chain/",
+        "snippet": "Microsoft Dynamics 365 Supply Chain Management documentation Discover how to make the most of Dynamics 365 Supply Chain Management with training, docs, and videos covering product capabilities and how-to articles. Learn how to build an adaptable, resilient supply chain that automatically reacts to challenges using real-time visibility, agile."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "Release plans for Dynamics 365 and Power Platform - Dynamics 365",
+        "url": "https://learn.microsoft.com/en-us/dynamics365/release-plans/",
+        "snippet": "Release plans for Dynamics 365 and Power Platform Release plans have retired. Get started Roadmap What's new Microsoft Learn Release Plans have retired As of October 2026, this content is archived and no longer maintained. Information on this page may not reflect the latest product plans, features, or guidance. For current roadmap information."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Dynamics 365 Finance documentation",
+        "url": "https://learn.microsoft.com/en-us/dynamics365/finance/",
+        "snippet": "Microsoft Dynamics 365 Finance documentation Discover how to make the most of Dynamics 365 Finance with training, documentation, and videos covering product capabilities. Learn how to use Dynamics 365 Finance to monitor your global financial operations in real time, predict outcomes, and make data-driven decisions to drive business agility and."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "Dynamics 365 guidance documentation and other resources - Dynamics 365",
+        "url": "https://learn.microsoft.com/en-us/dynamics365/guidance/",
+        "snippet": "Dynamics 365 guidance documentation and other resources Find proven guidance and best practices to help you implement and manage business solutions with Dynamics 365 apps. Dynamics 365 documentation Hub page with links to documentation and training for each app. Power Platform documentation Analyze data, build solutions, automate processes, and."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "Microsoft Dynamics 365 Project Operations documentation",
+        "url": "https://learn.microsoft.com/en-us/dynamics365/project-operations/",
+        "snippet": "Dynamics 365 Project Operations documentation Discover how to make the most of Dynamics 365 Project Operations with training, docs, and videos covering product capabilities and how-to articles. Learn how Project Operations connects sales, resourcing, project management, and finance teams in a single application to win more deals, accelerate."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "Dynamics 365 Customer Service",
+        "url": "https://learn.microsoft.com/en-us/dynamics365/customer-service/",
+        "snippet": "Dynamics 365 Customer Service documentation Discover how to make the most of Dynamics 365 Customer Service with training, docs, and videos covering product capabilities and how-to articles. Learn about the suite of capabilities that Customer Service provides and ensure that your business delivers the best customer service experience to your."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "Dynamics 365 Sales documentation",
+        "url": "https://learn.microsoft.com/en-us/dynamics365/sales/",
+        "snippet": "Dynamics 365 Sales documentation Discover how to make the most of Dynamics 365 Sales with online training courses, docs, and videos covering product capabilities and how-to articles. Learn how to use Dynamics 365 Sales to build strong relationships with your customers, take actions based on insights, and close deals faster. Get started Welcome to."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Dynamics 365 Customer Insights documentation - Dynamics 365 Customer Insights",
+        "url": "https://learn.microsoft.com/en-us/dynamics365/customer-insights/",
+        "snippet": "Dynamics 365 Customer Insights documentation Quickly access documentation for Dynamics 365 Customer Insights - Journeys and Dynamics 365 Customer Insights - Data. Microsoft Dataverse Securely store and manage data that's used by business applications Azure Synapse Analytics Azure Synapse is a limitless analytics service that brings together."
+      }
+    ]
+  },
+  "Q23": {
+    "status": "ok",
+    "query": "finite element analysis stress",
+    "collected_at": "2026-11-26T14:43:24.857860+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=finite+element+analysis+stress&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Data Analysis Expressions (DAX) Reference - DAX",
+        "url": "https://learn.microsoft.com/en-us/dax/",
+        "snippet": "Data Analysis Expressions (DAX) Reference Data Analysis Expressions (DAX) is a library of functions and operators that can be combined to build formulas and expressions in Power BI, Analysis Services, and Power Pivot in Excel data models. Functions Reference DAX functions DAX statements What's new New DAX functions Learn about DAX Overview DAX."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "Extract insights from visual data on Azure - Training",
+        "url": "https://learn.microsoft.com/en-us/training/paths/insight-visual-data/",
+        "snippet": "Extract insights from visual data on Azure At a glance Level Intermediate Skill &nbsp; Product Foundry Tools Microsoft Foundry Azure AI Search Role AI Engineer Developer Subject Artificial intelligence Use generative AI, computer vision, and Content Understanding capabilities in Azure to extract insights from visual data, supporting scenarios."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Get Data in Power BI - Training",
+        "url": "https://learn.microsoft.com/en-us/training/modules/get-data/",
+        "snippet": "Get data in Power BI Intermediate Data Analyst Power BI Microsoft Power Platform Connect to data sources including Excel, relational databases, and NoSQL stores in Power BI. Learning objectives By the end of this module, you'll be able to: Identify and connect to a data source Get data from a relational database, like Microsoft SQL Server Get data."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "Azure Vision documentation - Quickstarts, Tutorials, API Reference - Foundry Tools",
+        "url": "https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/",
+        "snippet": "Azure Vision in Foundry Tools documentation The cloud-based Azure Vision service provides developers with access to advanced algorithms for processing images and returning information. By uploading an image or specifying an image URL, Azure Vision algorithms can analyze visual content in different ways based on inputs and user choices. Learn how."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Document layout analysis - Document Intelligence - Foundry Tools",
+        "url": "https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/prebuilt/layout",
+        "snippet": "What is the Document Intelli... Summarize this article for me In this article This content applies to: 🟩 v4.0 (GA) | Previous versions: 🟦 v3.1 (GA) 🟥 v3.0 (retiring) 🟥 v2.1 (retiring) The Azure Document Intelligence in Foundry Tools layout model is an advanced document-anal. The model is available in the Document Intelligence cloud. Document."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "Get started with text analysis in Azure - Training",
+        "url": "https://learn.microsoft.com/en-us/training/modules/get-started-text-analysis-azure/",
+        "snippet": "Get started with text analysis in Azure Beginner AI Engineer Data Scientist Developer Solution Architect Student Foundry Tools Microsoft Foundry Learn how to use both general-purpose AI models and Azure Language in Foundry Tools, then build a lightweight Python client application that analyzes text. Learning objectives Learn how to use Microsoft."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "Introduction to Viva Insights",
+        "url": "https://learn.microsoft.com/en-us/viva/insights/introduction",
+        "snippet": "Introducing Microsoft Viva Insights Summarize this article for me In this article Microsoft Viva Insights is part of Microsoft Viva. Viva Insights helps people and businesses thrive with data-driven, privacy-protected insights and offers recommendations to improve productivity and wellbeing. It provides personal insights to your employees, team."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "ComputeFleetVmCategory.HighPerformanceCompute Property (Azure.ResourceManager.ComputeFleet.Models) - Azure for .NET Developers",
+        "url": "https://learn.microsoft.com/en-us/dotnet/api/azure.resourcemanager.computefleet.models.computefleetvmcategory.highperformancecompute",
+        "snippet": "ComputeFleetVmCategory.HighPerformanceCompute Property Definition Namespace: Azure.ResourceManager.ComputeFleet.Models Assembly:Azu... Azure High Performance Compute VMs are optimized for various HPC workloads such as computational fluid dynamics, finite element analysis, frontend and backend EDA, rendering, molecular dynamics, computational geo."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "ASP.NET Core load/stress testing",
+        "url": "https://learn.microsoft.com/en-us/aspnet/core/test/load-tests",
+        "snippet": "ASP.NET Core load/stress testing Summarize this article for me In this article Load testing and stress testing are important to ensure a web app is performant and scalable. Load and stress testing have different goals even though they often share similar tests. Load tests: Test whether the app can handle a specified load of users for a certain."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Analysis Services client libraries",
+        "url": "https://learn.microsoft.com/en-us/analysis-services/client-libraries",
+        "snippet": "Analysis Services client libraries Summarize this article for me In this article Applies to: SQL Server Analysis Services Azure Analysis Services Fabric/Power BI Premium Client libraries are necessary for client applications and tools to connect to Analysis Services. Microsoft client applications like Power BI Desktop, Excel, SQL Server Management."
+      }
+    ]
+  },
+  "Q24": {
+    "status": "ok",
+    "query": "optical coherence tomography",
+    "collected_at": "2026-11-26T14:43:27.616392+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=optical+coherence+tomography&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Azure Vision documentation - Quickstarts, Tutorials, API Reference - Foundry Tools",
+        "url": "https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/",
+        "snippet": "Azure Vision in Foundry Tools documentation The cloud-based Azure Vision service provides developers with access to advanced algorithms for processing images and returning information. By uploading an image or specifying an image URL, Azure Vision algorithms can analyze visual content in different ways based on inputs and user choices. The."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "PowerToys Text Extractor Utility for Windows",
+        "url": "https://learn.microsoft.com/en-us/windows/powertoys/text-extractor",
+        "snippet": "Text Extractor utility Summarize this article for me In this article PowerToys Text Extractor enables you to copy text from anywhere on your Windows screen, including inside images or videos. This powerful OCR utility helps you extract text quickly using keyboard shortcuts, making it easier to capture and use text content from any application or."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Introduction to AI-powered information extraction concepts - Training",
+        "url": "https://learn.microsoft.com/en-us/training/modules/introduction-information-extraction/",
+        "snippet": "Introduction to AI-powered information extraction concepts Beginner AI Engineer Data Scientist Developer Solution Architect Student Microsoft Foundry AI information extraction enables you to extract data values from documents, images, and other unstructured data sources. Describe how optical character recognition (OCR) extracts text from images.."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "Dragon Medical One documentation",
+        "url": "https://learn.microsoft.com/en-us/industry/healthcare/dragon-medical-one/",
+        "snippet": "Dragon Medical One documentation Administration guides for Dragon Medical One, the speech recognition solution for healthcare professionals. What's new Release notes Deploy Installation and administration guide Overview Audio routing solutions in virtualized environments Training Learn Dragon Medical One Installation and administration guide."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Install Windows Server from installation media",
+        "url": "https://learn.microsoft.com/en-us/windows-server/get-started/install-windows-server",
+        "snippet": "Install Windows Server from installation media Summarize this article for me In this article Learn how to create a bootable USB drive or DVD that can be used to install Windows Server on your devices. Creating a Windows Server installation media is a crucial step in setting up a new server or upgrade from an existing one. This article aims to."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "Built-in Evaluators Reference - Microsoft Foundry",
+        "url": "https://learn.microsoft.com/en-us/azure/foundry/concepts/built-in-evaluators",
+        "snippet": "Built-in evaluators reference Summarize this article for me In this article Important Items marked preview in this article are currently in preview. This... For more information, see Supplemental Terms of Use for Microsoft Azure Previews. Microsoft Foundry includes built-in evaluators to assess the quality, safety, and reliability of AI responses."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "Ask Learn Responsible AI FAQ",
+        "url": "https://learn.microsoft.com/en-us/training/support/ask-learn-assistant-transparency-faq",
+        "snippet": "Ask Learn Responsible AI FAQ Summarize this article for me In this article What is Ask Learn. Ask Learn is an AI assistant now available in preview on Microsoft Learn. It can answer questions, provide instructions, define concepts, and provide definitions related to Microsoft products and services. Its responses are grounded in the latest."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "Learn about optical character recognition in Microsoft Purview",
+        "url": "https://learn.microsoft.com/en-us/purview/ocr-learn-about",
+        "snippet": "Learn about optical character recognition in Microsoft Purview Summarize this article for me In this article By using optical character recognition (OCR) scanning, Microsoft Purview can scan images for sensitive information. OCR scanning is an optional feature that you must enable at the tenant level. After you enable it, select the locations."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "Document processing for Microsoft 365 documentation - Microsoft 365",
+        "url": "https://learn.microsoft.com/en-us/microsoft-365/documentprocessing/",
+        "snippet": "Document processing for Microsoft 365 documentation Document processing for Microsoft 365 is a set of pay-as-you-go services that uses advanced content AI to provide end-to-end intelligent document processing solutions for your organization.  ...n Set up optical character recognitionThis page contains links to some important information related to."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Overview of optical character recognition",
+        "url": "https://learn.microsoft.com/en-us/microsoft-365/documentprocessing/ocr-overview",
+        "snippet": "Overview of optical character recognition Summarize this article for me In this article Note Through June 2026, you can try out a limited amount of optical character recognition and other selected content services at no cost if you have pay-as-you-go billing set up. For information and limitations, see Try out pay-as-you-go services. The optical."
+      }
+    ]
+  },
+  "Q25": {
+    "status": "ok",
+    "query": "gravitational waves interferometer",
+    "collected_at": "2026-11-26T14:43:30.008415+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=gravitational+waves+interferometer&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Release plans Dynamics 365 and Power Platform - Dynamics 365",
+        "url": "https://learn.microsoft.com/en-us/dynamics365/release-plans/archived-plans",
+        "snippet": "Release plans for Dynamics 365 and Power Platform Release plans from previous waves that have been archived after their final publish. Release Plans have retired As of October 2026, this content is archived and no longer maintained. For current roadmap information across Dynamics 365, Power Platform, Dataverse, Microsoft 365, and Copilot, visit."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "New changes coming to cloud update - Microsoft 365 Apps",
+        "url": "https://learn.microsoft.com/en-us/microsoft-365-apps/admin-center/cloud-update-enhancements",
+        "snippet": "Use Actions > Manage rolled back devices to review rolled-back devices and resume them when the issue is resolved. Enhanced rollout waves Note Rolling out June 2026 - July 2026. Date added Message Center Microsoft 365 June 12, 2026 --- 558251 Enhanced rollout waves for cloud update We’re introducing an enhanced rollout waves experience in cloud."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Modern, refreshed look for model-driven apps - Power Apps",
+        "url": "https://learn.microsoft.com/en-us/power-apps/user/modern-fluent-design",
+        "snippet": "Modern, refreshed look for model-driven apps Summarize this article for me In this article Model-driven apps are modernized in waves. Each wave updates styling, layout, and behavior to align with the latest Microsoft Fluent design system — making apps easier to use so people can accomplish their goals more quickly. The Fluent design system."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "Entity Documentation - minecraft:buoyant",
+        "url": "https://learn.microsoft.com/en-us/minecraft/creator/reference/content/entityreference/examples/entitycomponents/minecraftcomponent_buoyant",
+        "snippet": "Entity Documentation - minecraft:buoyant Summarize this article for me In this article Enables an entity to float on the specified liquid blocks. Note In 1.26.10 the simulate_waves boolean was replaced with the movement_type string field (waves / bobbing / none). big_wave_probability and big_wave_speed only apply when movement_type is waves.."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Launch your portal using the Portal launch scheduler - Microsoft 365 Enterprise",
+        "url": "https://learn.microsoft.com/en-us/microsoft-365/enterprise/portallaunchscheduler",
+        "snippet": "Use the Portal launch scheduler to launch your portal to ensure users have a smooth viewing experience when accessing your new SharePoint portal. The Portal launch scheduler is designed to help you follow a phased roll-out approach by batching viewers in waves and managing the URL redirects for the new portal. During the launch of each wave, you."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "Jennifer Marsman Reads Minds with Machine Learning",
+        "url": "https://learn.microsoft.com/en-us/shows/seth-on-the-road-codemash-2016/jennifer-marsman-reads-minds-machine-learning",
+        "snippet": "Episode Jennifer Marsman Reads Minds with Machine Learning with Jennifer Marsman Codemash 2016 Jennifer and I love Machine Learning. In this interview she literally uses a device to read minds. She goes through how she built a lie detector by reading brain waves. It is a fantastic demo as well as explanation of machine learning on Azure. Enjoy!."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "Update progress and health - Microsoft 365 Apps",
+        "url": "https://learn.microsoft.com/en-us/microsoft-365-apps/admin-center/cloud-update-progress-health",
+        "snippet": "Update progress and health Summarize this article for me In this article Use the Overview, Devices, and Issues tabs in cloud update to monitor update progress for Microsoft 365 Apps. These views help you confirm that devices are moving through the rollout as expected, identify update issues that need attention, and review device-level details when."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "Minecraft Bedrock Editor Vibrant Visuals",
+        "url": "https://learn.microsoft.com/en-us/minecraft/creator/documents/bedrockeditor/editorvibrantvisuals",
+        "snippet": "Vibrant Visuals in Bedrock Editor Summarize this article for me In this article Vibrant Visuals (previously Advanced Rendering: Deferred Lighting) is a complete overhaul of the Minecraft graphics system, introduced with Editor v1.0. Use it to tune lighting, water, sky, color grading, tone mapping, shadows, and default PBR values for worlds you."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "Water Effects",
+        "url": "https://learn.microsoft.com/en-us/minecraft/creator/documents/vibrantvisuals/watercustomization",
+        "snippet": "Water Effects Summarize this article for me In this article Vibrant Visuals dramatically enhances the look of water in Minecraft: Bedrock Edition. You get many of the new features simply by enabling Vibrant Visuals in Minecraft's settings, but you can customize the behavior of water blocks through resource packs. Use the Editor to experiment with."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Deferred Rendering Documentation - minecraft:waterconfig_waterconfigsettingsv1",
+        "url": "https://learn.microsoft.com/en-us/minecraft/creator/reference/content/deferredrendering/waterconfig_waterconfigsettingsv1",
+        "snippet": "Deferred Rendering Documentation - minecraft:waterconfig_waterconfigsettingsv1 Summarize this article for me In this article Struct WaterConfig WaterConfigSettingsV1 Client Deferred Rendering. Water Settings Properties Name Default Value Type Description format_version not set String [editor(readonly:true)] minecraft:water_settings not...."
+      }
+    ]
+  },
+  "Q26": {
+    "status": "ok",
+    "query": "CRISPR Cas9 gene editing",
+    "collected_at": "2026-11-26T14:43:32.891721+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=CRISPR+Cas9+gene+editing&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Power BI Desktop projects (PBIP) - Power BI",
+        "url": "https://learn.microsoft.com/en-us/power-bi/developer/projects/projects-overview",
+        "snippet": "When you save your work as a Power BI Project (PBIP), report and semantic model item definitions are saved as individual plain text files in a simple, intuitive folder structure. Saving your work as a project has the following benefits: Text editor support - PBIP files are formatted text files containing semantic model and report metadata. These."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "Draft impactful documents using AI - Training",
+        "url": "https://learn.microsoft.com/en-us/training/modules/draft-impactful-documents-using-ai/",
+        "snippet": "Draft impactful documents using AI Intermediate Administrator Business User Functional Consultant Solution Architect Technology Manager Microsoft 365 Office 365 This module explores advanced Copilot in Microsoft Word capabilities at an intermediate level. It covers drafting documents from multiple sources, applying editing techniques, and using."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Tutorial: Get Started Creating in the Power BI Service - Power BI",
+        "url": "https://learn.microsoft.com/en-us/power-bi/fundamentals/service-get-started",
+        "snippet": "Here's an example dashboard: In the Power BI service, you can accomplish many different tasks, and this tutorial can help you get started. For an understanding of how the Power BI service fits in with the other Power BI offerings, we recommend reading What is Power BI. In this tutorial, you complete the following tasks: Sign in to your Power BI."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "Share agents with other users - Microsoft Copilot Studio",
+        "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/admin-share-bots",
+        "snippet": "Invite users to collaborate on your agent project. Collaborators always have permission to chat with the agent. Note You can only share an agent with users who have a Microsoft Copilot Studio per user license. Users who don't have a license can sign up for a trial. Prerequisites User authentication for the agent is configured to Authenticate."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Collaborate on canvas apps in Microsoft Power Apps Studio - Power Apps",
+        "url": "https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/copresence-power-apps-studio",
+        "snippet": "Understand coauthoring and copresence in canvas apps Summarize this article for me In this article Collaborate on canvas apps in Power Apps Studio by using copresence and coauthoring. These features let you work with other makers in real time, improving productivity and teamwork. What you'll learn: How to see who's working on your app and work."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "Edit semantic models in the Power BI service - Power BI",
+        "url": "https://learn.microsoft.com/en-us/power-bi/transform-model/service-edit-data-models",
+        "snippet": "Edit semantic models in the Power BI service Summarize this article for me In this article Power BI lets users create and edit semantic models in the Power BI service using actions such as Power Query editing, managing relationships, creating DAX measures, and defining row-level security roles. Create new semantic models Create new semantic models."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "Create an app in Microsoft Copilot Studio - Microsoft Copilot Studio",
+        "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/apps-experience/create-app",
+        "snippet": "Create an app in Microsoft Copilot Studio Summarize this article for me In this article Create an app by describing the problem you want to solve in natural language. Copilot Studio generates an interactive app preview that you can use to test and refine your app through conversation. Create an app from a description Note Before you start, review."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "Understand data cards in Power Apps canvas apps - Power Apps",
+        "url": "https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/working-with-cards",
+        "snippet": "Understand data cards in canvas apps Summarize this article for me In this article This article explains what a data card is, how to change the control users enter data into, when to unlock a card, and how the form saves changes back to Dataverse. Data cards are the building blocks of Power Apps forms. Each data card displays and collects a value."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "Microsoft Edge DevTools extension for Visual Studio Code - Microsoft Edge Developer documentation",
+        "url": "https://learn.microsoft.com/en-us/microsoft-edge/visual-studio-code/microsoft-edge-devtools-extension",
+        "snippet": "Microsoft Edge DevTools extension for Visual Studio Code Summarize this article for me In this article The Microsoft Edge DevTools extension for Visual Studio Code lets you use Microsoft Edge DevTools and an embedded version of the Microsoft Edge Browser including Device Emulation, right from within Visual Studio Code. The DevTools extension."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Visual Studio game development documentation",
+        "url": "https://learn.microsoft.com/en-us/visualstudio/gamedev/",
+        "snippet": "Visual Studio game development documentation Learn how to make games using Visual Studio and the leading tools it integrates with like Unity, Unreal Engine, and more. Overview Game development with Visual Studio Training C# game development with Unity What's new What's new in Visual Studio Tools for Unity. Quickstart Create your first 3D app with."
+      }
+    ]
+  },
+  "Q27": {
+    "status": "ok",
+    "query": "protein folding prediction",
+    "collected_at": "2026-11-26T14:43:35.639228+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=protein+folding+prediction&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Power Query documentation - Power Query",
+        "url": "https://learn.microsoft.com/en-us/power-query/",
+        "snippet": "Power Query documentation Power Query is the data connectivity and data preparation technology that enables end users to import and reshape data from within a wide range of Microsoft products, including Excel, Power BI, Analysis Services, Dataverse, and more. Use Power Query How-To Guide Use Power Query Get data Work with dataflows Concept Create."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "DirectQuery in Power BI: When to Use, Limitations, Alternatives - Power BI",
+        "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-directquery-about",
+        "snippet": "SAP BW and SAP HANA: Measure resolution and hierarchy semantics drive query... Avoid overlayering transformations that block folding. Confirm query folding (select View Native Query in Power Query Editor) so transformations push down. DirectQuery limitations Using DirectQuery has implications across consistency, performance, security,."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Power Query PostgreSQL connector - Power Query",
+        "url": "https://learn.microsoft.com/en-us/power-query/connectors/postgresql",
+        "snippet": "PostgreSQL Summarize this article for me In this article Summary Property Value Connector PostgreSQL Products ExcelPower BI (semantic models)Power Query Online Release state General availability Authentication kinds Database (username and password)Microsoft account (Microsoft Entra ID)Service principal Function Reference Documentation."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "Configure incremental refresh and real-time data for Power BI semantic models - Power BI",
+        "url": "https://learn.microsoft.com/en-us/power-bi/connect-data/incremental-refresh-overview",
+        "snippet": "Before configuring your incremental refresh solution, be sure to thoroughly re... These articles can help you determine whether your data source and queries support query folding. Single data source When you configure incremental refresh and real-time data by using Power BI Desktop, or configure an advanced solution by using Tabular Model."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Microsoft Discovery agent catalog",
+        "url": "https://learn.microsoft.com/en-us/azure/microsoft-discovery/concept-agent-catalog",
+        "snippet": "Agent Description Capability tags AiZynthFinder Plans synthesis routes from target molecules to available precursors. drug-discovery, retrosynthesis, trained-model AutoDock Vina Predicts protein-ligand binding and supports virtual screening. drug-discovery, molecule-docking, virtual-screening BindingDB Finds protein-ligand binding affinity data.."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "Protein contact prediction from amino acid co-evolution using convolutional networks for graph-valued images",
+        "url": "https://learn.microsoft.com/en-us/shows/neural-information-processing-systems-conference-nips-2016/protein-contact-prediction-from-amino-acid-co-evolution-using-convolutional-networks-graph-value",
+        "snippet": "Episode Protein contact prediction from amino acid co-evolution using convolutional networks for graph-valued images with Vladimir Golkov Neural Information Processing Systems Conference - NIPS 2016 Proteins are the \"building blocks of life\", the most abundant organic molecules, and the central focus of most areas of biomedicine. Protein structure."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "MiningModel.FoldingParameters Property (Microsoft.AnalysisServices)",
+        "url": "https://learn.microsoft.com/en-us/dotnet/api/microsoft.analysisservices.miningmodel.foldingparameters",
+        "snippet": "MiningModel.FoldingParameters Property Definition Namespace: Microsoft.AnalysisServices Assembly:Microsoft.AnalysisServices.dll Package:Microsoft.AnalysisServices v19.118.3 Gets or sets the folding parameters associated with the mining model. Property Value FoldingParameters The folding parameters associated with the mining model. Applies to. Gets."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "FoldingParameters Class (Microsoft.AnalysisServices)",
+        "url": "https://learn.microsoft.com/en-us/dotnet/api/microsoft.analysisservices.foldingparameters",
+        "snippet": "FoldingParameters Class Definition Namespace: Microsoft.AnalysisServices Assembly:Microsoft.AnalysisServices.dll Package:Microsoft.AnalysisServices v19.118.3 Represents the folding parameters and its component.  ...eters Attributes TypeConverterAttribute GuidAttribute Constructors Name Description FoldingParameters() Properties Name Description."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "FoldingParameters.FoldIndex Property (Microsoft.AnalysisServices)",
+        "url": "https://learn.microsoft.com/en-us/dotnet/api/microsoft.analysisservices.foldingparameters.foldindex",
+        "snippet": "FoldingParameters.FoldIndex Property Definition Namespace: Microsoft.AnalysisServices Assembly:Microsoft.AnalysisServices.dll Package:Microsoft.AnalysisServices v19.118.3 Gets or sets the folding index. Property Value Int32 An Int32 with the value of the fonlding index. Applies to. Gets or sets the folding index. .."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Applied Steps - Power Query",
+        "url": "https://learn.microsoft.com/en-us/power-query/applied-steps",
+        "snippet": "Using the Applied Steps list Summarize this article for me In this article The Applied steps list is part of the Query settings pane in Power Query. Any transformations to your data are displayed in the Applied steps list. For instance, if you change the first column name, the new column name is displayed in the Applied steps list as Renamed."
+      }
+    ]
+  },
+  "Q28": {
+    "status": "ok",
+    "query": "semiconductor doping p n junction",
+    "collected_at": "2026-11-26T14:43:38.585817+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=semiconductor+doping+p+n+junction&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "mklink",
+        "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/mklink",
+        "snippet": "mklink Summarize this article for me In this article Creates a directory or file symbolic or hard link. Syntax Parameters Parameter Description /d Creates a directory symbolic link. Examples To create and remove a symbolic link named MyFolder from the root directory to the \\Users\\User1\\Documents directory, and a hard link named Myfile.file to the."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "Hard Links and Junctions - Win32 apps",
+        "url": "https://learn.microsoft.com/en-us/windows/win32/fileio/hard-links-and-junctions",
+        "snippet": "Hard links and junctions Summarize this article for me In this article The NTFS file system supports three types of file links: hard links, junctions, and symbolic links. This article is an overview of hard links and junctions. For information about symbolic links, see Create symbolic links. Hard links A hard link is the file-system representation."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Junction - Sysinternals",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/junction",
+        "snippet": "Junction v1.08 Summarize this article for me In this article By Mark Russinovich Published: November 5, 2026 Download Junction (328 KB) Introduction Windows 2000 and later support junction points, where a directory serves as an alias to another directory on the computer. For example, if the directory D:\\WIN specified C:\\WINNT\\SYSTEM32 as its."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "PSHpcStorageTarget.Junctions Property (Microsoft.Azure.PowerShell.Cmdlets.HPCCache.Models)",
+        "url": "https://learn.microsoft.com/en-us/dotnet/api/microsoft.azure.powershell.cmdlets.hpccache.models.pshpcstoragetarget.junctions",
+        "snippet": "PSHpcStorageTarget.Junctions Property Definition Namespace: Microsoft.Azure.PowerShell.Cmdlets.HPCCache.Models Assembly:Microsoft.Azure.PowerShell.Cmdlets.HPCCache.dll Gets or sets storage target junctions. Property Value IList Applies to. Gets or sets storage target junctions. .."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Azure Accelerates Cloud Transformation for the Semiconductor Industry",
+        "url": "https://learn.microsoft.com/en-us/shows/azure-videos/azure-accelerates-cloud-transformation-for-the-semiconductor-industry",
+        "snippet": "Episode Azure Accelerates Cloud Transformation for the Semiconductor Industry Azure Videos This videos describes how Azure HPC is a key enabler for accelerating cloud transformation in the semiconductor industry. Have feedback. Submit an issue here. This videos describes how Azure HPC is a key enabler for accelerating cloud transformation in the."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "BluetoothAssignedNumbers.DialogSemiconductor Field (Android.Bluetooth)",
+        "url": "https://learn.microsoft.com/en-us/dotnet/api/android.bluetooth.bluetoothassignednumbers.dialogsemiconductor",
+        "snippet": "BluetoothAssignedNumbers.DialogSemiconductor Field Definition Namespace: Android.Bluetooth Assembly:Mono.Android.dll Company identifier 210 for Dialog Semiconductor B.V. Field Value Value = 210 Int32 Attributes RegisterAttribute Remarks Portions of this page are modifications based on work created and shared by the Android Open Source Project and."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "BluetoothAssignedNumbers.MitelSemiconductor Field (Android.Bluetooth)",
+        "url": "https://learn.microsoft.com/en-us/dotnet/api/android.bluetooth.bluetoothassignednumbers.mitelsemiconductor",
+        "snippet": "BluetoothAssignedNumbers.MitelSemiconductor Field Definition Namespace: Android.Bluetooth Assembly:Mono.Android.dll Company identifier 16 for Mitel Semiconductor. Field Value Value = 16 Int32 Attributes RegisterAttribute Remarks Portions of this page are modifications based on work created and shared by the Android Open Source Project and used."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "BluetoothAssignedNumbers.PhilipsSemiconductors Field (Android.Bluetooth)",
+        "url": "https://learn.microsoft.com/en-us/dotnet/api/android.bluetooth.bluetoothassignednumbers.philipssemiconductors",
+        "snippet": "BluetoothAssignedNumbers.PhilipsSemiconductors Field Definition Namespace: Android.Bluetooth Assembly:Mono.Android.dll Company identifier 37 for Philips Semiconductors. Field Value Value = 37 Int32 Attributes RegisterAttribute Remarks Portions of this page are modifications based on work created and shared by the Android Open Source Project and."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "PathUtil.ContainsReparsePoint(String, String) Method (Microsoft.VisualStudio.PlatformUI)",
+        "url": "https://learn.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.platformui.pathutil.containsreparsepoint",
+        "snippet": "...l.ContainsReparsePoint(String, String) Method Definition Namespace: Microsoft.VisualStudio.PlatformUI Assembly:Microsoft.VisualStudio.Utilities.dll Package:Microsoft.VisualStudio.Utilities v17.14.40264 Determines if any level in the given path is a Junction, up to pathRoot (pathRoot itself will not be included in the determination) Parameters."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Function Junction Ep7: Event Hub Triggers",
+        "url": "https://learn.microsoft.com/en-us/shows/mvp-azure/function-junction-ep7-event-hub-triggers",
+        "snippet": "Episode Function Junction Ep7: Event Hub Triggers MVP: Microsoft Azure Event Hubs are the penultimate trigger type in Azure Functions. Designed to inject massive quantities of data from a large number of mobile or IoT devices Event Hubs find a useful companion in highly scalable Azure Functions. Azure Functions Have feedback. Event Hubs are the."
+      }
+    ]
+  },
+  "Q29": {
+    "status": "ok",
+    "query": "public key cryptography RSA",
+    "collected_at": "2026-11-26T14:43:41.497922+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=public+key+cryptography+RSA&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Windows Secure Boot Key Creation and Management Guidance",
+        "url": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/windows-secure-boot-key-creation-and-management-guidance",
+        "snippet": "A certificate management system. 1.2 Public Key Cryptography Public key cryptography uses a pair of mathematically related cryptographic keys... In a Secure Boot public key system you have the following: 1.2.1 RSA 2048 Encryption RSA-2048 is an asymmetric cryptographic algorithm. The space needed to store an RSA-2048 modulus in raw form is 2048."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "Key-Based Authentication in OpenSSH for Windows",
+        "url": "https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement",
+        "snippet": "Key-based authentication in OpenSSH for Windows Summarize this article for me In this article Most authentication in Windows environments is done with a username/password pair, which works well for systems that share a common domain. This document provides an overview of how... You can specify the following key-generation algorithms: Digital."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Trusted Platform Module (TPM) overview",
+        "url": "https://learn.microsoft.com/en-us/windows/security/hardware-security/tpm/trusted-platform-module-overview",
+        "snippet": "Trusted Platform Module (TPM) overview Summarize this article for me In this article TPM at a glance Trusted Platform Module (TPM) technology provides hardware-based security functions. TPMs offer ... A TPM chip is a secure crypto-processor that's designed to carry out cryptographic operations. Use it for device authentication by using the TPM's."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "Create a self-signed public certificate to authenticate your application - Microsoft identity platform",
+        "url": "https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-self-signed-certificate",
+        "snippet": "Create a self-signed public certificate to authenticate your application Summarize this article for me In this article Microsoft Entra ID supports two types of authentication for service principals: password-based authentication (app secret) and certificate-based authentication. While longer values are supported, the 2048-bit size is highly."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Azure Certificate Authority details",
+        "url": "https://learn.microsoft.com/en-us/azure/security/fundamentals/azure-certificate-authority-details",
+        "snippet": "...7ec41C58A3A8518E8759BF075B76B750D4F2DF264FCD GeoTrust Global TLS RSA4096Public key encryption and signature algorithms Support for the following algorithms, elliptical curves, and key sizes are required: Signature algorithms: ES256 ES384 ES512 RS256 RS384 RS512 Elliptical curves: P256 P384 P521 Key sizes: ECDSA 256 ECDSA 384 ECDSA 521 RSA 2048."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "Azure Key Vault Overview - Azure Key Vault",
+        "url": "https://learn.microsoft.com/en-us/azure/key-vault/general/overview",
+        "snippet": "About Azure Key Vault Summarize this article for me In this article Azure Key Vault is one of several key management solutions in Azure, and helps solve the following problems: Secrets Management - Azure Key Vault can be used to Securely store and tightly control access to tokens, passwords, certificates, API keys, and ot... For organizations."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "Cryptography Tools - Win32 apps",
+        "url": "https://learn.microsoft.com/en-us/windows/win32/seccrypto/cryptography-tools",
+        "snippet": "Cryptography Tools Summarize this article for me In this article Cryptography tools provide command-line tools for code signing, signature verification, and other cryptography tasks. For information about digital signing, s... RSA Laboratories, PKCS #7: Cryptographic Message Syntax Standard. Version 1.5, November, 1993. Schneier, Bruce, Applied."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "About keys - Azure Key Vault",
+        "url": "https://learn.microsoft.com/en-us/azure/key-vault/keys/about-keys",
+        "snippet": "...nd HSM-protected (HSM key types in Premium SKU) RSA, EC, and (Premium only) oct-HSM (symmetric/AES) https://.vault.azure.net Managed HSMs HSM-protected RSA-HSM,HSM-protected keys (Key Vault Premium) Key type Sizes / curves EC-HSM: Elliptic Curve key P-256, P-384, P-521, secp256k1/P-256K RSA-HSM: RSA key 2048-bit, 3072-bit, 4096-bit oct-HSM:."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "Create and use an SSH key pair for Linux VMs in Azure - Azure Virtual Machines",
+        "url": "https://learn.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys",
+        "snippet": "Supported SSH key formats Azure currently supports following key types: SSH protocol 2 (SSH-2) RSA (Rivest, Shamir, Adleman) with a minimum length of 2048 bits ED25519 Keys with a fixed length of 256 bits Other key formats such as Elliptic-curve Diffie–Hellman (ECDH) and Elliptic Curve Digital Signature Algorithm (ECDSA) are currently not."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Detailed steps to create an SSH key pair - Azure Virtual Machines",
+        "url": "https://learn.microsoft.com/en-us/azure/virtual-machines/linux/create-ssh-keys-detailed",
+        "snippet": "Supported SSH key formats Azure currently supports following key types: SSH protocol 2 (SSH-2) RSA (Rivest, Shamir, Adleman) with a minimum length of 2048 bits ED25519 Keys with a fix... Command explained ssh-keygen = the program used to create the keys -m PEM = format the key as PEM -t rsa = type of key to create, in this case in the RSA format."
+      }
+    ]
+  },
+  "Q30": {
+    "status": "ok",
+    "query": "variable byte compression inverted index",
+    "collected_at": "2026-11-26T14:43:44.268387+00:00",
+    "request_url": "https://learn.microsoft.com/api/search?search=variable+byte+compression+inverted+index&locale=en-us&%24top=10",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Define variables - Azure Pipelines",
+        "url": "https://learn.microsoft.com/en-us/azure/devops/pipelines/process/variables",
+        "snippet": "A variable set in the pipeline root level overrides a variable set in the Pipeline settings UI. To learn more about how to work with variables defined at the job, stage, and root level, see Variable scope. User-defined variables When you define a variable, use different syntaxes (macro, template expression, or runtime). The syntax you choose."
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "CREATE INDEX (Transact-SQL) - SQL Server",
+        "url": "https://learn.microsoft.com/en-us/sql/t-sql/statements/create-index-transact-sql",
+        "snippet": "PAGE Index or specified partitions are compressed ... XML_COMPRESSION Applies to: SQL Server 2022 (16.x) and later versions, Azure SQL Database, SQL database in Microsoft Fabric, and Azure SQL Managed Instance Specifies the XML compression option for the specified index that contains one or more xml data type columns. The options are as follows:."
+      },
+      {
+        "rank": 3,
+        "original_rank": 3,
+        "title": "Index Architecture and Design Guide - SQL Server",
+        "url": "https://learn.microsoft.com/en-us/sql/relational-databases/sql-server-index-design-guide",
+        "snippet": "This guide covers the following types of indexes: Primary storage format Index type Disk-based rowstore Clustered Nonclustered Unique Filtered Columnstore Clustered columnstore Nonclustered columnstore Memory-optimized Hash Memory-optimized nonclustered For information about XML indexes, see XML indexes (SQL Server) and Selective XML indexes."
+      },
+      {
+        "rank": 4,
+        "original_rank": 4,
+        "title": "ALTER INDEX (Transact-SQL) - SQL Server",
+        "url": "https://learn.microsoft.com/en-us/sql/t-sql/statements/alter-index-transact-sql",
+        "snippet": "ALTER INDEX (Transact-SQL) Summarize this article for me In this article Applies to: SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics SQL database in Microsoft Fabric Modifies an existing table or view index (rowstore, columnstore, or XML) by disabling, rebuilding, or reorganizing the index; or by setting options on."
+      },
+      {
+        "rank": 5,
+        "original_rank": 5,
+        "title": "Data compression - SQL Server",
+        "url": "https://learn.microsoft.com/en-us/sql/relational-databases/data-compression/data-compression",
+        "snippet": "Data compression Summarize this article for me In this article Applies to: SQL Server Azure SQL Database Azure SQL Managed Instance SQL database in Microsoft Fabric SQL Server, Azure SQL Database, and Azure SQL Managed Instance support row and page compression for rowstore tables and indexes, and support columnstore and columnstore archival."
+      },
+      {
+        "rank": 6,
+        "original_rank": 6,
+        "title": "BitBlt function (wingdi.h) - Win32 apps",
+        "url": "https://learn.microsoft.com/en-us/windows/win32/api/wingdi/nf-wingdi-bitblt",
+        "snippet": "BitBlt function (wingdi.h) Summarize this article for me In this article The BitBlt function performs a bit-block transfer of the color data corresponding to a rectangle of pixels from the specified source device context into a destination device context. Syntax Parameters [in] hdc A handle to the destination device context. [in] x The."
+      },
+      {
+        "rank": 7,
+        "original_rank": 7,
+        "title": "Variables actions reference - Power Automate",
+        "url": "https://learn.microsoft.com/en-us/power-automate/desktop-flows/actions-reference/variables",
+        "snippet": "Variable actions Summarize this article for me In this article To manually create a variable in a desktop flow, deploy the Set variable action. This action requires you to provide a name and a value for the new variable. Important You can't use reserved keywords as variable names. To increase or decrease the value of a numeric variable, use the."
+      },
+      {
+        "rank": 8,
+        "original_rank": 8,
+        "title": "IndexKind Class (Microsoft.Extensions.VectorData)",
+        "url": "https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.vectordata.indexkind",
+        "snippet": "IndexKind Class Definition Namespace: Microsoft.Extensions.VectorData Assembly:Microsoft.Extensions.VectorData.Abstractions.dll Package:Microsoft.Extensions.VectorData.Abstractions v10.11.0 Defines a list of well-known index types that can be used to index vectors. IvfFlat Specifies an Inverted File with Flat Compression. QuantizedFlat Specifies."
+      },
+      {
+        "rank": 9,
+        "original_rank": 9,
+        "title": "IndexKind.IvfFlat Field (Microsoft.Extensions.VectorData)",
+        "url": "https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.vectordata.indexkind.ivfflat",
+        "snippet": "IndexKind.IvfFlat Field Definition Namespace: Microsoft.Extensions.VectorData Assembly:Microsoft.Extensions.VectorData.Abstractions.dll Package:Microsoft.Extensions.VectorData.Abstractions v10.11.0 Specifies an Inverted File with Flat Compression. Field Value String Remarks This search is designed to enhance search efficiency by narrowing the."
+      },
+      {
+        "rank": 10,
+        "original_rank": 10,
+        "title": "Enable compression on a table or index - SQL Server",
+        "url": "https://learn.microsoft.com/en-us/sql/relational-databases/data-compression/enable-compression-on-a-table-or-index",
+        "snippet": "Enable compression on a table or index Summarize this article for me In this article Applies to: SQL Server Azure SQL Database Azure SQL Managed Instance Azure Synapse Analytics SQL database in Microsoft Fabric This article describes how to enable data compression on an existing table or index in SQL Server by using SQL Server Management Studio or."
+      }
+    ]
+  }
+}

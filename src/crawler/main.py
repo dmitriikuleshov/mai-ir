@@ -14,6 +14,7 @@ import xml.etree.ElementTree as ET
 from collections.abc import AsyncIterator
 from dataclasses import dataclass
 from datetime import UTC, datetime
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 from typing import Any
 from urllib.parse import parse_qsl, quote, urlencode, urlsplit, urlunsplit
@@ -23,11 +24,19 @@ import aiohttp
 import yaml
 from bs4 import BeautifulSoup
 from pymongo import ASCENDING, AsyncMongoClient, ReturnDocument, UpdateOne
+from pymongo.errors import DuplicateKeyError
 
 LOGGER = logging.getLogger("crawler")
-RETRYABLE_STATUSES = {429, 500, 502, 503, 504}
+RETRYABLE_STATUSES = {500, 502, 503, 504}
 TRACKING_PARAMETERS = {"fbclid", "gclid", "mc_cid", "mc_eid", "wt.mc_id"}
 LOG_TITLE_WIDTH = 90
+
+
+class SimpleLogFilter(logging.Filter):
+    """Скрывает предупреждения в простом режиме, сохраняя статистику и ошибки."""
+
+    def filter(self, record: logging.LogRecord) -> bool:
+        return record.levelno != logging.WARNING
 
 
 def unix_time() -> int:
@@ -180,6 +189,10 @@ def load_config(path: Path) -> dict[str, Any]:
             raise ValueError(f"В секции db отсутствует параметр {key!r}")
 
     delays = config["logic"].get("delay_seconds")
+    if float(config["logic"].get("rate_limit_cooldown_seconds", 3600)) <= 0:
+        raise ValueError("logic.rate_limit_cooldown_seconds должен быть > 0")
+    if config["logic"].get("log_mode", "detailed") not in {"detailed", "simple"}:
+        raise ValueError("logic.log_mode должен быть detailed или simple")
     if not isinstance(delays, dict):
         raise TypeError("logic.delay_seconds должен содержать задержки по источникам")
     user_agent = str(config["logic"].get("user_agent", ""))
@@ -195,6 +208,9 @@ def load_config(path: Path) -> dict[str, Any]:
             raise ValueError("Задержка между запросами не может быть отрицательной")
 
     wikipedia = config["sources"].get("wikipedia", {})
+    arxiv = config["sources"].get("arxiv", {})
+    if int(arxiv.get("category_batches_per_run", 0)) < 0:
+        raise ValueError("sources.arxiv.category_batches_per_run должен быть >= 0")
     if wikipedia.get("enabled", False):
         for key in (
             "seed_categories",
@@ -225,6 +241,27 @@ class ResponseTooLarge(RuntimeError):
 
 class StopRequested(RuntimeError):
     pass
+
+
+class RateLimited(Exception):
+    """HTTP 429 требует паузы всего источника, а не перехода к следующему URL."""
+
+    def __init__(self, url: str, seconds: float):
+        self.seconds = seconds
+        super().__init__(f"HTTP 429: {url}; пауза {seconds:.0f} с")
+
+
+def rate_limit_delay(value: str, minimum: float) -> float:
+    """Учитывает Retry-After как число секунд или HTTP-дату, сохраняя минимальную паузу."""
+    if value.isdigit():
+        return max(minimum, float(value))
+    try:
+        deadline = parsedate_to_datetime(value)
+        if deadline.tzinfo is None:
+            deadline = deadline.replace(tzinfo=UTC)
+        return max(minimum, deadline.timestamp() - time.time())
+    except (ValueError, TypeError, OverflowError):
+        return minimum
 
 
 async def wait_or_stop(stop_event: asyncio.Event | None, seconds: float) -> None:
@@ -267,6 +304,7 @@ class HttpClient:
         backoff_seconds: float,
         max_response_bytes: int,
         stop_event: asyncio.Event | None = None,
+        rate_limit_cooldown_seconds: float = 3600,
     ):
         self.session = session
         self.rate_limiter = RateLimiter(delay_seconds)
@@ -274,6 +312,7 @@ class HttpClient:
         self.backoff_seconds = backoff_seconds
         self.max_response_bytes = max_response_bytes
         self.stop_event = stop_event
+        self.rate_limit_cooldown_seconds = rate_limit_cooldown_seconds
 
     @staticmethod
     async def _read_body(response: aiohttp.ClientResponse, limit: int) -> bytes:
@@ -309,6 +348,14 @@ class HttpClient:
                     headers=headers,
                     allow_redirects=True,
                 ) as response:
+                    if response.status == 429:
+                        await response.read()
+                        raise RateLimited(
+                            url, rate_limit_delay(
+                                response.headers.get("Retry-After", ""),
+                                self.rate_limit_cooldown_seconds,
+                            ),
+                        )
                     if response.status in RETRYABLE_STATUSES:
                         await response.read()
                         if self.stop_event is not None and self.stop_event.is_set():
@@ -567,9 +614,34 @@ class MongoStorage:
             upsert=True,
         )
 
-    async def enqueue_tasks(self, tasks: list[dict[str, Any]]) -> None:
+    async def enqueue_tasks(
+        self, tasks: list[dict[str, Any]], *, skip_fresh_since: int | None = None
+    ) -> int:
+        """Добавляет задачи; при обходе категорий пачкой исключает свежие страницы."""
         if not tasks:
-            return
+            return 0
+        skipped = 0
+        if skip_fresh_since is not None:
+            page_ids = [task["page_id"] for task in tasks if task["kind"] == "page"]
+            fresh_ids = set()
+            if page_ids:
+                async for document in self.documents.find(
+                    {
+                        "source": "wikipedia",
+                        "source_id": {"$in": page_ids},
+                        "checked_at": {"$gt": skip_fresh_since},
+                    },
+                    {"source_id": 1},
+                ):
+                    fresh_ids.add(document["source_id"])
+            filtered = [
+                task for task in tasks
+                if task["kind"] != "page" or task["page_id"] not in fresh_ids
+            ]
+            skipped = len(tasks) - len(filtered)
+            tasks = filtered
+            if not tasks:
+                return skipped
         now = unix_time()
         operations = []
         for task in tasks:
@@ -592,6 +664,7 @@ class MongoStorage:
                 )
             )
         await self.queue.bulk_write(operations, ordered=False)
+        return skipped
 
     async def claim_task(
         self,
@@ -702,6 +775,10 @@ class BaseCrawler:
         self.recrawl_batch_size = int(config["logic"].get("recrawl_batch_size", 1000))
         self.max_documents = source_config.get("max_documents")
         self.robots: RobotsPolicy | None = None
+        self.downloaded = 0
+        self.skipped_fresh = 0
+        self.categories_processed = 0
+        self.simple_log = config["logic"].get("log_mode", "detailed") == "simple"
 
     def is_due(self, document: dict[str, Any] | None) -> bool:
         if document is None:
@@ -732,6 +809,7 @@ class BaseCrawler:
     ) -> str:
         existing = existing or await self.storage.get_document(self.source, source_id)
         if not force and not self.is_due(existing):
+            self.skipped_fresh += 1
             return "fresh"
         normalized_url = normalize_url(url)
         if self.robots and not self.robots.allows(normalized_url):
@@ -767,17 +845,31 @@ class BaseCrawler:
             title_node = soup.select_one("h1") or soup.select_one("title")
             title = title_node.get_text(" ", strip=True) if title_node else ""
 
-        result = await self.storage.save_document(
-            source=self.source,
-            source_id=source_id,
-            url=normalized_url,
-            raw_html=response.text,
-            title=title,
-            metadata=metadata,
-            etag=response.etag,
-            last_modified=response.last_modified,
-        )
-        if result in {"new", "changed"}:
+        try:
+            result = await self.storage.save_document(
+                source=self.source,
+                source_id=source_id,
+                url=normalized_url,
+                raw_html=response.text,
+                title=title,
+                metadata=metadata,
+                etag=response.etag,
+                last_modified=response.last_modified,
+            )
+        except DuplicateKeyError as error:
+            # Один URL может появиться с другим ID (например, после пересоздания
+            # страницы). Существующий документ сохраняем, задачу не повторяем.
+            if (error.details or {}).get("keyPattern") != {"source": 1, "url": 1}:
+                raise
+            LOGGER.warning(
+                "%s: URL уже сохранён; пропущен source_id=%s | %s",
+                self.source, source_id, normalized_url,
+            )
+            return "duplicate_url"
+        # Считаем успешно скачанный и сохранённый HTML, включая неизменившийся.
+        # Пропуски свежих документов, HTTP 304 и ошибки в счётчик не входят.
+        self.downloaded += 1
+        if result in {"new", "changed"} and not self.simple_log:
             LOGGER.info(
                 "%-15s | %-10s | %9.1f KiB | %s",
                 self.source,
@@ -785,7 +877,7 @@ class BaseCrawler:
                 len(response.text.encode("utf-8")) / 1024,
                 shorten_log_value(title or source_id),
             )
-        else:
+        elif not self.simple_log:
             LOGGER.debug("%s | без изменений | %s", self.source, normalized_url)
         return result
 
@@ -811,6 +903,8 @@ class BaseCrawler:
                 processed += 1
             except StopRequested:
                 break
+            except RateLimited:
+                raise
             except Exception as error:  # noqa: BLE001 - ошибка одного документа не останавливает обход
                 LOGGER.warning(
                     "Не удалось перепроверить %s: %s", document["url"], error
@@ -841,23 +935,22 @@ class WikipediaCrawler(BaseCrawler):
         )
         if reset:
             LOGGER.info("Wikipedia: повторно поставлено в очередь задач: %s", reset)
-
-        if await self.storage.task_count(self.source, discovery_version) == 0:
-            seeds = [
-                {
-                    "source": self.source,
-                    "kind": "category",
-                    "key": f"v{discovery_version}:{category}",
-                    "title": category,
-                    "depth": 0,
-                    "root_category": category,
-                    "category_path": [category],
-                    "discovery_version": discovery_version,
-                    "priority": 20,
-                }
-                for category in self.source_config["seed_categories"]
-            ]
-            await self.storage.enqueue_tasks(seeds)
+        # Upsert добавляет новые корни на каждом запуске, не сбрасывая старые задачи.
+        seeds = [
+            {
+                "source": self.source,
+                "kind": "category",
+                "key": f"v{discovery_version}:{category}",
+                "title": category,
+                "depth": 0,
+                "root_category": category,
+                "category_path": [category],
+                "discovery_version": discovery_version,
+                "priority": 0,
+            }
+            for category in self.source_config["seed_categories"]
+        ]
+        await self.storage.enqueue_tasks(seeds)
 
         worker_id = f"wikipedia-{unix_time()}"
         lease_seconds = int(self.config["logic"].get("lease_seconds", 300))
@@ -878,6 +971,7 @@ class WikipediaCrawler(BaseCrawler):
             try:
                 if task["kind"] == "category":
                     await self.process_category(task)
+                    self.categories_processed += 1
                 else:
                     await self.process_page(task)
                     processed_pages += 1
@@ -885,6 +979,9 @@ class WikipediaCrawler(BaseCrawler):
             except StopRequested:
                 await self.storage.retry_task(task["_id"], "Остановка по запросу", 0)
                 break
+            except RateLimited as error:
+                await self.storage.retry_task(task["_id"], str(error), int(error.seconds))
+                raise
             except Exception as error:
                 LOGGER.exception("Ошибка задачи Wikipedia %s", task.get("key"))
                 await self.storage.retry_task(task["_id"], str(error), 60)
@@ -958,7 +1055,9 @@ class WikipediaCrawler(BaseCrawler):
                             "priority": 20,
                         }
                     )
-            await self.storage.enqueue_tasks(tasks)
+            self.skipped_fresh += await self.storage.enqueue_tasks(
+                tasks, skip_fresh_since=unix_time() - self.recrawl_after
+            )
             continuation = payload.get("continue", {}).get("cmcontinue")
             if not continuation:
                 return
@@ -1077,12 +1176,29 @@ class ArxivCrawler(BaseCrawler):
         )
         await self.recrawl_due_documents()
         processed = 0
-        sort_order = str(self.source_config.get("sort_order", "descending"))
-        earliest_month = str(self.source_config.get("earliest_month", "1993-01"))
         for category in self.source_config["categories"]:
             if self.stop_event.is_set():
                 break
+            if self.max_documents is not None and processed >= int(self.max_documents):
+                break
+            processed = await self.crawl_category(category, processed)
+        LOGGER.info("arXiv: обработано записей за запуск: %s", processed)
+
+    async def crawl_category(self, category: str, processed: int) -> int:
+        """Обходит категорию; после сетевой ошибки оставляет её позицию для следующего запуска."""
+        sort_order = str(self.source_config.get("sort_order", "descending"))
+        earliest_month = str(self.source_config.get("earliest_month", "1993-01"))
+        batch_limit = int(self.source_config.get("category_batches_per_run", 0))
+        batches = 0
+        try:
             state = await self.storage.get_state(self.source, category)
+            earliest_month = max(
+                earliest_month, str(state.get("scan_earliest_month", earliest_month))
+            )
+            # После полного исторического обхода ищем новые работы за текущий
+            # и предыдущий месяцы. Изменения старых документов проверяет recrawl.
+            if state.get("caught_up_at"):
+                earliest_month = max(earliest_month, previous_month(current_month()))
             can_resume = (
                 state.get("discovery_mode") == "monthly"
                 and state.get("sort_order") == sort_order
@@ -1091,12 +1207,21 @@ class ArxivCrawler(BaseCrawler):
             month = str(state.get("month")) if can_resume else current_month()
             start = int(state.get("start", 0)) if can_resume else 0
             entry_index = int(state.get("entry_index", 0)) if can_resume else 0
+            LOGGER.info("arXiv: категория %s, месяц %s, смещение %s", category, month, start)
             while not self.stop_event.is_set() and month >= earliest_month:
+                # Ограничиваем работу одной категории, чтобы она не задерживала
+                # остальные на весь многолетний архив. Сохранённый offset остаётся.
+                if batch_limit and batches >= batch_limit:
+                    LOGGER.info(
+                        "arXiv: %s — обработано пачек %s; позиция сохранена",
+                        category, batches,
+                    )
+                    return processed
                 if self.max_documents is not None and processed >= int(
                     self.max_documents
                 ):
                     LOGGER.info("arXiv: достигнут лимит запуска %s", self.max_documents)
-                    return
+                    return processed
                 response = await self.http.get_text(
                     self.api_url,
                     params={
@@ -1111,6 +1236,7 @@ class ArxivCrawler(BaseCrawler):
                 if response.status != 200:
                     raise RuntimeError(f"arXiv API вернул {response.status}")
                 entries = parse_arxiv_entries(response.text)
+                batches += 1
                 if not entries:
                     month = previous_month(month)
                     await self.storage.set_state(
@@ -1118,6 +1244,7 @@ class ArxivCrawler(BaseCrawler):
                         category,
                         {
                             "discovery_mode": "monthly",
+                            "scan_earliest_month": earliest_month,
                             "month": month,
                             "start": 0,
                             "entry_index": 0,
@@ -1131,7 +1258,7 @@ class ArxivCrawler(BaseCrawler):
 
                 for index in range(entry_index, len(entries)):
                     if self.stop_event.is_set():
-                        return
+                        return processed
                     entry = entries[index]
                     source_id = entry["source_id"]
                     existing = await self.storage.get_document(self.source, source_id)
@@ -1157,6 +1284,7 @@ class ArxivCrawler(BaseCrawler):
                         category,
                         {
                             "discovery_mode": "monthly",
+                            "scan_earliest_month": earliest_month,
                             "month": month,
                             "start": start,
                             "entry_index": index + 1,
@@ -1167,7 +1295,7 @@ class ArxivCrawler(BaseCrawler):
                     if self.max_documents is not None and processed >= int(
                         self.max_documents
                     ):
-                        return
+                        return processed
 
                 start += len(entries)
                 entry_index = 0
@@ -1176,6 +1304,7 @@ class ArxivCrawler(BaseCrawler):
                     category,
                     {
                         "discovery_mode": "monthly",
+                        "scan_earliest_month": earliest_month,
                         "month": month,
                         "start": start,
                         "entry_index": 0,
@@ -1189,6 +1318,7 @@ class ArxivCrawler(BaseCrawler):
                     category,
                     {
                         "discovery_mode": "monthly",
+                        "scan_earliest_month": earliest_month,
                         "month": earliest_month,
                         "start": 0,
                         "entry_index": 0,
@@ -1196,7 +1326,14 @@ class ArxivCrawler(BaseCrawler):
                         "caught_up_at": unix_time(),
                     },
                 )
-        LOGGER.info("arXiv: обработано записей за запуск: %s", processed)
+        except StopRequested:
+            raise
+        except (aiohttp.ClientError, TimeoutError, RuntimeError) as error:
+            LOGGER.error(
+                "arXiv: категория %s отложена: %s; позиция сохранена, переход к следующей",
+                category, error,
+            )
+        return processed
 
 
 class MicrosoftLearnCrawler(BaseCrawler):
@@ -1336,14 +1473,71 @@ class MicrosoftLearnCrawler(BaseCrawler):
         LOGGER.info("Microsoft Learn: обработано URL за запуск: %s", processed)
 
 
+async def log_download_progress(
+    crawlers: list[BaseCrawler], finished: asyncio.Event
+) -> None:
+    """Раз в минуту выводит прирост загрузок, при завершении — остаток интервала."""
+    previous = {crawler.source: 0 for crawler in crawlers}
+    previous_categories = {crawler.source: 0 for crawler in crawlers}
+    previous_skipped = {crawler.source: 0 for crawler in crawlers}
+    started = time.monotonic()
+    while True:
+        try:
+            await asyncio.wait_for(finished.wait(), timeout=60)
+        except TimeoutError:
+            pass
+        elapsed = time.monotonic() - started
+        counts = {crawler.source: crawler.downloaded for crawler in crawlers}
+        downloaded = sum(counts[name] - previous[name] for name in counts)
+        parts = []
+        for crawler in crawlers:
+            name = crawler.source
+            detail = f"{name}: {counts[name] - previous[name]}"
+            if name == "wikipedia":
+                categories = crawler.categories_processed - previous_categories[name]
+                skipped = crawler.skipped_fresh - previous_skipped[name]
+                detail += f" (категорий: {categories}, свежих пропущено: {skipped})"
+            parts.append(detail)
+            previous_categories[name] = crawler.categories_processed
+            previous_skipped[name] = crawler.skipped_fresh
+        details = ", ".join(parts)
+        LOGGER.info(
+            "Скачано за %s (%.0f с): %s | %s | за запуск: %s",
+            "последний интервал" if finished.is_set() else "минуту",
+            elapsed,
+            downloaded,
+            details or "источники отключены",
+            sum(counts.values()),
+        )
+        previous = counts
+        started = time.monotonic()
+        if finished.is_set():
+            return
+
+
 async def run_source(name: str, crawler: BaseCrawler) -> Exception | None:
     try:
+        if isinstance(crawler, BaseCrawler):
+            state = await crawler.storage.get_state(name, "rate_limit")
+            remaining = int(state.get("retry_at", 0)) - unix_time()
+            if remaining > 0:
+                LOGGER.info("Источник %s на паузе после HTTP 429 ещё %s с", name, remaining)
+                return None
         LOGGER.info("Запуск источника %s", name)
         await crawler.run()
         LOGGER.info("Источник %s остановлен", name)
         return None
     except StopRequested:
         LOGGER.info("Источник %s остановлен", name)
+        return None
+    except RateLimited as error:
+        await crawler.storage.set_state(
+            name, "rate_limit", {"retry_at": unix_time() + int(error.seconds) + 1}
+        )
+        LOGGER.info(
+            "Источник %s приостановлен: HTTP 429, пауза %.0f с; повторный запуск позже",
+            name, error.seconds,
+        )
         return None
     except Exception as error:
         LOGGER.error("Источник %s завершился с ошибкой: %s", name, error)
@@ -1402,13 +1596,21 @@ async def run(config: dict[str, Any]) -> int:
         level=getattr(logging, str(logic.get("log_level", "INFO")).upper()),
         format="%(asctime)s | %(levelname)-8s | %(message)s",
     )
-    LOGGER.info(
-        "%-15s | %-10s | %10s | %s",
-        "SOURCE",
-        "STATUS",
-        "SIZE",
-        "TITLE",
-    )
+    simple_log = logic.get("log_mode", "detailed") == "simple"
+    for handler in logging.getLogger().handlers:
+        for log_filter in list(handler.filters):
+            if isinstance(log_filter, SimpleLogFilter):
+                handler.removeFilter(log_filter)
+        if simple_log:
+            handler.addFilter(SimpleLogFilter())
+    if not simple_log:
+        LOGGER.info(
+            "%-15s | %-10s | %10s | %s",
+            "SOURCE",
+            "STATUS",
+            "SIZE",
+            "TITLE",
+        )
     stop_event = asyncio.Event()
     loop = asyncio.get_running_loop()
     for signal_name in (signal.SIGINT, signal.SIGTERM):
@@ -1441,6 +1643,7 @@ async def run(config: dict[str, Any]) -> int:
                 "microsoft_learn": MicrosoftLearnCrawler,
             }
             tasks = []
+            crawlers = []
             for source_name, crawler_type in crawler_types.items():
                 source_config = config["sources"].get(source_name, {})
                 if not source_config.get("enabled", False):
@@ -1452,11 +1655,23 @@ async def run(config: dict[str, Any]) -> int:
                     backoff_seconds=float(logic.get("backoff_seconds", 2)),
                     max_response_bytes=int(logic.get("max_response_bytes", 14_000_000)),
                     stop_event=stop_event,
+                    rate_limit_cooldown_seconds=float(logic.get("rate_limit_cooldown_seconds", 3600)),
                 )
                 crawler = crawler_type(config, source_config, storage, http, stop_event)
+                crawlers.append(crawler)
                 tasks.append(asyncio.create_task(run_source(source_name, crawler)))
 
-            results = await asyncio.gather(*tasks)
+            finished = asyncio.Event()
+            progress_task = (
+                asyncio.create_task(log_download_progress(crawlers, finished))
+                if simple_log else None
+            )
+            try:
+                results = await asyncio.gather(*tasks)
+            finally:
+                finished.set()
+                if progress_task is not None:
+                    await progress_task
             errors = [result for result in results if result is not None]
             if errors:
                 LOGGER.error("Crawler завершён с ошибками источников: %s", len(errors))

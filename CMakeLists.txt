@@ -155,6 +155,14 @@ target_link_libraries(phrase_search PRIVATE phrase_search_core
                                            ${MONGOC_LIBRARY} ${BSON_LIBRARY})
 target_compile_options(phrase_search PRIVATE -Wall -Wextra -Werror -pedantic)
 
+add_executable(web_search src/web/search_worker.cpp
+               src/boolean_search/app/config.cpp)
+target_include_directories(web_search PRIVATE ${MONGOC_INCLUDE_DIR}
+                                             ${BSON_INCLUDE_DIR})
+target_link_libraries(web_search PRIVATE tfidf_search_core phrase_search_core
+                                         ${MONGOC_LIBRARY} ${BSON_LIBRARY})
+target_compile_options(web_search PRIVATE -Wall -Wextra -Werror -pedantic)
+
 include(CTest)
 if(BUILD_TESTING)
     find_package(GTest QUIET)

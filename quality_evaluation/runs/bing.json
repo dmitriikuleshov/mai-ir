@@ -1,0 +1,528 @@
+{
+  "Q01": {
+    "status": "ok",
+    "query": "database transaction isolation",
+    "collected_at": "2026-11-26T14:31:10.573792+00:00",
+    "request_url": "https://www.bing.com/search?q=database+transaction+isolation+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Database - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Database",
+        "snippet": "In computing, a database is an organized collection of data or a type of data store based on the use of a database management …"
+      }
+    ]
+  },
+  "Q02": {
+    "status": "ok",
+    "query": "distributed database replication",
+    "collected_at": "2026-11-26T14:31:13.037639+00:00",
+    "request_url": "https://www.bing.com/search?q=distributed+database+replication+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": []
+  },
+  "Q03": {
+    "status": "ok",
+    "query": "inverted index information retrieval",
+    "collected_at": "2026-11-26T14:31:15.281261+00:00",
+    "request_url": "https://www.bing.com/search?q=inverted+index+information+retrieval+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": []
+  },
+  "Q04": {
+    "status": "ok",
+    "query": "C++ memory management",
+    "collected_at": "2026-11-26T14:31:17.490145+00:00",
+    "request_url": "https://www.bing.com/search?q=C%2B%2B+memory+management+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "C++ - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/C%2B%2B",
+        "snippet": "The C++ programming language was initially standardized in 1998 as ISO/IEC 14882:1998, which was then amended by the C++03, …"
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "Latest Supported Visual C++ Redistributable Downloads",
+        "url": "https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170",
+        "snippet": "Mar 9, 2026 · A Visual C++ Redistributable installs Microsoft C and C++ Runtime libraries. Many applications built by using Microsoft …"
+      }
+    ]
+  },
+  "Q05": {
+    "status": "ok",
+    "query": "C# asynchronous programming",
+    "collected_at": "2026-11-26T14:31:19.719131+00:00",
+    "request_url": "https://www.bing.com/search?q=C%23+asynchronous+programming+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 2,
+        "title": "Operators and expressions - List all operators and expression - C# ...",
+        "url": "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/",
+        "snippet": "Jan 24, 2026 · Learn the C# operators and expressions, operator precedence, and operator associativity."
+      },
+      {
+        "rank": 2,
+        "original_rank": 3,
+        "title": "C# Guide - .NET managed language - C# | Microsoft Learn",
+        "url": "https://learn.microsoft.com/en-us/dotnet/csharp/",
+        "snippet": "Mar 2, 2024 · The C# guide has everything you need to learn C# and get started writing .NET apps. Learn C# programming - for …"
+      },
+      {
+        "rank": 3,
+        "original_rank": 5,
+        "title": "C Sharp (programming language ) - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/C_Sharp_(programming_language)",
+        "snippet": "James Gosling, who created the Java programming language in 1994, and Bill Joy, a co-founder of Sun Microsystems, the originator …"
+      }
+    ]
+  },
+  "Q06": {
+    "status": "ok",
+    "query": ".NET garbage collection",
+    "collected_at": "2026-11-26T14:31:21.956090+00:00",
+    "request_url": "https://www.bing.com/search?q=.NET+garbage+collection+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 3,
+        "title": ".NET - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/.NET",
+        "snippet": "At the heart of the .NET Platform is the .NET Framework, a high-productivity, multilanguage development and execution environment …"
+      },
+      {
+        "rank": 2,
+        "original_rank": 4,
+        "title": ".NET documentation - .NET | Microsoft Learn",
+        "url": "https://learn.microsoft.com/en-us/dotnet/",
+        "snippet": "Sep 20, 2022 · Learn to use .NET to create applications on any platform using C#, F#, and Visual Basic. Browse API reference, …"
+      },
+      {
+        "rank": 3,
+        "original_rank": 6,
+        "title": "Welcome to .NET - .NET | Microsoft Learn - learn.microsoft.com",
+        "url": "https://learn.microsoft.com/en-us/dotnet/welcome",
+        "snippet": "Apr 30, 2026 · See Get started with .NET to learn how to create .NET apps. You can build many types of apps with .NET, such as …"
+      },
+      {
+        "rank": 4,
+        "original_rank": 7,
+        "title": ".NET Framework - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/.NET_Framework",
+        "snippet": "Microsoft began developing .NET Framework in the late 1990s, originally under the name of Next Generation Windows Services …"
+      }
+    ]
+  },
+  "Q07": {
+    "status": "ok",
+    "query": "node.js event loop",
+    "collected_at": "2026-11-26T14:31:24.165458+00:00",
+    "request_url": "https://www.bing.com/search?q=node.js+event+loop+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 3,
+        "title": "Node.js - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nodejs",
+        "snippet": "Node.js is a cross-platform, open-source JavaScript runtime environment that can run on Windows, Linux, Unix, macOS, and more. …"
+      }
+    ]
+  },
+  "Q08": {
+    "status": "ok",
+    "query": "container orchestration kubernetes",
+    "collected_at": "2026-11-26T14:31:26.386635+00:00",
+    "request_url": "https://www.bing.com/search?q=container+orchestration+kubernetes+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": []
+  },
+  "Q09": {
+    "status": "ok",
+    "query": "TLS certificate validation",
+    "collected_at": "2026-11-26T14:31:28.591172+00:00",
+    "request_url": "https://www.bing.com/search?q=TLS+certificate+validation+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Transport Layer Security - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Transport_Layer_Security",
+        "snippet": "It runs in the presentation layer and is itself composed of two layers: the TLS record and the TLS handshake protocols. The closely …"
+      },
+      {
+        "rank": 2,
+        "original_rank": 7,
+        "title": "TLS - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/TLS",
+        "snippet": "This disambiguation page lists articles associated with the title TLS. If an internal link incorrectly led you here, you may wish to …"
+      }
+    ]
+  },
+  "Q10": {
+    "status": "ok",
+    "query": "PowerShell remoting SSH",
+    "collected_at": "2026-11-26T14:31:30.803107+00:00",
+    "request_url": "https://www.bing.com/search?q=PowerShell+remoting+SSH+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "PowerShell Documentation - PowerShell | Microsoft Learn",
+        "url": "https://learn.microsoft.com/en-us/powershell/",
+        "snippet": "May 10, 2024 · PowerShell Editions + Tools Available editions, tools, and technology that supports PowerShell"
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "Install PowerShell 7 on Windows - PowerShell | Microsoft Learn",
+        "url": "https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-windows?view=powershell-7.6",
+        "snippet": "Sep 21, 2026 · Learn how to install the latest version of PowerShell 7, which runs side-by-side with Windows PowerShell 5.1."
+      },
+      {
+        "rank": 3,
+        "original_rank": 5,
+        "title": "PowerShell - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/PowerShell",
+        "snippet": "PowerShell ... PowerShell is a shell program developed by Microsoft for task automation and configuration management. As is …"
+      }
+    ]
+  },
+  "Q11": {
+    "status": "ok",
+    "query": "Azure virtual network peering",
+    "collected_at": "2026-11-26T14:31:33.006226+00:00",
+    "request_url": "https://www.bing.com/search?q=Azure+virtual+network+peering+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 4,
+        "title": "Microsoft Azure - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Microsoft_Azure",
+        "snippet": "Microsoft Azure, sometimes stylized Azure, and formerly Windows Azure, is the cloud computing platform developed by Microsoft. It …"
+      },
+      {
+        "rank": 2,
+        "original_rank": 6,
+        "title": "Azure documentation | Microsoft Learn",
+        "url": "https://learn.microsoft.com/en-us/azure/",
+        "snippet": "Aug 2, 2020 · Learn how to build and manage powerful applications using Microsoft Azure services. Get documentation, example …"
+      },
+      {
+        "rank": 3,
+        "original_rank": 7,
+        "title": "List of Azure Regions | Microsoft Learn",
+        "url": "https://learn.microsoft.com/en-us/azure/reliability/regions-list",
+        "snippet": "Oct 12, 2026 · Azure provides the most extensive global footprint of any cloud provider and is rapidly opening new regions. This …"
+      }
+    ]
+  },
+  "Q12": {
+    "status": "ok",
+    "query": "Microsoft Graph OAuth permissions",
+    "collected_at": "2026-11-26T14:31:35.214680+00:00",
+    "request_url": "https://www.bing.com/search?q=Microsoft+Graph+OAuth+permissions+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": []
+  },
+  "Q13": {
+    "status": "ok",
+    "query": "transformer attention mechanism",
+    "collected_at": "2026-11-26T14:31:37.428354+00:00",
+    "request_url": "https://www.bing.com/search?q=transformer+attention+mechanism+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Transformer - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Transformer",
+        "snippet": "In electrical engineering, a transformer is a passive component that transfers electrical energy from one electrical circuit to another …"
+      },
+      {
+        "rank": 2,
+        "original_rank": 3,
+        "title": "Transformer (deep learning) - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Transformer_(deep_learning)",
+        "snippet": "Transformer models are often quantized for inference, meaning that weights, activations, or both are represented with lower …"
+      }
+    ]
+  },
+  "Q14": {
+    "status": "ok",
+    "query": "retrieval augmented generation",
+    "collected_at": "2026-11-26T14:31:39.647145+00:00",
+    "request_url": "https://www.bing.com/search?q=retrieval+augmented+generation+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Retrieval-augmented generation - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Retrieval-augmented_generation",
+        "snippet": "Retrieval-augmented generation (RAG) enhances large language models (LLMs) by incorporating an information-retrieval …"
+      },
+      {
+        "rank": 2,
+        "original_rank": 7,
+        "title": "Retrieval augmented generation (RAG) and indexes",
+        "url": "https://learn.microsoft.com/en-us/azure/foundry/concepts/retrieval-augmented-generation",
+        "snippet": "Nov 17, 2026 · Retrieval augmented generation (RAG) is a pattern that combines search with large language models (LLMs) so …"
+      }
+    ]
+  },
+  "Q15": {
+    "status": "ok",
+    "query": "graph neural networks",
+    "collected_at": "2026-11-26T14:31:41.851218+00:00",
+    "request_url": "https://www.bing.com/search?q=graph+neural+networks+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 7,
+        "title": "Graph theory - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Graph_theory",
+        "snippet": "A graph drawing should not be confused with the graph itself (the abstract, non-visual structure) as there are several ways to …"
+      }
+    ]
+  },
+  "Q16": {
+    "status": "ok",
+    "query": "differential privacy machine learning",
+    "collected_at": "2026-11-26T14:31:44.057284+00:00",
+    "request_url": "https://www.bing.com/search?q=differential+privacy+machine+learning+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 3,
+        "title": "Hybrid Genetic Algorithm for Optimal User Order Routing :Multi …",
+        "url": "https://arxiv.org/html/2510.21647v1",
+        "snippet": "We apply evolutionary multi-objective optimization to this blockchain routing problem, proposing a hybrid genetic algorithm (GA) …"
+      }
+    ]
+  },
+  "Q17": {
+    "status": "unavailable",
+    "query": "federated learning data privacy",
+    "collected_at": "2026-11-26T14:31:46.255634+00:00",
+    "error": "Не найдены органические результаты Bing; это не нулевая релевантность",
+    "results": []
+  },
+  "Q18": {
+    "status": "ok",
+    "query": "stochastic gradient descent optimization",
+    "collected_at": "2026-11-26T14:31:48.440415+00:00",
+    "request_url": "https://www.bing.com/search?q=stochastic+gradient+descent+optimization+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": []
+  },
+  "Q19": {
+    "status": "ok",
+    "query": "quantum error correction surface code",
+    "collected_at": "2026-11-26T14:31:50.635853+00:00",
+    "request_url": "https://www.bing.com/search?q=quantum+error+correction+surface+code+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Quantum - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Quantum",
+        "snippet": "In physics, a quantum (pl.: quanta) is the minimum amount of any physical entity (physical property) involved in an interaction. The …"
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "Quantum mechanics - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Quantum_mechanics",
+        "snippet": "Quantum mechanics can describe many systems that classical physics cannot. Classical physics can describe many aspects of …"
+      }
+    ]
+  },
+  "Q20": {
+    "status": "ok",
+    "query": "lithium ion battery degradation",
+    "collected_at": "2026-11-26T14:31:52.880093+00:00",
+    "request_url": "https://www.bing.com/search?q=lithium+ion+battery+degradation+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 2,
+        "title": "Lithium - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Lithium",
+        "snippet": "Lithium metal is isolated electrolytically from a mixture of lithium chloride and potassium chloride. The nucleus of the lithium atom …"
+      },
+      {
+        "rank": 2,
+        "original_rank": 9,
+        "title": "Lithium (medication ) - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Lithium_(medication)",
+        "snippet": "Lithium toxicity, which is also called \"lithium overdose \" or \"lithium poisoning\", is the condition of having too much lithium in the blood. …"
+      }
+    ]
+  },
+  "Q21": {
+    "status": "ok",
+    "query": "photovoltaic solar cell efficiency",
+    "collected_at": "2026-11-26T14:31:55.100836+00:00",
+    "request_url": "https://www.bing.com/search?q=photovoltaic+solar+cell+efficiency+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Photovoltaics - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Photovoltaics",
+        "snippet": "PV installations may be ground-mounted, rooftop-mounted, wall-mounted or floating. The mount may be fixed or use a solar tracker …"
+      },
+      {
+        "rank": 2,
+        "original_rank": 2,
+        "title": "Photovoltaic system - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Photovoltaic_system",
+        "snippet": "A photovoltaic system, also called a PV system or solar power system, is an electric power system designed to supply usable solar …"
+      }
+    ]
+  },
+  "Q22": {
+    "status": "ok",
+    "query": "computational fluid dynamics finite volume method",
+    "collected_at": "2026-11-26T14:31:57.344785+00:00",
+    "request_url": "https://www.bing.com/search?q=computational+fluid+dynamics+finite+volume+method+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": []
+  },
+  "Q23": {
+    "status": "ok",
+    "query": "finite element analysis stress",
+    "collected_at": "2026-11-26T14:31:59.546574+00:00",
+    "request_url": "https://www.bing.com/search?q=finite+element+analysis+stress+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 4,
+        "title": "Finiteness - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Finiteness",
+        "snippet": "In mathematics, a set or number is finite if it is limited in size, while in linguistics, a verb is finite if it is limited by grammatical features …"
+      },
+      {
+        "rank": 2,
+        "original_rank": 9,
+        "title": "Finite element method - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Finite_element_method",
+        "snippet": "A finite element method is characterized by a variational formulation, a discretization strategy, one or more solution algorithms, and …"
+      }
+    ]
+  },
+  "Q24": {
+    "status": "ok",
+    "query": "optical coherence tomography",
+    "collected_at": "2026-11-26T14:32:01.764512+00:00",
+    "request_url": "https://www.bing.com/search?q=optical+coherence+tomography+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 3,
+        "title": "Optics - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Optics",
+        "snippet": "The unique optical properties of the atmosphere cause a wide range of spectacular optical phenomena. The blue colour of the sky is …"
+      }
+    ]
+  },
+  "Q25": {
+    "status": "ok",
+    "query": "gravitational waves interferometer",
+    "collected_at": "2026-11-26T14:32:03.982047+00:00",
+    "request_url": "https://www.bing.com/search?q=gravitational+waves+interferometer+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": []
+  },
+  "Q26": {
+    "status": "ok",
+    "query": "CRISPR Cas9 gene editing",
+    "collected_at": "2026-11-26T14:32:06.175043+00:00",
+    "request_url": "https://www.bing.com/search?q=CRISPR+Cas9+gene+editing+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "CRISPR - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/CRISPR",
+        "snippet": "Cas9 (or \"CRISPR-associated protein 9\") is an enzyme that uses CRISPR sequences as a guide to recognize and open up specific …"
+      },
+      {
+        "rank": 2,
+        "original_rank": 6,
+        "title": "CRISPR gene editing - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/CRISPR_gene_editing",
+        "snippet": "CRISPR-Cas9 genome editing uses a Type II CRISPR system. This system includes a ribonucleoprotein (RNP), consisting of Cas9, …"
+      }
+    ]
+  },
+  "Q27": {
+    "status": "ok",
+    "query": "protein folding prediction",
+    "collected_at": "2026-11-26T14:32:08.406749+00:00",
+    "request_url": "https://www.bing.com/search?q=protein+folding+prediction+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 3,
+        "title": "Protein - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Protein",
+        "snippet": "Protein–protein interactions regulate enzymatic activity, control progression through the cell cycle, and allow the assembly of large …"
+      }
+    ]
+  },
+  "Q28": {
+    "status": "ok",
+    "query": "semiconductor doping p n junction",
+    "collected_at": "2026-11-26T14:32:10.744133+00:00",
+    "request_url": "https://www.bing.com/search?q=semiconductor+doping+p+n+junction+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Semiconductor - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Semiconductor",
+        "snippet": "A semiconductor is a material with electrical conductivity between that of a conductor and an insulator. [1] Its conductivity can be …"
+      },
+      {
+        "rank": 2,
+        "original_rank": 4,
+        "title": "Semiconductor industry - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Semiconductor_industry",
+        "snippet": "The semiconductor industry is the aggregate of companies engaged in the design and fabrication of semiconductors and …"
+      }
+    ]
+  },
+  "Q29": {
+    "status": "ok",
+    "query": "public key cryptography RSA",
+    "collected_at": "2026-11-26T14:32:13.003637+00:00",
+    "request_url": "https://www.bing.com/search?q=public+key+cryptography+RSA+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 5,
+        "title": "Public - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Public",
+        "snippet": "In public relations and communication theory, a public is distinct from a stakeholder or a market. A public is a subset of the set of …"
+      }
+    ]
+  },
+  "Q30": {
+    "status": "ok",
+    "query": "variable byte compression inverted index",
+    "collected_at": "2026-11-26T14:32:15.230045+00:00",
+    "request_url": "https://www.bing.com/search?q=variable+byte+compression+inverted+index+%28site%3Aen.wikipedia.org+OR+site%3Aarxiv.org%2Fhtml+OR+site%3Alearn.microsoft.com%2Fen-us%29&count=50&setlang=en",
+    "results": [
+      {
+        "rank": 1,
+        "original_rank": 1,
+        "title": "Variable (mathematics ) - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Variable_(mathematics)",
+        "snippet": "In calculus and its application to physics and other sciences, it is rather common to consider a variable, say y, whose possible values …"
+      },
+      {
+        "rank": 2,
+        "original_rank": 3,
+        "title": "Variable - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Variable",
+        "snippet": "Variable may refer to: Variable (computer science), a symbolic name associated with a value and whose associated value may be …"
+      }
+    ]
+  }
+}

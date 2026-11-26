@@ -1,0 +1,435 @@
+{
+  "started_at": "2026-11-26T14:29:54.515179+00:00",
+  "magic": "MAIIRIDX",
+  "index_version": 4,
+  "indexed_documents": 993923,
+  "terms": 19009884,
+  "postings": 524192226,
+  "files": {
+    "documents.bin": {
+      "bytes": 11927092,
+      "sha256": "140f4f955e916967e7711ee1a8b8d5a495eb60667e21bfb094ef14664c05e153"
+    },
+    "lexicon.bin": {
+      "bytes": 456237248,
+      "sha256": "2c4509915479fd495e393d65f37d9d3096b4cb867e56b3e1f35ec7a192fcfdc5"
+    },
+    "norms.bin": {
+      "bytes": 7951400,
+      "sha256": "85a8054c9a34d83103955485bf617a22d31c8e5e43fa019f1acd67bf2f55be3d"
+    },
+    "postings.bin": {
+      "bytes": 1195110523,
+      "sha256": "678fd5329cfdd2e553263b5d0f4d122f4a6c5ccc407cb101539c84ca2cdbda72"
+    },
+    "skips.bin": {
+      "bytes": 116814976,
+      "sha256": "98e0e0130e0a82f6ab29c05c0e917410e9b832453265da3324cb5b5e7f38bce0"
+    },
+    "terms.bin": {
+      "bytes": 278731327,
+      "sha256": "c59c21c8dccb1682e34125aee1cb18de663644b4f2d66dd2080933691440f20c"
+    }
+  },
+  "queries_sha256": "1605629df42db09728da5b01d5ef86859b65e4747b08e03c89652355d9181fe7",
+  "search_config": {
+    "db": {
+      "uri": "mongodb://localhost:27017",
+      "database": "mai_ir",
+      "processed_collection": "processed_documents"
+    },
+    "linguistics": {
+      "maximum_token_length": 100,
+      "lemma_dictionary": "../resources/wordnet_exceptions.tsv",
+      "lemma_vocabulary": "../resources/wordnet_lemmas.txt",
+      "lemma_overrides": "../resources/technical_lemma_overrides.tsv"
+    },
+    "boolean_index": {
+      "output_directory": "../results/boolean_index"
+    },
+    "positional_index": {
+      "output_directory": "../results/positional_index"
+    },
+    "boolean_search": {
+      "result_limit": 20,
+      "use_skip_pointers": true
+    },
+    "tfidf_search": {
+      "result_limit": 20
+    },
+    "phrase_search": {
+      "result_limit": 20
+    }
+  },
+  "linguistics_statistics": {
+    "generated_at": 1795608627,
+    "run": {
+      "parser_version": 9,
+      "scanned": 1132727,
+      "skipped": 0,
+      "processed": 1132727,
+      "accepted": 993923,
+      "rejected": 138804
+    },
+    "corpus": {
+      "documents": 993923,
+      "text_bytes": 15761592042,
+      "tokens": 2205065484,
+      "average_token_length": 5.75574345,
+      "tokenization_seconds": 231.555770944,
+      "tokenization_kib_per_second": 66472.883,
+      "token_vocabulary": 19058577,
+      "lemma_vocabulary": 19009884
+    },
+    "by_source": [
+      {
+        "source": "arxiv",
+        "documents": 74755,
+        "tokens": 685976317,
+        "average_token_length": 5.101844567,
+        "kib_per_second": 64619.077
+      },
+      {
+        "source": "microsoft_learn",
+        "documents": 545691,
+        "tokens": 632733406,
+        "average_token_length": 6.256564756,
+        "kib_per_second": 67702.794
+      },
+      {
+        "source": "wikipedia",
+        "documents": 373477,
+        "tokens": 886355761,
+        "average_token_length": 5.904298671,
+        "kib_per_second": 66893.134
+      }
+    ],
+    "performance_by_text_size": [
+      {
+        "minimum_text_bytes": 490,
+        "maximum_text_bytes": 1219,
+        "documents": 124313,
+        "tokens": 16923499,
+        "tokenization_seconds": 2.259075581,
+        "kib_per_second": 50766.081
+      },
+      {
+        "minimum_text_bytes": 1219,
+        "maximum_text_bytes": 1920,
+        "documents": 124384,
+        "tokens": 27004093,
+        "tokenization_seconds": 3.46471626,
+        "kib_per_second": 54017.301
+      },
+      {
+        "minimum_text_bytes": 1920,
+        "maximum_text_bytes": 2953,
+        "documents": 124290,
+        "tokens": 42171265,
+        "tokenization_seconds": 5.196817853,
+        "kib_per_second": 56205.292
+      },
+      {
+        "minimum_text_bytes": 2953,
+        "maximum_text_bytes": 4630,
+        "documents": 124242,
+        "tokens": 65870266,
+        "tokenization_seconds": 7.757147081,
+        "kib_per_second": 58478.859
+      },
+      {
+        "minimum_text_bytes": 4630,
+        "maximum_text_bytes": 7252,
+        "documents": 124252,
+        "tokens": 102260718,
+        "tokenization_seconds": 11.641187505,
+        "kib_per_second": 60702.604
+      },
+      {
+        "minimum_text_bytes": 7252,
+        "maximum_text_bytes": 12602,
+        "documents": 124246,
+        "tokens": 164121395,
+        "tokenization_seconds": 18.18738972,
+        "kib_per_second": 63236.997
+      },
+      {
+        "minimum_text_bytes": 12602,
+        "maximum_text_bytes": 34532,
+        "documents": 124242,
+        "tokens": 354402538,
+        "tokenization_seconds": 37.530250325,
+        "kib_per_second": 65763.384
+      },
+      {
+        "minimum_text_bytes": 34532,
+        "maximum_text_bytes": 8071241,
+        "documents": 123954,
+        "tokens": 1432311710,
+        "tokenization_seconds": 145.519186619,
+        "kib_per_second": 68855.115
+      }
+    ],
+    "mandelbrot": {
+      "c": 16336768483.294912,
+      "b": 174.752840001,
+      "s": 1.550825741,
+      "rmse_log": 0.090184446
+    },
+    "lemmatization_quality": {
+      "scope": "synthetic morphology check, not ranked search evaluation",
+      "dictionary_accuracy": 1.0,
+      "baseline_macro_recall": 0.375,
+      "lemmatized_macro_recall": 1.0,
+      "lemmatized_macro_precision": 1.0,
+      "ambiguous_axes_precision": 1.0
+    },
+    "top_tokens": [
+      {
+        "term": "the",
+        "count": 103167741
+      },
+      {
+        "term": "of",
+        "count": 40742672
+      },
+      {
+        "term": "and",
+        "count": 38609362
+      },
+      {
+        "term": "to",
+        "count": 32633994
+      },
+      {
+        "term": "a",
+        "count": 32408284
+      },
+      {
+        "term": "in",
+        "count": 27760139
+      },
+      {
+        "term": "·",
+        "count": 23490218
+      },
+      {
+        "term": "kmmpcjpl",
+        "count": 21393669
+      },
+      {
+        "term": "for",
+        "count": 21237460
+      },
+      {
+        "term": "is",
+        "count": 19494078
+      },
+      {
+        "term": "this",
+        "count": 13827586
+      },
+      {
+        "term": "on",
+        "count": 11774205
+      },
+      {
+        "term": "1",
+        "count": 11254495
+      },
+      {
+        "term": "that",
+        "count": 11248663
+      },
+      {
+        "term": "from",
+        "count": 11028356
+      },
+      {
+        "term": "with",
+        "count": 10927994
+      },
+      {
+        "term": "string",
+        "count": 10377518
+      },
+      {
+        "term": "by",
+        "count": 9391370
+      },
+      {
+        "term": "km",
+        "count": 9118063
+      },
+      {
+        "term": "mi",
+        "count": 8926884
+      },
+      {
+        "term": "gt",
+        "count": 8800820
+      },
+      {
+        "term": "lt",
+        "count": 8769303
+      },
+      {
+        "term": "mpcjpl",
+        "count": 8736486
+      },
+      {
+        "term": "as",
+        "count": 8643270
+      },
+      {
+        "term": "2",
+        "count": 7941114
+      },
+      {
+        "term": "an",
+        "count": 7829559
+      },
+      {
+        "term": "or",
+        "count": 7731348
+      },
+      {
+        "term": "be",
+        "count": 7479409
+      },
+      {
+        "term": "are",
+        "count": 7421540
+      },
+      {
+        "term": "can",
+        "count": 6782603
+      }
+    ],
+    "top_lemmas": [
+      {
+        "term": "the",
+        "count": 103167741
+      },
+      {
+        "term": "be",
+        "count": 41093445
+      },
+      {
+        "term": "of",
+        "count": 40742672
+      },
+      {
+        "term": "and",
+        "count": 38609362
+      },
+      {
+        "term": "to",
+        "count": 32633994
+      },
+      {
+        "term": "a",
+        "count": 32408284
+      },
+      {
+        "term": "in",
+        "count": 27760139
+      },
+      {
+        "term": "·",
+        "count": 23490218
+      },
+      {
+        "term": "kmmpcjpl",
+        "count": 21393669
+      },
+      {
+        "term": "for",
+        "count": 21237460
+      },
+      {
+        "term": "this",
+        "count": 13827586
+      },
+      {
+        "term": "on",
+        "count": 11774205
+      },
+      {
+        "term": "1",
+        "count": 11254495
+      },
+      {
+        "term": "that",
+        "count": 11248663
+      },
+      {
+        "term": "from",
+        "count": 11028356
+      },
+      {
+        "term": "with",
+        "count": 10927994
+      },
+      {
+        "term": "string",
+        "count": 10464427
+      },
+      {
+        "term": "by",
+        "count": 9391371
+      },
+      {
+        "term": "km",
+        "count": 9118063
+      },
+      {
+        "term": "use",
+        "count": 9028958
+      },
+      {
+        "term": "mi",
+        "count": 8926884
+      },
+      {
+        "term": "gt",
+        "count": 8800820
+      },
+      {
+        "term": "lt",
+        "count": 8769303
+      },
+      {
+        "term": "mpcjpl",
+        "count": 8736486
+      },
+      {
+        "term": "as",
+        "count": 8643270
+      },
+      {
+        "term": "value",
+        "count": 8348282
+      },
+      {
+        "term": "2",
+        "count": 7941114
+      },
+      {
+        "term": "an",
+        "count": 7829854
+      },
+      {
+        "term": "or",
+        "count": 7731348
+      },
+      {
+        "term": "name",
+        "count": 7595857
+      }
+    ],
+    "program_wall_seconds": 27538.894424
+  },
+  "judgment_pool_depth": 5,
+  "retrieval_depth": 10
+}

@@ -14,6 +14,8 @@ logic:
   request_timeout_seconds: 60
   retries: 4
   backoff_seconds: 2
+  # При HTTP 429 останавливаем источник минимум на час; более длинный Retry-After имеет приоритет.
+  rate_limit_cooldown_seconds: 3600
   # Максимальный размер одного ответа — 14 MB.
   max_response_bytes: 14000000
   # Ограничения параллельных подключений.
@@ -25,11 +27,15 @@ logic:
   recrawl_after_seconds: 7776000
   recrawl_batch_size: 0
   log_level: INFO
-  # Вежливая задержка между запросами к каждому источнику.
+  # simple — статистика раз в минуту без предупреждений; detailed — подробный вывод документов и предупреждений.
+  log_mode: simple
+  # Минимальный интервал между началами запросов; медленный ответ дополнительно снижает частоту.
+  # Wikipedia и Learn: пробный темп до двух запросов в секунду, без параллелизма внутри источника.
+  # arXiv: не менее трёх секунд по условиям API. Запускать один экземпляр crawler.
   delay_seconds:
-    wikipedia: 1.0
+    wikipedia: 0.5
     arxiv: 3.0
-    microsoft_learn: 1.0
+    microsoft_learn: 0.5
 
 sources:
   wikipedia:
@@ -37,9 +43,9 @@ sources:
     # null означает отсутствие ограничения на число документов.
     max_documents: null
     # Версия правил обхода: задачи старых версий остаются в MongoDB, но не выполняются.
-    discovery_version: 3
-    # Небольшая глубина снижает риск ухода из технической тематики.
-    max_category_depth: 3
+    discovery_version: 7
+    # Шесть уровней научно-технических подкатегорий; фильтры действуют на каждом уровне.
+    max_category_depth: 6
     # Дочерняя категория обходится, если в её названии есть хотя бы один технический маркер.
     category_required_keywords:
       - computer
@@ -59,6 +65,22 @@ sources:
       - data management
       - data science
       - distributed system
+      - distributed computing
+      - parallel computing
+      - concurrent computing
+      - software testing
+      - software design
+      - software architecture
+      - numerical analysis
+      - numerical method
+      - digital signal processing
+      - image processing
+      - control theory
+      - optimization
+      - mathematical logic
+      - type theory
+      - computability
+      - complexity theory
       - operating system
       - file system
       - programming
@@ -88,6 +110,28 @@ sources:
       - microprocessor
       - processor
       - semiconductor
+      - electronics
+      - electronic circuit
+      - integrated circuit
+      - digital circuit
+      - electronic component
+      - sensor
+      - microcontroller
+      - control system
+      - automatic control
+      - automation
+      - signal processing
+      - graph theory
+      - information theory
+      - coding theory
+      - electrical engineering
+      - microelectronic
+      - nanoelectronic
+      - optoelectronic
+      - photonic
+      - digital communication
+      - error correction
+      - circuit design
       - information system
       - information technology
       - linux
@@ -96,6 +140,236 @@ sources:
       - microsoft windows
       - protocol
       - telecommunications
+      - engineering
+      - physics
+      - chemistry
+      - biophys
+      - molecular biology
+      - mathemat
+      - algebra
+      - geometr
+      - topolog
+      - statistic
+      - probabil
+      - stochastic
+      - operations research
+      - combinator
+      - dynamical system
+      - mechanic
+      - thermodynamic
+      - fluid
+      - hydraulic
+      - material
+      - metallurg
+      - ceramic
+      - polymer
+      - composite
+      - manufactur
+      - machining
+      - welding
+      - metrolog
+      - instrument
+      - measurement
+      - optic
+      - acoustic
+      - photon
+      - laser
+      - microwave
+      - radar
+      - antenna
+      - electromagnet
+      - electric
+      - magnet
+      - physical chemistry
+      - chemical
+      - electrochem
+      - catalys
+      - spectroscop
+      - chromatograph
+      - geophys
+      - remote sensing
+      - geographic information
+      - biomedical
+      - biomechanic
+      - biotechnolog
+      - simulation
+      - finite element
+      - differential equation
+      - numerical
+      - nanotechnolog
+      - nuclear
+      - particle physics
+      - condensed matter
+      - plasma
+      - quantum
+      - energy
+      - power
+      - battery
+      - batteries
+      - renewable
+      - photovoltaic
+      - solar cell
+      - wind turbine
+      - heat transfer
+      - mass transfer
+      - thermal
+      - turbine
+      - combustion
+      - propulsion
+      - aerospace
+      - aeronaut
+      - aerodynamic
+      - satellite
+      - spacecraft
+      - structural
+      - technolog
+      - chemical compound
+      - compound
+      - inorganic
+      - organic
+      - biochem
+      - molecular
+      - protein
+      - enzyme
+      - genetic
+      - genomic
+      - gene
+      - amino acid
+      - peptide
+      - nucleic acid
+      - nucleotide
+      - carbohydrat
+      - lipid
+      - biomolecule
+      - mineral
+      - crystal
+      - alloy
+      - metal
+      - oxide
+      - halide
+      - sulfide
+      - sulphide
+      - nitrate
+      - nitride
+      - phosphate
+      - silicate
+      - carbonate
+      - carboxyl
+      - alkane
+      - alkene
+      - alkyne
+      - ketone
+      - aldehyde
+      - ester
+      - ether
+      - amine
+      - amide
+      - heterocycl
+      - alcohol
+      - aromatic
+      - benzene
+      - cyanide
+      - carbonyl
+      - organo
+      - hydrogen
+      - carbon
+      - silicon
+      - oxygen
+      - astronom
+      - astrophys
+      - stellar
+      - galaxy
+      - galaxies
+      - star
+      - planet
+      - nebula
+      - supernova
+      - cosmolog
+      - celestial
+      - solar
+      - lunar
+      - asteroid
+      - comet
+      - meteorit
+      - interstellar
+      - telescope
+      - spaceflight
+      - space technolog
+      - atmospher
+      - earth science
+      - geolog
+      - hydrolog
+      - oceanograph
+      - climatolog
+      - meteorolog
+      - geochem
+      - geodetic
+      - geodesy
+      - seismolog
+      - volcanolog
+      - sediment
+      - stratigraph
+      - tectonic
+      - petrolog
+      - paleoclimat
+      - construction
+      - building material
+      - industrial process
+      - engine
+      - machine
+      - medical equipment
+      - medical imaging
+      - rail technolog
+      - automotive
+      - tool
+      - applied science
+      - physical science
+      - physical phenomena
+      - physical model
+      - geotechnic
+      - mining
+      - petroleum
+      - marine engineer
+      - ocean engineer
+      - shipbuilding
+      - food science
+      - food technolog
+      - textile
+      - biomaterial
+      - nanomaterial
+      - superconduct
+      - industrial gas
+      - plastic
+      - synthetic fiber
+      - surface science
+      - crystallograph
+      - separation process
+      - soil science
+      - neuroscien
+      - biophysic
+      - polysaccharid
+      - medicinal chem
+      - pharmacolog
+      - drug discovery
+      - biological database
+      - systems biology
+      - compressor
+      - cryogen
+      - microscop
+      - fastener
+      - fuel cell
+      - heat exchanger
+      - lens
+      - piping
+      - power suppl
+      - pump
+      - valve
+      - 3d print
+      - adhesive
+      - coating
+      - pigment
+      - surfactant
+      - dye
     # Стоп-маркеры имеют приоритет: они отсекают нетехническую ветвь даже при наличии технического слова.
     category_excluded_keywords:
       - magazine
@@ -106,13 +380,23 @@ sources:
       - sports
       - football
       - basketball
-      - film
+      - cinema
       - music
       - fiction
       - by country
       - people
       - scientists
       - researchers
+      - physicists
+      - mathematicians
+      - chemists
+      - biologists
+      - astronomers
+      - geologists
+      - geneticists
+      - biochemists
+      - mineralogists
+      - engineers
       - computer engineers
       - software engineers
       - organization
@@ -127,6 +411,16 @@ sources:
       - controversies
       - criticism
       - deaths
+      - births
+      - biographies
+      - politic
+      - religio
+      - military personnel
+      - military units
+      - universities
+      - academic journals
+      - scientific journals
+      - journals
       - video game companies
       - video game developers
     seed_categories:
@@ -157,13 +451,228 @@ sources:
       - Robotics
       - Bioinformatics
       - Quantum computing
+      - Electronics
+      - Digital electronics
+      - Control theory
+      - Computer architecture
+      - Parallel computing
+      - Concurrent computing
+      - Software testing
+      - Software design
+      - Software architecture
+      - Numerical analysis
+      - Mathematical optimization
+      - Graph theory
+      - Information theory
+      - Coding theory
+      - Digital signal processing
+      - Image processing
+      - Electrical engineering
+      - Electronic circuits
+      - Integrated circuits
+      - Microcontrollers
+      - Sensors
+      - Automation
+      - Telecommunications
+      - Mechanical engineering
+      - Civil engineering
+      - Chemical engineering
+      - Aerospace engineering
+      - Biomedical engineering
+      - Materials science
+      - Energy technology
+      - Power engineering
+      - Nuclear technology
+      - Nanotechnology
+      - Optics
+      - Photonics
+      - Acoustics
+      - Thermodynamics
+      - Fluid mechanics
+      - Solid mechanics
+      - Mechanics
+      - Condensed matter physics
+      - Plasma physics
+      - Nuclear physics
+      - Particle physics
+      - Computational physics
+      - Physical chemistry
+      - Electrochemistry
+      - Polymers
+      - Metallurgy
+      - Ceramics
+      - Composite materials
+      - Semiconductor devices
+      - Electronic engineering
+      - Power electronics
+      - Electrical components
+      - Electrical circuits
+      - Applied mathematics
+      - Differential equations
+      - Linear algebra
+      - Probability theory
+      - Statistics
+      - Stochastic processes
+      - Operations research
+      - Combinatorics
+      - Topology
+      - Geometry
+      - Dynamical systems
+      - Mathematical modeling
+      - Simulation
+      - Finite element method
+      - Computational fluid dynamics
+      - Computer-aided design
+      - Computer-aided manufacturing
+      - Metrology
+      - Geophysics
+      - Remote sensing
+      - Geographic information systems
+      - Computational biology
+      - Computational chemistry
+      - Scientific instruments
+      - Measurement
+      - Structural engineering
+      - Hydraulic engineering
+      - Environmental engineering
+      - Astronomy
+      - Astrophysics
+      - Atmospheric sciences
+      - Automotive technologies
+      - Biochemistry
+      - Biotechnology
+      - Building materials
+      - Celestial mechanics
+      - Chemical compounds
+      - Chemical elements
+      - Climatology
+      - Construction
+      - Earth sciences
+      - Electric power
+      - Energy
+      - Engines
+      - Enzymes
+      - Genes
+      - Genetics
+      - Genomics
+      - Geology
+      - Hydrology
+      - Industrial processes
+      - Inorganic compounds
+      - Machines
+      - Manufacturing
+      - Medical equipment
+      - Meteorology
+      - Minerals
+      - Molecular biology
+      - Oceanography
+      - Optical devices
+      - Organic compounds
+      - Proteins
+      - Rail technologies
+      - Renewable energy
+      - Space technology
+      - Spaceflight
+      - Tools
+      - Analytical chemistry
+      - Applied sciences
+      - Chemistry
+      - Engineering
+      - Inorganic chemistry
+      - Mathematics
+      - Medical imaging
+      - Organic chemistry
+      - Physical sciences
+      - Physics
+      - Technology
+      - Automotive engineering
+      - Biological databases
+      - Biomaterials
+      - Biomolecules
+      - Biophysics
+      - Chromatography
+      - Computational neuroscience
+      - Crystallography
+      - Drug discovery
+      - Food science
+      - Food technology
+      - Geotechnical engineering
+      - Industrial gases
+      - Lipids
+      - Marine engineering
+      - Medicinal chemistry
+      - Mining engineering
+      - Nanomaterials
+      - Neuroscience
+      - Nucleic acids
+      - Optical materials
+      - Petroleum engineering
+      - Pharmacology
+      - Plastics
+      - Polysaccharides
+      - Process engineering
+      - Separation processes
+      - Shipbuilding
+      - Smart materials
+      - Soil science
+      - Spectroscopy
+      - Superconductors
+      - Surface science
+      - Synthetic fibers
+      - Systems biology
+      - Textile engineering
+      - Transportation engineering
+      - Compressors
+      - Computational geometry
+      - Coordination chemistry
+      - Cryogenics
+      - Electric motors
+      - Electrical wiring
+      - Electron microscopy
+      - Fasteners
+      - Fuel cells
+      - Heat exchangers
+      - Laser applications
+      - Lasers
+      - Lenses
+      - Microscopes
+      - Microscopy
+      - Nuclear chemistry
+      - Numerical linear algebra
+      - Optical components
+      - Optimization algorithms and methods
+      - Organometallic chemistry
+      - Piping
+      - Polymer chemistry
+      - Power supplies
+      - Pumps
+      - Radiochemistry
+      - Solar cells
+      - Supramolecular chemistry
+      - Turbines
+      - Valves
+      - Welding
+      - Wind turbines
+      - 3D printing
+      - Adhesives
+      - Catalysts
+      - Coatings
+      - Dyes
+      - Machining
+      - Metalworking
+      - Pigments
+      - Surfactants
 
   arxiv:
     enabled: true
     max_documents: null
-    # Размер выдачи и пачки уточнения метаданных.
-    batch_size: 100
+    # До 200 публикаций в одной выдаче: больше метаданных на один API-запрос.
+    batch_size: 200
+    # Размер отдельной пачки проверки изменений уже сохранённых публикаций.
     metadata_batch_size: 100
+    # После пяти пачек выдачи переходим к следующей категории; позиция сохраняется.
+    # При следующем запуске каждая категория продолжается со своей позиции; 0 — без ограничения.
+    category_batches_per_run: 5
     sort_order: descending
     earliest_month: 1993-01
     categories:
@@ -175,6 +684,147 @@ sources:
       - cs.CR
       - cs.LG
       - cs.SE
+      # Дополнительные направления Computer Science (без нетехнических общих рубрик).
+      - cs.AR
+      - cs.CC
+      - cs.CE
+      - cs.CG
+      - cs.CV
+      - cs.DL
+      - cs.DM
+      - cs.DS
+      - cs.ET
+      - cs.FL
+      - cs.GR
+      - cs.GT
+      - cs.HC
+      - cs.IT
+      - cs.LO
+      - cs.MA
+      - cs.MM
+      - cs.MS
+      - cs.NE
+      - cs.NI
+      - cs.OS
+      - cs.PF
+      - cs.PL
+      - cs.RO
+      - cs.SC
+      - cs.SD
+      - cs.SI
+      # Обработка сигналов, изображений, речи и управление системами.
+      - eess.AS
+      - eess.IV
+      - eess.SP
+      - eess.SY
+      # Смежные направления: статистическое обучение, численные методы и моделирование.
+      - stat.ML
+      - math.NA
+      - math.OC
+      - physics.comp-ph
+      - quant-ph
+      # Физика, материаловедение, прикладная математика, статистика и количественная биология.
+      - astro-ph.CO
+      - astro-ph.EP
+      - astro-ph.GA
+      - astro-ph.HE
+      - astro-ph.IM
+      - astro-ph.SR
+      - cond-mat.dis-nn
+      - cond-mat.mes-hall
+      - cond-mat.mtrl-sci
+      - cond-mat.other
+      - cond-mat.quant-gas
+      - cond-mat.soft
+      - cond-mat.stat-mech
+      - cond-mat.str-el
+      - cond-mat.supr-con
+      - gr-qc
+      - hep-ex
+      - hep-lat
+      - hep-ph
+      - hep-th
+      - math-ph
+      - nucl-ex
+      - nucl-th
+      - nlin.AO
+      - nlin.CD
+      - nlin.CG
+      - nlin.PS
+      - nlin.SI
+      - physics.acc-ph
+      - physics.ao-ph
+      - physics.app-ph
+      - physics.atm-clus
+      - physics.atom-ph
+      - physics.bio-ph
+      - physics.chem-ph
+      - physics.class-ph
+      - physics.data-an
+      - physics.flu-dyn
+      - physics.geo-ph
+      - physics.ins-det
+      - physics.med-ph
+      - physics.optics
+      - physics.plasm-ph
+      - physics.space-ph
+      - math.AC
+      - math.AP
+      - math.AT
+      - math.CA
+      - math.CO
+      - math.DG
+      - math.DS
+      - math.FA
+      - math.GM
+      - math.GR
+      - math.KT
+      - math.LO
+      - math.MG
+      - math.NT
+      - math.OA
+      - math.PR
+      - math.QA
+      - math.RA
+      - math.RT
+      - math.SG
+      - math.SP
+      - stat.AP
+      - stat.CO
+      - stat.ME
+      - stat.OT
+      - q-bio.BM
+      - q-bio.CB
+      - q-bio.GN
+      - q-bio.MN
+      - q-bio.NC
+      - q-bio.QM
+      - q-bio.SC
+      - q-bio.TO
+      - stat.TH
+      # Дополнительные разделы математики, биологии и количественных финансов.
+      - math.AG
+      - math.CV
+      - math.GN
+      - math.GT
+      - q-bio.OT
+      - q-bio.PE
+      - physics.ed-ph
+      - physics.gen-ph
+      - physics.soc-ph
+      - q-fin.CP
+      - q-fin.EC
+      - q-fin.GN
+      - q-fin.MF
+      - q-fin.PM
+      - q-fin.PR
+      - q-fin.RM
+      - q-fin.ST
+      - q-fin.TR
+      # Другие направления информатики, эконометрика и математические модели экономики.
+      - cs.OH
+      - econ.EM
+      - econ.TH
 
   microsoft_learn:
     enabled: true

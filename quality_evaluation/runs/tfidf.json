@@ -1,0 +1,2882 @@
+{
+  "Q01": {
+    "status": "ok",
+    "query": "database transaction isolation",
+    "results": [
+      {
+        "rank": 1,
+        "title": "2.1.1.18 E152, Basic SET TRANSACTION statement",
+        "score": 0.254092,
+        "source": "microsoft_learn",
+        "doc_id": 696775,
+        "oid": "6b043fc6d9bb282a038840a3",
+        "url": "https://learn.microsoft.com/en-us/openspecs/sql_standards/ms-tsqliso02/5383babc-27c4-4f51-ae11-5c4df8f0d49c"
+      },
+      {
+        "rank": 2,
+        "title": "Transaction Isolation",
+        "score": 0.24558,
+        "source": "microsoft_learn",
+        "doc_id": 580552,
+        "oid": "6b038936d9bb282a0384bd77",
+        "url": "https://learn.microsoft.com/en-us/sql/odbc/reference/develop-app/transaction-isolation?view=sql-server-ver17"
+      },
+      {
+        "rank": 3,
+        "title": "3.2.7.31 Set Transaction Attributes",
+        "score": 0.236963,
+        "source": "microsoft_learn",
+        "doc_id": 668988,
+        "oid": "6b040ecad9bb282a03875473",
+        "url": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-dtco/98d9764b-dc5c-4ea7-b049-66f434c950c1"
+      },
+      {
+        "rank": 4,
+        "title": "Cursor Transaction Isolation Level",
+        "score": 0.222585,
+        "source": "microsoft_learn",
+        "doc_id": 578931,
+        "oid": "6b038642d9bb282a0384b4b0",
+        "url": "https://learn.microsoft.com/en-us/sql/relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level?view=sql-server-ver15"
+      },
+      {
+        "rank": 5,
+        "title": "Setting the Transaction Isolation Level",
+        "score": 0.222247,
+        "source": "microsoft_learn",
+        "doc_id": 258489,
+        "oid": "6b0049e8321fadc016c3c0ab",
+        "url": "https://learn.microsoft.com/en-us/windows/win32/cossdk/setting-the-transaction-isolation-level"
+      },
+      {
+        "rank": 6,
+        "title": "Configuring Transaction Isolation Levels",
+        "score": 0.212799,
+        "source": "microsoft_learn",
+        "doc_id": 267174,
+        "oid": "6b00d25dbeada0530d8730e3",
+        "url": "https://learn.microsoft.com/en-us/windows/win32/cossdk/configuring-transaction-isolation-levels"
+      },
+      {
+        "rank": 7,
+        "title": "2.1.2.38 F121-02, SET TRANSACTION statement: DIAGNOSTICS SIZE clause",
+        "score": 0.210623,
+        "source": "microsoft_learn",
+        "doc_id": 698680,
+        "oid": "6b0442c5d9bb282a03884eee",
+        "url": "https://learn.microsoft.com/en-us/openspecs/sql_standards/ms-tsqliso02/7bc61a21-d00f-4a26-a65a-4e514f6e58e8"
+      },
+      {
+        "rank": 8,
+        "title": "MSSQLSERVER_41368",
+        "score": 0.207909,
+        "source": "microsoft_learn",
+        "doc_id": 575632,
+        "oid": "6b038282d9bb282a0384a17b",
+        "url": "https://learn.microsoft.com/en-us/sql/relational-databases/errors-events/mssqlserver-41368-database-engine-error?view=sql-server-ver17"
+      },
+      {
+        "rank": 9,
+        "title": "Record.ReadIsolation([IsolationLevel]) Method",
+        "score": 0.20663,
+        "source": "microsoft_learn",
+        "doc_id": 221231,
+        "oid": "6ae828790aaedde439e4b286",
+        "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/methods-auto/record/record-readisolation-method"
+      },
+      {
+        "rank": 10,
+        "title": "supportsTransactionIsolationLevel Method (SQLServerDatabaseMetaData)",
+        "score": 0.20631,
+        "source": "microsoft_learn",
+        "doc_id": 586943,
+        "oid": "6b03938dd9bb282a0384e1d9",
+        "url": "https://learn.microsoft.com/en-us/sql/connect/jdbc/reference/supportstransactionisolationlevel-method-sqlserverdatabasemetadata?view=sql-server-ver17"
+      }
+    ]
+  },
+  "Q02": {
+    "status": "ok",
+    "query": "distributed database replication",
+    "results": [
+      {
+        "rank": 1,
+        "title": "4.1.11.1.5 NT4_REPLICATION_STATE",
+        "score": 0.192982,
+        "source": "microsoft_learn",
+        "doc_id": 627716,
+        "oid": "6b03cdc2d9bb282a03860da8",
+        "url": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-drsr/a7d8f924-3fc0-4dc1-89f3-59f4521cf0e7"
+      },
+      {
+        "rank": 2,
+        "title": "Replication Views (Transact-SQL)",
+        "score": 0.192696,
+        "source": "microsoft_learn",
+        "doc_id": 577674,
+        "oid": "6b0384ced9bb282a0384acbb",
+        "url": "https://learn.microsoft.com/en-us/sql/relational-databases/system-views/replication-views-transact-sql?view=sql-server-ver17"
+      },
+      {
+        "rank": 3,
+        "title": "Database Mirroring: Interoperability and Coexistence (SQL Server)",
+        "score": 0.19161,
+        "source": "microsoft_learn",
+        "doc_id": 586139,
+        "oid": "6b039297d9bb282a0384dd33",
+        "url": "https://learn.microsoft.com/en-us/sql/database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server?view=sql-server-ver17"
+      },
+      {
+        "rank": 4,
+        "title": "2.10 Additional Considerations",
+        "score": 0.1889,
+        "source": "microsoft_learn",
+        "doc_id": 630297,
+        "oid": "6b03d19cd9bb282a03862347",
+        "url": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-fsmod/6d322de5-cd61-4c95-a2c3-540933e75cd1"
+      },
+      {
+        "rank": 5,
+        "title": "DFSR Module",
+        "score": 0.187327,
+        "source": "microsoft_learn",
+        "doc_id": 115820,
+        "oid": "6ae2627c2c80ac9b21ba8b4f",
+        "url": "https://learn.microsoft.com/en-us/powershell/module/dfsr?view=windowsserver2025-ps"
+      },
+      {
+        "rank": 6,
+        "title": "sp_replcounters (Transact-SQL)",
+        "score": 0.186571,
+        "source": "microsoft_learn",
+        "doc_id": 587495,
+        "oid": "6b03942cd9bb282a0384e66f",
+        "url": "https://learn.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/sp-replcounters-transact-sql?view=sql-server-ver17"
+      },
+      {
+        "rank": 7,
+        "title": "1 Introduction",
+        "score": 0.183867,
+        "source": "microsoft_learn",
+        "doc_id": 697748,
+        "oid": "6b044148d9bb282a0388481d",
+        "url": "https://learn.microsoft.com/en-us/openspecs/sql_data_portability/ms-dprep/71619a5b-e12e-4884-8b3d-1aa87c936339"
+      },
+      {
+        "rank": 8,
+        "title": "Monitor Fabric mirrored Fabric SQL database replication",
+        "score": 0.182869,
+        "source": "microsoft_learn",
+        "doc_id": 961801,
+        "oid": "6b062e9bd9bb282a038ed856",
+        "url": "https://learn.microsoft.com/en-us/fabric/database/sql/mirroring-monitor"
+      },
+      {
+        "rank": 9,
+        "title": "Data transfers between sites",
+        "score": 0.182856,
+        "source": "microsoft_learn",
+        "doc_id": 894996,
+        "oid": "6b05e298d9bb282a038d5b98",
+        "url": "https://learn.microsoft.com/en-us/intune/configmgr/core/plan-design/hierarchy/data-transfers-between-sites"
+      },
+      {
+        "rank": 10,
+        "title": "Understand the Active Directory Domain Services database and SYSVOL",
+        "score": 0.181019,
+        "source": "microsoft_learn",
+        "doc_id": 53412,
+        "oid": "6ae1e6da2c80ac9b21b914cd",
+        "url": "https://learn.microsoft.com/en-us/training/modules/understand-active-directory-database"
+      }
+    ]
+  },
+  "Q03": {
+    "status": "ok",
+    "query": "inverted index information retrieval",
+    "results": [
+      {
+        "rank": 1,
+        "title": "1.3 Overview",
+        "score": 0.172009,
+        "source": "microsoft_learn",
+        "doc_id": 638888,
+        "oid": "6b03ddf2d9bb282a038663c1",
+        "url": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-mcis/7968c17c-fe89-48e6-86b4-c67f6178928e"
+      },
+      {
+        "rank": 2,
+        "title": "Inverted index",
+        "score": 0.166133,
+        "source": "wikipedia",
+        "doc_id": 10573,
+        "oid": "6ad9db162a350aca88ff7ceb",
+        "url": "https://en.wikipedia.org/wiki/Inverted_index"
+      },
+      {
+        "rank": 3,
+        "title": "Document retrieval",
+        "score": 0.159649,
+        "source": "wikipedia",
+        "doc_id": 10865,
+        "oid": "6ad9db9a2a350aca88ff7e37",
+        "url": "https://en.wikipedia.org/wiki/Document_retrieval"
+      },
+      {
+        "rank": 4,
+        "title": "1.3 Overview",
+        "score": 0.15328,
+        "source": "microsoft_learn",
+        "doc_id": 641868,
+        "oid": "6b03e27cd9bb282a03867b88",
+        "url": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-wsp/e2a93bd4-71ac-4776-bdb8-6ca602d16b59"
+      },
+      {
+        "rank": 5,
+        "title": "Foundry IQ (Azure AI Search) documentation",
+        "score": 0.149859,
+        "source": "microsoft_learn",
+        "doc_id": 551581,
+        "oid": "6b035f30d9bb282a038417e6",
+        "url": "https://learn.microsoft.com/en-us/azure/search"
+      },
+      {
+        "rank": 6,
+        "title": "Postings list",
+        "score": 0.146276,
+        "source": "wikipedia",
+        "doc_id": 779,
+        "oid": "6ad9c1482a350aca88ff3fe5",
+        "url": "https://en.wikipedia.org/wiki/Postings_list"
+      },
+      {
+        "rank": 7,
+        "title": "MIB_INVERTEDIFSTACK_TABLE structure",
+        "score": 0.133819,
+        "source": "microsoft_learn",
+        "doc_id": 316540,
+        "oid": "6b01d759beada0530d88a4de",
+        "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/network/mib-invertedifstack-table"
+      },
+      {
+        "rank": 8,
+        "title": "Justin Zobel",
+        "score": 0.131527,
+        "source": "wikipedia",
+        "doc_id": 11013,
+        "oid": "6ad9dbed2a350aca88ff7f06",
+        "url": "https://en.wikipedia.org/wiki/Justin_Zobel"
+      },
+      {
+        "rank": 9,
+        "title": "Quickstart: Agentic retrieval in Azure AI Search using REST APIs",
+        "score": 0.130044,
+        "source": "microsoft_learn",
+        "doc_id": 798085,
+        "oid": "6b05475ed9bb282a038b684e",
+        "url": "https://learn.microsoft.com/en-us/samples/azure-samples/azure-search-postman-samples/rest-api-agentic-retrieval-quickstart"
+      },
+      {
+        "rank": 10,
+        "title": "2.1.1.3 Indexes",
+        "score": 0.129554,
+        "source": "microsoft_learn",
+        "doc_id": 789997,
+        "oid": "6b0530e6d9bb282a038b26bd",
+        "url": "https://learn.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-axl2/ac630591-487a-44ba-b9a9-6d87ec7c31cc"
+      }
+    ]
+  },
+  "Q04": {
+    "status": "ok",
+    "query": "C++ memory management",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Smart Cleanup - Achieve More Reliable Resource Management with Our Custom C++ Classes | Microsoft Learn",
+        "score": 0.209143,
+        "source": "microsoft_learn",
+        "doc_id": 931357,
+        "oid": "6b060cadd9bb282a038e28f0",
+        "url": "https://learn.microsoft.com/en-us/archive/msdn-magazine/authors/eric_niebler"
+      },
+      {
+        "rank": 2,
+        "title": "Standard C Library Functions",
+        "score": 0.199169,
+        "source": "microsoft_learn",
+        "doc_id": 291812,
+        "oid": "6b011b1dbeada0530d87f2af",
+        "url": "https://learn.microsoft.com/en-us/windows/win32/memory/standard-c-library-functions"
+      },
+      {
+        "rank": 3,
+        "title": "Memory Management (Memory Management)",
+        "score": 0.179577,
+        "source": "microsoft_learn",
+        "doc_id": 270846,
+        "oid": "6b00da9ebeada0530d875c26",
+        "url": "https://learn.microsoft.com/en-us/windows/win32/memory/memory-management"
+      },
+      {
+        "rank": 4,
+        "title": "Debug new",
+        "score": 0.171453,
+        "source": "wikipedia",
+        "doc_id": 44942,
+        "oid": "6ae1d5032c80ac9b21b8e225",
+        "url": "https://en.wikipedia.org/wiki/Debug_new"
+      },
+      {
+        "rank": 5,
+        "title": "C++ Code analysis in Visual Studio",
+        "score": 0.170255,
+        "source": "microsoft_learn",
+        "doc_id": 887939,
+        "oid": "6b05d9b6d9bb282a038d36b1",
+        "url": "https://learn.microsoft.com/en-us/cpp/code-quality?view=msvc-170"
+      },
+      {
+        "rank": 6,
+        "title": "Memory Management: Heap Allocation",
+        "score": 0.167686,
+        "source": "microsoft_learn",
+        "doc_id": 879073,
+        "oid": "6b05cefad9bb282a038d04de",
+        "url": "https://learn.microsoft.com/en-us/cpp/mfc/memory-management-heap-allocation?view=msvc-170"
+      },
+      {
+        "rank": 7,
+        "title": "IDebugProgram2::GetMemoryBytes",
+        "score": 0.166309,
+        "source": "microsoft_learn",
+        "doc_id": 5622,
+        "oid": "6ad9d1e72a350aca88ff5e3c",
+        "url": "https://learn.microsoft.com/en-us/visualstudio/extensibility/debugger/reference/idebugprogram2-getmemorybytes?view=visualstudio"
+      },
+      {
+        "rank": 8,
+        "title": "C++ cross-platform property page reference",
+        "score": 0.164167,
+        "source": "microsoft_learn",
+        "doc_id": 882600,
+        "oid": "6b05d33ed9bb282a038d1a8f",
+        "url": "https://learn.microsoft.com/en-us/cpp/cross-platform/cross-platform-prop-pages?view=msvc-170"
+      },
+      {
+        "rank": 9,
+        "title": "C++ documentation",
+        "score": 0.163849,
+        "source": "microsoft_learn",
+        "doc_id": 876485,
+        "oid": "6b05c8e0d9bb282a038cf765",
+        "url": "https://learn.microsoft.com/en-us/cpp/cpp?view=msvc-170"
+      },
+      {
+        "rank": 10,
+        "title": "Warning C26865",
+        "score": 0.162972,
+        "source": "microsoft_learn",
+        "doc_id": 882965,
+        "oid": "6b05d3abd9bb282a038d1c0b",
+        "url": "https://learn.microsoft.com/en-us/cpp/code-quality/c26865?view=msvc-170"
+      }
+    ]
+  },
+  "Q05": {
+    "status": "ok",
+    "query": "C# asynchronous programming",
+    "results": [
+      {
+        "rank": 1,
+        "title": "C# documentation",
+        "score": 0.229543,
+        "source": "microsoft_learn",
+        "doc_id": 29553,
+        "oid": "6ae121a12c80ac9b21b8847f",
+        "url": "https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp"
+      },
+      {
+        "rank": 2,
+        "title": "Implement asynchronous tasks",
+        "score": 0.229111,
+        "source": "microsoft_learn",
+        "doc_id": 56371,
+        "oid": "6ae1ec012c80ac9b21b925d3",
+        "url": "https://learn.microsoft.com/en-us/training/modules/implement-asynchronous-tasks"
+      },
+      {
+        "rank": 3,
+        "title": "Create and manage events",
+        "score": 0.212147,
+        "source": "microsoft_learn",
+        "doc_id": 54084,
+        "oid": "6ae1e8042c80ac9b21b918a9",
+        "url": "https://learn.microsoft.com/en-us/training/modules/create-manage-events"
+      },
+      {
+        "rank": 4,
+        "title": "Async Sample: Asynchronous programming with async and await in C#",
+        "score": 0.194963,
+        "source": "microsoft_learn",
+        "doc_id": 798262,
+        "oid": "6b0547b5d9bb282a038b6914",
+        "url": "https://learn.microsoft.com/en-us/samples/dotnet/samples/async-and-await-cs"
+      },
+      {
+        "rank": 5,
+        "title": "C# - The C# Memory Model in Theory and Practice, Part 2 | Microsoft Learn",
+        "score": 0.193969,
+        "source": "microsoft_learn",
+        "doc_id": 923441,
+        "oid": "6b060317d9bb282a038dfc28",
+        "url": "https://learn.microsoft.com/en-us/archive/msdn-magazine/authors/igor_ostrovsky"
+      },
+      {
+        "rank": 6,
+        "title": "Access local files asynchronously",
+        "score": 0.191265,
+        "source": "microsoft_learn",
+        "doc_id": 56518,
+        "oid": "6ae1ec422c80ac9b21b926da",
+        "url": "https://learn.microsoft.com/en-us/training/paths/access-local-files-asynchronously"
+      },
+      {
+        "rank": 7,
+        "title": "Asynchronous programming patterns",
+        "score": 0.186848,
+        "source": "microsoft_learn",
+        "doc_id": 43861,
+        "oid": "6ae1d29e2c80ac9b21b8db39",
+        "url": "https://learn.microsoft.com/en-us/dotnet/standard/asynchronous-programming-patterns"
+      },
+      {
+        "rank": 8,
+        "title": "IDebugProgram2::CauseBreak",
+        "score": 0.185226,
+        "source": "microsoft_learn",
+        "doc_id": 10364,
+        "oid": "6ad9dab62a350aca88ff7c0d",
+        "url": "https://learn.microsoft.com/en-us/visualstudio/extensibility/debugger/reference/idebugprogram2-causebreak?view=visualstudio"
+      },
+      {
+        "rank": 9,
+        "title": "IDebugEngine2::CauseBreak",
+        "score": 0.18264,
+        "source": "microsoft_learn",
+        "doc_id": 3149,
+        "oid": "6ad9cd2d2a350aca88ff4f5e",
+        "url": "https://learn.microsoft.com/en-us/visualstudio/extensibility/debugger/reference/idebugengine2-causebreak?view=visualstudio"
+      },
+      {
+        "rank": 10,
+        "title": "IDebugEngineProgram2::Stop",
+        "score": 0.179362,
+        "source": "microsoft_learn",
+        "doc_id": 4982,
+        "oid": "6ad9d0bb2a350aca88ff5a66",
+        "url": "https://learn.microsoft.com/en-us/visualstudio/extensibility/debugger/reference/idebugengineprogram2-stop?view=visualstudio"
+      }
+    ]
+  },
+  "Q06": {
+    "status": "ok",
+    "query": ".NET garbage collection",
+    "results": [
+      {
+        "rank": 1,
+        "title": "<gcConcurrent> element",
+        "score": 0.224423,
+        "source": "microsoft_learn",
+        "doc_id": 41106,
+        "oid": "6ae1cda12c80ac9b21b8cada",
+        "url": "https://learn.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/runtime/gcconcurrent-element"
+      },
+      {
+        "rank": 2,
+        "title": "ICorDebugProcess5::GetGCHeapInformation Method",
+        "score": 0.224259,
+        "source": "microsoft_learn",
+        "doc_id": 27914,
+        "oid": "6ae11eb02c80ac9b21b87a1b",
+        "url": "https://learn.microsoft.com/en-us/dotnet/core/unmanaged-api/debugging/icordebug/icordebugprocess5-getgcheapinformation-method"
+      },
+      {
+        "rank": 3,
+        "title": "ICLRGCManager Interface",
+        "score": 0.222548,
+        "source": "microsoft_learn",
+        "doc_id": 21937,
+        "oid": "6ad9f3d72a350aca88ffc653",
+        "url": "https://learn.microsoft.com/en-us/dotnet/framework/unmanaged-api/hosting/iclrgcmanager-interface"
+      },
+      {
+        "rank": 4,
+        "title": "Background garbage collection",
+        "score": 0.222078,
+        "source": "microsoft_learn",
+        "doc_id": 42498,
+        "oid": "6ae1d02c2c80ac9b21b8d35b",
+        "url": "https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/background-gc"
+      },
+      {
+        "rank": 5,
+        "title": "ICLRGCManager2 Interface",
+        "score": 0.216456,
+        "source": "microsoft_learn",
+        "doc_id": 26629,
+        "oid": "6ae11c642c80ac9b21b872a1",
+        "url": "https://learn.microsoft.com/en-us/dotnet/framework/unmanaged-api/hosting/iclrgcmanager2-interface"
+      },
+      {
+        "rank": 6,
+        "title": "IGCHost::Collect Method",
+        "score": 0.207891,
+        "source": "microsoft_learn",
+        "doc_id": 17020,
+        "oid": "6ad9e9672a350aca88ffa744",
+        "url": "https://learn.microsoft.com/en-us/dotnet/framework/unmanaged-api/hosting/igchost-collect-method"
+      },
+      {
+        "rank": 7,
+        "title": "ICorProfilerCallback2::HandleCreated Method",
+        "score": 0.207156,
+        "source": "microsoft_learn",
+        "doc_id": 30829,
+        "oid": "6ae123ef2c80ac9b21b88c7f",
+        "url": "https://learn.microsoft.com/en-us/dotnet/framework/unmanaged-api/profiling/icorprofilercallback2-handlecreated-method"
+      },
+      {
+        "rank": 8,
+        "title": "IGCHost Interface",
+        "score": 0.206795,
+        "source": "microsoft_learn",
+        "doc_id": 24059,
+        "oid": "6ae117c72c80ac9b21b86301",
+        "url": "https://learn.microsoft.com/en-us/dotnet/framework/unmanaged-api/hosting/igchost-interface"
+      },
+      {
+        "rank": 9,
+        "title": "<GCCpuGroup> Element",
+        "score": 0.206614,
+        "source": "microsoft_learn",
+        "doc_id": 33586,
+        "oid": "6ae128db2c80ac9b21b89c8d",
+        "url": "https://learn.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/runtime/gccpugroup-element"
+      },
+      {
+        "rank": 10,
+        "title": "IGCThreadControl Interface",
+        "score": 0.204057,
+        "source": "microsoft_learn",
+        "doc_id": 28870,
+        "oid": "6ae120682c80ac9b21b88105",
+        "url": "https://learn.microsoft.com/en-us/dotnet/framework/unmanaged-api/hosting/igcthreadcontrol-interface"
+      }
+    ]
+  },
+  "Q07": {
+    "status": "ok",
+    "query": "node.js event loop",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Node.js Driver for SQL Server",
+        "score": 0.125804,
+        "source": "microsoft_learn",
+        "doc_id": 571257,
+        "oid": "6b037cead9bb282a038488df",
+        "url": "https://learn.microsoft.com/en-us/sql/connect/node-js/node-js-driver-for-sql-server?view=sql-server-ver17"
+      },
+      {
+        "rank": 2,
+        "title": "Get started with Node.js on Windows",
+        "score": 0.125617,
+        "source": "microsoft_learn",
+        "doc_id": 247317,
+        "oid": "6affffd5321fadc016c39261",
+        "url": "https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-overview"
+      },
+      {
+        "rank": 3,
+        "title": "Choose the right Node.js Version for Azure",
+        "score": 0.123119,
+        "source": "microsoft_learn",
+        "doc_id": 540755,
+        "oid": "6b034edcd9bb282a0383dadd",
+        "url": "https://learn.microsoft.com/en-us/azure/developer/javascript/choose-nodejs-version"
+      },
+      {
+        "rank": 4,
+        "title": "Create an EventHubs namespace, Event Hub, & consumer group",
+        "score": 0.121446,
+        "source": "microsoft_learn",
+        "doc_id": 797287,
+        "oid": "6b0545d7d9bb282a038b64bd",
+        "url": "https://learn.microsoft.com/en-us/samples/azure/azure-quickstart-templates/event-hubs-create-event-hub-and-consumer-group"
+      },
+      {
+        "rank": 5,
+        "title": "Libuv",
+        "score": 0.120155,
+        "source": "wikipedia",
+        "doc_id": 139769,
+        "oid": "6ae293f32c80ac9b21bb1e77",
+        "url": "https://en.wikipedia.org/wiki/Libuv"
+      },
+      {
+        "rank": 6,
+        "title": "Install JavaScript frameworks on Windows",
+        "score": 0.119357,
+        "source": "microsoft_learn",
+        "doc_id": 248352,
+        "oid": "6b000311321fadc016c39681",
+        "url": "https://learn.microsoft.com/en-us/windows/dev-environment/javascript"
+      },
+      {
+        "rank": 7,
+        "title": "Event-driven programming",
+        "score": 0.119281,
+        "source": "wikipedia",
+        "doc_id": 40379,
+        "oid": "6ae1cc4f2c80ac9b21b8c6b6",
+        "url": "https://en.wikipedia.org/wiki/Event-driven_programming"
+      },
+      {
+        "rank": 8,
+        "title": "Use Dev Proxy with Node.js applications running in Docker",
+        "score": 0.117463,
+        "source": "microsoft_learn",
+        "doc_id": 842905,
+        "oid": "6b0590d1d9bb282a038c6feb",
+        "url": "https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/how-to/use-dev-proxy-with-nodejs-docker"
+      },
+      {
+        "rank": 9,
+        "title": "Azure JavaScript samples catalog",
+        "score": 0.116984,
+        "source": "microsoft_learn",
+        "doc_id": 539474,
+        "oid": "6b034d94d9bb282a0383d5cd",
+        "url": "https://learn.microsoft.com/en-us/azure/developer/javascript/samples"
+      },
+      {
+        "rank": 10,
+        "title": "PM2 (software)",
+        "score": 0.11513,
+        "source": "wikipedia",
+        "doc_id": 141535,
+        "oid": "6ae297c02c80ac9b21bb28b0",
+        "url": "https://en.wikipedia.org/wiki/PM2_(software)"
+      }
+    ]
+  },
+  "Q08": {
+    "status": "ok",
+    "query": "container orchestration kubernetes",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Orchestrate containers on Windows Server using Kubernetes",
+        "score": 0.28119,
+        "source": "microsoft_learn",
+        "doc_id": 56646,
+        "oid": "6ae1ec7a2c80ac9b21b927c3",
+        "url": "https://learn.microsoft.com/en-us/training/modules/orchestrate-containers-windows-server-using-kubernetes"
+      },
+      {
+        "rank": 2,
+        "title": "Apply Networking concepts to Windows containers running on Azure Kubernetes Service (AKS) and AKS Hybrid",
+        "score": 0.254322,
+        "source": "microsoft_learn",
+        "doc_id": 54668,
+        "oid": "6ae1e90c2c80ac9b21b91c06",
+        "url": "https://learn.microsoft.com/en-us/training/modules/apply-networking-concepts-to-windows-containers"
+      },
+      {
+        "rank": 3,
+        "title": "Apply storage concepts to Windows containers running on Azure Kubernetes Service (AKS) and AKS Hybrid",
+        "score": 0.247732,
+        "source": "microsoft_learn",
+        "doc_id": 58084,
+        "oid": "6ae1eefa2c80ac9b21b92fab",
+        "url": "https://learn.microsoft.com/en-us/training/modules/apply-storage-concepts-to-windows-containers"
+      },
+      {
+        "rank": 4,
+        "title": "Java samples for Azure Container Service",
+        "score": 0.219954,
+        "source": "microsoft_learn",
+        "doc_id": 540764,
+        "oid": "6b034eded9bb282a0383dae6",
+        "url": "https://learn.microsoft.com/en-us/azure/developer/java/sdk/containers-samples"
+      },
+      {
+        "rank": 5,
+        "title": "Container services documentation",
+        "score": 0.202933,
+        "source": "microsoft_learn",
+        "doc_id": 529941,
+        "oid": "6b033fd0d9bb282a03839575",
+        "url": "https://learn.microsoft.com/en-us/azure/containers"
+      },
+      {
+        "rank": 6,
+        "title": "Containers on Windows documentation",
+        "score": 0.196678,
+        "source": "microsoft_learn",
+        "doc_id": 853176,
+        "oid": "6b05a2e1d9bb282a038c9971",
+        "url": "https://learn.microsoft.com/en-us/virtualization/windowscontainers"
+      },
+      {
+        "rank": 7,
+        "title": "Get started with cloud native apps and containerized deployments",
+        "score": 0.192749,
+        "source": "microsoft_learn",
+        "doc_id": 56802,
+        "oid": "6ae1ecc02c80ac9b21b9285f",
+        "url": "https://learn.microsoft.com/en-us/training/modules/get-started-cloud-native-apps-containerized-deployments"
+      },
+      {
+        "rank": 8,
+        "title": "Deploy containers by using Azure Kubernetes Service (AKS)",
+        "score": 0.190077,
+        "source": "microsoft_learn",
+        "doc_id": 53931,
+        "oid": "6ae1e7c02c80ac9b21b917d9",
+        "url": "https://learn.microsoft.com/en-us/training/paths/deploy-manage-containers-azure-kubernetes-service"
+      },
+      {
+        "rank": 9,
+        "title": "Overview - Options for using Azure Elastic SAN with Azure Kubernetes Service",
+        "score": 0.185162,
+        "source": "microsoft_learn",
+        "doc_id": 521847,
+        "oid": "6b03318cd9bb282a0383755b",
+        "url": "https://learn.microsoft.com/en-us/azure/storage/elastic-san/elastic-san-aks-options"
+      },
+      {
+        "rank": 10,
+        "title": "Workload orchestration",
+        "score": 0.18451,
+        "source": "microsoft_learn",
+        "doc_id": 502950,
+        "oid": "6b031d0ed9bb282a03830d1a",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-arc/workload-orchestration"
+      }
+    ]
+  },
+  "Q09": {
+    "status": "ok",
+    "query": "TLS certificate validation",
+    "results": [
+      {
+        "rank": 1,
+        "title": "4.2.3 Unauthorized IP-HTTPS Server Accepting Connections from a Genuine IP-HTTPS Client",
+        "score": 0.208716,
+        "source": "microsoft_learn",
+        "doc_id": 652764,
+        "oid": "6b03f3b3d9bb282a0386d531",
+        "url": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-iphttps/6caaeec8-99c5-4b59-b21c-907687d5aa9f"
+      },
+      {
+        "rank": 2,
+        "title": "CoreWebView2ServerCertificateErrorAction Enum",
+        "score": 0.203343,
+        "source": "microsoft_learn",
+        "doc_id": 83614,
+        "oid": "6ae21f312c80ac9b21b9c607",
+        "url": "https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/winrt/microsoft_web_webview2_core/corewebview2servercertificateerroraction?view=webview2-winrt-1.0.4258.31"
+      },
+      {
+        "rank": 3,
+        "title": "1.3.6.1.2 Trusted Certificate",
+        "score": 0.201879,
+        "source": "microsoft_learn",
+        "doc_id": 689819,
+        "oid": "6b0434d1d9bb282a03880979",
+        "url": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/mc-prch/6cd5f905-60e4-4098-8315-a792ed71255a"
+      },
+      {
+        "rank": 4,
+        "title": "1.4 Relationship to Other Protocols",
+        "score": 0.201565,
+        "source": "microsoft_learn",
+        "doc_id": 657475,
+        "oid": "6b03fb13d9bb282a0386f886",
+        "url": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-rcmp/5778a360-ad38-4957-8dce-647b4774ee63"
+      },
+      {
+        "rank": 5,
+        "title": "3.2.7.1 TLS Session Established Successfully",
+        "score": 0.198399,
+        "source": "microsoft_learn",
+        "doc_id": 666076,
+        "oid": "6b040939d9bb282a03873d71",
+        "url": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-peap/12b94d70-96ac-419a-b54d-7975bf169141"
+      },
+      {
+        "rank": 6,
+        "title": "HCWebSocketSetProxyDecryptsHttps",
+        "score": 0.193133,
+        "source": "microsoft_learn",
+        "doc_id": 847046,
+        "oid": "6b059845d9bb282a038c8128",
+        "url": "https://learn.microsoft.com/en-us/gaming/gdk/docs/reference/live/httpclient/httpclient/functions/hcwebsocketsetproxydecryptshttps?view=gdk-2610"
+      },
+      {
+        "rank": 7,
+        "title": "2.1 Transport",
+        "score": 0.191687,
+        "source": "microsoft_learn",
+        "doc_id": 674807,
+        "oid": "6b041869d9bb282a038799a2",
+        "url": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-bpcr/fa31ca62-386d-4535-a44e-5845362584f2"
+      },
+      {
+        "rank": 8,
+        "title": "NF-e custom certificate validation",
+        "score": 0.191335,
+        "source": "microsoft_learn",
+        "doc_id": 198606,
+        "oid": "6ae7f9930aaedde439e42cff",
+        "url": "https://learn.microsoft.com/en-us/dynamics365/finance/localizations/brazil/nf-e-custom-certificate-validation"
+      },
+      {
+        "rank": 9,
+        "title": "1.5 Prerequisites/Preconditions",
+        "score": 0.184009,
+        "source": "microsoft_learn",
+        "doc_id": 621243,
+        "oid": "6b03c3d2d9bb282a0385d88a",
+        "url": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/47f88302-03ac-48f4-a542-4c00da52bde0"
+      },
+      {
+        "rank": 10,
+        "title": "Configure TLS inspection with a Microsoft-managed certificate (preview)",
+        "score": 0.183415,
+        "source": "microsoft_learn",
+        "doc_id": 837612,
+        "oid": "6b0587f4d9bb282a038c5ac4",
+        "url": "https://learn.microsoft.com/en-us/entra/global-secure-access/how-to-transport-layer-security-settings-managed-certificate"
+      }
+    ]
+  },
+  "Q10": {
+    "status": "ok",
+    "query": "PowerShell remoting SSH",
+    "results": [
+      {
+        "rank": 1,
+        "title": "PowerShell Security",
+        "score": 0.239178,
+        "source": "microsoft_learn",
+        "doc_id": 93952,
+        "oid": "6ae235212c80ac9b21ba05b0",
+        "url": "https://learn.microsoft.com/en-us/powershell/scripting/security/overview?view=powershell-7.6"
+      },
+      {
+        "rank": 2,
+        "title": "PowerShell remoting to Azure Arc-enabled servers",
+        "score": 0.226661,
+        "source": "microsoft_learn",
+        "doc_id": 503123,
+        "oid": "6b031d3ad9bb282a03830e0f",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-arc/servers/ssh-arc-powershell-remoting"
+      },
+      {
+        "rank": 3,
+        "title": "Develop on a remote machine using SSH in Visual Studio Code",
+        "score": 0.186635,
+        "source": "microsoft_learn",
+        "doc_id": 57477,
+        "oid": "6ae1ede82c80ac9b21b92c5a",
+        "url": "https://learn.microsoft.com/en-us/training/modules/develop-on-remote-machine"
+      },
+      {
+        "rank": 4,
+        "title": "Using WS-Management (WSMan) Remoting in PowerShell",
+        "score": 0.181613,
+        "source": "microsoft_learn",
+        "doc_id": 92636,
+        "oid": "6ae2326f2c80ac9b21b9fda1",
+        "url": "https://learn.microsoft.com/en-us/powershell/scripting/security/remoting/wsman-remoting-in-powershell?view=powershell-7.6"
+      },
+      {
+        "rank": 5,
+        "title": "Using Visual Studio Code for remote editing and debugging",
+        "score": 0.180848,
+        "source": "microsoft_learn",
+        "doc_id": 92279,
+        "oid": "6ae231b92c80ac9b21b9fbde",
+        "url": "https://learn.microsoft.com/en-us/powershell/scripting/dev-cross-plat/vscode/using-vscode-for-remote-editing-and-debugging?view=powershell-7.6"
+      },
+      {
+        "rank": 6,
+        "title": "Exchange PowerShell documentation",
+        "score": 0.172699,
+        "source": "microsoft_learn",
+        "doc_id": 90079,
+        "oid": "6ae22d402c80ac9b21b9ee06",
+        "url": "https://learn.microsoft.com/en-us/powershell/exchange?view=exchange-ps"
+      },
+      {
+        "rank": 7,
+        "title": "VMAccess extension on a Ubuntu VM",
+        "score": 0.15966,
+        "source": "microsoft_learn",
+        "doc_id": 799625,
+        "oid": "6b054a30d9bb282a038b7091",
+        "url": "https://learn.microsoft.com/en-us/samples/azure/azure-quickstart-templates/vmaccess-on-ubuntu"
+      },
+      {
+        "rank": 8,
+        "title": "Running Remote Commands",
+        "score": 0.154826,
+        "source": "microsoft_learn",
+        "doc_id": 94202,
+        "oid": "6ae235a12c80ac9b21ba0734",
+        "url": "https://learn.microsoft.com/en-us/powershell/scripting/security/remoting/running-remote-commands?view=powershell-7.6"
+      },
+      {
+        "rank": 9,
+        "title": "about_Remote_Requirements",
+        "score": 0.152036,
+        "source": "microsoft_learn",
+        "doc_id": 92655,
+        "oid": "6ae2327a2c80ac9b21b9fdc9",
+        "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_requirements?view=powershell-7.6"
+      },
+      {
+        "rank": 10,
+        "title": "PowerShell remoting over SSH",
+        "score": 0.149781,
+        "source": "microsoft_learn",
+        "doc_id": 93149,
+        "oid": "6ae233782c80ac9b21ba00d8",
+        "url": "https://learn.microsoft.com/en-us/powershell/scripting/security/remoting/ssh-remoting-in-powershell?view=powershell-7.6"
+      }
+    ]
+  },
+  "Q11": {
+    "status": "ok",
+    "query": "Azure virtual network peering",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Configure Azure Virtual Network peering",
+        "score": 0.323504,
+        "source": "microsoft_learn",
+        "doc_id": 53956,
+        "oid": "6ae1e7cb2c80ac9b21b917f2",
+        "url": "https://learn.microsoft.com/en-us/training/modules/configure-vnet-peering"
+      },
+      {
+        "rank": 2,
+        "title": "Virtual Network documentation",
+        "score": 0.299875,
+        "source": "microsoft_learn",
+        "doc_id": 527277,
+        "oid": "6b033b38d9bb282a03838b01",
+        "url": "https://learn.microsoft.com/en-us/azure/virtual-network"
+      },
+      {
+        "rank": 3,
+        "title": "Internet Peering documentation",
+        "score": 0.294531,
+        "source": "microsoft_learn",
+        "doc_id": 527002,
+        "oid": "6b033abed9bb282a038389ee",
+        "url": "https://learn.microsoft.com/en-us/azure/internet-peering"
+      },
+      {
+        "rank": 4,
+        "title": "Introduction to Azure Virtual Networks",
+        "score": 0.293591,
+        "source": "microsoft_learn",
+        "doc_id": 55455,
+        "oid": "6ae1ea6a2c80ac9b21b92146",
+        "url": "https://learn.microsoft.com/en-us/training/modules/introduction-to-azure-virtual-networks"
+      },
+      {
+        "rank": 5,
+        "title": "Connect multiple Azure VMware Solution Generation 2 private clouds",
+        "score": 0.290571,
+        "source": "microsoft_learn",
+        "doc_id": 529980,
+        "oid": "6b033fe1d9bb282a0383959c",
+        "url": "https://learn.microsoft.com/en-us/azure/azure-vmware/native-connect-multiple-private-clouds"
+      },
+      {
+        "rank": 6,
+        "title": "Azure Bastion troubleshooting documentation",
+        "score": 0.282254,
+        "source": "microsoft_learn",
+        "doc_id": 558845,
+        "oid": "6b036b11d9bb282a03843fe2",
+        "url": "https://learn.microsoft.com/en-us/troubleshoot/azure/bastion/welcome-azure-bastion"
+      },
+      {
+        "rank": 7,
+        "title": "Troubleshoot virtual network peering problems in Azure Bastion",
+        "score": 0.274759,
+        "source": "microsoft_learn",
+        "doc_id": 560641,
+        "oid": "6b036d7dd9bb282a03844ac1",
+        "url": "https://learn.microsoft.com/en-us/troubleshoot/azure/bastion/troubleshoot-virtual-network-peering-problems"
+      },
+      {
+        "rank": 8,
+        "title": "Virtual Network IP Services documentation",
+        "score": 0.272676,
+        "source": "microsoft_learn",
+        "doc_id": 527263,
+        "oid": "6b033b32d9bb282a03838af3",
+        "url": "https://learn.microsoft.com/en-us/azure/virtual-network/ip-services"
+      },
+      {
+        "rank": 9,
+        "title": "Virtual network peering and Azure Bastion",
+        "score": 0.271565,
+        "source": "microsoft_learn",
+        "doc_id": 523161,
+        "oid": "6b0333b0d9bb282a03837ad7",
+        "url": "https://learn.microsoft.com/en-us/azure/bastion/vnet-peering"
+      },
+      {
+        "rank": 10,
+        "title": "Azure Route Server documentation",
+        "score": 0.26896,
+        "source": "microsoft_learn",
+        "doc_id": 515756,
+        "oid": "6b032afcd9bb282a03835438",
+        "url": "https://learn.microsoft.com/en-us/azure/route-server"
+      }
+    ]
+  },
+  "Q12": {
+    "status": "ok",
+    "query": "Microsoft Graph OAuth permissions",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Microsoft doesn't expose permissions to generate OAuth tokens for Extended MAPI access to mailboxes",
+        "score": 0.210583,
+        "source": "microsoft_learn",
+        "doc_id": 565011,
+        "oid": "6b0371fad9bb282a038467fc",
+        "url": "https://learn.microsoft.com/en-us/troubleshoot/outlook/authentication/expose-permissions-issue-with-mapi-oauth-tokens"
+      },
+      {
+        "rank": 2,
+        "title": "Use Microsoft Entra ID to access the Windows 365 APIs in Microsoft Graph",
+        "score": 0.204313,
+        "source": "microsoft_learn",
+        "doc_id": 957673,
+        "oid": "6b062970d9bb282a038ec17f",
+        "url": "https://learn.microsoft.com/en-us/windows-365/enterprise/permission-scopes"
+      },
+      {
+        "rank": 3,
+        "title": "Authentication differences between Exchange Web Services (EWS) and Microsoft Graph",
+        "score": 0.201511,
+        "source": "microsoft_learn",
+        "doc_id": 842192,
+        "oid": "6b058facd9bb282a038c6d1d",
+        "url": "https://learn.microsoft.com/en-us/graph/migrate-exchange-web-services-authentication"
+      },
+      {
+        "rank": 4,
+        "title": "Build Azure DevOps integrations with Microsoft Entra OAuth apps",
+        "score": 0.200165,
+        "source": "microsoft_learn",
+        "doc_id": 511852,
+        "oid": "6b0326fad9bb282a03833ecb",
+        "url": "https://learn.microsoft.com/en-us/azure/devops/integrate/get-started/authentication/entra-oauth?view=azure-devops"
+      },
+      {
+        "rank": 5,
+        "title": "Calling an API",
+        "score": 0.194286,
+        "source": "microsoft_learn",
+        "doc_id": 832271,
+        "oid": "6b057f83d9bb282a038c20c7",
+        "url": "https://learn.microsoft.com/en-us/entra/msal/android/calling-an-api"
+      },
+      {
+        "rank": 6,
+        "title": "Microsoft Graph PowerShell",
+        "score": 0.190451,
+        "source": "microsoft_learn",
+        "doc_id": 160112,
+        "oid": "6ae3099d60d7e6dcf65e201a",
+        "url": "https://learn.microsoft.com/en-us/powershell/microsoftgraph?view=graph-powershell-1.0"
+      },
+      {
+        "rank": 7,
+        "title": "HTTP 403 authorization error when calling the Microsoft Graph Security API",
+        "score": 0.186633,
+        "source": "microsoft_learn",
+        "doc_id": 560149,
+        "oid": "6b036cd7d9bb282a03844826",
+        "url": "https://learn.microsoft.com/en-us/troubleshoot/entra/entra-id/users-groups-entra-apis/403-error-when-calling-microsoft-graph-security-api"
+      },
+      {
+        "rank": 8,
+        "title": "Microsoft identity platform token exchange scenarios with SAML and OIDC/OAuth",
+        "score": 0.185664,
+        "source": "microsoft_learn",
+        "doc_id": 835996,
+        "oid": "6b058543d9bb282a038c546f",
+        "url": "https://learn.microsoft.com/en-us/entra/identity-platform/scenario-token-exchange-saml-oauth"
+      },
+      {
+        "rank": 9,
+        "title": "Microsoft Graph REST APIs for mail, calendars, and contacts",
+        "score": 0.184959,
+        "source": "microsoft_learn",
+        "doc_id": 816020,
+        "oid": "6b056669d9bb282a038bbe27",
+        "url": "https://learn.microsoft.com/en-us/exchange/client-developer/exchange-web-services/office-365-rest-apis-for-mail-calendars-and-contacts"
+      },
+      {
+        "rank": 10,
+        "title": "Configure OAuth U2M: Custom-managed for Microsoft OneDrive ingestion",
+        "score": 0.181846,
+        "source": "microsoft_learn",
+        "doc_id": 491897,
+        "oid": "6b031169d9bb282a0382d19a",
+        "url": "https://learn.microsoft.com/en-us/azure/databricks/ingestion/lakeflow-connect/onedrive-source-setup-u2m"
+      }
+    ]
+  },
+  "Q13": {
+    "status": "ok",
+    "query": "transformer attention mechanism",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Delta–wye transformer",
+        "score": 0.141535,
+        "source": "wikipedia",
+        "doc_id": 408376,
+        "oid": "6b02b422beada0530d8ab8a8",
+        "url": "https://en.wikipedia.org/wiki/Delta%E2%80%93wye_transformer"
+      },
+      {
+        "rank": 2,
+        "title": "Perceiver",
+        "score": 0.132272,
+        "source": "wikipedia",
+        "doc_id": 38784,
+        "oid": "6ae1c9712c80ac9b21b8bcf4",
+        "url": "https://en.wikipedia.org/wiki/Perceiver"
+      },
+      {
+        "rank": 3,
+        "title": "Ashish Vaswani",
+        "score": 0.123458,
+        "source": "wikipedia",
+        "doc_id": 1496,
+        "oid": "6ad9c6c62a350aca88ff4472",
+        "url": "https://en.wikipedia.org/wiki/Ashish_Vaswani"
+      },
+      {
+        "rank": 4,
+        "title": "Transformer utilization factor",
+        "score": 0.121246,
+        "source": "wikipedia",
+        "doc_id": 408863,
+        "oid": "6b02b595beada0530d8abb92",
+        "url": "https://en.wikipedia.org/wiki/Transformer_utilization_factor"
+      },
+      {
+        "rank": 5,
+        "title": "Energy efficient transformer",
+        "score": 0.120336,
+        "source": "wikipedia",
+        "doc_id": 364470,
+        "oid": "6b0260cebeada0530d89bd64",
+        "url": "https://en.wikipedia.org/wiki/Energy_efficient_transformer"
+      },
+      {
+        "rank": 6,
+        "title": "Planar transformer",
+        "score": 0.117953,
+        "source": "wikipedia",
+        "doc_id": 314584,
+        "oid": "6b01d3babeada0530d8899af",
+        "url": "https://en.wikipedia.org/wiki/Planar_transformer"
+      },
+      {
+        "rank": 7,
+        "title": "Ōno Kōjin",
+        "score": 0.117703,
+        "source": "wikipedia",
+        "doc_id": 410324,
+        "oid": "6b02b72dbeada0530d8ac442",
+        "url": "https://en.wikipedia.org/wiki/%C5%8Cno_K%C5%8Djin"
+      },
+      {
+        "rank": 8,
+        "title": "Gating mechanism",
+        "score": 0.116007,
+        "source": "wikipedia",
+        "doc_id": 269377,
+        "oid": "6b00d76abeada0530d874893",
+        "url": "https://en.wikipedia.org/wiki/Gating_mechanism"
+      },
+      {
+        "rank": 9,
+        "title": "Addressing Information Loss and Interaction Collapse: A Dual Enhanced Attention Framework for Feature Interaction",
+        "score": 0.112485,
+        "source": "arxiv",
+        "doc_id": 61556,
+        "oid": "6ae1f5162c80ac9b21b94372",
+        "url": "https://arxiv.org/html/2503.11233v1"
+      },
+      {
+        "rank": 10,
+        "title": "Circuit (neural network)",
+        "score": 0.111936,
+        "source": "wikipedia",
+        "doc_id": 38526,
+        "oid": "6ae1c8f92c80ac9b21b8bbdf",
+        "url": "https://en.wikipedia.org/wiki/Circuit_(neural_network)"
+      }
+    ]
+  },
+  "Q14": {
+    "status": "ok",
+    "query": "retrieval augmented generation",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Developing Retrieval Augmented Generation (RAG) based LLM Systems from PDFs: An Experience Report",
+        "score": 0.222867,
+        "source": "arxiv",
+        "doc_id": 71176,
+        "oid": "6ae206582c80ac9b21b97af1",
+        "url": "https://arxiv.org/html/2410.15944v1"
+      },
+      {
+        "rank": 2,
+        "title": "Implement Retrieval Augmented Generation (RAG) with Azure Databricks",
+        "score": 0.211826,
+        "source": "microsoft_learn",
+        "doc_id": 57127,
+        "oid": "6ae1ed4e2c80ac9b21b92a3a",
+        "url": "https://learn.microsoft.com/en-us/training/modules/retrieval-augmented-generation-azure-databricks"
+      },
+      {
+        "rank": 3,
+        "title": "Design and implement RAG with SQL",
+        "score": 0.188918,
+        "source": "microsoft_learn",
+        "doc_id": 57239,
+        "oid": "6ae1ed802c80ac9b21b92b03",
+        "url": "https://learn.microsoft.com/en-us/training/modules/design-implement-rag-with-sql"
+      },
+      {
+        "rank": 4,
+        "title": "Optimize generative AI model performance with Microsoft Foundry",
+        "score": 0.182953,
+        "source": "microsoft_learn",
+        "doc_id": 57566,
+        "oid": "6ae1ee0f2c80ac9b21b92cb3",
+        "url": "https://learn.microsoft.com/en-us/training/modules/optimize-generative-ai-model-performance"
+      },
+      {
+        "rank": 5,
+        "title": "Implement AI capabilities in database solutions",
+        "score": 0.17816,
+        "source": "microsoft_learn",
+        "doc_id": 55291,
+        "oid": "6ae1ea222c80ac9b21b91fa1",
+        "url": "https://learn.microsoft.com/en-us/training/paths/implement-ai-capabilities-database-solutions"
+      },
+      {
+        "rank": 6,
+        "title": "Build AI-powered solutions using SQL Server 2025",
+        "score": 0.169508,
+        "source": "microsoft_learn",
+        "doc_id": 54652,
+        "oid": "6ae1e9042c80ac9b21b91bf6",
+        "url": "https://learn.microsoft.com/en-us/training/modules/build-ai-solutions-sql-server"
+      },
+      {
+        "rank": 7,
+        "title": "ChromaDB",
+        "score": 0.163188,
+        "source": "wikipedia",
+        "doc_id": 48766,
+        "oid": "6ae1dc022c80ac9b21b8f805",
+        "url": "https://en.wikipedia.org/wiki/ChromaDB"
+      },
+      {
+        "rank": 8,
+        "title": "Search/Retrieve Web Service",
+        "score": 0.16273,
+        "source": "wikipedia",
+        "doc_id": 45866,
+        "oid": "6ae1d6bb2c80ac9b21b8e779",
+        "url": "https://en.wikipedia.org/wiki/Search%2FRetrieve_Web_Service"
+      },
+      {
+        "rank": 9,
+        "title": "Build knowledge-enhanced AI agents with Foundry IQ",
+        "score": 0.154663,
+        "source": "microsoft_learn",
+        "doc_id": 54800,
+        "oid": "6ae1e9472c80ac9b21b91d00",
+        "url": "https://learn.microsoft.com/en-us/training/modules/introduction-foundry-iq"
+      },
+      {
+        "rank": 10,
+        "title": "Example: use features with structured RAG applications",
+        "score": 0.15237,
+        "source": "microsoft_learn",
+        "doc_id": 497590,
+        "oid": "6b031786d9bb282a0382ef1e",
+        "url": "https://learn.microsoft.com/en-us/azure/databricks/machine-learning/feature-store/rag"
+      }
+    ]
+  },
+  "Q15": {
+    "status": "ok",
+    "query": "graph neural networks",
+    "results": [
+      {
+        "rank": 1,
+        "title": "List of network theory topics",
+        "score": 0.221799,
+        "source": "wikipedia",
+        "doc_id": 205979,
+        "oid": "6ae807aa0aaedde439e45818",
+        "url": "https://en.wikipedia.org/wiki/List_of_network_theory_topics"
+      },
+      {
+        "rank": 2,
+        "title": "Introduction to computer vision with TensorFlow",
+        "score": 0.178574,
+        "source": "microsoft_learn",
+        "doc_id": 54330,
+        "oid": "6ae1e8742c80ac9b21b91a23",
+        "url": "https://learn.microsoft.com/en-us/training/modules/intro-computer-vision-tensorflow"
+      },
+      {
+        "rank": 3,
+        "title": "Node2vec",
+        "score": 0.176008,
+        "source": "wikipedia",
+        "doc_id": 135706,
+        "oid": "6ae28b8e2c80ac9b21bb0646",
+        "url": "https://en.wikipedia.org/wiki/Node2vec"
+      },
+      {
+        "rank": 4,
+        "title": "Weisfeiler Leman graph isomorphism test",
+        "score": 0.172085,
+        "source": "wikipedia",
+        "doc_id": 137042,
+        "oid": "6ae28e4c2c80ac9b21bb0e4d",
+        "url": "https://en.wikipedia.org/wiki/Weisfeiler_Leman_graph_isomorphism_test"
+      },
+      {
+        "rank": 5,
+        "title": "Microsoft Cognitive Toolkit",
+        "score": 0.169547,
+        "source": "wikipedia",
+        "doc_id": 52280,
+        "oid": "6ae1e4e52c80ac9b21b90e36",
+        "url": "https://en.wikipedia.org/wiki/Microsoft_Cognitive_Toolkit"
+      },
+      {
+        "rank": 6,
+        "title": "Oscillatory neural network",
+        "score": 0.164337,
+        "source": "wikipedia",
+        "doc_id": 52288,
+        "oid": "6ae1e4e82c80ac9b21b90e3e",
+        "url": "https://en.wikipedia.org/wiki/Oscillatory_neural_network"
+      },
+      {
+        "rank": 7,
+        "title": "Train and evaluate deep learning models",
+        "score": 0.163655,
+        "source": "microsoft_learn",
+        "doc_id": 54601,
+        "oid": "6ae1e8ee2c80ac9b21b91ba5",
+        "url": "https://learn.microsoft.com/en-us/training/modules/train-evaluate-deep-learn-models"
+      },
+      {
+        "rank": 8,
+        "title": "Touch All the Bases - Give Your .NET App Brains and Brawn with the Intelligence of Neural Networks | Microsoft Learn",
+        "score": 0.162148,
+        "source": "microsoft_learn",
+        "doc_id": 923842,
+        "oid": "6b060389d9bb282a038dfe5f",
+        "url": "https://learn.microsoft.com/en-us/archive/msdn-magazine/authors/christopher_m._frenz"
+      },
+      {
+        "rank": 9,
+        "title": "SNNS",
+        "score": 0.161721,
+        "source": "wikipedia",
+        "doc_id": 52306,
+        "oid": "6ae1e4f12c80ac9b21b90e51",
+        "url": "https://en.wikipedia.org/wiki/SNNS"
+      },
+      {
+        "rank": 10,
+        "title": "Backpropagation through structure",
+        "score": 0.160513,
+        "source": "wikipedia",
+        "doc_id": 52217,
+        "oid": "6ae1e4c92c80ac9b21b90df7",
+        "url": "https://en.wikipedia.org/wiki/Backpropagation_through_structure"
+      }
+    ]
+  },
+  "Q16": {
+    "status": "ok",
+    "query": "differential privacy machine learning",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Model inversion attack",
+        "score": 0.16522,
+        "source": "wikipedia",
+        "doc_id": 12145,
+        "oid": "6ad9de112a350aca88ff8628",
+        "url": "https://en.wikipedia.org/wiki/Model_inversion_attack"
+      },
+      {
+        "rank": 2,
+        "title": "Differential privacy composition theorems",
+        "score": 0.15659,
+        "source": "wikipedia",
+        "doc_id": 4029,
+        "oid": "6ad9cefa2a350aca88ff5589",
+        "url": "https://en.wikipedia.org/wiki/Differential_privacy_composition_theorems"
+      },
+      {
+        "rank": 3,
+        "title": "Gautam Kamath",
+        "score": 0.154039,
+        "source": "wikipedia",
+        "doc_id": 82992,
+        "oid": "6ae21dc92c80ac9b21b9c1fb",
+        "url": "https://en.wikipedia.org/wiki/Gautam_Kamath"
+      },
+      {
+        "rank": 4,
+        "title": "Numerical methods for differential equations",
+        "score": 0.142845,
+        "source": "wikipedia",
+        "doc_id": 188594,
+        "oid": "6ae7e81c0aaedde439e3f4db",
+        "url": "https://en.wikipedia.org/wiki/Numerical_methods_for_differential_equations"
+      },
+      {
+        "rank": 5,
+        "title": "Frank McSherry",
+        "score": 0.142838,
+        "source": "wikipedia",
+        "doc_id": 68117,
+        "oid": "6ae200cd2c80ac9b21b96c25",
+        "url": "https://en.wikipedia.org/wiki/Frank_McSherry"
+      },
+      {
+        "rank": 6,
+        "title": "Kobbi Nissim",
+        "score": 0.141917,
+        "source": "wikipedia",
+        "doc_id": 68396,
+        "oid": "6ae2014a2c80ac9b21b96d3e",
+        "url": "https://en.wikipedia.org/wiki/Kobbi_Nissim"
+      },
+      {
+        "rank": 7,
+        "title": "Adam D. Smith",
+        "score": 0.139417,
+        "source": "wikipedia",
+        "doc_id": 69130,
+        "oid": "6ae202a02c80ac9b21b97023",
+        "url": "https://en.wikipedia.org/wiki/Adam_D._Smith"
+      },
+      {
+        "rank": 8,
+        "title": "Codeunit \"System Privacy Notice Reg.\"",
+        "score": 0.135906,
+        "source": "microsoft_learn",
+        "doc_id": 240027,
+        "oid": "6affa4d78ade75cff131cfb4",
+        "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/application/system-application/codeunit/system.privacy.system-privacy-notice-reg."
+      },
+      {
+        "rank": 9,
+        "title": "Catuscia Palamidessi",
+        "score": 0.134148,
+        "source": "wikipedia",
+        "doc_id": 73194,
+        "oid": "6ae20a002c80ac9b21b9863e",
+        "url": "https://en.wikipedia.org/wiki/Catuscia_Palamidessi"
+      },
+      {
+        "rank": 10,
+        "title": "Tore Dalenius",
+        "score": 0.132367,
+        "source": "wikipedia",
+        "doc_id": 431376,
+        "oid": "6b02cd76beada0530d8b3c3a",
+        "url": "https://en.wikipedia.org/wiki/Tore_Dalenius"
+      }
+    ]
+  },
+  "Q17": {
+    "status": "ok",
+    "query": "federated learning data privacy",
+    "results": [
+      {
+        "rank": 1,
+        "title": "2.2.1.3 Federated Authentication Token",
+        "score": 0.15629,
+        "source": "microsoft_learn",
+        "doc_id": 668081,
+        "oid": "6b040d37d9bb282a03874d93",
+        "url": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-tds/f40cca29-29b8-43ec-b9ff-2f8682486c29"
+      },
+      {
+        "rank": 2,
+        "title": "SourceNetwork",
+        "score": 0.148638,
+        "source": "microsoft_learn",
+        "doc_id": 900705,
+        "oid": "6b05e94cd9bb282a038d7b54",
+        "url": "https://learn.microsoft.com/en-us/skype-sdk/ucwa/sourcenetwork_ref"
+      },
+      {
+        "rank": 3,
+        "title": "3.1.5.4.2 Message Validation",
+        "score": 0.144646,
+        "source": "microsoft_learn",
+        "doc_id": 671092,
+        "oid": "6b041279d9bb282a0387855d",
+        "url": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-mwbf/7db4f054-f31a-447e-a8fc-6547215bfd31"
+      },
+      {
+        "rank": 4,
+        "title": "Federated portal network",
+        "score": 0.143585,
+        "source": "wikipedia",
+        "doc_id": 140915,
+        "oid": "6ae2966d2c80ac9b21bb252a",
+        "url": "https://en.wikipedia.org/wiki/Federated_portal_network"
+      },
+      {
+        "rank": 5,
+        "title": "2.2.5.7 LocationType",
+        "score": 0.139307,
+        "source": "microsoft_learn",
+        "doc_id": 791018,
+        "oid": "6b0533fed9bb282a038b2eeb",
+        "url": "https://learn.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-sadmws/edd791ce-78ec-4f5e-8739-a2c22c45cabb"
+      },
+      {
+        "rank": 6,
+        "title": "Connecting your web service in Windows Federated Search",
+        "score": 0.137903,
+        "source": "microsoft_learn",
+        "doc_id": 271299,
+        "oid": "6b00db8ebeada0530d875e04",
+        "url": "https://learn.microsoft.com/en-us/windows/win32/search/-search-federated-search-web-service"
+      },
+      {
+        "rank": 7,
+        "title": "Namespace System.Privacy",
+        "score": 0.137884,
+        "source": "microsoft_learn",
+        "doc_id": 239497,
+        "oid": "6affa1728ade75cff131cc01",
+        "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/application/base-application/namespace/system.privacy"
+      },
+      {
+        "rank": 8,
+        "title": "2.2.2.3 Federated Authentication Information",
+        "score": 0.136021,
+        "source": "microsoft_learn",
+        "doc_id": 628412,
+        "oid": "6b03cedfd9bb282a038615e0",
+        "url": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-tds/1a22145b-7657-435d-9c60-318be82456e1"
+      },
+      {
+        "rank": 9,
+        "title": "Review domain authentication, email best practices, data protection and privacy in Dynamics 365 Customer Insights - Journeys",
+        "score": 0.135383,
+        "source": "microsoft_learn",
+        "doc_id": 61203,
+        "oid": "6ae1f4772c80ac9b21b9415c",
+        "url": "https://learn.microsoft.com/en-us/training/modules/review-authentication-dynamics-365-marketing"
+      },
+      {
+        "rank": 10,
+        "title": "Federated search in Windows",
+        "score": 0.134996,
+        "source": "microsoft_learn",
+        "doc_id": 304289,
+        "oid": "6b014fe8beada0530d882762",
+        "url": "https://learn.microsoft.com/en-us/windows/win32/search/-search-federated-search-overview"
+      }
+    ]
+  },
+  "Q18": {
+    "status": "ok",
+    "query": "stochastic gradient descent optimization",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Gradient method",
+        "score": 0.304483,
+        "source": "wikipedia",
+        "doc_id": 81305,
+        "oid": "6ae21a642c80ac9b21b9b838",
+        "url": "https://en.wikipedia.org/wiki/Gradient_method"
+      },
+      {
+        "rank": 2,
+        "title": "microsoftml.sgd_optimizer : Stochastic gradient descent",
+        "score": 0.207952,
+        "source": "microsoft_learn",
+        "doc_id": 581629,
+        "oid": "6b038b32d9bb282a0384c3a6",
+        "url": "https://learn.microsoft.com/en-us/sql/machine-learning/python/reference/microsoftml/sgd-optimizer?view=sql-server-ver17"
+      },
+      {
+        "rank": 3,
+        "title": "Mirror descent",
+        "score": 0.178002,
+        "source": "wikipedia",
+        "doc_id": 15936,
+        "oid": "6ad9e6432a350aca88ff9ee4",
+        "url": "https://en.wikipedia.org/wiki/Mirror_descent"
+      },
+      {
+        "rank": 4,
+        "title": "Descent direction",
+        "score": 0.166896,
+        "source": "wikipedia",
+        "doc_id": 15858,
+        "oid": "6ad9e61c2a350aca88ff9e96",
+        "url": "https://en.wikipedia.org/wiki/Descent_direction"
+      },
+      {
+        "rank": 5,
+        "title": "maOptimizer: Optimization Algorithms",
+        "score": 0.159366,
+        "source": "microsoft_learn",
+        "doc_id": 573385,
+        "oid": "6b037f2bd9bb282a0384944c",
+        "url": "https://learn.microsoft.com/en-us/sql/machine-learning/r/reference/microsoftml/optimizer?view=sql-server-ver17"
+      },
+      {
+        "rank": 6,
+        "title": "Stochastic gradient Langevin dynamics",
+        "score": 0.14902,
+        "source": "wikipedia",
+        "doc_id": 81453,
+        "oid": "6ae21aaf2c80ac9b21b9b8cd",
+        "url": "https://en.wikipedia.org/wiki/Stochastic_gradient_Langevin_dynamics"
+      },
+      {
+        "rank": 7,
+        "title": "Simultaneous perturbation stochastic approximation",
+        "score": 0.142222,
+        "source": "wikipedia",
+        "doc_id": 81442,
+        "oid": "6ae21aaa2c80ac9b21b9b8c2",
+        "url": "https://en.wikipedia.org/wiki/Simultaneous_perturbation_stochastic_approximation"
+      },
+      {
+        "rank": 8,
+        "title": "Naum Z. Shor",
+        "score": 0.137656,
+        "source": "wikipedia",
+        "doc_id": 73974,
+        "oid": "6ae20b722c80ac9b21b98aa1",
+        "url": "https://en.wikipedia.org/wiki/Naum_Z._Shor"
+      },
+      {
+        "rank": 9,
+        "title": "Derivative-free optimization",
+        "score": 0.137291,
+        "source": "wikipedia",
+        "doc_id": 81277,
+        "oid": "6ae21a562c80ac9b21b9b81c",
+        "url": "https://en.wikipedia.org/wiki/Derivative-free_optimization"
+      },
+      {
+        "rank": 10,
+        "title": "Léon Bottou",
+        "score": 0.133496,
+        "source": "wikipedia",
+        "doc_id": 71741,
+        "oid": "6ae2075f2c80ac9b21b97e37",
+        "url": "https://en.wikipedia.org/wiki/L%C3%A9on_Bottou"
+      }
+    ]
+  },
+  "Q19": {
+    "status": "ok",
+    "query": "quantum error correction surface code",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Microsoft Quantum documentation",
+        "score": 0.215346,
+        "source": "microsoft_learn",
+        "doc_id": 502668,
+        "oid": "6b031cc8d9bb282a03830b98",
+        "url": "https://learn.microsoft.com/en-us/azure/quantum"
+      },
+      {
+        "rank": 2,
+        "title": "Surface Code Class",
+        "score": 0.203965,
+        "source": "microsoft_learn",
+        "doc_id": 13796,
+        "oid": "6ad9e1912a350aca88ff905a",
+        "url": "https://learn.microsoft.com/en-us/python/qdk/qdk.qre.models.surfacecode?view=qsharp-py"
+      },
+      {
+        "rank": 3,
+        "title": "Surface Code Class",
+        "score": 0.203965,
+        "source": "microsoft_learn",
+        "doc_id": 13840,
+        "oid": "6ad9e1ac2a350aca88ff90b3",
+        "url": "https://learn.microsoft.com/en-us/python/qdk/qdk.qre.models.qec.surfacecode?view=qsharp-py"
+      },
+      {
+        "rank": 4,
+        "title": "qec Package",
+        "score": 0.19748,
+        "source": "microsoft_learn",
+        "doc_id": 13821,
+        "oid": "6ad9e19f2a350aca88ff9076",
+        "url": "https://learn.microsoft.com/en-us/python/qdk/qdk.qre.models.qec?view=qsharp-py"
+      },
+      {
+        "rank": 5,
+        "title": "Center for Quantum Information Science & Technology",
+        "score": 0.193892,
+        "source": "wikipedia",
+        "doc_id": 82681,
+        "oid": "6ae21d2a2c80ac9b21b9c092",
+        "url": "https://en.wikipedia.org/wiki/Center_for_Quantum_Information_Science_%26_Technology"
+      },
+      {
+        "rank": 6,
+        "title": "CSS code",
+        "score": 0.191879,
+        "source": "wikipedia",
+        "doc_id": 82701,
+        "oid": "6ae21d352c80ac9b21b9c0a6",
+        "url": "https://en.wikipedia.org/wiki/CSS_code"
+      },
+      {
+        "rank": 7,
+        "title": "Lattice surgery",
+        "score": 0.191704,
+        "source": "wikipedia",
+        "doc_id": 27768,
+        "oid": "6ae11e6d2c80ac9b21b87959",
+        "url": "https://en.wikipedia.org/wiki/Lattice_surgery"
+      },
+      {
+        "rank": 8,
+        "title": "Two Dimensional Yoked Surface Code Class",
+        "score": 0.188183,
+        "source": "microsoft_learn",
+        "doc_id": 13691,
+        "oid": "6ad9e1502a350aca88ff8fdc",
+        "url": "https://learn.microsoft.com/en-us/python/qdk/qdk.qre.models.qec.twodimensionalyokedsurfacecode?view=qsharp-py"
+      },
+      {
+        "rank": 9,
+        "title": "Two Dimensional Yoked Surface Code Class",
+        "score": 0.188183,
+        "source": "microsoft_learn",
+        "doc_id": 13802,
+        "oid": "6ad9e1952a350aca88ff9062",
+        "url": "https://learn.microsoft.com/en-us/python/qdk/qdk.qre.models.twodimensionalyokedsurfacecode?view=qsharp-py"
+      },
+      {
+        "rank": 10,
+        "title": "One Dimensional Yoked Surface Code Class",
+        "score": 0.188183,
+        "source": "microsoft_learn",
+        "doc_id": 13838,
+        "oid": "6ad9e1aa2a350aca88ff90b1",
+        "url": "https://learn.microsoft.com/en-us/python/qdk/qdk.qre.models.onedimensionalyokedsurfacecode?view=qsharp-py"
+      }
+    ]
+  },
+  "Q20": {
+    "status": "ok",
+    "query": "lithium ion battery degradation",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Lithium vanadium phosphate battery",
+        "score": 0.16168,
+        "source": "wikipedia",
+        "doc_id": 454795,
+        "oid": "6b02e853d9bb282a0382013a",
+        "url": "https://en.wikipedia.org/wiki/Lithium_vanadium_phosphate_battery"
+      },
+      {
+        "rank": 2,
+        "title": "List of battery types",
+        "score": 0.158135,
+        "source": "wikipedia",
+        "doc_id": 315172,
+        "oid": "6b01d4e0beada0530d889cdf",
+        "url": "https://en.wikipedia.org/wiki/List_of_battery_types"
+      },
+      {
+        "rank": 3,
+        "title": "Lithium-ion flow battery",
+        "score": 0.157217,
+        "source": "wikipedia",
+        "doc_id": 454717,
+        "oid": "6b02e83dd9bb282a038200c9",
+        "url": "https://en.wikipedia.org/wiki/Lithium-ion_flow_battery"
+      },
+      {
+        "rank": 4,
+        "title": "Commodity cell",
+        "score": 0.156525,
+        "source": "wikipedia",
+        "doc_id": 314222,
+        "oid": "6b01d31abeada0530d88983b",
+        "url": "https://en.wikipedia.org/wiki/Commodity_cell"
+      },
+      {
+        "rank": 5,
+        "title": "Sulfur selenium battery",
+        "score": 0.15153,
+        "source": "wikipedia",
+        "doc_id": 415478,
+        "oid": "6b02bc96beada0530d8ae196",
+        "url": "https://en.wikipedia.org/wiki/Sulfur_selenium_battery"
+      },
+      {
+        "rank": 6,
+        "title": "Cutoff voltage",
+        "score": 0.149181,
+        "source": "wikipedia",
+        "doc_id": 371383,
+        "oid": "6b026e66beada0530d89df06",
+        "url": "https://en.wikipedia.org/wiki/Cutoff_voltage"
+      },
+      {
+        "rank": 7,
+        "title": "Float voltage",
+        "score": 0.147523,
+        "source": "wikipedia",
+        "doc_id": 391727,
+        "oid": "6b029596beada0530d8a56e4",
+        "url": "https://en.wikipedia.org/wiki/Float_voltage"
+      },
+      {
+        "rank": 8,
+        "title": "Solid-state silicon battery",
+        "score": 0.145775,
+        "source": "wikipedia",
+        "doc_id": 454627,
+        "oid": "6b02e824d9bb282a03820054",
+        "url": "https://en.wikipedia.org/wiki/Solid-state_silicon_battery"
+      },
+      {
+        "rank": 9,
+        "title": "List of energy storage projects in South Australia",
+        "score": 0.145512,
+        "source": "wikipedia",
+        "doc_id": 415405,
+        "oid": "6b02bc7dbeada0530d8ae122",
+        "url": "https://en.wikipedia.org/wiki/List_of_energy_storage_projects_in_South_Australia"
+      },
+      {
+        "rank": 10,
+        "title": "Charge cycle",
+        "score": 0.143708,
+        "source": "wikipedia",
+        "doc_id": 314203,
+        "oid": "6b01d311beada0530d889826",
+        "url": "https://en.wikipedia.org/wiki/Charge_cycle"
+      }
+    ]
+  },
+  "Q21": {
+    "status": "ok",
+    "query": "photovoltaic solar cell efficiency",
+    "results": [
+      {
+        "rank": 1,
+        "title": "List of types of solar cells",
+        "score": 0.233797,
+        "source": "wikipedia",
+        "doc_id": 315224,
+        "oid": "6b01d4f7beada0530d889d16",
+        "url": "https://en.wikipedia.org/wiki/List_of_types_of_solar_cells"
+      },
+      {
+        "rank": 2,
+        "title": "Index of solar energy articles",
+        "score": 0.209753,
+        "source": "wikipedia",
+        "doc_id": 453974,
+        "oid": "6b02e778d9bb282a0381fccb",
+        "url": "https://en.wikipedia.org/wiki/Index_of_solar_energy_articles"
+      },
+      {
+        "rank": 3,
+        "title": "Indium gallium arsenide phosphide",
+        "score": 0.202455,
+        "source": "wikipedia",
+        "doc_id": 385805,
+        "oid": "6b028b05beada0530d8a3504",
+        "url": "https://en.wikipedia.org/wiki/Indium_gallium_arsenide_phosphide"
+      },
+      {
+        "rank": 4,
+        "title": "Alfonsine Solar Park",
+        "score": 0.200499,
+        "source": "wikipedia",
+        "doc_id": 478445,
+        "oid": "6b0302c4d9bb282a03828562",
+        "url": "https://en.wikipedia.org/wiki/Alfonsine_Solar_Park"
+      },
+      {
+        "rank": 5,
+        "title": "Sharp Solar",
+        "score": 0.196567,
+        "source": "wikipedia",
+        "doc_id": 222025,
+        "oid": "6ae82a370aaedde439e4b71f",
+        "url": "https://en.wikipedia.org/wiki/Sharp_Solar"
+      },
+      {
+        "rank": 6,
+        "title": "Oxford Photovoltaics",
+        "score": 0.191028,
+        "source": "wikipedia",
+        "doc_id": 443604,
+        "oid": "6b02db3cbeada0530d8b8287",
+        "url": "https://en.wikipedia.org/wiki/Oxford_Photovoltaics"
+      },
+      {
+        "rank": 7,
+        "title": "Stuart Wenham",
+        "score": 0.190501,
+        "source": "wikipedia",
+        "doc_id": 174241,
+        "oid": "6ae7cdb30aaedde439e3a432",
+        "url": "https://en.wikipedia.org/wiki/Stuart_Wenham"
+      },
+      {
+        "rank": 8,
+        "title": "Photoactive layer",
+        "score": 0.187881,
+        "source": "wikipedia",
+        "doc_id": 391024,
+        "oid": "6b02945cbeada0530d8a52f2",
+        "url": "https://en.wikipedia.org/wiki/Photoactive_layer"
+      },
+      {
+        "rank": 9,
+        "title": "Qinghai Golmud Solar Park",
+        "score": 0.183268,
+        "source": "wikipedia",
+        "doc_id": 482219,
+        "oid": "6b0306d1d9bb282a0382999d",
+        "url": "https://en.wikipedia.org/wiki/Qinghai_Golmud_Solar_Park"
+      },
+      {
+        "rank": 10,
+        "title": "Silicon Module Super League",
+        "score": 0.182998,
+        "source": "wikipedia",
+        "doc_id": 427039,
+        "oid": "6b02c8e4beada0530d8b2306",
+        "url": "https://en.wikipedia.org/wiki/Silicon_Module_Super_League"
+      }
+    ]
+  },
+  "Q22": {
+    "status": "ok",
+    "query": "computational fluid dynamics finite volume method",
+    "results": [
+      {
+        "rank": 1,
+        "title": "List of operator splitting topics",
+        "score": 0.261794,
+        "source": "wikipedia",
+        "doc_id": 76611,
+        "oid": "6ae210a92c80ac9b21b99afd",
+        "url": "https://en.wikipedia.org/wiki/List_of_operator_splitting_topics"
+      },
+      {
+        "rank": 2,
+        "title": "Diffuse element method",
+        "score": 0.255931,
+        "source": "wikipedia",
+        "doc_id": 133277,
+        "oid": "6ae2868d2c80ac9b21baf7fb",
+        "url": "https://en.wikipedia.org/wiki/Diffuse_element_method"
+      },
+      {
+        "rank": 3,
+        "title": "List of fluid mechanics journals",
+        "score": 0.24901,
+        "source": "wikipedia",
+        "doc_id": 360454,
+        "oid": "6b0259babeada0530d89ad2e",
+        "url": "https://en.wikipedia.org/wiki/List_of_fluid_mechanics_journals"
+      },
+      {
+        "rank": 4,
+        "title": "Flux-corrected transport",
+        "score": 0.226227,
+        "source": "wikipedia",
+        "doc_id": 133281,
+        "oid": "6ae2868f2c80ac9b21baf7ff",
+        "url": "https://en.wikipedia.org/wiki/Flux-corrected_transport"
+      },
+      {
+        "rank": 5,
+        "title": "List of partial differential equation topics",
+        "score": 0.224297,
+        "source": "wikipedia",
+        "doc_id": 393598,
+        "oid": "6b0298dbbeada0530d8a620b",
+        "url": "https://en.wikipedia.org/wiki/List_of_partial_differential_equation_topics"
+      },
+      {
+        "rank": 6,
+        "title": "Coolfluid",
+        "score": 0.210359,
+        "source": "wikipedia",
+        "doc_id": 186506,
+        "oid": "6ae7e4440aaedde439e3e945",
+        "url": "https://en.wikipedia.org/wiki/Coolfluid"
+      },
+      {
+        "rank": 7,
+        "title": "Marker-and-cell method",
+        "score": 0.208487,
+        "source": "wikipedia",
+        "doc_id": 35455,
+        "oid": "6ae12c432c80ac9b21b8a917",
+        "url": "https://en.wikipedia.org/wiki/Marker-and-cell_method"
+      },
+      {
+        "rank": 8,
+        "title": "List of computational fluid dynamics software",
+        "score": 0.203735,
+        "source": "wikipedia",
+        "doc_id": 126261,
+        "oid": "6ae277ce2c80ac9b21bacb1b",
+        "url": "https://en.wikipedia.org/wiki/List_of_computational_fluid_dynamics_software"
+      },
+      {
+        "rank": 9,
+        "title": "Suhas Patankar",
+        "score": 0.199975,
+        "source": "wikipedia",
+        "doc_id": 187276,
+        "oid": "6ae7e5a80aaedde439e3ed5a",
+        "url": "https://en.wikipedia.org/wiki/Suhas_Patankar"
+      },
+      {
+        "rank": 10,
+        "title": "PISO algorithm",
+        "score": 0.190569,
+        "source": "wikipedia",
+        "doc_id": 186599,
+        "oid": "6ae7e46d0aaedde439e3e9a3",
+        "url": "https://en.wikipedia.org/wiki/PISO_algorithm"
+      }
+    ]
+  },
+  "Q23": {
+    "status": "ok",
+    "query": "finite element analysis stress",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Quadratic quadrilateral element",
+        "score": 0.242553,
+        "source": "wikipedia",
+        "doc_id": 693206,
+        "oid": "6b043a29d9bb282a038823ec",
+        "url": "https://en.wikipedia.org/wiki/Quadratic_quadrilateral_element"
+      },
+      {
+        "rank": 2,
+        "title": "Finite element model data post-processing",
+        "score": 0.224786,
+        "source": "wikipedia",
+        "doc_id": 35145,
+        "oid": "6ae12bb32c80ac9b21b8a737",
+        "url": "https://en.wikipedia.org/wiki/Finite_element_model_data_post-processing"
+      },
+      {
+        "rank": 3,
+        "title": "Structural mechanics",
+        "score": 0.202836,
+        "source": "wikipedia",
+        "doc_id": 360796,
+        "oid": "6b025a52beada0530d89ae8d",
+        "url": "https://en.wikipedia.org/wiki/Structural_mechanics"
+      },
+      {
+        "rank": 4,
+        "title": "Constant strain triangle element",
+        "score": 0.194944,
+        "source": "wikipedia",
+        "doc_id": 693058,
+        "oid": "6b0439efd9bb282a03882324",
+        "url": "https://en.wikipedia.org/wiki/Constant_strain_triangle_element"
+      },
+      {
+        "rank": 5,
+        "title": "Barsoum elements",
+        "score": 0.194835,
+        "source": "wikipedia",
+        "doc_id": 367707,
+        "oid": "6b026684beada0530d89ca72",
+        "url": "https://en.wikipedia.org/wiki/Barsoum_elements"
+      },
+      {
+        "rank": 6,
+        "title": "Wood–Armer method",
+        "score": 0.181595,
+        "source": "wikipedia",
+        "doc_id": 189780,
+        "oid": "6ae7ea300aaedde439e3fb62",
+        "url": "https://en.wikipedia.org/wiki/Wood%E2%80%93Armer_method"
+      },
+      {
+        "rank": 7,
+        "title": "Functionally graded element",
+        "score": 0.179447,
+        "source": "wikipedia",
+        "doc_id": 357450,
+        "oid": "6b02546dbeada0530d89a110",
+        "url": "https://en.wikipedia.org/wiki/Functionally_graded_element"
+      },
+      {
+        "rank": 8,
+        "title": "Bilinear quadrilateral element",
+        "score": 0.178485,
+        "source": "wikipedia",
+        "doc_id": 693020,
+        "oid": "6b0439e1d9bb282a038822f0",
+        "url": "https://en.wikipedia.org/wiki/Bilinear_quadrilateral_element"
+      },
+      {
+        "rank": 9,
+        "title": "Force lines",
+        "score": 0.176943,
+        "source": "wikipedia",
+        "doc_id": 357436,
+        "oid": "6b025467beada0530d89a102",
+        "url": "https://en.wikipedia.org/wiki/Force_lines"
+      },
+      {
+        "rank": 10,
+        "title": "Safehull",
+        "score": 0.176369,
+        "source": "wikipedia",
+        "doc_id": 321476,
+        "oid": "6b01e170beada0530d88c3d2",
+        "url": "https://en.wikipedia.org/wiki/Safehull"
+      }
+    ]
+  },
+  "Q24": {
+    "status": "ok",
+    "query": "optical coherence tomography",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Zhongping Chen",
+        "score": 0.185914,
+        "source": "wikipedia",
+        "doc_id": 459131,
+        "oid": "6b02ed22d9bb282a03821a29",
+        "url": "https://en.wikipedia.org/wiki/Zhongping_Chen"
+      },
+      {
+        "rank": 2,
+        "title": "Coherence theory (optics)",
+        "score": 0.184515,
+        "source": "wikipedia",
+        "doc_id": 380882,
+        "oid": "6b02820cbeada0530d8a1851",
+        "url": "https://en.wikipedia.org/wiki/Coherence_theory_(optics)"
+      },
+      {
+        "rank": 3,
+        "title": "Intravascular imaging",
+        "score": 0.162515,
+        "source": "wikipedia",
+        "doc_id": 199519,
+        "oid": "6ae7fb310aaedde439e4329b",
+        "url": "https://en.wikipedia.org/wiki/Intravascular_imaging"
+      },
+      {
+        "rank": 4,
+        "title": "Multiscale tomography",
+        "score": 0.15949,
+        "source": "wikipedia",
+        "doc_id": 599855,
+        "oid": "6b03a368d9bb282a0385313b",
+        "url": "https://en.wikipedia.org/wiki/Multiscale_tomography"
+      },
+      {
+        "rank": 5,
+        "title": "Eric Swanson (engineer)",
+        "score": 0.153538,
+        "source": "wikipedia",
+        "doc_id": 459780,
+        "oid": "6b02edded9bb282a03821cb8",
+        "url": "https://en.wikipedia.org/wiki/Eric_Swanson_(engineer)"
+      },
+      {
+        "rank": 6,
+        "title": "DONE",
+        "score": 0.152691,
+        "source": "wikipedia",
+        "doc_id": 35128,
+        "oid": "6ae12bab2c80ac9b21b8a726",
+        "url": "https://en.wikipedia.org/wiki/DONE"
+      },
+      {
+        "rank": 7,
+        "title": "Coherence length",
+        "score": 0.151659,
+        "source": "wikipedia",
+        "doc_id": 380879,
+        "oid": "6b02820bbeada0530d8a184e",
+        "url": "https://en.wikipedia.org/wiki/Coherence_length"
+      },
+      {
+        "rank": 8,
+        "title": "Optical tomography",
+        "score": 0.143827,
+        "source": "wikipedia",
+        "doc_id": 599783,
+        "oid": "6b03a354d9bb282a038530c4",
+        "url": "https://en.wikipedia.org/wiki/Optical_tomography"
+      },
+      {
+        "rank": 9,
+        "title": "Novacam Technologies",
+        "score": 0.142825,
+        "source": "wikipedia",
+        "doc_id": 402135,
+        "oid": "6b02a7d1beada0530d8a9256",
+        "url": "https://en.wikipedia.org/wiki/Novacam_Technologies"
+      },
+      {
+        "rank": 10,
+        "title": "List of types of interferometers",
+        "score": 0.141835,
+        "source": "wikipedia",
+        "doc_id": 600987,
+        "oid": "6b03a4a7d9bb282a038537fa",
+        "url": "https://en.wikipedia.org/wiki/List_of_types_of_interferometers"
+      }
+    ]
+  },
+  "Q25": {
+    "status": "ok",
+    "query": "gravitational waves interferometer",
+    "results": [
+      {
+        "rank": 1,
+        "title": "CLIO",
+        "score": 0.198571,
+        "source": "wikipedia",
+        "doc_id": 608240,
+        "oid": "6b03afc6d9bb282a03856f8c",
+        "url": "https://en.wikipedia.org/wiki/CLIO"
+      },
+      {
+        "rank": 2,
+        "title": "TAMA 300",
+        "score": 0.183515,
+        "source": "wikipedia",
+        "doc_id": 608249,
+        "oid": "6b03afcbd9bb282a03856f99",
+        "url": "https://en.wikipedia.org/wiki/TAMA_300"
+      },
+      {
+        "rank": 3,
+        "title": "Big Bang Observer",
+        "score": 0.17581,
+        "source": "wikipedia",
+        "doc_id": 608673,
+        "oid": "6b03b07cd9bb282a03857318",
+        "url": "https://en.wikipedia.org/wiki/Big_Bang_Observer"
+      },
+      {
+        "rank": 4,
+        "title": "List of types of interferometers",
+        "score": 0.168148,
+        "source": "wikipedia",
+        "doc_id": 600987,
+        "oid": "6b03a4a7d9bb282a038537fa",
+        "url": "https://en.wikipedia.org/wiki/List_of_types_of_interferometers"
+      },
+      {
+        "rank": 5,
+        "title": "Kepco Power",
+        "score": 0.167301,
+        "source": "wikipedia",
+        "doc_id": 217382,
+        "oid": "6ae8202b0aaedde439e49b71",
+        "url": "https://en.wikipedia.org/wiki/Kepco_Power"
+      },
+      {
+        "rank": 6,
+        "title": "Deci-hertz Interferometer Gravitational wave Observatory",
+        "score": 0.151837,
+        "source": "wikipedia",
+        "doc_id": 608680,
+        "oid": "6b03b07fd9bb282a03857325",
+        "url": "https://en.wikipedia.org/wiki/Deci-hertz_Interferometer_Gravitational_wave_Observatory"
+      },
+      {
+        "rank": 7,
+        "title": "AIGO",
+        "score": 0.143897,
+        "source": "wikipedia",
+        "doc_id": 608236,
+        "oid": "6b03afc5d9bb282a03856f88",
+        "url": "https://en.wikipedia.org/wiki/AIGO"
+      },
+      {
+        "rank": 8,
+        "title": "Gowdy solution",
+        "score": 0.137352,
+        "source": "wikipedia",
+        "doc_id": 614459,
+        "oid": "6b03b987d9bb282a0385a279",
+        "url": "https://en.wikipedia.org/wiki/Gowdy_solution"
+      },
+      {
+        "rank": 9,
+        "title": "Acoustic interferometer",
+        "score": 0.133582,
+        "source": "wikipedia",
+        "doc_id": 359277,
+        "oid": "6b0257a2beada0530d89a868",
+        "url": "https://en.wikipedia.org/wiki/Acoustic_interferometer"
+      },
+      {
+        "rank": 10,
+        "title": "Vanishing dimensions theory",
+        "score": 0.133167,
+        "source": "wikipedia",
+        "doc_id": 362365,
+        "oid": "6b025d1ebeada0530d89b4ee",
+        "url": "https://en.wikipedia.org/wiki/Vanishing_dimensions_theory"
+      }
+    ]
+  },
+  "Q26": {
+    "status": "ok",
+    "query": "CRISPR Cas9 gene editing",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Institute of Chemical Biology and Fundamental Medicine",
+        "score": 0.169843,
+        "source": "wikipedia",
+        "doc_id": 640399,
+        "oid": "6b03e03bd9bb282a03866fa9",
+        "url": "https://en.wikipedia.org/wiki/Institute_of_Chemical_Biology_and_Fundamental_Medicine"
+      },
+      {
+        "rank": 2,
+        "title": "TcNPR3 (gene)",
+        "score": 0.165501,
+        "source": "wikipedia",
+        "doc_id": 571711,
+        "oid": "6b037d60d9bb282a03848aac",
+        "url": "https://en.wikipedia.org/wiki/TcNPR3_(gene)"
+      },
+      {
+        "rank": 3,
+        "title": "TIGR-Tas",
+        "score": 0.155109,
+        "source": "wikipedia",
+        "doc_id": 539727,
+        "oid": "6b034dd3d9bb282a0383d6cc",
+        "url": "https://en.wikipedia.org/wiki/TIGR-Tas"
+      },
+      {
+        "rank": 4,
+        "title": "Shredding (disassembling genomic data)",
+        "score": 0.119804,
+        "source": "wikipedia",
+        "doc_id": 133031,
+        "oid": "6ae2860e2c80ac9b21baf67d",
+        "url": "https://en.wikipedia.org/wiki/Shredding_(disassembling_genomic_data)"
+      },
+      {
+        "rank": 5,
+        "title": "Fanzor",
+        "score": 0.114014,
+        "source": "wikipedia",
+        "doc_id": 554782,
+        "oid": "6b036459d9bb282a03842967",
+        "url": "https://en.wikipedia.org/wiki/Fanzor"
+      },
+      {
+        "rank": 6,
+        "title": "Transcriptome instability",
+        "score": 0.110046,
+        "source": "wikipedia",
+        "doc_id": 552586,
+        "oid": "6b0360e0d9bb282a03841d38",
+        "url": "https://en.wikipedia.org/wiki/Transcriptome_instability"
+      },
+      {
+        "rank": 7,
+        "title": "FokI",
+        "score": 0.107705,
+        "source": "wikipedia",
+        "doc_id": 568103,
+        "oid": "6b0375f4d9bb282a0384744e",
+        "url": "https://en.wikipedia.org/wiki/FokI"
+      },
+      {
+        "rank": 8,
+        "title": "Insert (molecular biology)",
+        "score": 0.107475,
+        "source": "wikipedia",
+        "doc_id": 539242,
+        "oid": "6b034d58d9bb282a0383d4e3",
+        "url": "https://en.wikipedia.org/wiki/Insert_(molecular_biology)"
+      },
+      {
+        "rank": 9,
+        "title": "Donald Weeks (academic)",
+        "score": 0.107105,
+        "source": "wikipedia",
+        "doc_id": 887492,
+        "oid": "6b05d929d9bb282a038d343f",
+        "url": "https://en.wikipedia.org/wiki/Donald_Weeks_(academic)"
+      },
+      {
+        "rank": 10,
+        "title": "Cas12a",
+        "score": 0.105047,
+        "source": "wikipedia",
+        "doc_id": 534705,
+        "oid": "6b0348b8d9bb282a0383c30d",
+        "url": "https://en.wikipedia.org/wiki/Cas12a"
+      }
+    ]
+  },
+  "Q27": {
+    "status": "ok",
+    "query": "protein folding prediction",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Ferredoxin fold",
+        "score": 0.193509,
+        "source": "wikipedia",
+        "doc_id": 589340,
+        "oid": "6b039641d9bb282a0384f165",
+        "url": "https://en.wikipedia.org/wiki/Ferredoxin_fold"
+      },
+      {
+        "rank": 2,
+        "title": "CAFASP",
+        "score": 0.189771,
+        "source": "wikipedia",
+        "doc_id": 132957,
+        "oid": "6ae285e82c80ac9b21baf632",
+        "url": "https://en.wikipedia.org/wiki/CAFASP"
+      },
+      {
+        "rank": 3,
+        "title": "TMPad",
+        "score": 0.18657,
+        "source": "wikipedia",
+        "doc_id": 133753,
+        "oid": "6ae2878b2c80ac9b21bafae4",
+        "url": "https://en.wikipedia.org/wiki/TMPad"
+      },
+      {
+        "rank": 4,
+        "title": "Beta solenoid",
+        "score": 0.178304,
+        "source": "wikipedia",
+        "doc_id": 664039,
+        "oid": "6b0405dcd9bb282a03872cf9",
+        "url": "https://en.wikipedia.org/wiki/Beta_solenoid"
+      },
+      {
+        "rank": 5,
+        "title": "Contact order",
+        "score": 0.171949,
+        "source": "wikipedia",
+        "doc_id": 263696,
+        "oid": "6b005c95321fadc016c3e587",
+        "url": "https://en.wikipedia.org/wiki/Contact_order"
+      },
+      {
+        "rank": 6,
+        "title": "Native contact",
+        "score": 0.171908,
+        "source": "wikipedia",
+        "doc_id": 553922,
+        "oid": "6b0362f8d9bb282a0384252c",
+        "url": "https://en.wikipedia.org/wiki/Native_contact"
+      },
+      {
+        "rank": 7,
+        "title": "Double histone fold",
+        "score": 0.17157,
+        "source": "wikipedia",
+        "doc_id": 664336,
+        "oid": "6b04065dd9bb282a03872f74",
+        "url": "https://en.wikipedia.org/wiki/Double_histone_fold"
+      },
+      {
+        "rank": 8,
+        "title": "Proteins@home",
+        "score": 0.170537,
+        "source": "wikipedia",
+        "doc_id": 130404,
+        "oid": "6ae280442c80ac9b21bae442",
+        "url": "https://en.wikipedia.org/wiki/Proteins%40home"
+      },
+      {
+        "rank": 9,
+        "title": "Denaturation midpoint",
+        "score": 0.169275,
+        "source": "wikipedia",
+        "doc_id": 588901,
+        "oid": "6b0395c5d9bb282a0384ed5a",
+        "url": "https://en.wikipedia.org/wiki/Denaturation_midpoint"
+      },
+      {
+        "rank": 10,
+        "title": "Lists of bioinformatics software",
+        "score": 0.162265,
+        "source": "wikipedia",
+        "doc_id": 127075,
+        "oid": "6ae279792c80ac9b21bad017",
+        "url": "https://en.wikipedia.org/wiki/Lists_of_bioinformatics_software"
+      }
+    ]
+  },
+  "Q28": {
+    "status": "ok",
+    "query": "semiconductor doping p n junction",
+    "results": [
+      {
+        "rank": 1,
+        "title": "Homojunction",
+        "score": 0.267549,
+        "source": "wikipedia",
+        "doc_id": 423736,
+        "oid": "6b02c546beada0530d8b102d",
+        "url": "https://en.wikipedia.org/wiki/Homojunction"
+      },
+      {
+        "rank": 2,
+        "title": "Gas immersion laser doping",
+        "score": 0.203863,
+        "source": "wikipedia",
+        "doc_id": 385794,
+        "oid": "6b028b00beada0530d8a34f8",
+        "url": "https://en.wikipedia.org/wiki/Gas_immersion_laser_doping"
+      },
+      {
+        "rank": 3,
+        "title": "Low-level injection",
+        "score": 0.181317,
+        "source": "wikipedia",
+        "doc_id": 385558,
+        "oid": "6b028a8fbeada0530d8a33a8",
+        "url": "https://en.wikipedia.org/wiki/Low-level_injection"
+      },
+      {
+        "rank": 4,
+        "title": "Zener effect",
+        "score": 0.175768,
+        "source": "wikipedia",
+        "doc_id": 460379,
+        "oid": "6b02ee85d9bb282a03821fe1",
+        "url": "https://en.wikipedia.org/wiki/Zener_effect"
+      },
+      {
+        "rank": 5,
+        "title": "Donor (semiconductors)",
+        "score": 0.166417,
+        "source": "wikipedia",
+        "doc_id": 385481,
+        "oid": "6b028a67beada0530d8a3310",
+        "url": "https://en.wikipedia.org/wiki/Donor_(semiconductors)"
+      },
+      {
+        "rank": 6,
+        "title": "Intrinsic semiconductor",
+        "score": 0.1642,
+        "source": "wikipedia",
+        "doc_id": 423397,
+        "oid": "6b02c4eabeada0530d8b0e41",
+        "url": "https://en.wikipedia.org/wiki/Intrinsic_semiconductor"
+      },
+      {
+        "rank": 7,
+        "title": "Extrinsic semiconductor",
+        "score": 0.150778,
+        "source": "wikipedia",
+        "doc_id": 423395,
+        "oid": "6b02c4e9beada0530d8b0e3f",
+        "url": "https://en.wikipedia.org/wiki/Extrinsic_semiconductor"
+      },
+      {
+        "rank": 8,
+        "title": "Capacitance–voltage profiling",
+        "score": 0.146735,
+        "source": "wikipedia",
+        "doc_id": 390740,
+        "oid": "6b0293dfbeada0530d8a51ac",
+        "url": "https://en.wikipedia.org/wiki/Capacitance%E2%80%93voltage_profiling"
+      },
+      {
+        "rank": 9,
+        "title": "Flat band potential",
+        "score": 0.146307,
+        "source": "wikipedia",
+        "doc_id": 385517,
+        "oid": "6b028a78beada0530d8a337b",
+        "url": "https://en.wikipedia.org/wiki/Flat_band_potential"
+      },
+      {
+        "rank": 10,
+        "title": "Monolayer doping",
+        "score": 0.143443,
+        "source": "wikipedia",
+        "doc_id": 390830,
+        "oid": "6b029406beada0530d8a5208",
+        "url": "https://en.wikipedia.org/wiki/Monolayer_doping"
+      }
+    ]
+  },
+  "Q29": {
+    "status": "ok",
+    "query": "public key cryptography RSA",
+    "results": [
+      {
+        "rank": 1,
+        "title": "PROV_RSA_FULL",
+        "score": 0.236428,
+        "source": "microsoft_learn",
+        "doc_id": 272292,
+        "oid": "6b00dda3beada0530d8762fb",
+        "url": "https://learn.microsoft.com/en-us/windows/win32/seccrypto/prov-rsa-full"
+      },
+      {
+        "rank": 2,
+        "title": "PROV_RSA_AES",
+        "score": 0.210741,
+        "source": "microsoft_learn",
+        "doc_id": 286520,
+        "oid": "6b0104d1beada0530d87dc6b",
+        "url": "https://learn.microsoft.com/en-us/windows/win32/seccrypto/prov-rsa-aes"
+      },
+      {
+        "rank": 3,
+        "title": "List of cryptosystems",
+        "score": 0.208646,
+        "source": "wikipedia",
+        "doc_id": 39227,
+        "oid": "6ae1ca3c2c80ac9b21b8bfaa",
+        "url": "https://en.wikipedia.org/wiki/List_of_cryptosystems"
+      },
+      {
+        "rank": 4,
+        "title": "Capstone (cryptography)",
+        "score": 0.188269,
+        "source": "wikipedia",
+        "doc_id": 16835,
+        "oid": "6ad9e9052a350aca88ffa616",
+        "url": "https://en.wikipedia.org/wiki/Capstone_(cryptography)"
+      },
+      {
+        "rank": 5,
+        "title": "2.2.9.1.6 PUBLICKEY",
+        "score": 0.1881,
+        "source": "microsoft_learn",
+        "doc_id": 629574,
+        "oid": "6b03d08fd9bb282a03861dfd",
+        "url": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-rmpr/063240db-ee5e-4ea9-9c32-0c36850d55b1"
+      },
+      {
+        "rank": 6,
+        "title": "1.2.2 Informative References",
+        "score": 0.187312,
+        "source": "microsoft_learn",
+        "doc_id": 669619,
+        "oid": "6b040fe5d9bb282a03877d1c",
+        "url": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-drm/4fd9971d-04eb-4ccd-9019-d4e07d0fb304"
+      },
+      {
+        "rank": 7,
+        "title": "3.3.5.2.2.2 Add Certificate Information",
+        "score": 0.186064,
+        "source": "microsoft_learn",
+        "doc_id": 754166,
+        "oid": "6b04c306d9bb282a0389f048",
+        "url": "https://learn.microsoft.com/en-us/openspecs/office_protocols/ms-grvspcm/cc8b2c4f-49c0-453c-b77d-8b25c0428a00"
+      },
+      {
+        "rank": 8,
+        "title": "3.3.5.1.1.2 Add Certificate Information",
+        "score": 0.183227,
+        "source": "microsoft_learn",
+        "doc_id": 756962,
+        "oid": "6b04c8ded9bb282a038a0323",
+        "url": "https://learn.microsoft.com/en-us/openspecs/office_protocols/ms-grvspmr/c61ead0b-93c0-445f-a6a2-faae1d40e260"
+      },
+      {
+        "rank": 9,
+        "title": "3.1.4.7 Cryptographic Modes",
+        "score": 0.182082,
+        "source": "microsoft_learn",
+        "doc_id": 629475,
+        "oid": "6b03d06bd9bb282a03861d76",
+        "url": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-rmpr/0f390041-7dcf-45e5-9dd8-51d3db7ce576"
+      },
+      {
+        "rank": 10,
+        "title": "XUDA",
+        "score": 0.180412,
+        "source": "wikipedia",
+        "doc_id": 172378,
+        "oid": "6ae7ca560aaedde439e399ba",
+        "url": "https://en.wikipedia.org/wiki/XUDA"
+      }
+    ]
+  },
+  "Q30": {
+    "status": "ok",
+    "query": "variable byte compression inverted index",
+    "results": [
+      {
+        "rank": 1,
+        "title": "2.1 Web Service ItemId Algorithm Details",
+        "score": 0.185789,
+        "source": "microsoft_learn",
+        "doc_id": 729142,
+        "oid": "6b048b9cd9bb282a038948e3",
+        "url": "https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-oxwsitemid/5889be27-a84b-426b-9166-5f7a0ed5747d"
+      },
+      {
+        "rank": 2,
+        "title": "2.6.1 KeyExtensionData Structure",
+        "score": 0.184375,
+        "source": "microsoft_learn",
+        "doc_id": 787159,
+        "oid": "6b05285fd9bb282a038b0faa",
+        "url": "https://learn.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-cifo/2913e54b-fbb9-419b-8985-2ed05434bb9c"
+      },
+      {
+        "rank": 3,
+        "title": "3.2.4.2 Compression Processing",
+        "score": 0.17798,
+        "source": "microsoft_learn",
+        "doc_id": 686262,
+        "oid": "6b042bedd9bb282a0387e5f9",
+        "url": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-srpl/eed2ea22-9b20-47df-a9c7-6d124e3cb1b8"
+      },
+      {
+        "rank": 4,
+        "title": "2.1.3.1 Compression Type (byte)",
+        "score": 0.164139,
+        "source": "microsoft_learn",
+        "doc_id": 723792,
+        "oid": "6b047eb5d9bb282a03892108",
+        "url": "https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-oxwsitemid/aacce5f0-459b-480b-a764-e6dee908a6cb"
+      },
+      {
+        "rank": 5,
+        "title": "2.4.1.2 State Variables",
+        "score": 0.162666,
+        "source": "microsoft_learn",
+        "doc_id": 741444,
+        "oid": "6b04a6b7d9bb282a03899eba",
+        "url": "https://learn.microsoft.com/en-us/openspecs/office_file_formats/ms-ovba/c01d4c55-f44e-4ee1-b5cd-e179e4957d01"
+      },
+      {
+        "rank": 6,
+        "title": "2.2.5.3 RDP8_BULK_ENCODED_DATA",
+        "score": 0.159975,
+        "source": "microsoft_learn",
+        "doc_id": 657793,
+        "oid": "6b03fb93d9bb282a0386fb14",
+        "url": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-rdpegfx/bfb13bde-5315-4e08-ba8c-3cb30e9571d8"
+      },
+      {
+        "rank": 7,
+        "title": "2.3.3.9 META_INVERTREGION Record",
+        "score": 0.158482,
+        "source": "microsoft_learn",
+        "doc_id": 665675,
+        "oid": "6b04088cd9bb282a03873a5a",
+        "url": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-wmf/7d994d5f-1f1d-4858-8e75-d81870ac30e4"
+      },
+      {
+        "rank": 8,
+        "title": "2.2.1.3 CContentRestriction",
+        "score": 0.158446,
+        "source": "microsoft_learn",
+        "doc_id": 608279,
+        "oid": "6b03afd8d9bb282a03856fe6",
+        "url": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-mcis/b3b653f4-9aca-4aa3-84a0-77803a02ea2d"
+      },
+      {
+        "rank": 9,
+        "title": "3.1.4.1.1.2.2.3 Metadata Offset",
+        "score": 0.156874,
+        "source": "microsoft_learn",
+        "doc_id": 722517,
+        "oid": "6b047bc0d9bb282a038918e2",
+        "url": "https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-oxcrpc/aa16f455-4512-4885-ba44-083c26f33abc"
+      },
+      {
+        "rank": 10,
+        "title": "2.2.10.12.3 SiteDataBlock",
+        "score": 0.156422,
+        "source": "microsoft_learn",
+        "doc_id": 748952,
+        "oid": "6b04b6c9d9bb282a0389ccb0",
+        "url": "https://learn.microsoft.com/en-us/openspecs/office_file_formats/ms-oforms/a8164e8e-3941-4b40-ad59-8044bee30726"
+      }
+    ]
+  }
+}

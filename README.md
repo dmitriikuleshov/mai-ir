@@ -115,9 +115,30 @@ distributed database replication
 Кавычки необязательны: каждая строка стандартного ввода считается одной
 цитатой. Выход из интерактивного режима - `Ctrl+D`.
 
-## 10. Запустить тесты
+## 10. Открыть поиск в браузере
 
-Python-тесты crawler:
+После сборки C++-компонентов, запуска MongoDB и построения индексов:
+
+```bash
+uv run python src/web/main.py configs/search.yaml
+```
+
+Открыть [http://127.0.0.1:8080](http://127.0.0.1:8080). На странице доступны
+TF-IDF, булевый и цитатный поиск. Запросы выполняются теми же C++-алгоритмами,
+что и в консольных утилитах. Начало текста, заголовок и ссылка берутся из MongoDB.
+Лимиты выдачи задаются в `configs/search.yaml`. Для остановки сервера - `Ctrl+C`.
+Перед перестроением индексов остановить веб-сервер и запустить его снова
+после завершения построения.
+
+Если порт занят:
+
+```bash
+uv run python src/web/main.py configs/search.yaml --port 8081
+```
+
+## 11. Запустить тесты
+
+Python-тесты crawler и веб-интерфейса:
 
 ```bash
 uv run pytest
@@ -142,7 +163,13 @@ ctest --test-dir .build --output-on-failure
 ctest --test-dir .build -R 'unit\.(positional_index|phrase_search)\.' --output-on-failure
 ```
 
-## 11. Остановить MongoDB
+Только тесты веб-интерфейса (без MongoDB):
+
+```bash
+uv run pytest tests/web -q
+```
+
+## 12. Остановить MongoDB
 
 ```bash
 docker compose down

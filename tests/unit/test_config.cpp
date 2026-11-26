@@ -18,8 +18,8 @@ protected:
 TEST_F(ConfigTest, ReadsDatabaseAndLinguisticsSettings) {
     EXPECT_EQ(config_.database, "mai_ir");
     EXPECT_EQ(config_.documents, "documents");
-    EXPECT_EQ(config_.minimum_words, 200U);
-    EXPECT_EQ(config_.parser_version, 8U);
+    EXPECT_EQ(config_.minimum_words, 100U);
+    EXPECT_EQ(config_.parser_version, 9U);
 }
 
 // Проверяется разрешение относительных путей от каталога YAML-конфигурации.

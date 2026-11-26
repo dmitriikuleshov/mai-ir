@@ -1,0 +1,3401 @@
+{
+  "Q01": {
+    "https://en.wikipedia.org/wiki/ACID": {
+      "grade": 1,
+      "reason": "Изоляция рассматривается как часть ACID, без полного разбора уровней и аномалий.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q01D01"
+    },
+    "https://en.wikipedia.org/wiki/Atomicity_(database_systems)": {
+      "grade": 1,
+      "reason": "Основная тема — атомарность; изоляция упомянута как соседнее свойство.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q01D02"
+    },
+    "https://en.wikipedia.org/wiki/Database": {
+      "grade": 1,
+      "reason": "Обзор баз данных даёт лишь общий контекст транзакций и ACID.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q01D03"
+    },
+    "https://en.wikipedia.org/wiki/Database_transaction": {
+      "grade": 1,
+      "reason": "Объясняет транзакции и назначение изоляции, но не раскрывает уровни.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q01D04"
+    },
+    "https://en.wikipedia.org/wiki/Isolation_(database_systems)": {
+      "grade": 3,
+      "reason": "Специальная статья об изоляции и феноменах параллельного выполнения транзакций.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q01D05"
+    },
+    "https://en.wikipedia.org/wiki/Snapshot_isolation": {
+      "grade": 2,
+      "reason": "Подробно объясняет один механизм изоляции — согласованный снимок.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q01D06"
+    },
+    "https://learn.microsoft.com/en-us/openspecs/sql_standards/ms-tsqliso02/5383babc-27c4-4f51-ae11-5c4df8f0d49c": {
+      "grade": 2,
+      "reason": "Приводит синтаксис установки изоляции и перечень четырёх уровней SQL.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q01D07"
+    },
+    "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-dtco/98d9764b-dc5c-4ea7-b049-66f434c950c1": {
+      "grade": 1,
+      "reason": "Описывает поля протокольного объекта транзакции, не объясняя смысл уровней.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q01D08"
+    },
+    "https://learn.microsoft.com/en-us/sql/odbc/reference/develop-app/transaction-isolation?view=sql-server-ver17": {
+      "grade": 1,
+      "reason": "Короткая обзорная страница в основном содержит ссылки на дальнейшее чтение.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q01D09"
+    },
+    "https://learn.microsoft.com/en-us/sql/relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level?view=sql-server-ver15": {
+      "grade": 2,
+      "reason": "Объясняет применение уровня изоляции к блокировкам курсоров ODBC.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q01D10"
+    },
+    "https://learn.microsoft.com/en-us/windows/win32/cossdk/setting-the-transaction-isolation-level": {
+      "grade": 1,
+      "reason": "Инструкция для COM+ показывает настройку, но не сравнение уровней и аномалий.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q01D11"
+    },
+    "https://learn.microsoft.com/en-us/azure/azure-sql/database/sql-database-paas-overview": {
+      "grade": 1,
+      "reason": "Обзор Azure SQL Database касается хранения и резервных копий, но не уровней изоляции.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q01D12"
+    },
+    "https://learn.microsoft.com/en-us/ef": {
+      "grade": 0,
+      "reason": "Навигация по Entity Framework не содержит ответа об изоляции транзакций.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q01D13"
+    },
+    "https://learn.microsoft.com/en-us/ef/core/saving/concurrency": {
+      "grade": 2,
+      "reason": "Разбирает конфликты параллельного доступа и влияние уровня изоляции на блокировки.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q01D14"
+    },
+    "https://learn.microsoft.com/en-us/sql/relational-databases/sql-server-deadlocks-guide": {
+      "grade": 2,
+      "reason": "Объясняет взаимоблокировки и откат транзакций как важный аспект конкурентного доступа.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q01D15"
+    },
+    "https://learn.microsoft.com/en-us/sql/t-sql/statements/set-transaction-isolation-level-transact-sql": {
+      "grade": 3,
+      "reason": "Подробный справочник уровней изоляции SQL Server и их поведения при чтении и записи.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q01D16"
+    }
+  },
+  "Q02": {
+    "https://en.wikipedia.org/wiki/Database": {
+      "grade": 1,
+      "reason": "Общий обзор БД содержит краткий раздел о репликации, но не систематический разбор.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q02D01"
+    },
+    "https://en.wikipedia.org/wiki/Distributed_SQL": {
+      "grade": 2,
+      "reason": "Разбирает распределённые SQL-БД с синхронной репликацией и согласованностью.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q02D02"
+    },
+    "https://en.wikipedia.org/wiki/Distributed_database": {
+      "grade": 3,
+      "reason": "Основная тема — распределённая БД; непосредственно рассматриваются репликация и фрагментация.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q02D03"
+    },
+    "https://en.wikipedia.org/wiki/Replication_(computing)": {
+      "grade": 3,
+      "reason": "Описывает модели репликации, включая транзакционную, и свойства распределённых систем.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q02D04"
+    },
+    "https://en.wikipedia.org/wiki/Spanner_(database)": {
+      "grade": 2,
+      "reason": "Конкретный пример глобальной репликации и согласованности в Spanner/Paxos.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q02D05"
+    },
+    "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-drsr/a7d8f924-3fc0-4dc1-89f3-59f4521cf0e7": {
+      "grade": 0,
+      "reason": "Структура состояния SAM Windows NT не объясняет способы репликации распределённых БД.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q02D06"
+    },
+    "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-fsmod/6d322de5-cd61-4c95-a2c3-540933e75cd1": {
+      "grade": 0,
+      "reason": "Таблица транспортов файловых RPC-протоколов не решает задачу поиска.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q02D07"
+    },
+    "https://learn.microsoft.com/en-us/powershell/module/dfsr?view=windowsserver2025-ps": {
+      "grade": 0,
+      "reason": "Каталог команд репликации файлов DFS не объясняет репликацию распределённых БД.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q02D08"
+    },
+    "https://learn.microsoft.com/en-us/sql/database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server?view=sql-server-ver17": {
+      "grade": 2,
+      "reason": "Описывает совместимость зеркалирования SQL Server и ограничения распределённых транзакций.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q02D09"
+    },
+    "https://learn.microsoft.com/en-us/sql/relational-databases/system-views/replication-views-transact-sql?view=sql-server-ver17": {
+      "grade": 1,
+      "reason": "Перечень системных представлений репликации полезен как справка, но не объясняет способы и компромиссы.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q02D10"
+    },
+    "https://learn.microsoft.com/en-us/azure/cosmos-db": {
+      "grade": 1,
+      "reason": "Документационный хаб Cosmos DB даёт навигацию к распределённой БД, но не объясняет репликацию.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q02D11"
+    },
+    "https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2019": {
+      "grade": 1,
+      "reason": "Матрица редакций показывает доступность функций, а не способы репликации.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q02D12"
+    },
+    "https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2025": {
+      "grade": 1,
+      "reason": "Сравнение функций редакций SQL Server даёт продуктовый контекст, не механизмы репликации.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q02D13"
+    },
+    "https://learn.microsoft.com/en-us/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access": {
+      "grade": 1,
+      "reason": "Настройка портов SQL Server полезна для эксплуатации, но не объясняет компромиссы репликации.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q02D14"
+    },
+    "https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements": {
+      "grade": 0,
+      "reason": "Сетевые порты и репликация файлов DFSR — другая задача.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q02D15"
+    }
+  },
+  "Q03": {
+    "https://en.wikipedia.org/wiki/Document_retrieval": {
+      "grade": 1,
+      "reason": "Упоминает инвертированный индекс в контексте поиска документов без описания структуры.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q03D01"
+    },
+    "https://en.wikipedia.org/wiki/Information_retrieval": {
+      "grade": 1,
+      "reason": "Общий обзор информационного поиска лишь связывает разреженные модели с индексами.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q03D02"
+    },
+    "https://en.wikipedia.org/wiki/Inverted_index": {
+      "grade": 3,
+      "reason": "Даёт определение и структуру отображения термов в позиции и документы.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q03D03"
+    },
+    "https://en.wikipedia.org/wiki/Learned_sparse_retrieval": {
+      "grade": 2,
+      "reason": "Описывает применение инвертированных индексов в современном разреженном поиске, но не базовое построение.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q03D04"
+    },
+    "https://en.wikipedia.org/wiki/Search_engine_indexing": {
+      "grade": 2,
+      "reason": "Рассматривает поисковую индексацию и полнотекстовые индексы как отдельную задачу.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q03D05"
+    },
+    "https://learn.microsoft.com/en-us/azure/search": {
+      "grade": 1,
+      "reason": "Стартовая страница продукта содержит ссылки на поиск, но не объясняет устройство индекса.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q03D06"
+    },
+    "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-mcis/7968c17c-fe89-48e6-86b4-c67f6178928e": {
+      "grade": 2,
+      "reason": "Прямо связывает каталог с инвертированным индексом для сопоставления слов и извлечения документов.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q03D07"
+    },
+    "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-wsp/e2a93bd4-71ac-4776-bdb8-6ca602d16b59": {
+      "grade": 2,
+      "reason": "Объясняет роль инвертированного индекса в службе индексирования Windows.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q03D08"
+    },
+    "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide": {
+      "grade": 1,
+      "reason": "RAG-архитектура упоминает создание поискового индекса, не его инвертированную структуру.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q03D09"
+    },
+    "https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/what-is-foundry-iq": {
+      "grade": 1,
+      "reason": "Обзор сервиса поиска не раскрывает отображение термов в postings.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q03D10"
+    },
+    "https://learn.microsoft.com/en-us/azure/foundry/concepts/retrieval-augmented-generation": {
+      "grade": 1,
+      "reason": "Объясняет роль индекса в RAG в целом, без устройства inverted index.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q03D11"
+    },
+    "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-200": {
+      "grade": 0,
+      "reason": "План экзамена не является объяснением структуры поискового индекса.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q03D12"
+    },
+    "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/api/ai-services/retrieval/overview": {
+      "grade": 1,
+      "reason": "Обзор Retrieval API описывает гибридный индекс как готовый сервис, а не его устройство.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q03D13"
+    }
+  },
+  "Q04": {
+    "https://en.wikipedia.org/wiki/C++": {
+      "grade": 1,
+      "reason": "Обзор языка отмечает ручное управление памятью, но не даёт цельного объяснения RAII.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q04D01"
+    },
+    "https://en.wikipedia.org/wiki/C_dynamic_memory_allocation": {
+      "grade": 1,
+      "reason": "Описывает malloc/free языка C, полезные как фон, но не современное управление памятью C++.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q04D02"
+    },
+    "https://en.wikipedia.org/wiki/Debug_new": {
+      "grade": 2,
+      "reason": "Разбирает new/delete и диагностику выделений памяти в C++ как конкретный аспект задачи.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q04D03"
+    },
+    "https://en.wikipedia.org/wiki/Manual_memory_management": {
+      "grade": 2,
+      "reason": "Объясняет ручное управление и автоматизацию освобождения в C++.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q04D04"
+    },
+    "https://en.wikipedia.org/wiki/Memory_management": {
+      "grade": 1,
+      "reason": "Общий обзор управления памятью не сосредоточен на C++ и времени жизни объектов.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q04D05"
+    },
+    "https://en.wikipedia.org/wiki/Memory_management_unit": {
+      "grade": 0,
+      "reason": "MMU — аппаратный перевод адресов, а не управление временем жизни объектов C++.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q04D06"
+    },
+    "https://en.wikipedia.org/wiki/Region-based_memory_management": {
+      "grade": 1,
+      "reason": "Регионное выделение памяти — связанный подход, но не общее объяснение C++/RAII.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q04D07"
+    },
+    "https://learn.microsoft.com/en-us/archive/msdn-magazine/authors/eric_niebler": {
+      "grade": 3,
+      "reason": "Специальный материал о надёжном управлении ресурсами C++ и обёртках автоматического освобождения.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q04D08"
+    },
+    "https://learn.microsoft.com/en-us/cpp/code-quality?view=msvc-170": {
+      "grade": 1,
+      "reason": "Анализатор может находить дефекты памяти, но страница не объясняет её управление.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q04D09"
+    },
+    "https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170": {
+      "grade": 0,
+      "reason": "Скачивание Visual C++ Runtime не отвечает на вопрос об управлении памятью.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q04D10"
+    },
+    "https://learn.microsoft.com/en-us/windows/win32/memory/memory-management": {
+      "grade": 1,
+      "reason": "Раздел Windows о виртуальной памяти даёт системный фон, но не модель объектов C++.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q04D11"
+    },
+    "https://learn.microsoft.com/en-us/windows/win32/memory/standard-c-library-functions": {
+      "grade": 2,
+      "reason": "Сопоставляет функции CRT и new/delete и объясняет допустимые способы управления памятью.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q04D12"
+    },
+    "https://learn.microsoft.com/en-us/dynamics365/supply-chain": {
+      "grade": 0,
+      "reason": "Управление цепочками поставок не связано с памятью C++.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q04D13"
+    },
+    "https://learn.microsoft.com/en-us/ef": {
+      "grade": 0,
+      "reason": "Документация ORM не объясняет модель управления памятью C++.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q04D14"
+    },
+    "https://learn.microsoft.com/en-us/purview": {
+      "grade": 0,
+      "reason": "Управление данными Purview — другой смысл слова management.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q04D15"
+    },
+    "https://learn.microsoft.com/en-us/ssms/release-notes-19": {
+      "grade": 0,
+      "reason": "Список исправлений SSMS не объясняет выделение памяти, RAII или время жизни объектов C++.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q04D16"
+    },
+    "https://learn.microsoft.com/en-us/ssms/release-notes-20": {
+      "grade": 0,
+      "reason": "Release notes SSMS относятся к другому продукту и другой задаче.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q04D17"
+    }
+  },
+  "Q05": {
+    "https://en.wikipedia.org/wiki/Asio_(C++_library)": {
+      "grade": 0,
+      "reason": "Основная тема — асинхронная библиотека C++, а не async/await языка C#.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q05D01"
+    },
+    "https://en.wikipedia.org/wiki/Async/await": {
+      "grade": 3,
+      "reason": "Объясняет async/await и непосредственно рассматривает TAP в C#.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q05D02"
+    },
+    "https://en.wikipedia.org/wiki/Asynchronous_method_invocation": {
+      "grade": 1,
+      "reason": "Объясняет общий асинхронный шаблон, но не его реализацию через async/await C#.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q05D03"
+    },
+    "https://en.wikipedia.org/wiki/C_Sharp_(programming_language)": {
+      "grade": 1,
+      "reason": "Обзор C# даёт сведения о языке, а не развёрнутое объяснение асинхронности.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q05D04"
+    },
+    "https://en.wikipedia.org/wiki/F_Sharp_(programming_language)": {
+      "grade": 0,
+      "reason": "Материал про F# не решает задачу программирования async/await в C#.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q05D05"
+    },
+    "https://en.wikipedia.org/wiki/Message_passing": {
+      "grade": 1,
+      "reason": "Обмен сообщениями — общий контекст конкурентности, но не требуемая техника C#.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q05D06"
+    },
+    "https://learn.microsoft.com/en-us/archive/msdn-magazine/authors/igor_ostrovsky": {
+      "grade": 1,
+      "reason": "Основной материал о модели памяти C#; ссылка на асинхронные задачи не делает его учебником async/await.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q05D07"
+    },
+    "https://learn.microsoft.com/en-us/dotnet/csharp": {
+      "grade": 1,
+      "reason": "Навигационная страница руководства по C# не содержит самостоятельного объяснения async/await.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q05D08"
+    },
+    "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators": {
+      "grade": 1,
+      "reason": "Справочник операторов C# полезен как фон, но не объясняет асинхронный поток исполнения.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q05D09"
+    },
+    "https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp": {
+      "grade": 1,
+      "reason": "Главная страница документации лишь направляет к отдельным учебным материалам.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q05D10"
+    },
+    "https://learn.microsoft.com/en-us/samples/dotnet/samples/async-and-await-cs": {
+      "grade": 3,
+      "reason": "Пример и связанный учебник прямо посвящены async/await в C#.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q05D11"
+    },
+    "https://learn.microsoft.com/en-us/training/modules/create-manage-events": {
+      "grade": 1,
+      "reason": "Курс событий требует знания асинхронности, но обучает другой теме.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q05D12"
+    },
+    "https://learn.microsoft.com/en-us/training/modules/implement-asynchronous-tasks": {
+      "grade": 3,
+      "reason": "Учебный модуль прямо разбирает async/await, параллельные задачи и асинхронный ввод-вывод в C#.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q05D13"
+    },
+    "https://learn.microsoft.com/en-us/azure/developer": {
+      "grade": 0,
+      "reason": "Главная страница Azure developers не отвечает на вопрос об async/await в C#.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q05D14"
+    },
+    "https://learn.microsoft.com/en-us/dotnet": {
+      "grade": 1,
+      "reason": "Навигация .NET даёт общий контекст платформы без самостоятельного объяснения async/await.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q05D15"
+    },
+    "https://learn.microsoft.com/en-us/dotnet/core/introduction": {
+      "grade": 2,
+      "reason": "Обзор .NET прямо объясняет поддержку async/await языком C#.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q05D16"
+    },
+    "https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming": {
+      "grade": 3,
+      "reason": "Целевой учебный материал посвящён модели асинхронного программирования C#.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q05D17"
+    },
+    "https://learn.microsoft.com/en-us/ef": {
+      "grade": 0,
+      "reason": "Навигация Entity Framework не объясняет асинхронную модель исполнения C#.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q05D18"
+    }
+  },
+  "Q06": {
+    "https://en.wikipedia.org/wiki/.NET": {
+      "grade": 1,
+      "reason": "Обзор платформы .NET не даёт самостоятельного разбора поколений GC.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q06D01"
+    },
+    "https://en.wikipedia.org/wiki/.NET_Framework": {
+      "grade": 2,
+      "reason": "Объясняет поколенческую и фоновую сборку мусора в .NET Framework.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q06D02"
+    },
+    "https://en.wikipedia.org/wiki/Garbage_(band)": {
+      "grade": 0,
+      "reason": "Это музыкальная группа Garbage, а не управление памятью.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q06D03"
+    },
+    "https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)": {
+      "grade": 1,
+      "reason": "Общая статья о GC даёт фон, но не раскрывает механизм поколений .NET.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q06D04"
+    },
+    "https://en.wikipedia.org/wiki/Garbage_in,_garbage_out": {
+      "grade": 0,
+      "reason": "Принцип качества входных данных GIGO не относится к сборке мусора.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q06D05"
+    },
+    "https://en.wikipedia.org/wiki/Tracing_garbage_collection": {
+      "grade": 1,
+      "reason": "Объясняет трассирующую сборку мусора в целом, не специфику .NET.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q06D06"
+    },
+    "https://learn.microsoft.com/en-us/dotnet": {
+      "grade": 1,
+      "reason": "Стартовая страница .NET не объясняет устройство GC.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q06D07"
+    },
+    "https://learn.microsoft.com/en-us/dotnet/core/unmanaged-api/debugging/icordebug/icordebugprocess5-getgcheapinformation-method": {
+      "grade": 1,
+      "reason": "Метод отладчика возвращает сведения о куче, но не обучает устройству GC.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q06D08"
+    },
+    "https://learn.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/runtime/gcconcurrent-element": {
+      "grade": 2,
+      "reason": "Описывает различие concurrent/background GC и зависимость от версии .NET.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q06D09"
+    },
+    "https://learn.microsoft.com/en-us/dotnet/framework/unmanaged-api/hosting/iclrgcmanager-interface": {
+      "grade": 1,
+      "reason": "Справочник интерфейса настройки GC, без объяснения работы поколений.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q06D10"
+    },
+    "https://learn.microsoft.com/en-us/dotnet/framework/unmanaged-api/hosting/iclrgcmanager2-interface": {
+      "grade": 1,
+      "reason": "Справочник управления размером сегмента и поколения 0, а не механизм сборки.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q06D11"
+    },
+    "https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/background-gc": {
+      "grade": 2,
+      "reason": "Специальная страница о фоновой сборке мусора и поддерживаемых режимах .NET.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q06D12"
+    },
+    "https://learn.microsoft.com/en-us/dotnet/welcome": {
+      "grade": 1,
+      "reason": "Вводная страница платформы, не описание сборки мусора.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q06D13"
+    },
+    "https://learn.microsoft.com/en-us/dotnet/core/introduction": {
+      "grade": 1,
+      "reason": "Введение в .NET отмечает tracing GC и IDisposable, но не объясняет поколения.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q06D14"
+    },
+    "https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-11/runtime": {
+      "grade": 1,
+      "reason": "Обновления runtime упоминают исправления GC, не раскрывая его устройство.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q06D15"
+    },
+    "https://learn.microsoft.com/en-us/dotnet/fundamentals": {
+      "grade": 1,
+      "reason": "Документационный хаб .NET не является руководством по GC.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q06D16"
+    },
+    "https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/fundamentals": {
+      "grade": 3,
+      "reason": "Специальный материал о фундаментальных механизмах GC в CLR и освобождении памяти.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q06D17"
+    }
+  },
+  "Q07": {
+    "https://en.wikipedia.org/wiki/Deno_(software)": {
+      "grade": 1,
+      "reason": "Другой JavaScript-runtime даёт контекст libuv/Tokio, но не объясняет цикл Node.js.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q07D01"
+    },
+    "https://en.wikipedia.org/wiki/Event-driven_programming": {
+      "grade": 2,
+      "reason": "Объясняет цикл событий и обработчики, включая связь с Node.js.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q07D02"
+    },
+    "https://en.wikipedia.org/wiki/Event_loop": {
+      "grade": 3,
+      "reason": "Прямо объясняет цикл событий и асинхронное выполнение в Node.js.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q07D03"
+    },
+    "https://en.wikipedia.org/wiki/Libuv": {
+      "grade": 2,
+      "reason": "Описывает libuv — основу асинхронного цикла Node.js и системные механизмы ввода-вывода.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q07D04"
+    },
+    "https://en.wikipedia.org/wiki/Node.js": {
+      "grade": 3,
+      "reason": "Статья о Node.js раскрывает неблокирующую модель и цикл событий.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q07D05"
+    },
+    "https://en.wikipedia.org/wiki/Nodejs": {
+      "grade": 3,
+      "reason": "Прямо описывает однопоточный цикл событий, I/O и завершение при отсутствии callbacks.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q07D06"
+    },
+    "https://en.wikipedia.org/wiki/Npm": {
+      "grade": 0,
+      "reason": "История менеджера пакетов npm не объясняет цикл событий.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q07D07"
+    },
+    "https://learn.microsoft.com/en-us/azure/developer/javascript/choose-nodejs-version": {
+      "grade": 1,
+      "reason": "Подбор версии упоминает различия event loop, но не раскрывает механизм.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q07D08"
+    },
+    "https://learn.microsoft.com/en-us/samples/azure/azure-quickstart-templates/event-hubs-create-event-hub-and-consumer-group": {
+      "grade": 0,
+      "reason": "Azure Event Hubs — другая сущность; создание ресурса не объясняет event loop.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q07D09"
+    },
+    "https://learn.microsoft.com/en-us/sql/connect/node-js/node-js-driver-for-sql-server?view=sql-server-ver17": {
+      "grade": 0,
+      "reason": "Установка драйвера SQL для Node.js не объясняет цикл событий.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q07D10"
+    },
+    "https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-overview": {
+      "grade": 1,
+      "reason": "Вводная инструкция упоминает неблокирующий I/O без подробного механизма.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q07D11"
+    },
+    "https://learn.microsoft.com/en-us/azure/app-service": {
+      "grade": 0,
+      "reason": "Обзор хостинга App Service не объясняет цикл событий Node.js.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q07D12"
+    },
+    "https://learn.microsoft.com/en-us/azure/azure-functions/update-language-versions": {
+      "grade": 0,
+      "reason": "Обновление версии Node.js в Functions не описывает event loop.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q07D13"
+    },
+    "https://learn.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook": {
+      "grade": 0,
+      "reason": "Создание Teams webhook — другая задача.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q07D14"
+    },
+    "https://learn.microsoft.com/en-us/power-apps/developer/code-apps/how-to/create-an-app-from-scratch": {
+      "grade": 0,
+      "reason": "Создание приложения Power Apps CLI требует Node.js, но не объясняет его асинхронную модель.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q07D15"
+    },
+    "https://learn.microsoft.com/en-us/visualstudio/windows": {
+      "grade": 0,
+      "reason": "Главная страница Visual Studio не отвечает на запрос о Node.js event loop.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q07D16"
+    }
+  },
+  "Q08": {
+    "https://en.wikipedia.org/wiki/Containerization_(computing)": {
+      "grade": 2,
+      "reason": "Объясняет контейнеризацию и назначение оркестрации с Kubernetes.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q08D01"
+    },
+    "https://en.wikipedia.org/wiki/Docker_(software)": {
+      "grade": 1,
+      "reason": "Docker даёт контекст контейнеров; искомая оркестрация не является основной темой.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q08D02"
+    },
+    "https://en.wikipedia.org/wiki/Dynatrace": {
+      "grade": 0,
+      "reason": "Описание продукта мониторинга лишь упоминает Kubernetes как наблюдаемую платформу.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q08D03"
+    },
+    "https://en.wikipedia.org/wiki/Kubernetes": {
+      "grade": 3,
+      "reason": "Основная статья посвящена Kubernetes и управлению контейнерным кластером.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q08D04"
+    },
+    "https://en.wikipedia.org/wiki/Orchestration_(computing)": {
+      "grade": 2,
+      "reason": "Разбирает общую оркестрацию вычислительных систем и связь с Kubernetes.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q08D05"
+    },
+    "https://learn.microsoft.com/en-us/azure/containers": {
+      "grade": 1,
+      "reason": "Навигационная страница сервисов содержит ссылки, но мало самостоятельного объяснения.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q08D06"
+    },
+    "https://learn.microsoft.com/en-us/azure/developer/java/sdk/containers-samples": {
+      "grade": 2,
+      "reason": "Содержит примеры управления AKS-кластером с Kubernetes orchestration.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q08D07"
+    },
+    "https://learn.microsoft.com/en-us/training/modules/apply-networking-concepts-to-windows-containers": {
+      "grade": 2,
+      "reason": "Рассматривает сетевой аспект оркестрации контейнеров в Kubernetes/AKS.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q08D08"
+    },
+    "https://learn.microsoft.com/en-us/training/modules/apply-storage-concepts-to-windows-containers": {
+      "grade": 2,
+      "reason": "Рассматривает хранение контейнеров в Kubernetes/AKS как часть оркестрации.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q08D09"
+    },
+    "https://learn.microsoft.com/en-us/training/modules/orchestrate-containers-windows-server-using-kubernetes": {
+      "grade": 3,
+      "reason": "Учебный модуль прямо объясняет оркестрацию, Kubernetes и развёртывание кластера.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q08D10"
+    },
+    "https://learn.microsoft.com/en-us/azure/aks/what-is-aks": {
+      "grade": 3,
+      "reason": "Прямой обзор AKS как управляемого Kubernetes и средств оркестрации контейнеров.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q08D11"
+    },
+    "https://learn.microsoft.com/en-us/azure/azure-arc": {
+      "grade": 1,
+      "reason": "Azure Arc связан с управлением инфраструктурой, но в хабе нет объяснения оркестрации.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q08D12"
+    },
+    "https://learn.microsoft.com/en-us/training/paths/az-104-manage-compute-resources": {
+      "grade": 1,
+      "reason": "Общий курс вычислительных ресурсов и ACI не раскрывает именно Kubernetes orchestration.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q08D13"
+    },
+    "https://learn.microsoft.com/en-us/troubleshoot/azure": {
+      "grade": 0,
+      "reason": "Общий каталог устранения неполадок Azure не отвечает на вопрос об оркестрации.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q08D14"
+    }
+  },
+  "Q09": {
+    "https://en.wikipedia.org/wiki/Domain-validated_certificate": {
+      "grade": 1,
+      "reason": "Проверка владения доменом при выдаче сертификата — фон, а не проверка цепочки клиентом.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q09D01"
+    },
+    "https://en.wikipedia.org/wiki/Extended_Validation_Certificate": {
+      "grade": 1,
+      "reason": "Описывает расширенную проверку владельца сертификата, не полный алгоритм TLS-валидации.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q09D02"
+    },
+    "https://en.wikipedia.org/wiki/OCSP_stapling": {
+      "grade": 2,
+      "reason": "Прямо объясняет проверку отзыва сертификата через OCSP stapling.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q09D03"
+    },
+    "https://en.wikipedia.org/wiki/Public_key_certificate": {
+      "grade": 2,
+      "reason": "Описывает сертификаты сервера TLS и проверку со стороны подключающегося клиента.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q09D04"
+    },
+    "https://en.wikipedia.org/wiki/TLS": {
+      "grade": 0,
+      "reason": "Страница неоднозначности TLS не объясняет проверку сертификатов.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q09D05"
+    },
+    "https://en.wikipedia.org/wiki/Transport_Layer_Security": {
+      "grade": 1,
+      "reason": "Обзор протокола TLS даёт контекст аутентификации, но не цельное руководство по валидации.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q09D06"
+    },
+    "https://en.wikipedia.org/wiki/X.509": {
+      "grade": 3,
+      "reason": "Стандарт X.509 описывает поля срока действия, издателя и проверку доверия к сертификатам.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q09D07"
+    },
+    "https://learn.microsoft.com/en-us/microsoft-edge/webview2/reference/winrt/microsoft_web_webview2_core/corewebview2servercertificateerroraction?view=webview2-winrt-1.0.4258.31": {
+      "grade": 1,
+      "reason": "Перечень действий WebView2 при ошибке сертификата, без объяснения самих проверок.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q09D08"
+    },
+    "https://learn.microsoft.com/en-us/openspecs/windows_protocols/mc-prch/6cd5f905-60e4-4098-8315-a792ed71255a": {
+      "grade": 1,
+      "reason": "Требование доверять сертификату узла не раскрывает алгоритм цепочки и имени.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q09D09"
+    },
+    "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-iphttps/6caaeec8-99c5-4b59-b21c-907687d5aa9f": {
+      "grade": 1,
+      "reason": "Сценарий атаки рекомендует TLS-валидацию, но не объясняет её процедуры.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q09D10"
+    },
+    "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-peap/12b94d70-96ac-419a-b54d-7975bf169141": {
+      "grade": 2,
+      "reason": "Описывает проверку сертификата при TLS-сеансе и реакцию на недоверенного издателя.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q09D11"
+    },
+    "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-rcmp/5778a360-ad38-4957-8dce-647b4774ee63": {
+      "grade": 1,
+      "reason": "Контекст сопоставления клиентских сертификатов не покрывает общую проверку TLS-сервера.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q09D12"
+    },
+    "https://learn.microsoft.com/en-us/azure/app-service/configure-ssl-certificate": {
+      "grade": 2,
+      "reason": "Требования к сертификату App Service и цепочке дают практическую часть TLS-проверки.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q09D13"
+    },
+    "https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-certificate-based-authentication": {
+      "grade": 2,
+      "reason": "Настройка клиентской X.509-аутентификации раскрывает доверие и TLS-handshake в частном сценарии.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q09D14"
+    },
+    "https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/certificate-requirements": {
+      "grade": 2,
+      "reason": "Рассматривает требования, права доступа и срок действия TLS-сертификата SQL Server.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q09D15"
+    },
+    "https://learn.microsoft.com/en-us/troubleshoot/sql/database-engine/connect/error-message-when-you-connect": {
+      "grade": 2,
+      "reason": "Объясняет ошибку недоверенного центра и невозможность проверки сертификата клиентом.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q09D16"
+    },
+    "https://learn.microsoft.com/en-us/windows-server/networking/technologies/extensible-authentication-protocol/network-access": {
+      "grade": 2,
+      "reason": "Описывает серверную валидацию и EAP-TLS в конкретном сценарии сетевой аутентификации.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q09D17"
+    }
+  },
+  "Q10": {
+    "https://en.wikipedia.org/wiki/Ansible_(software)": {
+      "grade": 1,
+      "reason": "Упоминает разные транспорты Ansible/PowerShell, не давая настройки PowerShell over SSH.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q10D01"
+    },
+    "https://en.wikipedia.org/wiki/OpenSSH": {
+      "grade": 1,
+      "reason": "OpenSSH — необходимый фон, но не инструкция по PowerShell remoting.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q10D02"
+    },
+    "https://en.wikipedia.org/wiki/PowerShell": {
+      "grade": 1,
+      "reason": "Обзор PowerShell отмечает SSH, но не даёт конкретной настройки remoting.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q10D03"
+    },
+    "https://en.wikipedia.org/wiki/Shell_(computing)": {
+      "grade": 1,
+      "reason": "Объясняет удалённые оболочки в целом, включая PowerShell и SSH.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q10D04"
+    },
+    "https://en.wikipedia.org/wiki/Shell_script": {
+      "grade": 0,
+      "reason": "Статья о shell-скриптах не решает задачу PowerShell remoting over SSH.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q10D05"
+    },
+    "https://learn.microsoft.com/en-us/azure/azure-arc/servers/ssh-arc-powershell-remoting": {
+      "grade": 3,
+      "reason": "Прямое руководство по PowerShell remoting через SSH для Azure Arc.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q10D06"
+    },
+    "https://learn.microsoft.com/en-us/powershell": {
+      "grade": 1,
+      "reason": "Главная страница документации PowerShell без самостоятельной инструкции SSH remoting.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q10D07"
+    },
+    "https://learn.microsoft.com/en-us/powershell/scripting/dev-cross-plat/vscode/using-vscode-for-remote-editing-and-debugging?view=powershell-7.6": {
+      "grade": 2,
+      "reason": "Показывает Enter-PSSession -HostName и различия SSH, WinRM и PowerShell Direct.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q10D08"
+    },
+    "https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-windows?view=powershell-7.6": {
+      "grade": 1,
+      "reason": "Установка PowerShell лишь упоминает поддержку SSH remoting.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q10D09"
+    },
+    "https://learn.microsoft.com/en-us/powershell/scripting/security/overview?view=powershell-7.6": {
+      "grade": 1,
+      "reason": "Навигационный раздел безопасности содержит ссылку на SSH remoting, но не саму инструкцию.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q10D10"
+    },
+    "https://learn.microsoft.com/en-us/powershell/scripting/security/remoting/wsman-remoting-in-powershell?view=powershell-7.6": {
+      "grade": 1,
+      "reason": "Инструкция WinRM относится к remoting, но использует другой транспорт.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q10D11"
+    },
+    "https://learn.microsoft.com/en-us/training/modules/develop-on-remote-machine": {
+      "grade": 1,
+      "reason": "Настройка Remote-SSH в VS Code полезна как фон, но не объясняет PowerShell remoting.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q10D12"
+    },
+    "https://learn.microsoft.com/en-us/powershell/scripting/overview": {
+      "grade": 1,
+      "reason": "Общее описание PowerShell без инструкции SSH remoting.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q10D13"
+    },
+    "https://learn.microsoft.com/en-us/powershell/scripting/security/remoting/running-remote-commands": {
+      "grade": 1,
+      "reason": "Обзор удалённых команд в основном объясняет WS-Management, а не SSH-транспорт.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q10D14"
+    },
+    "https://learn.microsoft.com/en-us/powershell/scripting/whats-new/differences-from-windows-powershell": {
+      "grade": 2,
+      "reason": "Сравнивает поддержку SSH-remoting и PSRP в версиях PowerShell.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q10D15"
+    },
+    "https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement": {
+      "grade": 1,
+      "reason": "Настройка ключей OpenSSH — необходимый фон, но не настройка PowerShell remoting.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q10D16"
+    },
+    "https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/connect-remote-desktop-services": {
+      "grade": 0,
+      "reason": "Remote Desktop — другой способ доступа, не PowerShell over SSH.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q10D17"
+    }
+  },
+  "Q11": {
+    "https://en.wikipedia.org/wiki/Cloud_computing": {
+      "grade": 0,
+      "reason": "Общее определение облачных вычислений не объясняет Azure VNet peering.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q11D01"
+    },
+    "https://en.wikipedia.org/wiki/Content_delivery_network": {
+      "grade": 0,
+      "reason": "CDN и размещение кешей не являются peering виртуальных сетей Azure.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q11D02"
+    },
+    "https://en.wikipedia.org/wiki/Microsoft_Azure": {
+      "grade": 1,
+      "reason": "Обзор Azure даёт контекст платформы без разбора peering.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q11D03"
+    },
+    "https://en.wikipedia.org/wiki/Network_Performance_Monitoring_Solution": {
+      "grade": 1,
+      "reason": "Мониторинг Azure VNets связан с сетями, но не с настройкой peering.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q11D04"
+    },
+    "https://en.wikipedia.org/wiki/VNS3": {
+      "grade": 0,
+      "reason": "Описание стороннего сетевого продукта не объясняет Azure VNet peering.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q11D05"
+    },
+    "https://en.wikipedia.org/wiki/Victor_Bahl": {
+      "grade": 0,
+      "reason": "Биография исследователя и история Azure networking не решают задачу настройки.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q11D06"
+    },
+    "https://learn.microsoft.com/en-us/azure": {
+      "grade": 1,
+      "reason": "Главная страница Azure — только навигация к тематическим материалам.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q11D07"
+    },
+    "https://learn.microsoft.com/en-us/azure/azure-vmware/native-connect-multiple-private-clouds": {
+      "grade": 2,
+      "reason": "Объясняет применение VNet peering для соединения приватных облаков VMware.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q11D08"
+    },
+    "https://learn.microsoft.com/en-us/azure/internet-peering": {
+      "grade": 0,
+      "reason": "Internet Peering и ASN — другой сервис, не peering Azure Virtual Networks.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q11D09"
+    },
+    "https://learn.microsoft.com/en-us/azure/reliability/regions-list": {
+      "grade": 0,
+      "reason": "Список регионов Azure не объясняет сетевой peering.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q11D10"
+    },
+    "https://learn.microsoft.com/en-us/azure/virtual-network": {
+      "grade": 1,
+      "reason": "Раздел документации VNet содержит нужные ссылки, но мало самостоятельного ответа.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q11D11"
+    },
+    "https://learn.microsoft.com/en-us/training/modules/configure-vnet-peering": {
+      "grade": 3,
+      "reason": "Учебный модуль прямо разбирает настройку peering, gateway transit и ограничения связности.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q11D12"
+    },
+    "https://learn.microsoft.com/en-us/training/modules/introduction-to-azure-virtual-networks": {
+      "grade": 2,
+      "reason": "Курс VNet включает peering и упражнение по соединению виртуальных сетей.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q11D13"
+    },
+    "https://learn.microsoft.com/en-us/azure/architecture/networking/architecture/hub-spoke": {
+      "grade": 2,
+      "reason": "Hub-spoke архитектура объясняет практическое применение соединений виртуальных сетей.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q11D14"
+    },
+    "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview": {
+      "grade": 3,
+      "reason": "Специальная страница VNet peering объясняет назначение, варианты и ограничения.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q11D15"
+    },
+    "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview": {
+      "grade": 2,
+      "reason": "Разбирает маршруты, создаваемые при peering, как часть поведения соединённых VNet.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q11D16"
+    },
+    "https://learn.microsoft.com/en-us/power-platform/admin/vnet-support-overview": {
+      "grade": 2,
+      "reason": "Конкретный сценарий peering между регионами для Power Platform.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q11D17"
+    },
+    "https://learn.microsoft.com/en-us/training/paths/design-implement-microsoft-azure-networking-solutions-az-700": {
+      "grade": 1,
+      "reason": "Обзор учебной траектории содержит peering среди тем, но не самостоятельное объяснение.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q11D18"
+    }
+  },
+  "Q12": {
+    "https://en.wikipedia.org/wiki/Backend_as_a_service": {
+      "grade": 0,
+      "reason": "Общий BaaS и социальный вход OAuth не объясняют модель разрешений Microsoft Graph.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q12D01"
+    },
+    "https://en.wikipedia.org/wiki/Comparison_of_issue-tracking_systems": {
+      "grade": 0,
+      "reason": "Сравнение баг-трекеров не относится к разрешениям Graph.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q12D02"
+    },
+    "https://en.wikipedia.org/wiki/Google_Play": {
+      "grade": 0,
+      "reason": "Описание магазина Google Play не отвечает на запрос.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q12D03"
+    },
+    "https://en.wikipedia.org/wiki/OAuth": {
+      "grade": 1,
+      "reason": "Даёт фон OAuth и grant types, но не разрешения delegated/application в Graph.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q12D04"
+    },
+    "https://en.wikipedia.org/wiki/OSI_model": {
+      "grade": 0,
+      "reason": "Сетевая модель OSI не объясняет OAuth-разрешения Graph.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q12D05"
+    },
+    "https://learn.microsoft.com/en-us/azure/devops/integrate/get-started/authentication/entra-oauth?view=azure-devops": {
+      "grade": 1,
+      "reason": "Инструкция ориентирована на ресурс Azure DevOps; Graph упоминается как пример ссылки.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q12D06"
+    },
+    "https://learn.microsoft.com/en-us/entra/msal/android/calling-an-api": {
+      "grade": 2,
+      "reason": "Объясняет запрос scopes API и прямо направляет к разрешениям Microsoft Graph.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q12D07"
+    },
+    "https://learn.microsoft.com/en-us/graph/migrate-exchange-web-services-authentication": {
+      "grade": 3,
+      "reason": "Явно сравнивает delegated и application permissions в Microsoft Graph.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q12D08"
+    },
+    "https://learn.microsoft.com/en-us/troubleshoot/outlook/authentication/expose-permissions-issue-with-mapi-oauth-tokens": {
+      "grade": 1,
+      "reason": "Описывает отсутствие OAuth-модели для Extended MAPI; Graph только альтернативный API.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q12D09"
+    },
+    "https://learn.microsoft.com/en-us/windows-365/enterprise/permission-scopes": {
+      "grade": 2,
+      "reason": "Практическая настройка разрешений Microsoft Graph для Windows 365.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q12D10"
+    },
+    "https://learn.microsoft.com/en-us/entra/identity-platform/permissions-consent-overview": {
+      "grade": 3,
+      "reason": "Сравнивает delegated/application permissions, контекст доступа и согласие администратора.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q12D11"
+    },
+    "https://learn.microsoft.com/en-us/entra/identity-platform/scopes-oidc": {
+      "grade": 3,
+      "reason": "Объясняет OAuth scopes и модель разрешений на примерах Microsoft Graph.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q12D12"
+    },
+    "https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-client-creds-grant-flow": {
+      "grade": 2,
+      "reason": "Разбирает application permissions Graph в client credentials flow.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q12D13"
+    },
+    "https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-on-behalf-of-flow": {
+      "grade": 2,
+      "reason": "Рассматривает делегированный On-Behalf-Of flow со scope Microsoft Graph.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q12D14"
+    },
+    "https://learn.microsoft.com/en-us/powershell/microsoftgraph/installation": {
+      "grade": 1,
+      "reason": "Установка SDK даёт инструментальный фон без разбора OAuth-разрешений.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q12D15"
+    }
+  },
+  "Q13": {
+    "https://en.wikipedia.org/wiki/Ashish_Vaswani": {
+      "grade": 0,
+      "reason": "Биография автора статьи не объясняет механизм внимания.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q13D01"
+    },
+    "https://en.wikipedia.org/wiki/Attention_(machine_learning)": {
+      "grade": 3,
+      "reason": "Специальная статья о механизме внимания в машинном обучении.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q13D02"
+    },
+    "https://en.wikipedia.org/wiki/Attention_Is_All_You_Need": {
+      "grade": 2,
+      "reason": "Обзор исходной работы о трансформерах объясняет роль внимания и архитектурную идею.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q13D03"
+    },
+    "https://en.wikipedia.org/wiki/Delta–wye_transformer": {
+      "grade": 0,
+      "reason": "Схема электрического трансформатора не относится к нейросетям.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q13D04"
+    },
+    "https://en.wikipedia.org/wiki/Energy_efficient_transformer": {
+      "grade": 0,
+      "reason": "Энергоэффективность электрических трансформаторов не относится к attention.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q13D05"
+    },
+    "https://en.wikipedia.org/wiki/Generative_pre-trained_transformer": {
+      "grade": 2,
+      "reason": "Архитектура GPT иллюстрирует использование внимания, но рассматривает более узкий класс моделей.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q13D06"
+    },
+    "https://en.wikipedia.org/wiki/Perceiver": {
+      "grade": 2,
+      "reason": "Вариант Transformer раскрывает асимметричное внимание и латентное представление.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q13D07"
+    },
+    "https://en.wikipedia.org/wiki/Transformer": {
+      "grade": 0,
+      "reason": "Статья об электротехническом компоненте не соответствует намерению.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q13D08"
+    },
+    "https://en.wikipedia.org/wiki/Transformer_(deep_learning)": {
+      "grade": 3,
+      "reason": "Основная тема — нейросетевой трансформер и self-attention.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q13D09"
+    },
+    "https://en.wikipedia.org/wiki/Transformer_utilization_factor": {
+      "grade": 0,
+      "reason": "Коэффициент использования силового трансформатора относится к электротехнике.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q13D10"
+    },
+    "https://en.wikipedia.org/wiki/Vision_transformer": {
+      "grade": 2,
+      "reason": "Описывает self-attention в зрительных трансформерах и его варианты.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q13D11"
+    },
+    "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/openapi/customize-openapi": {
+      "grade": 0,
+      "reason": "Transformer OpenAPI-документа — другой смысл термина, не нейросетевая архитектура.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q13D12"
+    },
+    "https://learn.microsoft.com/en-us/microsoft-copilot-studio/customer-copilot-servicenow": {
+      "grade": 0,
+      "reason": "Преобразование событий ServiceNow не связано с attention нейросети.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q13D13"
+    },
+    "https://learn.microsoft.com/en-us/python/api/azureml-automl-runtime/azureml.automl.runtime.featurizer.transformer.text.bilstm_attention_transformer": {
+      "grade": 0,
+      "reason": "Почти пустая справочная страница модуля не объясняет механизм attention в Transformer.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q13D14"
+    },
+    "https://learn.microsoft.com/en-us/python/api/azureml-training-tabular/azureml.training.tabular.featurization.text.bilstm_attention_transformer": {
+      "grade": 1,
+      "reason": "Смежный BiLSTM-attention featurizer даёт контекст NLP, но это не Transformer и не объяснение его внимания.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q13D15"
+    },
+    "https://learn.microsoft.com/en-us/training/modules/introduction-computer-vision": {
+      "grade": 0,
+      "reason": "Учебный материал о CNN не объясняет Transformer attention.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q13D16"
+    }
+  },
+  "Q14": {
+    "https://arxiv.org/html/2410.15944v1": {
+      "grade": 3,
+      "reason": "Разбирает полный RAG-пайплайн от индексации PDF до retrieval и генерации.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q14D01"
+    },
+    "https://en.wikipedia.org/wiki/Knowledge_cutoff": {
+      "grade": 1,
+      "reason": "Ограничение знаний LLM объясняет мотивацию внешнего контекста, но не сам RAG-пайплайн.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q14D02"
+    },
+    "https://en.wikipedia.org/wiki/Large_language_model": {
+      "grade": 2,
+      "reason": "Обзор LLM содержит прямое объяснение соединения генерации с поиском документов.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q14D03"
+    },
+    "https://en.wikipedia.org/wiki/Prompt_engineering": {
+      "grade": 1,
+      "reason": "Prompt engineering связан с контекстом, но не раскрывает весь retrieval-пайплайн.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q14D04"
+    },
+    "https://en.wikipedia.org/wiki/Retrieval-augmented_generation": {
+      "grade": 3,
+      "reason": "Прямое определение RAG и последовательности поиска документов перед генерацией ответа.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q14D05"
+    },
+    "https://en.wikipedia.org/wiki/Vector_database": {
+      "grade": 1,
+      "reason": "Векторная БД — компонент извлечения, а не самостоятельное описание полного RAG.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q14D06"
+    },
+    "https://learn.microsoft.com/en-us/azure/foundry/concepts/retrieval-augmented-generation": {
+      "grade": 3,
+      "reason": "Объясняет RAG, роль индексов и связь поиска с генеративной моделью.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q14D07"
+    },
+    "https://learn.microsoft.com/en-us/training/modules/design-implement-rag-with-sql": {
+      "grade": 3,
+      "reason": "Учебный модуль включает выбор контекста SQL, augmented prompts и обработку ответа.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q14D08"
+    },
+    "https://learn.microsoft.com/en-us/training/modules/optimize-generative-ai-model-performance": {
+      "grade": 2,
+      "reason": "Рассматривает grounding/RAG как одну из стратегий оптимизации генеративной модели.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q14D09"
+    },
+    "https://learn.microsoft.com/en-us/training/modules/retrieval-augmented-generation-azure-databricks": {
+      "grade": 3,
+      "reason": "Специальный учебный модуль о соединении внешнего retrieval и генерации в RAG.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q14D10"
+    },
+    "https://learn.microsoft.com/en-us/training/paths/implement-ai-capabilities-database-solutions": {
+      "grade": 2,
+      "reason": "Комплексный курс БД включает RAG, векторный поиск и подготовку контекста.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q14D11"
+    },
+    "https://learn.microsoft.com/en-us/azure/ai-services/content-understanding": {
+      "grade": 0,
+      "reason": "Документационный хаб распознавания контента не объясняет RAG-пайплайн.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q14D12"
+    },
+    "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide": {
+      "grade": 3,
+      "reason": "Архитектурное руководство прямо описывает проектирование RAG и retrieval перед генерацией.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q14D13"
+    },
+    "https://learn.microsoft.com/en-us/credentials/certifications/exams/ai-500": {
+      "grade": 0,
+      "reason": "Страница регистрации экзамена не объясняет работу RAG.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q14D14"
+    },
+    "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-200": {
+      "grade": 0,
+      "reason": "План экзамена перечисляет темы, но не объясняет алгоритм.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q14D15"
+    },
+    "https://learn.microsoft.com/en-us/training/modules/rag-fundamentals": {
+      "grade": 3,
+      "reason": "Целевой модуль объясняет подготовку, извлечение и использование данных для генерации ответа.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q14D16"
+    }
+  },
+  "Q15": {
+    "https://en.wikipedia.org/wiki/Deep_learning": {
+      "grade": 1,
+      "reason": "Общий deep learning даёт фон и примеры, но не объясняет GNN.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q15D01"
+    },
+    "https://en.wikipedia.org/wiki/Graph_neural_network": {
+      "grade": 3,
+      "reason": "Специальная статья о классе графовых нейронных сетей.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q15D02"
+    },
+    "https://en.wikipedia.org/wiki/Graph_theory": {
+      "grade": 1,
+      "reason": "Теория графов — необходимый фон, но не описание нейросетевых моделей.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q15D03"
+    },
+    "https://en.wikipedia.org/wiki/Knowledge_graph": {
+      "grade": 2,
+      "reason": "Объясняет применение GNN и embeddings к графам знаний.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q15D04"
+    },
+    "https://en.wikipedia.org/wiki/List_of_network_theory_topics": {
+      "grade": 0,
+      "reason": "Список тем теории сетей не раскрывает устройство графовых нейросетей.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q15D05"
+    },
+    "https://en.wikipedia.org/wiki/Machine-learned_interatomic_potential": {
+      "grade": 2,
+      "reason": "Рассматривает message-passing и эквивариантные GNN в конкретном физическом применении.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q15D06"
+    },
+    "https://en.wikipedia.org/wiki/Microsoft_Cognitive_Toolkit": {
+      "grade": 1,
+      "reason": "Вычислительный граф обычной нейросети не равен графовой нейросети; полезен лишь как фон.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q15D07"
+    },
+    "https://en.wikipedia.org/wiki/Node2vec": {
+      "grade": 1,
+      "reason": "Node2vec связан с представлениями графов, но не объясняет GNN.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q15D08"
+    },
+    "https://en.wikipedia.org/wiki/Weisfeiler_Leman_graph_isomorphism_test": {
+      "grade": 2,
+      "reason": "Объясняет выразительность message-passing GNN через тест Вейсфейлера–Лемана.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q15D09"
+    },
+    "https://learn.microsoft.com/en-us/training/modules/intro-computer-vision-tensorflow": {
+      "grade": 0,
+      "reason": "Учебный модуль об изображениях и обычных CNN не относится к GNN.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q15D10"
+    },
+    "https://learn.microsoft.com/en-us/graph": {
+      "grade": 0,
+      "reason": "Microsoft Graph API не является графовой нейронной сетью.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q15D11"
+    },
+    "https://learn.microsoft.com/en-us/graph/api/overview": {
+      "grade": 0,
+      "reason": "REST-модель сущностей Microsoft Graph — другая задача, не GNN.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q15D12"
+    },
+    "https://learn.microsoft.com/en-us/powershell/microsoftgraph/installation": {
+      "grade": 0,
+      "reason": "Установка Graph SDK не относится к графовым нейросетям.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q15D13"
+    },
+    "https://learn.microsoft.com/en-us/training/modules/introduction-computer-vision": {
+      "grade": 0,
+      "reason": "Обычные CNN для изображений не раскрывают GNN.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q15D14"
+    },
+    "https://learn.microsoft.com/en-us/windows": {
+      "grade": 0,
+      "reason": "Документационный хаб Windows не отвечает на запрос о GNN.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q15D15"
+    }
+  },
+  "Q16": {
+    "https://arxiv.org/html/2510.21647v1": {
+      "grade": 0,
+      "reason": "Генетическая оптимизация торговых маршрутов не раскрывает дифференциальную приватность.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q16D01"
+    },
+    "https://en.wikipedia.org/wiki/Differential_privacy": {
+      "grade": 3,
+      "reason": "Специальная статья о дифференциальной приватности и её применении в ML.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q16D02"
+    },
+    "https://en.wikipedia.org/wiki/Differential_privacy_composition_theorems": {
+      "grade": 2,
+      "reason": "Композиция механизмов объясняет важную часть учёта privacy loss при обучении.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q16D03"
+    },
+    "https://en.wikipedia.org/wiki/Differentially_private_stochastic_gradient_descent": {
+      "grade": 3,
+      "reason": "DP-SGD прямо описывает приватное обучение и инструменты TensorFlow/PyTorch.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q16D04"
+    },
+    "https://en.wikipedia.org/wiki/Federated_learning": {
+      "grade": 2,
+      "reason": "Федеративное обучение обсуждает применение DP и приватность модели в смежной постановке.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q16D05"
+    },
+    "https://en.wikipedia.org/wiki/Flux_(machine-learning_framework)": {
+      "grade": 0,
+      "reason": "Описание Julia-фреймворка Flux без приватности не решает запрос.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q16D06"
+    },
+    "https://en.wikipedia.org/wiki/Frank_McSherry": {
+      "grade": 0,
+      "reason": "Биография исследователя не объясняет методы приватного обучения.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q16D07"
+    },
+    "https://en.wikipedia.org/wiki/Gautam_Kamath": {
+      "grade": 0,
+      "reason": "Биография специалиста не является объяснением алгоритма DP в ML.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q16D08"
+    },
+    "https://en.wikipedia.org/wiki/Local_differential_privacy": {
+      "grade": 2,
+      "reason": "Объясняет локальную DP и её применение совместно с федеративным обучением.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q16D09"
+    },
+    "https://en.wikipedia.org/wiki/Model_inversion_attack": {
+      "grade": 2,
+      "reason": "Атаки инверсии и DP как защита дают содержательный прикладной аспект приватности моделей.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q16D10"
+    },
+    "https://en.wikipedia.org/wiki/Numerical_methods_for_differential_equations": {
+      "grade": 0,
+      "reason": "Численные методы дифференциальных уравнений не связаны с differential privacy.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q16D11"
+    },
+    "https://learn.microsoft.com/en-us/azure/databricks": {
+      "grade": 0,
+      "reason": "Хаб Databricks не объясняет дифференциальную приватность.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q16D12"
+    },
+    "https://learn.microsoft.com/en-us/dotnet": {
+      "grade": 0,
+      "reason": "Документация .NET не относится к differential privacy в ML.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q16D13"
+    },
+    "https://learn.microsoft.com/en-us/fabric": {
+      "grade": 0,
+      "reason": "Главная страница Fabric не описывает нужный математический механизм приватности.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q16D14"
+    },
+    "https://learn.microsoft.com/en-us/training/modules/explore-ai-basics": {
+      "grade": 1,
+      "reason": "Вводный модуль о ML даёт общий фон, но не дифференциальную приватность.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q16D15"
+    },
+    "https://learn.microsoft.com/en-us/training/modules/know-where-leverage-ai-classroom": {
+      "grade": 0,
+      "reason": "Рекомендации по приватности в классе не являются differential privacy.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q16D16"
+    }
+  },
+  "Q17": {
+    "https://en.wikipedia.org/wiki/Federated_Learning_of_Cohorts": {
+      "grade": 0,
+      "reason": "Документ явно сообщает, что рекламный механизм FLoC не использует федеративное обучение.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q17D01"
+    },
+    "https://en.wikipedia.org/wiki/Federated_learning": {
+      "grade": 3,
+      "reason": "Прямо объясняет федеративное обучение, децентрализацию данных и мотивацию приватности.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q17D02"
+    },
+    "https://en.wikipedia.org/wiki/Federated_portal_network": {
+      "grade": 0,
+      "reason": "Федерация корпоративных порталов не относится к обучению ML-моделей.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q17D03"
+    },
+    "https://en.wikipedia.org/wiki/Local_differential_privacy": {
+      "grade": 2,
+      "reason": "Объясняет сочетание FL и локальной DP для защиты данных.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q17D04"
+    },
+    "https://en.wikipedia.org/wiki/Machine_learning": {
+      "grade": 2,
+      "reason": "Содержит определение FL и пример локального обучения без передачи исходных данных.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q17D05"
+    },
+    "https://en.wikipedia.org/wiki/Privacy": {
+      "grade": 1,
+      "reason": "Общая статья о приватности даёт контекст, но не механизм FL.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q17D06"
+    },
+    "https://learn.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-sadmws/edd791ce-78ec-4f5e-8739-a2c22c45cabb": {
+      "grade": 0,
+      "reason": "Тип федеративной поисковой локации SharePoint не связан с FL.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q17D07"
+    },
+    "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-mwbf/7db4f054-f31a-447e-a8fc-6547215bfd31": {
+      "grade": 0,
+      "reason": "Валидация токена федеративного партнёра — другая задача, не ML.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q17D08"
+    },
+    "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-tds/f40cca29-29b8-43ec-b9ff-2f8682486c29": {
+      "grade": 0,
+      "reason": "Протокольный токен федеративной аутентификации не описывает FL.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q17D09"
+    },
+    "https://learn.microsoft.com/en-us/skype-sdk/ucwa/sourcenetwork_ref": {
+      "grade": 0,
+      "reason": "Перечисление контактных сетей не относится к федеративному обучению.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q17D10"
+    },
+    "https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy": {
+      "grade": 1,
+      "reason": "Политика обработки данных ML-сервиса даёт контекст приватности, но не федеративное обучение.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q17D11"
+    },
+    "https://learn.microsoft.com/en-us/fabric": {
+      "grade": 0,
+      "reason": "Документационный хаб Fabric не объясняет FL.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q17D12"
+    },
+    "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview": {
+      "grade": 0,
+      "reason": "Федеративные MCP-коннекторы для поиска данных — другой смысл federated.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q17D13"
+    },
+    "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview": {
+      "grade": 0,
+      "reason": "Сопоставление типов коннекторов не относится к обучению моделей.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q17D14"
+    },
+    "https://learn.microsoft.com/en-us/windows/resources": {
+      "grade": 0,
+      "reason": "Документация Windows не соответствует запросу.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q17D15"
+    }
+  },
+  "Q18": {
+    "https://en.wikipedia.org/wiki/Descent_direction": {
+      "grade": 1,
+      "reason": "Определяет направление спуска, но не стохастическую оценку градиента.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q18D01"
+    },
+    "https://en.wikipedia.org/wiki/Federated_learning": {
+      "grade": 2,
+      "reason": "Объясняет SGD/FedSGD как часть федеративного обучения и выбор случайной подвыборки.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q18D02"
+    },
+    "https://en.wikipedia.org/wiki/Gradient_descent": {
+      "grade": 2,
+      "reason": "Разбирает базовый градиентный спуск и применение к ML, давая важную основу SGD.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q18D03"
+    },
+    "https://en.wikipedia.org/wiki/Gradient_method": {
+      "grade": 1,
+      "reason": "Классифицирует градиентные методы без отдельного раскрытия SGD.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q18D04"
+    },
+    "https://en.wikipedia.org/wiki/Mirror_descent": {
+      "grade": 1,
+      "reason": "Другой метод оптимизации даёт сравнительный фон, но не искомый алгоритм.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q18D05"
+    },
+    "https://en.wikipedia.org/wiki/Stochastic_gradient_descent": {
+      "grade": 3,
+      "reason": "Прямо определяет SGD, случайную оценку градиента и применение к оптимизации.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q18D06"
+    },
+    "https://en.wikipedia.org/wiki/Stochastic_optimization": {
+      "grade": 2,
+      "reason": "Обзор стохастической оптимизации содержательно включает SGD и стохастическую аппроксимацию.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q18D07"
+    },
+    "https://learn.microsoft.com/en-us/sql/machine-learning/python/reference/microsoftml/sgd-optimizer?view=sql-server-ver17": {
+      "grade": 2,
+      "reason": "Прикладной справочник SGD-оптимизатора с learning rate, momentum и другими параметрами.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q18D08"
+    },
+    "https://learn.microsoft.com/en-us/sql/machine-learning/r/reference/microsoftml/optimizer?view=sql-server-ver17": {
+      "grade": 2,
+      "reason": "Описывает варианты SGD и параметры методов оптимизации.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q18D09"
+    },
+    "https://learn.microsoft.com/en-us/dotnet/api/azure.resourcemanager.machinelearning.models.classificationmodel.sgd": {
+      "grade": 1,
+      "reason": "Поле SDK содержит краткое определение SGD, но не алгоритм и его применение.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q18D10"
+    },
+    "https://learn.microsoft.com/en-us/dotnet/api/microsoft.azure.powershell.cmdlets.machinelearningservices.support.classificationmodels.sgd": {
+      "grade": 1,
+      "reason": "Перечисление PowerShell-модели называет SGD, но не раскрывает метод.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q18D11"
+    },
+    "https://learn.microsoft.com/en-us/dotnet/api/microsoft.azure.powershell.cmdlets.machinelearningservices.support.forecastingmodels.sgd": {
+      "grade": 1,
+      "reason": "Поле forecasting-модели даёт только краткое описание SGD.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q18D12"
+    },
+    "https://learn.microsoft.com/en-us/dotnet/api/microsoft.azure.powershell.cmdlets.machinelearningservices.support.regressionmodels.sgd": {
+      "grade": 1,
+      "reason": "Поле regression-модели даёт только краткое описание SGD.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q18D13"
+    },
+    "https://learn.microsoft.com/en-us/windows/resources": {
+      "grade": 0,
+      "reason": "Документационный хаб Windows не связан с алгоритмом оптимизации.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q18D14"
+    }
+  },
+  "Q19": {
+    "https://en.wikipedia.org/wiki/CSS_code": {
+      "grade": 2,
+      "reason": "CSS-коды — содержательная основа стабилизаторных кодов, но не специальный разбор surface code.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q19D01"
+    },
+    "https://en.wikipedia.org/wiki/Center_for_Quantum_Information_Science_&_Technology": {
+      "grade": 0,
+      "reason": "Описание исследовательского центра и конференции не объясняет коды.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q19D02"
+    },
+    "https://en.wikipedia.org/wiki/Noisy_intermediate-scale_quantum_computing": {
+      "grade": 1,
+      "reason": "Общий контекст NISQ лишь упоминает реализацию surface code.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q19D03"
+    },
+    "https://en.wikipedia.org/wiki/Quantum": {
+      "grade": 0,
+      "reason": "Общее определение кванта не относится к коррекции ошибок.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q19D04"
+    },
+    "https://en.wikipedia.org/wiki/Quantum_error_correction": {
+      "grade": 2,
+      "reason": "Обзор квантовой коррекции прямо рассматривает поверхностные коды и их роль.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q19D05"
+    },
+    "https://en.wikipedia.org/wiki/Quantum_mechanics": {
+      "grade": 0,
+      "reason": "Обзор квантовой механики не объясняет искомые коды.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q19D06"
+    },
+    "https://en.wikipedia.org/wiki/Stabilizer_code": {
+      "grade": 2,
+      "reason": "Объясняет математический класс стабилизаторных кодов, к которому относится surface code.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q19D07"
+    },
+    "https://en.wikipedia.org/wiki/Surface_code": {
+      "grade": 3,
+      "reason": "Специальная статья о surface code с двумерной решёткой, стабилизаторами и порогом ошибок.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q19D08"
+    },
+    "https://learn.microsoft.com/en-us/azure/quantum": {
+      "grade": 1,
+      "reason": "Главная страница Quantum содержит ссылку на QEC, но не объяснение surface code.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q19D09"
+    },
+    "https://learn.microsoft.com/en-us/python/qdk/qdk.qre.models.qec.surfacecode?view=qsharp-py": {
+      "grade": 2,
+      "reason": "Справочник SurfaceCode позволяет понять и настроить модель поверхностного кода.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q19D10"
+    },
+    "https://learn.microsoft.com/en-us/python/qdk/qdk.qre.models.qec?view=qsharp-py": {
+      "grade": 2,
+      "reason": "Пакет QEC описывает модели разновидностей surface code и lattice surgery.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q19D11"
+    },
+    "https://learn.microsoft.com/en-us/python/qdk/qdk.qre.models.surfacecode?view=qsharp-py": {
+      "grade": 2,
+      "reason": "Другой URL справочника SurfaceCode также содержит параметры модели и порога ошибок.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q19D12"
+    },
+    "https://learn.microsoft.com/en-us/azure/quantum/qsharp-overview": {
+      "grade": 1,
+      "reason": "Введение в Q# даёт контекст квантовых программ, но не surface code.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q19D13"
+    },
+    "https://learn.microsoft.com/en-us/surface": {
+      "grade": 0,
+      "reason": "Surface здесь — семейство компьютеров, не квантовый код.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q19D14"
+    },
+    "https://learn.microsoft.com/en-us/surface/contact-surface-business-education-support": {
+      "grade": 0,
+      "reason": "Поддержка устройств Surface не относится к коррекции квантовых ошибок.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q19D15"
+    },
+    "https://learn.microsoft.com/en-us/surface/get-started": {
+      "grade": 0,
+      "reason": "Корпоративная документация Surface — другой смысл терма.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q19D16"
+    },
+    "https://learn.microsoft.com/en-us/surface/surface-it-toolkit": {
+      "grade": 0,
+      "reason": "Инструментарий обслуживания Surface не относится к surface codes.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q19D17"
+    }
+  },
+  "Q20": {
+    "https://en.wikipedia.org/wiki/Commodity_cell": {
+      "grade": 1,
+      "reason": "Общий материал об аккумуляторных ячейках даёт фон, но не механизм старения.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q20D01"
+    },
+    "https://en.wikipedia.org/wiki/Electric_vehicle_battery": {
+      "grade": 2,
+      "reason": "Рассматривает долговечность и подавление деградации аккумуляторов электромобилей.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q20D02"
+    },
+    "https://en.wikipedia.org/wiki/List_of_battery_types": {
+      "grade": 0,
+      "reason": "Список типов батарей не объясняет старение литий-ионного аккумулятора.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q20D03"
+    },
+    "https://en.wikipedia.org/wiki/Lithium": {
+      "grade": 0,
+      "reason": "Статья об элементе и его добыче не отвечает на запрос о деградации ячеек.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q20D04"
+    },
+    "https://en.wikipedia.org/wiki/Lithium-ion_battery": {
+      "grade": 3,
+      "reason": "Содержит прямой разбор факторов старения, SEI и механизмов потери эффективности.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q20D05"
+    },
+    "https://en.wikipedia.org/wiki/Lithium-ion_flow_battery": {
+      "grade": 1,
+      "reason": "Особый тип литиевого проточного аккумулятора даёт фон без разбора деградации.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q20D06"
+    },
+    "https://en.wikipedia.org/wiki/Lithium_(medication)": {
+      "grade": 0,
+      "reason": "Литий как лекарство не относится к аккумуляторам.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q20D07"
+    },
+    "https://en.wikipedia.org/wiki/Lithium_iron_phosphate_battery": {
+      "grade": 2,
+      "reason": "Разновидность Li-ion рассматривает срок службы и число циклов, полезные для анализа деградации.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q20D08"
+    },
+    "https://en.wikipedia.org/wiki/Lithium_polymer_battery": {
+      "grade": 1,
+      "reason": "Описание типа LiPo даёт общий контекст, но не причины и модели старения.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q20D09"
+    },
+    "https://en.wikipedia.org/wiki/Lithium_vanadium_phosphate_battery": {
+      "grade": 1,
+      "reason": "Свойства ванадий-фосфатного катода связаны с технологией, а не механизмами деградации.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q20D10"
+    },
+    "https://en.wikipedia.org/wiki/Solid-state_battery": {
+      "grade": 1,
+      "reason": "Твердотельная технология даёт сравнительный фон по долговечности, но не прямой ответ о Li-ion.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q20D11"
+    },
+    "https://en.wikipedia.org/wiki/Sulfur_selenium_battery": {
+      "grade": 0,
+      "reason": "Альтернативная серно-селеновая батарея не объясняет деградацию литий-ионной.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q20D12"
+    },
+    "https://learn.microsoft.com/en-us/answers/questions/2304650/surface-pro-9-battery-degraded-by-2-after-5-months": {
+      "grade": 1,
+      "reason": "Доступный фрагмент форумного вопроса сообщает потерю ёмкости, но не причины и модель старения.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q20D13"
+    },
+    "https://learn.microsoft.com/en-us/answers/questions/2328684/how-to-avoid-killing-battery-when-plugged-in": {
+      "grade": 1,
+      "reason": "Вопрос об эксплуатации батареи связан с износом, но в сохранённом фрагменте нет объяснения механизмов.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q20D14"
+    },
+    "https://learn.microsoft.com/en-us/answers/questions/2330010/is-it-normal-for-a-surface-book-2s-battery-capacit": {
+      "grade": 1,
+      "reason": "Вопрос о снижении ёмкости — тематический пример; доступный фрагмент не содержит модели деградации.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q20D15"
+    },
+    "https://learn.microsoft.com/en-us/answers/questions/4092477/when-your-laptop-is-at-100-battery-and-youre-charg": {
+      "grade": 1,
+      "reason": "Тема вопроса связана с зарядкой и деградацией; сохранённый фрагмент не даёт подтверждённого объяснения.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q20D16"
+    },
+    "https://learn.microsoft.com/en-us/answers/questions/5785937/surface-pro-9-has-a-very-faint-sweet-chemical-smel": {
+      "grade": 0,
+      "reason": "Вопрос о запахе устройства не объясняет деградацию литий-ионной батареи.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q20D17"
+    }
+  },
+  "Q21": {
+    "https://en.wikipedia.org/wiki/Alfonsine_Solar_Park": {
+      "grade": 0,
+      "reason": "Карточка отдельной электростанции содержит мощность, но не эффективность элементов.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q21D01"
+    },
+    "https://en.wikipedia.org/wiki/Index_of_solar_energy_articles": {
+      "grade": 0,
+      "reason": "Указатель статей не объясняет эффективность и её причины.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q21D02"
+    },
+    "https://en.wikipedia.org/wiki/Indium_gallium_arsenide_phosphide": {
+      "grade": 2,
+      "reason": "Пример материала и многопереходной ячейки с конкретной эффективностью.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q21D03"
+    },
+    "https://en.wikipedia.org/wiki/List_of_types_of_solar_cells": {
+      "grade": 1,
+      "reason": "Перечень типов ячеек полезен как фон, но не объясняет факторы КПД.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q21D04"
+    },
+    "https://en.wikipedia.org/wiki/Perovskite_solar_cell": {
+      "grade": 2,
+      "reason": "Объясняет связь поглощения и свойств перовскита с эффективностью солнечной ячейки.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q21D05"
+    },
+    "https://en.wikipedia.org/wiki/Photovoltaic_system": {
+      "grade": 2,
+      "reason": "Рассматривает влияние затенения и загрязнения на выход фотоэлектрической системы.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q21D06"
+    },
+    "https://en.wikipedia.org/wiki/Photovoltaics": {
+      "grade": 2,
+      "reason": "Обзор фотовольтаики содержит раздел об эффективности элементов и условиях измерения.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q21D07"
+    },
+    "https://en.wikipedia.org/wiki/Sharp_Solar": {
+      "grade": 0,
+      "reason": "История производителя и производственные мощности не отвечают на вопрос о КПД.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q21D08"
+    },
+    "https://en.wikipedia.org/wiki/Solar_cell": {
+      "grade": 2,
+      "reason": "Статья о солнечном элементе даёт технический контекст преобразования и эффективности.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q21D09"
+    },
+    "https://en.wikipedia.org/wiki/Solar_cell_efficiency": {
+      "grade": 3,
+      "reason": "Специальная статья об эффективности солнечных элементов, ограничениях и измерениях.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q21D10"
+    },
+    "https://en.wikipedia.org/wiki/Solar_panel": {
+      "grade": 2,
+      "reason": "Рассматривает эффективность модулей и ячеек в контексте солнечных панелей.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q21D11"
+    },
+    "https://learn.microsoft.com/en-us/shows/user-international-r-user-conferences-user-international-r-user-2017-conference/shadow-r-package-geometric-shade-calculations-in-urban-environment": {
+      "grade": 1,
+      "reason": "Расчёт затенения и инсоляции даёт контекст условий работы, но не КПД солнечной ячейки.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q21D12"
+    },
+    "https://learn.microsoft.com/en-us/sysinternals/downloads/coreinfo": {
+      "grade": 0,
+      "reason": "Processor efficiency и клетки сетки CPU — другие значения слов запроса.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q21D13"
+    },
+    "https://learn.microsoft.com/en-us/training/career-paths/developer": {
+      "grade": 0,
+      "reason": "Обучение разработчиков и эффективность сервисов не относятся к фотовольтаике.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q21D14"
+    },
+    "https://learn.microsoft.com/en-us/training/educator-center/instructor-materials/search-coach": {
+      "grade": 0,
+      "reason": "Пример урока о поиске солнечных новостей не объясняет солнечные элементы.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q21D15"
+    },
+    "https://learn.microsoft.com/en-us/training/paths/explore-business-value-generative-ai-solutions": {
+      "grade": 0,
+      "reason": "Бизнес-эффективность генеративного AI не относится к КПД солнечных ячеек.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q21D16"
+    }
+  },
+  "Q22": {
+    "https://en.wikipedia.org/wiki/Computational_fluid_dynamics": {
+      "grade": 2,
+      "reason": "Объясняет вычислительную гидродинамику и численные подходы в целом.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q22D01"
+    },
+    "https://en.wikipedia.org/wiki/Diffuse_element_method": {
+      "grade": 1,
+      "reason": "Другой метод аппроксимации уравнений даёт смежный контекст, но не FVM.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q22D02"
+    },
+    "https://en.wikipedia.org/wiki/Finite_volume_method": {
+      "grade": 3,
+      "reason": "Основная тема — метод конечных объёмов и дискретизация уравнений.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q22D03"
+    },
+    "https://en.wikipedia.org/wiki/Fluid_mechanics": {
+      "grade": 1,
+      "reason": "Общая механика жидкости лишь направляет к CFD.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q22D04"
+    },
+    "https://en.wikipedia.org/wiki/Flux-corrected_transport": {
+      "grade": 1,
+      "reason": "Смежная консервативная схема переноса, а не объяснение метода конечных объёмов.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q22D05"
+    },
+    "https://en.wikipedia.org/wiki/List_of_computational_fluid_dynamics_software": {
+      "grade": 1,
+      "reason": "Перечень программ включает finite-volume, но не объясняет сам метод.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q22D06"
+    },
+    "https://en.wikipedia.org/wiki/List_of_fluid_mechanics_journals": {
+      "grade": 0,
+      "reason": "Список журналов не раскрывает алгоритм или его применение.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q22D07"
+    },
+    "https://en.wikipedia.org/wiki/List_of_operator_splitting_topics": {
+      "grade": 1,
+      "reason": "Навигационный список численных методов не даёт самостоятельного объяснения FVM.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q22D08"
+    },
+    "https://en.wikipedia.org/wiki/List_of_partial_differential_equation_topics": {
+      "grade": 1,
+      "reason": "Общий список тем PDE — лишь математический фон.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q22D09"
+    },
+    "https://en.wikipedia.org/wiki/Volume_of_fluid_method": {
+      "grade": 1,
+      "reason": "Volume of fluid — метод моделирования свободной поверхности, не тот же алгоритм, что finite volume.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q22D10"
+    },
+    "https://learn.microsoft.com/en-us/dynamics365/finance": {
+      "grade": 0,
+      "reason": "Dynamics 365 Finance — бизнес-продукт, не вычислительная гидродинамика.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q22D11"
+    },
+    "https://learn.microsoft.com/en-us/dynamics365/release-plans": {
+      "grade": 0,
+      "reason": "Планы выпуска Dynamics 365 не относятся к CFD.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q22D12"
+    },
+    "https://learn.microsoft.com/en-us/dynamics365/supply-chain": {
+      "grade": 0,
+      "reason": "Supply Chain Management — другой смысл Dynamics.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q22D13"
+    },
+    "https://learn.microsoft.com/en-us/dynamics365/sustainability": {
+      "grade": 0,
+      "reason": "Sustainability documentation не объясняет метод конечных объёмов.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q22D14"
+    },
+    "https://learn.microsoft.com/en-us/troubleshoot": {
+      "grade": 0,
+      "reason": "Общий хаб устранения неполадок не отвечает на численный метод CFD.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q22D15"
+    }
+  },
+  "Q23": {
+    "https://en.wikipedia.org/wiki/Barsoum_elements": {
+      "grade": 2,
+      "reason": "Конкретная FEM-техника вычисления коэффициента интенсивности напряжений у трещины.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q23D01"
+    },
+    "https://en.wikipedia.org/wiki/Constant_strain_triangle_element": {
+      "grade": 2,
+      "reason": "Описывает конечный элемент и его применение к плоскому напряжённому состоянию.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q23D02"
+    },
+    "https://en.wikipedia.org/wiki/Finite_element_method": {
+      "grade": 3,
+      "reason": "Основная статья о FEM объясняет метод и инженерные приложения анализа деформаций.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q23D03"
+    },
+    "https://en.wikipedia.org/wiki/Finite_element_model_data_post-processing": {
+      "grade": 2,
+      "reason": "Описывает интерпретацию результатов FEM, включая напряжения и поверхности текучести.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q23D04"
+    },
+    "https://en.wikipedia.org/wiki/Finiteness": {
+      "grade": 0,
+      "reason": "Понятие конечности не относится к расчёту напряжений.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q23D05"
+    },
+    "https://en.wikipedia.org/wiki/List_of_finite_element_software_packages": {
+      "grade": 1,
+      "reason": "Список FEM-пакетов полезен для выбора инструмента, но не описывает расчёт.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q23D06"
+    },
+    "https://en.wikipedia.org/wiki/Mixed_finite_element_method": {
+      "grade": 1,
+      "reason": "Математический вариант FEM без прямого разбора расчёта напряжений в просмотренном фрагменте.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q23D07"
+    },
+    "https://en.wikipedia.org/wiki/Piping": {
+      "grade": 2,
+      "reason": "Приводит инженерный пример расчёта напряжений трубопроводов методом конечных элементов.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q23D08"
+    },
+    "https://en.wikipedia.org/wiki/Quadratic_quadrilateral_element": {
+      "grade": 2,
+      "reason": "Разбирает элемент Q8 для задач плоских напряжений и деформаций.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q23D09"
+    },
+    "https://en.wikipedia.org/wiki/Stress_concentration": {
+      "grade": 2,
+      "reason": "Объясняет концентрацию напряжений и применение FEM к этой задаче.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q23D10"
+    },
+    "https://en.wikipedia.org/wiki/Structural_mechanics": {
+      "grade": 1,
+      "reason": "Обзор строительной механики даёт фон и ссылки на FEM, но не подробный алгоритм расчёта.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q23D11"
+    },
+    "https://learn.microsoft.com/en-us/azure/ai-services/computer-vision": {
+      "grade": 0,
+      "reason": "Компьютерное зрение Azure не относится к FEM-анализу напряжений.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q23D12"
+    },
+    "https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/prebuilt/layout": {
+      "grade": 0,
+      "reason": "Анализ разметки документов — другой смысл analysis и element.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q23D13"
+    },
+    "https://learn.microsoft.com/en-us/dax": {
+      "grade": 0,
+      "reason": "DAX для аналитики данных не является методом конечных элементов.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q23D14"
+    },
+    "https://learn.microsoft.com/en-us/training/modules/get-data": {
+      "grade": 0,
+      "reason": "Импорт данных Power BI не связан с расчётом механических напряжений.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q23D15"
+    },
+    "https://learn.microsoft.com/en-us/training/paths/insight-visual-data": {
+      "grade": 0,
+      "reason": "Анализ изображений и multimodal content не отвечает на запрос о FEM.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q23D16"
+    }
+  },
+  "Q24": {
+    "https://en.wikipedia.org/wiki/Coherence_length": {
+      "grade": 2,
+      "reason": "Объясняет длину когерентности и её связь с OCT и интерферометрией.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q24D01"
+    },
+    "https://en.wikipedia.org/wiki/Coherence_theory_(optics)": {
+      "grade": 1,
+      "reason": "Теория когерентности — физический фон, но не описание OCT.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q24D02"
+    },
+    "https://en.wikipedia.org/wiki/David_Huang_(ophthalmologist)": {
+      "grade": 0,
+      "reason": "Биография изобретателя не объясняет метод томографии.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q24D03"
+    },
+    "https://en.wikipedia.org/wiki/Endoscopic_optical_coherence_tomography_imaging": {
+      "grade": 2,
+      "reason": "Разбирает конкретное применение OCT для визуализации внутри сосудов.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q24D04"
+    },
+    "https://en.wikipedia.org/wiki/Eric_Swanson_(engineer)": {
+      "grade": 0,
+      "reason": "Биография инженера не даёт самостоятельного объяснения OCT.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q24D05"
+    },
+    "https://en.wikipedia.org/wiki/Intravascular_imaging": {
+      "grade": 2,
+      "reason": "Описывает OCT как метод внутрисосудистой визуализации и его задачи.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q24D06"
+    },
+    "https://en.wikipedia.org/wiki/Multiscale_tomography": {
+      "grade": 1,
+      "reason": "Общая многомасштабная томография даёт смежный контекст, не конкретный OCT-принцип.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q24D07"
+    },
+    "https://en.wikipedia.org/wiki/Optical_coherence_tomography": {
+      "grade": 3,
+      "reason": "Специальная статья о принципе и применениях оптической когерентной томографии.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q24D08"
+    },
+    "https://en.wikipedia.org/wiki/Optics": {
+      "grade": 1,
+      "reason": "Оптика в целом — лишь фон для конкретного метода.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q24D09"
+    },
+    "https://en.wikipedia.org/wiki/Tomography": {
+      "grade": 1,
+      "reason": "Обзор томографии упоминает OCT, но не раскрывает его отдельно.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q24D10"
+    },
+    "https://en.wikipedia.org/wiki/Zhongping_Chen": {
+      "grade": 0,
+      "reason": "Биография исследователя и перечень интересов не объясняют метод.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q24D11"
+    },
+    "https://learn.microsoft.com/en-us/azure/ai-services/computer-vision": {
+      "grade": 0,
+      "reason": "Документация компьютерного зрения не объясняет оптическую когерентную томографию.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q24D12"
+    },
+    "https://learn.microsoft.com/en-us/industry/healthcare/dragon-medical-one": {
+      "grade": 0,
+      "reason": "Медицинское речевое ПО не относится к OCT.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q24D13"
+    },
+    "https://learn.microsoft.com/en-us/training/modules/introduction-information-extraction": {
+      "grade": 0,
+      "reason": "OCR распознаёт текст на изображениях, а не томографическую структуру тканей.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q24D14"
+    },
+    "https://learn.microsoft.com/en-us/windows-server/get-started/install-windows-server": {
+      "grade": 0,
+      "reason": "Оптический привод установочного диска — другой смысл optical.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q24D15"
+    },
+    "https://learn.microsoft.com/en-us/windows/powertoys/text-extractor": {
+      "grade": 0,
+      "reason": "Извлечение текста с экрана через OCR не относится к OCT.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q24D16"
+    }
+  },
+  "Q25": {
+    "https://en.wikipedia.org/wiki/Big_Bang_Observer": {
+      "grade": 2,
+      "reason": "Описывает проект гравитационно-волновой обсерватории — пример применения интерферометрии.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q25D01"
+    },
+    "https://en.wikipedia.org/wiki/CLIO": {
+      "grade": 2,
+      "reason": "Прямо описывает прототип лазерного интерферометрического детектора CLIO.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q25D02"
+    },
+    "https://en.wikipedia.org/wiki/Deci-hertz_Interferometer_Gravitational_wave_Observatory": {
+      "grade": 2,
+      "reason": "Конкретный проект интерферометрической обсерватории DECIGO.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q25D03"
+    },
+    "https://en.wikipedia.org/wiki/Gravitational-wave_observatory": {
+      "grade": 3,
+      "reason": "Объясняет измерение гравитационных волн лазерными интерферометрами и масштаб смещений.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q25D04"
+    },
+    "https://en.wikipedia.org/wiki/Kepco_Power": {
+      "grade": 0,
+      "reason": "Описание производителя блоков питания лишь упоминает помощь LIGO.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q25D05"
+    },
+    "https://en.wikipedia.org/wiki/LIGO": {
+      "grade": 3,
+      "reason": "Основная статья о LIGO — прямой пример регистрации волн лазерным интерферометром.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q25D06"
+    },
+    "https://en.wikipedia.org/wiki/Laser_Interferometer_Space_Antenna": {
+      "grade": 2,
+      "reason": "Описывает космический интерферометрический проект регистрации гравитационных волн.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q25D07"
+    },
+    "https://en.wikipedia.org/wiki/List_of_types_of_interferometers": {
+      "grade": 1,
+      "reason": "Перечень типов интерферометров даёт фон, а не механизм регистрации гравитационных волн.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q25D08"
+    },
+    "https://en.wikipedia.org/wiki/TAMA_300": {
+      "grade": 2,
+      "reason": "Описывает оптические плечи TAMA и цель обнаружения гравитационных волн.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q25D09"
+    },
+    "https://en.wikipedia.org/wiki/Virgo_interferometer": {
+      "grade": 3,
+      "reason": "Статья о Virgo непосредственно посвящена интерферометрическому детектору гравитационных волн.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q25D10"
+    },
+    "https://learn.microsoft.com/en-us/dynamics365/release-plans/archived-plans": {
+      "grade": 0,
+      "reason": "Release waves продукта Dynamics не являются физическими волнами.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q25D11"
+    },
+    "https://learn.microsoft.com/en-us/microsoft-365-apps/admin-center/cloud-update-enhancements": {
+      "grade": 0,
+      "reason": "Волны развёртывания обновлений Microsoft 365 не относятся к гравитационным волнам.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q25D12"
+    },
+    "https://learn.microsoft.com/en-us/microsoft-365/enterprise/portallaunchscheduler": {
+      "grade": 0,
+      "reason": "Пакетный запуск портала не связан с интерферометрическими измерениями.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q25D13"
+    },
+    "https://learn.microsoft.com/en-us/minecraft/creator/reference/content/entityreference/examples/entitycomponents/minecraftcomponent_buoyant": {
+      "grade": 0,
+      "reason": "Игровая плавучесть и гравитация Minecraft не объясняют детектирование волн.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q25D14"
+    },
+    "https://learn.microsoft.com/en-us/power-apps/user/modern-fluent-design": {
+      "grade": 0,
+      "reason": "Волны обновления интерфейса Power Apps не соответствуют физическому смыслу запроса.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q25D15"
+    }
+  },
+  "Q26": {
+    "https://en.wikipedia.org/wiki/CRISPR": {
+      "grade": 3,
+      "reason": "Объясняет Cas9, направляющую РНК, разрез ДНК и использование механизмов репарации.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q26D01"
+    },
+    "https://en.wikipedia.org/wiki/CRISPR_Therapeutics": {
+      "grade": 0,
+      "reason": "Сведения о компании и терапии не объясняют механизм редактирования генома.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q26D02"
+    },
+    "https://en.wikipedia.org/wiki/CRISPR_gene_editing": {
+      "grade": 3,
+      "reason": "Основная статья о CRISPR gene editing непосредственно отвечает намерению.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q26D03"
+    },
+    "https://en.wikipedia.org/wiki/Fanzor": {
+      "grade": 1,
+      "reason": "Смежная РНК-направляемая эндонуклеаза даёт контекст, но не описание Cas9.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q26D04"
+    },
+    "https://en.wikipedia.org/wiki/Genome-wide_CRISPR-Cas9_knockout_screens": {
+      "grade": 2,
+      "reason": "Объясняет применение CRISPR-Cas9 и библиотеки sgRNA в геномных knockout-скринингах.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q26D05"
+    },
+    "https://en.wikipedia.org/wiki/He_Jiankui_affair": {
+      "grade": 0,
+      "reason": "История этического скандала не объясняет механизм CRISPR-Cas9.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q26D06"
+    },
+    "https://en.wikipedia.org/wiki/Institute_of_Chemical_Biology_and_Fundamental_Medicine": {
+      "grade": 0,
+      "reason": "История исследовательского института не относится к механизму редактирования.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q26D07"
+    },
+    "https://en.wikipedia.org/wiki/Shredding_(disassembling_genomic_data)": {
+      "grade": 2,
+      "reason": "Содержит прямое описание пары gRNA/Cas9 и направленного изменения генетического материала.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q26D08"
+    },
+    "https://en.wikipedia.org/wiki/TIGR-Tas": {
+      "grade": 1,
+      "reason": "Другой класс РНК-направляемых систем даёт смежный контекст без объяснения Cas9.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q26D09"
+    },
+    "https://en.wikipedia.org/wiki/TcNPR3_(gene)": {
+      "grade": 1,
+      "reason": "Частный пример редактируемого гена не раскрывает общую механику CRISPR-Cas9.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q26D10"
+    },
+    "https://learn.microsoft.com/en-us/microsoft-copilot-studio/admin-share-bots": {
+      "grade": 0,
+      "reason": "Совместное редактирование тем бота не является редактированием генома.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q26D11"
+    },
+    "https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/copresence-power-apps-studio": {
+      "grade": 0,
+      "reason": "Редактирование Power Apps — другая задача.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q26D12"
+    },
+    "https://learn.microsoft.com/en-us/power-bi/developer/projects/projects-overview": {
+      "grade": 0,
+      "reason": "Редактирование файлов отчёта Power BI не связано с CRISPR.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q26D13"
+    },
+    "https://learn.microsoft.com/en-us/power-bi/fundamentals/service-get-started": {
+      "grade": 0,
+      "reason": "Режим редактирования отчётов не относится к редактированию генов.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q26D14"
+    },
+    "https://learn.microsoft.com/en-us/training/modules/draft-impactful-documents-using-ai": {
+      "grade": 0,
+      "reason": "Редактирование документов Word не соответствует генетическому смыслу editing.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q26D15"
+    }
+  },
+  "Q27": {
+    "https://en.wikipedia.org/wiki/AlphaFold": {
+      "grade": 3,
+      "reason": "AlphaFold напрямую предсказывает структуру белка по аминокислотной последовательности.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q27D01"
+    },
+    "https://en.wikipedia.org/wiki/Beta_solenoid": {
+      "grade": 1,
+      "reason": "Описывает тип белковой складки, а не методы предсказания структуры.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q27D02"
+    },
+    "https://en.wikipedia.org/wiki/CAFASP": {
+      "grade": 2,
+      "reason": "Объясняет оценку автоматического предсказания и классы методов: homology, fold recognition, ab initio.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q27D03"
+    },
+    "https://en.wikipedia.org/wiki/Contact_order": {
+      "grade": 1,
+      "reason": "Параметр контактного порядка связан с моделированием, но не даёт полного метода предсказания.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q27D04"
+    },
+    "https://en.wikipedia.org/wiki/Ferredoxin_fold": {
+      "grade": 1,
+      "reason": "Карточка конкретной белковой складки — структурный фон, не алгоритм предсказания.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q27D05"
+    },
+    "https://en.wikipedia.org/wiki/Folding@home": {
+      "grade": 2,
+      "reason": "Моделирование сворачивания связывается с улучшением методов структурного предсказания.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q27D06"
+    },
+    "https://en.wikipedia.org/wiki/List_of_protein_structure_prediction_software": {
+      "grade": 2,
+      "reason": "Систематизирует программные средства и классы методов предсказания структуры.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q27D07"
+    },
+    "https://en.wikipedia.org/wiki/Protein": {
+      "grade": 1,
+      "reason": "Общая статья о белках даёт биологический фон без целевого разбора предсказания.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q27D08"
+    },
+    "https://en.wikipedia.org/wiki/Protein_folding": {
+      "grade": 2,
+      "reason": "Разбирает физическое сворачивание и вычислительные задачи стабильности, кинетики и структуры.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q27D09"
+    },
+    "https://en.wikipedia.org/wiki/Protein_structure_prediction": {
+      "grade": 3,
+      "reason": "Специальная статья о предсказании белковой структуры по последовательности.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q27D10"
+    },
+    "https://en.wikipedia.org/wiki/TMPad": {
+      "grade": 1,
+      "reason": "База укладки мембранных спиралей — ресурс структурных данных, а не метод предсказания.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q27D11"
+    },
+    "https://learn.microsoft.com/en-us/azure/microsoft-discovery/concept-agent-catalog": {
+      "grade": 2,
+      "reason": "Каталог инструментов прямо включает AlphaFold, предсказанные структуры и оценки уверенности.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q27D12"
+    },
+    "https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-directquery-about": {
+      "grade": 0,
+      "reason": "Query folding Power BI — другой смысл folding, не белковые структуры.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q27D13"
+    },
+    "https://learn.microsoft.com/en-us/power-bi/connect-data/incremental-refresh-overview": {
+      "grade": 0,
+      "reason": "Сворачивание SQL-запроса не относится к protein folding.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q27D14"
+    },
+    "https://learn.microsoft.com/en-us/power-query": {
+      "grade": 0,
+      "reason": "Импорт и преобразование данных Power Query не объясняют предсказание белков.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q27D15"
+    },
+    "https://learn.microsoft.com/en-us/power-query/connectors/postgresql": {
+      "grade": 0,
+      "reason": "Native query folding PostgreSQL не относится к сворачиванию белка.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q27D16"
+    }
+  },
+  "Q28": {
+    "https://en.wikipedia.org/wiki/Donor_(semiconductors)": {
+      "grade": 2,
+      "reason": "Объясняет донорное легирование и получение n-типа — существенную часть задачи.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q28D01"
+    },
+    "https://en.wikipedia.org/wiki/Doping_(semiconductor)": {
+      "grade": 3,
+      "reason": "Специальная статья о легировании полупроводников и формировании нужных областей.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q28D02"
+    },
+    "https://en.wikipedia.org/wiki/Extrinsic_semiconductor": {
+      "grade": 3,
+      "reason": "Прямо связывает доноры/акцепторы, n/p-области и полупроводниковый переход.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q28D03"
+    },
+    "https://en.wikipedia.org/wiki/Gas_immersion_laser_doping": {
+      "grade": 2,
+      "reason": "Конкретный технологический метод легирования и получения p-типа.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q28D04"
+    },
+    "https://en.wikipedia.org/wiki/Homojunction": {
+      "grade": 3,
+      "reason": "Непосредственно объясняет границу n- и p-легированных областей и встроенный потенциал.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q28D05"
+    },
+    "https://en.wikipedia.org/wiki/Low-level_injection": {
+      "grade": 1,
+      "reason": "Режим инжекции в готовом переходе — смежный фон, не образование перехода.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q28D06"
+    },
+    "https://en.wikipedia.org/wiki/Metal–semiconductor_junction": {
+      "grade": 1,
+      "reason": "Контакт металл–полупроводник даёт сравнение, но отличается от p–n-перехода.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q28D07"
+    },
+    "https://en.wikipedia.org/wiki/P–n_junction": {
+      "grade": 3,
+      "reason": "Основная статья о p–n-переходе отвечает намерению.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q28D08"
+    },
+    "https://en.wikipedia.org/wiki/Semiconductor": {
+      "grade": 3,
+      "reason": "Объясняет донорное и акцепторное легирование и образование переходов в кристалле.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q28D09"
+    },
+    "https://en.wikipedia.org/wiki/Semiconductor_industry": {
+      "grade": 0,
+      "reason": "Экономика полупроводниковой отрасли не объясняет легирование и переход.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q28D10"
+    },
+    "https://en.wikipedia.org/wiki/Zener_effect": {
+      "grade": 1,
+      "reason": "Обратный пробой p–n-перехода — частный эффект, а не его образование.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q28D11"
+    },
+    "https://learn.microsoft.com/en-us/dotnet/api/microsoft.azure.powershell.cmdlets.hpccache.models.pshpcstoragetarget.junctions": {
+      "grade": 0,
+      "reason": "Свойство namespace junction не относится к полупроводниковому переходу.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q28D12"
+    },
+    "https://learn.microsoft.com/en-us/shows/azure-videos/azure-accelerates-cloud-transformation-for-the-semiconductor-industry": {
+      "grade": 0,
+      "reason": "Видео о применении облака в отрасли не объясняет легирование и образование перехода.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q28D13"
+    },
+    "https://learn.microsoft.com/en-us/sysinternals/downloads/junction": {
+      "grade": 0,
+      "reason": "Утилита файловых junction points не относится к p–n-переходу.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q28D14"
+    },
+    "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/mklink": {
+      "grade": 0,
+      "reason": "Команда создания ссылок не объясняет физику полупроводника.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q28D15"
+    },
+    "https://learn.microsoft.com/en-us/windows/win32/fileio/hard-links-and-junctions": {
+      "grade": 0,
+      "reason": "Файловые ссылки и junctions — другая область значения терма.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q28D16"
+    }
+  },
+  "Q29": {
+    "https://en.wikipedia.org/wiki/Capstone_(cryptography)": {
+      "grade": 0,
+      "reason": "История проекта стандартизации не раскрывает принцип RSA.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q29D01"
+    },
+    "https://en.wikipedia.org/wiki/Elliptic-curve_cryptography": {
+      "grade": 1,
+      "reason": "Альтернативная криптосистема сравнивает размеры ключей с RSA, но не объясняет RSA.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q29D02"
+    },
+    "https://en.wikipedia.org/wiki/Key_(cryptography)": {
+      "grade": 1,
+      "reason": "Общее определение ключей — фон, без математического устройства RSA.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q29D03"
+    },
+    "https://en.wikipedia.org/wiki/List_of_cryptosystems": {
+      "grade": 0,
+      "reason": "Перечень криптосистем не содержит самостоятельного объяснения RSA.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q29D04"
+    },
+    "https://en.wikipedia.org/wiki/Public": {
+      "grade": 0,
+      "reason": "Социологическое понятие public не относится к криптографии.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q29D05"
+    },
+    "https://en.wikipedia.org/wiki/Public-key_cryptography": {
+      "grade": 2,
+      "reason": "Объясняет принцип пары открытого/закрытого ключа и связь с RSA.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q29D06"
+    },
+    "https://en.wikipedia.org/wiki/RSA_cryptosystem": {
+      "grade": 3,
+      "reason": "Основная статья о RSA раскрывает ключи, операции и назначение криптосистемы.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q29D07"
+    },
+    "https://en.wikipedia.org/wiki/RSA_problem": {
+      "grade": 2,
+      "reason": "Математическая RSA-проблема объясняет предположение сложности, важное для безопасности.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q29D08"
+    },
+    "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-rmpr/063240db-ee5e-4ea9-9c32-0c36850d55b1": {
+      "grade": 2,
+      "reason": "Описывает открытый RSA-ключ через публичную экспоненту и модуль.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q29D09"
+    },
+    "https://learn.microsoft.com/en-us/windows/win32/seccrypto/prov-rsa-aes": {
+      "grade": 1,
+      "reason": "Перечень алгоритмов криптопровайдера не объясняет принцип RSA.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q29D10"
+    },
+    "https://learn.microsoft.com/en-us/windows/win32/seccrypto/prov-rsa-full": {
+      "grade": 1,
+      "reason": "Справочник криптопровайдера с упоминанием RSA, без устройства алгоритма.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q29D11"
+    },
+    "https://learn.microsoft.com/en-us/azure/security/fundamentals/azure-certificate-authority-details": {
+      "grade": 1,
+      "reason": "Перечень размеров RSA-ключей и алгоритмов сертификатов даёт практический фон, не принцип RSA.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q29D12"
+    },
+    "https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-self-signed-certificate": {
+      "grade": 2,
+      "reason": "Объясняет разные роли открытого и закрытого ключей в конкретной схеме аутентификации.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q29D13"
+    },
+    "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/windows-secure-boot-key-creation-and-management-guidance": {
+      "grade": 2,
+      "reason": "Разбирает связанную пару ключей и применение RSA для подписи Secure Boot.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q29D14"
+    },
+    "https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement": {
+      "grade": 1,
+      "reason": "Настройка SSH-ключей объясняет общий принцип пары, но не устройство RSA.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q29D15"
+    },
+    "https://learn.microsoft.com/en-us/windows/security/hardware-security/tpm/trusted-platform-module-overview": {
+      "grade": 1,
+      "reason": "Использование RSA-ключа в TPM даёт прикладной фон, не алгоритм RSA.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q29D16"
+    }
+  },
+  "Q30": {
+    "https://en.wikipedia.org/wiki/BLAKE_(hash_function)": {
+      "grade": 0,
+      "reason": "Функция криптографического сжатия BLAKE не является Variable Byte-кодированием.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q30D01"
+    },
+    "https://en.wikipedia.org/wiki/Bit_array": {
+      "grade": 1,
+      "reason": "Сжатие битовых массивов даёт смежный контекст, но не VB для postings.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q30D02"
+    },
+    "https://en.wikipedia.org/wiki/Digital_data": {
+      "grade": 0,
+      "reason": "Обзор цифровых данных не объясняет искомое целочисленное кодирование.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q30D03"
+    },
+    "https://en.wikipedia.org/wiki/Discrete_cosine_transform": {
+      "grade": 0,
+      "reason": "Косинусное преобразование относится к другому классу сжатия, не к VB.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q30D04"
+    },
+    "https://en.wikipedia.org/wiki/Hash_function": {
+      "grade": 0,
+      "reason": "Хеширование не является Variable Byte-кодированием.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q30D05"
+    },
+    "https://en.wikipedia.org/wiki/Variable": {
+      "grade": 0,
+      "reason": "Страница неоднозначности variable не относится к алгоритму.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q30D06"
+    },
+    "https://en.wikipedia.org/wiki/Variable_(mathematics)": {
+      "grade": 0,
+      "reason": "Математическая переменная не относится к VB-сжатию.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q30D07"
+    },
+    "https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-oxwsitemid/5889be27-a84b-426b-9166-5f7a0ed5747d": {
+      "grade": 0,
+      "reason": "Поля протокольного идентификатора не объясняют Variable Byte или инвертированный индекс.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q30D08"
+    },
+    "https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-oxwsitemid/aacce5f0-459b-480b-a764-e6dee908a6cb": {
+      "grade": 0,
+      "reason": "Флаг RLE-сжатия идентификатора описывает другой алгоритм и другую задачу.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q30D09"
+    },
+    "https://learn.microsoft.com/en-us/openspecs/office_file_formats/ms-ovba/c01d4c55-f44e-4ee1-b5cd-e179e4957d01": {
+      "grade": 0,
+      "reason": "Переменные состояния буфера сжатия не объясняют VB-кодирование чисел.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q30D10"
+    },
+    "https://learn.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-cifo/2913e54b-fbb9-419b-8985-2ed05434bb9c": {
+      "grade": 1,
+      "reason": "Описывает сжатые docID для ключа контентного индекса, но не алгоритм Variable Byte.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q30D11"
+    },
+    "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-srpl/eed2ea22-9b20-47df-a9c7-6d124e3cb1b8": {
+      "grade": 0,
+      "reason": "Сжатие потока протокола репликации не относится к VB для postings.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q30D12"
+    },
+    "https://learn.microsoft.com/en-us/azure/devops/pipelines/process/variables": {
+      "grade": 0,
+      "reason": "Переменные Azure Pipelines не относятся к целочисленному сжатию.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q30D13"
+    },
+    "https://learn.microsoft.com/en-us/sql/relational-databases/data-compression/data-compression": {
+      "grade": 1,
+      "reason": "Сжатие таблиц и индексов SQL Server связано с общей задачей хранения, но не с VB postings.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q30D14"
+    },
+    "https://learn.microsoft.com/en-us/sql/relational-databases/sql-server-index-design-guide": {
+      "grade": 1,
+      "reason": "Архитектура SQL-индексов даёт фон, но не инвертированный индекс с Variable Byte.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q30D15"
+    },
+    "https://learn.microsoft.com/en-us/sql/t-sql/statements/alter-index-transact-sql": {
+      "grade": 0,
+      "reason": "Синтаксис выбора row/page compression не объясняет VB-кодирование.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q30D16"
+    },
+    "https://learn.microsoft.com/en-us/sql/t-sql/statements/create-index-transact-sql": {
+      "grade": 0,
+      "reason": "Команда CREATE INDEX с параметрами row/page compression не относится к VB.",
+      "assessor": "language_model",
+      "basis": "saved_text_passages",
+      "evidence_id": "Q30D17"
+    }
+  }
+}

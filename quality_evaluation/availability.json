@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-26",
+  "observations": {
+    "google": {
+      "included_in_comparison": false,
+      "http_status": 200,
+      "observation": "Сначала страница согласия; после штатного отказа от дополнительных cookies получена страница перенаправления без органических HTML-результатов."
+    },
+    "yandex": {
+      "included_in_comparison": false,
+      "http_status": 200,
+      "observation": "Перенаправление на /showcaptcha, заголовок Are you not a robot?. CAPTCHA не решалась."
+    },
+    "duckduckgo": {
+      "included_in_comparison": false,
+      "http_status": 202,
+      "observation": "HTML endpoint потребовал проверку с выбором изображений; органических результатов нет. Проверка не обходилась."
+    },
+    "bing": {
+      "included_in_comparison": "limited_supplement",
+      "observation": "Из сохранённой первой страницы после фильтра доменов получены 42 позиции в топ-5 на 29 доступных запросах; Q17 недоступен. Это не полная выдача Bing."
+    },
+    "wikipedia": {
+      "included_in_comparison": true,
+      "observation": "MediaWiki search API: 30 запросов, для каждого сохранены первые 10 результатов."
+    },
+    "microsoft_learn": {
+      "included_in_comparison": true,
+      "observation": "Microsoft Learn search API: 30 запросов, для каждого сохранены первые 10 результатов."
+    }
+  }
+}
