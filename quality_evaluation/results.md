@@ -38,6 +38,16 @@ Bing приведён отдельно: после фильтрации доме
 | 4 | [Handling Concurrency Conflicts - EF Core](<https://learn.microsoft.com/en-us/ef/core/saving/concurrency>) | 2 | Разбирает конфликты параллельного доступа и влияние уровня изоляции на блокировки. |
 | 5 | [Deadlocks Guide - SQL Server](<https://learn.microsoft.com/en-us/sql/relational-databases/sql-server-deadlocks-guide>) | 2 | Объясняет взаимоблокировки и откат транзакций как важный аспект конкурентного доступа. |
 
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [Boosting End-to-End Database Isolation Checking via Mini-Transactions (Extended Version)](<https://arxiv.org/abs/2504.02344v1>) | 2 | Исследует проверку сильных уровней изоляции и нарушения гарантий; это отдельный механизм, а не общий разбор всех уровней и аномалий. |
+| 2 | [Lockless Transaction Isolation in Hyperledger Fabric](<https://arxiv.org/abs/1911.12711v1>) | 2 | Предлагает версионную snapshot isolation для транзакций Hyperledger Fabric; полезный частный сценарий. |
+| 3 | [Online Timestamp-based Transactional Isolation Checking of Database Systems (Extended Version)](<https://arxiv.org/abs/2504.01477v1>) | 2 | Рассматривает онлайн-проверку serializability и snapshot isolation по истории транзакций. |
+| 4 | [VerIso: Verifiable Isolation Guarantees for Database Transactions](<https://arxiv.org/abs/2503.06284v1>) | 2 | Формально проверяет гарантии изоляции и показывает контрпримеры протокола; даёт содержательную часть ответа. |
+| 5 | [AWDIT: An Optimal Weak Database Isolation Tester](<https://arxiv.org/abs/2504.06975v1>) | 2 | Исследует тестирование слабых уровней изоляции, без обзорного объяснения всего набора уровней. |
+
 ### Bing: ограниченная первая страница (дополнение)
 
 | Позиция | Документ | Оценка | Обоснование |
@@ -80,6 +90,16 @@ Bing приведён отдельно: после фильтрации доме
 | 4 | [Service overview and network port requirements - Windows Server](<https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements>) | 0 | Сетевые порты и репликация файлов DFSR — другая задача. |
 | 5 | [Editions and Supported Features of SQL Server 2019 - SQL Server](<https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2019>) | 1 | Матрица редакций показывает доступность функций, а не способы репликации. |
 
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [Coded Data Rebalancing for Decentralized Distributed Databases](<https://arxiv.org/abs/2010.11935v2>) | 2 | Разбирает сохранение репликационного фактора и затраты обмена при перебалансировке распределённого хранения. |
+| 2 | [Providing an Object Allocation Algorithm in Distributed Databases Using Efficient Factors](<https://arxiv.org/abs/1210.1745v1>) | 2 | Предлагает алгоритм репликации объектов и сравнивает стоимость обслуживания чтений и записей. |
+| 3 | [Distributed Metadata with the AMGA Metadata Catalog](<https://arxiv.org/abs/cs/0604071v1>) | 2 | Описывает механизмы распределения и репликации метаданных на конкретном каталоге AMGA. |
+| 4 | [Fault-Tolerant Partial Replication in Large-Scale Database Systems](<https://arxiv.org/abs/0802.0137v3>) | 2 | Объясняет частичную репликацию, фиксацию транзакций и компромисс с масштабируемостью и отказоустойчивостью. |
+| 5 | [Sharding Distributed Databases: A Critical Review](<https://arxiv.org/abs/2404.04384v2>) | 3 | Обзор распределённых репликационных систем связывает шардирование, консенсус и ограничения масштабирования. |
+
 ### Bing: ограниченная первая страница (дополнение)
 
 | Позиция | Документ | Оценка | Обоснование |
@@ -121,6 +141,16 @@ Bing приведён отдельно: после фильтрации доме
 | 4 | [Retrieval augmented generation (RAG) and indexes in Microsoft Foundry - Microsoft Foundry](<https://learn.microsoft.com/en-us/azure/foundry/concepts/retrieval-augmented-generation>) | 1 | Объясняет роль индекса в RAG в целом, без устройства inverted index. |
 | 5 | [Design and Develop a RAG Solution on Azure - Azure Architecture Center](<https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide>) | 1 | RAG-архитектура упоминает создание поискового индекса, не его инвертированную структуру. |
 
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [COIL: Revisit Exact Lexical Match in Information Retrieval with Contextualized Inverted List](<https://arxiv.org/abs/2104.07186v1>) | 2 | COIL хранит контекстные представления термов в обратных списках и объясняет их использование для лексического поиска. |
+| 2 | [Hybrid Inverted Index Is a Robust Accelerator for Dense Retrieval](<https://arxiv.org/abs/2210.05521v3>) | 2 | Описывает гибридные обратные списки термов и кластеров для ускорения retrieval, но не базовый учебный индекс. |
+| 3 | [Inverted Semantic-Index for Image Retrieval](<https://arxiv.org/abs/2206.12623v1>) | 1 | Индекс предназначен для изображений и разбиения кодовой книги, а не соответствия текстовых термов документам. |
+| 4 | [SEINE: SEgment-based Indexing for NEural information retrieval](<https://arxiv.org/abs/2311.15923v1>) | 1 | Предлагает сегментный нейронный индекс; классический термовый индекс служит главным образом сравнением. |
+| 5 | [Efficient Inverted Indexes for Approximate Retrieval over Learned Sparse Representations](<https://arxiv.org/abs/2404.18812v1>) | 2 | Описывает организацию обратных списков sparse-термов по блокам и обработку запроса. |
+
 ### Bing: ограниченная первая страница (дополнение)
 
 | Позиция | Документ | Оценка | Обоснование |
@@ -161,6 +191,16 @@ Bing приведён отдельно: после фильтрации доме
 | 3 | [Dynamics 365 Supply Chain Management documentation](<https://learn.microsoft.com/en-us/dynamics365/supply-chain/>) | 0 | Управление цепочками поставок не связано с памятью C++. |
 | 4 | [Release Notes for SQL Server Management Studio (SSMS) 20](<https://learn.microsoft.com/en-us/ssms/release-notes-20>) | 0 | Release notes SSMS относятся к другому продукту и другой задаче. |
 | 5 | [Release Notes for SQL Server Management Studio (SSMS) 19 and Earlier Versions](<https://learn.microsoft.com/en-us/ssms/release-notes-19>) | 0 | Список исправлений SSMS не объясняет выделение памяти, RAII или время жизни объектов C++. |
+
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [Parallel Memory Management in Goose, C++, and Rust: An Experimental Study of Allocation, Reclamation, and Scaling](<https://arxiv.org/abs/2611.32653v1>) | 2 | Сравнивает выделение и освобождение памяти в C++, Rust и Goose, включая узлы и арены; полезный практический аспект. |
+| 2 | [Mesh: Compacting Memory Management for C/C++ Applications](<https://arxiv.org/abs/1902.04738v2>) | 2 | Объясняет malloc-совместимый аллокатор C/C++ и борьбу с фрагментацией памяти. |
+| 3 | [Virtual-Memory Assisted Buffer Management In Tiered Memory](<https://arxiv.org/abs/2603.03271v1>) | 1 | Рассматривает виртуальную память и буферизацию баз данных, без объяснения времени жизни и RAII в C++. |
+| 4 | [Rely-guarantee Reasoning about Concurrent Memory Management: Correctness, Safety and Security](<https://arxiv.org/abs/2309.09997v1>) | 0 | Посвящена формальной проверке менеджера памяти Zephyr на C, а не управлению объектами C++. |
+| 5 | [Breaking Down Memory Walls: Adaptive Memory Management in LSM-based Storage Systems (Extended Version)](<https://arxiv.org/abs/2004.10360v2>) | 0 | Разбирает распределение памяти LSM-хранилища; время жизни, выделение и освобождение объектов C++ не раскрыты. |
 
 ### Bing: ограниченная первая страница (дополнение)
 
@@ -205,6 +245,16 @@ Bing приведён отдельно: после фильтрации доме
 | 4 | [Introduction to .NET - .NET](<https://learn.microsoft.com/en-us/dotnet/core/introduction>) | 2 | Обзор .NET прямо объясняет поддержку async/await языком C#. |
 | 5 | [Azure developer documentation](<https://learn.microsoft.com/en-us/azure/developer/>) | 0 | Главная страница Azure developers не отвечает на вопрос об async/await в C#. |
 
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [WaveCert: Translation Validation for Asynchronous Dataflow Programs via Dynamic Fractional Permissions](<https://arxiv.org/abs/2312.09326v2>) | 0 | Асинхронные dataflow-графы получены из C для CGRA; механизм async/await C# не рассматривается. |
+| 2 | [Automated Synthesis of Asynchronizations](<https://arxiv.org/abs/2209.06648v1>) | 2 | Исследует преобразование C#-программ к async/await и предотвращение гонок при асинхронизации. |
+| 3 | [A Survey of Asynchronous Programming Using Coroutines in the Internet of Things and Embedded Systems](<https://arxiv.org/abs/1906.00367v1>) | 0 | Обзор корутин в C/C++ и встроенных системах не объясняет асинхронное программирование C#. |
+| 4 | [Thoughts on Learning Human and Programming Languages](<https://arxiv.org/abs/2407.15907v1>) | 0 | Диалог об изучении языков; слово asynchronous относится к обсуждению, а не к async/await. |
+| 5 | [Honey: A dataflow programming language for the processing, featurization and analysis of multivariate, asynchronous and non-uniformly sampled scalar symbolic time sequences](<https://arxiv.org/abs/1609.03146v1>) | 0 | Описывает отдельный язык Honey для асинхронных временных рядов без связи с C#. |
+
 ### Bing: ограниченная первая страница (дополнение)
 
 | Позиция | Документ | Оценка | Обоснование |
@@ -248,6 +298,16 @@ Bing приведён отдельно: после фильтрации доме
 | 3 | [Introduction to .NET - .NET](<https://learn.microsoft.com/en-us/dotnet/core/introduction>) | 1 | Введение в .NET отмечает tracing GC и IDisposable, но не объясняет поколения. |
 | 4 | [Fundamentals of garbage collection - .NET](<https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/fundamentals>) | 3 | Специальный материал о фундаментальных механизмах GC в CLR и освобождении памяти. |
 | 5 | [.NET documentation - .NET](<https://learn.microsoft.com/en-us/dotnet/fundamentals/>) | 1 | Документационный хаб .NET не является руководством по GC. |
+
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [Conditional Nested Pattern Matching in Interaction Net](<https://arxiv.org/abs/2410.00540v1>) | 0 | Работа о сопоставлении образцов в interaction nets; механизм сборщика мусора .NET не раскрывается. |
+| 2 | [MyCaffe: A Complete C# Re-Write of Caffe with Reinforcement Learning](<https://arxiv.org/abs/1810.02272v1>) | 1 | C# и сборка мусора .NET упомянуты как преимущества платформы, но исследуется перенос Caffe. |
+| 3 | [Uncovering the Hidden Dangers: Finding Unsafe Go Code in the Wild](<https://arxiv.org/abs/2010.11242v1>) | 0 | Изучает небезопасный код Go, а не поколения и устройство сборщика .NET. |
+| 4 | [JETO-Bench: A Reproducible Benchmark for Execution Time Improvement Patches in Java](<https://arxiv.org/abs/2606.31767v2>) | 0 | Посвящена бенчмарку оптимизаций Java; .NET указан лишь среди других платформ. |
+| 5 | [Abstract machines for game semantics, revisited](<https://arxiv.org/abs/1304.4159v1>) | 0 | Описывает абстрактные машины игровой семантики без устройства сборщика .NET. |
 
 ### Bing: ограниченная первая страница (дополнение)
 
@@ -294,6 +354,16 @@ Bing приведён отдельно: после фильтрации доме
 | 4 | [Azure App Service documentation - Azure App Service](<https://learn.microsoft.com/en-us/azure/app-service/>) | 0 | Обзор хостинга App Service не объясняет цикл событий Node.js. |
 | 5 | [Quickstart: Create a Code App Using the Power Apps CLI - Power Apps](<https://learn.microsoft.com/en-us/power-apps/developer/code-apps/how-to/create-an-app-from-scratch>) | 0 | Создание приложения Power Apps CLI требует Node.js, но не объясняет его асинхронную модель. |
 
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [Predictive Autoscaling for Node.js on Kubernetes: Lower Latency, Right-Sized Capacity](<https://arxiv.org/abs/2604.19705v2>) | 2 | Использует насыщение event loop Node.js для предиктивного масштабирования; полезный практический аспект, но не общий разбор цикла. |
+| 2 | [Node Compass: Multilevel Tracing and Debugging of Request Executions in JavaScript-Based Web-Servers](<https://arxiv.org/abs/2401.08595v1>) | 2 | Разбирает трассировку асинхронного исполнения Node.js и ограничения event-loop-систем. |
+| 3 | [RepNet: Cutting Tail Latency in Data Center Networks with Flow Replication](<https://arxiv.org/abs/1407.1239v2>) | 1 | Node.js и неблокирующий event loop используются для RepNet, но цель работы — репликация сетевых потоков. |
+
+В сохранённой выборке только 3 результатов.
+
 ### Bing: ограниченная первая страница (дополнение)
 
 | Позиция | Документ | Оценка | Обоснование |
@@ -336,6 +406,16 @@ Bing приведён отдельно: после фильтрации доме
 | 4 | [Azure Arc](<https://learn.microsoft.com/en-us/azure/azure-arc/>) | 1 | Azure Arc связан с управлением инфраструктурой, но в хабе нет объяснения оркестрации. |
 | 5 | [Microsoft Azure container services documentation](<https://learn.microsoft.com/en-us/azure/containers/>) | 1 | Навигационная страница сервисов содержит ссылки, но мало самостоятельного объяснения. |
 
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [Container Orchestration on HPC Systems](<https://arxiv.org/abs/2012.08866v2>) | 2 | Описывает контейнерную оркестрацию и интеграцию Kubernetes с планировщиком HPC. |
+| 2 | [Context Kubernetes: Declarative Orchestration of Enterprise Knowledge for Agentic AI Systems](<https://arxiv.org/abs/2604.11623v3>) | 1 | Kubernetes служит аналогией для оркестрации знаний AI-агентов, а не основным предметом управления контейнерами. |
+| 3 | [Extensions for Shared Resource Orchestration in Kubernetes to Support RT-Cloud Containers](<https://arxiv.org/abs/2301.07479v1>) | 2 | Рассматривает расширение Kubernetes для размещения контейнеров реального времени и управления ресурсами. |
+| 4 | [Enabling 5G QoS configuration capabilities for IoT applications on container orchestration platform](<https://arxiv.org/abs/2403.05686v1>) | 2 | Показывает интеграцию сетевого QoS с Kubernetes и развёртыванием контейнерных приложений. |
+| 5 | [Virtualized C-RAN Orchestration with Docker, Kubernetes and OpenAirInterface](<https://arxiv.org/abs/2001.08992v1>) | 2 | Демонстрирует развёртывание и динамическое масштабирование Docker-контейнеров C-RAN с Kubernetes. |
+
 ### Bing: ограниченная первая страница (дополнение)
 
 | Позиция | Документ | Оценка | Обоснование |
@@ -376,6 +456,16 @@ Bing приведён отдельно: после фильтрации доме
 | 3 | [Extensible Authentication Protocol (EAP) for network access in Windows](<https://learn.microsoft.com/en-us/windows-server/networking/technologies/extensible-authentication-protocol/network-access>) | 2 | Описывает серверную валидацию и EAP-TLS в конкретном сценарии сетевой аутентификации. |
 | 4 | [Untrusted Certificate Authority Error When You Connect to SQL Server - SQL Server](<https://learn.microsoft.com/en-us/troubleshoot/sql/database-engine/connect/error-message-when-you-connect>) | 2 | Объясняет ошибку недоверенного центра и невозможность проверки сертификата клиентом. |
 | 5 | [Certificate Requirements for SQL Server - SQL Server](<https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/certificate-requirements>) | 2 | Рассматривает требования, права доступа и срок действия TLS-сертификата SQL Server. |
+
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [TLS Certificate and Domain Feature Analysis of Phishing Domains in the Danish .dk Namespace](<https://arxiv.org/abs/2603.21652v2>) | 1 | Сравнивает признаки TLS-сертификатов фишинговых доменов; порядок проверки цепочки и имени узла не объясняет. |
+| 2 | [Assessing SSL/TLS Certificate Centralization: Implications for Digital Sovereignty](<https://arxiv.org/abs/2504.16897v2>) | 1 | Обсуждает централизацию удостоверяющих центров, а не алгоритм проверки сертификата клиентом. |
+| 3 | [Will You Trust This TLS Certificate? Perceptions of People Working in IT (Extended Version)](<https://arxiv.org/abs/2207.11610v1>) | 2 | Рассматривает конкретные ошибки валидации, самоподписанные и ограниченные по именам сертификаты; полезная часть темы доверия. |
+| 4 | [Overcoming DNSSEC Islands of Security: A TLS and IP-Based Certificate Solution](<https://arxiv.org/abs/2509.08364v2>) | 1 | Основная задача — разрывы цепочки DNSSEC; TLS используется для альтернативного решения. |
+| 5 | [Detecting Malignant TLS Servers Using Machine Learning Techniques](<https://arxiv.org/abs/1705.09044v1>) | 2 | Объясняет дополнительную проверку сомнительных TLS-сертификатов после неуспеха традиционной валидации. |
 
 ### Bing: ограниченная первая страница (дополнение)
 
@@ -419,6 +509,13 @@ Bing приведён отдельно: после фильтрации доме
 | 3 | [Key-Based Authentication in OpenSSH for Windows](<https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement>) | 1 | Настройка ключей OpenSSH — необходимый фон, но не настройка PowerShell remoting. |
 | 4 | [Running Remote Commands - PowerShell](<https://learn.microsoft.com/en-us/powershell/scripting/security/remoting/running-remote-commands>) | 1 | Обзор удалённых команд в основном объясняет WS-Management, а не SSH-транспорт. |
 | 5 | [Connect to Remote Desktop Services in Windows Server](<https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/connect-remote-desktop-services>) | 0 | Remote Desktop — другой способ доступа, не PowerShell over SSH. |
+
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+
+В сохранённой выборке только 0 результатов.
 
 ### Bing: ограниченная первая страница (дополнение)
 
@@ -464,6 +561,13 @@ Bing приведён отдельно: после фильтрации доме
 | 4 | [AZ-700 Design and Implement Microsoft Azure Network Solutions - Training](<https://learn.microsoft.com/en-us/training/paths/design-implement-microsoft-azure-networking-solutions-az-700/>) | 1 | Обзор учебной траектории содержит peering среди тем, но не самостоятельное объяснение. |
 | 5 | [Microsoft Azure Virtual Network support - Power Platform](<https://learn.microsoft.com/en-us/power-platform/admin/vnet-support-overview>) | 2 | Конкретный сценарий peering между регионами для Power Platform. |
 
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+
+В сохранённой выборке только 0 результатов.
+
 ### Bing: ограниченная первая страница (дополнение)
 
 | Позиция | Документ | Оценка | Обоснование |
@@ -508,6 +612,14 @@ Bing приведён отдельно: после фильтрации доме
 | 4 | [Overview of permissions and consent in the Microsoft identity platform - Microsoft identity platform](<https://learn.microsoft.com/en-us/entra/identity-platform/permissions-consent-overview>) | 3 | Сравнивает delegated/application permissions, контекст доступа и согласие администратора. |
 | 5 | [Install the Microsoft Graph PowerShell SDK](<https://learn.microsoft.com/en-us/powershell/microsoftgraph/installation>) | 1 | Установка SDK даёт инструментальный фон без разбора OAuth-разрешений. |
 
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [Detecting Malicious Entra OAuth Apps with LLM-Based Permission Risk Scoring](<https://arxiv.org/abs/2512.15781v1>) | 2 | Исследует полный набор разрешений Microsoft Graph и риск OAuth-consent, но не даёт общего руководства delegated/application permissions. |
+
+В сохранённой выборке только 1 результатов.
+
 ### Bing: ограниченная первая страница (дополнение)
 
 | Позиция | Документ | Оценка | Обоснование |
@@ -548,6 +660,16 @@ Bing приведён отдельно: после фильтрации доме
 | 3 | [azureml.training.tabular.featurization.text.bilstm_attention_transformer module - Azure Machine Learning Python](<https://learn.microsoft.com/en-us/python/api/azureml-training-tabular/azureml.training.tabular.featurization.text.bilstm_attention_transformer>) | 1 | Смежный BiLSTM-attention featurizer даёт контекст NLP, но это не Transformer и не объяснение его внимания. |
 | 4 | [azureml.automl.runtime.featurizer.transformer.text.bilstm_attention_transformer module - Azure Machine Learning Python](<https://learn.microsoft.com/en-us/python/api/azureml-automl-runtime/azureml.automl.runtime.featurizer.transformer.text.bilstm_attention_transformer>) | 0 | Почти пустая справочная страница модуля не объясняет механизм attention в Transformer. |
 | 5 | [Customize OpenAPI documents](<https://learn.microsoft.com/en-us/aspnet/core/fundamentals/openapi/customize-openapi>) | 0 | Transformer OpenAPI-документа — другой смысл термина, не нейросетевая архитектура. |
+
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [Transformer-based Personalized Attention Mechanism for Medical Images with Clinical Records](<https://arxiv.org/abs/2206.03003v2>) | 2 | Описывает attention в Transformer для сопоставления медицинских изображений и клинических записей; частное применение механизма. |
+| 2 | [Music Transformer](<https://arxiv.org/abs/1809.04281v3>) | 2 | Разбирает self-attention и относительные позиции в музыкальном Transformer. |
+| 3 | [Dilated Neighborhood Attention Transformer](<https://arxiv.org/abs/2209.15001v3>) | 2 | Объясняет локальное и разреженное attention, их сложность и ограничения дальних зависимостей. |
+| 4 | [Attention Guided CAM: Visual Explanations of Vision Transformer Guided by Self-Attention](<https://arxiv.org/abs/2402.04563v1>) | 2 | Показывает использование self-attention для объяснения решений Vision Transformer. |
+| 5 | [Efficient Mixed Transformer for Single Image Super-Resolution](<https://arxiv.org/abs/2305.11403v5>) | 2 | Описывает замену self-attention и оконное внимание в Transformer для повышения разрешения. |
 
 ### Bing: ограниченная первая страница (дополнение)
 
@@ -592,6 +714,16 @@ Bing приведён отдельно: после фильтрации доме
 | 4 | [Study guide for Exam AI-200: Developing AI Cloud Solutions on Azure](<https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-200>) | 0 | План экзамена перечисляет темы, но не объясняет алгоритм. |
 | 5 | [Design and Develop a RAG Solution on Azure - Azure Architecture Center](<https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide>) | 3 | Архитектурное руководство прямо описывает проектирование RAG и retrieval перед генерацией. |
 
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [AR-RAG: Autoregressive Retrieval Augmentation for Image Generation](<https://arxiv.org/abs/2506.06962v3>) | 1 | Извлекаются визуальные патчи для генерации изображений, а не текстовые документы для ответа; это смежный вариант retrieval augmentation. |
+| 2 | [Automated Literature Review Using NLP Techniques and LLM-Based Retrieval-Augmented Generation](<https://arxiv.org/abs/2411.18583v1>) | 2 | Показывает RAG с LLM для генерации обзоров литературы из PDF-документов. |
+| 3 | [EVOR: Evolving Retrieval for Code Generation](<https://arxiv.org/abs/2402.12317v2>) | 2 | Описывает извлечение из развивающейся базы знаний и генерацию кода; конкретная реализация RAG. |
+| 4 | [Riddle Me This! Stealthy Membership Inference for Retrieval-Augmented Generation](<https://arxiv.org/abs/2502.00306v2>) | 2 | Объясняет контекст извлечённых документов в RAG и исследует утечки через membership inference. |
+| 5 | [Ragas: Automated Evaluation of Retrieval Augmented Generation](<https://arxiv.org/abs/2309.15217v2>) | 3 | Прямо объясняет два модуля RAG: извлечение текстового контекста и генерацию LLM, затем их совместную оценку. |
+
 ### Bing: ограниченная первая страница (дополнение)
 
 | Позиция | Документ | Оценка | Обоснование |
@@ -635,6 +767,16 @@ Bing приведён отдельно: после фильтрации доме
 | 4 | [Introduction to computer vision concepts - Training](<https://learn.microsoft.com/en-us/training/modules/introduction-computer-vision/>) | 0 | Обычные CNN для изображений не раскрывают GNN. |
 | 5 | [Microsoft Graph REST API v1.0 endpoint reference - Microsoft Graph v1.0](<https://learn.microsoft.com/en-us/graph/api/overview>) | 0 | REST-модель сущностей Microsoft Graph — другая задача, не GNN. |
 
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [MECCH: Metapath Context Convolution-based Heterogeneous Graph Neural Networks](<https://arxiv.org/abs/2211.12792v2>) | 2 | Описывает агрегацию информации в гетерогенной GNN через метапути и контекст. |
+| 2 | [Transformers are Graph Neural Networks](<https://arxiv.org/abs/2506.22084v1>) | 2 | Объясняет message passing и связь Transformer с GNN на графе токенов. |
+| 3 | [Fast and Deep Graph Neural Networks](<https://arxiv.org/abs/1911.08941v1>) | 2 | Разбирает архитектуру глубокой GNN как динамической системы и её эффективность. |
+| 4 | [Missing Data Imputation with Adversarially-trained Graph Convolutional Networks](<https://arxiv.org/abs/1905.01907v2>) | 2 | Показывает GNN-автоэнкодер и агрегацию соседей для восстановления пропусков данных. |
+| 5 | [Multiclass Graph-Based Large Margin Classifiers: Unified Approach for Support Vectors and Neural Networks](<https://arxiv.org/abs/2512.13410v1>) | 1 | Изучает графовые классификаторы Gabriel и нейросетевые границы классов, а не обычные архитектуры GNN. |
+
 ### Bing: ограниченная первая страница (дополнение)
 
 | Позиция | Документ | Оценка | Обоснование |
@@ -676,6 +818,16 @@ Bing приведён отдельно: после фильтрации доме
 | 3 | [Know Where to Leverage AI in your Classroom - Training](<https://learn.microsoft.com/en-us/training/modules/know-where-leverage-ai-classroom/>) | 0 | Рекомендации по приватности в классе не являются differential privacy. |
 | 4 | [AI Fluency: Explore AI basics - Training](<https://learn.microsoft.com/en-us/training/modules/explore-ai-basics/>) | 1 | Вводный модуль о ML даёт общий фон, но не дифференциальную приватность. |
 | 5 | [Azure Databricks documentation](<https://learn.microsoft.com/en-us/azure/databricks/>) | 0 | Хаб Databricks не объясняет дифференциальную приватность. |
+
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [Bayesian Differential Privacy for Machine Learning](<https://arxiv.org/abs/1901.09697v5>) | 2 | Предлагает Bayesian DP для обучения моделей, обсуждая гарантии, privacy accounting и точность. |
+| 2 | [Momentum Gradient Descent Federated Learning with Local Differential Privacy](<https://arxiv.org/abs/2209.14086v2>) | 2 | Совмещает локальную DP с федеративным обучением для защиты данных и уменьшения обмена. |
+| 3 | [Three Tools for Practical Differential Privacy](<https://arxiv.org/abs/1812.02890v1>) | 2 | Предлагает практические инструменты DP-обучения: clipping, настройку параметров и большие батчи. |
+| 4 | [Statistical Privacy Guarantees of Machine Learning Preprocessing Techniques](<https://arxiv.org/abs/2109.02496v1>) | 2 | Измеряет нарушения приватности при предобработке ML-данных и влияние ресэмплинга. |
+| 5 | [Kernel Normalized Convolutional Networks for Privacy-Preserving Machine Learning](<https://arxiv.org/abs/2210.00053v2>) | 2 | Сравнивает нормализацию при DP-обучении и DP-FL; содержательный частный аспект. |
 
 ### Bing: ограниченная первая страница (дополнение)
 
@@ -719,6 +871,16 @@ Bing приведён отдельно: после фильтрации доме
 | 4 | [Data, privacy, and security for Foundry Models sold by Azure in Microsoft Foundry - Microsoft Foundry](<https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy>) | 1 | Политика обработки данных ML-сервиса даёт контекст приватности, но не федеративное обучение. |
 | 5 | [Copilot connectors overview - Microsoft 365 Copilot connectors](<https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview>) | 0 | Сопоставление типов коннекторов не относится к обучению моделей. |
 
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [VAFL: a Method of Vertical Asynchronous Federated Learning](<https://arxiv.org/abs/2007.06081v1>) | 2 | Объясняет вертикальное асинхронное FL и защиту данных через возмущение локальных представлений. |
+| 2 | [Federated and Transfer Learning: A Survey on Adversaries and Defense Mechanisms](<https://arxiv.org/abs/2207.02337v1>) | 3 | Обзор прямо рассматривает федеративное обучение, угрозы приватности и защитные механизмы вместо обещания абсолютной защиты. |
+| 3 | [Overcoming Forgetting in Federated Learning on Non-IID Data](<https://arxiv.org/abs/1910.07796v1>) | 1 | Основная тема — дрейф моделей на non-IID данных; отсутствие новых рисков приватности лишь заявлено. |
+| 4 | [Privacy Threats Against Federated Matrix Factorization](<https://arxiv.org/abs/2007.01587v1>) | 2 | Исследует угрозы приватности в конкретном варианте FL — федеративной матричной факторизации. |
+| 5 | [Decentralized Federated Learning: A Segmented Gossip Approach](<https://arxiv.org/abs/1908.07782v1>) | 2 | Объясняет передачу локальных моделей вместо исходных данных и децентрализованный обмен FL, акцентируя сетевую архитектуру. |
+
 ### Bing: ограниченная первая страница (дополнение)
 
 Выдача недоступна: Не найдены органические результаты Bing; это не нулевая релевантность
@@ -756,6 +918,16 @@ Bing приведён отдельно: после фильтрации доме
 | 3 | [RegressionModels.Sgd Field (Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support)](<https://learn.microsoft.com/en-us/dotnet/api/microsoft.azure.powershell.cmdlets.machinelearningservices.support.regressionmodels.sgd>) | 1 | Поле regression-модели даёт только краткое описание SGD. |
 | 4 | [ForecastingModels.Sgd Field (Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support)](<https://learn.microsoft.com/en-us/dotnet/api/microsoft.azure.powershell.cmdlets.machinelearningservices.support.forecastingmodels.sgd>) | 1 | Поле forecasting-модели даёт только краткое описание SGD. |
 | 5 | [ClassificationModel.SGD Property (Azure.ResourceManager.MachineLearning.Models) - Azure for .NET Developers](<https://learn.microsoft.com/en-us/dotnet/api/azure.resourcemanager.machinelearning.models.classificationmodel.sgd>) | 1 | Поле SDK содержит краткое определение SGD, но не алгоритм и его применение. |
+
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [Continuous Delayed-Memory Stochastic Gradient Descent and Continuous-Time Reinforcement Learning from History of Astrophysical Time Series Studies](<https://arxiv.org/abs/2609.20906v2>) | 2 | Предлагает вариант SGD с памятью и демонстрирует поведение оптимизации на ландшафтах и временных рядах. |
+| 2 | [High-Probability Guarantees for Random Zeroth-Order (Stochastic) Gradient Descent](<https://arxiv.org/abs/2604.23613v2>) | 2 | Исследует стохастический градиентный спуск нулевого порядка и вероятностные гарантии сходимости. |
+| 3 | [Stochastic Gradient Descent for Barycenters in Wasserstein Space](<https://arxiv.org/abs/2201.04232v3>) | 2 | Описывает SGD-процедуру для вычисления барицентров в пространстве Вассерштейна. |
+| 4 | [Stochastic Gradient Descent for Stochastic Doubly-Nonconvex Composite Optimization](<https://arxiv.org/abs/1805.07960v2>) | 2 | Разбирает SGD для составной невыпуклой оптимизации и условия сходимости. |
+| 5 | [Stochastic Gradient Descent without Full Data Shuffle](<https://arxiv.org/abs/2206.05830v1>) | 2 | Объясняет связь SGD, перемешивания данных, сходимости и стоимости дискового ввода-вывода. |
 
 ### Bing: ограниченная первая страница (дополнение)
 
@@ -797,6 +969,16 @@ Bing приведён отдельно: после фильтрации доме
 | 3 | [Introduction to the Quantum Programming Language Q# - Azure Quantum ](<https://learn.microsoft.com/en-us/azure/quantum/qsharp-overview>) | 1 | Введение в Q# даёт контекст квантовых программ, но не surface code. |
 | 4 | [Contact Surface Support for Business and Education customers - Surface](<https://learn.microsoft.com/en-us/surface/contact-surface-business-education-support>) | 0 | Поддержка устройств Surface не относится к коррекции квантовых ошибок. |
 | 5 | [Surface IT Toolkit - Surface](<https://learn.microsoft.com/en-us/surface/surface-it-toolkit>) | 0 | Инструментарий обслуживания Surface не относится к surface codes. |
+
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [Sparse Mamba Decoder for Quantum Error Correction: Efficient Defect-Centric Processing of Surface Code Syndromes](<https://arxiv.org/abs/2605.17156v2>) | 2 | Предлагает декодер синдромов surface code и разбирает эффективность квантовой коррекции ошибок. |
+| 2 | [Optimizing Quantum Error Correction Codes with Reinforcement Learning](<https://arxiv.org/abs/1812.08451v5>) | 2 | Рассматривает адаптацию поверхностных квантовых кодов обучением с подкреплением. |
+| 3 | [Quantum error correction with fractal topological codes](<https://arxiv.org/abs/2201.03568v3>) | 2 | Исследует фрактальные surface codes, декодирование и пороги ошибок. |
+| 4 | [Performance Analysis of Quantum CSS Error-Correcting Codes via MacWilliams Identities](<https://arxiv.org/abs/2305.01301v4>) | 2 | Выводит оценки ошибок квантовых CSS-кодов, в том числе surface codes. |
+| 5 | [Quantum Error Correction resilient against Atom Loss](<https://arxiv.org/abs/2412.07841v3>) | 2 | Дополняет surface code обнаружением потерь атомов и адаптивным декодированием. |
 
 ### Bing: ограниченная первая страница (дополнение)
 
@@ -841,6 +1023,16 @@ Bing приведён отдельно: после фильтрации доме
 | 4 | [Surface Pro 9 battery degraded by 2% after 5 months! - Microsoft Q&A](<https://learn.microsoft.com/en-us/answers/questions/2304650/surface-pro-9-battery-degraded-by-2-after-5-months>) | 1 | Доступный фрагмент форумного вопроса сообщает потерю ёмкости, но не причины и модель старения. |
 | 5 | [When your Laptop is at 100% Battery and youre charging it does this charge the battery or does this charge the components in the laptop therefore not degrading the battery? - Microsoft Q&A](<https://learn.microsoft.com/en-us/answers/questions/4092477/when-your-laptop-is-at-100-battery-and-youre-charg>) | 1 | Тема вопроса связана с зарядкой и деградацией; сохранённый фрагмент не даёт подтверждённого объяснения. |
 
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [Physics-Informed Machine Learning for Battery Degradation Diagnostics: A Comparison of State-of-the-Art Methods](<https://arxiv.org/abs/2404.04429v1>) | 2 | Сравнивает физически информированные модели диагностики и прогноза деградации компонентов аккумулятора. |
+| 2 | [Lithium-ion battery degradation: using degradation mode analysis to validate lifetime prediction modelling](<https://arxiv.org/abs/2311.05482v2>) | 3 | Связывает механизмы старения с потерей лития и активного материала и объясняет проверку моделей срока службы. |
+| 3 | [Lithium-ion battery degradation: how to model it](<https://arxiv.org/abs/2112.02037v2>) | 3 | Работа прямо посвящена моделированию деградации и взаимодействию нескольких механизмов старения Li-ion. |
+| 4 | [Lithium-Ion Battery Charging Schedule Optimization to Balance Battery Usage and Degradation](<https://arxiv.org/abs/2205.15440v1>) | 2 | Использует модель деградации для выбора зарядного расписания; полезный прикладной аспект. |
+| 5 | [Lithium-ion battery degradation: Introducing the concept of reservoirs to design for lifetime](<https://arxiv.org/abs/2512.15440v1>) | 3 | Описывает физические механизмы SEI, осаждения лития, трещин и высыхания и их влияние на срок службы. |
+
 ### Bing: ограниченная первая страница (дополнение)
 
 | Позиция | Документ | Оценка | Обоснование |
@@ -883,6 +1075,16 @@ Bing приведён отдельно: после фильтрации доме
 | 3 | [Training for Developers](<https://learn.microsoft.com/en-us/training/career-paths/developer>) | 0 | Обучение разработчиков и эффективность сервисов не относятся к фотовольтаике. |
 | 4 | [**shadow**: R Package for Geometric Shade Calculations in an Urban Environment](<https://learn.microsoft.com/en-us/shows/user-international-r-user-conferences-user-international-r-user-2017-conference/shadow-r-package-geometric-shade-calculations-in-urban-environment>) | 1 | Расчёт затенения и инсоляции даёт контекст условий работы, но не КПД солнечной ячейки. |
 | 5 | [Coreinfo - Sysinternals](<https://learn.microsoft.com/en-us/sysinternals/downloads/coreinfo>) | 0 | Processor efficiency и клетки сетки CPU — другие значения слов запроса. |
+
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [Moon's Radiation Environment and Expected Performance of Solar Cells during Future Lunar Missions](<https://arxiv.org/abs/1012.0717v1>) | 2 | Разбирает влияние радиации и температуры на характеристики и деградацию солнечных элементов. |
+| 2 | [Tuning photovoltaic response in Bi2FeCrO6 films by ferroelectric poling](<https://arxiv.org/abs/1808.05847v1>) | 2 | Исследует влияние поляризации, разделения зарядов и рекомбинации на фотоэлектрический отклик. |
+| 3 | [Fabrication of single-walled carbon nanotube/Si heterojunction solar cell with high photovoltaic conversion efficiency and stability](<https://arxiv.org/abs/1310.7783v2>) | 2 | Показывает связь конструкции CNT/Si-элементов, сопротивления и прозрачности с КПД. |
+| 4 | [UMG silicon for solar PV: from defects detection to PV module degradation](<https://arxiv.org/abs/2101.08019v2>) | 2 | Связывает дефекты кремния, время жизни носителей и эффективность серийных фотоэлементов. |
+| 5 | [External quantum efficiency above 100% in photovoltaic cells due to the technique raising efficiencies for all kinds of solar cells](<https://arxiv.org/abs/2409.20066v3>) | 2 | Рассматривает геометрию модуля, quantum efficiency и КПД; гипотезы о тёмной энергии требуют отдельной научной проверки. |
 
 ### Bing: ограниченная первая страница (дополнение)
 
@@ -927,6 +1129,16 @@ Bing приведён отдельно: после фильтрации доме
 | 4 | [Release plans for Dynamics 365 and Power Platform - Dynamics 365](<https://learn.microsoft.com/en-us/dynamics365/release-plans/>) | 0 | Планы выпуска Dynamics 365 не относятся к CFD. |
 | 5 | [Dynamics 365 Finance documentation](<https://learn.microsoft.com/en-us/dynamics365/finance/>) | 0 | Dynamics 365 Finance — бизнес-продукт, не вычислительная гидродинамика. |
 
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [Quantum Finite Volume Method for Computational Fluid Dynamics with Classical Input and Output](<https://arxiv.org/abs/2102.03557v1>) | 2 | Объясняет сеточные ячейки FVM и предлагает квантовую реализацию CFD; это специальный вариант метода. |
+| 2 | [Second-order accurate finite volume method for well-driven flows](<https://arxiv.org/abs/1312.2388v2>) | 2 | Разбирает конечно-объёмную схему, коррекцию потоков и точность для течения около скважины. |
+| 3 | [Finite Volume Graph Network(FVGN): Predicting unsteady incompressible fluid dynamics with finite volume informed neural network](<https://arxiv.org/abs/2309.10050v4>) | 2 | Использует конечно-объёмные ограничения для GNN-модели нестационарной гидродинамики. |
+| 4 | [High-Order Dynamic Integration Method (HODIM) for Modeling Turbulent Fluid Dynamics](<https://arxiv.org/abs/2410.17063v1>) | 1 | Предлагает другой метод HODIM, а finite volume упоминается в сравнении с существующими подходами. |
+| 5 | [Implementation of Immersed Boundaries via Volume Penalization in the Industrial Aeronautical Computational Fluid Dynamics Solver CODA](<https://arxiv.org/abs/2404.16132v3>) | 2 | Применяет конечно-объёмную схему второго порядка в CFD-решателе CODA для аэродинамики со встроенными границами. |
+
 ### Bing: ограниченная первая страница (дополнение)
 
 | Позиция | Документ | Оценка | Обоснование |
@@ -967,6 +1179,16 @@ Bing приведён отдельно: после фильтрации доме
 | 3 | [Get Data in Power BI - Training](<https://learn.microsoft.com/en-us/training/modules/get-data/>) | 0 | Импорт данных Power BI не связан с расчётом механических напряжений. |
 | 4 | [Azure Vision documentation - Quickstarts, Tutorials, API Reference - Foundry Tools](<https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/>) | 0 | Компьютерное зрение Azure не относится к FEM-анализу напряжений. |
 | 5 | [Document layout analysis - Document Intelligence - Foundry Tools](<https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/prebuilt/layout>) | 0 | Анализ разметки документов — другой смысл analysis и element. |
+
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [A coupled finite element-virtual element method for thermomechanical analysis of electronic packaging structures](<https://arxiv.org/abs/2511.09348v3>) | 2 | Применяет связанный конечно-элементный метод к тепловым напряжениям электронной упаковки. |
+| 2 | [Hybrid stress quadrilateral finite element approximation for stochastic plane elasticity equations](<https://arxiv.org/abs/1502.06065v1>) | 2 | Описывает гибридную конечно-элементную аппроксимацию напряжений в стохастической упругости. |
+| 3 | [Towards Automatic Stress Analysis using Scaled Boundary Finite Element Method with Quadtree Mesh of High-order Elements](<https://arxiv.org/abs/1402.5186v1>) | 3 | Прямо описывает технику расчёта напряжений и трещин методом SBFEM с численными примерами. |
+| 4 | [Variational principles and finite element Bloch analysis in couple stress elastodynamics](<https://arxiv.org/abs/2106.08893v1>) | 2 | Использует FEM в couple-stress-упругости для волн в периодических материалах; специальный динамический случай. |
+| 5 | [A multipoint stress mixed finite element method for elasticity on simplicial grids](<https://arxiv.org/abs/1805.09920v3>) | 2 | Выводит смешанный конечно-элементный метод с напряжениями как неизвестными для линейной упругости. |
 
 ### Bing: ограниченная первая страница (дополнение)
 
@@ -1011,6 +1233,16 @@ Bing приведён отдельно: после фильтрации доме
 | 4 | [Dragon Medical One documentation](<https://learn.microsoft.com/en-us/industry/healthcare/dragon-medical-one/>) | 0 | Медицинское речевое ПО не относится к OCT. |
 | 5 | [Install Windows Server from installation media](<https://learn.microsoft.com/en-us/windows-server/get-started/install-windows-server>) | 0 | Оптический привод установочного диска — другой смысл optical. |
 
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [OCTID: Optical Coherence Tomography Image Database](<https://arxiv.org/abs/1812.07056v2>) | 2 | Объясняет применение OCT для слоёв сетчатки и предоставляет диагностическую базу изображений. |
+| 2 | [A Quantum Field Approach for Advancing Optical Coherence Tomography Part I: First Order Correlations, Single Photon Interference, And Quantum Noise](<https://arxiv.org/abs/1402.1722v1>) | 2 | Рассматривает интерференционную и квантово-полевую основу OCT; специализированное объяснение принципа. |
+| 3 | [Extracting morphometric information from rat sciatic nerve using optical coherence tomography](<https://arxiv.org/abs/1804.11054v2>) | 2 | Показывает применение OCT для морфометрии периферического нерва и сравнение с гистологией. |
+| 4 | [Ghost optical coherence tomography](<https://arxiv.org/abs/1810.03380v1>) | 2 | Демонстрирует OCT через спектральную интерференцию и корреляции с восстановлением изображения преобразованием Фурье. |
+| 5 | [Resolution-enhanced OCT and expanded framework of information capacity and resolution in coherent imaging](<https://arxiv.org/abs/2104.02531v1>) | 2 | Разбирает разрешение OCT и компромисс с SNR на конкретном вычислительном методе. |
+
 ### Bing: ограниченная первая страница (дополнение)
 
 | Позиция | Документ | Оценка | Обоснование |
@@ -1053,6 +1285,16 @@ Bing приведён отдельно: после фильтрации доме
 | 4 | [Entity Documentation - minecraft:buoyant](<https://learn.microsoft.com/en-us/minecraft/creator/reference/content/entityreference/examples/entitycomponents/minecraftcomponent_buoyant>) | 0 | Игровая плавучесть и гравитация Minecraft не объясняют детектирование волн. |
 | 5 | [Launch your portal using the Portal launch scheduler - Microsoft 365 Enterprise](<https://learn.microsoft.com/en-us/microsoft-365/enterprise/portallaunchscheduler>) | 0 | Пакетный запуск портала не связан с интерферометрическими измерениями. |
 
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [Moriond 07 proceedings:"Extension of the frequency-range of interferometers for the "magnetic" components of gravitational waves?"](<https://arxiv.org/abs/0706.3294v1>) | 2 | Разбирает частотный отклик интерферометра на компоненты гравитационной волны. |
+| 2 | [Orbit analysis of a geostationary gravitational wave interferometer detector array](<https://arxiv.org/abs/1410.3023v1>) | 2 | Описывает лазерные измерения в космическом интерферометре GEOGRAWI и влияние орбит на регистрацию. |
+| 3 | [Particle production during inflation and gravitational waves detectable by ground-based interferometers](<https://arxiv.org/abs/1109.0022v3>) | 2 | Исследует обнаружимость космологических волн наземными LIGO/Virgo и LISA; полезный частный сценарий. |
+| 4 | [Gravitational wave detection with single-laser atom interferometers](<https://arxiv.org/abs/1003.4218v1>) | 2 | Объясняет схему двух атомных интерферометров с одним лазером и подавление фазового шума. |
+| 5 | [Theory of Gravitational Waves](<https://arxiv.org/abs/1607.04202v1>) | 2 | Излагает теорию гравитационных волн и связь их взаимодействия с веществом с лазерной интерферометрией. |
+
 ### Bing: ограниченная первая страница (дополнение)
 
 | Позиция | Документ | Оценка | Обоснование |
@@ -1093,6 +1335,16 @@ Bing приведён отдельно: после фильтрации доме
 | 3 | [Tutorial: Get Started Creating in the Power BI Service - Power BI](<https://learn.microsoft.com/en-us/power-bi/fundamentals/service-get-started>) | 0 | Режим редактирования отчётов не относится к редактированию генов. |
 | 4 | [Share agents with other users - Microsoft Copilot Studio](<https://learn.microsoft.com/en-us/microsoft-copilot-studio/admin-share-bots>) | 0 | Совместное редактирование тем бота не является редактированием генома. |
 | 5 | [Collaborate on canvas apps in Microsoft Power Apps Studio - Power Apps](<https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/copresence-power-apps-studio>) | 0 | Редактирование Power Apps — другая задача. |
+
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [Fast Antibiotic resistance-Based gene editing of mammalian cells with CRISPR-Cas9 (FAB-CRISPR)](<https://arxiv.org/abs/2502.12675v1>) | 2 | Предоставляет практический протокол CRISPR-Cas9 с HDR-донором и отбором отредактированных клеток. |
+| 2 | [Search and localization dynamics of the CRISPR/Cas9 system](<https://arxiv.org/abs/2103.10667v2>) | 2 | Объясняет поиск целевой ДНК и разрезание Cas9 через модель диффузии; часть механизма редактирования. |
+| 3 | [DeepFM-Crispr: Prediction of CRISPR On-Target Effects via Deep Learning](<https://arxiv.org/abs/2409.05938v1>) | 1 | Основная модель относится к Cas13d и РНК, а Cas9 приведён во введении как исходная технология. |
+| 4 | [COMET: Combinatorial Optimization for Multiplex Editing Targets Via Constraint-Preserving QAOA](<https://arxiv.org/abs/2607.02622v1>) | 1 | Оптимизирует выбор guide RNA квантовым алгоритмом, не раскрывая сам механизм редактирования Cas9. |
+| 5 | [Securing the Language of Life: Inheritable Watermarks from DNA Language Models to Proteins](<https://arxiv.org/abs/2509.18207v1>) | 1 | CRISPR-Cas9 используется как пример для водяных знаков ДНК; механизм редактирования не объясняется. |
 
 ### Bing: ограниченная первая страница (дополнение)
 
@@ -1137,6 +1389,16 @@ Bing приведён отдельно: после фильтрации доме
 | 4 | [Configure incremental refresh and real-time data for Power BI semantic models - Power BI](<https://learn.microsoft.com/en-us/power-bi/connect-data/incremental-refresh-overview>) | 0 | Сворачивание SQL-запроса не относится к protein folding. |
 | 5 | [Microsoft Discovery agent catalog](<https://learn.microsoft.com/en-us/azure/microsoft-discovery/concept-agent-catalog>) | 2 | Каталог инструментов прямо включает AlphaFold, предсказанные структуры и оценки уверенности. |
 
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [AlphaFold predicts the most complex protein knot and composite protein knots](<https://arxiv.org/abs/2207.07410v1>) | 2 | Показывает применение AlphaFold к предсказанию белковых структур с узлами, без общего обзора методов. |
+| 2 | [Introduction to Protein Folding](<https://arxiv.org/abs/2307.02174v2>) | 1 | Глава объясняет физику сворачивания, а не предсказание структуры по аминокислотной последовательности. |
+| 3 | [Thermodynamics of Protein Folding](<https://arxiv.org/abs/2307.02175v2>) | 1 | Глава посвящена термодинамике и ландшафту свободной энергии, не алгоритмам предсказания структуры. |
+| 4 | [The effects of non-native interactions on protein folding rates: Theory and simulation](<https://arxiv.org/abs/q-bio/0407023v1>) | 1 | Предсказывает скорость сворачивания в физической модели, а не неизвестную структуру белка. |
+| 5 | [Crucial stages of protein folding through a solvable model: predicting target sites for enzyme-inhibiting drugs](<https://arxiv.org/abs/cond-mat/0209325v1>) | 1 | Исходит из известной нативной топологии для поиска участков лекарственного воздействия; задача другая. |
+
 ### Bing: ограниченная первая страница (дополнение)
 
 | Позиция | Документ | Оценка | Обоснование |
@@ -1178,6 +1440,16 @@ Bing приведён отдельно: после фильтрации доме
 | 3 | [Junction - Sysinternals](<https://learn.microsoft.com/en-us/sysinternals/downloads/junction>) | 0 | Утилита файловых junction points не относится к p–n-переходу. |
 | 4 | [PSHpcStorageTarget.Junctions Property (Microsoft.Azure.PowerShell.Cmdlets.HPCCache.Models)](<https://learn.microsoft.com/en-us/dotnet/api/microsoft.azure.powershell.cmdlets.hpccache.models.pshpcstoragetarget.junctions>) | 0 | Свойство namespace junction не относится к полупроводниковому переходу. |
 | 5 | [Azure Accelerates Cloud Transformation for the Semiconductor Industry](<https://learn.microsoft.com/en-us/shows/azure-videos/azure-accelerates-cloud-transformation-for-the-semiconductor-industry>) | 0 | Видео о применении облака в отрасли не объясняет легирование и образование перехода. |
+
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [Ferroelectric switched all-metallic-oxide $p$-$n$ junctions](<https://arxiv.org/abs/cond-mat/0611501v1>) | 1 | Рассматривает металлические оксидные переходы в сравнении с полупроводниками, а не обычное донорное и акцепторное легирование. |
+| 2 | [Current-Voltage Characteristics of Graphane p-n Junctions](<https://arxiv.org/abs/0905.2812v2>) | 2 | Связывает легирование графана с образованием p/n-областей и вольт-амперной характеристикой перехода. |
+| 3 | [Bipolar doping in van der Waals semiconductor through Flexo-doping](<https://arxiv.org/abs/2505.05887v1>) | 2 | Объясняет сдвиги донорных и акцепторных уровней и создание p/n-областей механической деформацией. |
+| 4 | [A plausible method of preparing the ideal p-n junction interface of a thermoelectric material by surface doping](<https://arxiv.org/abs/2007.09393v1>) | 2 | Показывает поверхностное легирование, перенос заряда и формирование n-области на p-полупроводнике. |
+| 5 | [Spatial BCS-BEC crossover in superconducting p-n junctions](<https://arxiv.org/abs/1912.09699v2>) | 2 | Исследует свойства перехода между легированными полупроводниками в сверхпроводящем режиме; специальный случай. |
 
 ### Bing: ограниченная первая страница (дополнение)
 
@@ -1222,6 +1494,16 @@ Bing приведён отдельно: после фильтрации доме
 | 4 | [Create a self-signed public certificate to authenticate your application - Microsoft identity platform](<https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-self-signed-certificate>) | 2 | Объясняет разные роли открытого и закрытого ключей в конкретной схеме аутентификации. |
 | 5 | [Azure Certificate Authority details](<https://learn.microsoft.com/en-us/azure/security/fundamentals/azure-certificate-authority-details>) | 1 | Перечень размеров RSA-ключей и алгоритмов сертификатов даёт практический фон, не принцип RSA. |
 
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [Information Hiding in CSS : A Secure Scheme Text-Steganography using Public Key Cryptosystem](<https://arxiv.org/abs/1201.1968v1>) | 1 | RSA используется как готовый этап шифрования в CSS-стеганографии; принцип самой криптосистемы не раскрывается. |
+| 2 | [Public Key Cryptography Standards: PKCS](<https://arxiv.org/abs/1207.5446v1>) | 2 | Описывает PKCS, включая стандарты шифрования и подписи RSA, то есть существенный практический аспект. |
+| 3 | [RSA+: An RSA variant](<https://arxiv.org/abs/2301.01282v2>) | 2 | Предлагает вариант RSA/Rabin и сравнивает безопасность и производительность; частичный ответ о конструкции RSA. |
+| 4 | [Fault Attacks on RSA Public Keys: Left-To-Right Implementations are also Vulnerable](<https://arxiv.org/abs/0901.0911v3>) | 2 | Разбирает открытый модуль RSA, возведение в степень и fault-атаки; содержательный аспект механизма и безопасности. |
+| 5 | [State of the art parallel approaches for RSA public key based cryptosystem](<https://arxiv.org/abs/1503.03593v1>) | 2 | Обзор параллельных реализаций RSA рассматривает шифрование, подпись и вычислительные затраты, без базового полного вывода. |
+
 ### Bing: ограниченная первая страница (дополнение)
 
 | Позиция | Документ | Оценка | Обоснование |
@@ -1263,6 +1545,15 @@ Bing приведён отдельно: после фильтрации доме
 | 3 | [Index Architecture and Design Guide - SQL Server](<https://learn.microsoft.com/en-us/sql/relational-databases/sql-server-index-design-guide>) | 1 | Архитектура SQL-индексов даёт фон, но не инвертированный индекс с Variable Byte. |
 | 4 | [ALTER INDEX (Transact-SQL) - SQL Server](<https://learn.microsoft.com/en-us/sql/t-sql/statements/alter-index-transact-sql>) | 0 | Синтаксис выбора row/page compression не объясняет VB-кодирование. |
 | 5 | [Data compression - SQL Server](<https://learn.microsoft.com/en-us/sql/relational-databases/data-compression/data-compression>) | 1 | Сжатие таблиц и индексов SQL Server связано с общей задачей хранения, но не с VB postings. |
+
+### arXiv Search API
+
+| Позиция | Документ | Оценка | Обоснование |
+|---:|---|---:|---|
+| 1 | [On Optimally Partitioning Variable-Byte Codes](<https://arxiv.org/abs/1804.10949v2>) | 3 | Прямо рассматривает Variable Byte для целочисленных последовательностей и сжатия posting lists, включая разбиение и компромисс скорости и размера. |
+| 2 | [Factorization-based Lossless Compression of Inverted Indices](<https://arxiv.org/abs/1108.1956v1>) | 1 | Основной метод — факторизация инвертированного индекса; Variable Byte назван как дополнительно комбинируемое кодирование, без его разбора. |
+
+В сохранённой выборке только 2 результатов.
 
 ### Bing: ограниченная первая страница (дополнение)
 

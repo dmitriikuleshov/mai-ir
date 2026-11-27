@@ -1,11 +1,33 @@
+# Python-окружение, байткод и кэши инструментов.
 .venv/
 .ipynb_checkpoints/
 notebooks/samples/
 __pycache__/
+*.py[cod]
 .pytest_cache/
 .ruff_cache/
 *.log
+
+# Большие результаты обработки и локальная сборка C++.
 results/*
 !results/statistics.json
 !results/zipf.svg
 .build/
+
+# Промежуточные файлы TeX; исходники, PDF и изображения остаются в Git.
+reports/**/*.aux
+reports/**/*.toc
+reports/**/*.out
+reports/**/*.lof
+reports/**/*.lot
+reports/**/*.fls
+reports/**/*.fdb_latexmk
+reports/**/*.synctex.gz
+reports/**/*.xdv
+
+# Служебные файлы ОС и временные файлы редакторов.
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo

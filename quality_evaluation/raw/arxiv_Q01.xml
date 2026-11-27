@@ -1,0 +1,279 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/pBB8IR05UT572Cg44siBPpTnlJI</id>
+  <title>arXiv Query: search_query=all:"database" AND all:"transaction" AND all:"isolation"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:23:26Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22database%22+AND+(all:%22transaction%22+AND+all:%22isolation%22)&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>89</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2504.02344v1</id>
+    <title>Boosting End-to-End Database Isolation Checking via Mini-Transactions (Extended Version)</title>
+    <updated>2025-04-03T07:26:00Z</updated>
+    <link href="https://arxiv.org/abs/2504.02344v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.02344v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Transactional isolation guarantees are crucial for database correctness. However, recent studies have uncovered numerous isolation bugs in production databases. The common black-box approach to isolation checking stresses databases with large, concurrent, randomized transaction workloads and verifies whether the resulting execution histories satisfy specified isolation levels. For strong isolation levels such as strict serializability, serializability, and snapshot isolation, this approach often incurs significant end-to-end checking overhead during both history generation and verification.
+  We address these inefficiencies through the novel design of Mini-Transactions (MTs). MTs are compact, short transactions that execute much faster than general workloads, reducing overhead during history generation by minimizing database blocking and transaction retries. By leveraging MTs' read-modify-write pattern, we develop highly efficient algorithms to verify strong isolation levels in linear or quadratic time. Despite their simplicity, MTs are semantically rich and effectively capture common isolation anomalies described in the literature.
+  We implement our verification algorithms and an MT workload generator in a tool called MTC. Experimental results show that MTC outperforms state-of-the-art tools in both history generation and verification. Moreover, MTC can detect bugs across various isolation levels in production databases while maintaining the effectiveness of randomized testing with general workloads, making it a cost-effective solution for black-box isolation checking.</summary>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-03T07:26:00Z</published>
+    <arxiv:comment>18 pages, 18 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.DB"/>
+    <author>
+      <name>Hengfeng Wei</name>
+    </author>
+    <author>
+      <name>Jiang Xiao</name>
+    </author>
+    <author>
+      <name>Na Yang</name>
+    </author>
+    <author>
+      <name>Si Liu</name>
+    </author>
+    <author>
+      <name>Zijing Yin</name>
+    </author>
+    <author>
+      <name>Yuxing Chen</name>
+    </author>
+    <author>
+      <name>Anqun Pan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1911.12711v1</id>
+    <title>Lockless Transaction Isolation in Hyperledger Fabric</title>
+    <updated>2019-11-28T13:44:58Z</updated>
+    <link href="https://arxiv.org/abs/1911.12711v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1911.12711v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Hyperledger Fabric is a distributed operating system for permissioned blockchains hosted by the Linux Foundation. It is the first truly extensible blockchain system for running distributed applications at enterprise grade scale. To achieve this, Hyperledger Fabric introduces a novel execute-order-validate blockchain architecture, allowing parallelization of transaction execution and validation. However, this raises the need for transaction isolation. Today transaction isolation is attained by locking the entire state database during simulation of transactions and database updates. This lock is one of the major performance bottlenecks as observed by previous work.
+  This work presents a new lock-free approach for providing transaction isolation. It harnesses the already existing versioning of key-value pairs in the database, used primarily for a read-write conflict detection during the validation phase, to create a version-based snapshot isolation. We further implement and evaluate our new approach. We show that our solution outperforms the current implementation by 8.1x and that it is comparable to the optimal solution where no isolation mechanism is applied.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-11-28T13:44:58Z</published>
+    <arxiv:comment>Published in the 2019 IEEE International Conference on Blockchain (Blockchain-2019)</arxiv:comment>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Hagar Meir</name>
+    </author>
+    <author>
+      <name>Artem Barger</name>
+    </author>
+    <author>
+      <name>Yacov Manevich</name>
+    </author>
+    <author>
+      <name>Yoav Tock</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.01477v1</id>
+    <title>Online Timestamp-based Transactional Isolation Checking of Database Systems (Extended Version)</title>
+    <updated>2025-04-02T08:30:48Z</updated>
+    <link href="https://arxiv.org/abs/2504.01477v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.01477v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Serializability (SER) and snapshot isolation (SI) are widely used transactional isolation levels in database systems. The isolation checking problem asks whether a given execution history of a database system satisfies a specified isolation level. However, existing SER and SI checkers, whether traditional black-box checkers or recent timestamp-based white-box ones, operate offline and require the entire history to be available to construct a dependency graph, making them unsuitable for continuous and ever-growing histories.
+  This paper addresses online isolation checking by extending the timestamp-based isolation checking approach to online settings. Specifically, we design CHRONOS, an efficient timestamp-based offline SI checker. CHRONOS is incremental and avoids constructing a start-ordered serialization graph for the entire history, making it well-suited for online scenarios. We further extend CHRONOS into an online SI checker, AION, addressing several key challenges unique to online settings. Additionally, we develop AION-SER for online SER checking. Experiments highlight that CHRONOS processes offline histories with up to one million transactions in seconds, greatly outperforming existing SI checkers. Furthermore, AION and AION-SER sustain a throughput of approximately 12K transactions per second, demonstrating their practicality for online isolation checking.</summary>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-02T08:30:48Z</published>
+    <arxiv:primary_category term="cs.DB"/>
+    <author>
+      <name>Hexu Li</name>
+    </author>
+    <author>
+      <name>Hengfeng Wei</name>
+    </author>
+    <author>
+      <name>Hongrong Ouyang</name>
+    </author>
+    <author>
+      <name>Yuxing Chen</name>
+    </author>
+    <author>
+      <name>Na Yang</name>
+    </author>
+    <author>
+      <name>Ruohao Zhang</name>
+    </author>
+    <author>
+      <name>Anqun Pan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.06284v1</id>
+    <title>VerIso: Verifiable Isolation Guarantees for Database Transactions</title>
+    <updated>2025-03-08T17:07:21Z</updated>
+    <link href="https://arxiv.org/abs/2503.06284v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.06284v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Isolation bugs, stemming especially from design-level defects, have been repeatedly found in carefully designed and extensively tested production databases over decades. In parallel, various frameworks for modeling database transactions and reasoning about their isolation guarantees have been developed. What is missing however is a mathematically rigorous and systematic framework with tool support for formally verifying a wide range of such guarantees for all possible system behaviors. We present the first such framework, VerIso, developed within the theorem prover Isabelle/HOL. To showcase its use in verification, we model the strict two-phase locking concurrency control protocol and verify that it provides strict serializability isolation guarantee. Moreover, we show how VerIso helps identify isolation bugs during protocol design. We derive new counterexamples for the TAPIR protocol from failed attempts to prove its claimed strict serializability. In particular, we show that it violates a much weaker isolation level, namely, atomic visibility.</summary>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-08T17:07:21Z</published>
+    <arxiv:primary_category term="cs.DB"/>
+    <author>
+      <name>Shabnam Ghasemirad</name>
+    </author>
+    <author>
+      <name>Si Liu</name>
+    </author>
+    <author>
+      <name>Christoph Sprenger</name>
+    </author>
+    <author>
+      <name>Luca Multazzu</name>
+    </author>
+    <author>
+      <name>David Basin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.06975v1</id>
+    <title>AWDIT: An Optimal Weak Database Isolation Tester</title>
+    <updated>2025-04-09T15:30:09Z</updated>
+    <link href="https://arxiv.org/abs/2504.06975v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.06975v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In order to achieve low latency, high throughput, and partition tolerance, modern databases forgo strong transaction isolation for weak isolation guarantees. However, several production databases have been found to suffer from isolation bugs, breaking their data-consistency contract. Black-box testing is a prominent technique for detecting isolation bugs, by checking whether histories of database transactions adhere to a prescribed isolation level.
+  Testing databases on realistic workloads of large size requires isolation testers to be as efficient as possible, a requirement that has initiated a study of the complexity of isolation testing. Although testing strong isolation has been known to be NP-complete, weak isolation levels were recently shown to be testable in polynomial time, which has propelled the scalability of testing tools. However, existing testers have a large polynomial complexity, restricting testing to workloads of only moderate size, which is not typical of large-scale databases.
+  In this work, we develop AWDIT, a highly-efficient and provably optimal tester for weak database isolation. Given a history $H$ of size $n$ and $k$ sessions, AWDIT tests whether H satisfies the most common weak isolation levels of Read Committed (RC), Read Atomic (RA), and Causal Consistency (CC) in time $O(n^{3/2})$, $O(n^{3/2})$, and $O(n \cdot k)$, respectively, improving significantly over the state of the art. Moreover, we prove that AWDIT is essentially optimal, in the sense that there is a conditional lower bound of $n^{3/2}$ for any weak isolation level between RC and CC. Our experiments show that AWDIT is significantly faster than existing, highly optimized testers; e.g., for the $\sim$20% largest histories, AWDIT obtains an average speedup of $245\times$, $193\times$, and $62\times$ for RC, RA, and CC, respectively, over the best baseline.</summary>
+    <category term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-09T15:30:09Z</published>
+    <arxiv:comment>31 pages, 9 figures, 1 table; accepted for PLDI 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.PL"/>
+    <author>
+      <name>Lasse Møldrup</name>
+    </author>
+    <author>
+      <name>Andreas Pavlogiannis</name>
+    </author>
+    <arxiv:doi>10.1145/3729339</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3729339" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.15877v1</id>
+    <title>Verifying Isolation Levels of Database Implementations for Free Using Separation Logic</title>
+    <updated>2026-07-17T11:44:35Z</updated>
+    <link href="https://arxiv.org/abs/2607.15877v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.15877v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Modern databases are highly concurrent and provide transactions as a mean of grouping several database operations into atomically applied units. Database vendors and software engineers use isolation levels to describe the consistency guarantees of transactions. The popular isolation levels give weak guarantees, with intricate semantics, to optimize performance of applications. The problem of assuring that database implementations actually implement the isolation level guarantees that application developers build their systems upon has received a great deal of attention from the testing community. But until now, there exists no method for formally verifying that a database implementation actually implements the isolation level that database vendors says it provides. In this paper, we present a method for verifying that a database implements an isolation level: we derive isolation levels directly, as formalized in transactional consistency models by the database community, from the structure of separation logic specifications. By doing so, we consider all program executions that a database and arbitrary clients of the database could produce. The result is a so-called free theorem meaning that any database implementation, whose operations are verified against a specific set of separation logic specifications, actually implements its isolation level. As all proofs in this paper are mechanized in the Rocq proof assistant and build upon a detailed semantic model of program execution, we believe this contribution raises the bar for the achievable robustness of databases.</summary>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-17T11:44:35Z</published>
+    <arxiv:primary_category term="cs.DB"/>
+    <author>
+      <name>Anders Alnor Mathiasen</name>
+    </author>
+    <author>
+      <name>Amin Timany</name>
+    </author>
+    <author>
+      <name>Lars Birkedal</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.14067v1</id>
+    <title>Fast Verification of Strong Database Isolation (Extended Version)</title>
+    <updated>2025-11-18T02:48:52Z</updated>
+    <link href="https://arxiv.org/abs/2511.14067v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.14067v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Strong isolation guarantees, such as serializability and snapshot isolation, are essential for maintaining data consistency and integrity in modern databases. Verifying whether a database upholds its claimed guarantees is increasingly critical, as these guarantees form a contract between the vendor and its users. However, this task is challenging, particularly in black-box settings, where only observable system behavior is available and often involves uncertain dependencies between transactions.
+  In this paper, we present VeriStrong, a fast verifier for strong database isolation. At its core is a novel formalism called hyper-polygraphs, which compactly captures both certain and uncertain transactional dependencies in database executions. Leveraging this formalism, we develop sound and complete encodings for verifying both serializability and snapshot isolation. To achieve high efficiency, VeriStrong tailors SMT solving to the characteristics of database workloads, in contrast to prior general-purpose approaches. Our extensive evaluation across diverse benchmarks shows that VeriStrong not only significantly outperforms state-of-the-art verifiers on the workloads they support, but also scales to large, general workloads beyond their reach, while maintaining high accuracy in detecting isolation anomalies.</summary>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-18T02:48:52Z</published>
+    <arxiv:comment>18 pages, 19 figures, 3 tables; Accepted by VLDB'2026</arxiv:comment>
+    <arxiv:primary_category term="cs.DB"/>
+    <author>
+      <name>Zhiheng Cai</name>
+    </author>
+    <author>
+      <name>Si Liu</name>
+    </author>
+    <author>
+      <name>Hengfeng Wei</name>
+    </author>
+    <author>
+      <name>Yuxing Chen</name>
+    </author>
+    <author>
+      <name>Anqun Pan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.18409v3</id>
+    <title>On the Complexity of Checking Mixed Isolation Levels for SQL Transactions</title>
+    <updated>2025-07-15T17:50:19Z</updated>
+    <link href="https://arxiv.org/abs/2505.18409v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.18409v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Concurrent accesses to databases are typically grouped in transactions which define units of work that should be isolated from other concurrent computations and resilient to failures. Modern databases provide different levels of isolation for transactions that correspond to different trade-offs between consistency and throughput. Quite often, an application can use transactions with different isolation levels at the same time. In this work, we investigate the problem of testing isolation level implementations in databases, i.e., checking whether a given execution composed of multiple transactions adheres to the prescribed isolation level semantics. We particularly focus on transactions formed of SQL queries and the use of multiple isolation levels at the same time. We show that many restrictions of this problem are NP-complete and provide an algorithm which is exponential-time in the worst-case, polynomial-time in relevant cases, and practically efficient.</summary>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-23T22:33:03Z</published>
+    <arxiv:primary_category term="cs.DB"/>
+    <arxiv:journal_ref>CAV 2025 Full Version</arxiv:journal_ref>
+    <author>
+      <name>Ahmed Bouajjani</name>
+    </author>
+    <author>
+      <name>Constantin Enea</name>
+    </author>
+    <author>
+      <name>Enrique Román-Calvo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.12606v3</id>
+    <title>Dynamic Partial Order Reduction for Checking Correctness against Transaction Isolation Levels</title>
+    <updated>2023-04-14T15:46:27Z</updated>
+    <link href="https://arxiv.org/abs/2303.12606v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.12606v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Modern applications, such as social networking systems and e-commerce platforms are centered around using large-scale databases for storing and retrieving data. Accesses to the database are typically enclosed in transactions that allow computations on shared data to be isolated from other concurrent computations and resilient to failures. Modern databases trade isolation for performance. The weaker the isolation level is, the more behaviors a database is allowed to exhibit and it is up to the developer to ensure that their application can tolerate those behaviors.
+  In this work, we propose stateless model checking algorithms for studying correctness of such applications that rely on dynamic partial order reduction. These algorithms work for a number of widely-used weak isolation levels, including Read Committed, Causal Consistency, Snapshot Isolation, and Serializability. We show that they are complete, sound and optimal, and run with polynomial memory consumption in all cases. We report on an implementation of these algorithms in the context of Java Pathfinder applied to a number of challenging applications drawn from the literature of distributed systems and databases.</summary>
+    <category term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-22T14:45:04Z</published>
+    <arxiv:comment>Submission to PLDI 2023</arxiv:comment>
+    <arxiv:primary_category term="cs.PL"/>
+    <author>
+      <name>Ahmed Bouajjani</name>
+    </author>
+    <author>
+      <name>Constantin Enea</name>
+    </author>
+    <author>
+      <name>Enrique Román-Calvo</name>
+    </author>
+    <arxiv:doi>10.1145/3591243</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3591243" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.17377v1</id>
+    <title>Anomaly Pattern-guided Transaction Bug Testing in Relational Databases</title>
+    <updated>2025-11-21T16:40:41Z</updated>
+    <link href="https://arxiv.org/abs/2511.17377v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.17377v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Concurrent transaction processing is a fundamental capability of Relational Database Management Systems (RDBMSs), widely utilized in applications requiring high levels of parallel user interaction, such as banking systems, e-commerce platforms, and telecommunications infrastructure. Isolation levels offer a configurable mechanism to manage the interaction between concurrent transactions, enabling varying degrees of consistency and performance trade-offs. These isolation guarantees are supported by all major RDBMSs. However, testing transaction behavior under different isolation levels remains a significant challenge due to two primary reasons. First, automatically generating test transactions that can effectively expose bugs in transaction handling logic is non-trivial, as such bugs are typically triggered under specific transactional constraints. Second, detecting logic anomalies in transaction outcomes is difficult because the correct execution results are often unknown for randomly generated transactions. To address these challenges, we propose an anomaly pattern-guided testing approach for uncovering transaction bugs in RDBMSs. Our solution tackles the first challenge by introducing a test case generation technique guided by predefined anomaly patterns, which increases the likelihood of exposing transactional bugs. For the second challenge, we present a two-phase detection process, involving explicit error detection and implicit error detection, to identify bugs in transaction execution. We have implemented our approach in a tool, APTrans, and evaluated it on three widely-used RDBMSs: MySQL, MariaDB, and OceanBase. APTrans successfully identified 13 previously unknown transaction-related bugs, 11 of which have been confirmed by the respective development teams.</summary>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-21T16:40:41Z</published>
+    <arxiv:primary_category term="cs.DB"/>
+    <author>
+      <name>Huicong Xu</name>
+    </author>
+    <author>
+      <name>Shuang Liu</name>
+    </author>
+    <author>
+      <name>Xianyu Zhu</name>
+    </author>
+    <author>
+      <name>Qiyu Zhuang</name>
+    </author>
+    <author>
+      <name>Wei Lu</name>
+    </author>
+    <author>
+      <name>Xiaoyong Du</name>
+    </author>
+  </entry>
+</feed>

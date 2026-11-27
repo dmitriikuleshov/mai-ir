@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/qKPuue5LRixpYutGn6rghFQiCZQ</id>
+  <title>arXiv Query: search_query=all:"TLS" AND all:"certificate" AND all:"validation"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:23:56Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22TLS%22+AND+(all:%22certificate%22+AND+all:%22validation%22)&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>30</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2603.21652v2</id>
+    <title>TLS Certificate and Domain Feature Analysis of Phishing Domains in the Danish .dk Namespace</title>
+    <updated>2026-05-18T13:13:16Z</updated>
+    <link href="https://arxiv.org/abs/2603.21652v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.21652v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Phishing attacks remain a persistent cybersecurity threat, and the widespread adoption of TLS certificates has unintentionally enabled malicious websites to appear trustworthy to users. This study examines whether certificate metadata and domain characteristics can help distinguish phishing domains from benign domains within the Danish .dk namespace. A dataset was constructed by combining registry information from Punktum dk with phishing reports and popularity rankings from external sources. TLS certificate attributes were collected using Netlas, while additional domain-based features were derived from DNS records and lexical analysis of domain names. The analysis compares phishing, popular, and less frequently visited domains across several feature categories, including Certificate Authorities (CAs), validity periods, missing certificate fields, SAN structure, registrant geography, hosting providers, and lexical properties of domain names. The results indicate that several features show observable differences between phishing and highly popular domains. However, phishing domains often resemble less popular domains, resulting in substantial overlap across many characteristics. Consequently, no individual feature provides a reliable standalone indicator of phishing activity within the Danish namespace. The findings suggest that certificate and domain attributes may still contribute to detection when combined, while also highlighting the limitations of relying on individual indicators in isolation. This work provides an empirical overview of phishing-related infrastructure patterns in the Danish .dk ecosystem and offers insights that may inform future phishing detection approaches.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-23T07:30:05Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Athanasios P. Pelekoudas</name>
+    </author>
+    <author>
+      <name>Epameinondas Bolis</name>
+    </author>
+    <author>
+      <name>Jasmin Lindner</name>
+    </author>
+    <author>
+      <name>Prodromos Kyriakidis</name>
+    </author>
+    <author>
+      <name>Mathias Davidsen</name>
+    </author>
+    <author>
+      <name>Johannes T. E. Hansen</name>
+    </author>
+    <author>
+      <name>Christian H. Reichkendler</name>
+    </author>
+    <author>
+      <name>Sajad Homayoun</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.16897v2</id>
+    <title>Assessing SSL/TLS Certificate Centralization: Implications for Digital Sovereignty</title>
+    <updated>2025-04-24T18:11:17Z</updated>
+    <link href="https://arxiv.org/abs/2504.16897v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.16897v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>SSL/TLS is a fundamental technology in the network protocol stack that enables encrypted data transmission and authentication of web domains. However, the current model relies on a small number of Certificate Authorities (CAs) to provide and validate certificates, thus creating a highly centralized ecosystem. In this paper, we analyze the degree of centralization of certificate provisioning from CAs in two major political groups: Brazil, Russia, India, China, and South Africa (BRICS) and the European Union (EU). We have found that over 75% of certificates for both BRICS and EU domains originate from CAs based in the United States, indicating possible risks to their digital sovereignty due to the high level of external dependency. This indicates the need for nations within those groups to research alternatives to reduce the high level of dependency on foreign CAs and increase their digital autonomy.</summary>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-23T17:26:18Z</published>
+    <arxiv:comment>Long version. A short version has been submitted to the IEEE Global Communications Conference (GLOBECOM 2025)</arxiv:comment>
+    <arxiv:primary_category term="cs.NI"/>
+    <author>
+      <name>Andrei Cordova Azevedo</name>
+    </author>
+    <author>
+      <name>Eder John Scheid</name>
+    </author>
+    <author>
+      <name>Muriel Figueredo Franco</name>
+    </author>
+    <author>
+      <name>Lisandro Zambenedetti Granville</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2207.11610v1</id>
+    <title>Will You Trust This TLS Certificate? Perceptions of People Working in IT (Extended Version)</title>
+    <updated>2022-07-23T21:33:21Z</updated>
+    <link href="https://arxiv.org/abs/2207.11610v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2207.11610v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Flawed TLS certificates are not uncommon on the Internet. While they signal a potential issue, in most cases they have benign causes (e.g., misconfiguration or even deliberate deployment). This adds fuzziness to the decision on whether to trust a connection or not. Little is known about perceptions of flawed certificates by IT professionals, even though their decisions impact high numbers of end users. Moreover, it is unclear how much the content of error messages and documentation influences these perceptions. To shed light on these issues, we observed 75 attendees of an industrial IT conference investigating different certificate validation errors. We also analyzed the influence of reworded error messages and redesigned documentation. We find that people working in IT have very nuanced opinions, with trust decisions being far from binary. The self-signed and the name-constrained certificates seem to be over-trusted (the latter also being poorly understood). We show that even small changes in existing error messages can positively influence resource use, comprehension, and trust assessment. At the end of the article, we summarize lessons learned from conducting usable security studies with IT professionals.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-07-23T21:33:21Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <arxiv:journal_ref>Digital Threats: Research and Practice, Volume 1, Issue 4, December 2020, Article No.: 25, pp 1-29</arxiv:journal_ref>
+    <author>
+      <name>Martin Ukrop</name>
+    </author>
+    <author>
+      <name>Lydia Kraus</name>
+    </author>
+    <author>
+      <name>Vashek Matyas</name>
+    </author>
+    <arxiv:doi>10.1145/3419472</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3419472" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.08364v2</id>
+    <title>Overcoming DNSSEC Islands of Security: A TLS and IP-Based Certificate Solution</title>
+    <updated>2025-12-08T17:43:27Z</updated>
+    <link href="https://arxiv.org/abs/2509.08364v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.08364v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Domain Name System (DNS) serves as the backbone of the Internet, primarily translating domain names to IP addresses. Over time, various enhancements have been introduced to strengthen the integrity of DNS. Among these, DNSSEC stands out as a leading cryptographic solution. It protects against attacks (such as DNS spoofing) by establishing a chain of trust throughout the DNS nameserver hierarchy. However, DNSSEC's effectiveness is compromised when there is a break in this chain, resulting in "Islands of Security", where domains can authenticate locally but not across hierarchical levels, leading to a loss of trust and validation between them. Leading approaches to addressing these issues were centralized, with a single authority maintaining some kind of bulletin board. This approach requires significantly more infrastructure and places excessive trust in the entity responsible for managing it properly. In this paper, we propose a decentralized approach to addressing gaps in DNSSEC's chain of trust, commonly referred to as "Islands of Security". We leverage TLS and IP-based certificates to enable end-to-end authentication between hierarchical levels, eliminating the need for uniform DNSSEC deployment across every level of the DNS hierarchy. This approach enhances the overall integrity of DNSSEC, while reducing dependence on registrars for maintaining signature records to verify the child nameserver's authenticity. By offering a more flexible and efficient solution, our method strengthens DNS security and streamlines deployment across diverse environments.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-10T08:02:07Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Aduma Rishith</name>
+    </author>
+    <author>
+      <name>Aditya Kulkarni</name>
+    </author>
+    <author>
+      <name>Tamal Das</name>
+    </author>
+    <author>
+      <name>Vivek Balachandran</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1705.09044v1</id>
+    <title>Detecting Malignant TLS Servers Using Machine Learning Techniques</title>
+    <updated>2017-05-25T04:54:01Z</updated>
+    <link href="https://arxiv.org/abs/1705.09044v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1705.09044v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>TLS uses X.509 certificates for server authentication. A X.509 certificate is a complex document and various innocent errors may occur while creating/ using it. Also, many certificates belong to malicious websites and should be rejected by the client and those web servers should not be visited. Usually, when a client finds a certificate that is doubtful using the traditional tests, it asks for human intervention. But, looking at certificates, most people can't differentiate between malicious and non-malicious websites. Thus, once traditional certificate validation has failed, instead of asking for human intervention, we use machine learning techniques to enable a web browser to decide whether the server to which the certificate belongs to is malignant or not ie, whether the website should be visited or not.
+  Once a certificate has been accepted in the above phase, we observe that the website may still turn out to be malicious. So, in the second phase, we download a part of the website in a sandbox without decrypting it and observe the TLS encrypted traffic (encrypted malicious data captured in a sandbox cannot harm the system). As the traffic is encrypted after Handshake is completed, traditional pattern-matching techniques cannot be employed. Thus we use flow features of the traffic along with the features used in the above first phase. We couple these features with the unencrypted TLS header information obtained during TLS Handshake and use these in a machine learning classifier to identify whether the traffic is malicious or not.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-05-25T04:54:01Z</published>
+    <arxiv:comment>7 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Sankalp Bagaria</name>
+    </author>
+    <author>
+      <name>R. Balaji</name>
+    </author>
+    <author>
+      <name>B. S. Bindhumadhava</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1806.03914v2</id>
+    <title>CertLedger: A New PKI Model with Certificate Transparency Based on Blockchain</title>
+    <updated>2018-10-01T12:50:27Z</updated>
+    <link href="https://arxiv.org/abs/1806.03914v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1806.03914v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In conventional PKI, CAs are assumed to be fully trusted. However, in practice, CAs' absolute responsibility for providing trustworthiness caused major security and privacy issues. To prevent such issues, Google introduced the concept of Certificate Transparency (CT) in 2013. Later, several new PKI models (e.g., AKI, ARPKI, and DTKI) are proposed to reduce the level of trust to the CAs. However, all of these proposals are still vulnerable to split-world attacks if the adversary is capable of showing different views of the log to the targeted victims. In this paper, we propose a new PKI architecture with certificate transparency based on blockchain, what we called CertLedger, to eliminate the split-world attacks and to provide an ideal certificate/revocation transparency. All TLS certificates, their revocation status, entire revocation process, and trusted CA management are conducted in the CertLedger. CertLedger provides a unique, efficient, and trustworthy certificate validation process eliminating the conventional inadequate and incompatible certificate validation processes implemented by different software vendors. TLS clients in the CertLedger also do not require to make certificate validation and store the trusted CA certificates anymore. We analyze the security and performance of the CertLedger and provide a comparison with the previous proposals.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-06-11T11:24:54Z</published>
+    <arxiv:comment>17 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Murat Yasin Kubilay</name>
+    </author>
+    <author>
+      <name>Mehmet Sabir Kiraz</name>
+    </author>
+    <author>
+      <name>Haci Ali Mantar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1610.08570v1</id>
+    <title>TrustBase: An Architecture to Repair and Strengthen Certificate-based Authentication</title>
+    <updated>2016-10-26T23:20:56Z</updated>
+    <link href="https://arxiv.org/abs/1610.08570v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1610.08570v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We describe TrustBase, an architecture that provides certificate-based authentication as an operating system service. TrustBase enforces best practices for certificate validation for all applications and transparently enables existing applications to be strengthened against failures of the CA system. The TrustBase system allows simple deployment of authentication systems that harden the CA system. This enables system administrators, for example, to require certificate revocation checks on all TLS connections, or require STARTTLS for email servers that support it. TrustBase is the first system that is able to secure all TLS traffic, using an approach compatible with all operating systems. We design and evaluate a prototype implementation of TrustBase on Linux, evaluate its security, and demonstrate that it has negligible overhead and universal compatibility with applications. To demonstrate the utility of TrustBase, we have developed six authentication services that strengthen certificate validation for all applications.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-10-26T23:20:56Z</published>
+    <arxiv:comment>15 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Mark O'Neill</name>
+    </author>
+    <author>
+      <name>Scott Heidbrink</name>
+    </author>
+    <author>
+      <name>Jordan Whitehead</name>
+    </author>
+    <author>
+      <name>Scott Ruoti</name>
+    </author>
+    <author>
+      <name>Dan Bunker</name>
+    </author>
+    <author>
+      <name>Kent Seamons</name>
+    </author>
+    <author>
+      <name>Daniel Zappala</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1809.08729v1</id>
+    <title>The Sorry State of TLS Security in Enterprise Interception Appliances</title>
+    <updated>2018-09-24T02:39:02Z</updated>
+    <link href="https://arxiv.org/abs/1809.08729v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1809.08729v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Network traffic inspection, including TLS traffic, in enterprise environments is widely practiced. Reasons for doing so are primarily related to improving enterprise security (e.g., malware detection) and meeting legal requirements. To analyze TLS-encrypted data, network appliances implement a Man-in-the-Middle TLS proxy, by acting as the intended web server to a requesting client (e.g., a browser), and acting as the client to the outside web server. As such, the TLS proxy must implement both a TLS client and a server, and handle a large amount of traffic, preferably, in real-time. However, as protocol and implementation layer vulnerabilities in TLS/HTTPS are quite frequent, these proxies must be, at least, as secure as a modern, up-to-date web browser, and a properly configured web server. As opposed to client-end TLS proxies (e.g., as in several anti-virus products), the proxies in network appliances may serve hundreds to thousands of clients, and any vulnerability in their TLS implementations can significantly downgrade enterprise security.
+  To analyze TLS security of network appliances, we develop a comprehensive framework, by combining and extending tests from existing work on client-end and network-based interception studies. We analyze thirteen representative network appliances over a period of more than a year (including versions before and after notifying affected vendors, a total of 17 versions), and uncover several security issues. For instance, we found that four appliances perform no certificate validation at all, three use pre-generated certificates, and eleven accept certificates signed using MD5, exposing their clients to MITM attacks. Our goal is to highlight the risks introduced by widely-used TLS proxies in enterprise and government environments, potentially affecting many systems hosting security, privacy, and financially sensitive data.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-09-24T02:39:02Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Louis Waked</name>
+    </author>
+    <author>
+      <name>Mohammad Mannan</name>
+    </author>
+    <author>
+      <name>Amr Youssef</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.04238v1</id>
+    <title>Post-Quantum Identity-Based TLS for 5G Service-Based Architecture and Cloud-Native Infrastructure</title>
+    <updated>2026-02-04T05:55:41Z</updated>
+    <link href="https://arxiv.org/abs/2602.04238v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.04238v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Cloud-native application platforms and latency-sensitive systems such as 5G Core networks rely heavily on certificate-based Public Key Infrastructure (PKI) and mutual TLS to secure service-to-service communication. While effective, this model introduces significant operational and performance overhead, which is further amplified in the post-quantum setting due to large certificates and expensive signature verification. In this paper, we present a certificate-free authentication framework for private distributed systems based on post-quantum Identity-Based Encryption(IBE). Our design replaces certificate and signature based authentication with identity-derived keys and identity-based key encapsulation, enabling mutually authenticated TLS connections without certificate transmission or validation. We describe an IBE-based replacement for private PKI, including identity lifecycle management, and show how it can be instantiated using a threshold Private Key Generator (T-PKG). We apply this framework to cloud-native application deployments and latency-sensitive 5G Core networks. In particular, we demonstrate how identity-based TLS integrates with the 5G Service-Based Architecture while preserving security semantics and 3GPP requirements, and we show how the same architecture can replace private PKI in Kubernetes, including its control plane, without disrupting existing trust domains or deployment models.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-04T05:55:41Z</published>
+    <arxiv:comment>29 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Vipin Kumar Rathi</name>
+    </author>
+    <author>
+      <name>Lakshya Chopra</name>
+    </author>
+    <author>
+      <name>Nikhil Kumar Rajput</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1601.03874v2</id>
+    <title>PKI Safety Net (PKISN): Addressing the Too-Big-to-Be-Revoked Problem of the TLS Ecosystem</title>
+    <updated>2016-02-01T13:43:16Z</updated>
+    <link href="https://arxiv.org/abs/1601.03874v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1601.03874v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In a public-key infrastructure (PKI), clients must have an efficient and secure way to determine whether a certificate was revoked (by an entity considered as legitimate to do so), while preserving user privacy. A few certification authorities (CAs) are currently responsible for the issuance of the large majority of TLS certificates. These certificates are considered valid only if the certificate of the issuing CA is also valid. The certificates of these important CAs are effectively too big to be revoked, as revoking them would result in massive collateral damage. To solve this problem, we redesign the current revocation system with a novel approach that we call PKI Safety Net (PKISN), which uses publicly accessible logs to store certificates (in the spirit of Certificate Transparency) and revocations. The proposed system extends existing mechanisms, which enables simple deployment. Moreover, we present a complete implementation and evaluation of our scheme.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-01-15T11:00:22Z</published>
+    <arxiv:comment>IEEE EuroS&amp;P 2016</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Pawel Szalachowski</name>
+    </author>
+    <author>
+      <name>Laurent Chuat</name>
+    </author>
+    <author>
+      <name>Adrian Perrig</name>
+    </author>
+    <arxiv:doi>10.1109/EuroSP.2016.38</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/EuroSP.2016.38" title="doi"/>
+  </entry>
+</feed>

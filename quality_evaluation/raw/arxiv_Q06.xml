@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/kolwc9V/Wtzf2vzG3f54qtP++c0</id>
+  <title>arXiv Query: search_query=all:".NET" AND all:"garbage" AND all:"collection"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:23:45Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22.NET%22+AND+(all:%22garbage%22+AND+all:%22collection%22)&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>6</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2410.00540v1</id>
+    <title>Conditional Nested Pattern Matching in Interaction Net</title>
+    <updated>2024-10-01T09:29:05Z</updated>
+    <link href="https://arxiv.org/abs/2410.00540v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.00540v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Interaction nets are a form of restricted graph rewrite system that can serve as a graphical or textual programming language. As such, benefits include one-step confluence, ease of parallelism and explicit garbage collection. However, some of these restrictions burden the programmer, so they have been extended in several ways, notably to include data types and conditional rules. This paper introduces a further extension to allow nested pattern matching and to do so in a way that preserves these benefits and fundamental properties of interaction nets. We also show that by introducing a translation to non-nested matching, this extension is conservative in rewriting. In addition, we propose a new notation to express this pattern matching.</summary>
+    <category term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-01T09:29:05Z</published>
+    <arxiv:comment>In Proceedings DCM 2023, arXiv:2409.19298</arxiv:comment>
+    <arxiv:primary_category term="cs.PL"/>
+    <arxiv:journal_ref>EPTCS 408, 2024, pp. 90-106</arxiv:journal_ref>
+    <author>
+      <name>Shinya Sato</name>
+    </author>
+    <arxiv:doi>10.4204/EPTCS.408.6</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.4204/EPTCS.408.6" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1810.02272v1</id>
+    <title>MyCaffe: A Complete C# Re-Write of Caffe with Reinforcement Learning</title>
+    <updated>2018-10-04T15:15:36Z</updated>
+    <link href="https://arxiv.org/abs/1810.02272v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1810.02272v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Over the past few years Caffe, from Berkeley AI Research, has gained a strong following in the deep learning community with over 15K forks on the github.com/BLVC/Caffe site. With its well organized, very modular C++ design it is easy to work with and very fast. However, in the world of Windows development, C# has helped accelerate development with many of the enhancements that it offers over C++, such as garbage collection, a very rich .NET programming framework and easy database access via Entity Frameworks. So how can a C# developer use the advances of C# to take full advantage of the benefits offered by the Berkeley Caffe deep learning system? The answer is the fully open source, 'MyCaffe' for Windows .NET programmers. MyCaffe is an open source, complete C# language re-write of Berkeley's Caffe. This article describes the general architecture of MyCaffe including the newly added MyCaffeTrainerRL for Reinforcement Learning. In addition, this article discusses how MyCaffe closely follows the C++ Caffe, while talking efficiently to the low level NVIDIA CUDA hardware to offer a high performance, highly programmable deep learning system for Windows .NET programmers.</summary>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-10-04T15:15:36Z</published>
+    <arxiv:comment>13 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.NE"/>
+    <author>
+      <name>David W. Brown</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2010.11242v1</id>
+    <title>Uncovering the Hidden Dangers: Finding Unsafe Go Code in the Wild</title>
+    <updated>2020-10-21T18:55:15Z</updated>
+    <link href="https://arxiv.org/abs/2010.11242v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2010.11242v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Go programming language aims to provide memory and thread safety through measures such as automated memory management with garbage collection and a strict type system. However, it also offers a way of circumventing this safety net through the use of the unsafe package. While there are legitimate use cases for unsafe, developers must exercise caution to avoid introducing vulnerabilities like buffer overflows or memory corruption in general. Using go-geiger, we conducted a study on the usage of unsafe in the top 500 most popular open-source Go projects on GitHub, including a manual analysis of 1,400 code samples on how unsafe is used. From the projects using Go's module system, 38% directly contain at least one unsafe usage, and 91% contain at least one unsafe usage in the project itself or one of its transitive dependencies. Based on the usage patterns found, we present possible exploit vectors in different scenarios. Finally, we present go-safer, a novel static analysis tool to identify dangerous and common usage patterns that were previously undetected with existing tools.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-10-21T18:55:15Z</published>
+    <arxiv:comment>This is a copy of the accepted version at The 19th IEEE International Conference on Trust, Security and Privacy in Computing and Communications (TrustCom 2020)</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Johannes Lauinger</name>
+      <arxiv:affiliation>Technische Universität Darmstadt</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Lars Baumgärtner</name>
+      <arxiv:affiliation>Technische Universität Darmstadt</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Anna-Katharina Wickert</name>
+      <arxiv:affiliation>Technische Universität Darmstadt</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Mira Mezini</name>
+      <arxiv:affiliation>Technische Universität Darmstadt</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.31767v2</id>
+    <title>JETO-Bench: A Reproducible Benchmark for Execution Time Improvement Patches in Java</title>
+    <updated>2026-07-26T15:33:07Z</updated>
+    <link href="https://arxiv.org/abs/2606.31767v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.31767v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Automated fixing of performance issues is gaining attention, but existing benchmarks of execution time improvement patches (ETIPs) target Python, C++, or .NET and are fixed datasets that cannot be extended under user-defined configurations. We present JETO-Mine, the first configurable and reusable tool for automatically creating reproducible benchmarks of ETIPs in real-world Java projects. Java is challenging because just-in-time compilation and garbage collection make execution measurements volatile. JETO-Mine employs a three-phase pipeline: static analysis identifies ETIPs from GitHub repositories using user-defined filters and an LLM-based issue classifier, dynamic analysis wraps identified ETIPs in Docker images and performs statistical testing for evidence of execution time improvement, and an evaluation harness supports quantitative assessment of both patch and test generation tools. Using JETO-Mine, we build JETO-Bench, a benchmark of 660 identified and 91 manually verified executable ETIPs from 174 Java repositories, mined from nearly 1.8 million commits across 11 years. Running OpenHands with GPT-5-mini fixes 14.3% (13/91) of issues, aligning with prior work on other languages. Our results also reveal that open-source Java projects largely lack tests demonstrating execution time improvements, presenting an opportunity for future research in test generation. JETO-Mine and JETO-Bench are publicly available at https://github.com/khesoem/JETO-Bench.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-30T14:54:25Z</published>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Khashayar Etemadi</name>
+    </author>
+    <author>
+      <name>Zhendong Su</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1304.4159v1</id>
+    <title>Abstract machines for game semantics, revisited</title>
+    <updated>2013-04-15T16:29:47Z</updated>
+    <link href="https://arxiv.org/abs/1304.4159v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1304.4159v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We define new abstract machines for game semantics which correspond to networks of conventional computers, and can be used as an intermediate representation for compilation targeting distributed systems. This is achieved in two steps. First we introduce the HRAM, a Heap and Register Abstract Machine, an abstraction of a conventional computer, which can be structured into HRAM nets, an abstract point-to-point network model. HRAMs are multi-threaded and subsume communication by tokens (cf. IAM) or jumps. Game Abstract Machines (GAM), are HRAMs with additional structure at the interface level, but no special operational capabilities. We show that GAMs cannot be naively composed, but composition must be mediated using appropriate HRAM combinators. HRAMs are flexible enough to allow the representation of game models for languages with state (non-innocent games) or concurrency (non-alternating games). We illustrate the potential of this technique by implementing a toy distributed compiler for ICA, a higher-order programming language with shared state concurrency, thus significantly extending our previous distributed PCF compiler. We show that compilation is sound and memory-safe, i.e. no (distributed or local) garbage collection is necessary.</summary>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-04-15T16:29:47Z</published>
+    <arxiv:primary_category term="cs.LO"/>
+    <author>
+      <name>Olle Fredriksson</name>
+    </author>
+    <author>
+      <name>Dan R. Ghica</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2311.16585v1</id>
+    <title>Sorting Out New York City's Trash Problem</title>
+    <updated>2023-11-28T08:03:30Z</updated>
+    <link href="https://arxiv.org/abs/2311.16585v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2311.16585v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>To reduce waste and improve public health and sanitation in New York City, innovative policies tailored to the city's unique urban landscape are necessary. The first program we propose is the Dumpster and Compost Accessibility Program. This program is affordable and utilizes dumpsters placed near fire hydrants to keep waste off the street without eliminating parking spaces. It also includes legal changes and the provision of compost bins to single/two-family households, which together will increase composting rates. The second program is the Pay-As-You-Throw Program. This requires New Yorkers living in single/two-family households to purchase stickers for each refuse bag they have collected by the city, incentivizing them to sort out compostable waste and recyclables. We conduct a weighted multi-objective optimization to determine the optimal sticker price based on the City's priorities. Roughly in proportion to the price, this program will increase diversion rates and decrease the net costs to New York City's Department of Sanitation. In conjunction, these two programs will improve NYC's diversion rates, eliminate garbage bags from the streets, and potentially save New York City money.</summary>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-11-28T08:03:30Z</published>
+    <arxiv:primary_category term="cs.CY"/>
+    <author>
+      <name>Steven DiSilvio</name>
+    </author>
+    <author>
+      <name>Anthony Ozerov</name>
+    </author>
+    <author>
+      <name>Leon Zhou</name>
+    </author>
+  </entry>
+</feed>

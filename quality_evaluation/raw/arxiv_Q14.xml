@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/KjIe/RmJp2gxmCuDwplj0jEpckw</id>
+  <title>arXiv Query: search_query=all:"retrieval" AND all:"augmented" AND all:"generation"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:24:16Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22retrieval%22+AND+(all:%22augmented%22+AND+all:%22generation%22)&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>9056</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2506.06962v3</id>
+    <title>AR-RAG: Autoregressive Retrieval Augmentation for Image Generation</title>
+    <updated>2025-06-14T00:40:34Z</updated>
+    <link href="https://arxiv.org/abs/2506.06962v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.06962v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce Autoregressive Retrieval Augmentation (AR-RAG), a novel paradigm that enhances image generation by autoregressively incorporating knearest neighbor retrievals at the patch level. Unlike prior methods that perform a single, static retrieval before generation and condition the entire generation on fixed reference images, AR-RAG performs context-aware retrievals at each generation step, using prior-generated patches as queries to retrieve and incorporate the most relevant patch-level visual references, enabling the model to respond to evolving generation needs while avoiding limitations (e.g., over-copying, stylistic bias, etc.) prevalent in existing methods. To realize AR-RAG, we propose two parallel frameworks: (1) Distribution-Augmentation in Decoding (DAiD), a training-free plug-and-use decoding strategy that directly merges the distribution of model-predicted patches with the distribution of retrieved patches, and (2) Feature-Augmentation in Decoding (FAiD), a parameter-efficient fine-tuning method that progressively smooths the features of retrieved patches via multi-scale convolution operations and leverages them to augment the image generation process. We validate the effectiveness of AR-RAG on widely adopted benchmarks, including Midjourney-30K, GenEval and DPG-Bench, demonstrating significant performance gains over state-of-the-art image generation models.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-08T01:33:05Z</published>
+    <arxiv:comment>Image Generation, Retrieval Augmented Generation</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Jingyuan Qi</name>
+    </author>
+    <author>
+      <name>Zhiyang Xu</name>
+    </author>
+    <author>
+      <name>Qifan Wang</name>
+    </author>
+    <author>
+      <name>Lifu Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.18583v1</id>
+    <title>Automated Literature Review Using NLP Techniques and LLM-Based Retrieval-Augmented Generation</title>
+    <updated>2024-11-27T18:27:07Z</updated>
+    <link href="https://arxiv.org/abs/2411.18583v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.18583v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This research presents and compares multiple approaches to automate the generation of literature reviews using several Natural Language Processing (NLP) techniques and retrieval-augmented generation (RAG) with a Large Language Model (LLM). The ever-increasing number of research articles provides a huge challenge for manual literature review. It has resulted in an increased demand for automation. Developing a system capable of automatically generating the literature reviews from only the PDF files as input is the primary objective of this research work. The effectiveness of several Natural Language Processing (NLP) strategies, such as the frequency-based method (spaCy), the transformer model (Simple T5), and retrieval-augmented generation (RAG) with Large Language Model (GPT-3.5-turbo), is evaluated to meet the primary objective. The SciTLDR dataset is chosen for this research experiment and three distinct techniques are utilized to implement three different systems for auto-generating the literature reviews. The ROUGE scores are used for the evaluation of all three systems. Based on the evaluation, the Large Language Model GPT-3.5-turbo achieved the highest ROUGE-1 score, 0.364. The transformer model comes in second place and spaCy is at the last position. Finally, a graphical user interface is created for the best system based on the large language model.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-27T18:27:07Z</published>
+    <arxiv:comment>Key Words : T5, SpaCy, Large Language Model, GPT, ROUGE, Literature Review, Natural Language Processing, Retrieval-augmented generation</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Nurshat Fateh Ali</name>
+    </author>
+    <author>
+      <name>Md. Mahdi Mohtasim</name>
+    </author>
+    <author>
+      <name>Shakil Mosharrof</name>
+    </author>
+    <author>
+      <name>T. Gopi Krishna</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.12317v2</id>
+    <title>EVOR: Evolving Retrieval for Code Generation</title>
+    <updated>2024-12-03T15:56:26Z</updated>
+    <link href="https://arxiv.org/abs/2402.12317v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.12317v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently the retrieval-augmented generation (RAG) has been successfully applied in code generation. However, existing pipelines for retrieval-augmented code generation (RACG) employ static knowledge bases with a single source, limiting the adaptation capabilities of Large Language Models (LLMs) to domains they have insufficient knowledge of. In this work, we develop a novel pipeline, EVOR, that employs the synchronous evolution of both queries and diverse knowledge bases. On two realistic settings where the external knowledge is required to solve code generation tasks, we compile four new datasets associated with frequently updated libraries and long-tail programming languages, named EVOR-BENCH. Extensive experiments demonstrate that EVOR achieves two to four times of execution accuracy compared to other methods such as Reflexion (Shinn et al., 2024), DocPrompting (Zhou et al., 2023), etc. We demonstrate that EVOR is flexible and can be easily combined with them to achieve further improvement. Further analysis reveals that EVOR benefits from the synchronous evolution of queries and documents and the diverse information sources in the knowledge base. We hope that our studies will inspire more insights into the design of advanced RACG pipelines in future research. Our model, code, and data are available at https://arks-codegen.github.io.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-19T17:37:28Z</published>
+    <arxiv:comment>Retrieval-augmented code generation</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Hongjin Su</name>
+    </author>
+    <author>
+      <name>Shuyang Jiang</name>
+    </author>
+    <author>
+      <name>Yuhang Lai</name>
+    </author>
+    <author>
+      <name>Haoyuan Wu</name>
+    </author>
+    <author>
+      <name>Boao Shi</name>
+    </author>
+    <author>
+      <name>Che Liu</name>
+    </author>
+    <author>
+      <name>Qian Liu</name>
+    </author>
+    <author>
+      <name>Tao Yu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.00306v2</id>
+    <title>Riddle Me This! Stealthy Membership Inference for Retrieval-Augmented Generation</title>
+    <updated>2025-06-30T16:37:59Z</updated>
+    <link href="https://arxiv.org/abs/2502.00306v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.00306v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Retrieval-Augmented Generation (RAG) enables Large Language Models (LLMs) to generate grounded responses by leveraging external knowledge databases without altering model parameters. Although the absence of weight tuning prevents leakage via model parameters, it introduces the risk of inference adversaries exploiting retrieved documents in the model's context. Existing methods for membership inference and data extraction often rely on jailbreaking or carefully crafted unnatural queries, which can be easily detected or thwarted with query rewriting techniques common in RAG systems. In this work, we present Interrogation Attack (IA), a membership inference technique targeting documents in the RAG datastore. By crafting natural-text queries that are answerable only with the target document's presence, our approach demonstrates successful inference with just 30 queries while remaining stealthy; straightforward detectors identify adversarial prompts from existing methods up to ~76x more frequently than those generated by our attack. We observe a 2x improvement in TPR@1%FPR over prior inference attacks across diverse RAG configurations, all while costing less than $0.02 per document inference.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-01T04:01:18Z</published>
+    <arxiv:comment>This is the full version (27 pages) of the paper 'Riddle Me This! Stealthy Membership Inference for Retrieval-Augmented Generation' published at CCS 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Ali Naseh</name>
+    </author>
+    <author>
+      <name>Yuefeng Peng</name>
+    </author>
+    <author>
+      <name>Anshuman Suri</name>
+    </author>
+    <author>
+      <name>Harsh Chaudhari</name>
+    </author>
+    <author>
+      <name>Alina Oprea</name>
+    </author>
+    <author>
+      <name>Amir Houmansadr</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.15217v2</id>
+    <title>Ragas: Automated Evaluation of Retrieval Augmented Generation</title>
+    <updated>2025-04-28T05:09:12Z</updated>
+    <link href="https://arxiv.org/abs/2309.15217v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.15217v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce Ragas (Retrieval Augmented Generation Assessment), a framework for reference-free evaluation of Retrieval Augmented Generation (RAG) pipelines. RAG systems are composed of a retrieval and an LLM based generation module, and provide LLMs with knowledge from a reference textual database, which enables them to act as a natural language layer between a user and textual databases, reducing the risk of hallucinations. Evaluating RAG architectures is, however, challenging because there are several dimensions to consider: the ability of the retrieval system to identify relevant and focused context passages, the ability of the LLM to exploit such passages in a faithful way, or the quality of the generation itself. With Ragas, we put forward a suite of metrics which can be used to evaluate these different dimensions \textit{without having to rely on ground truth human annotations}. We posit that such a framework can crucially contribute to faster evaluation cycles of RAG architectures, which is especially important given the fast adoption of LLMs.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-26T19:23:54Z</published>
+    <arxiv:comment>Reference-free (not tied to having ground truth available) evaluation framework for retrieval agumented generation</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Shahul Es</name>
+    </author>
+    <author>
+      <name>Jithin James</name>
+    </author>
+    <author>
+      <name>Luis Espinosa-Anke</name>
+    </author>
+    <author>
+      <name>Steven Schockaert</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.23334v2</id>
+    <title>MUST-RAG: MUSical Text Question Answering with Retrieval Augmented Generation</title>
+    <updated>2025-12-08T08:08:34Z</updated>
+    <link href="https://arxiv.org/abs/2507.23334v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.23334v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent advancements in Large language models (LLMs) have demonstrated remarkable capabilities across diverse domains. While they exhibit strong zero-shot performance on various tasks, LLMs' effectiveness in music-related applications remains limited due to the relatively small proportion of music-specific knowledge in their training data. To address this limitation, we propose MusT-RAG, a comprehensive framework based on Retrieval Augmented Generation (RAG) to adapt general-purpose LLMs for text-only music question answering (MQA) tasks. RAG is a technique that provides external knowledge to LLMs by retrieving relevant context information when generating answers to questions. To optimize RAG for the music domain, we (1) propose MusWikiDB, a music-specialized vector database for the retrieval stage, and (2) utilizes context information during both inference and fine-tuning processes to effectively transform general-purpose LLMs into music-specific models. Our experiment demonstrates that MusT-RAG significantly outperforms traditional fine-tuning approaches in enhancing LLMs' music domain adaptation capabilities, showing consistent improvements across both in-domain and out-of-domain MQA benchmarks. Additionally, our MusWikiDB proves substantially more effective than general Wikipedia corpora, delivering superior performance and computational efficiency.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-31T08:31:05Z</published>
+    <arxiv:comment>This is an earlier version of the paper - ArtistMus: A Globally Diverse, Artist-Centric Benchmark for Retrieval-Augmented Music Question Answering. The latest version is available at: (arXiv:2512.05430)</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Daeyong Kwon</name>
+    </author>
+    <author>
+      <name>SeungHeon Doh</name>
+    </author>
+    <author>
+      <name>Juhan Nam</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.22344v1</id>
+    <title>FAIR-RAG: Faithful Adaptive Iterative Refinement for Retrieval-Augmented Generation</title>
+    <updated>2025-10-25T15:59:33Z</updated>
+    <link href="https://arxiv.org/abs/2510.22344v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.22344v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>While Retrieval-Augmented Generation (RAG) mitigates hallucination and knowledge staleness in Large Language Models (LLMs), existing frameworks often falter on complex, multi-hop queries that require synthesizing information from disparate sources. Current advanced RAG methods, employing iterative or adaptive strategies, lack a robust mechanism to systematically identify and fill evidence gaps, often propagating noise or failing to gather a comprehensive context. We introduce FAIR-RAG, a novel agentic framework that transforms the standard RAG pipeline into a dynamic, evidence-driven reasoning process. At its core is an Iterative Refinement Cycle governed by a module we term Structured Evidence Assessment (SEA). The SEA acts as an analytical gating mechanism: it deconstructs the initial query into a checklist of required findings and audits the aggregated evidence to identify confirmed facts and, critically, explicit informational gaps. These gaps provide a precise signal to an Adaptive Query Refinement agent, which generates new, targeted sub-queries to retrieve missing information. This cycle repeats until the evidence is verified as sufficient, ensuring a comprehensive context for a final, strictly faithful generation. We conducted experiments on challenging multi-hop QA benchmarks, including HotpotQA, 2WikiMultiHopQA, and MusiQue. In a unified experimental setup, FAIR-RAG significantly outperforms strong baselines. On HotpotQA, it achieves an F1-score of 0.453 -- an absolute improvement of 8.3 points over the strongest iterative baseline -- establishing a new state-of-the-art for this class of methods on these benchmarks. Our work demonstrates that a structured, evidence-driven refinement process with explicit gap analysis is crucial for unlocking reliable and accurate reasoning in advanced RAG systems for complex, knowledge-intensive tasks.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-25T15:59:33Z</published>
+    <arxiv:comment>30 pages, 5 figures, 5 tables. Keywords: Retrieval-Augmented Generation (RAG), Large Language Models (LLMs), Agentic AI, Multi-hop Question Answering, Faithfulness</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Mohammad Aghajani Asl</name>
+    </author>
+    <author>
+      <name>Majid Asgari-Bidhendi</name>
+    </author>
+    <author>
+      <name>Behrooz Minaei-Bidgoli</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.05264v1</id>
+    <title>Engineering the RAG Stack: A Comprehensive Review of the Architecture and Trust Frameworks for Retrieval-Augmented Generation Systems</title>
+    <updated>2025-11-07T16:26:29Z</updated>
+    <link href="https://arxiv.org/abs/2601.05264v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.05264v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This article provides a comprehensive systematic literature review of academic studies, industrial applications, and real-world deployments from 2018 to 2025, providing a practical guide and detailed overview of modern Retrieval-Augmented Generation (RAG) architectures. RAG offers a modular approach for integrating external knowledge without increasing the capacity of the model as LLM systems expand. Research and engineering practices have been fragmented as a result of the increasing diversity of RAG methodologies, which encompasses a variety of fusion mechanisms, retrieval strategies, and orchestration approaches. We provide quantitative assessment frameworks, analyze the implications for trust and alignment, and systematically consolidate existing RAG techniques into a unified taxonomy. This document is a practical framework for the deployment of resilient, secure, and domain-adaptable RAG systems, synthesizing insights from academic literature, industry reports, and technical implementation guides. It also functions as a technical reference.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-07T16:26:29Z</published>
+    <arxiv:comment>86 pages, 2 figures, 37 tables. A comprehensive review of Retrieval-Augmented Generation (RAG) architectures and trust frameworks (2018-2025), encompassing a unified taxonomy, evaluation benchmarks, and trust-safety modeling</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Dean Wampler</name>
+    </author>
+    <author>
+      <name>Dave Nielson</name>
+    </author>
+    <author>
+      <name>Alireza Seddighi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.11863v1</id>
+    <title>Utilizing Metadata for Better Retrieval-Augmented Generation</title>
+    <updated>2026-01-17T01:11:03Z</updated>
+    <link href="https://arxiv.org/abs/2601.11863v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.11863v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Retrieval-Augmented Generation systems depend on retrieving semantically relevant document chunks to support accurate, grounded outputs from large language models. In structured and repetitive corpora such as regulatory filings, chunk similarity alone often fails to distinguish between documents with overlapping language. Practitioners often flatten metadata into input text as a heuristic, but the impact and trade-offs of this practice remain poorly understood. We present a systematic study of metadata-aware retrieval strategies, comparing plain-text baselines with approaches that embed metadata directly. Our evaluation spans metadata-as-text (prefix and suffix), a dual-encoder unified embedding that fuses metadata and content in a single index, dual-encoder late-fusion retrieval, and metadata-aware query reformulation. Across multiple retrieval metrics and question types, we find that prefixing and unified embeddings consistently outperform plain-text baselines, with the unified at times exceeding prefixing while being easier to maintain. Beyond empirical comparisons, we analyze embedding space, showing that metadata integration improves effectiveness by increasing intra-document cohesion, reducing inter-document confusion, and widening the separation between relevant and irrelevant chunks. Field-level ablations show that structural cues provide strong disambiguating signals. Our code, evaluation framework, and the RAGMATE-10K dataset are publicly hosted.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-17T01:11:03Z</published>
+    <arxiv:comment>The 48th European Conference on Information Retrieval (ECIR 2026)</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Raquib Bin Yousuf</name>
+    </author>
+    <author>
+      <name>Shengzhe Xu</name>
+    </author>
+    <author>
+      <name>Mandar Sharma</name>
+    </author>
+    <author>
+      <name>Andrew Neeser</name>
+    </author>
+    <author>
+      <name>Chris Latimer</name>
+    </author>
+    <author>
+      <name>Naren Ramakrishnan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.24268v1</id>
+    <title>RAGPart &amp; RAGMask: Retrieval-Stage Defenses Against Corpus Poisoning in Retrieval-Augmented Generation</title>
+    <updated>2025-12-30T14:43:57Z</updated>
+    <link href="https://arxiv.org/abs/2512.24268v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.24268v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Retrieval-Augmented Generation (RAG) has emerged as a promising paradigm to enhance large language models (LLMs) with external knowledge, reducing hallucinations and compensating for outdated information. However, recent studies have exposed a critical vulnerability in RAG pipelines corpus poisoning where adversaries inject malicious documents into the retrieval corpus to manipulate model outputs. In this work, we propose two complementary retrieval-stage defenses: RAGPart and RAGMask. Our defenses operate directly on the retriever, making them computationally lightweight and requiring no modification to the generation model. RAGPart leverages the inherent training dynamics of dense retrievers, exploiting document partitioning to mitigate the effect of poisoned points. In contrast, RAGMask identifies suspicious tokens based on significant similarity shifts under targeted token masking. Across two benchmarks, four poisoning strategies, and four state-of-the-art retrievers, our defenses consistently reduce attack success rates while preserving utility under benign conditions. We further introduce an interpretable attack to stress-test our defenses. Our findings highlight the potential and limitations of retrieval-stage defenses, providing practical insights for robust RAG deployments.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-30T14:43:57Z</published>
+    <arxiv:comment>Published at AAAI 2026 Workshop on New Frontiers in Information Retrieval [Oral]</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Pankayaraj Pathmanathan</name>
+    </author>
+    <author>
+      <name>Michael-Andrei Panaitescu-Liess</name>
+    </author>
+    <author>
+      <name>Cho-Yu Jason Chiang</name>
+    </author>
+    <author>
+      <name>Furong Huang</name>
+    </author>
+  </entry>
+</feed>

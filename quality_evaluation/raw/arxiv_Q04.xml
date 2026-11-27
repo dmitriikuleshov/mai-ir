@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/HK6zXu5HiuPzOVrileA4FDx6ZFs</id>
+  <title>arXiv Query: search_query=all:"C++" AND all:"memory" AND all:"management"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:23:37Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22C%2B%2B%22+AND+(all:%22memory%22+AND+all:%22management%22)&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>175</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2611.32653v1</id>
+    <title>Parallel Memory Management in Goose, C++, and Rust: An Experimental Study of Allocation, Reclamation, and Scaling</title>
+    <updated>2026-11-24T14:09:45Z</updated>
+    <link href="https://arxiv.org/abs/2611.32653v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.32653v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Compiler-managed memory can reduce allocation and reclamation overhead, but its behavior under parallel workloads remains insufficiently characterized. This study evaluates Goose v2026.3 against C++ and Rust implementations, including tree variants with individually allocated nodes and contiguous arenas. We benchmarked worker-local dynamic arrays and binary trees using multiple workers on a workstation with four physical cores and eight logical CPUs. Repeated tree experiments included five construction, traversal, and reclamation rounds. Each main experimental configuration was measured in 15 independent process runs. We measured whole-process execution time, release-operation intervals, and memory usage at synchronized checkpoints. We also examined strong and weak scaling. For depth-20 trees with eight workers, Goose achieved 5.62% and 10.95% lower median execution times than the C++ and Rust arenas, respectively. Its additional process RSS at the LIVE checkpoint was comparable to the arenas and substantially lower than that of individually allocated trees, but its virtual memory size was much larger. Logical reclamation did not always reduce resident memory, and Goose showed lower weak-scaling efficiency than the C++ and Rust arenas. Results for dynamic arrays were mixed. These results indicate that compiler-managed storage can be effective for parallel workloads with predictable object lifetimes. However, execution time alone does not capture its memory and scalability trade-offs.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-24T14:09:45Z</published>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Rafał Frączek</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1902.04738v2</id>
+    <title>Mesh: Compacting Memory Management for C/C++ Applications</title>
+    <updated>2019-02-16T19:03:03Z</updated>
+    <link href="https://arxiv.org/abs/1902.04738v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1902.04738v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Programs written in C/C++ can suffer from serious memory fragmentation, leading to low utilization of memory, degraded performance, and application failure due to memory exhaustion. This paper introduces Mesh, a plug-in replacement for malloc that, for the first time, eliminates fragmentation in unmodified C/C++ applications. Mesh combines novel randomized algorithms with widely-supported virtual memory operations to provably reduce fragmentation, breaking the classical Robson bounds with high probability. Mesh generally matches the runtime performance of state-of-the-art memory allocators while reducing memory consumption; in particular, it reduces the memory of consumption of Firefox by 16% and Redis by 39%.</summary>
+    <category term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.PF" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-02-13T04:40:05Z</published>
+    <arxiv:comment>Draft version, accepted at PLDI 2019</arxiv:comment>
+    <arxiv:primary_category term="cs.PL"/>
+    <author>
+      <name>Bobby Powers</name>
+    </author>
+    <author>
+      <name>David Tench</name>
+    </author>
+    <author>
+      <name>Emery D. Berger</name>
+    </author>
+    <author>
+      <name>Andrew McGregor</name>
+    </author>
+    <arxiv:doi>10.1145/3314221.3314582</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3314221.3314582" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.03271v1</id>
+    <title>Virtual-Memory Assisted Buffer Management In Tiered Memory</title>
+    <updated>2026-03-03T18:56:52Z</updated>
+    <link href="https://arxiv.org/abs/2603.03271v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.03271v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Tiered memory architectures have gained significant traction in the database community in recent years. In these architectures, the on-chip DRAM of the host processor is typically referred to as local memory, and forms the primary tier. Additional byte-addressable, cache-coherent memory resources, collectively referred to as remote memory (RMem, for short), form one or more secondary tiers. RMem is slower than local DRAM but faster than disk, e.g., NUMA memory located on a remote socket, chiplet-attached memory, and memory attached via high-performance interconnect protocols, e.g., RDMA and CXL. In this paper, we discuss how traditional two-tier (DRAM-Disk) virtual-memory assisted Buffer Management techniques generalize to an $n$-tier setting (DRAM-RMem-Disk). We present vmcache$^n$, an $n$-tier virtual-memory-assisted buffer pool that leverages the virtual memory subsystem and operating system calls to migrate pages across memory tiers. In this setup, page migration can become a bottleneck. To address this limitation, we introduce the move_pages2 system call that provides vmcache$^n$ with fine-grained control over the page migration process. Experiments show that vmcache$^n$ can achieve up to 4$\times$ higher query throughput over vmcache for TPC-C workloads.</summary>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.OS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-03T18:56:52Z</published>
+    <arxiv:primary_category term="cs.DB"/>
+    <author>
+      <name>Yeasir Rayhan</name>
+    </author>
+    <author>
+      <name>Walid G. Aref</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.09997v1</id>
+    <title>Rely-guarantee Reasoning about Concurrent Memory Management: Correctness, Safety and Security</title>
+    <updated>2023-09-17T03:41:10Z</updated>
+    <link href="https://arxiv.org/abs/2309.09997v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.09997v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Formal verification of concurrent operating systems (OSs) is challenging, in particular the verification of the dynamic memory management due to its complex data structures and allocation algorithm. An incorrect specification and implementation of the memory management may lead to system crashes or exploitable attacks. This article presents the first formal specification and mechanized proof of a concurrent memory management for a real-world OS concerning a comprehensive set of properties, including functional correctness, safety and security. To achieve the highest assurance evaluation level, we develop a fine-grained formal specification of the Zephyr RTOS buddy memory management, which closely follows the C code easing validation of the specification and the source code. The rely-guarantee-based compositional verification technique has been enforced over the formal model. To support formal verification of the security property, we extend our rely-guarantee framework PiCore by a compositional reasoning approach for integrity. Whilst the security verification of the design shows that it preserves the integrity property, the verification of the functional properties shows several problems. These verification issues are translated into finding three bugs in the C implementation of Zephyr, after inspecting the source code corresponding to the design lines breaking the properties.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-17T03:41:10Z</published>
+    <arxiv:comment>Submission to ACM Transactions on Software Engineering and Methodology in 2020. arXiv admin note: substantial text overlap with arXiv:2309.09148</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Yongwang Zhao</name>
+    </author>
+    <author>
+      <name>David Sanan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2004.10360v2</id>
+    <title>Breaking Down Memory Walls: Adaptive Memory Management in LSM-based Storage Systems (Extended Version)</title>
+    <updated>2020-07-14T23:59:30Z</updated>
+    <link href="https://arxiv.org/abs/2004.10360v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2004.10360v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Log-Structured Merge-trees (LSM-trees) have been widely used in modern NoSQL systems. Due to their out-of-place update design, LSM-trees have introduced memory walls among the memory components of multiple LSM-trees and between the write memory and the buffer cache. Optimal memory allocation among these regions is non-trivial because it is highly workload-dependent. Existing LSM-tree implementations instead adopt static memory allocation schemes due to their simplicity and robustness, sacrificing performance. In this paper, we attempt to break down these memory walls in LSM-based storage systems. We first present a memory management architecture that enables adaptive memory management. We then present a partitioned memory component structure with new flush policies to better exploit the write memory to minimize the write cost. To break down the memory wall between the write memory and the buffer cache, we further introduce a memory tuner that tunes the memory allocation between these two regions. We have conducted extensive experiments in the context of Apache AsterixDB using the YCSB and TPC-C benchmarks and we present the results here.</summary>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-04-22T01:34:58Z</published>
+    <arxiv:primary_category term="cs.DB"/>
+    <author>
+      <name>Chen Luo</name>
+    </author>
+    <author>
+      <name>Michael J. Carey</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.02023v2</id>
+    <title>ShadowBound: Efficient Heap Memory Protection Through Advanced Metadata Management and Customized Compiler Optimization</title>
+    <updated>2024-09-23T17:03:05Z</updated>
+    <link href="https://arxiv.org/abs/2406.02023v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.02023v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In software development, the prevalence of unsafe languages such as C and C++ introduces potential vulnerabilities, especially within the heap, a pivotal component for dynamic memory allocation. Despite its significance, heap management complexities have made heap corruption pervasive, posing severe threats to system security. While prior solutions aiming for temporal and spatial memory safety exhibit overheads deemed impractical, we present ShadowBound, a unique heap memory protection design. At its core, ShadowBound is an efficient out-of-bounds defense that can work with various use-after-free defenses (e.g. MarkUs, FFMalloc, PUMM) without compatibility constraints. We harness a shadow memory-based metadata management mechanism to store heap chunk boundaries and apply customized compiler optimizations tailored for boundary checking. We implemented ShadowBound atop the LLVM framework and integrated three state-of-the-art use-after-free defenses. Our evaluations show that ShadowBound provides robust heap protection with minimal time and memory overhead, suggesting its effectiveness and efficiency in safeguarding real-world programs against prevalent heap vulnerabilities.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-04T07:02:53Z</published>
+    <arxiv:comment>Accepted by USENIX Security 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Zheng Yu</name>
+    </author>
+    <author>
+      <name>Ganxiang Yang</name>
+    </author>
+    <author>
+      <name>Xinyu Xing</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2102.03681v1</id>
+    <title>FastAD: Expression Template-Based C++ Library for Fast and Memory-Efficient Automatic Differentiation</title>
+    <updated>2021-02-06T23:17:10Z</updated>
+    <link href="https://arxiv.org/abs/2102.03681v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2102.03681v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Automatic differentiation is a set of techniques to efficiently and accurately compute the derivative of a function represented by a computer program. Existing C++ libraries for automatic differentiation (e.g. Adept, Stan Math Library), however, exhibit large memory consumptions and runtime performance issues. This paper introduces FastAD, a new C++ template library for automatic differentiation, that overcomes all of these challenges in existing libraries by using vectorization, simpler memory management using a fully expression-template-based design, and other compile-time optimizations to remove some run-time overhead. Benchmarks show that FastAD performs 2-10 times faster than Adept and 2-19 times faster than Stan across various test cases including a few real-world examples.</summary>
+    <category term="cs.MS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-02-06T23:17:10Z</published>
+    <arxiv:primary_category term="cs.MS"/>
+    <author>
+      <name>James Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1002.4182v1</id>
+    <title>Window-Based Greedy Contention Management for Transactional Memory</title>
+    <updated>2010-02-22T20:02:24Z</updated>
+    <link href="https://arxiv.org/abs/1002.4182v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1002.4182v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We consider greedy contention managers for transactional memory for M x N execution windows of transactions with M threads and N transactions per thread. Assuming that each transaction conflicts with at most C other transactions inside the window, a trivial greedy contention manager can schedule them within CN time. In this paper, we show that there are much better schedules. We present and analyze two new randomized greedy contention management algorithms. The first algorithm Offline-Greedy produces a schedule of length O(C + N log(MN)) with high probability, and gives competitive ratio O(log(MN)) for C &lt;= N log(MN). The offline algorithm depends on knowing the conflict graph. The second algorithm Online-Greedy produces a schedule of length O(C log(MN) + N log^2(MN)) with high probability which is only a O(log(NM)) factor worse, but does not require knowledge of the conflict graph. We also give an adaptive version which achieves similar worst-case performance and C is determined on the fly under execution. Our algorithms provide new tradeoffs for greedy transaction scheduling that parameterize window sizes and transaction conflicts within the window.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.PF" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-02-22T20:02:24Z</published>
+    <arxiv:comment>13 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Gokarna Sharma</name>
+    </author>
+    <author>
+      <name>Brett Estrade</name>
+    </author>
+    <author>
+      <name>Costas Busch</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1808.09087v2</id>
+    <title>TRINITY: Coordinated Performance, Energy and Temperature Management in 3D Processor-Memory Stacks</title>
+    <updated>2018-09-09T19:30:03Z</updated>
+    <link href="https://arxiv.org/abs/1808.09087v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1808.09087v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The consistent demand for better performance has lead to innovations at hardware and microarchitectural levels. 3D stacking of memory and logic dies delivers an order of magnitude improvement in available memory bandwidth. The price paid however is, tight thermal constraints.
+  In this paper, we study the complex multiphysics interactions between performance, energy and temperature. Using a cache coherent multicore processor cycle level simulator coupled with power and thermal estimation tools, we investigate the interactions between (a) thermal behaviors (b) compute and memory microarchitecture and (c) application workloads. The key insights from this exploration reveal the need to manage performance, energy and temperature in a coordinated fashion. Furthermore, we identify the concept of "effective heat capacity" i.e. the heat generated beyond which no further gains in performance is observed with increases in voltage-frequency of the compute logic. Subsequently, a real-time, numerical optimization based, application agnostic controller (TRINITY) is developed which intelligently manages the three parameters of interest. We observe up to $30\%$ improvement in Energy Delay$^2$ Product and up to $8$ Kelvin lower core temperatures as compared to fixed frequencies. Compared to the \texttt{ondemand} Linux CPU DVFS governor, for similar energy efficiency, TRINITY keeps the cores cooler by $6$ Kelvin which increases the lifetime reliability by up to 59\%.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-08-28T01:48:05Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Karthik Rao</name>
+    </author>
+    <author>
+      <name>William Song</name>
+    </author>
+    <author>
+      <name>Yorai Wardi</name>
+    </author>
+    <author>
+      <name>Sudhakar Yalamanchili</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.27224v6</id>
+    <title>Finding Memory Leaks in C/C++ Programs via Neuro-Symbolic Augmented Static Analysis</title>
+    <updated>2026-10-20T08:29:37Z</updated>
+    <link href="https://arxiv.org/abs/2603.27224v6" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.27224v6" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Memory leaks remain prevalent in real-world C/C++ software. Static analyzers such as CodeQL provide scalable program analysis but frequently miss such bugs because they cannot recognize project-specific custom memory-management functions and lack path-sensitive control-flow modeling. We present MemHint, a neuro-symbolic pipeline that addresses both limitations by combining LLMs' semantic understanding of code with Z3-based symbolic reasoning. MemHint parses the target codebase and applies an LLM to classify each function as a memory allocator, deallocator, or neither, producing function summaries that record which argument or return value carries memory ownership, extending the analyzer's built-in knowledge beyond standard primitives such as malloc and free. A Z3-based validation step checks each summary against the function's control-flow graph, discarding those whose claimed memory operation is unreachable on any feasible path. The validated summaries are injected into CodeQL and Infer via their respective extension mechanisms. Z3 path feasibility filtering then eliminates warnings on infeasible paths, and a final LLM-based validation step confirms whether each remaining warning is a genuine bug. On eight real-world C/C++ projects totaling over 3.6M lines of code, MemHint detects 54 unique memory leaks, all confirmed or fixed, at approximately $1.76 per detected bug, compared to 19 by vanilla CodeQL and 3 by vanilla Infer.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-28T10:31:58Z</published>
+    <arxiv:comment>16 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Huihui Huang</name>
+    </author>
+    <author>
+      <name>Jieke Shi</name>
+    </author>
+    <author>
+      <name>Bo Wang</name>
+    </author>
+    <author>
+      <name>Zhou Yang</name>
+    </author>
+    <author>
+      <name>David Lo</name>
+    </author>
+  </entry>
+</feed>

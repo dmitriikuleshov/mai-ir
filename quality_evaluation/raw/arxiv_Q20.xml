@@ -1,0 +1,331 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/JcmbrrPO7iYVcn4UPiZCksXUdpE</id>
+  <title>arXiv Query: search_query=all:"lithium" AND all:"ion" AND all:"battery" AND all:"degradation"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:24:49Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22lithium%22+AND+(all:%22ion%22+AND+(all:%22battery%22+AND+all:%22degradation%22))&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>221</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2404.04429v1</id>
+    <title>Physics-Informed Machine Learning for Battery Degradation Diagnostics: A Comparison of State-of-the-Art Methods</title>
+    <updated>2024-04-05T22:05:59Z</updated>
+    <link href="https://arxiv.org/abs/2404.04429v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.04429v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Monitoring the health of lithium-ion batteries' internal components as they age is crucial for optimizing cell design and usage control strategies. However, quantifying component-level degradation typically involves aging many cells and destructively analyzing them throughout the aging test, limiting the scope of quantifiable degradation to the test conditions and duration. Fortunately, recent advances in physics-informed machine learning (PIML) for modeling and predicting the battery state of health demonstrate the feasibility of building models to predict the long-term degradation of a lithium-ion battery cell's major components using only short-term aging test data by leveraging physics. In this paper, we present four approaches for building physics-informed machine learning models and comprehensively compare them, considering accuracy, complexity, ease-of-implementation, and their ability to extrapolate to untested conditions. We delve into the details of each physics-informed machine learning method, providing insights specific to implementing them on small battery aging datasets. Our study utilizes long-term cycle aging data from 24 implantable-grade lithium-ion cells subjected to varying temperatures and C-rates over four years. This paper aims to facilitate the selection of an appropriate physics-informed machine learning method for predicting long-term degradation in lithium-ion batteries, using short-term aging data while also providing insights about when to choose which method for general predictive purposes.</summary>
+    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-05T22:05:59Z</published>
+    <arxiv:comment>It's an unformatted version of the paper titled 'Physics-Informed Machine Learning for Battery Degradation Diagnostics: A Comparison of State-of-the-Art Methods,' published in Energy Storage Materials, Volume 68, 103343. This version includes an acknowledgment section, which is not present in the journal-published version. Please cite the journal version when you refer to this study</arxiv:comment>
+    <arxiv:primary_category term="cs.CE"/>
+    <arxiv:journal_ref>Energy Storage Materials (2024): 103343</arxiv:journal_ref>
+    <author>
+      <name>Sina Navidi</name>
+    </author>
+    <author>
+      <name>Adam Thelen</name>
+    </author>
+    <author>
+      <name>Tingkai Li</name>
+    </author>
+    <author>
+      <name>Chao Hu</name>
+    </author>
+    <arxiv:doi>10.1016/j.ensm.2024.103343</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.ensm.2024.103343" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2311.05482v2</id>
+    <title>Lithium-ion battery degradation: using degradation mode analysis to validate lifetime prediction modelling</title>
+    <updated>2024-01-23T12:48:52Z</updated>
+    <link href="https://arxiv.org/abs/2311.05482v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2311.05482v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Predicting lithium-ion battery lifetime is one of the greatest unsolved problems in battery research right now. Recent years have witnessed a surge in lifetime prediction papers using physics-based, empirical, or data-driven models, most of which have been validated against the remaining capacity (capacity fade) and sometimes resistance (power fade). However, there are many different combinations of degradation mechanisms in lithium-ion batteries that can result in the same patterns of capacity and power fade, making it impossible to find a unique validated solution. Experimentally, degradation mode analysis involving measuring the loss of lithium inventory, loss of active material at both electrodes, and electrode drift/slippage has emerged as a state-of-the-art requirement for cell degradation studies. In this paper we coupled five degradation mechanisms together for the first time. We also showed how three models with different levels of complexity can all fit the remaining capacity and resistance well, but only the model with five coupled degradation mechanisms could also fit the degradation modes at all temperatures. This work proves that validating only against capacity and power fade is no longer sufficient, and state-of-the-art experimental and modelling degradation studies should include degradation mode analysis for validation in the future.</summary>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-11-09T16:17:44Z</published>
+    <arxiv:primary_category term="physics.chem-ph"/>
+    <author>
+      <name>Ruihe Li</name>
+    </author>
+    <author>
+      <name>Niall D. Kirkaldy</name>
+    </author>
+    <author>
+      <name>Fabian Oehler</name>
+    </author>
+    <author>
+      <name>Monica Marinescu</name>
+    </author>
+    <author>
+      <name>Gregory J. Offer</name>
+    </author>
+    <author>
+      <name>Simon E. J. O'Kane</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2112.02037v2</id>
+    <title>Lithium-ion battery degradation: how to model it</title>
+    <updated>2022-02-04T13:09:23Z</updated>
+    <link href="https://arxiv.org/abs/2112.02037v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2112.02037v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Predicting lithium-ion battery degradation is worth billions to the global automotive, aviation and energy storage industries, to improve performance and safety and reduce warranty liabilities. However, very few published models of battery degradation explicitly consider the interactions between more than two degradation mechanisms, and none do so within a single electrode. In this paper, the first published attempt to directly couple more than two degradation mechanisms in the negative electrode is reported. The results are used to map different pathways through the complicated path dependent and non-linear degradation space. Four degradation mechanisms are coupled in PyBaMM, an open source modelling environment uniquely developed to allow new physics to be implemented and explored quickly and easily. Crucially it is possible to see 'inside' the model and observe the consequences of the different patterns of degradation, such as loss of lithium inventory and loss of active material. For the same cell, five different pathways that can result in end-of-life have already been found, depending on how the cell is used. Such information would enable a product designer to either extend life or predict life based upon the usage pattern. However, parameterization of the degradation models remains as a major challenge, and requires the attention of the international battery community.</summary>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.app-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-12-03T17:37:43Z</published>
+    <arxiv:comment>First version submitted to Energy and Environmental Science on 15th November 2021. Second version submitted to Physical Chemistry: Chemical Physics on 25th January 2022</arxiv:comment>
+    <arxiv:primary_category term="physics.chem-ph"/>
+    <author>
+      <name>Simon E. J. O'Kane</name>
+    </author>
+    <author>
+      <name>Weilong Ai</name>
+    </author>
+    <author>
+      <name>Ganesh Madabattula</name>
+    </author>
+    <author>
+      <name>Diego Alonso Alvarez</name>
+    </author>
+    <author>
+      <name>Robert Timms</name>
+    </author>
+    <author>
+      <name>Valentin Sulzer</name>
+    </author>
+    <author>
+      <name>Jacqueline Sophie Edge</name>
+    </author>
+    <author>
+      <name>Billy Wu</name>
+    </author>
+    <author>
+      <name>Gregory J. Offer</name>
+    </author>
+    <author>
+      <name>Monica Marinescu</name>
+    </author>
+    <arxiv:doi>10.1039/D2CP00417H</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1039/D2CP00417H" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2205.15440v1</id>
+    <title>Lithium-Ion Battery Charging Schedule Optimization to Balance Battery Usage and Degradation</title>
+    <updated>2022-05-30T21:35:57Z</updated>
+    <link href="https://arxiv.org/abs/2205.15440v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2205.15440v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work optimizes a lithium-ion battery charging schedule while considering a joint revenue and battery degradation model. The study extends the work of Meheswari et. al. to encourage battery usage/charging at optimal intervals depending on energy cost forecasts. This paper utilizes central difference Nesterov momentum gradient descent to come to optimal charging strategies and deal with the non-linearities of the battery degradation model. This optimization strategy is tested against constant, random varied price forecasts and a novel Gaussian process cost forecasting model. Contrary to many other papers regarding battery charging, formulating schedule optimization as a multivariate optimization problem provides meaningful insight to the inherent balance between these two competing objectives.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.PF" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-05-30T21:35:57Z</published>
+    <arxiv:comment>8 pages, 14 figures</arxiv:comment>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Jacob Azoulay</name>
+    </author>
+    <author>
+      <name>Nico Carballal</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.15440v1</id>
+    <title>Lithium-ion battery degradation: Introducing the concept of reservoirs to design for lifetime</title>
+    <updated>2025-12-17T13:37:43Z</updated>
+    <link href="https://arxiv.org/abs/2512.15440v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.15440v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Designing lithium-ion batteries for long service life remains a challenge, as most cells are optimized for beginning-of-life metrics such as energy density, often overlooking how design and operating conditions shape degradation. This work introduces a degradation-aware design framework built around finite, interacting reservoirs (lithium, porosity, and electrolyte) that are depleted over time by coupled degradation processes.
+  We extend a physics-based Doyle-Fuller-Newman model to include validated mechanisms such as SEI growth, lithium plating, cracking, and solvent dry-out, and simulate how small design changes impact lifetime. Across more than 1,000 cycles, we find that increasing electrolyte volume by just 1% or porosity by 5% can extend service life by over 30% without significantly affecting cell energy density. However, lithium excess, while boosting initial capacity, can accelerate failure if not supported by sufficient structural or ionic buffers.
+  Importantly, we show that interaction between reservoirs is crucial to optimal design: multi-reservoir tuning yields either synergistic benefits or compound failures, depending on operating conditions. We also quantify how C-rate and operating temperature influence degradation pathways, emphasizing the need for co-optimized design and usage profiles.
+  By reframing degradation as a problem of managing finite internal reservoirs, this work offers a predictive and mechanistic foundation for designing lithium-ion batteries that balance energy, durability, and application-specific needs.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-17T13:37:43Z</published>
+    <arxiv:comment>20 Pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Mohammed Asheruddin Nazeeruddin</name>
+    </author>
+    <author>
+      <name>Ruihe Li</name>
+    </author>
+    <author>
+      <name>Simon E. J. OKane</name>
+    </author>
+    <author>
+      <name>Monica Marinescu</name>
+    </author>
+    <author>
+      <name>Gregory J. Offer</name>
+    </author>
+    <arxiv:doi>10.1149/1945-7111/ae67b0</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1149/1945-7111/ae67b0" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1907.12961v1</id>
+    <title>Modeling long-term capacity degradation of lithium-ion batteries</title>
+    <updated>2019-07-30T14:09:58Z</updated>
+    <link href="https://arxiv.org/abs/1907.12961v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1907.12961v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Capacity degradation of lithium-ion batteries under long-term cyclic aging is modelled via a flexible sigmoidal-type regression set-up, where the regression parameters can be interpreted. Different approaches known from the literature are discussed and compared with the new proposal. Statistical procedures, such as parameter estimation, confidence and prediction intervals are presented and applied to real data. The long-term capacity degradation model may be applied in second-life scenarios of batteries. Using some prior information or training data on the complete degradation path, the model can be fitted satisfactorily even if only short-term degradation data is available. The training data may arise from a single battery.</summary>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-07-30T14:09:58Z</published>
+    <arxiv:comment>15 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="stat.AP"/>
+    <author>
+      <name>Marcus Johnen</name>
+    </author>
+    <author>
+      <name>Simon Pitzen</name>
+    </author>
+    <author>
+      <name>Udo Kamps</name>
+    </author>
+    <author>
+      <name>Maria Kateri</name>
+    </author>
+    <author>
+      <name>Dirk Uwe Sauer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.09456v2</id>
+    <title>Modeling and Analysis on Efficiency Degradation of Lithium-ion Batteries</title>
+    <updated>2023-03-19T08:22:57Z</updated>
+    <link href="https://arxiv.org/abs/2303.09456v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.09456v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Efficiency of Battery Energy Storage Systems (BESSs) is increasingly critical as renewable energy generation becomes more prevalent on the grid. Therefore, it is necessary to study the energy efficiency of lithium-ion batteries, which are typically used in BESSs. The purpose of this study is to propose the State of Efficiency (SOE) as a measure of how efficiently batteries transfer energy, and to analyze what factors affect the SOE of a battery throughout its lifetime. Using NASA's data set, we measure the SOE of Nickel-Cobalt-Aluminum (NCA) lithium-ion batteries by calculating the ratio of energy generated and consumed during discharge and charge phases. A linear trend was observed in the SOE trajectories, which is confirmed by the Mann-Kendall (MK) trend test. Following that, a linear SOE degradation model was presented. Further analysis shows that ambient temperature, discharge current, and cutoff voltage all affect SOE in different ways. Using the SOE and its behavior observed in this study, Battery Management Systems (BMS) can improve the energy efficiency of batteries by adjusting operating conditions or developing better management strategies.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.data-an" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-13T17:08:40Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Zihui Lin</name>
+    </author>
+    <author>
+      <name>Dagang Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2007.01937v1</id>
+    <title>Analysis of Lithium-ion Battery Cells Degradation Based on Different Manufacturers</title>
+    <updated>2020-07-03T21:00:04Z</updated>
+    <link href="https://arxiv.org/abs/2007.01937v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2007.01937v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Lithium-ion batteries are recognised as a key technology to power electric vehicles and integrate grid-connected renewable energy resources. The economic viability of these applications is affected by the battery degradation during its lifetime. This study presents an extensive experimental degradation data for lithium-ion battery cells from three different manufactures (Sony, BYD and Samsung). The Sony and BYD cells are of LFP chemistry while the Samsung cell is of NMC. The capacity fade and resistance increase of the battery cells are quantified due to calendar and cycle aging. The charge level and the temperature are considered as the main parameters to affect calendar aging while the depth of discharge, current rate and temperature for cycle aging. It is found that the Sony and BYD cells with LFP chemistry has calendar capacity loss of nearly 5% and 8% after 30 months respectively. Moreover, the Samsung NMC cell reached 80% state of health after 3000 cycles at 35C and 75% discharge depth suggesting a better cycle life compared to the other two battery cells with the same conditions</summary>
+    <category term="physics.app-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-07-03T21:00:04Z</published>
+    <arxiv:comment>IEEE UPEC Conference paper</arxiv:comment>
+    <arxiv:primary_category term="physics.app-ph"/>
+    <author>
+      <name>Ahmed Gailani</name>
+    </author>
+    <author>
+      <name>Rehab Mokidm</name>
+    </author>
+    <author>
+      <name>Moaath El-Dalahmeh</name>
+    </author>
+    <author>
+      <name>Maad El-Dalahmeh</name>
+    </author>
+    <author>
+      <name>Maher Al-Greer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.29095v1</id>
+    <title>PiDDM: Physics-Informed Differentiable Degradation Modeling for Lithium-Ion Battery State-of-Health Prediction</title>
+    <updated>2026-07-31T07:19:26Z</updated>
+    <link href="https://arxiv.org/abs/2607.29095v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.29095v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Accurate prediction of lithium-ion battery state of health (SOH) is essential for reliable energy storage operation. However, purely data-driven models may generalize poorly across cycling protocols and produce physically implausible behavior during long-term extrapolation. We developed a physics-informed differentiable degradation modeling framework (PiDDM) for battery SOH prediction. PiDDM incorporates empirical Arrhenius degradation kinetics associated with solid electrolyte interphase growth and loss of lithium inventory into the training objective, encouraging physically consistent capacity fade under diverse operating conditions. The framework was evaluated using a public dataset of 55 batteries cycled under six operating protocols. PiDDM achieved the lowest average prediction error among the evaluated models and substantially reduced mean squared error relative to a multilayer perceptron and a baseline physics-informed neural network. For extrapolation, the models were trained on the first 90% of each battery's cycle life and evaluated on the unseen final 10%. PiDDM captured accelerated end-of-life degradation while avoiding the nonphysical capacity regeneration produced by the baseline models. These results show that incorporating degradation physics into neural network training improves predictive accuracy and physical consistency, providing a promising approach for practical battery health monitoring.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-31T07:19:26Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Zeping Chen</name>
+    </author>
+    <author>
+      <name>Ruda Jian</name>
+    </author>
+    <author>
+      <name>Sachin Sigdel</name>
+    </author>
+    <author>
+      <name>Guoping Xiong</name>
+    </author>
+    <author>
+      <name>Jian-Xun Wang</name>
+    </author>
+    <author>
+      <name>Tengfei Luo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2201.02891v1</id>
+    <title>"Knees" in lithium-ion battery aging trajectories</title>
+    <updated>2022-01-08T21:58:19Z</updated>
+    <link href="https://arxiv.org/abs/2201.02891v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2201.02891v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Lithium-ion batteries can last many years but sometimes exhibit rapid, nonlinear degradation that severely limits battery lifetime. In this work, we review prior work on "knees" in lithium-ion battery aging trajectories. We first review definitions for knees and three classes of "internal state trajectories" (termed snowball, hidden, and threshold trajectories) that can cause a knee. We then discuss six knee "pathways", including lithium plating, electrode saturation, resistance growth, electrolyte and additive depletion, percolation-limited connectivity, and mechanical deformation -- some of which have internal state trajectories with signals that are electrochemically undetectable. We also identify key design and usage sensitivities for knees. Finally, we discuss challenges and opportunities for knee modeling and prediction. Our findings illustrate the complexity and subtlety of lithium-ion battery degradation and can aid both academic and industrial efforts to improve battery lifetime.</summary>
+    <category term="physics.app-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-01-08T21:58:19Z</published>
+    <arxiv:comment>Submitted to the Journal of the Electrochemical Society</arxiv:comment>
+    <arxiv:primary_category term="physics.app-ph"/>
+    <author>
+      <name>Peter M. Attia</name>
+    </author>
+    <author>
+      <name>Alexander Bills</name>
+    </author>
+    <author>
+      <name>Ferran Brosa Planella</name>
+    </author>
+    <author>
+      <name>Philipp Dechent</name>
+    </author>
+    <author>
+      <name>Gonçalo dos Reis</name>
+    </author>
+    <author>
+      <name>Matthieu Dubarry</name>
+    </author>
+    <author>
+      <name>Paul Gasper</name>
+    </author>
+    <author>
+      <name>Richard Gilchrist</name>
+    </author>
+    <author>
+      <name>Samuel Greenbank</name>
+    </author>
+    <author>
+      <name>David Howey</name>
+    </author>
+    <author>
+      <name>Ouyang Liu</name>
+    </author>
+    <author>
+      <name>Edwin Khoo</name>
+    </author>
+    <author>
+      <name>Yuliya Preger</name>
+    </author>
+    <author>
+      <name>Abhishek Soni</name>
+    </author>
+    <author>
+      <name>Shashank Sripad</name>
+    </author>
+    <author>
+      <name>Anna G. Stefanopoulou</name>
+    </author>
+    <author>
+      <name>Valentin Sulzer</name>
+    </author>
+    <arxiv:doi>10.1149/1945-7111/ac6d13</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1149/1945-7111/ac6d13" title="doi"/>
+  </entry>
+</feed>

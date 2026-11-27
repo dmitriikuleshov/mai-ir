@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/DKOH8qziURCU/7eWXA0Qz2RN0HM</id>
+  <title>arXiv Query: search_query=all:"inverted" AND all:"index" AND all:"information" AND all:"retrieval"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:23:34Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22inverted%22+AND+(all:%22index%22+AND+(all:%22information%22+AND+all:%22retrieval%22))&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>180</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2104.07186v1</id>
+    <title>COIL: Revisit Exact Lexical Match in Information Retrieval with Contextualized Inverted List</title>
+    <updated>2021-04-15T00:53:54Z</updated>
+    <link href="https://arxiv.org/abs/2104.07186v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2104.07186v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Classical information retrieval systems such as BM25 rely on exact lexical match and carry out search efficiently with inverted list index. Recent neural IR models shifts towards soft semantic matching all query document terms, but they lose the computation efficiency of exact match systems. This paper presents COIL, a contextualized exact match retrieval architecture that brings semantic lexical matching. COIL scoring is based on overlapping query document tokens' contextualized representations. The new architecture stores contextualized token representations in inverted lists, bringing together the efficiency of exact match and the representation power of deep language models. Our experimental results show COIL outperforms classical lexical retrievers and state-of-the-art deep LM retrievers with similar or smaller latency.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-04-15T00:53:54Z</published>
+    <arxiv:comment>NAACL 2021</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Luyu Gao</name>
+    </author>
+    <author>
+      <name>Zhuyun Dai</name>
+    </author>
+    <author>
+      <name>Jamie Callan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2210.05521v3</id>
+    <title>Hybrid Inverted Index Is a Robust Accelerator for Dense Retrieval</title>
+    <updated>2023-10-17T07:25:38Z</updated>
+    <link href="https://arxiv.org/abs/2210.05521v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2210.05521v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Inverted file structure is a common technique for accelerating dense retrieval. It clusters documents based on their embeddings; during searching, it probes nearby clusters w.r.t. an input query and only evaluates documents within them by subsequent codecs, thus avoiding the expensive cost of exhaustive traversal. However, the clustering is always lossy, which results in the miss of relevant documents in the probed clusters and hence degrades retrieval quality. In contrast, lexical matching, such as overlaps of salient terms, tends to be strong feature for identifying relevant documents. In this work, we present the Hybrid Inverted Index (HI$^2$), where the embedding clusters and salient terms work collaboratively to accelerate dense retrieval. To make best of both effectiveness and efficiency, we devise a cluster selector and a term selector, to construct compact inverted lists and efficiently searching through them. Moreover, we leverage simple unsupervised algorithms as well as end-to-end knowledge distillation to learn these two modules, with the latter further boosting the effectiveness. Based on comprehensive experiments on popular retrieval benchmarks, we verify that clusters and terms indeed complement each other, enabling HI$^2$ to achieve lossless retrieval quality with competitive efficiency across various index settings. Our code and checkpoint are publicly available at https://github.com/namespace-Pt/Adon/tree/HI2.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-10-11T15:12:41Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Peitian Zhang</name>
+    </author>
+    <author>
+      <name>Zheng Liu</name>
+    </author>
+    <author>
+      <name>Shitao Xiao</name>
+    </author>
+    <author>
+      <name>Zhicheng Dou</name>
+    </author>
+    <author>
+      <name>Jing Yao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2206.12623v1</id>
+    <title>Inverted Semantic-Index for Image Retrieval</title>
+    <updated>2022-06-25T11:21:56Z</updated>
+    <link href="https://arxiv.org/abs/2206.12623v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2206.12623v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper addresses the construction of inverted index for large-scale image retrieval. The inverted index proposed by J. Sivic brings a significant acceleration by reducing distance computations with only a small fraction of the database. The state-of-the-art inverted indices aim to build finer partitions that produce a concise and accurate candidate list. However, partitioning in these frameworks is generally achieved by unsupervised clustering methods which ignore the semantic information of images. In this paper, we replace the clustering method with image classification, during the construction of codebook. We then propose a merging and splitting method to solve the problem that the number of partitions is unchangeable in the inverted semantic-index. Next, we combine our semantic-index with the product quantization (PQ) so as to alleviate the accuracy loss caused by PQ compression. Finally, we evaluate our model on large-scale image retrieval benchmarks. Experiment results demonstrate that our model can significantly improve the retrieval accuracy by generating high-quality candidate lists.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-06-25T11:21:56Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Ying Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2311.15923v1</id>
+    <title>SEINE: SEgment-based Indexing for NEural information retrieval</title>
+    <updated>2023-11-27T15:32:52Z</updated>
+    <link href="https://arxiv.org/abs/2311.15923v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2311.15923v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Many early neural Information Retrieval (NeurIR) methods are re-rankers that rely on a traditional first-stage retriever due to expensive query time computations. Recently, representation-based retrievers have gained much attention, which learns query representation and document representation separately, making it possible to pre-compute document representations offline and reduce the workload at query time. Both dense and sparse representation-based retrievers have been explored. However, these methods focus on finding the representation that best represents a text (aka metric learning) and the actual retrieval function that is responsible for similarity matching between query and document is kept at a minimum by using dot product. One drawback is that unlike traditional term-level inverted index, the index formed by these embeddings cannot be easily re-used by another retrieval method. Another drawback is that keeping the interaction at minimum hurts retrieval effectiveness. On the contrary, interaction-based retrievers are known for their better retrieval effectiveness. In this paper, we propose a novel SEgment-based Neural Indexing method, SEINE, which provides a general indexing framework that can flexibly support a variety of interaction-based neural retrieval methods. We emphasize on a careful decomposition of common components in existing neural retrieval methods and propose to use segment-level inverted index to store the atomic query-document interaction values. Experiments on LETOR MQ2007 and MQ2008 datasets show that our indexing method can accelerate multiple neural retrieval methods up to 28-times faster without sacrificing much effectiveness.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-11-27T15:32:52Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Sibo Dong</name>
+    </author>
+    <author>
+      <name>Justin Goldstein</name>
+    </author>
+    <author>
+      <name>Grace Hui Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.18812v1</id>
+    <title>Efficient Inverted Indexes for Approximate Retrieval over Learned Sparse Representations</title>
+    <updated>2024-04-29T15:49:27Z</updated>
+    <link href="https://arxiv.org/abs/2404.18812v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.18812v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Learned sparse representations form an attractive class of contextual embeddings for text retrieval. That is so because they are effective models of relevance and are interpretable by design. Despite their apparent compatibility with inverted indexes, however, retrieval over sparse embeddings remains challenging. That is due to the distributional differences between learned embeddings and term frequency-based lexical models of relevance such as BM25. Recognizing this challenge, a great deal of research has gone into, among other things, designing retrieval algorithms tailored to the properties of learned sparse representations, including approximate retrieval systems. In fact, this task featured prominently in the latest BigANN Challenge at NeurIPS 2023, where approximate algorithms were evaluated on a large benchmark dataset by throughput and recall. In this work, we propose a novel organization of the inverted index that enables fast yet effective approximate retrieval over learned sparse embeddings. Our approach organizes inverted lists into geometrically-cohesive blocks, each equipped with a summary vector. During query processing, we quickly determine if a block must be evaluated using the summaries. As we show experimentally, single-threaded query processing using our method, Seismic, reaches sub-millisecond per-query latency on various sparse embeddings of the MS MARCO dataset while maintaining high recall. Our results indicate that Seismic is one to two orders of magnitude faster than state-of-the-art inverted index-based solutions and further outperforms the winning (graph-based) submissions to the BigANN Challenge by a significant margin.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-29T15:49:27Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Sebastian Bruch</name>
+    </author>
+    <author>
+      <name>Franco Maria Nardini</name>
+    </author>
+    <author>
+      <name>Cosimo Rulli</name>
+    </author>
+    <author>
+      <name>Rossano Venturini</name>
+    </author>
+    <arxiv:doi>10.1145/3626772.3657769</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3626772.3657769" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1209.5448v1</id>
+    <title>A New Compression Based Index Structure for Efficient Information Retrieval</title>
+    <updated>2012-09-24T22:27:17Z</updated>
+    <link href="https://arxiv.org/abs/1209.5448v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1209.5448v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Finding desired information from large data set is a difficult problem. Information retrieval is concerned with the structure, analysis, organization, storage, searching, and retrieval of information. Index is the main constituent of an IR system. Now a day exponential growth of information makes the index structure large enough affecting the IR system's quality. So compressing the Index structure is our main contribution in this paper. We compressed the document number in inverted file entries using a new coding technique based on run-length encoding. Our coding mechanism uses a specified code which acts over run-length coding. We experimented and found that our coding mechanism on an average compresses 67.34% percent more than the other techniques.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-09-24T22:27:17Z</published>
+    <arxiv:comment>5 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <arxiv:journal_ref>International Journal of Science and Technology, Volume 2 No.1, pp. 10-14, January 2012</arxiv:journal_ref>
+    <author>
+      <name>Md. Abdullah al Mamun</name>
+    </author>
+    <author>
+      <name>Md. Hanif</name>
+    </author>
+    <author>
+      <name>Md. Rakib Uddin</name>
+    </author>
+    <author>
+      <name>Tanvir Ahmed</name>
+    </author>
+    <author>
+      <name>Md. Mofizul Islam</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2302.06587v2</id>
+    <title>SLIM: Sparsified Late Interaction for Multi-Vector Retrieval with Inverted Indexes</title>
+    <updated>2023-05-08T21:03:03Z</updated>
+    <link href="https://arxiv.org/abs/2302.06587v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2302.06587v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper introduces Sparsified Late Interaction for Multi-vector (SLIM) retrieval with inverted indexes. Multi-vector retrieval methods have demonstrated their effectiveness on various retrieval datasets, and among them, ColBERT is the most established method based on the late interaction of contextualized token embeddings of pre-trained language models. However, efficient ColBERT implementations require complex engineering and cannot take advantage of off-the-shelf search libraries, impeding their practical use. To address this issue, SLIM first maps each contextualized token vector to a sparse, high-dimensional lexical space before performing late interaction between these sparse token embeddings. We then introduce an efficient two-stage retrieval architecture that includes inverted index retrieval followed by a score refinement module to approximate the sparsified late interaction, which is fully compatible with off-the-shelf lexical search libraries such as Lucene. SLIM achieves competitive accuracy on MS MARCO Passages and BEIR compared to ColBERT while being much smaller and faster on CPUs. To our knowledge, we are the first to explore using sparse token representations for multi-vector retrieval. Source code and data are integrated into the Pyserini IR toolkit.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-02-13T18:38:14Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Minghan Li</name>
+    </author>
+    <author>
+      <name>Sheng-Chieh Lin</name>
+    </author>
+    <author>
+      <name>Xueguang Ma</name>
+    </author>
+    <author>
+      <name>Jimmy Lin</name>
+    </author>
+    <arxiv:doi>10.1145/3539618.3591977</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3539618.3591977" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2004.13136v1</id>
+    <title>The Effect of the Multi-Layer Text Summarization Model on the Efficiency and Relevancy of the Vector Space-based Information Retrieval</title>
+    <updated>2020-04-18T00:18:14Z</updated>
+    <link href="https://arxiv.org/abs/2004.13136v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2004.13136v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The massive upload of text on the internet creates a huge inverted index in information retrieval systems, which hurts their efficiency. The purpose of this research is to measure the effect of the Multi-Layer Similarity model of the automatic text summarization on building an informative and condensed invert index in the IR systems. To achieve this purpose, we summarized a considerable number of documents using the Multi-Layer Similarity model, and we built the inverted index from the automatic summaries that were generated from this model. A series of experiments were held to test the performance in terms of efficiency and relevancy. The experiments include comparisons with three existing text summarization models; the Jaccard Coefficient Model, the Vector Space Model, and the Latent Semantic Analysis model. The experiments examined three groups of queries with manual and automatic relevancy assessment. The positive effect of the Multi-Layer Similarity in the efficiency of the IR system was clear without noticeable loss in the relevancy results. However, the evaluation showed that the traditional statistical models without semantic investigation failed to improve the information retrieval efficiency. Comparing with the previous publications that addressed the use of summaries as a source of the index, the relevancy assessment of our work was higher, and the Multi-Layer Similarity retrieval constructed an inverted index that was 58% smaller than the main corpus inverted index.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-04-18T00:18:14Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <arxiv:journal_ref>International Journal of Computer Science and Information Security (IJCSIS), Vol. 18, No. 3, March 2020</arxiv:journal_ref>
+    <author>
+      <name>Ahmad Hussein Ababneh</name>
+    </author>
+    <author>
+      <name>Joan Lu</name>
+    </author>
+    <author>
+      <name>Qiang Xu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.07187v1</id>
+    <title>RISE: A Rust Library for Inverted Index Search Engines</title>
+    <updated>2026-06-05T11:56:14Z</updated>
+    <link href="https://arxiv.org/abs/2606.07187v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.07187v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Inverted indexes are a crucial data structure for efficient information retrieval in large text corpora. They enable fast full-text search by mapping each term to the documents in which it appears, on top of which efficient algorithms quickly retrieve the documents relevant to a user query. We present RISE, a novel inverted index library implemented in Rust, designed to deliver high performance and efficiency for information retrieval tasks. RISE leverages Rust's safety and performance to provide a robust solution for building and querying inverted indexes, while offering accessible extensibility through its expressive trait system. While developing RISE, we revisited the inverted-index literature, thereby reproducing numerous prior works using this new test bench. We evaluated RISE against existing libraries, demonstrating competitive query performance across various datasets and workloads, with speedups of up to 2x over the current state of the art. Our results indicate that RISE is a promising tool for researchers and practitioners in the field of information retrieval.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-05T11:56:14Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Angelo Savino</name>
+    </author>
+    <author>
+      <name>Rossano Venturini</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.04443v1</id>
+    <title>Pairing Clustered Inverted Indexes with kNN Graphs for Fast Approximate Retrieval over Learned Sparse Representations</title>
+    <updated>2024-08-08T13:14:39Z</updated>
+    <link href="https://arxiv.org/abs/2408.04443v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.04443v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Learned sparse representations form an effective and interpretable class of embeddings for text retrieval. While exact top-k retrieval over such embeddings faces efficiency challenges, a recent algorithm called Seismic has enabled remarkably fast, highly-accurate approximate retrieval. Seismic statically prunes inverted lists, organizes each list into geometrically-cohesive blocks, and augments each block with a summary vector. At query time, each inverted list associated with a query term is traversed one block at a time in an arbitrary order, with the inner product between the query and summaries determining if a block must be evaluated. When a block is deemed promising, its documents are fully evaluated with a forward index. Seismic is one to two orders of magnitude faster than state-of-the-art inverted index-based solutions and significantly outperforms the winning graph-based submissions to the BigANN 2023 Challenge. In this work, we speed up Seismic further by introducing two innovations to its query processing subroutine. First, we traverse blocks in order of importance, rather than arbitrarily. Second, we take the list of documents retrieved by Seismic and expand it to include the neighbors of each document using an offline k-regular nearest neighbor graph; the expanded list is then ranked to produce the final top-k set. Experiments on two public datasets show that our extension, named SeismicWave, can reach almost-exact accuracy levels and is up to 2.2x faster than Seismic.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-08T13:14:39Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Sebastian Bruch</name>
+    </author>
+    <author>
+      <name>Franco Maria Nardini</name>
+    </author>
+    <author>
+      <name>Cosimo Rulli</name>
+    </author>
+    <author>
+      <name>Rossano Venturini</name>
+    </author>
+    <arxiv:doi>10.1145/3627673.3679977</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3627673.3679977" title="doi"/>
+  </entry>
+</feed>

@@ -5,7 +5,7 @@ import math
 import pytest
 
 from evaluate import metrics
-from collect import canonical
+from collect import canonical, arxiv_search_query, parse_arxiv_feed
 
 
 # Лучший документ первым: DCG=7, NDCG=1, вероятность удовлетворения ERR=7/8.
@@ -80,3 +80,44 @@ def test_ideal_uses_shared_pool():
 # Пустая доступная выдача даёт нулевые метрики, даже если в общем пуле есть ответ.
 def test_empty_available_run():
     assert metrics([], [3, 2], 5) == {"P": 0, "DCG": 0, "NDCG": 0, "ERR": 0}
+
+
+# Форматы abs/HTML/PDF и номера версий не создают повторов одной статьи arXiv.
+def test_arxiv_identity_is_shared_across_formats_and_versions():
+    expected = "https://arxiv.org/abs/2410.15944"
+    for url in ["http://arxiv.org/abs/2410.15944v3", "https://arxiv.org/html/2410.15944v1",
+                "https://arxiv.org/pdf/2410.15944v2.pdf"]:
+        assert canonical(url) == expected
+    assert canonical("https://arxiv.org/abs/hep-th/9901001v2") == "https://arxiv.org/abs/hep-th/9901001"
+
+
+# Технические обозначения сохраняются; между исходными термами явно задаётся AND.
+def test_arxiv_query_keeps_technical_terms():
+    assert arxiv_search_query("C++ memory management") == 'all:"C++" AND all:"memory" AND all:"management"'
+    assert arxiv_search_query("C# asynchronous") == 'all:"C#" AND all:"asynchronous"'
+
+
+# Atom сохраняет порядок выдачи и Unicode; пустой список не путается с ошибкой API.
+def test_arxiv_feed_preserves_order_and_empty_results():
+    feed = '<feed xmlns="http://www.w3.org/2005/Atom" xmlns:os="http://a9.com/-/spec/opensearch/1.1/"><os:totalResults>0</os:totalResults></feed>'
+    assert parse_arxiv_feed(feed) == ([], 0)
+    feed = '''<feed xmlns="http://www.w3.org/2005/Atom"
+        xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
+        <os:totalResults>2</os:totalResults>
+        <entry><id>http://arxiv.org/abs/2504.02344v1</id>
+            <title>Isolation — Checking</title><summary>Two  lines\nwith spaces.</summary></entry>
+        <entry><id>http://arxiv.org/abs/1911.12711v1</id>
+            <title>Lockless Isolation</title><summary>Second.</summary></entry></feed>'''
+    hits, total = parse_arxiv_feed(feed)
+    assert total == 2
+    assert [hit["rank"] for hit in hits] == [1, 2]
+    assert [hit["url"] for hit in hits] == ["https://arxiv.org/abs/2504.02344v1", "https://arxiv.org/abs/1911.12711v1"]
+    assert hits[0]["title"] == "Isolation — Checking"
+    assert hits[0]["abstract"] == "Two lines with spaces."
+
+
+# Ответ API с сообщением об ошибке нельзя выдавать за нерелевантный документ.
+def test_arxiv_error_feed():
+    feed = '<feed xmlns="http://www.w3.org/2005/Atom"><entry><id>http://arxiv.org/api/errors#bad_query</id><summary>Bad query</summary></entry></feed>'
+    with pytest.raises(ValueError, match="Bad query"):
+        parse_arxiv_feed(feed)

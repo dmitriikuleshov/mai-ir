@@ -1,0 +1,327 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/mZqN6jdMJdKiIttRObOSVDNT0M0</id>
+  <title>arXiv Query: search_query=all:"photovoltaic" AND all:"solar" AND all:"cell" AND all:"efficiency"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:24:52Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22photovoltaic%22+AND+(all:%22solar%22+AND+(all:%22cell%22+AND+all:%22efficiency%22))&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>610</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1012.0717v1</id>
+    <title>Moon's Radiation Environment and Expected Performance of Solar Cells during Future Lunar Missions</title>
+    <updated>2010-12-03T12:31:41Z</updated>
+    <link href="https://arxiv.org/abs/1012.0717v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1012.0717v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Several lunar missions are planned ahead and there is an increasing demand for efficient photovoltaic power generation in the moon. The knowledge of solar cell operation in the lunar surface obtained during early seventies need to be updated considering current views on solar variability and emerging space solar cell technologies. In this paper some aspects of the solar cell performance expected under variable lunar radiation environment during future space missions to moon are addressed. We have calculated relative power expected from different types of solar cells under extreme solar proton irradiation conditions and high lunar daytime temperature. It is also estimated that 2-3 % of annual solar cell degradation is most probable during the future lunar missions. We have also discussed photovoltaic power generation in long term lunar bases emphasizing technological needs such as sunlight concentration, solar cell cooling and magnetic shielding of radiation for improving the efficiency of solar cells in the lunar environment.</summary>
+    <category term="physics.gen-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-12-03T12:31:41Z</published>
+    <arxiv:comment>Presented in the IMRC 2008 Conference,Cancun,Mexico; Key words: moon, radiation environment, solar cell performance, SPE, magnetic shielding, lunar missions</arxiv:comment>
+    <arxiv:primary_category term="physics.gen-ph"/>
+    <author>
+      <name>T. E Girish</name>
+    </author>
+    <author>
+      <name>S Aranya</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1808.05847v1</id>
+    <title>Tuning photovoltaic response in Bi2FeCrO6 films by ferroelectric poling</title>
+    <updated>2018-08-17T13:12:10Z</updated>
+    <link href="https://arxiv.org/abs/1808.05847v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1808.05847v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ferroelectric materials are interesting candidates for future photovoltaic applications due to their potential to overcome the fundamental limits of conventional single bandgap semiconductor-based solar cells. Although a more efficient charge separation and above bandgap photovoltages are advantageous in these materials, tailoring their photovoltaic response using ferroelectric functionalities remains puzzling. Here we address this issue by reporting a clear hysteretic character of the photovoltaic effect as a function of electric field and its dependence on the poling history. Furthermore, we obtain insight into light induced nonequilibrium charge carrier dynamics in Bi2FeCrO6 films involving not only charge generation, but also recombination processes. At the ferroelectric remanence, light is able to electrically depolarize the films with remanent and transient effects as evidenced by electrical and piezoresponse force microscopy (PFM) measurements. The hysteretic nature of the photovoltaic response and its nonlinear character at larger light intensities can be used to optimize the photovoltaic performance of future ferro-electric-based solar cells.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-08-17T13:12:10Z</published>
+    <arxiv:comment>Tuning Photoferroelectric and photovoltaic effect, 4 pages, 8 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Nanoscale, 10, 13761 (2018)</arxiv:journal_ref>
+    <author>
+      <name>A. Quattropani</name>
+    </author>
+    <author>
+      <name>A. S. Makhort</name>
+    </author>
+    <author>
+      <name>M. V. Rastei</name>
+    </author>
+    <author>
+      <name>G. Versini</name>
+    </author>
+    <author>
+      <name>G. Schmerber</name>
+    </author>
+    <author>
+      <name>S. Barre</name>
+    </author>
+    <author>
+      <name>A. Dinia</name>
+    </author>
+    <author>
+      <name>A. Slaoui</name>
+    </author>
+    <author>
+      <name>J. -L. Rehspringer</name>
+    </author>
+    <author>
+      <name>T. Fix</name>
+    </author>
+    <author>
+      <name>S. Colis</name>
+    </author>
+    <author>
+      <name>B. Kundys</name>
+    </author>
+    <arxiv:doi>10.1039/c8nr03137a</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1039/c8nr03137a" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1310.7783v2</id>
+    <title>Fabrication of single-walled carbon nanotube/Si heterojunction solar cell with high photovoltaic conversion efficiency and stability</title>
+    <updated>2013-10-30T01:48:38Z</updated>
+    <link href="https://arxiv.org/abs/1310.7783v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1310.7783v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The photovoltaic properties of carbon nanotube/Si heterojunction solar cells were investigated using network films of high quality single-walled carbon nanotubes (SWNTs) grown by atmospheric-pressure floating-catalyst chemical vapor deposition. Because of the optimization of the device window size and the utilization of SWNT thin films with both low resistivity and high transparency, a high photovoltaic conversion efficiency of greater than 12% was achieved for SWNTs/Si heterojunction solar cells without any post processing, such as carrier doping treatment. In addition, the high stability and reproducibility of the photovoltaic performance of these devices in air was demonstrated.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-10-29T12:32:18Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Feijiu Wang</name>
+    </author>
+    <author>
+      <name>Daichi Kozawa</name>
+    </author>
+    <author>
+      <name>Yuhei Miyauchi</name>
+    </author>
+    <author>
+      <name>Kazushi Hiraoka</name>
+    </author>
+    <author>
+      <name>Shinichiro Mouri</name>
+    </author>
+    <author>
+      <name>Yutaka Ohno</name>
+    </author>
+    <author>
+      <name>Kazunari Matsuda</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2101.08019v2</id>
+    <title>UMG silicon for solar PV: from defects detection to PV module degradation</title>
+    <updated>2021-04-13T17:09:17Z</updated>
+    <link href="https://arxiv.org/abs/2101.08019v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2101.08019v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Upgraded metallurgical grade silicon (UMG-Si) for photovoltaic (PV) solar applications has been manufactured through the metallurgical route by means of the process developed by Ferrosolar. In an ambitious mass production test, performed in commercial solar cells and modules production lines, the silicon was proven to be appropriate for photovoltaics applications (Fornies et al., 2019 Mass production test of solar cells and modules made of 100% umg silicon. 20.76% record efficiency. Energies 12), reaching, in a conventional production line, up to 20.76% of solar cell efficiency with multicrystalline cells made of 100% UMG silicon. In this paper we present more results from the mentioned massive test. Defect engineering is being applied to improve the bulk lifetime of the UMG wafers and to guide in the identification of the limiting defects in the material. Moreover, the modules produced with 100% UMG silicon solar cells were installed together with the modules produced in the same production line with polysilicon material to assess the degradation of the UMG silicon when compared to polysilicon. After 24 months of outdoor PV generation, the degradation, in terms of Performance Ratio at 25C (25PR) diminution, has been the same for both types of modules. Additionally, a Life Cycle Assessment (LCA) has been performed for this UMG silicon and state-of-the-art Siemens polysilicon to compare the environmental impact of both silicon feedstocks. The results presented in this paper; chemical analysis of wafers, defect engineering, low degradation, average efficiency and environmental assessment, lead to a complete study of UMG silicon, confirming its potential to be used as raw material for PV applications.</summary>
+    <category term="physics.app-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-01-20T08:35:01Z</published>
+    <arxiv:comment>17 pages, 13 figures. Accepted in Solar Energy</arxiv:comment>
+    <arxiv:primary_category term="physics.app-ph"/>
+    <arxiv:journal_ref>Solar Energy 220 (2021) 354-362</arxiv:journal_ref>
+    <author>
+      <name>Eduardo Fornies</name>
+    </author>
+    <author>
+      <name>Carlos del Canizo</name>
+    </author>
+    <author>
+      <name>Laura Mendez</name>
+    </author>
+    <author>
+      <name>Alejandro Souto</name>
+    </author>
+    <author>
+      <name>Antonio Perez-Vazquez</name>
+    </author>
+    <author>
+      <name>Daniel Garrain</name>
+    </author>
+    <arxiv:doi>10.1016/j.solener.2021.03.076</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.solener.2021.03.076" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.20066v3</id>
+    <title>External quantum efficiency above 100% in photovoltaic cells due to the technique raising efficiencies for all kinds of solar cells</title>
+    <updated>2026-07-07T02:50:51Z</updated>
+    <link href="https://arxiv.org/abs/2409.20066v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.20066v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A V-shaped module (VSM) photovoltaic technique, which breaks traditional concepts, has been proven by European and American scientists to enable power-conversion-efficiency to increase by 50% for thin-film solar cells. Furthermore, the VSM technique raises power-conversion-efficiency for all kinds of solar cells (J. Environ. Sci. Eng. A 12, 214 (2023). https://doi.org/10.17265/2162-5298/2023.06.002). Mysterious dark energy is thought to result in the surprising VSM effect. The VSM approach opens up new avenues to study photovoltaic physics. In this study, the external quantum efficiency (EQE) of commercial polycrystalline silicon solar cells in the VSM was investigated, which exhibits a surprising phenomenon of EQE above 100%. In theory, non-infrared light incident into a solar cell can cause infrared emission. The VSM could trap the emitted infrared photons and lead to extra photoexcited carriers. The easy-to-reproduce VSM effect is thus explainable. The energy of emitted infrared photons is considered as the so-called dark energy. This study provides new clues and evidences to unravel the mystery of the surprising VSM effect. The VSM technique could also be used to develop photodetectors for infrared and ultraviolet light respectively.</summary>
+    <category term="physics.app-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-30T08:07:44Z</published>
+    <arxiv:comment>7 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="physics.app-ph"/>
+    <author>
+      <name>Jianming Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1806.02650v1</id>
+    <title>Enhancement of photovoltaic efficiency by insertion of a polyoxometalate layer at the anode of an organic solar cell</title>
+    <updated>2018-06-07T13:04:40Z</updated>
+    <link href="https://arxiv.org/abs/1806.02650v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1806.02650v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this article the Wells-Dawson polyoxometalate K6[P2W18O62] is grown as an interfacial layer between indium tin oxide and bulk heterojunction of poly(3-hexylthiophene) (P3HT) and [6,6]-phenyl-C61-butyric acid methyl ester (PCBM). The structure of the POM layers depends on the thickness and shows a highly anisotropic surface organization. The films have been characterized by atomic force microscopy and X-ray photoelectron spectroscopy (XPS) to gain insight into their macroscopic organization and better understand their electronic properties. Then, they were put at the anodic interface of a P3HT:PCBM organic solar cell and characterized on an optical bench. The photovoltaic efficiency is discussed in terms of the benefit of the polyoxometalate at the anodic interface of an organic photovoltaic cell.</summary>
+    <category term="physics.app-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-06-07T13:04:40Z</published>
+    <arxiv:comment>7 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="physics.app-ph"/>
+    <arxiv:journal_ref>Inorganic Chemistry Frontiers 1, 682 (2014)</arxiv:journal_ref>
+    <author>
+      <name>M. Alaaeddine</name>
+    </author>
+    <author>
+      <name>Q. Zhu</name>
+    </author>
+    <author>
+      <name>D. Fichou</name>
+    </author>
+    <author>
+      <name>G. Izzet</name>
+    </author>
+    <author>
+      <name>J. E. Rault</name>
+    </author>
+    <author>
+      <name>N. Barrett</name>
+    </author>
+    <author>
+      <name>A. Proust</name>
+    </author>
+    <author>
+      <name>L. Tortech</name>
+    </author>
+    <arxiv:doi>10.1039/C4QI00093E</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1039/C4QI00093E" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1301.1278v1</id>
+    <title>III-V Solar Cells</title>
+    <updated>2013-01-07T17:39:53Z</updated>
+    <link href="https://arxiv.org/abs/1301.1278v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1301.1278v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>III-V materials show a wide range of gaps making them ideal for the design of high efficiency solar cells. This chapter reviews relevant growth methods and material properties of these materials and discusses methods of combining heterogeneous materials, demonstrating the flexibility of design possible with these materials. The fundamental loss mechanisms of solar cells are analysed and quantified as a prelude to analysing high efficiency cell designs in single, tandem, and triple junction solar cells. The detailed analysis of loss mechanisms is used to obtain understanding of the limiting behaviour of these designs, and show that bulk cells remain dominated by non-radiative losses despite unity ideality factors. To conclude, this is contrasted with the operating regime of nanostructured solar cells which can be shown to operate in a radiatively dominated mode, and which therefore approach ideal solar cell efficiency limits.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-01-07T17:39:53Z</published>
+    <arxiv:comment>Draft of chapter in Materials Challenges: Inorganic Photovoltaic Solar Energy - RSC Energy and Environment Series v. 16</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>James P. Connolly</name>
+    </author>
+    <author>
+      <name>Denis Mencaraglia</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1303.0771v1</id>
+    <title>Spin-enhanced organic bulk heterojunction photovoltaic solar cells</title>
+    <updated>2013-03-04T18:15:50Z</updated>
+    <link href="https://arxiv.org/abs/1303.0771v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1303.0771v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently, much effort has been devoted to improve the efficiency of organic photovoltaic solar cells based on blends of donors and acceptors molecules in bulk heterojunction architecture. One of the major losses in organic photovoltaic devices has been recombination of polaron pairs at the donor/acceptor domain interfaces. Here, we present a novel method to suppress polaron pair recombination at the donor/acceptor domain interfaces and thus improve the organic photovoltaic solar cell efficiency, by doping the device active layer with spin 1/2 radical galvinoxyl. At an optimal doping level of 3 wt%, the efficiency of a standard poly(3-hexylthiophene)/1-(3-(methoxycarbonyl)propyl)-1-1-phenyl)(6,6)C61 solar cell improves by 18%. A spin-flip mechanism is proposed and supported by magneto-photocurrent measurements, as well as by density functional theory calculations in which polaron pair recombination rate is suppressed by resonant exchange interaction between the spin 1/2 radicals and charged acceptors, which convert the polaron pair spin state from singlet to triplet.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-03-04T18:15:50Z</published>
+    <arxiv:comment>10 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Nature Communications 3, 1043 (2012)</arxiv:journal_ref>
+    <author>
+      <name>Ye Zhang</name>
+    </author>
+    <author>
+      <name>Tek P. Basel</name>
+    </author>
+    <author>
+      <name>Bhoj R. Gautam</name>
+    </author>
+    <author>
+      <name>Xiaomei Yang</name>
+    </author>
+    <author>
+      <name>Debra J. Mascaro</name>
+    </author>
+    <author>
+      <name>Feng Liu</name>
+    </author>
+    <author>
+      <name>Z. Valy Vardeny</name>
+    </author>
+    <arxiv:doi>10.1038/ncomms2057</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/ncomms2057" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1511.04710v1</id>
+    <title>SiNx:Tb3+--Yb3+, an efficient down-conversion layer compatible with a silicon solar cell process</title>
+    <updated>2015-11-15T15:17:57Z</updated>
+    <link href="https://arxiv.org/abs/1511.04710v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1511.04710v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>SiN x : Tb 3+-Yb 3+, an efficient down-conversion layer compatible with silicon solar cell process Abstract Tb 3+-Yb 3+ co-doped SiN x down-conversion layers compatible with silicon Photovoltaic Technology were prepared by reactive magnetron co-sputtering. Efficient sensitization of Tb 3+ ions through a SiN x host matrix and cooperative energy transfer between Tb 3+ and Yb 3+ ions were evidenced as driving mechanisms of the down-conversion process. In this paper, the film composition and microstructure are investigated alongside their optical properties, with the aim of maximizing the rare earth ions incorporation and emission efficiency. An optimized layer achieving the highest Yb 3+ emission intensity was obtained by reactive magnetron co-sputtering in a nitride rich atmosphere for 1.2 W/cm${}^2$ and 0.15 W/cm${}^2$ power density applied on the Tb and Yb targets, respectively. It was determined that depositing at 200 {\textdegree}C and annealing at 850 {\textdegree}C leads to comparable Yb 3+ emission intensity than depositing at 500 {\textdegree}C and annealing at 600 {\textdegree}C, which is promising for applications toward silicon solar cells.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-11-15T15:17:57Z</published>
+    <arxiv:comment>Solar Energy Materials and Solar Cells, Elsevier, 2015</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Lucile Dumont</name>
+      <arxiv:affiliation>CIMAP - UMR 6252</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Julien Cardin</name>
+      <arxiv:affiliation>CIMAP - UMR 6252</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Patrizio Benzo</name>
+      <arxiv:affiliation>CIMAP - UMR 6252</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Marzia Carrada</name>
+      <arxiv:affiliation>CEMES</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Christophe Labbe</name>
+      <arxiv:affiliation>CIMAP - UMR 6252</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Andrea L. Richard</name>
+      <arxiv:affiliation>CIMAP - UMR 6252</arxiv:affiliation>
+    </author>
+    <author>
+      <name>David C. Ingram</name>
+      <arxiv:affiliation>CIMAP - UMR 6252</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Wojciech M. Jadwisienczak</name>
+      <arxiv:affiliation>CIMAP - UMR 6252</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Fabrice Gourbilleau</name>
+      <arxiv:affiliation>CIMAP - UMR 6252</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1016/j.solmat.2015.09.031</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.solmat.2015.09.031" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1702.02344v2</id>
+    <title>A Microscopic Perspective on Photovoltaic Reciprocity in Ultrathin Solar Cells</title>
+    <updated>2017-04-14T17:16:11Z</updated>
+    <link href="https://arxiv.org/abs/1702.02344v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1702.02344v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The photovoltaic reciprocity theory relates the electroluminescence spectrum of a solar cell under applied bias to the external photovoltaic quantum efficiency of the device as measured at short circuit conditions. Its derivation is based on detailed balance relations between local absorption and emission rates in optically isotropic media with non-degenerate quasi-equilibrium carrier distributions. In many cases, the dependence of density and spatial variation of electronic and optical device states on the point of operation is modest and the reciprocity relation holds. In nanostructure-based photovoltaic devices exploiting confined modes, however, the underlying assumptions are no longer justifiable. In the case of ultrathin absorber solar cells, the modification of the electronic structure with applied bias is significant due to the large variation of the built-in field. Straightforward use of the external quantum efficiency as measured at short circuit conditions in the photovoltaic reciprocity theory thus fails to reproduce the electroluminescence spectrum at large forward bias voltage. This failure is demonstrated here by numerical simulation of both spectral quantities at normal incidence and emission for an ultrathin GaAs p-i-n solar cell using an advanced quantum kinetic formalism based on non-equilibrium Green's functions of coupled photons and charge carriers. While coinciding with the semiclassical relations under the conditions of their validity, the theory provides a consistent microscopic relationship between absorption, emission and charge carrier transport in photovoltaic devices at arbitrary operating conditions and for any shape of optical and electronic density of states.</summary>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-02-08T09:49:25Z</published>
+    <arxiv:comment>5 pages, 4 figures, all figures replaced, minor changes and additions to the text</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mes-hall"/>
+    <arxiv:journal_ref>Phys. Rev. Lett. 118, 247702 (2017)</arxiv:journal_ref>
+    <author>
+      <name>Urs Aeberhard</name>
+    </author>
+    <author>
+      <name>Uwe Rau</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevLett.118.247702</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevLett.118.247702" title="doi"/>
+  </entry>
+</feed>

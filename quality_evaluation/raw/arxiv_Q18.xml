@@ -1,0 +1,256 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/zXawNIArFES+sjQGELebAvy/tIU</id>
+  <title>arXiv Query: search_query=all:"stochastic" AND all:"gradient" AND all:"descent" AND all:"optimization"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:24:38Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22stochastic%22+AND+(all:%22gradient%22+AND+(all:%22descent%22+AND+all:%22optimization%22))&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>3434</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.20906v2</id>
+    <title>Continuous Delayed-Memory Stochastic Gradient Descent and Continuous-Time Reinforcement Learning from History of Astrophysical Time Series Studies</title>
+    <updated>2026-09-22T16:02:32Z</updated>
+    <link href="https://arxiv.org/abs/2609.20906v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.20906v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quasars are luminous objects in the universe that exhibit stochastic brightness variations encoding information about the supermassive black holes powering them, and modeling these variations from ground-based survey data time series, known as light curves, is a statistical challenge. This paper reviews how stochastic differential equations (SDEs) have been adapted with neural network parameterizations to overcome this challenge in history. We create the Continuous-Delayed-Memory Stochastic Gradient Descent which depend on the past state of the discrete iteration process. We performed the simulation on some 2-dimensional landscape and observed some wider-exploration and more precise convergent behavior compared to Vanilla SGD by adjusting hyperparameters. Besides, we proposed a reinforcement learning structure with continuous time policy gradients for exploratory policies without solving HJB PDE, and we show that its optimality conditions recover the Gibbs policy of previous works.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-17T15:38:37Z</published>
+    <arxiv:comment>Keywords: Stochastic process, Stochastic gradient descent, Continuous-Delayed-Memory Stochastic Gradient Descent, Stochastic Delay Differential Equation, Reinforcement Learning, Adjoint method</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Juncheng Yi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.23613v2</id>
+    <title>High-Probability Guarantees for Random Zeroth-Order (Stochastic) Gradient Descent</title>
+    <updated>2026-06-19T06:25:11Z</updated>
+    <link href="https://arxiv.org/abs/2604.23613v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.23613v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Zeroth-order optimization aims to minimize an objective function using only function evaluations, and is therefore fundamental in black-box optimization, hyperparameter tuning, bandit learning, and adversarial machine learning. While classical zeroth-order methods are well understood in expectation, much less is known about their high-probability behavior, especially for smooth and strongly convex objectives. In this paper, we establish high-probability convergence guarantees for random zeroth-order gradient descent in both deterministic and stochastic settings. For deterministic $L$-smooth and $μ$-strongly convex objectives of $d$-dimension, we show that the classical two-query random zeroth-order method finds an $\varepsilon$-suboptimal solution with probability at least $1-δ$ using
+  \[
+  \mathcal{O}\left(
+  \frac{dL}μ\log\frac{1}{\varepsilon}
+  +
+  \log\frac{1}δ
+  \right)
+  \]
+  function queries. Thus, compared with the standard in-expectation complexity, only an additive logarithmic dependence on the confidence parameter is needed. For stochastic objectives, under a bounded-noise condition and without assuming uniformly bounded stochastic gradients, we prove that random zeroth-order stochastic gradient descent achieves an $\varepsilon$-suboptimal solution with probability at least $1-δ$ using
+  \[
+  \mathcal{O}\left(
+  \frac{
+  d\log(1/\varepsilon)
+  \left(\log(1/\varepsilon)+\log(1/δ)\right)
+  }{\varepsilon}
+  \right)
+  \]
+  queries. Our results provide high-confidence counterparts to classical expectation-based zeroth-order convergence guarantees and clarify the additional cost required to obtain reliable performance guarantees.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-26T09:02:05Z</published>
+    <arxiv:comment>This paper has been extended into two papers named "High-Probability Guarantees for Random Zeroth-Order Gradient Descent on Smooth Functions'' (arXiv:2605.26547) and "High-Probability Last-Iterate Guarantees for Two-Point Gaussian Zeroth-Order Stochastic Gradient Descent'' (arXiv:2606.20446)</arxiv:comment>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Haishan Ye</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2201.04232v3</id>
+    <title>Stochastic Gradient Descent for Barycenters in Wasserstein Space</title>
+    <updated>2023-10-21T17:02:59Z</updated>
+    <link href="https://arxiv.org/abs/2201.04232v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2201.04232v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present and study a novel algorithm for the computation of 2-Wasserstein population barycenters of absolutely continuous probability measures on Euclidean space. The proposed method can be seen as a stochastic gradient descent procedure in the 2-Wasserstein space, as well as a manifestation of a Law of Large Numbers therein. The algorithm aims at finding a Karcher mean or critical point in this setting, and can be implemented ``online", sequentially using i.i.d. random measures sampled from the population law. We provide natural sufficient conditions for this algorithm to a.s. converge in the Wasserstein space towards the population barycenter, and we introduce a novel, general condition which ensures uniqueness of Karcher means and moreover allows us to obtain explicit, parametric convergence rates for the expected optimality gap. We furthermore study the mini-batch version of this algorithm, and discuss examples of families of population laws to which our method and results can be applied. This work expands and deepens ideas and results introduced in an early version of \cite{backhoff2018bayesian}, in which a statistical application (and numerical implementation) of this method is developed in the context of Bayesian learning.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-01-11T23:00:06Z</published>
+    <arxiv:comment>We changed the title, from 'Stochastic Gradient Descent in Wasserstein Space' to 'Stochastic Gradient Descent for Barycenters in Wasserstein Space'. We expanded the literature review, included a new in-depth analysis of convergence rates, and added an appendix containing partial results for the case of possibly non-abs. continuous measures</arxiv:comment>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Julio Backhoff-Veraguas</name>
+    </author>
+    <author>
+      <name>Joaquin Fontbona</name>
+    </author>
+    <author>
+      <name>Gonzalo Rios</name>
+    </author>
+    <author>
+      <name>Felipe Tobar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1805.07960v2</id>
+    <title>Stochastic Gradient Descent for Stochastic Doubly-Nonconvex Composite Optimization</title>
+    <updated>2020-03-02T02:58:39Z</updated>
+    <link href="https://arxiv.org/abs/1805.07960v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1805.07960v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The stochastic gradient descent has been widely used for solving composite optimization problems in big data analyses. Many algorithms and convergence properties have been developed. The composite functions were convex primarily and gradually nonconvex composite functions have been adopted to obtain more desirable properties. The convergence properties have been investigated, but only when either of composite functions is nonconvex. There is no convergence property when both composite functions are nonconvex, which is named the \textit{doubly-nonconvex} case.To overcome this difficulty, we assume a simple and weak condition that the penalty function is \textit{quasiconvex} and then we obtain convergence properties for the stochastic doubly-nonconvex composite optimization problem.The convergence rate obtained here is of the same order as the existing work.We deeply analyze the convergence rate with the constant step size and mini-batch size and give the optimal convergence rate with appropriate sizes, which is superior to the existing work. Experimental results illustrate that our method is superior to existing methods.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-05-21T09:34:47Z</published>
+    <arxiv:comment>There is a mistake in the proof of Proposition 3.2. related to the Euclidean projection with stochastic gradients</arxiv:comment>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Takayuki Kawashima</name>
+    </author>
+    <author>
+      <name>Hironori Fujisawa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2206.05830v1</id>
+    <title>Stochastic Gradient Descent without Full Data Shuffle</title>
+    <updated>2022-06-12T20:04:31Z</updated>
+    <link href="https://arxiv.org/abs/2206.05830v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2206.05830v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Stochastic gradient descent (SGD) is the cornerstone of modern machine learning (ML) systems. Despite its computational efficiency, SGD requires random data access that is inherently inefficient when implemented in systems that rely on block-addressable secondary storage such as HDD and SSD, e.g., TensorFlow/PyTorch and in-DB ML systems over large files. To address this impedance mismatch, various data shuffling strategies have been proposed to balance the convergence rate of SGD (which favors randomness) and its I/O performance (which favors sequential access).
+  In this paper, we first conduct a systematic empirical study on existing data shuffling strategies, which reveals that all existing strategies have room for improvement -- they all suffer in terms of I/O performance or convergence rate. With this in mind, we propose a simple but novel hierarchical data shuffling strategy, CorgiPile. Compared with existing strategies, CorgiPile avoids a full data shuffle while maintaining comparable convergence rate of SGD as if a full shuffle were performed. We provide a non-trivial theoretical analysis of CorgiPile on its convergence behavior. We further integrate CorgiPile into PyTorch by designing new parallel/distributed shuffle operators inside a new CorgiPileDataSet API. We also integrate CorgiPile into PostgreSQL by introducing three new physical operators with optimizations. Our experimental results show that CorgiPile can achieve comparable convergence rate with the full shuffle based SGD for both deep learning and generalized linear models. For deep learning models on ImageNet dataset, CorgiPile is 1.5X faster than PyTorch with full data shuffle. For in-DB ML with linear models, CorgiPile is 1.6X-12.8X faster than two state-of-the-art in-DB ML systems, Apache MADlib and Bismarck, on both HDD and SSD.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-06-12T20:04:31Z</published>
+    <arxiv:comment>This technical report is an extension of our SIGMOD 2022 paper titled "In-Database Machine Learning with CorgiPile: Stochastic Gradient Descent without Full Data Shuffle". https://doi.org/10.1145/3514221.3526150</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Lijie Xu</name>
+    </author>
+    <author>
+      <name>Shuang Qiu</name>
+    </author>
+    <author>
+      <name>Binhang Yuan</name>
+    </author>
+    <author>
+      <name>Jiawei Jiang</name>
+    </author>
+    <author>
+      <name>Cedric Renggli</name>
+    </author>
+    <author>
+      <name>Shaoduo Gan</name>
+    </author>
+    <author>
+      <name>Kaan Kara</name>
+    </author>
+    <author>
+      <name>Guoliang Li</name>
+    </author>
+    <author>
+      <name>Ji Liu</name>
+    </author>
+    <author>
+      <name>Wentao Wu</name>
+    </author>
+    <author>
+      <name>Jieping Ye</name>
+    </author>
+    <author>
+      <name>Ce Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2205.00832v2</id>
+    <title>Gradient Descent, Stochastic Optimization, and Other Tales</title>
+    <updated>2024-01-12T10:46:15Z</updated>
+    <link href="https://arxiv.org/abs/2205.00832v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2205.00832v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The goal of this paper is to debunk and dispel the magic behind black-box optimizers and stochastic optimizers. It aims to build a solid foundation on how and why the techniques work. This manuscript crystallizes this knowledge by deriving from simple intuitions, the mathematics behind the strategies. This tutorial doesn't shy away from addressing both the formal and informal aspects of gradient descent and stochastic optimization methods. By doing so, it hopes to provide readers with a deeper understanding of these techniques as well as the when, the how and the why of applying these algorithms.
+  Gradient descent is one of the most popular algorithms to perform optimization and by far the most common way to optimize machine learning tasks. Its stochastic version receives attention in recent years, and this is particularly true for optimizing deep neural networks. In deep neural networks, the gradient followed by a single sample or a batch of samples is employed to save computational resources and escape from saddle points. In 1951, Robbins and Monro published \textit{A stochastic approximation method}, one of the first modern treatments on stochastic optimization that estimates local gradients with a new batch of samples. And now, stochastic optimization has become a core technology in machine learning, largely due to the development of the back propagation algorithm in fitting a neural network. The sole aim of this article is to give a self-contained introduction to concepts and mathematical tools in gradient descent and stochastic optimization.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-05-02T12:06:53Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Jun Lu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1811.08888v3</id>
+    <title>Stochastic Gradient Descent Optimizes Over-parameterized Deep ReLU Networks</title>
+    <updated>2018-12-27T18:57:43Z</updated>
+    <link href="https://arxiv.org/abs/1811.08888v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1811.08888v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the problem of training deep neural networks with Rectified Linear Unit (ReLU) activation function using gradient descent and stochastic gradient descent. In particular, we study the binary classification problem and show that for a broad family of loss functions, with proper random weight initialization, both gradient descent and stochastic gradient descent can find the global minima of the training loss for an over-parameterized deep ReLU network, under mild assumption on the training data. The key idea of our proof is that Gaussian random initialization followed by (stochastic) gradient descent produces a sequence of iterates that stay inside a small perturbation region centering around the initial weights, in which the empirical loss function of deep ReLU networks enjoys nice local curvature properties that ensure the global convergence of (stochastic) gradient descent. Our theoretical results shed light on understanding the optimization for deep learning, and pave the way for studying the optimization dynamics of training modern deep neural networks.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-11-21T18:58:46Z</published>
+    <arxiv:comment>54 pages. This version relaxes the assumptions on the loss functions and data distribution, and improves the dependency on the problem-specific parameters in the main theory</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Difan Zou</name>
+    </author>
+    <author>
+      <name>Yuan Cao</name>
+    </author>
+    <author>
+      <name>Dongruo Zhou</name>
+    </author>
+    <author>
+      <name>Quanquan Gu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.09291v2</id>
+    <title>Multilevel Stochastic Gradient Descent for Risk-Averse PDE-Constrained Optimization</title>
+    <updated>2026-06-22T08:36:06Z</updated>
+    <link href="https://arxiv.org/abs/2606.09291v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.09291v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present recent advances in applying and analyzing multilevel stochastic gradient descent algorithms to risk-averse, three-dimensional PDE-constrained optimization problems. The algorithm uses adaptive multilevel Monte Carlo gradient estimates, provides parallel scalability as well as improved convergence rates and computational complexity compared to standard batched stochastic gradient descent methods. We study the method in computationally demanding settings using three-dimensional elliptic diffusion problems and large risk-aversion parameters.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-08T09:58:38Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Niklas Baumgarten</name>
+    </author>
+    <author>
+      <name>Philipp A. Guth</name>
+    </author>
+    <author>
+      <name>David Schneiderhan</name>
+    </author>
+    <author>
+      <name>Tommaso Vanzan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1810.12273v1</id>
+    <title>Kalman Gradient Descent: Adaptive Variance Reduction in Stochastic Optimization</title>
+    <updated>2018-10-29T17:42:39Z</updated>
+    <link href="https://arxiv.org/abs/1810.12273v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1810.12273v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce Kalman Gradient Descent, a stochastic optimization algorithm that uses Kalman filtering to adaptively reduce gradient variance in stochastic gradient descent by filtering the gradient estimates. We present both a theoretical analysis of convergence in a non-convex setting and experimental results which demonstrate improved performance on a variety of machine learning areas including neural networks and black box variational inference. We also present a distributed version of our algorithm that enables large-dimensional optimization, and we extend our algorithm to SGD with momentum and RMSProp.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-10-29T17:42:39Z</published>
+    <arxiv:comment>25 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>James Vuckovic</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.02647v2</id>
+    <title>Multilevel Stochastic Gradient Descent for Optimal Control Under Uncertainty</title>
+    <updated>2026-06-22T13:41:27Z</updated>
+    <link href="https://arxiv.org/abs/2506.02647v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.02647v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a multilevel stochastic gradient descent method for the optimal control of systems governed by partial differential equations under uncertain input data. The gradient descent method used to find the optimal control leverages a parallel multilevel Monte Carlo method as stochastic gradient estimator. As a result, we achieve precise control over the stochastic gradient's bias, introduced by numerical approximation, and its sampling error, arising from the use of incomplete gradients, while optimally managing computational resources. We show that the method exhibits linear convergence in the number of optimization steps while avoiding the cost of computing the full gradient at the highest fidelity. Numerical experiments demonstrate that the method significantly outperforms the standard (mini-) batched stochastic gradient descent method in terms of convergence speed and accuracy. The method is particularly well-suited for high-dimensional control problems, taking advantage of parallel computing resources and a distributed multilevel data structure. Additionally, we evaluate and implement different step size strategies, optimizer schemes, and budgeting techniques. The method's performance is studied using a two-dimensional elliptic subsurface diffusion problem with log-normal coefficients and Matérn covariance.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-03T09:00:43Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Niklas Baumgarten</name>
+    </author>
+    <author>
+      <name>David Schneiderhan</name>
+    </author>
+  </entry>
+</feed>

@@ -7,12 +7,14 @@
 from __future__ import annotations
 
 import base64
+import argparse
 import hashlib
 import json
 import re
 import struct
 import subprocess
 import time
+import xml.etree.ElementTree as ET
 from datetime import UTC, datetime
 from pathlib import Path
 from urllib.parse import parse_qs, unquote, urlencode, urlsplit, urlunsplit
@@ -37,6 +39,12 @@ def save(path: Path, value) -> None:
 def canonical(url: str) -> str:
     p = urlsplit(url)
     path = unquote(p.path).rstrip("/")
+    # abs, HTML и PDF разных версий одной статьи не создают дубли в пуле оценок.
+    if p.hostname in {"arxiv.org", "export.arxiv.org"}:
+        match = re.fullmatch(r"/(?:abs|html|pdf)/(.+?)(?:\.pdf)?", path)
+        if match:
+            identifier = re.sub(r"v\d+$", "", match.group(1))
+            return "https://arxiv.org/abs/" + identifier
     query = [(k, v) for k, values in parse_qs(p.query).items() for v in values
              if not k.startswith("utm_") and k not in {"WT.mc_id", "wt.mc_id"}]
     return urlunsplit(("https", p.netloc.lower(), path, urlencode(sorted(query)), ""))
@@ -112,10 +120,43 @@ def local_run(queries: list[dict]) -> None:
     save(target, runs)
 
 
-def external_runs(queries: list[dict]) -> None:
+def arxiv_search_query(query: str) -> str:
+    """Сохраняет исходные термы и специальные имена; все термы соединяются AND."""
+    return " AND ".join('all:"' + term.replace('"', '\\"') + '"'
+                        for term in query.split())
+
+
+def parse_arxiv_feed(text: str) -> tuple[list[dict], int]:
+    """Разбирает порядок Atom-выдачи; ошибка API не считается пустой выдачей."""
+    root = ET.fromstring(text)
+    namespace = {"atom": "http://www.w3.org/2005/Atom",
+                 "os": "http://a9.com/-/spec/opensearch/1.1/"}
+    total = root.findtext("os:totalResults", namespaces=namespace)
+    hits, seen = [], set()
+    for entry in root.findall("atom:entry", namespace):
+        url = entry.findtext("atom:id", "", namespace)
+        if "api/errors" in url:
+            raise ValueError(entry.findtext("atom:summary", "Ошибка arXiv API", namespace))
+        key = canonical(url)
+        if key in seen:
+            continue
+        seen.add(key)
+        abstract = " ".join(entry.findtext("atom:summary", "", namespace).split())
+        hits.append({"rank": len(hits) + 1,
+                     "title": " ".join(entry.findtext("atom:title", "", namespace).split()),
+                     "url": url.replace("http://", "https://", 1),
+                     "snippet": abstract, "abstract": abstract,
+                     "published": entry.findtext("atom:published", "", namespace),
+                     "updated": entry.findtext("atom:updated", "", namespace)})
+    if total is None:
+        raise ValueError("arXiv API не вернул totalResults")
+    return hits, int(total)
+
+
+def external_runs(queries: list[dict], engines=("wikipedia", "bing", "microsoft_learn", "arxiv")) -> None:
     session = requests.Session()
     session.headers.update(HEADERS)
-    for engine in ("wikipedia", "bing", "microsoft_learn"):
+    for engine in engines:
         target = DIRECTORY / f"runs/{engine}.json"
         runs = json.loads(target.read_text()) if target.exists() else {}
         for query in queries:
@@ -124,7 +165,17 @@ def external_runs(queries: list[dict]) -> None:
                 continue
             started = datetime.now(UTC).isoformat()
             try:
-                if engine == "wikipedia":
+                total_results = None
+                if engine == "arxiv":
+                    response = session.get("https://export.arxiv.org/api/query", params={
+                        "search_query": arxiv_search_query(query["query"]),
+                        "start": 0, "max_results": 10,
+                        "sortBy": "relevance", "sortOrder": "descending",
+                    }, timeout=40)
+                    if response.status_code != 200:
+                        raise RuntimeError(f"arXiv: HTTP {response.status_code}")
+                    hits, total_results = parse_arxiv_feed(response.text)
+                elif engine == "wikipedia":
                     response = session.get("https://en.wikipedia.org/w/api.php", params={
                         "action": "query", "format": "json", "list": "search",
                         "srsearch": query["query"], "srlimit": 10, "srprop": "snippet",
@@ -177,17 +228,20 @@ def external_runs(queries: list[dict]) -> None:
                                      "title": anchor.get_text(" ", strip=True), "url": url,
                                      "snippet": snippet.get_text(" ", strip=True) if snippet else ""})
                     hits = hits[:10]
-                raw_path = DIRECTORY / f"raw/{engine}_{qid}.{'html' if engine == 'bing' else 'json'}"
+                suffix = "xml" if engine == "arxiv" else "html" if engine == "bing" else "json"
+                raw_path = DIRECTORY / f"raw/{engine}_{qid}.{suffix}"
                 raw_path.parent.mkdir(exist_ok=True)
                 raw_path.write_text(response.text, encoding="utf-8")
                 runs[qid] = {"status": "ok", "query": query["query"], "collected_at": started,
                              "request_url": response.url, "results": hits}
-            except (requests.RequestException, ValueError, RuntimeError) as error:
+                if total_results is not None:
+                    runs[qid]["total_results"] = total_results
+            except (requests.RequestException, ET.ParseError, ValueError, RuntimeError) as error:
                 runs[qid] = {"status": "unavailable", "query": query["query"],
                              "collected_at": started, "error": str(error), "results": []}
             save(target, runs)
             print(engine, qid, runs[qid]["status"], len(runs[qid]["results"]), flush=True)
-            time.sleep(2)
+            time.sleep(3.2 if engine == "arxiv" else 2)
 
 
 def documents(queries: list[dict]) -> None:
@@ -209,10 +263,17 @@ def documents(queries: list[dict]) -> None:
                 if hit.get("oid"):
                     item = db.processed_documents.find_one({"_id": ObjectId(hit["oid"])})
                 else:
-                    raw = db.documents.find_one({"source": source, "url": hit["url"]}, {"_id": 1})
+                    identity = ({"source": source, "source_id": key.removeprefix("https://arxiv.org/abs/")}
+                                if source == "arxiv" else {"source": source, "url": hit["url"]})
+                    raw = db.documents.find_one(identity, {"_id": 1})
                     item = db.processed_documents.find_one({"_id": raw["_id"]}) if raw else None
-                text = item.get("text", "") if item else ""
-                origin = "mongodb_processed_text" if text else ""
+                if engine == "arxiv" and hit.get("abstract"):
+                    # Для новых статей фиксируется аннотация именно возвращённой API-версии.
+                    text = hit["title"] + "\n\n" + hit["abstract"]
+                    origin = "arxiv_api_title_abstract"
+                else:
+                    text = item.get("text", "") if item else ""
+                    origin = "mongodb_processed_text" if text else ""
                 error = None
                 if not text:
                     try:
@@ -247,9 +308,12 @@ def documents(queries: list[dict]) -> None:
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Сбор выдач без перезаписи уже сохранённых запросов")
+    parser.add_argument("--engines", nargs="+", choices=("wikipedia", "bing", "microsoft_learn", "arxiv"))
+    args = parser.parse_args()
     queries = json.loads((DIRECTORY / "queries.json").read_text())
     if not (DIRECTORY / "snapshot.json").exists():
         snapshot()
     local_run(queries)
-    external_runs(queries)
+    external_runs(queries, args.engines or ("wikipedia", "bing", "microsoft_learn", "arxiv"))
     documents(queries)

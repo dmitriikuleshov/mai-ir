@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/6qevatd0+zApeFb8oVqCA0b6ALE</id>
+  <title>arXiv Query: search_query=all:"finite" AND all:"element" AND all:"analysis" AND all:"stress"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:25:00Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22finite%22+AND+(all:%22element%22+AND+(all:%22analysis%22+AND+all:%22stress%22))&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>842</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2511.09348v3</id>
+    <title>A coupled finite element-virtual element method for thermomechanical analysis of electronic packaging structures</title>
+    <updated>2025-12-26T14:34:26Z</updated>
+    <link href="https://arxiv.org/abs/2511.09348v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.09348v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This study presents a finite element and virtual element (FE-VE) coupled method for thermomechanical analysis in electronic packaging structures. The approach partitions computational domains strategically, employing FEM for regular geometries to maximize computational efficiency and VEM for complex shapes to enhance geometric flexibility. Interface compatibility is maintained through coincident nodal correspondence, ensuring solution continuity across domain boundaries while reducing meshing complexity and computational overhead. Validation through electronic packaging applications demonstrates reasonable agreement with reference solutions and acceptable convergence characteristics across varying mesh densities. The method effectively captures thermal distributions and stress concentrations in multi-material systems, establishing a practical computational framework for electronic packaging analysis involving complex geometries. Source codes are available at https://github.com/yanpeng-gong/FeVeCoupled-ElectronicPackaging.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-12T13:59:45Z</published>
+    <arxiv:primary_category term="math.NA"/>
+    <arxiv:journal_ref>Engineering Analysis with Boundary Elements 184 (2026) 106640</arxiv:journal_ref>
+    <author>
+      <name>Yanpeng Gong</name>
+    </author>
+    <author>
+      <name>Sishuai Li</name>
+    </author>
+    <author>
+      <name>Yue Mei</name>
+    </author>
+    <author>
+      <name>Bingbing Xu</name>
+    </author>
+    <author>
+      <name>Fei Qin</name>
+    </author>
+    <author>
+      <name>Xiaoying Zhuang</name>
+    </author>
+    <author>
+      <name>Timon Rabczuk</name>
+    </author>
+    <arxiv:doi>10.1016/j.enganabound.2026.106640</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.enganabound.2026.106640" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1502.06065v1</id>
+    <title>Hybrid stress quadrilateral finite element approximation for stochastic plane elasticity equations</title>
+    <updated>2015-02-21T05:27:24Z</updated>
+    <link href="https://arxiv.org/abs/1502.06065v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1502.06065v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper considers stochastic hybrid stress quadrilateral finite element analysis of plane elasticity equations with stochastic Young's modulus and stochastic loads. Firstly, we apply Karhunen-Lo$\grave{e}$ve expansion to stochastic Young's modulus and stochastic loads so as to turn the original problem into a system containing a finite number of deterministic parameters. Then we deal with the stochastic field and the space field by $k-$version/$p-$version finite element methods and a hybrid stress quadrilateral finite element method, respectively. We show that the derived a priori error estimates are uniform with respect to the Lam$\acute{e}$ constant $λ\in (0, +\infty)$. Finally, we provide some numerical results.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-02-21T05:27:24Z</published>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>Xiaojing Xu</name>
+    </author>
+    <author>
+      <name>Wenwen Fan</name>
+    </author>
+    <author>
+      <name>Xiaoping Xie</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1402.5186v1</id>
+    <title>Towards Automatic Stress Analysis using Scaled Boundary Finite Element Method with Quadtree Mesh of High-order Elements</title>
+    <updated>2014-02-21T02:01:06Z</updated>
+    <link href="https://arxiv.org/abs/1402.5186v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1402.5186v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper presents a technique for stress and fracture analysis by using the scaled boundary finite element method (SBFEM) with quadtree mesh of high-order elements. The cells of the quadtree mesh are modelled as scaled boundary polygons that can have any number of edges, be of any high orders and represent the stress singularity around a crack tip accurately without asymptotic enrichment or other special techniques. Owing to these features, a simple and automatic meshing algorithm is devised. No special treatment is required for the hanging nodes and no displacement incompatibility occurs. Curved boundaries and cracks are modelled without excessive local refinement. Five numerical examples are presented to demonstrate the simplicity and applicability of the proposed technique.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-02-21T02:01:06Z</published>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>Hou Man</name>
+    </author>
+    <author>
+      <name>Chongmin Song</name>
+    </author>
+    <author>
+      <name>Sundararajan Natarajan</name>
+    </author>
+    <author>
+      <name>Ean Tat Ooi</name>
+    </author>
+    <author>
+      <name>Carolin Birk</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2106.08893v1</id>
+    <title>Variational principles and finite element Bloch analysis in couple stress elastodynamics</title>
+    <updated>2021-06-15T16:49:56Z</updated>
+    <link href="https://arxiv.org/abs/2106.08893v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2106.08893v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We address the numerical simulation of periodic solids (phononic crystals) within the framework of couple stress elasticity. The additional terms in the elastic potential energy lead to dispersive behavior in shear waves, even in the absence of material periodicity. To study the bulk waves in these materials, we establish an action principle in the frequency domain and present a finite element formulation for the wave propagation problem related to couple stress theory subject to an extended set of Bloch-periodic boundary conditions. A major difference from the traditional finite element formulation for phononic crystals is the appearance of higher-order derivatives. We solve this problem with the use of a Lagrange-multiplier approach. After presenting the variational principle and general finite element treatment, we particularize it to the problem of finding dispersion relations in elastic bodies with periodic material properties. The resulting implementation is used to determine the dispersion curves for homogeneous and porous couple stress solids, in which the latter is found to exhibit an interesting bandgap structure.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-06-15T16:49:56Z</published>
+    <arxiv:comment>29 pages, 8 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Wave Motion, 106, 102809 (2021)</arxiv:journal_ref>
+    <author>
+      <name>Nicolás Guarín-Zapata</name>
+    </author>
+    <author>
+      <name>Juan Gomez</name>
+    </author>
+    <author>
+      <name>Ali Reza Hadjesfandiari</name>
+    </author>
+    <author>
+      <name>Gary F. Dargush</name>
+    </author>
+    <arxiv:doi>10.1016/j.wavemoti.2021.102809</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.wavemoti.2021.102809" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1805.09920v3</id>
+    <title>A multipoint stress mixed finite element method for elasticity on simplicial grids</title>
+    <updated>2019-07-26T22:21:07Z</updated>
+    <link href="https://arxiv.org/abs/1805.09920v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1805.09920v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop a new multipoint stress mixed finite element method for linear elasticity with weakly enforced stress symmetry on simplicial grids. Motivated by the multipoint flux mixed finite element method for Darcy flow, the method utilizes the lowest order Brezzi-Douglas-Marini finite element spaces for the stress and the vertex quadrature rule in order to localize the interaction of degrees of freedom. This allows for local stress elimination around each vertex. We develop two variants of the method. The first uses a piecewise constant rotation and results in a cell-centered system for displacement and rotation. The second uses a piecewise linear rotation and a quadrature rule for the asymmetry bilinear form. This allows for further elimination of the rotation, resulting in a cell-centered system for the displacement only. Stability and error analysis is performed for both variants. First-order convergence is established for all variables in their natural norms. A duality argument is further employed to prove second order superconvergence of the displacement at the cell centers. Numerical results are presented in confirmation of the theory.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-05-24T22:05:50Z</published>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>Ilona Ambartsumyan</name>
+    </author>
+    <author>
+      <name>Eldar Khattatov</name>
+    </author>
+    <author>
+      <name>Jan M. Nordbotten</name>
+    </author>
+    <author>
+      <name>Ivan Yotov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1302.4578v1</id>
+    <title>Finite element analysis of surface-stress effects in the Si lattice-parameter measurement</title>
+    <updated>2013-02-19T11:16:21Z</updated>
+    <link href="https://arxiv.org/abs/1302.4578v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1302.4578v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A stress exists in solids surfaces, similarly to liquids, also if the underlying bulk material is stress-free. This paper investigates the surface stress effect on the measured value of the Si lattice parameter used to determine the Avogadro constant by counting Si atoms. An elastic-film model has been used to provide a surface load in a finite element analysis of the lattice strain of the x-ray interferometer crystal used to measure the lattice parameter. Eventually, an experiment is proposed to work a lattice parameter measurement out so that there is a visible effect of the surface stress.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-02-19T11:16:21Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Carlo Sasso</name>
+    </author>
+    <author>
+      <name>Danilo Quagliotti</name>
+    </author>
+    <author>
+      <name>Enrico Massa</name>
+    </author>
+    <author>
+      <name>Giovanni Mana</name>
+    </author>
+    <author>
+      <name>Ulrich Kuetgens</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2001.04582v2</id>
+    <title>A coupled multipoint stress -- multipoint flux mixed finite element method for the Biot system of poroelasticity</title>
+    <updated>2020-09-12T18:27:02Z</updated>
+    <link href="https://arxiv.org/abs/2001.04582v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2001.04582v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a mixed finite element method for a five-field formulation of the Biot system of poroelasticity that reduces to a cell-centered pressure-displacement system on simplicial and quadrilateral grids. A mixed stress-displacement-rotation formulation for elasticity with weak stress symmetry is coupled with a mixed velocity-pressure Darcy formulation. The spatial discretization is based on combining the multipoint stress mixed finite element (MSMFE) method for elasticity and the multipoint flux mixed finite element (MFMFE) method for Darcy flow. It uses the lowest order Brezzi-Douglas-Marini mixed finite element spaces for the poroelastic stress and Darcy velocity, piecewise constant displacement and pressure, and continuous piecewise linear or bilinear rotation. A vertex quadrature rule is applied to the velocity, stress, and stress-rotation bilinear forms, which block-diagonalizes the corresponding matrices and allows for local velocity, stress, and rotation elimination. This leads to a cell-centered positive-definite system for pressure and displacement at each time step. We perform error analysis for the semidiscrete and fully discrete formulations, establishing first order convergence for all variables in their natural norms. The numerical tests confirm the theoretical convergence rates and illustrate the locking-free property of the method.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-01-14T01:17:57Z</published>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>Ilona Ambartsumyan</name>
+    </author>
+    <author>
+      <name>Eldar Khattatov</name>
+    </author>
+    <author>
+      <name>Ivan Yotov</name>
+    </author>
+    <arxiv:doi>10.1016/j.cma.2020.113407</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.cma.2020.113407" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.00163v1</id>
+    <title>Multipoint stress mixed finite element methods for elasticity on cuboid grids</title>
+    <updated>2025-01-31T21:03:44Z</updated>
+    <link href="https://arxiv.org/abs/2502.00163v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.00163v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop multipoint stress mixed finite element methods for linear elasticity with weak stress symmetry on cuboid grids, which can be reduced to a symmetric and positive definite cell-centered system. The methods employ the lowest-order enhanced Raviart-Thomas finite element space for the stress and piecewise constant displacement. The vertex quadrature rule is employed to localize the interaction of stress degrees of freedom, enabling local stress elimination around each vertex. We introduce two methods. The first method uses a piecewise constant rotation, resulting in a cell-centered system for the displacement and rotation. The second method employs a continuous piecewise trilinear rotation and the vertex quadrature rule for the asymmetry bilinear forms, allowing for further elimination of the rotation and resulting in a cell-centered system for the displacement only. Stability and error analysis is performed for both methods. For the stability analysis of the second method, a new auxiliary H-curl conforming matrix-valued space is constructed, which forms an exact sequence with the stress space. A matrix-matrix inf-sup condition is shown for the curl of this auxiliary space and the trilinear rotation space. First-order convergence is established for all variables in their natural norms, as well as second-order superconvergence of the displacement at the cell centers. Numerical results are presented to verify the theory.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-31T21:03:44Z</published>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>Ibrahim Yazici</name>
+    </author>
+    <author>
+      <name>Ivan Yotov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.03908v2</id>
+    <title>Steady-state and transient thermal stress analysis using a polygonal finite element method</title>
+    <updated>2025-04-22T03:41:01Z</updated>
+    <link href="https://arxiv.org/abs/2501.03908v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.03908v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work develops a polygonal finite element method (PFEM) for the analysis of steady-state and transient thermal stresses in two dimensional continua. The method employs Wachspress rational basis functions to construct conforming interpolations over arbitrary convex polygonal meshes, providing enhanced geometric flexibility and accuracy in capturing complex boundary conditions and heterogeneous material behavior. A quadtree-based acceleration strategy is introduced to significantly reduce computational cost through the reuse of precomputed stiffness and mass matrices. The PFEM is implemented in ABAQUS via a user-defined element (UEL) framework. Comprehensive benchmark problems, including multi-scale and non-matching mesh scenarios, are conducted to verify the accuracy, convergence properties, and computational efficiency of the method. Results indicate that the proposed PFEM offers notable advantages over conventional FEM in terms of mesh adaptability, solution quality, and runtime performance. The method shows strong potential for large-scale simulations involving thermal-mechanical coupling, complex geometries, and multi-resolution modeling.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-07T16:22:47Z</published>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>Yang Yang</name>
+    </author>
+    <author>
+      <name>Mingjiao Yan</name>
+    </author>
+    <author>
+      <name>Zongliang Zhang</name>
+    </author>
+    <author>
+      <name>Dengmiao Hao</name>
+    </author>
+    <author>
+      <name>Xuedong Chen</name>
+    </author>
+    <author>
+      <name>Weixiong Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1711.09248v1</id>
+    <title>Domain decomposition and multiscale mortar mixed finite element methods for linear elasticity with weak stress symmetry</title>
+    <updated>2017-11-25T15:16:52Z</updated>
+    <link href="https://arxiv.org/abs/1711.09248v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1711.09248v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Two non-overlapping domain decomposition methods are presented for the mixed finite element formulation of linear elasticity with weakly enforced stress symmetry. The methods utilize either displacement or normal stress Lagrange multiplier to impose interface continuity of normal stress or displacement, respectively. By eliminating the interior subdomain variables, the global problem is reduced to an interface problem, which is then solved by an iterative procedure. The condition number of the resulting algebraic interface problem is analyzed for both methods. A multiscale mortar mixed finite element method for the problem of interest on non-matching multiblock grids is also studied. It uses a coarse scale mortar finite element space on the non-matching interfaces to approximate the trace of the displacement and impose weakly the continuity of normal stress. A priori error analysis is performed. It is shown that, with appropriate choice of the mortar space, optimal convergence on the fine scale is obtained for the stress, displacement, and rotation, as well as some superconvergence for the displacement. Computational results are presented in confirmation of the theory of all proposed methods.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-11-25T15:16:52Z</published>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>Eldar Khattatov</name>
+    </author>
+    <author>
+      <name>Ivan Yotov</name>
+    </author>
+  </entry>
+</feed>

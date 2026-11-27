@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/v3pTd4rwzEogvp/9QBk496S3ls8</id>
+  <title>arXiv Query: search_query=all:"computational" AND all:"fluid" AND all:"dynamics" AND all:"finite" AND all:"volume" AND all:"method"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:24:56Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22computational%22+AND+(all:%22fluid%22+AND+(all:%22dynamics%22+AND+(all:%22finite%22+AND+(all:%22volume%22+AND+all:%22method%22))))&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>429</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2102.03557v1</id>
+    <title>Quantum Finite Volume Method for Computational Fluid Dynamics with Classical Input and Output</title>
+    <updated>2021-02-06T10:29:21Z</updated>
+    <link href="https://arxiv.org/abs/2102.03557v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2102.03557v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Computational fluid dynamics (CFD) is a branch of fluid mechanics that uses numerical methods to solve fluid flows. The finite volume method (FVM) is an important one. In FVM, space is discretized to many grid cells. When the number of grid cells grows, massive computing resources are needed correspondingly. Recently, quantum computing has been proven to outperform a classical computer on specific computational tasks. However, the quantum CFD (QCFD) solver remains a challenge because the conversion between the classical and quantum data would become the bottleneck for the time complexity. Here we propose a QCFD solver with exponential speedup over classical counterparts and focus on how a quantum computer handles classical input and output. By utilizing quantum random access memory, the algorithm realizes sublinear time at every iteration step. The QCFD solver could allow new frontiers in the CFD area by allowing a finer mesh and faster calculation.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-02-06T10:29:21Z</published>
+    <arxiv:comment>11 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Zhao-Yun Chen</name>
+    </author>
+    <author>
+      <name>Cheng Xue</name>
+    </author>
+    <author>
+      <name>Si-Ming Chen</name>
+    </author>
+    <author>
+      <name>Bing-Han Lu</name>
+    </author>
+    <author>
+      <name>Yu-Chun Wu</name>
+    </author>
+    <author>
+      <name>Ju-Chun Ding</name>
+    </author>
+    <author>
+      <name>Sheng-Hong Huang</name>
+    </author>
+    <author>
+      <name>Guo-Ping Guo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1312.2388v2</id>
+    <title>Second-order accurate finite volume method for well-driven flows</title>
+    <updated>2016-05-18T07:18:32Z</updated>
+    <link href="https://arxiv.org/abs/1312.2388v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1312.2388v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider a finite volume method for a well-driven fluid flow in a porous medium. Due to the singularity of the well, modeling in the near-well region with standard numerical schemes results in a completely wrong total well flux and an inaccurate hydraulic head. Local grid refinement can help, but it comes at computational cost. In this article we propose two methods to address well singularity. In the first method the flux through well faces is corrected using a logarithmic function, in a way related to the Peaceman correction. Coupling this correction with a second-order accurate two-point scheme gives a greatly improved total well flux, but the resulting scheme is still not even first order accurate on coarse grids. In the second method fluxes in the near-well region are corrected by representing the hydraulic head as a sum of a logarithmic and a linear function. This scheme is second-order accurate.</summary>
+    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-12-09T11:25:34Z</published>
+    <arxiv:comment>20 pages, 9 figures in Journal of Computational Physics, Volume 307, 2016</arxiv:comment>
+    <arxiv:primary_category term="physics.flu-dyn"/>
+    <author>
+      <name>Milan Dotlić</name>
+    </author>
+    <author>
+      <name>Dragan Vidović</name>
+    </author>
+    <author>
+      <name>Boris Pokorni</name>
+    </author>
+    <author>
+      <name>Milenko Pušić</name>
+    </author>
+    <author>
+      <name>Milan Dimkić</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.10050v4</id>
+    <title>Finite Volume Graph Network(FVGN): Predicting unsteady incompressible fluid dynamics with finite volume informed neural network</title>
+    <updated>2024-03-17T06:46:40Z</updated>
+    <link href="https://arxiv.org/abs/2309.10050v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.10050v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The rapid development of deep learning has significant implications for the advancement of Computational Fluid Dynamics (CFD). Currently, most pixel-grid-based deep learning methods for flow field prediction exhibit significantly reduced accuracy in predicting boundary layer flows and poor adaptability to geometric shapes. Although Graph Neural Network (GNN) models for unstructured grids based unsteady flow prediction have better geometric adaptability, these models suffer from error accumulation in long-term predictions of unsteady flows. More importantly, fully data-driven models often require extensive training time, greatly limiting the rapid update and iteration speed of deep learning models when facing more complex unsteady flows. Therefore, this paper aims to balance the demands for training overhead and prediction accuracy by integrating physical constraints based on the finite volume method into the loss function of the graph neural network. Additionally, it incorporates a twice-massage aggregation mechanism inspired by the extended stencil method to enhance the unsteady flow prediction accuracy and geometric shape generalization ability of the graph neural network model on unstructured grids. We focus particularly on the model's predictive accuracy within the boundary layer. Compared to fully data-driven methods, our model achieves better predictive accuracy and geometric shape generalization ability in a shorter training time.</summary>
+    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-18T18:06:21Z</published>
+    <arxiv:primary_category term="physics.flu-dyn"/>
+    <arxiv:journal_ref>Physics of Fluids 1 April 2024; 36 (4): 043601</arxiv:journal_ref>
+    <author>
+      <name>Tianyu Li</name>
+    </author>
+    <author>
+      <name>Shufan Zou</name>
+    </author>
+    <author>
+      <name>Xinghua Chang</name>
+    </author>
+    <author>
+      <name>Laiping Zhang</name>
+    </author>
+    <author>
+      <name>Xiaogang Deng</name>
+    </author>
+    <arxiv:doi>10.1063/5.0197425</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1063/5.0197425" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.17063v1</id>
+    <title>High-Order Dynamic Integration Method (HODIM) for Modeling Turbulent Fluid Dynamics</title>
+    <updated>2024-10-22T14:44:41Z</updated>
+    <link href="https://arxiv.org/abs/2410.17063v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.17063v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This research explores the development and application of the High-Order Dynamic Integration Method for solving integro-differential equations, with a specific focus on turbulent fluid dynamics. Traditional numerical methods, such as the Finite Difference Method and the Finite Volume Method, have been widely employed in fluid dynamics but struggle to accurately capture the complexities of turbulence, particularly in high Reynolds number regimes. These methods often require significant computational resources and are prone to errors in nonlinear dynamic systems. The High-Order Dynamic Integration Method addresses these challenges by integrating higher-order interpolation techniques with dynamic adaptation strategies, significantly enhancing accuracy and computational efficiency. Through rigorous numerical analysis, this method demonstrates superior performance over the Finite Difference Method and the Finite Volume Method in handling the nonlinear behaviors characteristic of turbulent flows. Furthermore, the High-Order Dynamic Integration Method achieves this without a substantial increase in computational cost, making it a highly efficient tool for simulations in computational fluid dynamics. The research validates the capabilities of the High-Order Dynamic Integration Method through a series of benchmark tests and case studies. Results indicate a marked improvement in both accuracy and stability, particularly in simulations of high-Reynolds-number flows, where traditional methods often falter. This innovative approach offers a robust and efficient alternative for solving complex fluid dynamics problems, contributing to advances in the field of numerical methods and computational fluid dynamics.</summary>
+    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-22T14:44:41Z</published>
+    <arxiv:comment>7 pages</arxiv:comment>
+    <arxiv:primary_category term="physics.flu-dyn"/>
+    <author>
+      <name>Rômulo Damasclin Chaves dos Santos</name>
+    </author>
+    <author>
+      <name>Jorge Henrique de Oliveira Sales</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.16132v3</id>
+    <title>Implementation of Immersed Boundaries via Volume Penalization in the Industrial Aeronautical Computational Fluid Dynamics Solver CODA</title>
+    <updated>2025-01-07T20:26:46Z</updated>
+    <link href="https://arxiv.org/abs/2404.16132v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.16132v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present the implementation and validation of an immersed boundary volume penalization method in the computational fluid dynamics solver CODA (from ONERA, DLR, and Airbus). Our goal is to model and simulate turbulent fluid flows in complex 3D aerodynamic configurations through the numerical solution of the Reynolds--averaged Navier--Stokes equations using the Spalart--Allmaras turbulent model. To do that, an immersed boundary method has been implemented in CODA and an efficient preprocessing tool for the construction of unstructured hexahedral meshes with adaptive mesh refinement around immersed geometries has been developed. We report several numerical examples, including subsonic flow past the NACA0012 airfoil, transonic flow past the RAE2822 airfoil, subsonic flow past the MDA30P30N multi-element airfoil, and subsonic flow around the NASA high-lift CRM aircraft. These simulations have been performed in the CODA solver with a second-order finite volume scheme as spatial discretization and an implicit backward Euler scheme based on the matrix-free GMRES block-Jacobi iterative method. The reported numerical simulations are in good agreement with their corresponding experimental data. These encouraging results allow us to conclude that the implemented immersed boundary method is efficient, flexible, and accurate and can therefore be used for aeronautical applications in industry.</summary>
+    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-24T18:40:27Z</published>
+    <arxiv:comment>28 pages, 25 figures</arxiv:comment>
+    <arxiv:primary_category term="physics.flu-dyn"/>
+    <author>
+      <name>Jonatan Nunez</name>
+    </author>
+    <author>
+      <name>David Huergo</name>
+    </author>
+    <author>
+      <name>Diego Lodares</name>
+    </author>
+    <author>
+      <name>Suyash Shrestha</name>
+    </author>
+    <author>
+      <name>Juan Guerra</name>
+    </author>
+    <author>
+      <name>Juan Florenciano</name>
+    </author>
+    <author>
+      <name>Esteban Ferrer</name>
+    </author>
+    <author>
+      <name>Eusebio Valero</name>
+    </author>
+    <arxiv:doi>10.1007/s00366-025-02119-x</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s00366-025-02119-x" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1804.01130v1</id>
+    <title>A Sharp Free Surface Finite Volume Method Applied to Gravity Wave Flows</title>
+    <updated>2018-04-03T18:55:33Z</updated>
+    <link href="https://arxiv.org/abs/1804.01130v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1804.01130v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper presents a sharp free surface method for fully nonlinear flow of two immiscible phases for wave propagation problems in the Finite Volume framework. The method resolves a sharp interface between two phases by combining the geometric reconstruction Volume-of-Fluid scheme isoAdvector for accurate advection of the free surface with the Ghost Fluid Method for the consistent treatment of density and pressure gradient discontinuities at the free surface. The method uses a compact computational stencil irrespective of cell shape and is formally second-order accurate in time and space. The primary focus of this work is to present the combined method and verify and validate it for wave-related problems in ocean sciences, marine and coastal engineering, by considering the following test cases: i) wave propagation of a two-dimensional wave with moderate steepness, ii) green water (water-on-deck) simulations for a ship model with violent free surface flow patterns. The method is implemented in OpenFOAM, an open source software for Computational Fluid Dynamics.</summary>
+    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-04-03T18:55:33Z</published>
+    <arxiv:comment>42 pages, 36 figures, submitted to Journal of Computational Physics</arxiv:comment>
+    <arxiv:primary_category term="physics.flu-dyn"/>
+    <author>
+      <name>Vuko Vukčević</name>
+    </author>
+    <author>
+      <name>Johan Roenby</name>
+    </author>
+    <author>
+      <name>Inno Gatin</name>
+    </author>
+    <author>
+      <name>Hrvoje Jasak</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1505.03271v3</id>
+    <title>Finite Volume $vs.$ Streaming-based Lattice Boltzmann algorithm for fluid-dynamics simulations: a one-to-one accuracy and performance study</title>
+    <updated>2016-02-05T22:49:30Z</updated>
+    <link href="https://arxiv.org/abs/1505.03271v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1505.03271v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A new finite volume (FV) discretisation method for the Lattice Boltzmann (LB) equation which combines high accuracy with limited computational cost is presented. In order to assess the performance of the FV method we carry out a systematic comparison, focused on accuracy and computational performances, with the standard $streaming$ (ST) Lattice Boltzmann equation algorithm. To our knowledge such a systematic comparison has never been previously reported. In particular we aim at clarifying whether and in which conditions the proposed algorithm, and more generally any FV algorithm, can be taken as the method of choice in fluid-dynamics LB simulations. For this reason the comparative analysis is further extended to the case of realistic flows, in particular thermally driven flows in turbulent conditions. We report the first successful simulation of high-Rayleigh number convective flow performed by a Lattice Boltzmann FV based algorithm with wall grid refinement.</summary>
+    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-05-13T08:31:00Z</published>
+    <arxiv:comment>15 pages, 14 figures (discussion changes, improved figure readability)</arxiv:comment>
+    <arxiv:primary_category term="physics.flu-dyn"/>
+    <arxiv:journal_ref>Phys. Rev. E 93, 023306 (2016)</arxiv:journal_ref>
+    <author>
+      <name>Kalyan Shrestha</name>
+    </author>
+    <author>
+      <name>Gilmar Mompean</name>
+    </author>
+    <author>
+      <name>Enrico Calzavarini</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevE.93.023306</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevE.93.023306" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1207.6822v1</id>
+    <title>CIP/multi-moment finite volume method with arbitrary order of accuracy</title>
+    <updated>2012-07-30T02:28:53Z</updated>
+    <link href="https://arxiv.org/abs/1207.6822v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1207.6822v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper presents a general formulation of the CIP/multi-moment finite volume method (CIP/MM FVM) for arbitrary order of accuracy. Reconstruction up to arbitrary order can be built on single cell by adding extra derivative moments at the cell boundary. The volume integrated average (VIA) is updated via a flux-form finite volume formulation, whereas the point-based derivative moments are computed as local derivative Riemann problems by either direct interpolation or approximate Riemann solvers.</summary>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.ao-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.geo-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-07-30T02:28:53Z</published>
+    <arxiv:primary_category term="physics.comp-ph"/>
+    <arxiv:journal_ref>12th Computational Engineering Conference of Japan Society for Computational Engineering and Science (JSCES) Vol.12, May 22-24, 2007, Tokyo. Computational Fluid Dynamics (in Japanese), ISBN 978-4-339-04597-0, publish by Coronasha, 2009</arxiv:journal_ref>
+    <author>
+      <name>Feng Xiao</name>
+    </author>
+    <author>
+      <name>Satoshi Ii</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2212.12323v1</id>
+    <title>A unified derivation of Voronoi, power, and finite-element Lagrangian computational fluid dynamics</title>
+    <updated>2022-12-23T13:23:27Z</updated>
+    <link href="https://arxiv.org/abs/2212.12323v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2212.12323v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Most approaches in Lagrangian fluid dynamics simulations proceed from the definition of particle volumes, from which discrete versions of the spatial differential operators are derived.
+  Recently, Gallouët and Mérigot [1] simultaneously tackled physical dynamics and geometrical optimization, with the result that the pressure field is linked to a geometric feature: the weights of a power diagram. Their resulting dynamics, surprisingly, does not feature a pressure gradient, but spring-like forces between each particle and the centroid of its cell.
+  Inspired by this work, both geometrical and mechanical optimization are here included within a framework due to Arroyo and Ortiz [2]. In a systematic way, we first find a connection with the smoothed particle hydrodynamics method. In what we will call the ``low-temperature limit'', we show that the requirement of zeroth order consistency leads to the Voronoi diagram, and a pressure field enforcing incompressibility leads to Gallouët and Mérigot's method.
+  If the requirement of first order consistency is added, the particle finite element method (pFEM) is recovered. However, it features an additional spring-like term that has been missing from previous formulations of the method.
+  Different methods are tested on two standard inviscid single-phase cases:the rotating Gresho vortex \added{and the Taylor-Green vortex sheet}, showing the superiority of pFEM, which is slightly increased by the additional force found here.</summary>
+    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-12-23T13:23:27Z</published>
+    <arxiv:primary_category term="physics.flu-dyn"/>
+    <author>
+      <name>Daniel Duque</name>
+    </author>
+    <arxiv:doi>10.1016/j.euromechflu.2022.12.009</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.euromechflu.2022.12.009" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.00658v3</id>
+    <title>An Oscillation-Free Real Fluid Quasi-Conservative Finite Volume Method for Transcritical and Phase-Change Flows</title>
+    <updated>2026-06-22T09:49:04Z</updated>
+    <link href="https://arxiv.org/abs/2602.00658v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.00658v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A new Real Fluid Quasi-Conservative (RFQC) finite volume method is developed to address the numerical simulation of real fluids involving shock waves in transcritical and phase-change flows. To eliminate the spurious pressure oscillations inherent in fully conservative schemes, we extend the classic quasi-conservative method, originally designed for two-phase flows, to real fluids governed by arbitrary equations of state (EoS). The RFQC method locally linearizes the real fluid EoS at each grid point and time step, constructing and evolving the frozen Grüneisen coefficient $Γ$ and the linearization remainder $E_0$ via two advection equations. At the end of each time step, the evolved $Γ$ and $E_0$ are utilized to reconstruct the oscillation-free pressure field, followed by a thermodynamic re-projection applied to the conserved variables. Theoretical analysis demonstrates that, in smooth regions, the energy conservation error introduced by the RFQC method is a second-order small term dominated by the time-step. In discontinuous regions, this error is determined by the entropy increase rate, thereby maintaining consistency with the inherent truncation error of shock-capturing methods. A series of numerical tests verifies that the method can robustly simulate complex flow processes with only minor energy conservation errors, including transcritical flows, phase transitions, and shock-interface interactions. The RFQC method is proven to be both accurate and robust in capturing shock waves and phase transitions.</summary>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-31T11:12:07Z</published>
+    <arxiv:comment>36 pages, 15 figures</arxiv:comment>
+    <arxiv:primary_category term="physics.comp-ph"/>
+    <arxiv:journal_ref>Journal of Computational Physics, 564 (2026) 115156</arxiv:journal_ref>
+    <author>
+      <name>Haotong Bai</name>
+    </author>
+    <author>
+      <name>Wenjia Xie</name>
+    </author>
+    <author>
+      <name>Yixin Yang</name>
+    </author>
+    <author>
+      <name>Ping Yi</name>
+    </author>
+    <author>
+      <name>Mingbo Sun</name>
+    </author>
+    <arxiv:doi>10.1016/j.jcp.2026.115156</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.jcp.2026.115156" title="doi"/>
+  </entry>
+</feed>

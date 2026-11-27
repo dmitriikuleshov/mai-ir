@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/9WhoOKsznQ0vH6fAgpNpSrNiWWc</id>
+  <title>arXiv Query: search_query=all:"differential" AND all:"privacy" AND all:"machine" AND all:"learning"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:24:26Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22differential%22+AND+(all:%22privacy%22+AND+(all:%22machine%22+AND+all:%22learning%22))&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>3488</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1901.09697v5</id>
+    <title>Bayesian Differential Privacy for Machine Learning</title>
+    <updated>2020-08-19T19:05:19Z</updated>
+    <link href="https://arxiv.org/abs/1901.09697v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1901.09697v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Traditional differential privacy is independent of the data distribution. However, this is not well-matched with the modern machine learning context, where models are trained on specific data. As a result, achieving meaningful privacy guarantees in ML often excessively reduces accuracy. We propose Bayesian differential privacy (BDP), which takes into account the data distribution to provide more practical privacy guarantees. We also derive a general privacy accounting method under BDP, building upon the well-known moments accountant. Our experiments demonstrate that in-distribution samples in classic machine learning datasets, such as MNIST and CIFAR-10, enjoy significantly stronger privacy guarantees than postulated by DP, while models maintain high classification accuracy.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-01-28T14:37:17Z</published>
+    <arxiv:comment>International Conference on Machine Learning (ICML 2020). 15 pages, 5 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Aleksei Triastcyn</name>
+    </author>
+    <author>
+      <name>Boi Faltings</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2209.14086v2</id>
+    <title>Momentum Gradient Descent Federated Learning with Local Differential Privacy</title>
+    <updated>2022-10-14T00:46:56Z</updated>
+    <link href="https://arxiv.org/abs/2209.14086v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2209.14086v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Nowadays, the development of information technology is growing rapidly. In the big data era, the privacy of personal information has been more pronounced. The major challenge is to find a way to guarantee that sensitive personal information is not disclosed while data is published and analyzed. Centralized differential privacy is established on the assumption of a trusted third-party data curator. However, this assumption is not always true in reality. As a new privacy preservation model, local differential privacy has relatively strong privacy guarantees. Although federated learning has relatively been a privacy-preserving approach for distributed learning, it still introduces various privacy concerns. To avoid privacy threats and reduce communication costs, in this article, we propose integrating federated learning and local differential privacy with momentum gradient descent to improve the performance of machine learning models.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-09-28T13:30:38Z</published>
+    <arxiv:comment>There is a crucial definition error of local differential privacy</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Mengde Han</name>
+    </author>
+    <author>
+      <name>Tianqing Zhu</name>
+    </author>
+    <author>
+      <name>Wanlei Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1812.02890v1</id>
+    <title>Three Tools for Practical Differential Privacy</title>
+    <updated>2018-12-07T03:28:41Z</updated>
+    <link href="https://arxiv.org/abs/1812.02890v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1812.02890v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Differentially private learning on real-world data poses challenges for standard machine learning practice: privacy guarantees are difficult to interpret, hyperparameter tuning on private data reduces the privacy budget, and ad-hoc privacy attacks are often required to test model privacy. We introduce three tools to make differentially private machine learning more practical: (1) simple sanity checks which can be carried out in a centralized manner before training, (2) an adaptive clipping bound to reduce the effective number of tuneable privacy parameters, and (3) we show that large-batch training improves model performance.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-12-07T03:28:41Z</published>
+    <arxiv:comment>4 pages, 8 figures, PPML18: Privacy Preserving Machine Learning - NIPS 2018 Workshop</arxiv:comment>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Koen Lennart van der Veen</name>
+    </author>
+    <author>
+      <name>Ruben Seggers</name>
+    </author>
+    <author>
+      <name>Peter Bloem</name>
+    </author>
+    <author>
+      <name>Giorgio Patrini</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2109.02496v1</id>
+    <title>Statistical Privacy Guarantees of Machine Learning Preprocessing Techniques</title>
+    <updated>2021-09-06T14:08:47Z</updated>
+    <link href="https://arxiv.org/abs/2109.02496v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2109.02496v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Differential privacy provides strong privacy guarantees for machine learning applications. Much recent work has been focused on developing differentially private models, however there has been a gap in other stages of the machine learning pipeline, in particular during the preprocessing phase. Our contributions are twofold: we adapt a privacy violation detection framework based on statistical methods to empirically measure privacy levels of machine learning pipelines, and apply the newly created framework to show that resampling techniques used when dealing with imbalanced datasets cause the resultant model to leak more privacy. These results highlight the need for developing private preprocessing techniques.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-09-06T14:08:47Z</published>
+    <arxiv:comment>Accepted to the ICML 2021 Theory and Practice of Differential Privacy Workshop</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Ashly Lau</name>
+    </author>
+    <author>
+      <name>Jonathan Passerat-Palmbach</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2210.00053v2</id>
+    <title>Kernel Normalized Convolutional Networks for Privacy-Preserving Machine Learning</title>
+    <updated>2022-11-23T13:00:41Z</updated>
+    <link href="https://arxiv.org/abs/2210.00053v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2210.00053v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Normalization is an important but understudied challenge in privacy-related application domains such as federated learning (FL), differential privacy (DP), and differentially private federated learning (DP-FL). While the unsuitability of batch normalization for these domains has already been shown, the impact of other normalization methods on the performance of federated or differentially private models is not well-known. To address this, we draw a performance comparison among layer normalization (LayerNorm), group normalization (GroupNorm), and the recently proposed kernel normalization (KernelNorm) in FL, DP, and DP-FL settings. Our results indicate LayerNorm and GroupNorm provide no performance gain compared to the baseline (i.e. no normalization) for shallow models in FL and DP. They, on the other hand, considerably enhance the performance of shallow models in DP-FL and deeper models in FL and DP. KernelNorm, moreover, significantly outperforms its competitors in terms of accuracy and convergence rate (or communication efficiency) for both shallow and deeper models in all considered learning environments. Given these key observations, we propose a kernel normalized ResNet architecture called KNResNet-13 for differentially private learning. Using the proposed architecture, we provide new state-of-the-art accuracy values on the CIFAR-10 and Imagenette datasets, when trained from scratch.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-09-30T19:33:53Z</published>
+    <arxiv:comment>To appear in the IEEE Conference on Secure and Trustworthy Machine Learning (SaTML), February 2023</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <arxiv:journal_ref>1st IEEE Conference on Secure and Trustworthy Machine Learning (SaTML), 2023</arxiv:journal_ref>
+    <author>
+      <name>Reza Nasirigerdeh</name>
+    </author>
+    <author>
+      <name>Javad Torkzadehmahani</name>
+    </author>
+    <author>
+      <name>Daniel Rueckert</name>
+    </author>
+    <author>
+      <name>Georgios Kaissis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2109.12298v4</id>
+    <title>Opacus: User-Friendly Differential Privacy Library in PyTorch</title>
+    <updated>2022-08-22T20:24:50Z</updated>
+    <link href="https://arxiv.org/abs/2109.12298v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2109.12298v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce Opacus, a free, open-source PyTorch library for training deep learning models with differential privacy (hosted at opacus.ai). Opacus is designed for simplicity, flexibility, and speed. It provides a simple and user-friendly API, and enables machine learning practitioners to make a training pipeline private by adding as little as two lines to their code. It supports a wide variety of layers, including multi-head attention, convolution, LSTM, GRU (and generic RNN), and embedding, right out of the box and provides the means for supporting other user-defined layers. Opacus computes batched per-sample gradients, providing higher efficiency compared to the traditional "micro batch" approach. In this paper we present Opacus, detail the principles that drove its implementation and unique features, and benchmark it against other frameworks for training models with differential privacy as well as standard PyTorch.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-09-25T07:10:54Z</published>
+    <arxiv:comment>Privacy in Machine Learning (PriML) workshop, NeurIPS 2021</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Ashkan Yousefpour</name>
+    </author>
+    <author>
+      <name>Igor Shilov</name>
+    </author>
+    <author>
+      <name>Alexandre Sablayrolles</name>
+    </author>
+    <author>
+      <name>Davide Testuggine</name>
+    </author>
+    <author>
+      <name>Karthik Prasad</name>
+    </author>
+    <author>
+      <name>Mani Malek</name>
+    </author>
+    <author>
+      <name>John Nguyen</name>
+    </author>
+    <author>
+      <name>Sayan Ghosh</name>
+    </author>
+    <author>
+      <name>Akash Bharadwaj</name>
+    </author>
+    <author>
+      <name>Jessica Zhao</name>
+    </author>
+    <author>
+      <name>Graham Cormode</name>
+    </author>
+    <author>
+      <name>Ilya Mironov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1502.06309v3</id>
+    <title>Learning with Differential Privacy: Stability, Learnability and the Sufficiency and Necessity of ERM Principle</title>
+    <updated>2016-04-27T19:55:21Z</updated>
+    <link href="https://arxiv.org/abs/1502.06309v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1502.06309v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>While machine learning has proven to be a powerful data-driven solution to many real-life problems, its use in sensitive domains has been limited due to privacy concerns. A popular approach known as **differential privacy** offers provable privacy guarantees, but it is often observed in practice that it could substantially hamper learning accuracy. In this paper we study the learnability (whether a problem can be learned by any algorithm) under Vapnik's general learning setting with differential privacy constraint, and reveal some intricate relationships between privacy, stability and learnability.
+  In particular, we show that a problem is privately learnable **if an only if** there is a private algorithm that asymptotically minimizes the empirical risk (AERM). In contrast, for non-private learning AERM alone is not sufficient for learnability. This result suggests that when searching for private learning algorithms, we can restrict the search to algorithms that are AERM. In light of this, we propose a conceptual procedure that always finds a universally consistent algorithm whenever the problem is learnable under privacy constraint. We also propose a generic and practical algorithm and show that under very general conditions it privately learns a wide class of learning problems. Lastly, we extend some of the results to the more practical $(ε,δ)$-differential privacy and establish the existence of a phase-transition on the class of problems that are approximately privately learnable with respect to how small $δ$ needs to be.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-02-23T03:52:08Z</published>
+    <arxiv:comment>to appear, Journal of Machine Learning Research, 2016</arxiv:comment>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Yu-Xiang Wang</name>
+    </author>
+    <author>
+      <name>Jing Lei</name>
+    </author>
+    <author>
+      <name>Stephen E. Fienberg</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2109.10573v2</id>
+    <title>An automatic differentiation system for the age of differential privacy</title>
+    <updated>2022-04-05T14:24:58Z</updated>
+    <link href="https://arxiv.org/abs/2109.10573v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2109.10573v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce Tritium, an automatic differentiation-based sensitivity analysis framework for differentially private (DP) machine learning (ML). Optimal noise calibration in this setting requires efficient Jacobian matrix computations and tight bounds on the L2-sensitivity. Our framework achieves these objectives by relying on a functional analysis-based method for sensitivity tracking, which we briefly outline. This approach interoperates naturally and seamlessly with static graph-based automatic differentiation, which enables order-of-magnitude improvements in compilation times compared to previous work. Moreover, we demonstrate that optimising the sensitivity of the entire computational graph at once yields substantially tighter estimates of the true sensitivity compared to interval bound propagation techniques. Our work naturally befits recent developments in DP such as individual privacy accounting, aiming to offer improved privacy-utility trade-offs, and represents a step towards the integration of accessible machine learning tooling with advanced privacy accounting systems.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-09-22T08:07:42Z</published>
+    <arxiv:comment>8 pages, Accepted to the NEURIPS 2021 Privacy Preserving Machine Learning Workshop</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Dmitrii Usynin</name>
+    </author>
+    <author>
+      <name>Alexander Ziller</name>
+    </author>
+    <author>
+      <name>Moritz Knolle</name>
+    </author>
+    <author>
+      <name>Andrew Trask</name>
+    </author>
+    <author>
+      <name>Kritika Prakash</name>
+    </author>
+    <author>
+      <name>Daniel Rueckert</name>
+    </author>
+    <author>
+      <name>Georgios Kaissis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1812.06210v2</id>
+    <title>A General Approach to Adding Differential Privacy to Iterative Training Procedures</title>
+    <updated>2019-03-04T18:32:17Z</updated>
+    <link href="https://arxiv.org/abs/1812.06210v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1812.06210v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this work we address the practical challenges of training machine learning models on privacy-sensitive datasets by introducing a modular approach that minimizes changes to training algorithms, provides a variety of configuration strategies for the privacy mechanism, and then isolates and simplifies the critical logic that computes the final privacy guarantees. A key challenge is that training algorithms often require estimating many different quantities (vectors) from the same set of examples --- for example, gradients of different layers in a deep learning architecture, as well as metrics and batch normalization parameters. Each of these may have different properties like dimensionality, magnitude, and tolerance to noise. By extending previous work on the Moments Accountant for the subsampled Gaussian mechanism, we can provide privacy for such heterogeneous sets of vectors, while also structuring the approach to minimize software engineering challenges.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-12-15T00:32:09Z</published>
+    <arxiv:comment>Presented at NeurIPS 2018 workshop on Privacy Preserving Machine Learning; Companion paper to TensorFlow Privacy OSS Library</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>H. Brendan McMahan</name>
+    </author>
+    <author>
+      <name>Galen Andrew</name>
+    </author>
+    <author>
+      <name>Ulfar Erlingsson</name>
+    </author>
+    <author>
+      <name>Steve Chien</name>
+    </author>
+    <author>
+      <name>Ilya Mironov</name>
+    </author>
+    <author>
+      <name>Nicolas Papernot</name>
+    </author>
+    <author>
+      <name>Peter Kairouz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1906.09679v1</id>
+    <title>The Value of Collaboration in Convex Machine Learning with Differential Privacy</title>
+    <updated>2019-06-24T00:57:15Z</updated>
+    <link href="https://arxiv.org/abs/1906.09679v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1906.09679v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we apply machine learning to distributed private data owned by multiple data owners, entities with access to non-overlapping training datasets. We use noisy, differentially-private gradients to minimize the fitness cost of the machine learning model using stochastic gradient descent. We quantify the quality of the trained model, using the fitness cost, as a function of privacy budget and size of the distributed datasets to capture the trade-off between privacy and utility in machine learning. This way, we can predict the outcome of collaboration among privacy-aware data owners prior to executing potentially computationally-expensive machine learning algorithms. Particularly, we show that the difference between the fitness of the trained machine learning model using differentially-private gradient queries and the fitness of the trained machine model in the absence of any privacy concerns is inversely proportional to the size of the training datasets squared and the privacy budget squared. We successfully validate the performance prediction with the actual performance of the proposed privacy-aware learning algorithms, applied to: financial datasets for determining interest rates of loans using regression; and detecting credit card frauds using support vector machines.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-06-24T00:57:15Z</published>
+    <arxiv:comment>Accepted in IEEE S&amp;P 2020</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <arxiv:journal_ref>IEEE Symposium on Security and Privacy 2020 (IEEE SP 2020)</arxiv:journal_ref>
+    <author>
+      <name>Nan Wu</name>
+    </author>
+    <author>
+      <name>Farhad Farokhi</name>
+    </author>
+    <author>
+      <name>David Smith</name>
+    </author>
+    <author>
+      <name>Mohamed Ali Kaafar</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,301 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/EkcLAhZzcWjW4mCYszntWzyzkog</id>
+  <title>arXiv Query: search_query=all:"protein" AND all:"folding" AND all:"prediction"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:25:14Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22protein%22+AND+(all:%22folding%22+AND+all:%22prediction%22)&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>612</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2207.07410v1</id>
+    <title>AlphaFold predicts the most complex protein knot and composite protein knots</title>
+    <updated>2022-07-15T11:38:45Z</updated>
+    <link href="https://arxiv.org/abs/2207.07410v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2207.07410v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The computer artificial intelligence system AlphaFold has recently predicted previously unknown three-dimensional structures of thousands of proteins. Focusing on the subset with high-confidence scores, we algorithmically analyze these predictions for cases where the protein backbone exhibits rare topological complexity, i.e. knotting. Amongst others, we discovered a $7_1$-knot, the most topologically complex knot ever found in a protein, as well several 6-crossing composite knots comprised of two methyltransferase or carbonic anhydrase domains, each containing a simple trefoil knot. These deeply embedded composite knots occur evidently by gene duplication and interconnection of knotted dimers. Finally, we report two new five-crossing knots including the first $5_1$-knot. Our list of analyzed structures forms the basis for future experimental studies to confirm these novel knotted topologies and to explore their complex folding mechanisms.</summary>
+    <category term="q-bio.BM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.bio-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-07-15T11:38:45Z</published>
+    <arxiv:comment>This article appeared openly accessible in M. A. Brems et al., Protein Science. 2022; 31( 8):e4380 and may be found at https://doi.org/10.1002/pro.4380</arxiv:comment>
+    <arxiv:primary_category term="q-bio.BM"/>
+    <arxiv:journal_ref>Protein Science. 2022; 31( 8):e4380</arxiv:journal_ref>
+    <author>
+      <name>Maarten A. Brems</name>
+    </author>
+    <author>
+      <name>Robert Runkel</name>
+    </author>
+    <author>
+      <name>Todd O. Yeates</name>
+    </author>
+    <author>
+      <name>Peter Virnau</name>
+    </author>
+    <arxiv:doi>10.1002/pro.4380</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1002/pro.4380" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2307.02174v2</id>
+    <title>Introduction to Protein Folding</title>
+    <updated>2023-07-06T18:08:23Z</updated>
+    <link href="https://arxiv.org/abs/2307.02174v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2307.02174v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>While many good textbooks are available on Protein Structure, Molecular Simulations, Thermodynamics and Bioinformatics methods in general, there is no good introductory level book for the field of Structural Bioinformatics. This book aims to give an introduction into Structural Bioinformatics, which is where the previous topics meet to explore three dimensional protein structures through computational analysis. We provide an overview of existing computational techniques, to validate, simulate, predict and analyse protein structures. More importantly, it will aim to provide practical knowledge about how and when to use such techniques. We will consider proteins from three major vantage points: Protein structure quantification, Protein structure prediction, and Protein simulation &amp; dynamics.
+  In this chapter we explore basic physical and chemical concepts required to understand protein folding. We introduce major (de)stabilising factors of folded protein structures such as the hydrophobic effect and backbone entropy. In addition, we consider different states along the folding pathway, as well as natively disordered proteins and aggregated protein states. In this chapter, an intuitive understanding is provided about the protein folding process, to prepare for the next chapter on the thermodynamics of protein folding. In particular, it is emphasized that protein folding is a stochastic process and that proteins unfold and refold in a dynamic equilibrium. The effect of temperature on the stability of the folded and unfolded states is also explained.</summary>
+    <category term="q-bio.BM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-07-05T10:13:08Z</published>
+    <arxiv:comment>editorial responsability: Juami H. M. van Gils, K. Anton Feenstra, Sanne Abeln. This chapter is part of the book "Introduction to Protein Structural Bioinformatics". The Preface arXiv:1801.09442 contains links to all the (published) chapters. The update adds available arxiv hyperlinks for the chapters</arxiv:comment>
+    <arxiv:primary_category term="q-bio.BM"/>
+    <author>
+      <name>Juami H. M. van Gils</name>
+    </author>
+    <author>
+      <name>Erik van Dijk</name>
+    </author>
+    <author>
+      <name>Ali May</name>
+    </author>
+    <author>
+      <name>Halima Mouhib</name>
+    </author>
+    <author>
+      <name>Jochem Bijlard</name>
+    </author>
+    <author>
+      <name>Annika Jacobsen</name>
+    </author>
+    <author>
+      <name>Isabel Houtkamp</name>
+    </author>
+    <author>
+      <name>K. Anton Feenstra</name>
+    </author>
+    <author>
+      <name>Sanne Abeln</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2307.02175v2</id>
+    <title>Thermodynamics of Protein Folding</title>
+    <updated>2023-07-06T18:08:27Z</updated>
+    <link href="https://arxiv.org/abs/2307.02175v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2307.02175v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>While many good textbooks are available on Protein Structure, Molecular Simulations, Thermodynamics and Bioinformatics methods in general, there is no good introductory level book for the field of Structural Bioinformatics. This book aims to give an introduction into Structural Bioinformatics, which is where the previous topics meet to explore three dimensional protein structures through computational analysis. We provide an overview of existing computational techniques, to validate, simulate, predict and analyse protein structures. More importantly, it will aim to provide practical knowledge about how and when to use such techniques. We will consider proteins from three major vantage points: Protein structure quantification, Protein structure prediction, and Protein simulation &amp; dynamics.
+  In the previous chapter, "Introduction to Protein Folding", we introduced the concept of free energy and the protein folding landscape. Here, we provide a deeper, more formal underpinning of free energy in terms of the entropy and enthalpy; to this end, we will first need to better define the meaning of equilibrium, entropy and enthalpy. When we understand these concepts, we will come back for a more quantitative explanation of protein folding and dynamics. We will discuss the influence of temperature on the free energy landscape, and the difference between microstates and macrostates.</summary>
+    <category term="q-bio.BM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-07-05T10:13:10Z</published>
+    <arxiv:comment>editorial responsability: Juami H. M. van Gils, K. Anton Feenstra, Sanne Abeln. This chapter is part of the book "Introduction to Protein Structural Bioinformatics". The Preface arXiv:1801.09442 contains links to all the (published) chapters. The update adds available arxiv hyperlinks for the chapters</arxiv:comment>
+    <arxiv:primary_category term="q-bio.BM"/>
+    <author>
+      <name>Juami H. M. van Gils</name>
+    </author>
+    <author>
+      <name>Halima Mouhib</name>
+    </author>
+    <author>
+      <name>Erik van Dijk</name>
+    </author>
+    <author>
+      <name>Maurits Dijkstra</name>
+    </author>
+    <author>
+      <name>Isabel Houtkamp</name>
+    </author>
+    <author>
+      <name>Arthur Goetzee</name>
+    </author>
+    <author>
+      <name>Sanne Abeln</name>
+    </author>
+    <author>
+      <name>K. Anton Feenstra</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/q-bio/0407023v1</id>
+    <title>The effects of non-native interactions on protein folding rates: Theory and simulation</title>
+    <updated>2004-07-15T01:44:42Z</updated>
+    <link href="https://arxiv.org/abs/q-bio/0407023v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/q-bio/0407023v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Proteins are minimally frustrated polymers. However, for realistic protein models non-native interactions must be taken into account. In this paper we analyze the effect of non-native interactions on the folding rate and on the folding free energy barrier. We present an analytic theory to account for the modification on the free energy landscape upon introduction of non-native contacts, added as a perturbation to the strong native interactions driving folding. Our theory predicts a rate-enhancement regime at fixed temperature, under the introduction of weak, non-native interactions. We have thoroughly tested this theoretical prediction with simulations of a coarse-grained protein model, by employing an off-lattice $C_α$ model of the src-SH3 domain. The strong agreement between results from simulations and theory confirm the non trivial result that a relatively small amount of non-native interaction energy can actually assist the folding to the native structure.</summary>
+    <category term="q-bio.BM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2004-07-15T01:44:42Z</published>
+    <arxiv:comment>35 pages, 12 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="q-bio.BM"/>
+    <arxiv:journal_ref>Protein Science 2004 13: 1750-1766</arxiv:journal_ref>
+    <author>
+      <name>C. Clementi</name>
+    </author>
+    <author>
+      <name>S. S. Plotkin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cond-mat/0209325v1</id>
+    <title>Crucial stages of protein folding through a solvable model: predicting target sites for enzyme-inhibiting drugs</title>
+    <updated>2002-09-13T15:27:58Z</updated>
+    <link href="https://arxiv.org/abs/cond-mat/0209325v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cond-mat/0209325v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  An exactly solvable model based on the topology of a protein native state is applied to identify bottlenecks and key-sites for the folding of HIV-1 Protease. The predicted sites are found to correlate well with clinical data on resistance to FDA-approved drugs. It has been observed that the effects of drug therapy are to induce multiple mutations on the protease. The sites where such mutations occur correlate well with those involved in folding bottlenecks identified through the deterministic procedure proposed in this study. The high statistical significance of the observed correlations suggests that the approach may be promisingly used in conjunction with traditional techniques to identify candidate locations for drug attacks.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.BM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2002-09-13T15:27:58Z</published>
+    <arxiv:comment>12 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <arxiv:journal_ref>Protein Science, Vol.11, p. 1878-1887 (2002)</arxiv:journal_ref>
+    <author>
+      <name>Cristian Micheletti</name>
+    </author>
+    <author>
+      <name>Fabio Cecconi</name>
+    </author>
+    <author>
+      <name>Alessandro Flammini</name>
+    </author>
+    <author>
+      <name>Amos Maritan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.17237v1</id>
+    <title>Predicting protein folding dynamics using sequence information</title>
+    <updated>2025-05-22T19:29:55Z</updated>
+    <link href="https://arxiv.org/abs/2505.17237v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.17237v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Natural protein sequences somehow encode the structural forms that these molecules adopt. Recent developments in structure-prediction are agnostic to the mechanisms by which proteins fold and represent them as static objects. However, the amino acid sequences also encode information about how the folding process can happen, and how variations in the sequences impact on the populations of the distinct structural forms that proteins acquire. Here we present a method to infer protein folding dynamics based only on sequence information. For this, we will rely first on the obtention of a precise 'evolutionary field' from the observed variations in the sequences of homologous proteins. We then show how to map the energetics to a coarse-grained folding model where the protein is treated as a string of foldons that interact. We then describe how, for any given protein sequence of a family, the equilibrium folding curve can be computed and how the emergence of protein folding sub-domains can be identified. We finally present protocols to analyze how mutations perturb both the folding stability and the cooperativity, that represent predictions for a deep-mutational scan of a protein of interest.</summary>
+    <category term="q-bio.BM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-22T19:29:55Z</published>
+    <arxiv:comment>21 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="q-bio.BM"/>
+    <author>
+      <name>Ezequiel A. Galpern</name>
+    </author>
+    <author>
+      <name>Federico Caamaño</name>
+    </author>
+    <author>
+      <name>Diego U. Ferreiro</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2201.05724v1</id>
+    <title>StemP: A fast and deterministic Stem-graph approach for RNA and protein folding prediction</title>
+    <updated>2022-01-15T01:11:13Z</updated>
+    <link href="https://arxiv.org/abs/2201.05724v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2201.05724v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a new deterministic methodology to predict RNA sequence and protein folding. Is stem enough for structure prediction? The main idea is to consider all possible stem formation in the given sequence. With the stem loop energy and the strength of stem, we explore how to deterministically utilize stem information for RNA sequence and protein folding structure prediction. We use graph notation, where all possible stems are represented as vertices, and co-existence as edges. This full Stem-graph presents all possible folding structure, and we pick sub-graph(s) which give the best matching energy for folding structure prediction. We introduce a Stem-Loop score to add structure information and to speed up the computation. The proposed method can handle secondary structure prediction as well as protein folding with pseudo knots. Numerical experiments are done using a laptop and results take only a few minutes or seconds. One of the strengths of this approach is in the simplicity and flexibility of the algorithm, and it gives deterministic answer. We explore protein sequences from Protein Data Bank, rRNA 5S sequences, and tRNA sequences from the Gutell Lab. Various experiments and comparisons are included to validate the propose method.</summary>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.bio-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.BM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-01-15T01:11:13Z</published>
+    <arxiv:primary_category term="cs.DM"/>
+    <author>
+      <name>Mengyi Tang</name>
+    </author>
+    <author>
+      <name>Kumbit Hwang</name>
+    </author>
+    <author>
+      <name>Sung Ha Kang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.04287v2</id>
+    <title>Predicting protein structures at any folding stage from sequence</title>
+    <updated>2026-11-04T03:46:56Z</updated>
+    <link href="https://arxiv.org/abs/2611.04287v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.04287v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Protein structure prediction has largely focused on native conformations, leaving the continuum of unfolded states, folding intermediates, and native structures difficult to access. We present FoldScape, a sequence-conditioned deep learning framework for generating protein conformational ensembles at specified folding fractions $Q$. Trained on approximately one million conformations from 10,000 protein sequences, FoldScape combines coarse-grained folding and all-atom mechanical-unfolding trajectories. It reconstructs three-dimensional $C_α$ chains through hierarchical sliding-window regressions of inter-residue distances, chain-level assembly, and a rectified-flow decoder. By conditioning on folding progress, FoldScape generates conformations from unfolded states through intermediates to native-state structures without protein-specific molecular dynamics at inference. In matched-sample comparisons, FoldScape achieves median conformational-space coverage of 0.989, 0.722, and 0.877 along radius of gyration, fraction of native contacts $Q$, and secondary-structure fraction, respectively, versus 0.05, 0.05, and 0.10 for seed-varied AlphaFold 3 ensembles. Coverage advantages are consistent across the evaluated proteins and robust to binning choices. Reconstruction accuracy remains approximately stable across the evaluated stages of a folding trajectory, and stride-one crop-and-superpose inference extends predictions to chains several times longer than the single-pass limit. Analyses of mechanical-unfolding trajectories show residue-resolved pathways, reproducible extension-conditioned observables across pulling velocities, and geometrically coherent segments in partially unfolded chains. FoldScape extends sequence-based structure prediction beyond a single folded endpoint to controllable conformational-ensemble generation across protein folding.</summary>
+    <category term="q-bio.BM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-03T04:15:20Z</published>
+    <arxiv:primary_category term="q-bio.BM"/>
+    <author>
+      <name>Lisheng Zhang</name>
+    </author>
+    <author>
+      <name>Qingsong Li</name>
+    </author>
+    <author>
+      <name>Zinan Xie</name>
+    </author>
+    <author>
+      <name>Yanting Yang</name>
+    </author>
+    <author>
+      <name>Qikui Yang</name>
+    </author>
+    <author>
+      <name>Peng Lu</name>
+    </author>
+    <author>
+      <name>Zhican Fu</name>
+    </author>
+    <author>
+      <name>Wentao Cui</name>
+    </author>
+    <author>
+      <name>Runtong Hou</name>
+    </author>
+    <author>
+      <name>Zhengwei Xie</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.09191v1</id>
+    <title>End-to-End Optimized Pipeline for Prediction of Protein Folding Kinetics</title>
+    <updated>2023-09-17T07:35:54Z</updated>
+    <link href="https://arxiv.org/abs/2309.09191v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.09191v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Protein folding is the intricate process by which a linear sequence of amino acids self-assembles into a unique three-dimensional structure. Protein folding kinetics is the study of pathways and time-dependent mechanisms a protein undergoes when it folds. Understanding protein kinetics is essential as a protein needs to fold correctly for it to perform its biological functions optimally, and a misfolded protein can sometimes be contorted into shapes that are not ideal for a cellular environment giving rise to many degenerative, neuro-degenerative disorders and amyloid diseases. Monitoring at-risk individuals and detecting protein discrepancies in a protein's folding kinetics at the early stages could majorly result in public health benefits, as preventive measures can be taken. This research proposes an efficient pipeline for predicting protein folding kinetics with high accuracy and low memory footprint. The deployed machine learning (ML) model outperformed the state-of-the-art ML models by 4.8% in terms of accuracy while consuming 327x lesser memory and being 7.3% faster.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.BM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-17T07:35:54Z</published>
+    <arxiv:comment>Accepted for presentation at the 22nd International Conference on Machine Learning and Applications</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Vijay Arvind. R</name>
+    </author>
+    <author>
+      <name>Haribharathi Sivakumar</name>
+    </author>
+    <author>
+      <name>Brindha. R</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.05502v1</id>
+    <title>Predicting mutational effects on protein binding from folding energy</title>
+    <updated>2025-07-07T21:55:57Z</updated>
+    <link href="https://arxiv.org/abs/2507.05502v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.05502v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Accurate estimation of mutational effects on protein-protein binding energies is an open problem with applications in structural biology and therapeutic design. Several deep learning predictors for this task have been proposed, but, presumably due to the scarcity of binding data, these methods underperform computationally expensive estimates based on empirical force fields. In response, we propose a transfer-learning approach that leverages advances in protein sequence modeling and folding stability prediction for this task. The key idea is to parameterize the binding energy as the difference between the folding energy of the protein complex and the sum of the folding energies of its binding partners. We show that using a pre-trained inverse-folding model as a proxy for folding energy provides strong zero-shot performance, and can be fine-tuned with (1) copious folding energy measurements and (2) more limited binding energy measurements. The resulting predictor, StaB-ddG, is the first deep learning predictor to match the accuracy of the state-of-the-art empirical force-field method FoldX, while offering an over 1,000x speed-up.</summary>
+    <category term="q-bio.BM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-07T21:55:57Z</published>
+    <arxiv:comment>Code: https://github.com/LDeng0205/StaB-ddG</arxiv:comment>
+    <arxiv:primary_category term="q-bio.BM"/>
+    <arxiv:journal_ref>ICML 2025</arxiv:journal_ref>
+    <author>
+      <name>Arthur Deng</name>
+    </author>
+    <author>
+      <name>Karsten Householder</name>
+    </author>
+    <author>
+      <name>Fang Wu</name>
+    </author>
+    <author>
+      <name>Sebastian Thrun</name>
+    </author>
+    <author>
+      <name>K. Christopher Garcia</name>
+    </author>
+    <author>
+      <name>Brian Trippe</name>
+    </author>
+  </entry>
+</feed>

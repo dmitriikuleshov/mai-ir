@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/wbv86sob9ro5yMRA/j9KCsvOHuo</id>
+  <title>arXiv Query: search_query=all:"Microsoft" AND all:"Graph" AND all:"OAuth" AND all:"permissions"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:24:08Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22Microsoft%22+AND+(all:%22Graph%22+AND+(all:%22OAuth%22+AND+all:%22permissions%22))&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2512.15781v1</id>
+    <title>Detecting Malicious Entra OAuth Apps with LLM-Based Permission Risk Scoring</title>
+    <updated>2025-12-14T23:05:50Z</updated>
+    <link href="https://arxiv.org/abs/2512.15781v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.15781v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This project presents a unified detection framework that constructs a complete corpus of Microsoft Graph permissions, generates consistent LLM-based risk scores, and integrates them into a real-time detection engine to identify malicious OAuth consent activity.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-14T23:05:50Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Ashim Mahara</name>
+    </author>
+  </entry>
+</feed>

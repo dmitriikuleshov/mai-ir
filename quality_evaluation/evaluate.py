@@ -13,7 +13,7 @@ from statistics import mean
 from collect import canonical as canonical_url
 
 HERE = Path(__file__).resolve().parent
-PRIMARY = ("tfidf", "wikipedia", "microsoft_learn")
+PRIMARY = ("tfidf", "wikipedia", "microsoft_learn", "arxiv")
 
 
 def prepare_judgments(directory: Path) -> None:
@@ -103,7 +103,7 @@ def evaluate(directory: Path = HERE) -> tuple[list[dict], list[dict]]:
         if not data:
             raise ValueError("Нет доступных выдач для оценки")
         with (directory / name).open("w", newline="", encoding="utf-8") as stream:
-            writer = csv.DictWriter(stream, fieldnames=list(data[0]))
+            writer = csv.DictWriter(stream, fieldnames=list(data[0]), lineterminator="\n")
             writer.writeheader()
             writer.writerows(data)
     return rows, summary
@@ -113,7 +113,7 @@ def write_outputs(rows: list[dict], summary: list[dict], directory: Path = HERE)
     """Сохраняет численные результаты, выдачи с оценками и график сравнения."""
     for name, values in (("metrics.csv", rows), ("summary.csv", summary)):
         with (directory / name).open("w", encoding="utf-8", newline="") as stream:
-            writer = csv.DictWriter(stream, fieldnames=list(values[0]))
+            writer = csv.DictWriter(stream, fieldnames=list(values[0]), lineterminator="\n")
             writer.writeheader()
             writer.writerows(values)
     queries = json.loads((directory / "queries.json").read_text())
@@ -130,10 +130,11 @@ def write_outputs(rows: list[dict], summary: list[dict], directory: Path = HERE)
                              for value in run.values() for hit in value["results"][:5]),
                          "role": "primary" if engine in PRIMARY else "limited_supplement"})
     with (directory / "coverage.csv").open("w", encoding="utf-8", newline="") as stream:
-        writer = csv.DictWriter(stream, fieldnames=list(coverage[0]))
+        writer = csv.DictWriter(stream, fieldnames=list(coverage[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(coverage)
     labels = {"tfidf": "Мой TF-IDF", "wikipedia": "Wikipedia Search", "microsoft_learn": "Microsoft Learn Search",
+              "arxiv": "arXiv Search API",
               "bing": "Bing: ограниченная первая страница (дополнение)"}
     report = ["# Выдачи и оценки релевантности", "",
               "Первые пять позиций. Оценки выполнены языковой моделью по сохранённым текстовым фрагментам; "
@@ -161,6 +162,7 @@ def write_outputs(rows: list[dict], summary: list[dict], directory: Path = HERE)
     (directory / "results.md").write_text("\n".join(report) + "\n", encoding="utf-8")
     import matplotlib
     matplotlib.use("Agg")
+    matplotlib.rcParams["svg.hashsalt"] = "mai-ir-quality-evaluation"
     import matplotlib.pyplot as plt
     fig, axes = plt.subplots(2, 2, figsize=(11, 7), constrained_layout=True)
     for axis, metric in zip(axes.flat, ("P", "DCG", "NDCG", "ERR")):
@@ -176,7 +178,9 @@ def write_outputs(rows: list[dict], summary: list[dict], directory: Path = HERE)
         axis.grid(alpha=0.25)
     axes[0, 0].legend(fontsize=8)
     fig.suptitle("Пилотная оценка поиска: 30 запросов, модельная разметка")
-    fig.savefig(directory / "metrics.svg")
+    svg_path = directory / "metrics.svg"
+    fig.savefig(svg_path, metadata={"Date": None})
+    svg_path.write_text("\n".join(line.rstrip() for line in svg_path.read_text().splitlines()) + "\n", encoding="utf-8")
     fig.savefig(directory / "metrics.png", dpi=150)
     plt.close(fig)
 

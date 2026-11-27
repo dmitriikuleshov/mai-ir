@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/WzG98XrPXqpwZl0cfCrqVamR0TU</id>
+  <title>arXiv Query: search_query=all:"public" AND all:"key" AND all:"cryptography" AND all:"RSA"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:25:22Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22public%22+AND+(all:%22key%22+AND+(all:%22cryptography%22+AND+all:%22RSA%22))&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>114</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1201.1968v1</id>
+    <title>Information Hiding in CSS : A Secure Scheme Text-Steganography using Public Key Cryptosystem</title>
+    <updated>2012-01-10T05:44:50Z</updated>
+    <link href="https://arxiv.org/abs/1201.1968v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1201.1968v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In many recent years, the programming world has been introduced about a new programming language for designing websites, it is CSS that can be be used together with HTML to develop a web interface. And now, these two programming languages as if inseparably from each other. As a client-side scripting, CSS is visible by all users as the original script, but it can not be granted changed. Website is a tool of information disseminator throughout the world, this is certainly can be used to a secret communication by using CSS as a message hider. This paper proposed a new scheme using web tools like CSS for hiding informations. This is a secret communication mechanism using text steganography techniques that is embedded messages on CSS files and is further encrypted using RSA as a public key cryptographic algorithm.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-01-10T05:44:50Z</published>
+    <arxiv:comment>Text Steganography, Cryptography, Cascading Style Sheet (CSS), RSA Algorithm, public key algorithm</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Herman Kabetta</name>
+    </author>
+    <author>
+      <name>B. Yudi Dwiandiyanta</name>
+    </author>
+    <author>
+      <name> Suyoto</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1207.5446v1</id>
+    <title>Public Key Cryptography Standards: PKCS</title>
+    <updated>2012-07-23T16:38:26Z</updated>
+    <link href="https://arxiv.org/abs/1207.5446v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1207.5446v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Cryptographic standards serve two important goals: making different implementations interoperable and avoiding various known pitfalls in commonly used schemes. This chapter discusses Public-Key Cryptography Standards (PKCS) which have significant impact on the use of public key cryptography in practice. PKCS standards are a set of standards, called PKCS #1 through #15. These standards cover RSA encryption, RSA signature, password-based encryption, cryptographic message syntax, private-key information syntax, selected object classes and attribute types, certification request syntax, cryptographic token interface, personal information exchange syntax, and cryptographic token information syntax. The PKCS standards are published by RSA Laboratories. Though RSA Laboratories solicits public opinions and advice for PKCS standards, RSA Laboratories retain sole decision-making authority on all aspects of PKCS standards. PKCS has been the basis for many other standards such as S/MIME.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-07-23T16:38:26Z</published>
+    <arxiv:comment>Handbook of Information Security, 2005</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Yongge Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2301.01282v2</id>
+    <title>RSA+: An RSA variant</title>
+    <updated>2024-03-25T12:25:14Z</updated>
+    <link href="https://arxiv.org/abs/2301.01282v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2301.01282v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a new probabilistic public-key cryptosystem which combines the main ingredients of the well-known RSA and Rabin cryptosystems. We investigate the security and performance of our new scheme in comparison to the other two.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-12-31T02:48:17Z</published>
+    <arxiv:comment>11 pages, no figures; code on GitHub (https://github.com/soeren-kleine/RSA_plus-an-RSA-variant)</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Soeren Kleine</name>
+    </author>
+    <author>
+      <name>Andreas Nickel</name>
+    </author>
+    <author>
+      <name>Torben Ritter</name>
+    </author>
+    <author>
+      <name>Krishnan Shankar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0901.0911v3</id>
+    <title>Fault Attacks on RSA Public Keys: Left-To-Right Implementations are also Vulnerable</title>
+    <updated>2011-01-31T17:41:13Z</updated>
+    <link href="https://arxiv.org/abs/0901.0911v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0901.0911v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>After attacking the RSA by injecting fault and corresponding countermeasures, works appear now about the need for protecting RSA public elements against fault attacks. We provide here an extension of a recent attack based on the public modulus corruption. The difficulty to decompose the "Left-To-Right" exponentiation into partial multiplications is overcome by modifying the public modulus to a number with known factorization. This fault model is justified here by a complete study of faulty prime numbers with a fixed size. The good success rate of this attack combined with its practicability raises the question of using faults for changing algebraic properties of finite field based cryptosystems.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-01-07T20:15:58Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <arxiv:journal_ref>RSA Conference 2009, Cryptographers' Track, San Francisco : United States (2009)</arxiv:journal_ref>
+    <author>
+      <name>Alexandre Berzati</name>
+      <arxiv:affiliation>LETI, PRISM</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Cécile Canovas</name>
+      <arxiv:affiliation>LETI</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jean-Guillaume Dumas</name>
+      <arxiv:affiliation>LJK</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Louis Goubin</name>
+      <arxiv:affiliation>PRISM</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1503.03593v1</id>
+    <title>State of the art parallel approaches for RSA public key based cryptosystem</title>
+    <updated>2015-03-12T05:35:44Z</updated>
+    <link href="https://arxiv.org/abs/1503.03593v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1503.03593v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>RSA is one of the most popular Public Key Cryptography based algorithm mainly used for digital signatures, encryption/decryption etc. It is based on the mathematical scheme of factorization of very large integers which is a compute-intensive process and takes very long time as well as power to perform. Several scientists are working throughout the world to increase the speedup and to decrease the power consumption of RSA algorithm while keeping the security of the algorithm intact. One popular technique which can be used to enhance the performance of RSA is parallel programming. In this paper we are presenting the survey of various parallel implementations of RSA algorithm involving variety of hardware and software implementations.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-03-12T05:35:44Z</published>
+    <arxiv:comment>IJCSA February 2015</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Sapna Saxena</name>
+    </author>
+    <author>
+      <name>Bhanu Kapoor</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.24531v1</id>
+    <title>Correctness of Extended RSA Public Key Cryptosystem</title>
+    <updated>2025-12-31T00:26:23Z</updated>
+    <link href="https://arxiv.org/abs/2512.24531v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.24531v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper proposes an alternative approach to formally establishing the correctness of the RSA public key cryptosystem. The methodology presented herein deviates slightly from conventional proofs found in existing literature. Specifically, this study explores the conditions under which the choice of the positive integer N, a fundamental component of RSA, can be extended beyond the standard selection criteria. We derive explicit conditions that determine when certain values of N are valid for the encryption scheme and explain why others may fail to satisfy the correctness requirements. The scope of this paper is limited to the mathematical proof of correctness for RSA-like schemes, deliberately omitting issues related to the cryptographic security of RSA.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-31T00:26:23Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Dar-jen Chang</name>
+    </author>
+    <author>
+      <name>Suranjan Gautam</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2202.02675v1</id>
+    <title>On the High Dimensional RSA Algorithm -- A Public Key Cryptosystem Based on Lattice and Algebraic Number Theory</title>
+    <updated>2022-02-06T01:41:30Z</updated>
+    <link href="https://arxiv.org/abs/2202.02675v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2202.02675v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The most known of public key cryptosystem was introduced in 1978 by Rivest, Shamir and Adleman [19] and now called the RSA public key cryptosystem in their honor. Later, a few authors gave a simply extension of RSA over algebraic numbers field( see [20]- [22]), but they require that the ring of algebraic integers is Euclidean ring, this requirement is much more stronger than the class number one condition. In this paper, we introduce a high dimensional form of RSA by making use of the ring of algebraic integers of an algebraic number field and the lattice theory. We give an attainable algorithm (see Algorithm I below) of which is significant both from the theoretical and practical point of view. Our main purpose in this paper is to show that the high dimensional RSA is a lattice based on public key cryptosystem indeed, of which would be considered as a new number in the family of post-quantum cryptography(see [17] and [18]). On the other hand, we give a matrix expression for any algebraic number fields (see Theorem 2.7 below), which is a new result even in the sense of classical algebraic number theory.</summary>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-02-06T01:41:30Z</published>
+    <arxiv:primary_category term="math.NT"/>
+    <author>
+      <name>Zhiyong Zheng</name>
+    </author>
+    <author>
+      <name>Fengxia Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1912.00916v4</id>
+    <title>Mobile Energy Requirements of the Upcoming NIST Post-Quantum Cryptography Standards</title>
+    <updated>2020-04-14T23:54:12Z</updated>
+    <link href="https://arxiv.org/abs/1912.00916v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1912.00916v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Standardization of Post-Quantum Cryptography (PQC) was started by NIST in 2016 and has proceeded to its second elimination round. The upcoming standards are intended to replace (or supplement) current RSA and Elliptic Curve Cryptography (ECC) on all targets, including lightweight, embedded, and mobile systems. We present an energy requirement analysis based on extensive measurements of PQC candidate algorithms on a Cortex M4 - based reference platform. We relate computational (energy) costs of PQC algorithms to their data transmission costs which are expected to increase with new types of public keys and ciphertext messages. The energy, bandwidth, and latency needs of PQC algorithms span several orders of magnitude, which is substantial enough to impact battery life, user experience, and application protocol design. We propose metrics and guidelines for PQC algorithm usage in IoT and mobile systems based on our findings. Our evidence supports the view that fast structured-lattice PQC schemes are the preferred choice for cloud-connected mobile devices in most use cases, even when per-bit data transmission energy cost is relatively high.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.PF" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-12-02T16:45:48Z</published>
+    <arxiv:comment>Related to a presentation given at the 7th ETSI/IQC Quantum Safe Cryptography Workshop, 7 November 2019, Seattle USA</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Markku-Juhani O. Saarinen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.22720v1</id>
+    <title>When RSA Fails: Exploiting Prime Selection Vulnerabilities in Public Key Cryptography</title>
+    <updated>2025-12-27T22:58:35Z</updated>
+    <link href="https://arxiv.org/abs/2512.22720v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.22720v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper explores vulnerabilities in RSA cryptosystems that arise from improper prime number selection during key generation. We examine two primary attack vectors: Fermat's factorization method, which exploits RSA keys generated with primes that are too close together, and the Greatest Common Divisor (GCD) attack, which exploits keys that share a common prime factor. Drawing from landmark research including Heninger et al.'s ``Mining Your Ps and Qs'' study, which discovered over 64,000 vulnerable TLS hosts, and B{ö}ck's 2023 analysis of Fermat factorization in deployed systems, we demonstrate that these vulnerabilities remain prevalent in real-world cryptographic implementations. Our analysis reveals that weak random number generation in embedded devices is the primary cause of these failures, and we discuss mitigation strategies including proper entropy collection and prime validation checks.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-27T22:58:35Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Murtaza Nikzad</name>
+    </author>
+    <author>
+      <name>Kerem Atas</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1912.11546v2</id>
+    <title>Fast Generation of RSA Keys using Smooth Integers</title>
+    <updated>2021-07-13T10:34:19Z</updated>
+    <link href="https://arxiv.org/abs/1912.11546v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1912.11546v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Primality generation is the cornerstone of several essential cryptographic systems. The problem has been a subject of deep investigations, but there is still a substantial room for improvements. Typically, the algorithms used have two parts trial divisions aimed at eliminating numbers with small prime factors and primality tests based on an easy-to-compute statement that is valid for primes and invalid for composites. In this paper, we will showcase a technique that will eliminate the first phase of the primality testing algorithms. The computational simulations show a reduction of the primality generation time by about 30% in the case of 1024-bit RSA key pairs. This can be particularly beneficial in the case of decentralized environments for shared RSA keys as the initial trial division part of the key generation algorithms can be avoided at no cost. This also significantly reduces the communication complexity. Another essential contribution of the paper is the introduction of a new one-way function that is computationally simpler than the existing ones used in public-key cryptography. This function can be used to create new random number generators, and it also could be potentially used for designing entirely new public-key encryption systems.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-12-24T21:38:00Z</published>
+    <arxiv:comment>This paper contains 11 pages and 8 tables, in IEEE Transactions on Computers</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Vassil Dimitrov</name>
+    </author>
+    <author>
+      <name>Luigi Vigneri</name>
+    </author>
+    <author>
+      <name>Vidal Attias</name>
+    </author>
+    <arxiv:doi>10.1109/TC.2021.3095669</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/TC.2021.3095669" title="doi"/>
+  </entry>
+</feed>

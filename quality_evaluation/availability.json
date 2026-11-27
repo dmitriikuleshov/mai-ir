@@ -27,6 +27,11 @@
     "microsoft_learn": {
       "included_in_comparison": true,
       "observation": "Microsoft Learn search API: 30 запросов, для каждого сохранены первые 10 результатов."
+    },
+    "arxiv": {
+      "included_in_comparison": true,
+      "collected_at": "2026-11-26T17:27:49.460376+00:00",
+      "observation": "Atom API: все 30 запросов доступны, 131 позиция в топ-5; Q10 и Q11 пустые, Q07/Q12/Q30 короче пяти. sortBy=relevance; все исходные термы соединены AND."
     }
   }
 }

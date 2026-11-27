@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/lUUkJR1j0xELdMT/qHlvuyo8sh8</id>
+  <title>arXiv Query: search_query=all:"distributed" AND all:"database" AND all:"replication"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:23:30Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22distributed%22+AND+(all:%22database%22+AND+all:%22replication%22)&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>140</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2010.11935v2</id>
+    <title>Coded Data Rebalancing for Decentralized Distributed Databases</title>
+    <updated>2020-11-12T06:58:17Z</updated>
+    <link href="https://arxiv.org/abs/2010.11935v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2010.11935v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The performance of replication-based distributed databases is affected due to non-uniform storage across storage nodes (also called \textit{data skew}) and reduction in the replication factor during operation, particularly due to node additions or removals. Data rebalancing refers to the communication involved between the nodes in correcting this data skew, while maintaining the replication factor. For carefully designed distributed databases, transmitting coded symbols during the rebalancing phase has been recently shown to reduce the communication load of rebalancing. In this work, we look at balanced distributed databases with \textit{random placement}, in which each data segment is stored in a random subset of $r$ nodes in the system, where $r$ refers to the replication factor of the distributed database. We call these as decentralized databases. For a natural class of such decentralized databases, we propose rebalancing schemes for correcting data skew and the reduction in the replication factor arising due to a single node addition or removal. We give converse arguments which show that our proposed rebalancing schemes are optimal asymptotically in the size of the file.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-10-22T17:58:35Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>K V Sushena Sree</name>
+    </author>
+    <author>
+      <name>Prasad Krishnan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1210.1745v1</id>
+    <title>Providing an Object Allocation Algorithm in Distributed Databases Using Efficient Factors</title>
+    <updated>2012-10-05T13:05:29Z</updated>
+    <link href="https://arxiv.org/abs/1210.1745v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1210.1745v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Data replication is a common method used to improve the performance of data access in distributed database systems. In this paper, we present an object replication algorithm in distributed database systems (ORAD). We optimize the created replicated data in distributed database systems by using activity functions of previous algorithms, changing them with new technical ways and applying ORAD algorithm for making decisions. We propose ORAD algorithm with using effective factors and observe its results in several valid situations. Our objective is to propose an optimum method that replies read and write requests with less cost in distributed database systems. Finally, we implement ORAD and ADRW algorithms in a PC based network system and demonstrate that ORAD algorithm is superior to ADRW algorithm in the field of average request servicing cost.</summary>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-10-05T13:05:29Z</published>
+    <arxiv:comment>IJCSI International Journal of Computer Science Issues, Vol. 9, Issue 4, No 3, 2012</arxiv:comment>
+    <arxiv:primary_category term="cs.DB"/>
+    <author>
+      <name>Arash Ghorbannia Delavar</name>
+    </author>
+    <author>
+      <name>Golnoosh Keshani</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cs/0604071v1</id>
+    <title>Distributed Metadata with the AMGA Metadata Catalog</title>
+    <updated>2006-04-19T10:01:26Z</updated>
+    <link href="https://arxiv.org/abs/cs/0604071v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cs/0604071v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Catalog Services play a vital role on Data Grids by allowing users and applications to discover and locate the data needed. On large Data Grids, with hundreds of geographically distributed sites, centralized Catalog Services do not provide the required scalability, performance or fault-tolerance. In this article, we start by presenting and discussing the general requirements on Grid Catalogs of applications being developed by the EGEE user community. This provides the motivation for the second part of the article, where we present the replication and distribution mechanisms we have designed and implemented into the AMGA Metadata Catalog, which is part of the gLite software stack being developed for the EGEE project. Implementing these mechanisms in the catalog itself has the advantages of not requiring any special support from the relational database back-end, of being database independent, and of allowing tailoring the mechanisms to the specific requirements and characteristics of Metadata Catalogs.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2006-04-19T10:01:26Z</published>
+    <arxiv:comment>6 pages, 3 figures, to appear in Workshop on Next-Generation Distributed Data Management - HPDC-15</arxiv:comment>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Nuno Santos</name>
+    </author>
+    <author>
+      <name>Birger Koblitz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0802.0137v3</id>
+    <title>Fault-Tolerant Partial Replication in Large-Scale Database Systems</title>
+    <updated>2009-03-31T14:41:43Z</updated>
+    <link href="https://arxiv.org/abs/0802.0137v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0802.0137v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We investigate a decentralised approach to committing transactions in a replicated database, under partial replication. Previous protocols either re-execute transactions entirely and/or compute a total order of transactions. In contrast, ours applies update values, and orders only conflicting transactions. It results that transactions execute faster, and distributed databases commit in small committees. Both effects contribute to preserve scalability as the number of databases and transactions increase. Our algorithm ensures serializability, and is live and safe in spite of faults.</summary>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-02-01T14:47:24Z</published>
+    <arxiv:primary_category term="cs.DB"/>
+    <author>
+      <name>Pierre Sutra</name>
+      <arxiv:affiliation>INRIA Rocquencourt</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Marc Shapiro</name>
+      <arxiv:affiliation>INRIA Rocquencourt</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.04384v2</id>
+    <title>Sharding Distributed Databases: A Critical Review</title>
+    <updated>2024-04-10T10:14:15Z</updated>
+    <link href="https://arxiv.org/abs/2404.04384v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.04384v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This article examines the significant challenges encountered in implementing sharding within distributed replication systems. It identifies the impediments of achieving consensus among large participant sets, leading to scalability, throughput, and performance limitations. These issues primarily arise due to the message complexity inherent in consensus mechanisms. In response, we investigate the potential of sharding to mitigate these challenges, analyzing current implementations within distributed replication systems. Additionally, we offer a comprehensive review of replication systems, encompassing both classical distributed databases as well as Distributed Ledger Technologies (DLTs) employing sharding techniques. Through this analysis, the article aims to provide insights into addressing the scalability and performance concerns in distributed replication systems.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-05T20:06:11Z</published>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Siamak Solat</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0712.2773v2</id>
+    <title>Middleware-based Database Replication: The Gaps between Theory and Practice</title>
+    <updated>2008-11-05T20:53:51Z</updated>
+    <link href="https://arxiv.org/abs/0712.2773v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0712.2773v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The need for high availability and performance in data management systems has been fueling a long running interest in database replication from both academia and industry. However, academic groups often attack replication problems in isolation, overlooking the need for completeness in their solutions, while commercial teams take a holistic approach that often misses opportunities for fundamental innovation. This has created over time a gap between academic research and industrial practice.
+  This paper aims to characterize the gap along three axes: performance, availability, and administration. We build on our own experience developing and deploying replication systems in commercial and academic settings, as well as on a large body of prior related work. We sift through representative examples from the last decade of open-source, academic, and commercial database replication systems and combine this material with case studies from real systems deployed at Fortune 500 customers. We propose two agendas, one for academic research and one for industrial R&amp;D, which we believe can bridge the gap within 5-10 years. This way, we hope to both motivate and help researchers in making the theory and practice of middleware-based database replication more relevant to each other.</summary>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.PF" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-12-17T18:42:15Z</published>
+    <arxiv:comment>14 pages. Appears in Proc. ACM SIGMOD International Conference on Management of Data, Vancouver, Canada, June 2008</arxiv:comment>
+    <arxiv:primary_category term="cs.DB"/>
+    <author>
+      <name>Emmanuel Cecchet</name>
+    </author>
+    <author>
+      <name>George Candea</name>
+    </author>
+    <author>
+      <name>Anastasia Ailamaki</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1006.3180v1</id>
+    <title>H2O: An Autonomic, Resource-Aware Distributed Database System</title>
+    <updated>2010-06-16T10:46:04Z</updated>
+    <link href="https://arxiv.org/abs/1006.3180v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1006.3180v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper presents the design of an autonomic, resource-aware distributed database which enables data to be backed up and shared without complex manual administration. The database, H2O, is designed to make use of unused resources on workstation machines. Creating and maintaining highly-available, replicated database systems can be difficult for untrained users, and costly for IT departments. H2O reduces the need for manual administration by autonomically replicating data and load-balancing across machines in an enterprise. Provisioning hardware to run a database system can be unnecessarily costly as most organizations already possess large quantities of idle resources in workstation machines. H2O is designed to utilize this unused capacity by using resource availability information to place data and plan queries over workstation machines that are already being used for other tasks. This paper discusses the requirements for such a system and presents the design and implementation of H2O.</summary>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-06-16T10:46:04Z</published>
+    <arxiv:comment>Presented at SICSA PhD Conference 2010 (http://www.sicsaconf.org/)</arxiv:comment>
+    <arxiv:primary_category term="cs.DB"/>
+    <author>
+      <name>Angus Macdonald</name>
+    </author>
+    <author>
+      <name>Alan Dearle</name>
+    </author>
+    <author>
+      <name>Graham Kirby</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.21566v2</id>
+    <title>Epoch-based Optimistic Concurrency Control in Geo-replicated Databases</title>
+    <updated>2026-03-16T02:58:29Z</updated>
+    <link href="https://arxiv.org/abs/2602.21566v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.21566v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Geo-distribution is essential for modern online applications to ensure service reliability and high availability. However, supporting high-performance serializable transactions in geo-replicated databases remains a significant challenge. This difficulty stems from the extensive over-coordination inherent in distributed atomic commitment, concurrency control, and fault-tolerance replication protocols under high network latency.
+  To address these challenges, we introduce Minerva, a unified distributed concurrency control designed for highly scalable multi-leader replication. Minerva employs a novel epoch-based asynchronous replication protocol that decouples data propagation from the commitment process, enabling continuous transaction replication. Optimistic concurrency control is used to allow any replicas to execute transactions concurrently and commit without coordination. In stead of aborting transactions when conflicts are detected, Minerva uses deterministic re-execution to resolve conflicts, ensuring serializability without sacrificing performance. To further enhance concurrency, we construct a conflict graph and use a maximum weight independent set algorithm to select the optimal subset of transactions for commitment, minimizing the number of re-executed transactions. Our evaluation demonstrates that Minerva significantly outperforms state-of-the-art replicated databases, achieving over $3\times$ higher throughput in scalability experiments and $2.8\times$ higher throughput during a high network latency simulation with the TPC-C benchmark.</summary>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-25T04:44:50Z</published>
+    <arxiv:primary_category term="cs.DB"/>
+    <author>
+      <name>Yunhao Mao</name>
+    </author>
+    <author>
+      <name>Harunari Takata</name>
+    </author>
+    <author>
+      <name>Michail Bachras</name>
+    </author>
+    <author>
+      <name>Yuqiu Zhang</name>
+    </author>
+    <author>
+      <name>Shiquan Zhang</name>
+    </author>
+    <author>
+      <name>Gengrui Zhang</name>
+    </author>
+    <author>
+      <name>Hans-Arno Jacobsen</name>
+    </author>
+    <arxiv:doi>10.1145/3802052</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3802052" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1302.3860v1</id>
+    <title>ScalienDB: Designing and Implementing a Distributed Database using Paxos</title>
+    <updated>2013-02-15T20:04:10Z</updated>
+    <link href="https://arxiv.org/abs/1302.3860v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1302.3860v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>ScalienDB is a scalable, replicated database built on top of the Paxos algorithm. It was developed from 2010 to 2012, when the startup backing it failed. This paper discusses the design decisions of the distributed database, describes interesting parts of the C++ codebase and enumerates lessons learned putting ScalienDB into production at a handful of clients. The source code is available on Github under the AGPL license, but it is no longer developed or maintained.</summary>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-02-15T20:04:10Z</published>
+    <arxiv:comment>18 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.DB"/>
+    <author>
+      <name>Márton Trencséni</name>
+    </author>
+    <author>
+      <name>Attila Gazsó</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1806.04761v1</id>
+    <title>Performance evaluation for CRUD operations in asynchronously replicated document oriented database</title>
+    <updated>2018-06-12T20:38:56Z</updated>
+    <link href="https://arxiv.org/abs/1806.04761v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1806.04761v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>NoSQL databases are becoming increasingly popular as more developers seek new ways for storing information. The popularity of these databases has risen due to their flexibility and scalability needed in domains like Big Data and Cloud Computing. This paper examines asynchronous replication, one of the key features for a scalable and flexible system. Three of the most popular Document-Oriented Databases, MongoDB, CouchDB, and Couchbase, are examined. For testing, the execution time for CRUD operations for a single database instance and for a distributed environment with two nodes is taken into account and the results are compared with tests outcomes obtained for three relational database management systems: Microsoft SQL Server, MySQL, and PostgreSQL.</summary>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-06-12T20:38:56Z</published>
+    <arxiv:primary_category term="cs.DB"/>
+    <author>
+      <name>Ciprian-Octavian Truică</name>
+    </author>
+    <author>
+      <name>Florin Rădulescu</name>
+    </author>
+    <author>
+      <name>Alexandru Boicea</name>
+    </author>
+    <author>
+      <name>Ion Bucur</name>
+    </author>
+    <arxiv:doi>10.1109/CSCS.2015.32</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/CSCS.2015.32" title="doi"/>
+  </entry>
+</feed>

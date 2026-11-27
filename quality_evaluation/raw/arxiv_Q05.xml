@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/Hb8lr/AjtDoPkBcUtUdoGnc+Pd8</id>
+  <title>arXiv Query: search_query=all:"C#" AND all:"asynchronous" AND all:"programming"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:23:41Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22C%23%22+AND+(all:%22asynchronous%22+AND+all:%22programming%22)&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>50</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2312.09326v2</id>
+    <title>WaveCert: Translation Validation for Asynchronous Dataflow Programs via Dynamic Fractional Permissions</title>
+    <updated>2024-04-12T15:07:38Z</updated>
+    <link href="https://arxiv.org/abs/2312.09326v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.09326v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Coarse-grained reconfigurable arrays (CGRAs) have gained attention in recent years due to their promising power efficiency compared to traditional von Neumann architectures. To program these architectures using ordinary languages such as C, a dataflow compiler must transform the original sequential, imperative program into an equivalent dataflow graph, composed of dataflow operators running in parallel. This transformation is challenging since the asynchronous nature of dataflow graphs allows out-of-order execution of operators, leading to behaviors not present in the original imperative programs.
+  We address this challenge by developing a translation validation technique for dataflow compilers to ensure that the dataflow program has the same behavior as the original imperative program on all possible inputs and schedules of execution. We apply this method to a state-of-the-art dataflow compiler targeting the RipTide CGRA architecture. Our tool uncovers 8 compiler bugs where the compiler outputs incorrect dataflow graphs, including a data race that is otherwise hard to discover via testing. After repairing these bugs, our tool verifies the correct compilation of all programs in the RipTide benchmark suite.</summary>
+    <category term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-14T20:20:54Z</published>
+    <arxiv:primary_category term="cs.PL"/>
+    <author>
+      <name>Zhengyao Lin</name>
+    </author>
+    <author>
+      <name>Joshua Gancher</name>
+    </author>
+    <author>
+      <name>Bryan Parno</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2209.06648v1</id>
+    <title>Automated Synthesis of Asynchronizations</title>
+    <updated>2022-09-14T13:52:14Z</updated>
+    <link href="https://arxiv.org/abs/2209.06648v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2209.06648v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Asynchronous programming is widely adopted for building responsive and efficient software, and modern languages such as C# provide async/await primitives to simplify the use of asynchrony. In this paper, we propose an approach for refactoring a sequential program into an asynchronous program that uses async/await, called asynchronization. The refactoring process is parametrized by a set of methods to replace with asynchronous versions, and it is constrained to avoid introducing data races. We investigate the delay complexity of enumerating all data race free asynchronizations, which quantifies the delay between outputting two consecutive solutions. We show that this is polynomial time modulo an oracle for solving reachability in sequential programs. We also describe a pragmatic approach based on an interprocedural data-flow analysis with polynomial-time delay complexity. The latter approach has been implemented and evaluated on a number of non-trivial C# programs extracted from open-source repositories</summary>
+    <category term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-09-14T13:52:14Z</published>
+    <arxiv:comment>37 pages, 18 figures, an extended version of a SAS 2022 paper with the same title</arxiv:comment>
+    <arxiv:primary_category term="cs.PL"/>
+    <author>
+      <name>Sidi Mohamed Beillahi</name>
+    </author>
+    <author>
+      <name>Ahmed Bouajjani</name>
+    </author>
+    <author>
+      <name>Constantin Enea</name>
+    </author>
+    <author>
+      <name>Shuvendu Lahiri</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1906.00367v1</id>
+    <title>A Survey of Asynchronous Programming Using Coroutines in the Internet of Things and Embedded Systems</title>
+    <updated>2019-06-02T09:10:01Z</updated>
+    <link href="https://arxiv.org/abs/1906.00367v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1906.00367v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Many Internet of Things and embedded projects are event-driven, and therefore require asynchronous and concurrent programming. Current proposals for C++20 suggest that coroutines will have native language support. It is timely to survey the current use of coroutines in embedded systems development. This paper investigates existing research which uses or describes coroutines on resource-constrained platforms. The existing research is analysed with regard to: software platform, hardware platform and capacity; use cases and intended benefits; and the application programming interface design used for coroutines. A systematic mapping study was performed, to select studies published between 2007 and 2018 which contained original research into the application of coroutines on resource-constrained platforms. An initial set of 566 candidate papers were reduced to only 35 after filters were applied, revealing the following taxonomy. The C &amp; C++ programming languages were used by 22 studies out of 35. As regards hardware, 16 studies used 8- or 16-bit processors while 13 used 32-bit processors. The four most common use cases were concurrency (17 papers), network communication (15), sensor readings (9) and data flow (7). The leading intended benefits were code style and simplicity (12 papers), scheduling (9) and efficiency (8). A wide variety of techniques have been used to implement coroutines, including native macros, additional tool chain steps, new language features and non-portable assembly language. We conclude that there is widespread demand for coroutines on resource-constrained devices. Our findings suggest that there is significant demand for a formalised, stable, well-supported implementation of coroutines in C++, designed with consideration of the special needs of resource-constrained devices, and further that such an implementation would bring benefits specific to such devices.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-06-02T09:10:01Z</published>
+    <arxiv:comment>22 pages, 8 figures, to be published in ACM Transactions on Embedded Computing Systems (TECS)</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <arxiv:journal_ref>ACM Trans. Embed. Comput. Syst. 18, 3, Article 21 (June 2019)</arxiv:journal_ref>
+    <author>
+      <name>Bruce Belson</name>
+      <arxiv:affiliation>College of Science &amp; Engineering, James Cook University</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jason Holdsworth</name>
+      <arxiv:affiliation>College of Science &amp; Engineering, James Cook University</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Wei Xiang</name>
+      <arxiv:affiliation>College of Science &amp; Engineering, James Cook University</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Bronson Philippa</name>
+      <arxiv:affiliation>College of Science &amp; Engineering, James Cook University</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1145/3319618</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3319618" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.15907v1</id>
+    <title>Thoughts on Learning Human and Programming Languages</title>
+    <updated>2024-07-22T16:01:05Z</updated>
+    <link href="https://arxiv.org/abs/2407.15907v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.15907v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This is a virtual dialog between Jeffrey C. Carver and Daniel S. Katz on how people learn programming languages. It's based on a talk Jeff gave at the first US-RSE Conference (US-RSE'23), which led Dan to think about human languages versus computer languages. Dan discussed this with Jeff at the conference, and this discussion continued asynchronous, with this column being a record of the discussion.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-22T16:01:05Z</published>
+    <arxiv:comment>submitted version of a Software Engineering Department column now published as: D. S. Katz and J. C. Carver, "Thoughts on Learning Human and Programming Languages," Computing in Science &amp; Engineering, v.26(1), Jan.-Mar. 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Daniel S. Katz</name>
+    </author>
+    <author>
+      <name>Jeffrey C. Carver</name>
+    </author>
+    <arxiv:doi>10.1109/MCSE.2024.3398949</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/MCSE.2024.3398949" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1609.03146v1</id>
+    <title>Honey: A dataflow programming language for the processing, featurization and analysis of multivariate, asynchronous and non-uniformly sampled scalar symbolic time sequences</title>
+    <updated>2016-09-11T10:18:29Z</updated>
+    <link href="https://arxiv.org/abs/1609.03146v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1609.03146v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce HONEY; a new specialized programming language designed to facilitate the processing of multivariate, asynchronous and non-uniformly sampled symbolic and scalar time sequences. When compiled, a Honey program is transformed into a static process flow diagram, which is then executed by a virtual machine. Honey's most notable features are: (1) Honey introduces a new, efficient and non-prone to error paradigm for defining recursive process flow diagrams from text input with the mindset of imperative programming. Honey's specialized, high level and concise syntax allows fast and easy writing, reading and maintenance of complex processing of large scalar symbolic time sequence datasets. (2) Honey guarantees programs will be executed similarly on static or real-time streaming datasets. (3) Honey's IDE includes an interactive visualization tool which allows for an interactive exploration of the intermediate and final outputs. This combination enables fast incremental prototyping, debugging, monitoring and maintenance of complex programs. (4) In case of large datasets (larger than the available memory), Honey programs can be executed to process input greedily. (5) The graphical structure of a compiled program provides several desirable properties, including distributed and/or paralleled execution, memory optimization, and program structure visualization. (6) Honey contains a large library of both common and novel operators developed through various research projects. An open source C++ implementation of Honey as well as the Honey IDE and the interactive data visualizer are publicly available.</summary>
+    <category term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-09-11T10:18:29Z</published>
+    <arxiv:comment>The source code of four presented tasks are available on the Honey website</arxiv:comment>
+    <arxiv:primary_category term="cs.PL"/>
+    <author>
+      <name>Mathieu Guillame-Bert</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1511.00511v1</id>
+    <title>A Formal Model for Direct-style Asynchronous Observables</title>
+    <updated>2015-11-02T14:15:51Z</updated>
+    <link href="https://arxiv.org/abs/1511.00511v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1511.00511v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Languages like F#, C#, and recently also Scala, provide "Async" programming models which aim to make asynchronous programming easier by avoiding an inversion of control that is inherent in callback-based programming models. This paper presents a novel approach to integrate the Async model with observable streams of the Reactive Extensions model. Reactive Extensions are best-known from the .NET platform, and widely-used implementations of its programming model exist also for Java, Ruby, and other languages. This paper contributes a formalization of the unified "Reactive Async" model in the context of an object-based core calculus. Our formal model captures the essence of the protocol of asynchronous observables using a heap evolution property. We prove a subject reduction theorem; the theorem implies that reduction preserves the heap evolution property. Thus, for well-typed programs our calculus ensures the protocol of asynchronous observables.</summary>
+    <category term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-11-02T14:15:51Z</published>
+    <arxiv:primary_category term="cs.PL"/>
+    <author>
+      <name>Philipp Haller</name>
+    </author>
+    <author>
+      <name>Heather Miller</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1807.08117v1</id>
+    <title>An Asynchronous soundness theorem for concurrent separation logic</title>
+    <updated>2018-07-21T10:01:36Z</updated>
+    <link href="https://arxiv.org/abs/1807.08117v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1807.08117v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Concurrent separation logic (CSL) is a specification logic for concurrent imperative programs with shared memory and locks. In this paper, we develop a concurrent and interactive account of the logic inspired by asynchronous game semantics. To every program $C$, we associate a pair of asynchronous transition systems $[C]_S$ and $[C]_L$ which describe the operational behavior of the Code when confronted to its Environment or Frame --- both at the level of machine states ($S$) and of machine instructions and locks ($L$). We then establish that every derivation tree $π$ of a judgment $Γ\vdash\{P\}C\{Q\}$ defines a winning and asynchronous strategy $[π]_{Sep}$ with respect to both asynchronous semantics $[C]_S$ and $[C]_L$. From this, we deduce an asynchronous soundness theorem for CSL, which states that the canonical map $\mathcal{L}:[C]_S\to[C]_L$ from the stateful semantics $[C]_S$ to the stateless semantics $[C]_L$ satisfies a basic fibrational property. We advocate that this provides a clean and conceptual explanation for the usual soundness theorem of CSL, including the absence of data races.</summary>
+    <category term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-07-21T10:01:36Z</published>
+    <arxiv:comment>Full version of an extended abstract published at LICS 2018</arxiv:comment>
+    <arxiv:primary_category term="cs.PL"/>
+    <author>
+      <name>Paul-André Melliès</name>
+    </author>
+    <author>
+      <name>Léo Stefanesco</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1806.06917v6</id>
+    <title>An asynchronous and task-based implementation of Peridynamics utilizing HPX -- the C++ standard library for parallelism and concurrency</title>
+    <updated>2020-10-28T16:23:54Z</updated>
+    <link href="https://arxiv.org/abs/1806.06917v6" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1806.06917v6" rel="related" type="application/pdf" title="pdf"/>
+    <summary>On modern supercomputers, asynchronous many task systems are emerging to address the new architecture of computational nodes. Through this shift of increasing cores per node, a new programming model with the focus on handle the fine-grain parallelism of this increasing amount of cores per computational node is needed. Asynchronous Many Task (AMT) run time systems represent an emerging paradigm for addressing fine-grain parallelism since they handle the increasing amount of threads per node and concurrency. HPX, a open source C++ standard library for parallelism and concurrency, is one AMT which is confirm with the C++ standard. Which means that HPX's Application Programming Interface (API) is confirm with its definition by the C++ standard committee. For example for the concept of futurization the hpx:future can be replaced by std::future without breaking the API. Peridynamics is a non-local generalization of continuum mechanics tailored to address discontinuous displacement fields arising in fracture mechanics. As many non-local approaches, peridynamics requires considerable computing resources to solve practical problems. This paper investigates the implementation of a peridynamics EMU nodal discretization in an asynchronous task-based fashion. The scalability of asynchronous task-based implementation is to be in agreement with theoretical estimations. In addition, to the scalabilty the code is convergent for implicit time integration and recovers theoretical solutions. Explicit time integration, convergence results are presented to showcase the agreement of results with theoretical claims in previous works.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-06-18T20:26:01Z</published>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Patrick Diehl</name>
+    </author>
+    <author>
+      <name>Prashant K. Jha</name>
+    </author>
+    <author>
+      <name>Hartmut Kaiser</name>
+    </author>
+    <author>
+      <name>Robert Lipton</name>
+    </author>
+    <author>
+      <name>Martin Levesque</name>
+    </author>
+    <arxiv:doi>10.1007/s42452-020-03784-x</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s42452-020-03784-x" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.21323v3</id>
+    <title>A first look at ROS 2 applications written in asynchronous Rust</title>
+    <updated>2025-07-28T15:25:07Z</updated>
+    <link href="https://arxiv.org/abs/2505.21323v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.21323v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The increasing popularity of the Rust programming language in building robotic applications using the Robot Operating System (ROS 2) raises questions about its real-time execution capabilities, particularly when employing asynchronous programming. Existing real-time scheduling and response-time analysis techniques for ROS 2 focus on applications written in C++ and do not address the unique execution models and challenges presented by Rust's asynchronous programming paradigm. In this paper, we analyze the execution model of R2R -- an asynchronous Rust ROS 2 bindings and various asynchronous Rust runtimes, comparing them with the execution model of C++ ROS 2 applications. We propose a structured approach for R2R applications aimed at deterministic real-time operation involving thread prioritization and callback-to-thread mapping schemes. Our experimental evaluation based on measuring end-to-end latencies of a synthetic application shows that the proposed approach is effective and outperforms other evaluated configurations. A more complex autonomous driving case study demonstrates its practical applicability. Overall, the experimental results indicate that our proposed structure achieves bounded response times for time-critical tasks. This paves the way for future work to adapt existing or develop new response-time analysis techniques for R2R applications using our structure.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-27T15:21:58Z</published>
+    <arxiv:comment>Published version, added external DOI</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Martin Škoudlil</name>
+    </author>
+    <author>
+      <name>Michal Sojka</name>
+    </author>
+    <author>
+      <name>Zdeněk Hanzálek</name>
+    </author>
+    <arxiv:doi>10.4230/LIPIcs.ECRTS.2025.1</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.4230/LIPIcs.ECRTS.2025.1" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.14719v2</id>
+    <title>Tawa: Automatic Warp Specialization for Modern GPUs with Asynchronous References</title>
+    <updated>2025-12-10T03:26:05Z</updated>
+    <link href="https://arxiv.org/abs/2510.14719v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.14719v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Modern GPUs feature specialized hardware units that enable high-performance, asynchronous dataflow execution. However, the conventional SIMT programming model is fundamentally misaligned with this task-parallel hardware, creating a significant programmability gap. While hardware-level warp specialization is the key to unlocking peak performance, it forces developers to manually orchestrate complex, low-level communication and software pipelines--a process that is labor-intensive, error-prone, and unsustainable. To address this challenge, we present Tawa, an automated compiler that systematically generates high-performance, warp-specialized code from a high-level, tile-based program. Central to our approach is a novel IR abstraction, asynchronous references (aref), which expresses warp-level communication without exposing low-level hardware details. Using this abstraction, Tawa automatically partitions programs into producer-consumer roles and manages the intricate dataflow pipeline, relieving developers of invasive kernel rewriting. Evaluation on NVIDIA H100 GPUs across representative LLM kernels shows that Tawa delivers high hardware utilization, achieving up to 1.1$\times$ speedup over highly optimized cuBLAS GEMM kernels. For attention workloads, Tawa attains 1.2$\times$ speedup over Triton and matches the performance of the hand-optimized CUTLASS C++ FlashAttention-3 kernel with far less programming effort.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-16T14:20:00Z</published>
+    <arxiv:comment>Accepted to CGO'26</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Hongzheng Chen</name>
+    </author>
+    <author>
+      <name>Bin Fan</name>
+    </author>
+    <author>
+      <name>Alexander Collins</name>
+    </author>
+    <author>
+      <name>Bastian Hagedorn</name>
+    </author>
+    <author>
+      <name>Evghenii Gaburov</name>
+    </author>
+    <author>
+      <name>Masahiro Masuda</name>
+    </author>
+    <author>
+      <name>Matthew Brookhart</name>
+    </author>
+    <author>
+      <name>Chris Sullivan</name>
+    </author>
+    <author>
+      <name>Jason Knight</name>
+    </author>
+    <author>
+      <name>Zhiru Zhang</name>
+    </author>
+    <author>
+      <name>Vinod Grover</name>
+    </author>
+  </entry>
+</feed>

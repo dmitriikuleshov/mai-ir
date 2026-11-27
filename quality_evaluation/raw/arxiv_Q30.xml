@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/qJzAS2pqAWzjsSezMFeHZIkbk6o</id>
+  <title>arXiv Query: search_query=all:"variable" AND all:"byte" AND all:"compression" AND all:"inverted" AND all:"index"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:25:26Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22variable%22+AND+(all:%22byte%22+AND+(all:%22compression%22+AND+(all:%22inverted%22+AND+all:%22index%22)))&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1804.10949v2</id>
+    <title>On Optimally Partitioning Variable-Byte Codes</title>
+    <updated>2020-02-27T09:09:28Z</updated>
+    <link href="https://arxiv.org/abs/1804.10949v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1804.10949v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The ubiquitous Variable-Byte encoding is one of the fastest compressed representation for integer sequences. However, its compression ratio is usually not competitive with other more sophisticated encoders, especially when the integers to be compressed are small that is the typical case for inverted indexes. This paper shows that the compression ratio of Variable-Byte can be improved by 2x by adopting a partitioned representation of the inverted lists. This makes Variable-Byte surprisingly competitive in space with the best bit-aligned encoders, hence disproving the folklore belief that Variable-Byte is space-inefficient for inverted index compression. Despite the significant space savings, we show that our optimization almost comes for free, given that: we introduce an optimal partitioning algorithm that does not affect indexing time because of its linear-time complexity; we show that the query processing speed of Variable-Byte is preserved, with an extensive experimental analysis and comparison with several other state-of-the-art encoders.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-04-29T14:57:53Z</published>
+    <arxiv:comment>Published in IEEE Transactions on Knowledge and Data Engineering (TKDE), 15 April 2019</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <arxiv:journal_ref>IEEE Trans. Knowl. Data Eng. 32(9): 1812-1823 (2020)</arxiv:journal_ref>
+    <author>
+      <name>Giulio Ermanno Pibiri</name>
+    </author>
+    <author>
+      <name>Rossano Venturini</name>
+    </author>
+    <arxiv:doi>10.1109/TKDE.2019.2911288</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/TKDE.2019.2911288" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1108.1956v1</id>
+    <title>Factorization-based Lossless Compression of Inverted Indices</title>
+    <updated>2011-08-09T15:25:17Z</updated>
+    <link href="https://arxiv.org/abs/1108.1956v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1108.1956v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Many large-scale Web applications that require ranked top-k retrieval such as Web search and online advertising are implemented using inverted indices. An inverted index represents a sparse term-document matrix, where non-zero elements indicate the strength of term-document association. In this work, we present an approach for lossless compression of inverted indices. Our approach maps terms in a document corpus to a new term space in order to reduce the number of non-zero elements in the term-document matrix, resulting in a more compact inverted index. We formulate the problem of selecting a new term space that minimizes the resulting index size as a matrix factorization problem, and prove that finding the optimal factorization is an NP-hard problem. We develop a greedy algorithm for finding an approximate solution. A side effect of our approach is increasing the number of terms in the index, which may negatively affect query evaluation performance. To eliminate such effect, we develop a methodology for modifying query evaluation algorithms by exploiting specific properties of our compression approach. Our experimental evaluation demonstrates that our approach achieves an index size reduction of 20%, while maintaining the same query response times. Higher compression ratios up to 35% are achievable, however at the cost of slightly longer query response times. Furthermore, combining our approach with other lossless compression techniques, namely variable-byte encoding, leads to index size reduction of up to 50%.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-08-09T15:25:17Z</published>
+    <arxiv:comment>To Appear as a short paper in CIKM'11</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>George Beskales</name>
+    </author>
+    <author>
+      <name>Marcus Fontoura</name>
+    </author>
+    <author>
+      <name>Maxim Gurevich</name>
+    </author>
+    <author>
+      <name>Sergei Vassilvitskii</name>
+    </author>
+    <author>
+      <name>Vanja Josifovski</name>
+    </author>
+  </entry>
+</feed>

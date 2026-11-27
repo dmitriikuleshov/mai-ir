@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/ExIokKwLPsTSF1X+mclBR5MxHeY</id>
+  <title>arXiv Query: search_query=all:"CRISPR" AND all:"Cas9" AND all:"gene" AND all:"editing"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:25:11Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22CRISPR%22+AND+(all:%22Cas9%22+AND+(all:%22gene%22+AND+all:%22editing%22))&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>6</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2502.12675v1</id>
+    <title>Fast Antibiotic resistance-Based gene editing of mammalian cells with CRISPR-Cas9 (FAB-CRISPR)</title>
+    <updated>2025-02-18T09:30:03Z</updated>
+    <link href="https://arxiv.org/abs/2502.12675v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.12675v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Protein tagging with CRISPR-Cas9 enables the investigation of protein function in its native environment but is limited by low homology-directed repair (HDR) efficiency causing low knock-in rates. We present a detailed pipeline using HDR donor plasmids containing antibiotic resistance cassettes for rapid selection of gene-edited cells. Our protocol streamlines N- or C-terminal tagging in human cells, enabling HDR donor plasmid preparation in a single cloning step.</summary>
+    <category term="q-bio.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-18T09:30:03Z</published>
+    <arxiv:primary_category term="q-bio.SC"/>
+    <author>
+      <name>Petia Adarska</name>
+    </author>
+    <author>
+      <name>Eleanor Fox</name>
+    </author>
+    <author>
+      <name>Joshua Heyza</name>
+    </author>
+    <author>
+      <name>Carlo Barnaba</name>
+    </author>
+    <author>
+      <name>Jens Schmidt</name>
+    </author>
+    <author>
+      <name>Francesca Bottanelli</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2103.10667v2</id>
+    <title>Search and localization dynamics of the CRISPR/Cas9 system</title>
+    <updated>2021-10-04T01:11:14Z</updated>
+    <link href="https://arxiv.org/abs/2103.10667v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2103.10667v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The CRISPR/Cas9 system acts as the prokaryotic immune system and has important applications in gene editing. The protein Cas9 is one of its crucial components. The role of Cas9 is to search for specific target sequences on the DNA and cleave them. In this Letter, we introduce a model of facilitated diffusion for Cas9 and fit its parameters to single-molecule experiments. Our model confirms that Cas9 search for targets by sliding, but shows that its sliding length is rather short. We then investigate how Cas9 explores a long stretch of DNA containing randomly placed targets. We solve this problem by mapping it into the theory of Anderson localization in condensed matter physics. Our theoretical approach rationalizes experimental evidences on the distribution of Cas9 molecules along the DNA.</summary>
+    <category term="q-bio.SC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-03-19T07:27:43Z</published>
+    <arxiv:comment>8 pages, 10 figures. Combined Main Text + SI. Accepted for publication in Physical Review Letters</arxiv:comment>
+    <arxiv:primary_category term="q-bio.SC"/>
+    <arxiv:journal_ref>Phys. Rev. Lett. 127, 208102, 2021</arxiv:journal_ref>
+    <author>
+      <name>Qiao Lu</name>
+    </author>
+    <author>
+      <name>Deepak Bhat</name>
+    </author>
+    <author>
+      <name>Darya Stepanenko</name>
+    </author>
+    <author>
+      <name>Simone Pigolotti</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevLett.127.208102</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevLett.127.208102" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.05938v1</id>
+    <title>DeepFM-Crispr: Prediction of CRISPR On-Target Effects via Deep Learning</title>
+    <updated>2024-09-09T17:33:54Z</updated>
+    <link href="https://arxiv.org/abs/2409.05938v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.05938v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Since the advent of CRISPR-Cas9, a groundbreaking gene-editing technology that enables precise genomic modifications via a short RNA guide sequence, there has been a marked increase in the accessibility and application of this technology across various fields. The success of CRISPR-Cas9 has spurred further investment and led to the discovery of additional CRISPR systems, including CRISPR-Cas13. Distinct from Cas9, which targets DNA, Cas13 targets RNA, offering unique advantages for gene modulation. We focus on Cas13d, a variant known for its collateral activity where it non-specifically cleaves adjacent RNA molecules upon activation, a feature critical to its function. We introduce DeepFM-Crispr, a novel deep learning model developed to predict the on-target efficiency and evaluate the off-target effects of Cas13d. This model harnesses a large language model to generate comprehensive representations rich in evolutionary and structural data, thereby enhancing predictions of RNA secondary structures and overall sgRNA efficacy. A transformer-based architecture processes these inputs to produce a predictive efficacy score. Comparative experiments show that DeepFM-Crispr not only surpasses traditional models but also outperforms recent state-of-the-art deep learning methods in terms of prediction accuracy and reliability.</summary>
+    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-09T17:33:54Z</published>
+    <arxiv:comment>11 page, 2 figures, accepted to ICMLA 2024</arxiv:comment>
+    <arxiv:primary_category term="q-bio.QM"/>
+    <author>
+      <name>Condy Bao</name>
+    </author>
+    <author>
+      <name>Fuxiao Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.02622v1</id>
+    <title>COMET: Combinatorial Optimization for Multiplex Editing Targets Via Constraint-Preserving QAOA</title>
+    <updated>2026-07-02T08:37:59Z</updated>
+    <link href="https://arxiv.org/abs/2607.02622v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.02622v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multiplex CRISPR-Cas9 gene editing requires selecting one guide RNA per target gene subject to cross-gene interactions: a constrained combinatorial problem that can be formulated as a Quadratic Unconstrained Binary Optimization (QUBO) and solved via the Quantum Approximate Optimization Algorithm (QAOA). The one-hot per-gene constraint is conventionally enforced by adding quadratic penalty terms to the cost Hamiltonian, but penalty coefficient selection is heuristic and penalties amplify hardware noise. An alternative is to enforce the constraint structurally via the XY-mixer, which preserves feasibility by construction. We present COMET, a systematic comparison of penalty-based and XY-mixer QAOA on a three-gene, twelve-qubit multiplex editing instance targeting the immune-checkpoint genes PDCD1, LAG3, and HAVCR2. In simulation, the XY-mixer exceeds 95% probability of the optimum by QAOA depth p=3, while three penalty variants spanning an order of magnitude in penalty coefficient remain below 6% at every depth. On IBM's ibm_kingston (Heron r2) processor, the XY-mixer's simulator-hardware energy gap stays within |0.8| across all depths, while the worst-tuned penalty variant's gap reaches +53.9. We provide an honest account of where the structural guarantee partially breaks under gate-level noise. The twelve-qubit instance is classically trivial; our contribution is a methodological comparison of constraint-enforcement strategies in a biologically motivated domain, with real-hardware validation.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-02T08:37:59Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Priyansh Singhal</name>
+    </author>
+    <author>
+      <name>Sumit Maheshwari</name>
+    </author>
+    <author>
+      <name>Piyush Joshi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.18207v1</id>
+    <title>Securing the Language of Life: Inheritable Watermarks from DNA Language Models to Proteins</title>
+    <updated>2025-09-20T20:25:47Z</updated>
+    <link href="https://arxiv.org/abs/2509.18207v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.18207v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>DNA language models have revolutionized our ability to understand and design DNA sequences--the fundamental language of life--with unprecedented precision, enabling transformative applications in therapeutics, synthetic biology, and gene editing. However, this capability also poses substantial dual-use risks, including the potential for creating pathogens, viruses, and even bioweapons. To address these biosecurity challenges, we introduce two innovative watermarking techniques to reliably track the designed DNA: DNAMark and CentralMark. DNAMark employs synonymous codon substitutions to embed watermarks in DNA sequences while preserving the original function. CentralMark further advances this by creating inheritable watermarks that transfer from DNA to translated proteins, leveraging protein embeddings to ensure detection across the central dogma. Both methods utilize semantic embeddings to generate watermark logits, enhancing robustness against natural mutations, synthesis errors, and adversarial attacks. Evaluated on our therapeutic DNA benchmark, DNAMark and CentralMark achieve F1 detection scores above 0.85 under various conditions, while maintaining over 60% sequence similarity to ground truth and degeneracy scores below 15%. A case study on the CRISPR-Cas9 system underscores CentralMark's utility in real-world settings. This work establishes a vital framework for securing DNA language models, balancing innovation with accountability to mitigate biosecurity risks.</summary>
+    <category term="q-bio.GN" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-20T20:25:47Z</published>
+    <arxiv:comment>Accepted by NeurIPS 2025</arxiv:comment>
+    <arxiv:primary_category term="q-bio.GN"/>
+    <author>
+      <name>Zaixi Zhang</name>
+    </author>
+    <author>
+      <name>Ruofan Jin</name>
+    </author>
+    <author>
+      <name>Le Cong</name>
+    </author>
+    <author>
+      <name>Mengdi Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.09336v1</id>
+    <title>Immunological mechanisms and immunoregulatory strategies in intervertebral disc degeneration</title>
+    <updated>2025-06-11T02:32:01Z</updated>
+    <link href="https://arxiv.org/abs/2506.09336v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.09336v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Intervertebral discs are avascular and maintain immune privilege. However, during intervertebral disc degeneration (IDD), this barrier is disrupted, leading to extensive immune cell infiltration and localized inflammation. In degenerated discs, macrophages, T lymphocytes, neutrophils, and granulocytic myeloid-derived suppressor cells (G-MDSCs) are key players, exhibiting functional heterogeneity. Dysregulated activation of inflammatory pathways, including nuclear factor kappa-B (NF-kappaB), interleukin-17 (IL-17), and nucleotide-binding oligomerization domain-like receptor protein 3 (NLRP3) inflammasome activation, drives local pro-inflammatory responses, leading to cell apoptosis and extracellular matrix (ECM) degradation. Innovative immunotherapies, including exosome-based treatments, CRISPR/Cas9-mediated gene editing, and chemokine-loaded hydrogel systems, have shown promise in reshaping the immunological niche of intervertebral discs. These strategies can modulate dysregulated immune responses and create a supportive environment for tissue regeneration. However, current studies have not fully elucidated the mechanisms of inflammatory memory and the immunometabolic axis, and they face challenges in balancing tissue regeneration with immune homeostasis. Future studies should employ interdisciplinary approaches such as single-cell and spatial transcriptomics to map a comprehensive immune atlas of IDD, elucidate intercellular crosstalk and signaling networks, and develop integrated therapies combining targeted immunomodulation with regenerative engineering, thereby facilitating the clinical translation of effective IDD treatments.</summary>
+    <category term="q-bio.BM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.CB" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-11T02:32:01Z</published>
+    <arxiv:comment>Review article, 50 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="q-bio.BM"/>
+    <author>
+      <name>Xianyi Yan</name>
+    </author>
+    <author>
+      <name>Xi Wang</name>
+    </author>
+    <author>
+      <name>Ying Che</name>
+    </author>
+    <author>
+      <name>Peng Feng</name>
+    </author>
+    <author>
+      <name>Ting Zhang</name>
+    </author>
+  </entry>
+</feed>

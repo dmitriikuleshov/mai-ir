@@ -1,4 +1,5 @@
 system,available_queries,queries_with_five_results,positions_in_top5,positions_in_local_index,role
+arxiv,30,25,131,9,primary
 bing,29,0,42,31,limited_supplement
 microsoft_learn,30,30,150,62,primary
 tfidf,30,30,150,150,primary

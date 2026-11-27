@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/QrCX6vzg+5VV27u/je6hqITguPo</id>
+  <title>arXiv Query: search_query=all:"federated" AND all:"learning" AND all:"data" AND all:"privacy"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:24:34Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22federated%22+AND+(all:%22learning%22+AND+(all:%22data%22+AND+all:%22privacy%22))&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>5339</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2007.06081v1</id>
+    <title>VAFL: a Method of Vertical Asynchronous Federated Learning</title>
+    <updated>2020-07-12T20:09:25Z</updated>
+    <link href="https://arxiv.org/abs/2007.06081v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2007.06081v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Horizontal Federated learning (FL) handles multi-client data that share the same set of features, and vertical FL trains a better predictor that combine all the features from different clients. This paper targets solving vertical FL in an asynchronous fashion, and develops a simple FL method. The new method allows each client to run stochastic gradient algorithms without coordination with other clients, so it is suitable for intermittent connectivity of clients. This method further uses a new technique of perturbed local embedding to ensure data privacy and improve communication efficiency. Theoretically, we present the convergence rate and privacy level of our method for strongly convex, nonconvex and even nonsmooth objectives separately. Empirically, we apply our method to FL on various image and healthcare datasets. The results compare favorably to centralized and synchronous FL methods.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-07-12T20:09:25Z</published>
+    <arxiv:comment>FL-ICML'20: Proc. of ICML Workshop on Federated Learning for User Privacy and Data Confidentiality, July 2020</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <arxiv:journal_ref>Proc. of ICML Workshop on Federated Learning for User Privacy and Data Confidentiality, July 2020</arxiv:journal_ref>
+    <author>
+      <name>Tianyi Chen</name>
+    </author>
+    <author>
+      <name>Xiao Jin</name>
+    </author>
+    <author>
+      <name>Yuejiao Sun</name>
+    </author>
+    <author>
+      <name>Wotao Yin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2207.02337v1</id>
+    <title>Federated and Transfer Learning: A Survey on Adversaries and Defense Mechanisms</title>
+    <updated>2022-07-05T22:07:26Z</updated>
+    <link href="https://arxiv.org/abs/2207.02337v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2207.02337v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The advent of federated learning has facilitated large-scale data exchange amongst machine learning models while maintaining privacy. Despite its brief history, federated learning is rapidly evolving to make wider use more practical. One of the most significant advancements in this domain is the incorporation of transfer learning into federated learning, which overcomes fundamental constraints of primary federated learning, particularly in terms of security. This chapter performs a comprehensive survey on the intersection of federated and transfer learning from a security point of view. The main goal of this study is to uncover potential vulnerabilities and defense mechanisms that might compromise the privacy and performance of systems that use federated and transfer learning.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-07-05T22:07:26Z</published>
+    <arxiv:comment>Accepted for publication in edited book titled "Federated and Transfer Learning", Springer, Cham</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <arxiv:journal_ref>Federated and Transfer Learning, Springer International Publishing, Cham, pp. 29-55, 2023</arxiv:journal_ref>
+    <author>
+      <name>Ehsan Hallaji</name>
+    </author>
+    <author>
+      <name>Roozbeh Razavi-Far</name>
+    </author>
+    <author>
+      <name>Mehrdad Saif</name>
+    </author>
+    <arxiv:doi>10.1007/978-3-031-11748-0_3</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/978-3-031-11748-0_3" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1910.07796v1</id>
+    <title>Overcoming Forgetting in Federated Learning on Non-IID Data</title>
+    <updated>2019-10-17T09:53:16Z</updated>
+    <link href="https://arxiv.org/abs/1910.07796v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1910.07796v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We tackle the problem of Federated Learning in the non i.i.d. case, in which local models drift apart, inhibiting learning. Building on an analogy with Lifelong Learning, we adapt a solution for catastrophic forgetting to Federated Learning. We add a penalty term to the loss function, compelling all local models to converge to a shared optimum. We show that this can be done efficiently for communication (adding no further privacy risks), scaling with the number of nodes in the distributed setting. Our experiments show that this method is superior to competing ones for image recognition on the MNIST dataset.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-10-17T09:53:16Z</published>
+    <arxiv:comment>Accepted to NeurIPS 2019 Workshop on Federated Learning for Data Privacy and Confidentiality</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Neta Shoham</name>
+      <arxiv:affiliation>Edgify</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Tomer Avidor</name>
+      <arxiv:affiliation>Edgify</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Aviv Keren</name>
+      <arxiv:affiliation>Edgify</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Nadav Israel</name>
+      <arxiv:affiliation>Edgify</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Daniel Benditkis</name>
+      <arxiv:affiliation>Edgify</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Liron Mor-Yosef</name>
+      <arxiv:affiliation>Edgify</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Itai Zeitak</name>
+      <arxiv:affiliation>Edgify</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2007.01587v1</id>
+    <title>Privacy Threats Against Federated Matrix Factorization</title>
+    <updated>2020-07-03T09:58:52Z</updated>
+    <link href="https://arxiv.org/abs/2007.01587v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2007.01587v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Matrix Factorization has been very successful in practical recommendation applications and e-commerce. Due to data shortage and stringent regulations, it can be hard to collect sufficient data to build performant recommender systems for a single company. Federated learning provides the possibility to bridge the data silos and build machine learning models without compromising privacy and security. Participants sharing common users or items collaboratively build a model over data from all the participants. There have been some works exploring the application of federated learning to recommender systems and the privacy issues in collaborative filtering systems. However, the privacy threats in federated matrix factorization are not studied. In this paper, we categorize federated matrix factorization into three types based on the partition of feature space and analyze privacy threats against each type of federated matrix factorization model. We also discuss privacy-preserving approaches. As far as we are aware, this is the first study of privacy threats of the matrix factorization method in the federated learning framework.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-07-03T09:58:52Z</published>
+    <arxiv:comment>6 pages, 2 figures, 1 table, Accepted for Workshop on Federated Learning for Data Privacy and Confidentiality in Conjunction with IJCAI 2020 (FL-IJCAI'20)</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Dashan Gao</name>
+    </author>
+    <author>
+      <name>Ben Tan</name>
+    </author>
+    <author>
+      <name>Ce Ju</name>
+    </author>
+    <author>
+      <name>Vincent W. Zheng</name>
+    </author>
+    <author>
+      <name>Qiang Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1908.07782v1</id>
+    <title>Decentralized Federated Learning: A Segmented Gossip Approach</title>
+    <updated>2019-08-21T10:21:43Z</updated>
+    <link href="https://arxiv.org/abs/1908.07782v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1908.07782v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The emerging concern about data privacy and security has motivated the proposal of federated learning, which allows nodes to only synchronize the locally-trained models instead their own original data. Conventional federated learning architecture, inherited from the parameter server design, relies on highly centralized topologies and the assumption of large nodes-to-server bandwidths. However, in real-world federated learning scenarios the network capacities between nodes are highly uniformly distributed and smaller than that in a datacenter. It is of great challenges for conventional federated learning approaches to efficiently utilize network capacities between nodes. In this paper, we propose a model segment level decentralized federated learning to tackle this problem. In particular, we propose a segmented gossip approach, which not only makes full utilization of node-to-node bandwidth, but also has good training convergence. The experimental results show that even the training time can be highly reduced as compared to centralized federated learning.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-08-21T10:21:43Z</published>
+    <arxiv:comment>Accepted to the 1st International Workshop on Federated Machine Learning for User Privacy and Data Confidentiality (FML'19)</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Chenghao Hu</name>
+    </author>
+    <author>
+      <name>Jingyan Jiang</name>
+    </author>
+    <author>
+      <name>Zhi Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.16480v1</id>
+    <title>SRFed: Mitigating Poisoning Attacks in Privacy-Preserving Federated Learning with Heterogeneous Data</title>
+    <updated>2026-02-18T14:14:38Z</updated>
+    <link href="https://arxiv.org/abs/2602.16480v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.16480v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Federated Learning (FL) enables collaborative model training without exposing clients' private data, and has been widely adopted in privacy-sensitive scenarios. However, FL faces two critical security threats: curious servers that may launch inference attacks to reconstruct clients' private data, and compromised clients that can launch poisoning attacks to disrupt model aggregation. Existing solutions mitigate these attacks by combining mainstream privacy-preserving techniques with defensive aggregation strategies. However, they either incur high computation and communication overhead or perform poorly under non-independent and identically distributed (Non-IID) data settings. To tackle these challenges, we propose SRFed, an efficient Byzantine-robust and privacy-preserving FL framework for Non-IID scenarios. First, we design a decentralized efficient functional encryption (DEFE) scheme to support efficient model encryption and non-interactive decryption. DEFE also eliminates third-party reliance and defends against server-side inference attacks. Second, we develop a privacy-preserving defensive model aggregation mechanism based on DEFE. This mechanism filters poisonous models under Non-IID data by layer-wise projection and clustering-based analysis. Theoretical analysis and extensive experiments show that SRFed outperforms state-of-the-art baselines in privacy protection, Byzantine robustness, and efficiency.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-18T14:14:38Z</published>
+    <arxiv:comment>Federated learning, functional encryption, privacy-preserving machine learning, neural networks</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Yiwen Lu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1910.08385v1</id>
+    <title>Federated Generative Privacy</title>
+    <updated>2019-10-18T12:41:15Z</updated>
+    <link href="https://arxiv.org/abs/1910.08385v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1910.08385v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we propose FedGP, a framework for privacy-preserving data release in the federated learning setting. We use generative adversarial networks, generator components of which are trained by FedAvg algorithm, to draw privacy-preserving artificial data samples and empirically assess the risk of information disclosure. Our experiments show that FedGP is able to generate labelled data of high quality to successfully train and validate supervised models. Finally, we demonstrate that our approach significantly reduces vulnerability of such models to model inversion attacks.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-10-18T12:41:15Z</published>
+    <arxiv:comment>IJCAI Workshop on Federated Machine Learning for User Privacy and Data Confidentiality (FL-IJCAI 2019). 7 pages, 2 figures, 3 tables</arxiv:comment>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Aleksei Triastcyn</name>
+    </author>
+    <author>
+      <name>Boi Faltings</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1912.06733v1</id>
+    <title>Private Federated Learning with Domain Adaptation</title>
+    <updated>2019-12-13T22:48:43Z</updated>
+    <link href="https://arxiv.org/abs/1912.06733v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1912.06733v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Federated Learning (FL) is a distributed machine learning (ML) paradigm that enables multiple parties to jointly re-train a shared model without sharing their data with any other parties, offering advantages in both scale and privacy. We propose a framework to augment this collaborative model-building with per-user domain adaptation. We show that this technique improves model accuracy for all users, using both real and synthetic data, and that this improvement is much more pronounced when differential privacy bounds are imposed on the FL model.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-12-13T22:48:43Z</published>
+    <arxiv:comment>Presented at the Workshop on Federated Learning for Data Privacy and Confidentiality (in Conjunction with NeurIPS 2019)</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Daniel Peterson</name>
+    </author>
+    <author>
+      <name>Pallika Kanani</name>
+    </author>
+    <author>
+      <name>Virendra J. Marathe</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.00342v2</id>
+    <title>Survey of Privacy Threats and Countermeasures in Federated Learning</title>
+    <updated>2025-08-29T01:03:23Z</updated>
+    <link href="https://arxiv.org/abs/2402.00342v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.00342v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Federated learning is widely considered to be as a privacy-aware learning method because no training data is exchanged directly between clients. Nevertheless, there are threats to privacy in federated learning, and privacy countermeasures have been studied. However, we note that common and unique privacy threats among typical types of federated learning have not been categorized and described in a comprehensive and specific way. In this paper, we describe privacy threats and countermeasures for the typical types of federated learning; horizontal federated learning, vertical federated learning, and transfer federated learning.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-01T05:13:14Z</published>
+    <arxiv:comment>The revised paper has been accepted as a full paper for presentation at The 3rd IEEE International Conference on Federated Learning Technologies and Applications (FLTA25)</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Masahiro Hayashitani</name>
+    </author>
+    <author>
+      <name>Junki Mori</name>
+    </author>
+    <author>
+      <name>Isamu Teranishi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2004.11794v2</id>
+    <title>A Review of Privacy-preserving Federated Learning for the Internet-of-Things</title>
+    <updated>2020-09-08T14:08:19Z</updated>
+    <link href="https://arxiv.org/abs/2004.11794v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2004.11794v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Internet-of-Things (IoT) generates vast quantities of data, much of it attributable to individuals' activity and behaviour. Gathering personal data and performing machine learning tasks on this data in a central location presents a significant privacy risk to individuals as well as challenges with communicating this data to the cloud. However, analytics based on machine learning and in particular deep learning benefit greatly from large amounts of data to develop high-performance predictive models. This work reviews federated learning as an approach for performing machine learning on distributed data with the goal of protecting the privacy of user-generated data as well as reducing communication costs associated with data transfer. We survey a wide variety of papers covering communication-efficiency, client heterogeneity and privacy preserving methods that are crucial for federated learning in the context of the IoT. Throughout this review, we identify the strengths and weaknesses of different methods applied to federated learning and finally, we outline future directions for privacy preserving federated learning research, particularly focusing on IoT applications.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-04-24T15:27:23Z</published>
+    <arxiv:comment>Abstract accepted for publication in a book titled: "Federated Learning Systems: Towards Next Generation AI" in Springer's Series on Studides in Computational Intelligence</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Christopher Briggs</name>
+    </author>
+    <author>
+      <name>Zhong Fan</name>
+    </author>
+    <author>
+      <name>Peter Andras</name>
+    </author>
+  </entry>
+</feed>

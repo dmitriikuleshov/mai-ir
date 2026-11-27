@@ -1,0 +1,273 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/WZtOMnRpzUvn4SRPMEj+nZd2AZ8</id>
+  <title>arXiv Query: search_query=all:"optical" AND all:"coherence" AND all:"tomography"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:25:03Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22optical%22+AND+(all:%22coherence%22+AND+all:%22tomography%22)&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>1166</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1812.07056v2</id>
+    <title>OCTID: Optical Coherence Tomography Image Database</title>
+    <updated>2019-05-27T15:31:35Z</updated>
+    <link href="https://arxiv.org/abs/1812.07056v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1812.07056v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Optical coherence tomography (OCT) is a non-invasive imaging modality which is widely used in clinical ophthalmology. OCT images are capable of visualizing deep retinal layers which is crucial for early diagnosis of retinal diseases. In this paper, we describe a comprehensive open-access database containing more than 500 highresolution images categorized into different pathological conditions. The image classes include Normal (NO), Macular Hole (MH), Age-related Macular Degeneration (AMD), Central Serous Retinopathy (CSR), and Diabetic Retinopathy (DR). The images were obtained from a raster scan protocol with a 2mm scan length and 512x1024 pixel resolution. We have also included 25 normal OCT images with their corresponding ground truth delineations which can be used for an accurate evaluation of OCT image segmentation. In addition, we have provided a user-friendly GUI which can be used by clinicians for manual (and semi-automated) segmentation.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-12-17T23:26:39Z</published>
+    <arxiv:comment>This paper is linked to an open access Optical Coherence Tomography (OCT) image database which is avaiable at: https://dataverse.scholarsportal.info/dataverse/OCTID</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Peyman Gholami</name>
+    </author>
+    <author>
+      <name>Priyanka Roy</name>
+    </author>
+    <author>
+      <name>Mohana Kuppuswamy Parthasarathy</name>
+    </author>
+    <author>
+      <name>Vasudevan Lakshminarayanan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1402.1722v1</id>
+    <title>A Quantum Field Approach for Advancing Optical Coherence Tomography Part I: First Order Correlations, Single Photon Interference, And Quantum Noise</title>
+    <updated>2014-02-07T18:03:27Z</updated>
+    <link href="https://arxiv.org/abs/1402.1722v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1402.1722v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Optical coherence tomography has become an important imaging technology in cardiology and ophthalmology, with other applications under investigations. Major advances in optical coherence tomography (OCT) imaging are likely to occur through a quantum field approach to the technology. In this paper, which is the first part in a series on the topic, the quantum basis of OCT first order correlations is expressed in terms of full field quantization. Specifically first order correlations are treated as the linear sum of single photon interferences along indistinguishable paths. Photons and the electromagnetic (EM) field are described in terms of quantum harmonic oscillators. While the author feels the study of quantum second order correlations will lead to greater paradigm shifts in the field, addressed in part II, advances from the study of quantum first order correlations are given. In particular, ranging errors are discussed (with remedies) from vacuum fluctuations through the detector port, photon counting errors, and position probability amplitude uncertainty. In addition, the principles of quantum field theory and first order correlations are needed for studying second order correlations in part II.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-02-07T18:03:27Z</published>
+    <arxiv:comment>Keywords: optical coherence tomography, quantum mechanics, noise, interferometry,vacuum, cardiology, plaque, ophthalmology, arthritis</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Mark E. Brezinski</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1804.11054v2</id>
+    <title>Extracting morphometric information from rat sciatic nerve using optical coherence tomography</title>
+    <updated>2018-05-01T00:37:23Z</updated>
+    <link href="https://arxiv.org/abs/1804.11054v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1804.11054v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We apply three optical coherence tomography (OCT) image analysis techniques to extract morphometric information from OCT images obtained on peripheral nerves of rat. The accuracy of each technique is evaluated against histological measurements accurate to +/-1 um. The three OCT techniques are: 1) average depth resolved profile (ADRP); 2) autoregressive spectral estimation (AR-SE); and, 3) correlation of the derivative spectral estimation (CoD-SE). We introduce a scanning window to the ADRP technique which provides transverse resolution, and improves epineurium thickness estimates - with the number of analysed images showing agreement with histology increasing from 2/10 to 5/10 (Kruskal-Wallis test, α = 0.05). A new method of estimating epineurium thickness, using the AR-SE technique, showed agreement with histology in 6/10 analysed images (Kruskal-Wallis test, α = 0.05). Using a tissue sample in which histology identified two fascicles with an estimated difference in mean fibre diameter of 4 um, the AR-SE and CoD-SE techniques both correctly identified the fascicle with larger fibre diameter distribution but incorrectly estimated the magnitude of this difference as 0.5um. The ability of OCT signal analysis techniques to extract accurate morphometric details from peripheral nerve is promising but restricted in depth by scattering in adipose and neural tissues.</summary>
+    <category term="q-bio.TO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-04-30T06:06:04Z</published>
+    <arxiv:comment>14 pages, 7 figures, submission to Journal of Biomedical Optics</arxiv:comment>
+    <arxiv:primary_category term="q-bio.TO"/>
+    <arxiv:journal_ref>Hope, J., Braeuer, B., Amirapu, S., McDaid, A., &amp; Vanholsbeeck, F. (2018). Extracting morphometric information from rat sciatic nerve using optical coherence tomography. Journal of biomedical optics, 23 (11), 1-14</arxiv:journal_ref>
+    <author>
+      <name>J. Hope</name>
+    </author>
+    <author>
+      <name>B. Brauer</name>
+    </author>
+    <author>
+      <name>S. Amirapu</name>
+    </author>
+    <author>
+      <name>A. McDaid</name>
+    </author>
+    <author>
+      <name>F. Vanholsbeeck</name>
+    </author>
+    <arxiv:doi>10.1117/1.JBO.23.11.116001</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1117/1.JBO.23.11.116001" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1810.03380v1</id>
+    <title>Ghost optical coherence tomography</title>
+    <updated>2018-10-08T11:33:12Z</updated>
+    <link href="https://arxiv.org/abs/1810.03380v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1810.03380v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We demonstrate experimentally ghost optical coherence tomography using a broadband incoherent supercontinuum light source with shot-to-shot random spectral fluctuations. The technique is based on ghost imaging in the spectral domain where the object is the spectral interference pattern generated from an optical coherence tomography interferometer in which a physical sample is placed. The image of the sample is obtained from the Fourier transform of the correlation between the spectrally-resolved intensity fluctuations of the supercontinuum and the integrated signal measured at the output of the interferometer. The results are in excellent agreement with measurements obtained from a conventional optical coherence tomography system.</summary>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-10-08T11:33:12Z</published>
+    <arxiv:primary_category term="physics.optics"/>
+    <author>
+      <name>Caroline Amiot</name>
+    </author>
+    <author>
+      <name>Piotr Ryczkowski</name>
+    </author>
+    <author>
+      <name>Ari T. Friberg</name>
+    </author>
+    <author>
+      <name>John M. Dudley</name>
+    </author>
+    <author>
+      <name>Goëry Genty</name>
+    </author>
+    <arxiv:doi>10.1364/OE.27.024114</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1364/OE.27.024114" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2104.02531v1</id>
+    <title>Resolution-enhanced OCT and expanded framework of information capacity and resolution in coherent imaging</title>
+    <updated>2021-04-06T14:10:35Z</updated>
+    <link href="https://arxiv.org/abs/2104.02531v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2104.02531v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Spatial resolution in optical microscopy has traditionally been treated as a fixed parameter of the optical system. Here, we present an approach to enhance transverse resolution in beam-scanned optical coherence tomography (OCT) beyond its aberration-free resolution limit, without any modification to the optical system. Based on the theorem of invariance of information capacity, resolution-enhanced (RE)-OCT navigates the exchange of information between resolution and signal-to-noise ratio (SNR) by exploiting efficient noise suppression via coherent averaging and a simple computational bandwidth expansion procedure. We demonstrate a resolution enhancement of 1.5 times relative to the aberration-free limit while maintaining comparable SNR in silicone phantom. We show that RE-OCT can significantly enhance the visualization of fine microstructural features in collagen gel and ex vivo mouse brain. Beyond RE-OCT, our analysis in the spatial-frequency domain leads to an expanded framework of information capacity and resolution in coherent imaging that contributes new implications to the theory of coherent imaging. RE-OCT can be readily implemented on most OCT systems worldwide, immediately unlocking information that is beyond their current imaging capabilities, and so has the potential for widespread impact in the numerous areas in which OCT is utilized, including the basic sciences and translational medicine.</summary>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.IV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-04-06T14:10:35Z</published>
+    <arxiv:comment>Supplementary Information is appended to the manuscript file. For associated movies, see Nichaluk Leartprapun and Steven G. Adie, "Resolution-enhanced optical coherence tomography enabled by coherent-average noise suppression," Proc. SPIE 11630, Optical Coherence Tomography and Coherence Domain Optical Methods in Biomedicine XXV, 1163011 (5 March 2021); https://doi.org/10.1117/12.2583863</arxiv:comment>
+    <arxiv:primary_category term="physics.optics"/>
+    <arxiv:journal_ref>Sci Rep 11, 20541 (2021)</arxiv:journal_ref>
+    <author>
+      <name>Nichaluk Leartprapun</name>
+      <arxiv:affiliation>Nancy E. and Peter C. Meinig School of Biomedical Engineering, Cornell University</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Steven G. Adie</name>
+      <arxiv:affiliation>Nancy E. and Peter C. Meinig School of Biomedical Engineering, Cornell University</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1038/s41598-021-99889-3</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41598-021-99889-3" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/physics/0402060v1</id>
+    <title>Second harmonic optical coherence tomography</title>
+    <updated>2004-02-12T03:05:22Z</updated>
+    <link href="https://arxiv.org/abs/physics/0402060v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/physics/0402060v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Second harmonic optical coherence tomography, which uses coherence gating of second-order nonlinear optical response of biological tissues for imaging, is described and demonstrated. Femtosecond laser pulses were used to excite second harmonic waves from collagen harvested from rat tail tendon and a reference nonlinear crystal. Second harmonic interference fringe signals were detected and used for image construction. Because of the strong dependence of second harmonic generation on molecular and tissue structures, this technique offers contrast and resolution enhancement to conventional optical coherence tomography.</summary>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2004-02-12T03:05:22Z</published>
+    <arxiv:comment>3 pages, 5 figures. Submitted on November 8, 2003, this paper has recently been accepted by Optics Letters</arxiv:comment>
+    <arxiv:primary_category term="physics.optics"/>
+    <author>
+      <name>Yi Jiang</name>
+    </author>
+    <author>
+      <name>Ivan Tomov</name>
+    </author>
+    <author>
+      <name>Yimin Wang</name>
+    </author>
+    <author>
+      <name>Zhongping Chen</name>
+    </author>
+    <arxiv:doi>10.1364/OL.29.001090</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1364/OL.29.001090" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2302.14813v1</id>
+    <title>Multirate Spectral Domain Optical Coherence Tomography</title>
+    <updated>2023-02-28T18:06:15Z</updated>
+    <link href="https://arxiv.org/abs/2302.14813v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2302.14813v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Optical coherence tomography is state-of-the-art in non-invasive imaging of biological structures. Spectral Domain Optical Co-herence Tomography is the popularly used variation of this technique, but its performance is limited by the bandwidth and res-olution of the system. In this work, we theoretically formulate the use of phase modulators and delay lines to act as filters on the tomography system and scan multiple channels. Various channels are then combined in a digital computer using filter bank theory to improve the sampling rate . The combination of multiple channels allows for increasing the axial resolution and maximum unambiguous range beyond the Nyquist limit. We then simulate the multirate spectral domain optical coherence tomography with 2 channels. We show that a single delay line can improve the axial resolution while a pair of phase modulators can improve the maximum unambiguous range of the system. We also show the use of multirate filter banks to carry out this process. Thus, by using a few extra components in the spectral domain optical coherence tomography, its performance can be increased manifold de-pending on the number of channels used. The extra cost is the time taken to perform the extra scans that is trivial for stationary objects like biological tissues.</summary>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-02-28T18:06:15Z</published>
+    <arxiv:comment>13 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="physics.optics"/>
+    <author>
+      <name>Prabhav Gaur</name>
+    </author>
+    <author>
+      <name>Andrew Grieco</name>
+    </author>
+    <author>
+      <name>Yeshaiahu Fainman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/quant-ph/0401176v1</id>
+    <title>Polarization-sensitive quantum-optical coherence tomography</title>
+    <updated>2004-01-28T15:00:13Z</updated>
+    <link href="https://arxiv.org/abs/quant-ph/0401176v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/quant-ph/0401176v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We set forth a polarization-sensitive quantum-optical coherence tomography (PS-QOCT) technique that provides axial optical sectioning with polarization-sensitive capabilities. The technique provides a means for determining information about the optical path length between isotropic reflecting surfaces, the relative magnitude of the reflectance from each interface, the birefringence of the interstitial material, and the orientation of the optical axis of the sample. PS-QOCT is immune to sample dispersion and therefore permits measurements to be made at depths greater than those accessible via ordinary optical coherence tomography. We also provide a general Jones matrix theory for analyzing PS-QOCT systems and outline an experimental procedure for carrying out such measurements.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2004-01-28T15:00:13Z</published>
+    <arxiv:comment>15 pages, 5 figures, to appear in Physical Review A</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Phys. Rev. A 69, 043815 (2004)</arxiv:journal_ref>
+    <author>
+      <name>Mark C. Booth</name>
+    </author>
+    <author>
+      <name>Giovanni Di Giuseppe</name>
+    </author>
+    <author>
+      <name>Bahaa E. A. Saleh</name>
+    </author>
+    <author>
+      <name>Alexander V. Sergienko</name>
+    </author>
+    <author>
+      <name>Malvin C. Teich</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevA.69.043815</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevA.69.043815" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1810.05445v2</id>
+    <title>Real-time High-Resolution Mid-infrared Optical Coherence Tomography</title>
+    <updated>2019-03-14T09:20:15Z</updated>
+    <link href="https://arxiv.org/abs/1810.05445v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1810.05445v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The potential for improving the penetration depth of optical coherence tomography systems by using increasingly longer wavelength light sources has been known since the inception of the technique in the early 1990s. Nevertheless, the development of mid-infrared optical coherence tomography has long been challenged by the maturity and fidelity of optical components in this spectral region, resulting in slow acquisition, low sensitivity, and poor axial resolution. In this work, a mid-infrared spectral-domain optical coherence tomography system operating at 4 micron central wavelength with an axial resolution of 8.6 microns is demonstrated. The system produces 2D cross-sectional images in real-time enabled by a high-brightness 0.9-4.7 micron mid-infrared supercontinuum source with 1 MHz pulse repetition rate for illumination and broadband upconversion of more than 1 micron bandwidth from 3.58-4.63 microns to 820-865 nm, where a standard 800 nm spectrometer can be used for fast detection. Images produced by the mid-infrared system are compared with those delivered by a state-of-the-art ultra-high-resolution near-infrared optical coherence tomography system operating at 1.3 μm, and the potential applications and samples suited for this technology are discussed. In doing so, the first practical mid-infrared optical coherence tomography system is demonstrated, with immediate applications in real-time non-destructive testing for the inspection of defects and thickness measurements in samples that are too highly scattering at shorter wavelengths.</summary>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-10-12T10:36:10Z</published>
+    <arxiv:primary_category term="physics.optics"/>
+    <arxiv:journal_ref>Light: Science &amp; Applications volume 8, Article number: 11 (2019)</arxiv:journal_ref>
+    <author>
+      <name>Niels M. Israelsen</name>
+    </author>
+    <author>
+      <name>Christian R. Petersen</name>
+    </author>
+    <author>
+      <name>Ajanta Barh</name>
+    </author>
+    <author>
+      <name>Deepak Jain</name>
+    </author>
+    <author>
+      <name>Mikkel Jensen</name>
+    </author>
+    <author>
+      <name>Günther Hannesschläger</name>
+    </author>
+    <author>
+      <name>Peter Tidemand-Lichtenberg</name>
+    </author>
+    <author>
+      <name>Christian Pedersen</name>
+    </author>
+    <author>
+      <name>Adrian Podoleanu</name>
+    </author>
+    <author>
+      <name>Ole Bang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.14315v1</id>
+    <title>qtOCT: quantitative transmission optical coherence tomography</title>
+    <updated>2024-05-23T08:40:57Z</updated>
+    <link href="https://arxiv.org/abs/2405.14315v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.14315v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Transmission optical coherence tomography (OCT) enables analysis of biological specimens in vitro through detection of forward scattered light. Up to now, transmission OCT was considered as a technique that cannot directly retrieve quantitative phase and is thus a qualitative method. In this paper, we present qtOCT, a novel quantitative transmission optical coherence tomography method. Unlike existing approaches, qtOCT allows for a direct, easy, fast and rigorous retrieval of 2D integrated phase information from transmission full-field swept-source OCT measurements. Our method is based on coherence gating and allows user-defined temporal measurement range selection, making it potentially suitable for analyzing multiple-scattering samples. We demonstrate high consistency between qtOCT and digital holographic microscopy phase images. This approach enhances transmission OCT capabilities, positioning it as a viable alternative to quantitative phase imaging techniques.</summary>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-23T08:40:57Z</published>
+    <arxiv:comment>9 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="physics.optics"/>
+    <author>
+      <name>Wojciech Krauze</name>
+    </author>
+    <author>
+      <name>Martyna Mazur</name>
+    </author>
+    <author>
+      <name>Arkadiusz Kuś</name>
+    </author>
+  </entry>
+</feed>

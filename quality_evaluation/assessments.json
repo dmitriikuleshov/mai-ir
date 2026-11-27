@@ -2860,5 +2860,791 @@
     "reason": "Команда CREATE INDEX с параметрами row/page compression не относится к VB.",
     "assessor": "language_model",
     "basis": "saved_text_passages"
+  },
+  "Q01D20": {
+    "grade": 2,
+    "reason": "Исследует проверку сильных уровней изоляции и нарушения гарантий; это отдельный механизм, а не общий разбор всех уровней и аномалий.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q01D17": {
+    "grade": 2,
+    "reason": "Предлагает версионную snapshot isolation для транзакций Hyperledger Fabric; полезный частный сценарий.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q01D19": {
+    "grade": 2,
+    "reason": "Рассматривает онлайн-проверку serializability и snapshot isolation по истории транзакций.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q01D18": {
+    "grade": 2,
+    "reason": "Формально проверяет гарантии изоляции и показывает контрпримеры протокола; даёт содержательную часть ответа.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q01D21": {
+    "grade": 2,
+    "reason": "Исследует тестирование слабых уровней изоляции, без обзорного объяснения всего набора уровней.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q02D18": {
+    "grade": 2,
+    "reason": "Разбирает сохранение репликационного фактора и затраты обмена при перебалансировке распределённого хранения.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q02D17": {
+    "grade": 2,
+    "reason": "Предлагает алгоритм репликации объектов и сравнивает стоимость обслуживания чтений и записей.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q02D20": {
+    "grade": 2,
+    "reason": "Описывает механизмы распределения и репликации метаданных на конкретном каталоге AMGA.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q02D16": {
+    "grade": 2,
+    "reason": "Объясняет частичную репликацию, фиксацию транзакций и компромисс с масштабируемостью и отказоустойчивостью.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q02D19": {
+    "grade": 3,
+    "reason": "Обзор распределённых репликационных систем связывает шардирование, консенсус и ограничения масштабирования.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q03D14": {
+    "grade": 2,
+    "reason": "COIL хранит контекстные представления термов в обратных списках и объясняет их использование для лексического поиска.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q03D16": {
+    "grade": 2,
+    "reason": "Описывает гибридные обратные списки термов и кластеров для ускорения retrieval, но не базовый учебный индекс.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q03D15": {
+    "grade": 1,
+    "reason": "Индекс предназначен для изображений и разбиения кодовой книги, а не соответствия текстовых термов документам.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q03D17": {
+    "grade": 1,
+    "reason": "Предлагает сегментный нейронный индекс; классический термовый индекс служит главным образом сравнением.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q03D18": {
+    "grade": 2,
+    "reason": "Описывает организацию обратных списков sparse-термов по блокам и обработку запроса.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q04D22": {
+    "grade": 2,
+    "reason": "Сравнивает выделение и освобождение памяти в C++, Rust и Goose, включая узлы и арены; полезный практический аспект.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q04D18": {
+    "grade": 2,
+    "reason": "Объясняет malloc-совместимый аллокатор C/C++ и борьбу с фрагментацией памяти.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q04D21": {
+    "grade": 1,
+    "reason": "Рассматривает виртуальную память и буферизацию баз данных, без объяснения времени жизни и RAII в C++.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q04D20": {
+    "grade": 0,
+    "reason": "Посвящена формальной проверке менеджера памяти Zephyr на C, а не управлению объектами C++.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q04D19": {
+    "grade": 0,
+    "reason": "Разбирает распределение памяти LSM-хранилища; время жизни, выделение и освобождение объектов C++ не раскрыты.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q05D22": {
+    "grade": 0,
+    "reason": "Асинхронные dataflow-графы получены из C для CGRA; механизм async/await C# не рассматривается.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q05D21": {
+    "grade": 2,
+    "reason": "Исследует преобразование C#-программ к async/await и предотвращение гонок при асинхронизации.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q05D20": {
+    "grade": 0,
+    "reason": "Обзор корутин в C/C++ и встроенных системах не объясняет асинхронное программирование C#.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q05D23": {
+    "grade": 0,
+    "reason": "Диалог об изучении языков; слово asynchronous относится к обсуждению, а не к async/await.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q05D19": {
+    "grade": 0,
+    "reason": "Описывает отдельный язык Honey для асинхронных временных рядов без связи с C#.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q06D21": {
+    "grade": 0,
+    "reason": "Работа о сопоставлении образцов в interaction nets; механизм сборщика мусора .NET не раскрывается.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q06D19": {
+    "grade": 1,
+    "reason": "C# и сборка мусора .NET упомянуты как преимущества платформы, но исследуется перенос Caffe.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q06D20": {
+    "grade": 0,
+    "reason": "Изучает небезопасный код Go, а не поколения и устройство сборщика .NET.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q06D22": {
+    "grade": 0,
+    "reason": "Посвящена бенчмарку оптимизаций Java; .NET указан лишь среди других платформ.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q06D18": {
+    "grade": 0,
+    "reason": "Описывает абстрактные машины игровой семантики без устройства сборщика .NET.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q07D19": {
+    "grade": 2,
+    "reason": "Использует насыщение event loop Node.js для предиктивного масштабирования; полезный практический аспект, но не общий разбор цикла.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q07D18": {
+    "grade": 2,
+    "reason": "Разбирает трассировку асинхронного исполнения Node.js и ограничения event-loop-систем.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q07D17": {
+    "grade": 1,
+    "reason": "Node.js и неблокирующий event loop используются для RepNet, но цель работы — репликация сетевых потоков.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q08D16": {
+    "grade": 2,
+    "reason": "Описывает контейнерную оркестрацию и интеграцию Kubernetes с планировщиком HPC.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q08D19": {
+    "grade": 1,
+    "reason": "Kubernetes служит аналогией для оркестрации знаний AI-агентов, а не основным предметом управления контейнерами.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q08D17": {
+    "grade": 2,
+    "reason": "Рассматривает расширение Kubernetes для размещения контейнеров реального времени и управления ресурсами.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q08D18": {
+    "grade": 2,
+    "reason": "Показывает интеграцию сетевого QoS с Kubernetes и развёртыванием контейнерных приложений.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q08D15": {
+    "grade": 2,
+    "reason": "Демонстрирует развёртывание и динамическое масштабирование Docker-контейнеров C-RAN с Kubernetes.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q09D22": {
+    "grade": 1,
+    "reason": "Сравнивает признаки TLS-сертификатов фишинговых доменов; порядок проверки цепочки и имени узла не объясняет.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q09D20": {
+    "grade": 1,
+    "reason": "Обсуждает централизацию удостоверяющих центров, а не алгоритм проверки сертификата клиентом.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q09D19": {
+    "grade": 2,
+    "reason": "Рассматривает конкретные ошибки валидации, самоподписанные и ограниченные по именам сертификаты; полезная часть темы доверия.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q09D21": {
+    "grade": 1,
+    "reason": "Основная задача — разрывы цепочки DNSSEC; TLS используется для альтернативного решения.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q09D18": {
+    "grade": 2,
+    "reason": "Объясняет дополнительную проверку сомнительных TLS-сертификатов после неуспеха традиционной валидации.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q12D16": {
+    "grade": 2,
+    "reason": "Исследует полный набор разрешений Microsoft Graph и риск OAuth-consent, но не даёт общего руководства delegated/application permissions.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q13D18": {
+    "grade": 2,
+    "reason": "Описывает attention в Transformer для сопоставления медицинских изображений и клинических записей; частное применение механизма.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q13D17": {
+    "grade": 2,
+    "reason": "Разбирает self-attention и относительные позиции в музыкальном Transformer.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q13D19": {
+    "grade": 2,
+    "reason": "Объясняет локальное и разреженное attention, их сложность и ограничения дальних зависимостей.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q13D21": {
+    "grade": 2,
+    "reason": "Показывает использование self-attention для объяснения решений Vision Transformer.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q13D20": {
+    "grade": 2,
+    "reason": "Описывает замену self-attention и оконное внимание в Transformer для повышения разрешения.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q14D21": {
+    "grade": 1,
+    "reason": "Извлекаются визуальные патчи для генерации изображений, а не текстовые документы для ответа; это смежный вариант retrieval augmentation.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q14D19": {
+    "grade": 2,
+    "reason": "Показывает RAG с LLM для генерации обзоров литературы из PDF-документов.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q14D18": {
+    "grade": 2,
+    "reason": "Описывает извлечение из развивающейся базы знаний и генерацию кода; конкретная реализация RAG.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q14D20": {
+    "grade": 2,
+    "reason": "Объясняет контекст извлечённых документов в RAG и исследует утечки через membership inference.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q14D17": {
+    "grade": 3,
+    "reason": "Прямо объясняет два модуля RAG: извлечение текстового контекста и генерацию LLM, затем их совместную оценку.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q15D18": {
+    "grade": 2,
+    "reason": "Описывает агрегацию информации в гетерогенной GNN через метапути и контекст.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q15D19": {
+    "grade": 2,
+    "reason": "Объясняет message passing и связь Transformer с GNN на графе токенов.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q15D17": {
+    "grade": 2,
+    "reason": "Разбирает архитектуру глубокой GNN как динамической системы и её эффективность.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q15D16": {
+    "grade": 2,
+    "reason": "Показывает GNN-автоэнкодер и агрегацию соседей для восстановления пропусков данных.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q15D20": {
+    "grade": 1,
+    "reason": "Изучает графовые классификаторы Gabriel и нейросетевые границы классов, а не обычные архитектуры GNN.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q16D18": {
+    "grade": 2,
+    "reason": "Предлагает Bayesian DP для обучения моделей, обсуждая гарантии, privacy accounting и точность.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q16D20": {
+    "grade": 2,
+    "reason": "Совмещает локальную DP с федеративным обучением для защиты данных и уменьшения обмена.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q16D17": {
+    "grade": 2,
+    "reason": "Предлагает практические инструменты DP-обучения: clipping, настройку параметров и большие батчи.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q16D19": {
+    "grade": 2,
+    "reason": "Измеряет нарушения приватности при предобработке ML-данных и влияние ресэмплинга.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q16D21": {
+    "grade": 2,
+    "reason": "Сравнивает нормализацию при DP-обучении и DP-FL; содержательный частный аспект.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q17D19": {
+    "grade": 2,
+    "reason": "Объясняет вертикальное асинхронное FL и защиту данных через возмущение локальных представлений.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q17D20": {
+    "grade": 3,
+    "reason": "Обзор прямо рассматривает федеративное обучение, угрозы приватности и защитные механизмы вместо обещания абсолютной защиты.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q17D17": {
+    "grade": 1,
+    "reason": "Основная тема — дрейф моделей на non-IID данных; отсутствие новых рисков приватности лишь заявлено.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q17D18": {
+    "grade": 2,
+    "reason": "Исследует угрозы приватности в конкретном варианте FL — федеративной матричной факторизации.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q17D16": {
+    "grade": 2,
+    "reason": "Объясняет передачу локальных моделей вместо исходных данных и децентрализованный обмен FL, акцентируя сетевую архитектуру.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q18D19": {
+    "grade": 2,
+    "reason": "Предлагает вариант SGD с памятью и демонстрирует поведение оптимизации на ландшафтах и временных рядах.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q18D18": {
+    "grade": 2,
+    "reason": "Исследует стохастический градиентный спуск нулевого порядка и вероятностные гарантии сходимости.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q18D16": {
+    "grade": 2,
+    "reason": "Описывает SGD-процедуру для вычисления барицентров в пространстве Вассерштейна.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q18D15": {
+    "grade": 2,
+    "reason": "Разбирает SGD для составной невыпуклой оптимизации и условия сходимости.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q18D17": {
+    "grade": 2,
+    "reason": "Объясняет связь SGD, перемешивания данных, сходимости и стоимости дискового ввода-вывода.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q19D22": {
+    "grade": 2,
+    "reason": "Предлагает декодер синдромов surface code и разбирает эффективность квантовой коррекции ошибок.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q19D18": {
+    "grade": 2,
+    "reason": "Рассматривает адаптацию поверхностных квантовых кодов обучением с подкреплением.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q19D19": {
+    "grade": 2,
+    "reason": "Исследует фрактальные surface codes, декодирование и пороги ошибок.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q19D20": {
+    "grade": 2,
+    "reason": "Выводит оценки ошибок квантовых CSS-кодов, в том числе surface codes.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q19D21": {
+    "grade": 2,
+    "reason": "Дополняет surface code обнаружением потерь атомов и адаптивным декодированием.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q20D21": {
+    "grade": 2,
+    "reason": "Сравнивает физически информированные модели диагностики и прогноза деградации компонентов аккумулятора.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q20D20": {
+    "grade": 3,
+    "reason": "Связывает механизмы старения с потерей лития и активного материала и объясняет проверку моделей срока службы.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q20D18": {
+    "grade": 3,
+    "reason": "Работа прямо посвящена моделированию деградации и взаимодействию нескольких механизмов старения Li-ion.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q20D19": {
+    "grade": 2,
+    "reason": "Использует модель деградации для выбора зарядного расписания; полезный прикладной аспект.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q20D22": {
+    "grade": 3,
+    "reason": "Описывает физические механизмы SEI, осаждения лития, трещин и высыхания и их влияние на срок службы.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q21D17": {
+    "grade": 2,
+    "reason": "Разбирает влияние радиации и температуры на характеристики и деградацию солнечных элементов.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q21D19": {
+    "grade": 2,
+    "reason": "Исследует влияние поляризации, разделения зарядов и рекомбинации на фотоэлектрический отклик.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q21D18": {
+    "grade": 2,
+    "reason": "Показывает связь конструкции CNT/Si-элементов, сопротивления и прозрачности с КПД.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q21D20": {
+    "grade": 2,
+    "reason": "Связывает дефекты кремния, время жизни носителей и эффективность серийных фотоэлементов.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q21D21": {
+    "grade": 2,
+    "reason": "Рассматривает геометрию модуля, quantum efficiency и КПД; гипотезы о тёмной энергии требуют отдельной научной проверки.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q22D17": {
+    "grade": 2,
+    "reason": "Объясняет сеточные ячейки FVM и предлагает квантовую реализацию CFD; это специальный вариант метода.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q22D16": {
+    "grade": 2,
+    "reason": "Разбирает конечно-объёмную схему, коррекцию потоков и точность для течения около скважины.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q22D18": {
+    "grade": 2,
+    "reason": "Использует конечно-объёмные ограничения для GNN-модели нестационарной гидродинамики.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q22D20": {
+    "grade": 1,
+    "reason": "Предлагает другой метод HODIM, а finite volume упоминается в сравнении с существующими подходами.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q22D19": {
+    "grade": 2,
+    "reason": "Применяет конечно-объёмную схему второго порядка в CFD-решателе CODA для аэродинамики со встроенными границами.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q23D21": {
+    "grade": 2,
+    "reason": "Применяет связанный конечно-элементный метод к тепловым напряжениям электронной упаковки.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q23D18": {
+    "grade": 2,
+    "reason": "Описывает гибридную конечно-элементную аппроксимацию напряжений в стохастической упругости.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q23D17": {
+    "grade": 3,
+    "reason": "Прямо описывает технику расчёта напряжений и трещин методом SBFEM с численными примерами.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q23D20": {
+    "grade": 2,
+    "reason": "Использует FEM в couple-stress-упругости для волн в периодических материалах; специальный динамический случай.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q23D19": {
+    "grade": 2,
+    "reason": "Выводит смешанный конечно-элементный метод с напряжениями как неизвестными для линейной упругости.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q24D20": {
+    "grade": 2,
+    "reason": "Объясняет применение OCT для слоёв сетчатки и предоставляет диагностическую базу изображений.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q24D17": {
+    "grade": 2,
+    "reason": "Рассматривает интерференционную и квантово-полевую основу OCT; специализированное объяснение принципа.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q24D18": {
+    "grade": 2,
+    "reason": "Показывает применение OCT для морфометрии периферического нерва и сравнение с гистологией.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q24D19": {
+    "grade": 2,
+    "reason": "Демонстрирует OCT через спектральную интерференцию и корреляции с восстановлением изображения преобразованием Фурье.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q24D21": {
+    "grade": 2,
+    "reason": "Разбирает разрешение OCT и компромисс с SNR на конкретном вычислительном методе.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q25D16": {
+    "grade": 2,
+    "reason": "Разбирает частотный отклик интерферометра на компоненты гравитационной волны.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q25D19": {
+    "grade": 2,
+    "reason": "Описывает лазерные измерения в космическом интерферометре GEOGRAWI и влияние орбит на регистрацию.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q25D18": {
+    "grade": 2,
+    "reason": "Исследует обнаружимость космологических волн наземными LIGO/Virgo и LISA; полезный частный сценарий.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q25D17": {
+    "grade": 2,
+    "reason": "Объясняет схему двух атомных интерферометров с одним лазером и подавление фазового шума.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q25D20": {
+    "grade": 2,
+    "reason": "Излагает теорию гравитационных волн и связь их взаимодействия с веществом с лазерной интерферометрией.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q26D18": {
+    "grade": 2,
+    "reason": "Предоставляет практический протокол CRISPR-Cas9 с HDR-донором и отбором отредактированных клеток.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q26D16": {
+    "grade": 2,
+    "reason": "Объясняет поиск целевой ДНК и разрезание Cas9 через модель диффузии; часть механизма редактирования.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q26D17": {
+    "grade": 1,
+    "reason": "Основная модель относится к Cas13d и РНК, а Cas9 приведён во введении как исходная технология.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q26D20": {
+    "grade": 1,
+    "reason": "Оптимизирует выбор guide RNA квантовым алгоритмом, не раскрывая сам механизм редактирования Cas9.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q26D19": {
+    "grade": 1,
+    "reason": "CRISPR-Cas9 используется как пример для водяных знаков ДНК; механизм редактирования не объясняется.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q27D17": {
+    "grade": 2,
+    "reason": "Показывает применение AlphaFold к предсказанию белковых структур с узлами, без общего обзора методов.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q27D18": {
+    "grade": 1,
+    "reason": "Глава объясняет физику сворачивания, а не предсказание структуры по аминокислотной последовательности.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q27D19": {
+    "grade": 1,
+    "reason": "Глава посвящена термодинамике и ландшафту свободной энергии, не алгоритмам предсказания структуры.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q27D21": {
+    "grade": 1,
+    "reason": "Предсказывает скорость сворачивания в физической модели, а не неизвестную структуру белка.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q27D20": {
+    "grade": 1,
+    "reason": "Исходит из известной нативной топологии для поиска участков лекарственного воздействия; задача другая.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q28D21": {
+    "grade": 1,
+    "reason": "Рассматривает металлические оксидные переходы в сравнении с полупроводниками, а не обычное донорное и акцепторное легирование.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q28D17": {
+    "grade": 2,
+    "reason": "Связывает легирование графана с образованием p/n-областей и вольт-амперной характеристикой перехода.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q28D20": {
+    "grade": 2,
+    "reason": "Объясняет сдвиги донорных и акцепторных уровней и создание p/n-областей механической деформацией.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q28D19": {
+    "grade": 2,
+    "reason": "Показывает поверхностное легирование, перенос заряда и формирование n-области на p-полупроводнике.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q28D18": {
+    "grade": 2,
+    "reason": "Исследует свойства перехода между легированными полупроводниками в сверхпроводящем режиме; специальный случай.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q29D18": {
+    "grade": 1,
+    "reason": "RSA используется как готовый этап шифрования в CSS-стеганографии; принцип самой криптосистемы не раскрывается.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q29D19": {
+    "grade": 2,
+    "reason": "Описывает PKCS, включая стандарты шифрования и подписи RSA, то есть существенный практический аспект.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q29D21": {
+    "grade": 2,
+    "reason": "Предлагает вариант RSA/Rabin и сравнивает безопасность и производительность; частичный ответ о конструкции RSA.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q29D17": {
+    "grade": 2,
+    "reason": "Разбирает открытый модуль RSA, возведение в степень и fault-атаки; содержательный аспект механизма и безопасности.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q29D20": {
+    "grade": 2,
+    "reason": "Обзор параллельных реализаций RSA рассматривает шифрование, подпись и вычислительные затраты, без базового полного вывода.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q30D19": {
+    "grade": 3,
+    "reason": "Прямо рассматривает Variable Byte для целочисленных последовательностей и сжатия posting lists, включая разбиение и компромисс скорости и размера.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
+  },
+  "Q30D18": {
+    "grade": 1,
+    "reason": "Основной метод — факторизация инвертированного индекса; Variable Byte назван как дополнительно комбинируемое кодирование, без его разбора.",
+    "assessor": "language_model",
+    "basis": "saved_arxiv_title_abstract"
   }
 }

@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/ak1BFPKWpp/A0p6Fw/BHQBuwaTk</id>
+  <title>arXiv Query: search_query=all:"gravitational" AND all:"waves" AND all:"interferometer"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:25:07Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22gravitational%22+AND+(all:%22waves%22+AND+all:%22interferometer%22)&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>3340</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/0706.3294v1</id>
+    <title>Moriond 07 proceedings:"Extension of the frequency-range of interferometers for the "magnetic" components of gravitational waves?"</title>
+    <updated>2007-06-22T09:28:04Z</updated>
+    <link href="https://arxiv.org/abs/0706.3294v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0706.3294v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Recently some papers in the literature have shown the presence and importance of the so-called {}"magnetic" components of gravitational waves (GWs), which have to be taken into account in the context of the total response functions of interferometers for GWs propagating from arbitrary directions. In this paper the response functions for the magnetic components are re-analysed in the full frequency dependence answering to the question of the title.</summary>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-06-22T09:28:04Z</published>
+    <arxiv:comment>To appear in proceedings of the Rencontres de Moriond, Gravitational Waves and Experimental Gravity, La Thuile, Val d'Aosta, Italy (March 11-18, 2007)</arxiv:comment>
+    <arxiv:primary_category term="gr-qc"/>
+    <arxiv:journal_ref>Proceedings of the XLIInd Rencontres de Moriond, Gravitational Waves and Experimental Gravity, p. 95, Ed. J. Dumarchez and J. T. Tran, Than Van, THE GIOI Publishers (2007)</arxiv:journal_ref>
+    <author>
+      <name>Christian Corda</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1410.3023v1</id>
+    <title>Orbit analysis of a geostationary gravitational wave interferometer detector array</title>
+    <updated>2014-10-11T19:32:27Z</updated>
+    <link href="https://arxiv.org/abs/1410.3023v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1410.3023v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We analyze the trajectories of three geostationary satellites forming the GEOstationary GRAvitational Wave Interferometer (GEOGRAWI)~\cite{tinto}, a space-based laser interferometer mission aiming to detect and study gravitational radiation in the ($10^{-4} - 10$) Hz band.
+  The combined effects of the gravity fields of the Earth, the Sun and the Moon make the three satellites deviate from their nominally stationary, equatorial and equilateral configuration. Since changes in the satellites relative distances and orientations could negatively affect the precision of the laser heterodyne measurements, we have derived the time-dependence of the inter-satellite distances and velocities, the variations of the polar angles made by the constellation's three arms with respect to a chosen reference frame, and the time changes of the triangle's enclosed angles. We find that, during the time between two consecutive station-keeping maneuvers (about two weeks), the relative variations of the inter-satellite distances do not exceed a value of $0.05$ percent, while the relative velocities between pairs of satellites remain smaller than about $0.7 \ {\rm m/s}$. In addition, we find the angles made by the arms of the triangle with the equatorial plane to be periodic functions of time whose amplitudes grow linearly with time; the maximum variations experienced by these angles as well as by those within the triangle remain smaller than $3$ arc-minutes, while the East-West angular variations of the three arms remain smaller than about $15$ arc-minutes during the two-weeks period. The relatively small variations of these orbit parameters result into a set of system functional and performance requirements that are less stringent than those characterizing an interplanetary mission.</summary>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-10-11T19:32:27Z</published>
+    <arxiv:comment>In This article we analyze the trajectories of three geostationary satellites forming a gravitational wave interferometer. The article is 16 pages long and contains 5 figures</arxiv:comment>
+    <arxiv:primary_category term="gr-qc"/>
+    <author>
+      <name>Massimo Tinto</name>
+    </author>
+    <author>
+      <name>Jose C. N. de Araujo</name>
+    </author>
+    <author>
+      <name>Helio K. Kuga</name>
+    </author>
+    <author>
+      <name>Marcio E. S. Alves</name>
+    </author>
+    <author>
+      <name>Odylio D. Aguiar</name>
+    </author>
+    <arxiv:doi>10.1088/0264-9381/32/18/185017</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/0264-9381/32/18/185017" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1109.0022v3</id>
+    <title>Particle production during inflation and gravitational waves detectable by ground-based interferometers</title>
+    <updated>2012-06-27T14:47:14Z</updated>
+    <link href="https://arxiv.org/abs/1109.0022v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1109.0022v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Inflation typically predicts a quasi scale-invariant spectrum of gravitational waves. In models of slow-roll inflation, the amplitude of such a background is too small to allow direct detection without a dedicated space-based experiment such as the proposed BBO or DECIGO. In this paper we note that particle production during inflation can generate a feature in the spectrum of primordial gravitational waves. We discuss the possibility that such a feature might be detected by ground-based laser interferometers such as Advanced LIGO and Advanced Virgo, which will become operational in the next few years. We also discuss the prospects of detection by a space interferometer like LISA. We first study gravitational waves induced by nonperturbative, explosive particle production during inflation: while explosive production of scalar quanta does not generate a significant bump in the primordial tensor spectrum, production of vectors can. We also show that chiral gravitational waves produced by electromagnetic fields amplified by an axion-like inflaton could be detectable by Advanced LIGO.</summary>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-08-31T20:10:09Z</published>
+    <arxiv:comment>13 pages, 2 figures, significant changes in section 3, main conclusions unaffected</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.CO"/>
+    <arxiv:journal_ref>J. L.Cook, L. Sorbo, "Particle production during inflation and gravitational waves detectable by ground-based interferometers," Phys. Rev. D85, 023534 (2012)</arxiv:journal_ref>
+    <author>
+      <name>Jessica L. Cook</name>
+    </author>
+    <author>
+      <name>Lorenzo Sorbo</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.85.023534</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.85.023534" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1003.4218v1</id>
+    <title>Gravitational wave detection with single-laser atom interferometers</title>
+    <updated>2010-03-22T17:14:21Z</updated>
+    <link href="https://arxiv.org/abs/1003.4218v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1003.4218v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a new general design approach of a broad-band detector of gravitational radiation that relies on two atom interferometers separated by a distance L.  In this scheme, only one arm and one laser will be used for operating the two atom interferometers. We consider atoms in the atom interferometers not only as perfect inertial reference sensors, but also as highly stable clocks. Atomic coherence is intrinsically stable and can be many orders of magnitude more stable than a laser. The unique one-laser configuration allows us to then apply time-delay interferometry to the responses of the two atom interferometers, thereby canceling the laser phase fluctuations while preserving the gravitational wave signal in the resulting data set. Our approach appears very promising.  We plan to investigate further its practicality and detailed sensitivity analysis.</summary>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-03-22T17:14:21Z</published>
+    <arxiv:comment>Paper submitted to General Relativity and Gravitation as part of the prceedings of the International Workshop on Gravitational Waves Detection with Atom Interferometry (Florence, February 2009).</arxiv:comment>
+    <arxiv:primary_category term="gr-qc"/>
+    <author>
+      <name>Nan Yu</name>
+    </author>
+    <author>
+      <name>Massimo Tinto</name>
+    </author>
+    <arxiv:doi>10.1007/s10714-010-1055-8</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s10714-010-1055-8" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1607.04202v1</id>
+    <title>Theory of Gravitational Waves</title>
+    <updated>2016-07-13T16:07:23Z</updated>
+    <link href="https://arxiv.org/abs/1607.04202v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1607.04202v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The existence of gravitational radiation is a natural prediction of any relativistic description of the gravitational interaction. In this chapter, we focus on gravitational waves, as predicted by Einstein's general theory of relativity. First, we introduce those mathematical concepts that are necessary to properly formulate the physical theory, such as the notions of manifold, vector, tensor, metric, connection and curvature. Second, we motivate, formulate and then discuss Einstein's equation, which relates the geometry of spacetime to its matter content. Gravitational waves are later introduced as solutions of the linearized Einstein equation around flat spacetime. These waves are shown to propagate at the speed of light and to possess two polarization states. Gravitational waves can interact with matter, allowing for their direct detection by means of laser interferometers. Finally, Einstein's quadrupole formulas are derived and used to show that nonspherical compact objects moving at relativistic speeds are powerful gravitational wave sources.</summary>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-07-13T16:07:23Z</published>
+    <arxiv:comment>40 pages, 10 figures, 2 tables; to appear in An Overview of Gravitational Waves: Theory and Detection, edited by G. Auger and E. Plagnol (World Scientific, 2016)</arxiv:comment>
+    <arxiv:primary_category term="gr-qc"/>
+    <author>
+      <name>Alexandre Le Tiec</name>
+    </author>
+    <author>
+      <name>Jérôme Novak</name>
+    </author>
+    <arxiv:doi>10.1142/9789813141766_0001</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1142/9789813141766_0001" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/gr-qc/0201063v2</id>
+    <title>Laser-interferometer gravitational-wave optical-spring detectors</title>
+    <updated>2002-04-10T20:24:47Z</updated>
+    <link href="https://arxiv.org/abs/gr-qc/0201063v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/gr-qc/0201063v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Using a quantum mechanical approach, we show that in a gravitational-wave interferometer composed of arm cavities and a signal recycling cavity, e.g., the LIGO-II configuration, the radiation-pressure force acting on the mirrors not only disturbs the motion of the free masses randomly due to quantum fluctuations, but also and more fundamentally, makes them respond to forces as though they were connected to an (optical) spring with a specific rigidity. This oscillatory response gives rise to a much richer dynamics than previously known, which enhances the possibilities for reshaping the LIGO-II's noise curves. However, the optical-mechanical system is dynamically unstable and an appropriate control system must be introduced to quench the instability.</summary>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2002-01-18T17:49:49Z</published>
+    <arxiv:comment>7 pages, 3 figures; to appear in the Proceedings of 4th Edoardo Amaldi Conference on Gravitational Waves, Perth, Australia, 8-13 July 2001</arxiv:comment>
+    <arxiv:primary_category term="gr-qc"/>
+    <arxiv:journal_ref>Class.Quant.Grav. 19 (2002) 1569-1574</arxiv:journal_ref>
+    <author>
+      <name>Alessandra Buonanno</name>
+    </author>
+    <author>
+      <name>Yanbei Chen</name>
+    </author>
+    <arxiv:doi>10.1088/0264-9381/19/7/346</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/0264-9381/19/7/346" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/gr-qc/9912065v1</id>
+    <title>Gravitational waves from the r-modes of rapidly rotating neutron stars</title>
+    <updated>1999-12-15T16:45:40Z</updated>
+    <link href="https://arxiv.org/abs/gr-qc/9912065v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/gr-qc/9912065v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Since the last Amaldi meeting in 1997 we have learned that the r-modes of rapidly rotating neutron stars are unstable to gravitational radiation reaction in astrophysically realistic conditions. Newborn neutron stars rotating more rapidly than about 100Hz may spin down to that frequency during up to one year after the supernova that gives them birth, emitting gravitational waves which might be detectable by the enhanced LIGO interferometers at a distance which includes several supernovae per year. A cosmological background of these events may be detectable by advanced LIGO. The spins (about 300Hz) of neutron stars in low-mass x-ray binaries may also be due to the r-mode instability (under different conditions), and some of these systems in our galaxy may also produce detectable gravitational waves--see the review by G. Ushomirsky in this volume. Much work is in progress on developing our understanding of r-mode astrophysics to refine the early, optimistic estimates of the detectability of the gravitational waves.</summary>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1999-12-15T16:45:40Z</published>
+    <arxiv:comment>10 pages, 2 figures, 3rd Edoardo Amaldi Conference on Gravitational Waves</arxiv:comment>
+    <arxiv:primary_category term="gr-qc"/>
+    <author>
+      <name>Benjamin J. Owen</name>
+      <arxiv:affiliation>Albert Einstein Institut</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1063/1.1291840</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1063/1.1291840" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0801.3429v1</id>
+    <title>Searching for stochastic gravitational-wave background with the co-located LIGO interferometers</title>
+    <updated>2008-01-22T17:55:47Z</updated>
+    <link href="https://arxiv.org/abs/0801.3429v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0801.3429v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  This paper presents techniques developed by the LIGO Scientific Collaboration to search for the stochastic gravitational-wave background using the co-located pair of LIGO interferometers at Hanford, WA. We use correlations between interferometers and environment monitoring instruments, as well as time-shifts between two interferometers (described here for the first time) to identify correlated noise from non-gravitational sources. We veto particularly noisy frequency bands and assess the level of residual non-gravitational coupling that exists in the surviving data.</summary>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-01-22T17:55:47Z</published>
+    <arxiv:comment>Proceedings paper from the 7th Edoardo Amaldi Conference on Gravitational Waves, held in Sydney, Australia from 8-14 July 2007. Accepted to J. Phys.: Conf. Ser</arxiv:comment>
+    <arxiv:primary_category term="gr-qc"/>
+    <arxiv:journal_ref>J.Phys.Conf.Ser.122:012032,2008</arxiv:journal_ref>
+    <author>
+      <name>Nickolas V Fotopoulos</name>
+      <arxiv:affiliation>for the LIGO Scientific Collaboration</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1088/1742-6596/122/1/012032</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1742-6596/122/1/012032" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.22679v1</id>
+    <title>When spacetime vibrates: An introduction to gravitational waves</title>
+    <updated>2025-12-27T18:57:59Z</updated>
+    <link href="https://arxiv.org/abs/2512.22679v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.22679v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This article presents a comprehensive analysis of the physics of gravitational waves, exploring both the theoretical foundations and the most recent experimental advances. After a general introduction to the theory of general relativity and its major implications, the article discusses the history of gravitational waves, from their prediction by Einstein to their actual detection. It then explains what gravitational waves are and how they interact with appropriate detectors. The main mechanisms of gravitational radiation emission are analyzed, with a focus on compact binary systems of compact objects, whose orbits typically evolve in three phases: inspiral, merger, and the final ringdown phase, each of these phases leaving distinct signatures in the emitted waves. The article highlights the fundamental role of the giant interferometers LIGO, Virgo, and KAGRA, true cathedrals of modern science, and revisits the historic event GW150914, the first direct detection of gravitational waves, which confirmed the predictions of general relativity and opened a new era for astronomy. This achievement was recognized with the 2017 Nobel Prize in Physics. Other observed events are also discussed, along with their astrophysical sources, and the possibility of detecting gravitational waves of cosmological origin, originating from the Big Bang itself. Finally, current and future projects are analyzed, including observatories based on increasingly sophisticated interferometers, as well as proposals for alternative detection methods, illustrating how gravitational-wave astronomy is shaping the present and future of our exploration of the universe. In concluding, the detection of gravitational waves is set in a broader context by examining the discoveries across the electromagnetic spectrum, thereby illustrating the complementary perspectives these different observational channels provide.</summary>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-27T18:57:59Z</published>
+    <arxiv:comment>Invited contribution to the special edition of the Portuguese Physical Society's Gazeta de Física dedicated to celebrate the 10th anniversary of the first detection of gravitational waves. 42 pages, 18 figures</arxiv:comment>
+    <arxiv:primary_category term="gr-qc"/>
+    <author>
+      <name>José P. S. Lemos</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1105.2303v3</id>
+    <title>Relic gravitational waves from light primordial black holes</title>
+    <updated>2011-06-13T08:45:56Z</updated>
+    <link href="https://arxiv.org/abs/1105.2303v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1105.2303v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The energy density of relic gravitational waves (GWs) emitted by primordial black holes (PBHs) is calculated. We estimate the intensity of GWs produced at quantum and classical scattering of PBHs, the classical graviton emission from the PBH binaries in the early Universe, and the graviton emission due to PBH evaporation. If nonrelativistic PBHs dominated the cosmological energy density prior to their evaporation, the probability of formation of dense clusters of PBHs and their binaries in such clusters would be significant and the energy density of the generated gravitational waves in the present day universe could exceed that produced by other known mechanisms. The intensity of these gravitational waves would be maximal in the GHz frequency band of the spectrum or higher and makes their observation very difficult by present detectors but also gives a rather good possibility to investigate it by present and future high frequency gravitational waves electromagnetic detectors. However, the low frequency part of the spectrum in the range $f\sim 0.1-10$ Hz may be detectable by the planned space interferometers DECIGO/BBO. For sufficiently long duration of the PBH matter dominated stage the cosmological energy fraction of GWs from inflation would be noticeably diluted.</summary>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-05-11T20:05:14Z</published>
+    <arxiv:comment>32 pages, 4 figures; according to the referee comments some inaccurate statements are corrected and high frequency detectors of gravitational waves are briefly discussed</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.CO"/>
+    <arxiv:journal_ref>Phys.Rev.D84:024028,2011</arxiv:journal_ref>
+    <author>
+      <name>Alexander D. Dolgov</name>
+    </author>
+    <author>
+      <name>Damian Ejlli</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevD.84.024028</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevD.84.024028" title="doi"/>
+  </entry>
+</feed>

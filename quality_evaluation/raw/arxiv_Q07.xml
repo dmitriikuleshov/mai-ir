@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/bDT43NyTl+GWQ6oqkfMOUhBqBSY</id>
+  <title>arXiv Query: search_query=all:"node.js" AND all:"event" AND all:"loop"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:23:49Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22node.js%22+AND+(all:%22event%22+AND+all:%22loop%22)&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>3</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2604.19705v2</id>
+    <title>Predictive Autoscaling for Node.js on Kubernetes: Lower Latency, Right-Sized Capacity</title>
+    <updated>2026-04-22T08:02:15Z</updated>
+    <link href="https://arxiv.org/abs/2604.19705v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.19705v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Kubernetes offers two default paths for scaling Nodejs workloads, and both have structural limitations. The Horizontal Pod Autoscaler scales on CPU utilization, which does not directly measure event loop saturation: a Node.js pod can queue requests and miss latency SLOs while CPU reports moderate usage. KEDA extends HPA with richer triggers, including event-loop metrics, but inherits the same reactive control loop, detecting overload only after it has begun. By the time new pods start and absorb traffic, the system may already be degraded. Lowering thresholds shifts the operating point but does not change the dynamic: the scaler still reacts to a value it has already crossed, at the cost of permanent over-provisioning.
+  We propose a predictive scaling algorithm that forecasts where load will be by the time new capacity is ready and scales proactively based on that forecast. Per-instance metrics are corrupted by the scaler's own actions: adding an instance redistributes load and changes every metric, even if external traffic is unchanged. We observe that operating on a cluster-wide aggregate that is approximately invariant under scaling eliminates this feedback loop, producing a stable signal suitable for short-term extrapolation.
+  We define a metric model (a set of three functions that encode how a specific metric relates to scaling) and a five-stage pipeline that transforms raw, irregularly-timed, partial metric data into a clean prediction signal. In benchmarks against HPA and KEDA under steady ramp and sudden spike, the algorithm keeps per-instance load near the target threshold throughout. Under the steady ramp, median latency is 26ms, compared to 154ms for KEDA and 522ms for HPA.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-21T17:25:39Z</published>
+    <arxiv:comment>46 pages, 27 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Ivan Tymoshenko</name>
+    </author>
+    <author>
+      <name>Luca Maraschi</name>
+    </author>
+    <author>
+      <name>Matteo Collina</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.08595v1</id>
+    <title>Node Compass: Multilevel Tracing and Debugging of Request Executions in JavaScript-Based Web-Servers</title>
+    <updated>2023-11-19T06:23:06Z</updated>
+    <link href="https://arxiv.org/abs/2401.08595v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.08595v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Adequate consideration is crucial to ensure that services in a distributed application context are running satisfactorily with the resources available. Due to the asynchronous nature of tasks and the need to work with multiple layers that deliver coordinated results in a single-threaded context, analysing performance is a challenging task in event-loop-based systems.
+  The existing performance analysis methods for environments such as Node.js rely on higher-level instrumentation but lack precision, as they cannot capture the relevant underlying application flow. As a solution, we propose a streamlined method for recovering the asynchronous execution path of requests called the Nested Bounded Context Algorithm. The proposed technique tracks the application execution flow through multiple layers and showcases it on an interactive interface for further assessment.
+  Furthermore, we introduce the vertical span concept. This representation of a span as a multidimensional object (horizontal and vertical) with a start and end of execution, along with its sub-layers and triggered operations, enables the granular identification and diagnosis of performance issues. We proposed a new technique called the Bounded Context Tracking Algorithm for event matching and request reassembling in a multi-layer trace . The two techniques allow aligning the executions of the request in a tree-based data structure for developed visualisations. These visualisations permit performance debugging of complex performance issues in Node.js.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.PF" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-11-19T06:23:06Z</published>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Herve Mbikayi Kabamba</name>
+    </author>
+    <author>
+      <name>Matthew Khouzam</name>
+    </author>
+    <author>
+      <name>Michel Dagenais</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1407.1239v2</id>
+    <title>RepNet: Cutting Tail Latency in Data Center Networks with Flow Replication</title>
+    <updated>2015-01-26T06:57:31Z</updated>
+    <link href="https://arxiv.org/abs/1407.1239v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1407.1239v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Data center networks need to provide low latency, especially at the tail, as demanded by many interactive applications. To improve tail latency, existing approaches require modifications to switch hardware and/or end-host operating systems, making them difficult to be deployed. We present the design, implementation, and evaluation of RepNet, an application layer transport that can be deployed today. RepNet exploits the fact that only a few paths among many are congested at any moment in the network, and applies simple flow replication to mice flows to opportunistically use the less congested path. RepNet has two designs for flow replication: (1) RepSYN, which only replicates SYN packets and uses the first connection that finishes TCP handshaking for data transmission, and (2) RepFlow which replicates the entire mice flow. We implement RepNet on {\tt node.js}, one of the most commonly used platforms for networked interactive applications. {\tt node}'s single threaded event-loop and non-blocking I/O make flow replication highly efficient. Performance evaluation on a real network testbed and in Mininet reveals that RepNet is able to reduce the tail latency of mice flows, as well as application completion times, by more than 50\%.</summary>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-07-04T14:17:40Z</published>
+    <arxiv:primary_category term="cs.NI"/>
+    <author>
+      <name>Shuhao Liu</name>
+    </author>
+    <author>
+      <name>Wei Bai</name>
+    </author>
+    <author>
+      <name>Hong Xu</name>
+    </author>
+    <author>
+      <name>Kai Chen</name>
+    </author>
+    <author>
+      <name>Zhiping Cai</name>
+    </author>
+  </entry>
+</feed>

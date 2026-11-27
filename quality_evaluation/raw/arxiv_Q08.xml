@@ -1,0 +1,265 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/03YDT9qND6Pia+X8yoopX9esDkw</id>
+  <title>arXiv Query: search_query=all:"container" AND all:"orchestration" AND all:"kubernetes"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:23:52Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22container%22+AND+(all:%22orchestration%22+AND+all:%22kubernetes%22)&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>102</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2012.08866v2</id>
+    <title>Container Orchestration on HPC Systems</title>
+    <updated>2021-01-13T16:23:54Z</updated>
+    <link href="https://arxiv.org/abs/2012.08866v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2012.08866v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Containerisation demonstrates its efficiency in application deployment in cloud computing. Containers can encapsulate complex programs with their dependencies in isolated environments, hence are being adopted in HPC clusters. HPC workload managers lack micro-services support and deeply integrated container management, as opposed to container orchestrators (e.g. Kubernetes). We introduce Torque-Operator (a plugin) which serves as a bridge between HPC workload managers and container Orchestrators.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-12-16T11:14:14Z</published>
+    <arxiv:comment>Zhou N, Georgiou Y, Zhong L, Zhou H, Pospieszny M. Container Orchestration on HPC Systems. Inproceedings: 2020 IEEE International Conference on Cloud Computing (CLOUD); 2020</arxiv:comment>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Naweiluo Zhou</name>
+    </author>
+    <author>
+      <name>Yiannis Georgiou</name>
+    </author>
+    <author>
+      <name>Li Zhong</name>
+    </author>
+    <author>
+      <name>Huan Zhou</name>
+    </author>
+    <author>
+      <name>Marcin Pospieszny</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.11623v3</id>
+    <title>Context Kubernetes: Declarative Orchestration of Enterprise Knowledge for Agentic AI Systems</title>
+    <updated>2026-04-16T07:47:06Z</updated>
+    <link href="https://arxiv.org/abs/2604.11623v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.11623v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce Context Kubernetes, an architecture for orchestrating enterprise knowledge in agentic AI systems, with a prototype implementation and eight experiments. The core observation is that delivering the right knowledge, to the right agent, with the right permissions, at the right freshness -- across an entire organization -- is structurally analogous to the container orchestration problem Kubernetes solved a decade ago. We formalize six core abstractions, a YAML-based declarative manifest for knowledge-architecture-as-code, a reconciliation loop, and a three-tier agent permission model where agent authority is always a strict subset of human authority. On synthetic seed data, we compare four governance baselines of increasing strength: ungoverned RAG, ACL-filtered retrieval, RBAC-aware routing, and the full architecture. Each layer contributes a different capability: ACL filtering eliminates cross-domain leaks, intent routing reduces noise by 19 percentage points, and only the three-tier model blocks all five tested attack scenarios -- the one attack RBAC misses is an agent sending confidential pricing via email, which RBAC cannot distinguish from ordinary email. TLA+ model-checking verifies safety properties across 4.6 million reachable states with zero violations. A survey of four major platforms (Microsoft, Salesforce, AWS, Google) documents that none architecturally isolates agent approval channels. We identify four properties that make context orchestration harder than container orchestration, and argue these make the solution more valuable.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-13T15:35:55Z</published>
+    <arxiv:comment>24 pages, 8 tables, 1 figure, 8 experiments (5 correctness + 3 value). Open-source prototype: https://github.com/Cohorte-ai/context-kubernetes</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Charafeddine Mouzouni</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2301.07479v1</id>
+    <title>Extensions for Shared Resource Orchestration in Kubernetes to Support RT-Cloud Containers</title>
+    <updated>2023-01-18T12:47:14Z</updated>
+    <link href="https://arxiv.org/abs/2301.07479v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2301.07479v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Industries are considering the adoption of cloud computing for real-time applications due to current improvements in network latencies and the advent of Fog and Edge computing. To create an RT-cloud capable of hosting real-time applications, it is increasingly significant to improve the entire stack, including the containerization of applications, and their deployment and orchestration across nodes. However, state-of-the-art orchestrators (e.g., Kubernetes) and underlying container engines are designed for general-purpose applications. They ignore orchestration and management of shared resources (e.g. memory bandwidth, cache, shared interconnect) making them unsuitable for use with an RT-cloud. Taking inspiration from existing resource management architectures for multicore nodes, such as ACTORS, and for distributed mixed-criticality systems, such as the DREAMS, we propose a series of extensions in the way shared resources are orchestrated by Kubernetes and managed by the underlying Linux layers. Our approach allows fine-grained monitoring and allocation of low-level shared resources on nodes to provide better isolation to real-time containers and supports dynamic orchestration and balancing of containers across the nodes based on the availability and demand of shared resources.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.OS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-01-18T12:47:14Z</published>
+    <arxiv:comment>6 pages, 2 figures, Accepted at the Real-time Cloud Workshop of the 34th Euromicro Conference on Real-time Systems</arxiv:comment>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Gabriele Monaco</name>
+    </author>
+    <author>
+      <name>Gautam Gala</name>
+    </author>
+    <author>
+      <name>Gerhard Fohler</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.05686v1</id>
+    <title>Enabling 5G QoS configuration capabilities for IoT applications on container orchestration platform</title>
+    <updated>2024-03-08T21:38:43Z</updated>
+    <link href="https://arxiv.org/abs/2403.05686v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.05686v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Container orchestration platform is the foundation of modern cloud infrastructure. In recent years, container orchestration platform has been evolving to cross the boundary of device, edge, and cloud. More and more IoT applications such as robotics and XR have been deployed across the device-cloud continuum through the container orchestration platform, e.g., the Kubernetes (K8s) framework. Meanwhile, the rapid expansion of advanced communication technologies like 5G has endorsed the revolution in IoT applications as more network resource is available for critical IoT use cases. This paper aims to integrate network configuration capabilities provided by a 5G Network Exposure Function (NEF) into the K8s framework which is used to simplify application deployment in an orchestration in the device-cloud continuum. Specifically, a Linux fwmark-based network Quality of Service (QoS) configuration method is proposed to expose the QoS information from an overlay network that is used by the container orchestration platform to the underlay network. A Container Network Interface (CNI) plugin-based implementation is demonstrated to perform QoS configuration for the 5G network. The proposed solution is validated with an existing localization and mapping application to verify the feasibility. The proposed solution has the following benefits: (1) The solution is a Kubernetes-native approach which adopts the CNI plugin mechanism. (2) The solution can expose the QoS information from an overlay network to an underlay network in a non-intrusive manner. (3) No packet manipulation is required to greatly reduce the overhead for packet processing. (4) It extends the K8s bandwidth limit feature from on-node to the access network. (5) It is compatible with the 5G infrastructure without any alteration or adding extra complexity.</summary>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-08T21:38:43Z</published>
+    <arxiv:comment>Accepted and presented at the 14th IEEE International Conference on Cloud Computing Technology and Science (CloudCom2023)</arxiv:comment>
+    <arxiv:primary_category term="cs.NI"/>
+    <arxiv:journal_ref>2023 IEEE International Conference on Cloud Computing Technology and Science (CloudCom), Naples, Italy, 2023, pp. 63-68</arxiv:journal_ref>
+    <author>
+      <name>Yu Liu</name>
+    </author>
+    <author>
+      <name>Aitor Hernandez Herranz</name>
+    </author>
+    <arxiv:doi>10.1109/CloudCom59040.2023.00023</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/CloudCom59040.2023.00023" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2001.08992v1</id>
+    <title>Virtualized C-RAN Orchestration with Docker, Kubernetes and OpenAirInterface</title>
+    <updated>2020-01-13T01:44:23Z</updated>
+    <link href="https://arxiv.org/abs/2001.08992v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2001.08992v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Virtualization is a key feature in Cloud Radio Access Network (C-RAN). It can help to save costs since it allows the use of virtualized base stations instead of physically deployment in different areas. However, the creation and management of virtual base stations pools is not trivial and introduces new challenges to C-RAN deployment. This paper reports a method to orchestrate and manage a container-based C-RAN. We used several instances of the OpenAirInterface software running on Docker containers, and orchestrated them using Kubernetes. We demonstrate that using Kubernetes it is possible to dynamically scale remote radio heads (RRHs) and baseband units (BBUs) according to requirements of the network and parameters such as the server resources usage.</summary>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-01-13T01:44:23Z</published>
+    <arxiv:comment>3 pages, XXXVII Simposio Brasileiro de Telecomunicacoes e Processamento de Sinais - SBrT2019</arxiv:comment>
+    <arxiv:primary_category term="eess.SP"/>
+    <author>
+      <name>Camila Novaes</name>
+    </author>
+    <author>
+      <name>Cleverson Nahum</name>
+    </author>
+    <author>
+      <name>Igor Trindade</name>
+    </author>
+    <author>
+      <name>Daniel Cederholm</name>
+    </author>
+    <author>
+      <name>Gyanesh Patra</name>
+    </author>
+    <author>
+      <name>Aldebaro Klautau</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2002.02806v2</id>
+    <title>A Comprehensive Feature Comparison Study of Open-Source Container Orchestration Frameworks</title>
+    <updated>2021-03-05T16:56:46Z</updated>
+    <link href="https://arxiv.org/abs/2002.02806v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2002.02806v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>(1) Background: Container orchestration frameworks provide support for management of complex distributed applications. Different frameworks have emerged only recently, and they have been in constant evolution as new features are being introduced. This reality makes it difficult for practitioners and researchers to maintain a clear view of the technology space. (2) Methods: we present a descriptive feature comparison study of the three most prominent orchestration frameworks: Docker Swarm, Kubernetes, and Mesos, which can be combined with Marathon, Aurora or DC/OS. This study aims at (i) identifying the common and unique features of all frameworks, (ii) comparing these frameworks qualitatively and quantitatively with respect to genericity in terms of supported features, and (iii) investigating the maturity and stability of the frameworks as well as the pioneering nature of each framework by studying the historical evolution of the frameworks on GitHub. (3) Results: (i) we have identified 124 common features and 54 unique features that we divided into a taxonomy of 9 functional aspects and 27 functional sub-aspects. (ii) Kubernetes supports the highest number of accumulated common and unique features for all 9 functional aspects; however, no evidence has been found for significant differences in genericity with Docker Swarm and DC/OS. (iii) Very little feature deprecations have been found and 15 out of 27 sub-aspects have been identified as mature and stable. These are pioneered in descending order by Kubernetes, Mesos, and Marathon. (4) Conclusion: there is a broad and mature foundation that underpins all container orchestration frameworks. Likely areas for further evolution and innovation include system support for improved cluster security and container security, performance isolation of GPU, disk and network resources, and network plugin architectures.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-02-07T14:24:49Z</published>
+    <arxiv:comment>Technical report</arxiv:comment>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Eddy Truyen</name>
+    </author>
+    <author>
+      <name>Dimitri Van Landuyt</name>
+    </author>
+    <author>
+      <name>Davy Preuveneers</name>
+    </author>
+    <author>
+      <name>Bert Lagaisse</name>
+    </author>
+    <author>
+      <name>Wouter Joosen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2112.02267v2</id>
+    <title>Integration of FogBus2 Framework with Container Orchestration Tools in Cloud and Edge Computing Environments</title>
+    <updated>2021-12-11T09:17:42Z</updated>
+    <link href="https://arxiv.org/abs/2112.02267v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2112.02267v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Currently, due to the advantages of light weight, simple deployment, multi-environment support, short startup time, scalability, and easy migration, container technology has been widely used in both cloud and edge/fog computing, and addresses the problem of device heterogeneity in different computing environments. On this basis, as one of the most popular container orchestration and management systems, Kubernetes almost dominates the cloud environment. However, since it is primarily designed for centralized resource management scenarios where computing resources are sufficient, the system is unstable in edge environments due to hardware limitations. Therefore, in order to realize container orchestration in the cloud and edge/fog hybrid computing environment, we propose a feasible approach to build a hybrid clustering based on K3s, which solves the problem that virtual instances in different environments cannot be connected due to IP addresses. We also propose three design patterns for deploying the FogBus2 framework into hybrid environments, including 1) Host Network Mode, 2) Proxy Server, and 3) Environment Variable.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-12-04T07:16:52Z</published>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Zhiyu Wang</name>
+    </author>
+    <author>
+      <name>Rajkumar Buyya</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.07651v1</id>
+    <title>Predicting Resource Consumption of Kubernetes Container Systems using Resource Models</title>
+    <updated>2023-05-12T17:59:01Z</updated>
+    <link href="https://arxiv.org/abs/2305.07651v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.07651v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Cloud computing has radically changed the way organisations operate their software by allowing them to achieve high availability of services at affordable cost. Containerized microservices is an enabling technology for this change, and advanced container orchestration platforms such as Kubernetes are used for service management. Despite the flourishing ecosystem of monitoring tools for such orchestration platforms, service management is still mainly a manual effort.
+  The modeling of cloud computing systems is an essential step towards automatic management, but the modeling of cloud systems of such complexity remains challenging and, as yet, unaddressed. In fact modeling resource consumption will be a key to comparing the outcome of possible deployment scenarios. This paper considers how to derive resource models for cloud systems empirically. We do so based on models of deployed services in a formal modeling language with explicit CPU and memory resources; once the adherence to the real system is good enough, formal properties can be verified in the model.
+  Targeting a likely microservices application, we present a model of Kubernetes developed in Real-Time ABS. We report on leveraging data collected empirically from small deployments to simulate the execution of higher intensity scenarios on larger deployments. We discuss the challenges and limitations that arise from this approach, and identify constraints under which we obtain satisfactory accuracy.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-12T17:59:01Z</published>
+    <arxiv:comment>34 pages. Preprint, to appear in the Journal of Systems and Software</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Gianluca Turin</name>
+    </author>
+    <author>
+      <name>Andrea Borgarelli</name>
+    </author>
+    <author>
+      <name>Simone Donetti</name>
+    </author>
+    <author>
+      <name>Ferruccio Damiani</name>
+    </author>
+    <author>
+      <name>Einar Broch Johnsen</name>
+    </author>
+    <author>
+      <name>Silvia Lizeth Tapia Tarifa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1805.05847v2</id>
+    <title>SGX-Aware Container Orchestration for Heterogeneous Clusters</title>
+    <updated>2018-07-27T13:13:19Z</updated>
+    <link href="https://arxiv.org/abs/1805.05847v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1805.05847v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Containers are becoming the de facto standard to package and deploy applications and micro-services in the cloud. Several cloud providers (e.g., Amazon, Google, Microsoft) begin to offer native support on their infrastructure by integrating container orchestration tools within their cloud offering. At the same time, the security guarantees that containers offer to applications remain questionable. Customers still need to trust their cloud provider with respect to data and code integrity. The recent introduction by Intel of Software Guard Extensions (SGX) into the mass market offers an alternative to developers, who can now execute their code in a hardware-secured environment without trusting the cloud provider.
+  This paper provides insights regarding the support of SGX inside Kubernetes, an industry-standard container orchestrator. We present our contributions across the whole stack supporting execution of SGX-enabled containers. We provide details regarding the architecture of the scheduler and its monitoring framework, the underlying operating system support and the required kernel driver extensions. We evaluate our complete implementation on a private cluster using the real-world Google Borg traces. Our experiments highlight the performance trade-offs that will be encountered when deploying SGX-enabled micro-services in the cloud.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-05-15T15:31:15Z</published>
+    <arxiv:comment>Presented in the 38th IEEE International Conference on Distributed Computing Systems (ICDCS 2018)</arxiv:comment>
+    <arxiv:primary_category term="cs.DC"/>
+    <arxiv:journal_ref>2018 IEEE 38th International Conference on Distributed Computing Systems (ICDCS), Vienna, Austria, 2018, pp. 730-741</arxiv:journal_ref>
+    <author>
+      <name>Sébastien Vaucher</name>
+    </author>
+    <author>
+      <name>Rafael Pires</name>
+    </author>
+    <author>
+      <name>Pascal Felber</name>
+    </author>
+    <author>
+      <name>Marcelo Pasin</name>
+    </author>
+    <author>
+      <name>Valerio Schiavoni</name>
+    </author>
+    <author>
+      <name>Christof Fetzer</name>
+    </author>
+    <arxiv:doi>10.1109/ICDCS.2018.00076</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/ICDCS.2018.00076" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.21383v1</id>
+    <title>KubeSpace: A Low-Latency and Stable Control Plane for LEO Satellite Container Orchestration</title>
+    <updated>2026-01-29T08:18:27Z</updated>
+    <link href="https://arxiv.org/abs/2601.21383v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.21383v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Low Earth orbit (LEO) satellites play a pivotal role in global connectivity-delivering high-speed Internet, cellular coverage, and massive IoT support. With ever-growing onboard computing and storage resources, LEO satellites herald a new cloud paradigm: space cloud computing. While container or chestration platforms (e.g., Kubernetes) excel in terrestrial data centers, they are ill-suited to LEO satellite networks, featuring geographic dispersion and frequent handovers. Those features bring high latency and intermittent management, leading to control plane failure in container orchestration. To address this, we propose KubeSpace, a low-latency and stable control plane specifically designed for container orchestration on LEO satellites. KubeSpace combines two key innovations: a distributed ground-control-node architecture that binds each satellite to its nearest controller for uninterrupted management, and an orbit-aware placement with dynamic assignment strategy that further minimizes communication latency and handover frequency. Extensive experiments based on real satellite traces demonstrate that compared to existing solutions, KubeSpace reduces the average management latency of satellite nodes by 59% without any management interruption time.</summary>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-29T08:18:27Z</published>
+    <arxiv:comment>11 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.NI"/>
+    <author>
+      <name>Zhiyuan Zhao</name>
+    </author>
+    <author>
+      <name>Jiasheng Wu</name>
+    </author>
+    <author>
+      <name>Shaojie Su</name>
+    </author>
+    <author>
+      <name>Wenjun Zhu</name>
+    </author>
+    <author>
+      <name>Yue Gao</name>
+    </author>
+  </entry>
+</feed>

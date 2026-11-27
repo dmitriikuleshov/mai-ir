@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/+4ay/BbZJxqhZQsEqDKzs+sDYM0</id>
+  <title>arXiv Query: search_query=all:"quantum" AND all:"error" AND all:"correction" AND all:"surface" AND all:"code"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:24:45Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22quantum%22+AND+(all:%22error%22+AND+(all:%22correction%22+AND+(all:%22surface%22+AND+all:%22code%22)))&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>860</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2605.17156v2</id>
+    <title>Sparse Mamba Decoder for Quantum Error Correction: Efficient Defect-Centric Processing of Surface Code Syndromes</title>
+    <updated>2026-05-20T22:01:02Z</updated>
+    <link href="https://arxiv.org/abs/2605.17156v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.17156v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum error correction (QEC) is essential for building fault-tolerant quantum computers, requiring decoders that are simultaneously accurate, fast, and scalable. Most state-of-the-art neural decoders achieve high accuracy but process the full dense syndrome array of size $O(d^2 R) $regardless of the actual error rate, where d is the code distance and R is the number of measurement rounds. At physically relevant error rates (p ~ 0.1%), fewer than 5% of syndrome entries contain active detection events -- yet existing decoders process the entire syndrome volume. We introduce the Sparse Mamba Decoder (SMD), a defect-centric neural decoder that processes only the k active detection events using a 13-dimensional feature representation per defect and a Mamba state-space backbone, achieving $O(k)$ complexity. Across depolarizing, uniform circuit-level, SI1000, and Google Sycamore experimental benchmarks, SMD reduces the MWPM logical error rate by up to 49% at $d \le 5$ under SI1000 noise, runs 95-467x faster than the Tesseract near-MLD decoder and 232-463x faster than Belief Matching, and maintains nearly constant latency (24-57 us) across d = 3-9 under uniform circuit-level noise. On the Sycamore experimental dataset, the SMD ensemble matches or slightly surpasses the dense Mamba decoder of Varbanov et al. All results are obtained on commodity NVIDIA GPUs with 7.5-16M parameters, without specialized accelerators.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-16T21:01:29Z</published>
+    <arxiv:comment>22 pages, 7 figures, 10 tables. Neural decoder for surface code quantum error correction. Submitted to Quantum</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Samira Sayedsalehi</name>
+    </author>
+    <author>
+      <name>Nader Bagherzadeh</name>
+    </author>
+    <author>
+      <name>Maxim Shcherbakov</name>
+    </author>
+    <author>
+      <name>Jean-Luc Gaudiot</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1812.08451v5</id>
+    <title>Optimizing Quantum Error Correction Codes with Reinforcement Learning</title>
+    <updated>2020-04-09T17:09:51Z</updated>
+    <link href="https://arxiv.org/abs/1812.08451v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1812.08451v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum error correction is widely thought to be the key to fault-tolerant quantum computation. However, determining the most suited encoding for unknown error channels or specific laboratory setups is highly challenging. Here, we present a reinforcement learning framework for optimizing and fault-tolerantly adapting quantum error correction codes. We consider a reinforcement learning agent tasked with modifying a family of surface code quantum memories until a desired logical error rate is reached. Using efficient simulations with about 70 data qubits with arbitrary connectivity, we demonstrate that such a reinforcement learning agent can determine near-optimal solutions, in terms of the number of data qubits, for various error models of interest. Moreover, we show that agents trained on one setting are able to successfully transfer their experience to different settings. This ability for transfer learning showcases the inherent strengths of reinforcement learning and the applicability of our approach for optimization from off-line simulations to on-line laboratory settings.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-12-20T09:54:05Z</published>
+    <arxiv:comment>21 pages, 13 figures, 1 table, updated reference list, accepted for publication in Quantum</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Quantum 3, 215 (2019)</arxiv:journal_ref>
+    <author>
+      <name>Hendrik Poulsen Nautrup</name>
+    </author>
+    <author>
+      <name>Nicolas Delfosse</name>
+    </author>
+    <author>
+      <name>Vedran Dunjko</name>
+    </author>
+    <author>
+      <name>Hans J. Briegel</name>
+    </author>
+    <author>
+      <name>Nicolai Friis</name>
+    </author>
+    <arxiv:doi>10.22331/q-2019-12-16-215</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.22331/q-2019-12-16-215" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2201.03568v3</id>
+    <title>Quantum error correction with fractal topological codes</title>
+    <updated>2023-09-19T17:16:53Z</updated>
+    <link href="https://arxiv.org/abs/2201.03568v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2201.03568v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently, a class of fractal surface codes (FSCs), has been constructed on fractal lattices with Hausdorff dimension $2+ε$, which admits a fault-tolerant non-Clifford CCZ gate. We investigate the performance of such FSCs as fault-tolerant quantum memories. We prove that there exist decoding strategies with non-zero thresholds for bit-flip and phase-flip errors in the FSCs with Hausdorff dimension $2+ε$. For the bit-flip errors, we adapt the sweep decoder, developed for string-like syndromes in the regular 3D surface code, to the FSCs by designing suitable modifications on the boundaries of the holes in the fractal lattice. Our adaptation of the sweep decoder for the FSCs maintains its self-correcting and single-shot nature. For the phase-flip errors, we employ the minimum-weight-perfect-matching (MWPM) decoder for the point-like syndromes. We report a sustainable fault-tolerant threshold ($\sim 1.7\%$) under phenomenological noise for the sweep decoder and the code capacity threshold (lower bounded by $2.95\%$) for the MWPM decoder for a particular FSC with Hausdorff dimension $D_H\approx2.966$. The latter can be mapped to a lower bound of the critical point of a confinement-Higgs transition on the fractal lattice, which is tunable via the Hausdorff dimension.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-lat" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-01-10T19:00:00Z</published>
+    <arxiv:comment>24+13 pages, 10 figures, the simulation code is available at https://github.com/dua-arpit/single_shot_decoding_fractal, minor changes made in v2 and v3, v3 version uses the Quantum journal LaTeX template</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Quantum 7, 1122 (2023)</arxiv:journal_ref>
+    <author>
+      <name>Arpit Dua</name>
+    </author>
+    <author>
+      <name>Tomas Jochym-O'Connor</name>
+    </author>
+    <author>
+      <name>Guanyu Zhu</name>
+    </author>
+    <arxiv:doi>10.22331/q-2023-09-26-1122</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.22331/q-2023-09-26-1122" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.01301v4</id>
+    <title>Performance Analysis of Quantum CSS Error-Correcting Codes via MacWilliams Identities</title>
+    <updated>2025-12-11T08:25:35Z</updated>
+    <link href="https://arxiv.org/abs/2305.01301v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.01301v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We analyze the performance of quantum stabilizer codes, one of the most important classes for practical implementations, on both symmetric and asymmetric quantum channels. To this aim, we first derive the weight enumerator (WE) for the undetectable errors based on the quantum MacWilliams identities. The WE is then used to evaluate tight upper bounds on the error rate of CSS quantum codes with \acl{MW} decoding. For surface codes we also derive a simple closed form expression of the bounds over the depolarizing channel. We introduce a novel approach that combines the knowledge of WE with a logical operator analysis, allowing the derivation of the exact asymptotic error rate for short codes. For example, on a depolarizing channel with physical error rate $ρ\to 0$, the logical error rate $ρ_\mathrm{L}$ is asymptotically $ρ_\mathrm{L} \approx 16 ρ^2$ for the $[[9,1,3]]$ Shor code, $ρ_\mathrm{L} \approx 16.3 ρ^2$ for the $[[7,1,3]]$ Steane code, $ρ_\mathrm{L} \approx 18.7 ρ^2$ for the $[[13,1,3]]$ surface code, and $ρ_\mathrm{L} \approx 149.3 ρ^3$ for the $[[41,1,5]]$ surface code. For larger codes our bound provides $ρ_\mathrm{L} \approx 1215 ρ^4$ and $ρ_\mathrm{L} \approx 663 ρ^5$ for the $[[85,1,7]]$ and the $[[181,1,10]]$ surface codes, respectively. Finally, we extend our analysis to include realistic, noisy syndrome extraction circuits by modeling error propagation throughout gadgets. This enables estimation of logical error rates under faulty measurements. The performance analysis serves as a design tool for developing fault-tolerant quantum systems by guiding the selection of quantum codes based on their error correction capability. Additionally, it offers a novel perspective on quantum degeneracy, showing it represents the fraction of non-correctable error patterns shared by multiple logical operators.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-02T10:19:02Z</published>
+    <arxiv:comment>25 pages, 10 figures, accepted in Quantum journal</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Quantum 9, 1950 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Diego Forlivesi</name>
+    </author>
+    <author>
+      <name>Lorenzo Valentini</name>
+    </author>
+    <author>
+      <name>Marco Chiani</name>
+    </author>
+    <arxiv:doi>10.22331/q-2025-12-16-1950</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.22331/q-2025-12-16-1950" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.07841v3</id>
+    <title>Quantum Error Correction resilient against Atom Loss</title>
+    <updated>2025-09-19T07:49:40Z</updated>
+    <link href="https://arxiv.org/abs/2412.07841v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.07841v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate quantum error correction protocols for neutral atoms quantum processors in the presence of atom loss. We complement the surface code with loss detection units (LDU) and analyze its performances by means of circuit-level simulations for two distinct protocols -- the standard LDU and a teleportation-based LDU --, focussing on the impact of both atom loss and depolarizing noise on the logical error probability. We introduce and employ a new adaptive decoding procedure that leverages the knowledge of loss locations provided by the LDUs, improving logical error probabilities by nearly three orders of magnitude compared to a naive decoder. For the considered error models, our results demonstrate the existence of an error threshold line that depends linearly on the probabilities of atom loss and of depolarizing errors. For zero depolarizing noise, the atom loss threshold is about $2.6\%$.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-10T19:00:01Z</published>
+    <arxiv:comment>26 pages, 17 figures, 1 table, final version for quantum journal</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Quantum 9, 1884 (2025)</arxiv:journal_ref>
+    <author>
+      <name>Hugo Perrin</name>
+    </author>
+    <author>
+      <name>Sven Jandura</name>
+    </author>
+    <author>
+      <name>Guido Pupillo</name>
+    </author>
+    <arxiv:doi>10.22331/q-2025-10-13-1884</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.22331/q-2025-10-13-1884" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2211.08468v2</id>
+    <title>Adaptive surface code for quantum error correction in the presence of temporary or permanent defects</title>
+    <updated>2023-07-15T13:50:34Z</updated>
+    <link href="https://arxiv.org/abs/2211.08468v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2211.08468v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Whether it is at the fabrication stage or during the course of the quantum computation, e.g. because of high-energy events like cosmic rays, the qubits constituting an error correcting code may be rendered inoperable. Such defects may correspond to individual qubits or to clusters and could potentially disrupt the code sufficiently to generate logical errors. In this paper, we explore a novel adaptive approach for surface code quantum error correction on a defective lattice. We show that combining an appropriate defect detection algorithm and a quarantine of the identified zone allows one to preserve the advantage of quantum error correction at finite code sizes, at the cost of a qubit overhead that scales with the size of the defect. Our numerics indicate that the code's threshold need not be significantly affected; for example, for a certain scenario where small defects repeatedly arise in each logical qubit, the noise threshold is $2.7\%$ (versus the defect-free case of $2.9\%$). These results pave the way to the experimental implementation of large-scale quantum computers where defects will be inevitable.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-11-15T19:39:49Z</published>
+    <arxiv:comment>12 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Quantum 7, 1065 (2023)</arxiv:journal_ref>
+    <author>
+      <name>Adam Siegel</name>
+    </author>
+    <author>
+      <name>Armands Strikis</name>
+    </author>
+    <author>
+      <name>Thomas Flatters</name>
+    </author>
+    <author>
+      <name>Simon Benjamin</name>
+    </author>
+    <arxiv:doi>10.22331/q-2023-07-25-1065</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.22331/q-2023-07-25-1065" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2103.06994v2</id>
+    <title>Low overhead fault-tolerant quantum error correction with the surface-GKP code</title>
+    <updated>2022-01-29T05:35:49Z</updated>
+    <link href="https://arxiv.org/abs/2103.06994v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2103.06994v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Fault-tolerant quantum error correction is essential for implementing quantum algorithms of significant practical importance. In this work, we propose a highly effective use of the surface-GKP code, i.e., the surface code consisting of bosonic GKP qubits instead of bare two-dimensional qubits. In our proposal, we use error-corrected two-qubit gates between GKP qubits and introduce a maximum likelihood decoding strategy for correcting shift errors in the two-GKP-qubit gates. Our proposed decoding reduces the total CNOT failure rate of the GKP qubits, e.g., from $0.87\%$ to $0.36\%$ at a GKP squeezing of $12$dB, compared to the case where the simple closest-integer decoding is used. Then, by concatenating the GKP code with the surface code, we find that the threshold GKP squeezing is given by $9.9$dB under the the assumption that finite-squeezing of the GKP states is the dominant noise source. More importantly, we show that a low logical failure rate $p_{L} &lt; 10^{-7}$ can be achieved with moderate hardware requirements, e.g., $291$ modes and $97$ qubits at a GKP squeezing of $12$dB as opposed to $1457$ bare qubits for the standard rotated surface code at an equivalent noise level (i.e., $p=0.36\%$). Such a low failure rate of our surface-GKP code is possible through the use of space-time correlated edges in the matching graphs of the surface code decoder. Further, all edge weights in the matching graphs are computed dynamically based on analog information from the GKP error correction using the full history of all syndrome measurement rounds. We also show that a highly-squeezed GKP state of GKP squeezing $\gtrsim 12$dB can be experimentally realized by using a dissipative stabilization method, namely, the Big-small-Big method, with fairly conservative experimental parameters. Lastly, we introduce a three-level ancilla scheme to mitigate ancilla decay errors during a GKP state preparation.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-03-11T23:07:52Z</published>
+    <arxiv:comment>41 pages, 14 figures, 3 tables</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>PRX Quantum 3, 010315 (2022)</arxiv:journal_ref>
+    <author>
+      <name>Kyungjoo Noh</name>
+    </author>
+    <author>
+      <name>Christopher Chamberland</name>
+    </author>
+    <author>
+      <name>Fernando G. S. L. Brandão</name>
+    </author>
+    <arxiv:doi>10.1103/PRXQuantum.3.010315</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PRXQuantum.3.010315" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2109.08158v2</id>
+    <title>Quantum Lego: Building Quantum Error Correction Codes from Tensor Networks</title>
+    <updated>2022-05-11T20:05:58Z</updated>
+    <link href="https://arxiv.org/abs/2109.08158v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2109.08158v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a flexible and graphically intuitive framework that constructs complex quantum error correction codes from simple codes or states, generalizing code concatenation. More specifically, we represent the complex code constructions as tensor networks built from the tensors of simple codes or states in a modular fashion. Using a set of local moves known as operator pushing, one can derive properties of the more complex codes, such as transversal non-Clifford gates, by tracing the flow of operators in the network. The framework endows a network geometry to any code it builds and is valid for constructing stabilizer codes as well as non-stabilizer codes over qubits and qudits. For a contractible tensor network, the sequence of contractions also constructs a decoding/encoding circuit. To highlight the framework's range of capabilities and to provide a tutorial, we lay out some examples where we glue together simple stabilizer codes to construct non-trivial codes. These examples include the toric code and its variants, a holographic code with transversal non-Clifford operators, a 3d stabilizer code, and other stabilizer codes with interesting properties. Surprisingly, we find that the surface code is equivalent to the 2d Bacon-Shor code after "dualizing" its tensor network encoding map.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-09-16T18:00:00Z</published>
+    <arxiv:comment>Updated text to match published version: corrected errors in appendix D1, added theorems for stabilizer code tracing and theorems for expressivity of atomic legos</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>PRX Quantum 3, 020332 (2022)</arxiv:journal_ref>
+    <author>
+      <name>ChunJun Cao</name>
+    </author>
+    <author>
+      <name>Brad Lackey</name>
+    </author>
+    <arxiv:doi>10.1103/PRXQuantum.3.020332</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PRXQuantum.3.020332" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.18592v3</id>
+    <title>Hierarchical Quantum Error Correction with Hypergraph Product Code and Rotated Surface Code</title>
+    <updated>2026-08-30T05:44:06Z</updated>
+    <link href="https://arxiv.org/abs/2505.18592v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.18592v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose and analyze a hierarchical quantum error correction (QEC) scheme that concatenates hypergraph product (HGP) codes with rotated surface codes and that is compatible with quantum computers with only nearest-neighbor interactions. The outer code employs (3,4)-random HGP codes, known for their constant encoding rate and favorable distance scaling, while the inner code consists of a rotated surface code with distance 5, allowing hardware compatibility through lattice surgery. To address the decoding bottleneck, we utilize a soft-decision decoding strategy that combines belief propagation with ordered statistics decoding, enhanced by a syndrome-conditioned logical error probability computed via a tailored lookup table for the inner code. Numerical simulations under a code capacity noise model demonstrate that our hierarchical codes achieve logical error suppression below the threshold. Furthermore, we derive explicit conditions under which the proposed codes surpass surface codes as a QEC code in both qubit efficiency and error rate. In particular, for the size parameter $s \geq 4$ (which corresponds to 16 logical qubits) and the distance $d \geq 25$, our construction outperforms the rotated surface code in practical regimes with physical error rates around or less than $10^{-2}$. These results suggest that concatenated quantum low-density parity-check surface architectures can offer a scalable and resource-efficient path toward near-term fault-tolerant quantum computation.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-24T08:39:39Z</published>
+    <arxiv:comment>14 pages, 10 figures; published version</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Prog. Theor. Exp. Phys. 2025, 103A03</arxiv:journal_ref>
+    <author>
+      <name>Junichi Haruna</name>
+    </author>
+    <author>
+      <name>Keisuke Fujii</name>
+    </author>
+    <arxiv:doi>10.1093/ptep/ptaf130</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1093/ptep/ptaf130" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1705.07855v3</id>
+    <title>Machine-learning-assisted correction of correlated qubit errors in a topological code</title>
+    <updated>2018-01-17T16:21:26Z</updated>
+    <link href="https://arxiv.org/abs/1705.07855v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1705.07855v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A fault-tolerant quantum computation requires an efficient means to detect and correct errors that accumulate in encoded quantum information. In the context of machine learning, neural networks are a promising new approach to quantum error correction. Here we show that a recurrent neural network can be trained, using only experimentally accessible data, to detect errors in a widely used topological code, the surface code, with a performance above that of the established minimum-weight perfect matching (or blossom) decoder. The performance gain is achieved because the neural network decoder can detect correlations between bit-flip (X) and phase-flip (Z) errors. The machine learning algorithm adapts to the physical system, hence no noise model is needed. The long short-term memory layers of the recurrent neural network maintain their performance over a large number of quantum error correction cycles, making it a practical decoder for forthcoming experimental realizations of the surface code.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-05-22T17:00:38Z</published>
+    <arxiv:comment>10 pages, 5 figures; V3: version accepted by Quantum</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Quantum 2, 48 (2018)</arxiv:journal_ref>
+    <author>
+      <name>P. Baireuther</name>
+    </author>
+    <author>
+      <name>T. E. O'Brien</name>
+    </author>
+    <author>
+      <name>B. Tarasinski</name>
+    </author>
+    <author>
+      <name>C. W. J. Beenakker</name>
+    </author>
+    <arxiv:doi>10.22331/q-2018-01-29-48</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.22331/q-2018-01-29-48" title="doi"/>
+  </entry>
+</feed>

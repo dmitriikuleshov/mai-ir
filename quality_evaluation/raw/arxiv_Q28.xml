@@ -1,0 +1,364 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/GDTgusXWi34iCi6aJxQ5KmE96T4</id>
+  <title>arXiv Query: search_query=all:"semiconductor" AND all:"doping" AND all:"p" AND all:"n" AND all:"junction"&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-26T17:25:18Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22semiconductor%22+AND+(all:%22doping%22+AND+(all:%22p%22+AND+(all:%22n%22+AND+all:%22junction%22)))&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>68</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/cond-mat/0611501v1</id>
+    <title>Ferroelectric switched all-metallic-oxide $p$-$n$ junctions</title>
+    <updated>2006-11-19T12:24:53Z</updated>
+    <link href="https://arxiv.org/abs/cond-mat/0611501v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cond-mat/0611501v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We report the first formation of the metallic $p$-$n$ junctions, the ferroelectric (Ba,Sr)TiO$_3$ (BST) switched optimally electron-doped ($n$-type) metallic T'-phase superconductor, (La,Ce)$_2$CuO$_4$ (LCCO), and hole-doped ($p$-type) metallic CMR manganite (La,Sr)MnO$_3$ (LSMO) junctions. In contrast with the previous semiconductor $p$-$n$ ($p$-$I$-$n$) junctions which are switched by the built-in field $V_0$, the present metallic oxides $p$-$I$-$n$ junctions are switched by double barrier fields, the built-in field $V_0$, and the ferroelectric reversed polarized field $V_{rp}$, both take together to lead the junctions to possess definite parameters, such as definite negligible reversed current ($10^{-9}$ A), large breakdown voltage ($&gt;$7 V), and ultrahigh rectification ($&gt;2\times10^4$) in the bias voltage 1.2 V to 2.0 V and temperature range from 5 to over 300 K. The related transport feature, barrier size effect, and temperature effect are also observed and defined.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2006-11-19T12:24:53Z</published>
+    <arxiv:comment>4 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>J. Yuan</name>
+    </author>
+    <author>
+      <name>H. Wu</name>
+    </author>
+    <author>
+      <name>L. Zhao</name>
+    </author>
+    <author>
+      <name>K. Jin</name>
+    </author>
+    <author>
+      <name>L. X. Cao</name>
+    </author>
+    <author>
+      <name>B. Y. Zhu</name>
+    </author>
+    <author>
+      <name>S. J. Zhu</name>
+    </author>
+    <author>
+      <name>J. P. Zhong</name>
+    </author>
+    <author>
+      <name>J. Miao</name>
+    </author>
+    <author>
+      <name>H. Yang</name>
+    </author>
+    <author>
+      <name>B. Xu</name>
+    </author>
+    <author>
+      <name>X. Y. Qi</name>
+    </author>
+    <author>
+      <name>Y. Han</name>
+    </author>
+    <author>
+      <name>X. G. Qiu</name>
+    </author>
+    <author>
+      <name>X. F. Duan</name>
+    </author>
+    <author>
+      <name>B. R. Zhao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0905.2812v2</id>
+    <title>Current-Voltage Characteristics of Graphane p-n Junctions</title>
+    <updated>2009-06-20T09:22:31Z</updated>
+    <link href="https://arxiv.org/abs/0905.2812v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0905.2812v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  In contrast to graphene which is a gapless semiconductor, graphane, the hydrogenated graphene, is a semiconductor with an energy gap. Together with the two-dimensional geometry, unique transport features of graphene, and possibility of doping graphane, p and n regions can be defined so that 2D p-n junctions become feasible with small reverse currents. This paper introduces a basic analysis to obtain current-voltage characteristics of such a 2D p-n junction based on graphane. As we show, within the approximation of Shockley law of junctions, an ideal I-V charactristic for this p-n junction is to be expected.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-05-18T06:42:25Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>IEEE Transactions on Electron Devices, vol. 57, no. 1, pp. 209-214 (2010)</arxiv:journal_ref>
+    <author>
+      <name>Behnaz Gharekhanlou</name>
+    </author>
+    <author>
+      <name>Sina Khorasani</name>
+    </author>
+    <arxiv:doi>10.1109/TED.2009.2034494</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/TED.2009.2034494" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.05887v1</id>
+    <title>Bipolar doping in van der Waals semiconductor through Flexo-doping</title>
+    <updated>2025-05-09T08:55:56Z</updated>
+    <link href="https://arxiv.org/abs/2505.05887v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.05887v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Doping plays a key role in functionalizing semiconductor devices, yet traditional chemical approaches relying on foreign-atom incorporation suffer from doping-asymmetry, pronounced lattice disorder and constrained spatial resolution. Here, we demonstrate a physical doping technique to directly write nanoscale doping patterns into layered semiconductors (MoS2). By applying localized tensile and compressive stress via an atomic force microscopy probe, p and n type conductance are simultaneously written into the designed area with sub-100-nm resolution, as verified by spatially resolved capacitance and photocurrent experiments. Density functional theory calculations reveal strain-driven shifts of donor and acceptor levels, as large as several hundreds of meV, linking mechanical stress to semiconductor doping. Fabricated strain-engineered junction efficiently rectifies the current flow and performs logic operations with stable dynamic response. This strain-driven approach enables spatially precise doping in van der Waals materials without degrading crystallinity, offering a versatile platform for nanoscale semiconductor devices.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-09T08:55:56Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Bo Zhang</name>
+    </author>
+    <author>
+      <name>Hui Xia</name>
+    </author>
+    <author>
+      <name>Zhengdong Huang</name>
+    </author>
+    <author>
+      <name>Yaqian Liu</name>
+    </author>
+    <author>
+      <name>Jun Kang</name>
+    </author>
+    <author>
+      <name>Liaoxin Sun</name>
+    </author>
+    <author>
+      <name>Tianxin Li</name>
+    </author>
+    <author>
+      <name>Su-Huai Wei</name>
+    </author>
+    <author>
+      <name>Wei Lu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2007.09393v1</id>
+    <title>A plausible method of preparing the ideal p-n junction interface of a thermoelectric material by surface doping</title>
+    <updated>2020-07-18T10:16:29Z</updated>
+    <link href="https://arxiv.org/abs/2007.09393v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2007.09393v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent advances in two-dimensional (2D) crystals make it possible to realize an ideal interface structure that is required for device applications. Specifically, a p-n junction made of 2D crystals is predicted to exhibit an atomically well-defined interface that will lead to high device performance. Using angle-resolved photoemission spectroscopy, a simple surface treatment was shown to allow the possible formation of such an interface. Ta adsorption on the surface of a p-doped SnSe shifts the valence band maximum towards higher binding energy due to the charge transfer from Ta to SnSe that is highly localized at the surface due to the layered structure of SnSe. As a result, the charge carriers of the surface are changed from holes of its bulk characteristics to electrons, while the bulk remains as a p-type semiconductor. This observation suggests that the well-defined interface of a p-n junction with an atomically thin {\it n}-region is formed between Ta-adsorbed surface and bulk.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-07-18T10:16:29Z</published>
+    <arxiv:comment>4 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Appl. Surf. Sci. 520, 146314 (2020)</arxiv:journal_ref>
+    <author>
+      <name>Ji-Eun Lee</name>
+    </author>
+    <author>
+      <name>Jinwoong Hwang</name>
+    </author>
+    <author>
+      <name>Minhee Kang</name>
+    </author>
+    <author>
+      <name>Hyun-Jeong Joo</name>
+    </author>
+    <author>
+      <name>Hyejin Ryu</name>
+    </author>
+    <author>
+      <name>Kyoo Kim</name>
+    </author>
+    <author>
+      <name>Yongsam Kim</name>
+    </author>
+    <author>
+      <name>Namdong Kim</name>
+    </author>
+    <author>
+      <name>Anh Tuan Duong</name>
+    </author>
+    <author>
+      <name>Sunglae Cho</name>
+    </author>
+    <author>
+      <name>Sung-Kwan Mo</name>
+    </author>
+    <author>
+      <name>Choongyu Hwang</name>
+    </author>
+    <author>
+      <name>Imjeong Ho-Soon Yang</name>
+    </author>
+    <arxiv:doi>10.1016/j.apsusc.2020.146314</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.apsusc.2020.146314" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1912.09699v2</id>
+    <title>Spatial BCS-BEC crossover in superconducting p-n junctions</title>
+    <updated>2020-03-03T19:36:06Z</updated>
+    <link href="https://arxiv.org/abs/1912.09699v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1912.09699v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a theory of superconducting p-n junctions. We consider a 2-band model of doped bulk semiconductors with attractive interactions between the charge carriers and derive the superconducting order parameter, the quasiparticle density of states and the chemical potential as a function of semiconductor gap $Δ_0$ and the doping level $\varepsilon$. We verify previous results for the quantum phase diagram (QPD) for a system with constant density of states in the conduction and valence band, which show BCS-Superconductor to Bose-Einstein-Condensation (BEC) and BEC to Insulator transitions as function of doping level and band gap. Then, we extend it to a 3D density of states and derive the QPD, finding that a BEC phase can only exist for small band gaps $Δ_0 &lt; Δ_0^*$. For larger band gaps, there is a direct transition from an insulator to a BCS phase. Next, we apply this theory to study the properties of superconducting p-n junctions, deriving the spatial variation of the superconducting order parameter along the p-n junction. We find a spatial crossover between a BCS and BEC condensate, as the density of charge carriers changes across the p-n junction. For the 2D system, we find two regimes, when the bulk is in a BCS phase, a BCS-BEC-BCS junction with a single BEC layer, and a BCS-BEC-I-BEC-BCS junction with two layers of BEC condensates separated by an insulating layer. In 3D there can also be a conventional BCS-I-BCS junction for semiconductors with band gaps exceeding $Δ_0^*$. Thus, there can be BEC layers in the well controlled setting of doped semiconductors, where the doping level can be varied to change the thickness of BEC layers, making Bose Einstein Condensates possibly accessible to experimental transport and optical studies in solid state materials.</summary>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.quant-gas" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-12-20T08:51:31Z</published>
+    <arxiv:comment>10 pages, 17 figures, accepted for publication in Phys. Rev. B (2020)</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.supr-con"/>
+    <arxiv:journal_ref>Phys. Rev. B 101, 094514 (2020)</arxiv:journal_ref>
+    <author>
+      <name>A. Niroula</name>
+    </author>
+    <author>
+      <name>G. Rai</name>
+    </author>
+    <author>
+      <name>S. Haas</name>
+    </author>
+    <author>
+      <name>S. Kettemann</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.101.094514</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.101.094514" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1401.5729v2</id>
+    <title>Reconfigurable p-n Junction Diodes and the Photovoltaic Effect in Exfoliated MoS2 Films</title>
+    <updated>2014-03-21T10:30:36Z</updated>
+    <link href="https://arxiv.org/abs/1401.5729v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1401.5729v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Realizing basic semiconductor devices such as p-n junctions are necessary for developing thin-film and optoelectronic technologies in emerging planar materials such as MoS2. In this work, electrostatic doping by buried gates is used to study the electronic and optoelectronic properties of p-n junctions in exfoliated MoS2 flakes. Creating a controllable doping gradient across the device leads to the observation of the photovoltaic effect in monolayer and bilayer MoS2 flakes. For thicker flakes, strong ambipolar conduction enables realization of fully reconfigurable p-n junction diodes with rectifying current-voltage characteristics, and diode ideality factors as low as 1.6. The spectral response of the photovoltaic effect shows signatures of the predicted band gap transitions. For the first excitonic transition, a shift of &gt;4kBT is observed between monolayer and bulk devices, indicating a thickness-dependence of the excitonic coulomb interaction.</summary>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-01-22T16:49:43Z</published>
+    <arxiv:comment>4 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mes-hall"/>
+    <arxiv:journal_ref>Appl. Phys. Lett., 104, 122104 (2014)</arxiv:journal_ref>
+    <author>
+      <name>Surajit Sutar</name>
+    </author>
+    <author>
+      <name>Pratik Agnihotri</name>
+    </author>
+    <author>
+      <name>Everett Comfort</name>
+    </author>
+    <author>
+      <name>T. Taniguchi</name>
+    </author>
+    <author>
+      <name>K. Watanabe</name>
+    </author>
+    <author>
+      <name>Ji Ung Lee</name>
+    </author>
+    <arxiv:doi>10.1063/1.4870067</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1063/1.4870067" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2209.09633v1</id>
+    <title>Assessment of active dopants and p-n junction abruptness using in-situ biased 4D-STEM</title>
+    <updated>2022-09-20T11:32:22Z</updated>
+    <link href="https://arxiv.org/abs/2209.09633v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2209.09633v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A key issue in the development of high-performance semiconductor devices is the ability to properly measure active dopants at the nanometer scale. 4D scanning transmission electron microscopy and off-axis electron holography have opened up the possibility of studying the electrostatic properties of a p-n junction with nm-scale spatial resolution. The complete description of a p-n junction must take into account the precise evolution of the concentration of dopants around the junction, since the sharpness of the dopant transition directly influences the built-in potential and the maximum electric field. Here, a contacted silicon p-n junction is studied through in-situ biased 4D-STEM. Measurements of electric field, built-in voltage, depletion region width and charge density in the space charge region are combined with analytical equations as well as finite-element simulations in order to evaluate the quality of the junction interface. The nominally-symmetric, highly doped ($N_A = N_D = 9\space x \space10^{18} cm^{-3}$) junction presents an electric field and built-in voltage much lower than expected for an abrupt junction. These experimental results are consistent with electron holography data. All measured junction parameters are compatible with the presence of an intermediate region with a graded profile of the dopants at the p-n interface. This hypothesis is also consistent with the evolution of the electric field with bias. These results demonstrate that in-situ biased 4D-STEM enables a better understanding of the electrical properties of semiconductor p-n junctions with nm-scale resolution.</summary>
+    <category term="physics.app-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-09-20T11:32:22Z</published>
+    <arxiv:comment>13 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="physics.app-ph"/>
+    <author>
+      <name>Bruno C. da Silva</name>
+    </author>
+    <author>
+      <name>Zahra S. Momtaz</name>
+    </author>
+    <author>
+      <name>Eva Monroy</name>
+    </author>
+    <author>
+      <name>Hanako Okuno</name>
+    </author>
+    <author>
+      <name>Jean-Luc Rouviere</name>
+    </author>
+    <author>
+      <name>David Cooper</name>
+    </author>
+    <author>
+      <name>Martien I. den-Hertog</name>
+    </author>
+    <arxiv:doi>10.1021/acs.nanolett.2c03684</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1021/acs.nanolett.2c03684" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1502.03606v1</id>
+    <title>Ultimate Thin Vertical p-n Junction Composed of 2D Layered Molybdenum Disulfide</title>
+    <updated>2015-02-12T11:31:46Z</updated>
+    <link href="https://arxiv.org/abs/1502.03606v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1502.03606v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Semiconducting 2D crystals are currently receiving significant attention due to their great potential to be an ultra-thin body for efficient electrostatic modulation which enables to overcome the limitations of silicon technology. Here we report that, as a key building block for 2D semiconductor devices, vertical p-n junctions are fabricated in ultrathin MoS2 by introducing AuCl3 and benzyl viologen dopants. Unlike usual unipolar MoS2, the MoS2 p-n junctions show (i) ambipolar carrier transport, (ii) current rectification via modulation of potential barrier in films thicker than 8 nm, and (iii) reversed current rectification via tunneling in films thinner than 8 nm. The ultimate thinness of the vertical p-n homogeneous junctions in MoS2 is experimentally found to be 3 nm, and the chemical doping depth is found to be 1.5 nm. The ultrathin MoS2 p-n junctions present a significant potential of the 2D crystals for flexible, transparent, high-efficiency electronic and optoelectronic applications.</summary>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-02-12T11:31:46Z</published>
+    <arxiv:comment>26 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mes-hall"/>
+    <arxiv:journal_ref>Nature Communications 6, 6564 (2015)</arxiv:journal_ref>
+    <author>
+      <name>Hua-Min Li</name>
+    </author>
+    <author>
+      <name>Daeyeong Lee</name>
+    </author>
+    <author>
+      <name>Deshun Qu</name>
+    </author>
+    <author>
+      <name>Xiaochi Liu</name>
+    </author>
+    <author>
+      <name>Jungjin Ryu</name>
+    </author>
+    <author>
+      <name>Alan Seabaugh</name>
+    </author>
+    <author>
+      <name>Won Jong Yoo</name>
+    </author>
+    <arxiv:doi>10.1038/ncomms7564</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/ncomms7564" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0712.4008v1</id>
+    <title>Graphene on metal surface: gap opening and n-doping</title>
+    <updated>2007-12-25T03:17:28Z</updated>
+    <link href="https://arxiv.org/abs/0712.4008v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0712.4008v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Graphene grown on metal surface, Cu(111), with a boron nitride(BN) buffer layer is studied for the first time. Our first-principles calculations reveal that charge is transferred from the copper substrate to graphene through the BN buffer layer which results in a n-doped graphene in the absence of a gate voltage. More importantly, a gap of 0.2 eV which is comparable to that of a typical narrow gap semicondutor opens just 0.5 eV below the Fermi-level at the Dirac point. The Fermi-level can be easily shifted inside this gap to make graphene a semiconductor which is crucial for graphene-based electronic devices. A graphene based p-n junction can be realized with graphene eptaxially grown on metal surface.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-12-25T03:17:28Z</published>
+    <arxiv:comment>4 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Y. H. Lu</name>
+    </author>
+    <author>
+      <name>P. M. He</name>
+    </author>
+    <author>
+      <name>Y. P. Feng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1208.1729v2</id>
+    <title>Rectification by Doped Mott-Insulator Junctions</title>
+    <updated>2012-08-10T22:19:21Z</updated>
+    <link href="https://arxiv.org/abs/1208.1729v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1208.1729v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Junctions of doped Mott insulators offer a route to rectification at frequencies beyond the terahertz range. Mott insulators have strong electronic correlations and therefore short timescales for electron-electron scattering. It is this short time scale that allows for the possibility of rectification at frequencies higher than those of semiconductor devices that are limited by the slow diffusion of charge carriers. We model a junction by a one dimensional chain of electrons with p- and n-doping on the two halves of the chain. Two types of systems are investigated: spin polarized electrons with nearest-neighbor interaction, and spin-half electrons that interact via on-site repulsion (the Hubbard model). For short chains the many-body Schrodinger equation can be integrated numerically exactly, and when driven by an oscillating electromagnetic field such idealized junctions rectify, showing a preferred direction for charge transfer. Longer chains are studied by the time-dependent density-matrix renormalization-group method, and also shown to rectify.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-08-08T18:34:53Z</published>
+    <arxiv:comment>4 pages, 6 figures, Proceedings of the 2012 IEEE Lester Eastman Conference on High Performance Devices. Figure 5 has been replaced with a version that shows how tDMRG block size affects the accuracy of the simulation. Some wording changes have been made for clarity</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Lester Eastman Conference on High Performance Devices (LEC) 2012, 1-4</arxiv:journal_ref>
+    <author>
+      <name>Florian C. Sabou</name>
+    </author>
+    <author>
+      <name>Natalie Bodington</name>
+    </author>
+    <author>
+      <name>J. B. Marston</name>
+    </author>
+    <arxiv:doi>10.1109/lec.2012.6410983</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/lec.2012.6410983" title="doi"/>
+  </entry>
+</feed>

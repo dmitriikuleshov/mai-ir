@@ -1,32 +1,13 @@
 % Единый отчет по реализованным пунктам курса «Информационный поиск».
-% Сборка из reports/pdf: tectonic search_system.tex
-\documentclass[12pt,a4paper,oneside,fleqn]{article}
-\usepackage{fontspec}
-\IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{DejaVu Serif}}
-\IfFontExistsTF{Arial}{\setsansfont{Arial}}{\setsansfont{DejaVu Sans}}
-\IfFontExistsTF{Consolas}{\setmonofont{Consolas}}{\setmonofont{DejaVu Sans Mono}}
-\usepackage[english,russian]{babel}
-\usepackage{amsmath,amssymb,graphicx,array,tabularx,longtable,booktabs}
-\usepackage[table]{xcolor}
-\usepackage{csquotes,listings,hyperref,needspace}
-\hypersetup{unicode=true,colorlinks=true,linkcolor=black,urlcolor=blue!55!black,
+% Сборка из reports/pdf: два запуска pdflatex search_system.tex.
+% Оригинальный стиль: https://github.com/toshunster/MAI-IR/tree/main/report_pattern
+\documentclass[pdf,unicode,12pt,a4paper,oneside,fleqn]{article}
+\usepackage{../source/styles/report-pattern}
+\usepackage{tabularx,booktabs,needspace}
+\hypersetup{unicode=true,
   pdftitle={Поисковая система для технического корпуса},pdfauthor={Д. А. Кулешов}}
-% Размеры полосы набора соответствуют TeX-шаблону преподавателя.
-\oddsidemargin=-0.4mm
-\textwidth=160mm
-\topmargin=4.6mm
-\textheight=210mm
-\parindent=0pt
-\parskip=3pt
-\frenchspacing
 \emergencystretch=2em
-\renewcommand{\arraystretch}{1.2}
-\setlength{\tabcolsep}{5pt}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
-\lstset{basicstyle=\fontsize{10.5}{12.5}\selectfont\ttfamily,
-  columns=fullflexible,keepspaces=true,breaklines=true,showstringspaces=false,
-  frame=single,rulecolor=\color{black!25},backgroundcolor=\color{black!2},
-  aboveskip=8pt,belowskip=8pt}
 % Короткие примеры и команды не разрываются между страницами.
 \BeforeBeginEnvironment{lstlisting}{\par\noindent\begin{minipage}{\linewidth}}
 \AfterEndEnvironment{lstlisting}{\end{minipage}\par}
@@ -39,34 +20,7 @@
 \begin{document}
 \hypersetup{pageanchor=false}
 
-\begin{titlepage}
-\begin{center}\bfseries
-{\Large Московский авиационный институт\\
-(национальный исследовательский университет)}
-\vspace{48pt}
-
-{\large Институт № 8 «Компьютерные науки»}
-\vspace{64pt}
-
-Отчет по лабораторным работам\\
-по курсу «Информационный поиск»
-\vspace{20pt}
-
-{\Large Поисковая система\\для технического корпуса документов}
-\end{center}
-\vspace{64pt}
-\begin{flushright}
-\begin{tabular}{rl}
-Студент: & Д.\,А. Кулешов \\
-Преподаватель: & А.\,А. Кухтичев \\
-Группа: & М8О-408Б-23 \\
-Отметка о сдаче: & \rule{35mm}{0.4pt} \\
-Оценка: & \rule{35mm}{0.4pt} \\
-\end{tabular}
-\end{flushright}
-\vfill
-\begin{center}\bfseries Москва, 2026\end{center}
-\end{titlepage}
+\input{../source/search_system_titlepage}
 \hypersetup{pageanchor=true}
 
 \tableofcontents
@@ -466,8 +420,11 @@ RMSE логарифмов частот равна 0,09018. Это ошибка �
 реальных информационных потребностях. Я зафиксировал 30 англоязычных запросов
 по программированию, базам данных, безопасности, машинному обучению и смежным
 техническим темам. Для каждого запроса записано намерение пользователя.
-В качестве основных альтернатив использованы поиски Wikipedia и Microsoft
-Learn; получены первые пять результатов каждой из трех систем.
+В качестве альтернатив использованы поиски Wikipedia, Microsoft Learn
+и arXiv. Для оценки берутся первые пять результатов. arXiv добавлен отдельным
+этапом через Atom API: исходные термы соединены AND, задана сортировка
+по релевантности, получено до десяти результатов на запрос. У двух запросов
+выдача пустая, еще у трех короче пяти; они остаются в среднем по 30 запросам.
 
 Индекс во время эксперимента не перестраивался: в нем 993\,923 документа,
 19\,009\,884 терма и 524\,192\,226 пар «терм - документ». В
@@ -482,14 +439,15 @@ CAPTCHA и неполными ответами. Неполная выдача Bi
 наборам документов и ориентированы на свои источники.
 
 \partlabel{Разметка и определения метрик}
-Общий пул содержит 477 пар «запрос - документ», соответствующих 458 уникальным
+Общий пул содержит 608 пар «запрос - документ», соответствующих 589 уникальным
 документам. Каждой паре присваивается оценка: 0 - документ не отвечает
 намерению, 1 - затрагивает тему лишь косвенно, 2 - дает полезную часть ответа,
-3 - прямо и содержательно отвечает на запрос. В пуле получено 160 нулей,
-151 единица, 109 двоек и 57 троек.
+3 - прямо и содержательно отвечает на запрос. В пуле получено 170 нулей,
+174 единицы, 199 двоек и 65 троек.
 
 Разметка является \textbf{пилотной}: первичные оценки выставлены языковой
-моделью по сохраненному содержимому и фрагментам. Это не независимый эталон
+моделью по сохраненному содержимому и фрагментам; для 131 новой статьи arXiv
+использованы заголовки и аннотации API. Это не независимый эталон
 человеческой разметки. Оценки и причины сохранены для последующей проверки
 человеком; результаты не следует представлять как окончательно доказанное
 качество системы.
@@ -522,9 +480,10 @@ $R_i=(2^{g_i}-1)/8$. Тогда
 \toprule
 Система & P@5 & DCG@5 & NDCG@5 & ERR@5\\
 \midrule
-TF-IDF & 0,3733 & 5,6645 & 0,3877 & 0,4212\\
-Wikipedia & 0,5533 & 9,8162 & 0,6992 & 0,7238\\
-Microsoft Learn & 0,1733 & 3,0337 & 0,2113 & 0,2237\\
+TF-IDF & 0,3733 & 5,6645 & 0,3710 & 0,4212\\
+Wikipedia & 0,5533 & 9,8162 & 0,6512 & 0,7238\\
+Microsoft Learn & 0,1733 & 3,0337 & 0,1990 & 0,2237\\
+arXiv & 0,6533 & 6,9938 & 0,4751 & 0,4806\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -537,7 +496,7 @@ Microsoft Learn & 0,1733 & 3,0337 & 0,2113 & 0,2237\\
 
 \partlabel{Разбор результатов и проверки}
 Для TF-IDF получены $P@1=0{,}3667$, $NDCG@1=0{,}3048$ и
-$P@3=0{,}3778$, $NDCG@3=0{,}3659$. Система удачно отвечает на часть
+$P@3=0{,}3778$, $NDCG@3=0{,}3525$. Система удачно отвечает на часть
 узких запросов: для retrieval augmented generation получены
 $P@5=1{,}0$ и $NDCG@5\approx0{,}842$. На запросе о конфиденциальности
 federated learning первые результаты уходят в федеративную аутентификацию,
@@ -547,9 +506,13 @@ federated learning первые результаты уходят в федер�
 
 Покрытие альтернатив корпусом различается: среди 150 позиций Wikipedia
 142 соответствуют документам индекса, а среди 150 позиций Microsoft Learn -
-62. Поэтому различие метрик связано и с ранжированием, и с покрытием.
+62; из 131 позиции arXiv в индексе присутствуют 9. Поэтому различие метрик
+связано и с ранжированием, и с покрытием. arXiv нашел прямую научную работу
+о Variable Byte, которой не было в исходном пуле. При расширении пула прежние
+выдачи и оценки сохранены, но NDCG пересчитана по новому общему идеалу;
+изменение ее значения не означает изменения алгоритма.
 Нельзя делать вывод о превосходстве алгоритма только по этой таблице.
-Формулы, граничные случаи и контрольные примеры проверяются 15 Python-тестами;
+Формулы, граничные случаи и разбор ответов проверяются 19 Python-тестами;
 все они прошли.
 
 \partlabel{Вывод}
@@ -951,12 +914,17 @@ TF-IDF дает объяснимое ранжирование и повторн�
 плана - проверять наблюдаемое поведение и граничные случаи, а не только
 успешный запуск программы.
 
-\begin{table}[htbp]\centering
-\caption{Основные группы проверок}
-\begin{tabularx}{\textwidth}{p{34mm}Y}
+\begin{longtable}{p{34mm}p{\dimexpr\textwidth-34mm-4\tabcolsep\relax}}
+\caption{Основные группы проверок}\\
 \toprule
 Компонент & Проверяемое поведение\\
 \midrule
+\endfirsthead
+\multicolumn{2}{r}{Продолжение таблицы \thetable}\\
+\toprule
+Компонент & Проверяемое поведение\\
+\midrule
+\endhead
 Токенизатор & Unicode, ошибочные байты, пробелы и пунктуация, длины,
 технические конструкции и их повторения.\\
 Лемматизатор & Словарные формы, исключения, технические переопределения,
@@ -973,8 +941,7 @@ TF-IDF & Численные веса, нормы, порядок результ�
 конфликты уникальности и ограничения.\\
 Оценка качества & Формулы P, DCG, NDCG, ERR, шкала оценок и крайние случаи.\\
 \bottomrule
-\end{tabularx}
-\end{table}
+\end{longtable}
 
 \partlabel{Выполнение и результат}
 Контрольный прогон дал 207 успешных CTest-проверок из 207. По текущим меткам
@@ -983,8 +950,8 @@ CTest это 201 unit-проверка, три сравнительных perfor
 обработки и отчетных данных; это не полный сквозной тест всей системы
 с новой MongoDB и реальным обходом внешних сайтов.
 
-Отдельно выполнены 64 теста робота и 15 тестов расчета метрик:
-все 79 Python-проверок прошли. Три сравнительных теста прыжков проверяют
+Отдельно выполнены 64 теста робота и 19 тестов оценки качества:
+все 83 Python-проверки прошли. Три сравнительных теста прыжков проверяют
 равенство ответов и печатают измерения, приведенные в разделе 12.
 Они уже входят в число 207 и не прибавляются к нему повторно.
 
@@ -993,7 +960,7 @@ ctest --test-dir .build --output-on-failure
 100% tests passed, 0 tests failed out of 207
 
 uv run pytest tests/crawler/test_crawler.py quality_evaluation/test_metrics.py -q
-79 passed
+83 passed
 \end{lstlisting}
 
 \partlabel{Вывод}
